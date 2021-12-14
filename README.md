@@ -1,1 +1,1 @@
-This repository is a stub redirect to the official documentation at jsuarez5341.github.io
+This repository hosts neuralmmo.github.io, the official documentation for Neural MMO
