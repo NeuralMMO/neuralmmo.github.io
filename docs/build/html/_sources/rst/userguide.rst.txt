@@ -49,6 +49,8 @@ Citation to be updated upon the release of NeurIPS 2021 proceedings. See Updates
 Installation
 ************
 
+NOTE: Today (December 14/15) we are in the process of moving NMMO to an organization repo. Report errors in installation in the Discord
+
 Official support: Ubuntu 20.04, Windows 10 + WSL, and MacOS
 
 .. code-block:: python
@@ -60,11 +62,12 @@ Official support: Ubuntu 20.04, Windows 10 + WSL, and MacOS
 .. code-block:: python
    :caption: Setup from source (Recommended). Windows + WSL Users: Install the server on WSL and the client on Windows.
 
-   git clone --single-branch --depth=1 https://github.com/jsuarez5341/neural-mmo
-   cd neural-mmo && bash scripts/setup.sh # --CORE_ONLY to omit RLlib requirements
+   mkdir neural-mmo && cd neural-mmo
 
-   git clone --single-branch --depth=1 https://github.com/jsuarez5341/neural-mmo-client
-   mv neural-mmo-client neural-mmo/forge/embyr # Do not run on WSL
+   git clone --single-branch --depth=1 https://github.com/neuralmmo/environment
+   bash environment/scripts/setup.sh # --CORE_ONLY to omit RLlib requirements
+
+   git clone --single-branch --depth=1 https://github.com/neuralmmo/client
 
 **Required Configuration**
    - Edit projekt/config.py as per the instructions therein to match your hardware specs

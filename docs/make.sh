@@ -5,7 +5,7 @@ make clean
 #  undoc-members (pollutes with garbage internals)
 #  imported-members (pollutes with inhereted garbage)
 
-SPHINX_APIDOC_OPTIONS=members,inherited-members,show-inheritance sphinx-apidoc -o source/autodoc/ -fMe --implicit-namespaces ../projekt/ ../neural-mmo/forge/ ../Forge.py
+SPHINX_APIDOC_OPTIONS=members,inherited-members,show-inheritance sphinx-apidoc -o source/autodoc/ -fMe --implicit-namespaces ../../environment/projekt/ ../../environment/neural-mmo/forge/ ../../environment/Forge.py
 #SPHINX_APIDOC_OPTIONS=members,inherited-members,show-inheritance sphinx-apidoc -o source/autodoc -fMe --implicit-namespaces ../neural_mmo/projekt/
 
 #Strip bad headers
