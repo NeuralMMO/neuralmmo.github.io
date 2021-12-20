@@ -1,0 +1,2073 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>nmmo package &mdash; Neural MMO v1.5.3 1.5.3.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="nmmo.core package" href="nmmo.core.html" />
+    <link rel="prev" title="User API" href="../rst/api.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.3
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html"> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-generate-environments"> Generate Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-create-policies"> Create Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-evaluate-agents"> Evaluate Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../rst/api.html"> User API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-developer-api"> Developer API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">nmmo package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.html">nmmo.lib package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.html">nmmo.systems package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.infrastructure.html">nmmo.infrastructure module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.websocket.html">nmmo.websocket module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Game Wiki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html"> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-game-systems"> Game Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-resource-system"> Resource System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-combat"> Combat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-progression"> Progression</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Baselines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Evaluation Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-small-maps"> Small Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-large-maps"> Large Maps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Updates</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/updates.html"> Video Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-publications"> Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-presentations"> Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-update-slides"> Update Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-additional-links"> Additional Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-patch-notes-version-history"> Patch Notes + Version History</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html"> Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-contributing"> Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-code-structure"> Code Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-style"> Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-tech-stack"> Tech Stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-client-map-representation"> Client Map Representation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-observation-representation"> Observation Representation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-model-io"> Model IO</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Ideology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html"> Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html#icon-failure-modes"> Failure Modes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administrative</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html"> Authorship, License, Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#icon-assets"> Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#ags-namesake"> Namesake</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NeurIPS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/neurips.html"> NeurIPS 2021 Dataset Track Supplementary Material</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Neural MMO v1.5.3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../rst/api.html"> User API</a> &raquo;</li>
+        
+      <li>nmmo package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/autodoc/nmmo.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-nmmo">
+<span id="nmmo-package"></span><h1>nmmo package<a class="headerlink" href="#module-nmmo" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="nmmo.Env">
+<em class="property">class </em><code class="sig-prename descclassname">nmmo.</code><code class="sig-name descname">Env</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pettingzoo.utils.env.ParallelEnv</span></code></p>
+<p>Environment wrapper for Neural MMO using the Parallel PettingZoo API</p>
+<p>Neural MMO provides complex environments featuring structured observations/actions,
+variably sized agent populations, and long time horizons. Usage in conjunction
+with RLlib as demonstrated in the /projekt wrapper is highly recommended.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config</strong> – A forge.blade.core.Config object or subclass object</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="nmmo.Env.metadata">
+<code class="sig-name descname">metadata</code><em class="property"> = {'name': 'neural-mmo', 'render.modes': ['human']}</em><a class="headerlink" href="#nmmo.Env.metadata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.observation_space">
+<code class="sig-name descname">observation_space</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">agent</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.observation_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Neural MMO Observation Space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>agent</strong> – Agent ID</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>gym.spaces object contained the structured observation
+for the specified agent. Each visible object is represented by
+continuous and discrete vectors of attributes. A 2-layer attentional
+encoder can be used to convert this structured observation into
+a flat vector embedding.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>observation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.action_space">
+<code class="sig-name descname">action_space</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">agent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.action_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Neural MMO Action Space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>agent</strong> – Agent ID</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>gym.spaces object contained the structured actions
+for the specified agent. Each action is parameterized by a list
+of discrete-valued arguments. These consist of both fixed, k-way
+choices (such as movement direction) and selections from the
+observation space (such as targeting)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>actions</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">idx</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">step</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>OpenAI Gym API reset function</p>
+<p>Loads a new game map and returns initial observations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>idx</strong> – Map index to load. Selects a random map by default</p></li>
+<li><p><strong>step</strong> – Whether to step the environment and return initial obs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Initial obs if step=True, None otherwise</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>obs</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Neural MMO simulates a persistent world. Ideally, you should reset
+the environment only once, upon creation. In practice, this approach
+limits the number of parallel environment simulations to the number
+of CPU cores available. At small and medium hardware scale, we
+therefore recommend the standard approach of resetting after a long
+but finite horizon: ~1000 timesteps for small maps and
+5000+ timesteps for large maps</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>observations, as documented by step()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>For conformity with the PettingZoo API only; rendering is external</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">actions</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulates one game tick or timestep</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>actions</strong> – <p>A dictionary of agent decisions of format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="n">agent_1</span><span class="p">:</span> <span class="p">{</span>
+      <span class="n">action_1</span><span class="p">:</span> <span class="p">[</span><span class="n">arg_1</span><span class="p">,</span> <span class="n">arg_2</span><span class="p">],</span>
+      <span class="n">action_2</span><span class="p">:</span> <span class="p">[</span><span class="o">...</span><span class="p">],</span>
+      <span class="o">...</span>
+   <span class="p">},</span>
+   <span class="n">agent_2</span><span class="p">:</span> <span class="p">{</span>
+      <span class="o">...</span>
+   <span class="p">},</span>
+   <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Where agent_i is the integer index of the i’th agent</p>
+<p>The environment only evaluates provided actions for provided
+agents. Unprovided action types are interpreted as no-ops and
+illegal actions are ignored</p>
+<p>It is also possible to specify invalid combinations of valid
+actions, such as two movements or two attacks. In this case,
+one will be selected arbitrarily from each incompatible sets.</p>
+<p>A well-formed algorithm should do none of the above. We only
+Perform this conditional processing to make batched action
+computation easier.</p>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl>
+<dt>observations:</dt><dd><p>A dictionary of agent observations of format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="n">agent_1</span><span class="p">:</span> <span class="n">obs_1</span><span class="p">,</span>
+   <span class="n">agent_2</span><span class="p">:</span> <span class="n">obs_2</span><span class="p">,</span>
+   <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Where agent_i is the integer index of the i’th agent and
+obs_i is specified by the observation_space function.</p>
+</dd>
+<dt>rewards:</dt><dd><p>A dictionary of agent rewards of format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="n">agent_1</span><span class="p">:</span> <span class="n">reward_1</span><span class="p">,</span>
+   <span class="n">agent_2</span><span class="p">:</span> <span class="n">reward_2</span><span class="p">,</span>
+   <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Where agent_i is the integer index of the i’th agent and
+reward_i is the reward of the i’th’ agent.</p>
+<p>By default, agents receive -1 reward for dying and 0 reward for
+all other circumstances. Override Env.reward to specify
+custom reward functions</p>
+</dd>
+<dt>dones:</dt><dd><p>A dictionary of agent done booleans of format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="n">agent_1</span><span class="p">:</span> <span class="n">done_1</span><span class="p">,</span>
+   <span class="n">agent_2</span><span class="p">:</span> <span class="n">done_2</span><span class="p">,</span>
+   <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Where agent_i is the integer index of the i’th agent and
+done_i is a boolean denoting whether the i’th agent has died.</p>
+<p>Note that obs_i will be a garbage placeholder if done_i is true.
+This is provided only for conformity with PettingZoo. Your
+algorithm should not attempt to leverage observations outside of
+trajectory bounds. You can omit garbage obs_i values by setting
+omitDead=True.</p>
+</dd>
+<dt>infos:</dt><dd><p>A dictionary of agent infos of format:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>{</dt><dd><p>agent_1: None,
+agent_2: None,
+…</p>
+</dd>
+</dl>
+<p>]</p>
+</div></blockquote>
+<p>Provided for conformity with PettingZoo</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(dict, dict, dict, None)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.log">
+<code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ent</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#nmmo.Env.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs agent data upon death</p>
+<p>This function is called automatically when an agent dies. Logs are used
+to compute summary stats and populate the dashboard. You should not
+call it manually. Instead, override this method to customize logging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ent</strong> – An agent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.terminal">
+<code class="sig-name descname">terminal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.terminal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs currently alive agents and returns all collected logs</p>
+<p>Automatic log calls occur only when agents die. To evaluate agent
+performance over a fixed horizon, you will need to include logs for
+agents that are still alive at the end of that horizon. This function
+performs that logging and returns the associated a data structure
+containing logs for the entire evaluation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ent</strong> – An agent</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Log datastructure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.reward">
+<code class="sig-name descname">reward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">entID</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.reward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the reward for the specified agent</p>
+<p>Override this method to create custom reward functions. You have full
+access to the environment state via self.realm. Our baselines do not
+modify this method; specify any changes when comparing to baselines</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entID</strong> – Agent ID</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The reward for the actions on the previous timestep of the
+entity identified by entID.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>reward</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.render">
+<code class="sig-name descname">render</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'human'</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#nmmo.Env.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data packet used by the renderer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A packet of data for the client</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>packet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.register">
+<code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">overlay</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#nmmo.Env.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register an overlay to be sent to the client</p>
+<p>The intended use of this function is: User types overlay -&gt;
+client sends cmd to server -&gt; server computes overlay update -&gt;
+register(overlay) -&gt; overlay is sent to client -&gt; overlay rendered</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>values</strong> – A map-sized (self.size) array of floating point values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.dense">
+<code class="sig-name descname">dense</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.dense" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulates an agent on every tile and returns observations</p>
+<p>This method is used to compute per-tile visualizations across the
+entire map simultaneously. To do so, we spawn agents on each tile
+one at a time. We compute the observation for each agent, delete that
+agent, and go on to the next one. In this fashion, each agent receives
+an observation where it is the only agent alive. This allows us to
+isolate potential influences from observations of nearby agents</p>
+<p>This function is slow, and anything you do with it is probably slower.
+As a concrete example, consider that we would like to visualize a
+learned agent value function for the entire map. This would require
+computing a forward pass for one agent per tile. To cut down on
+computation costs, we omit lava tiles from this method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>observations:</dt><dd><p>A dictionary of agent observations as specified by step()</p>
+</dd>
+<dt>ents:</dt><dd><p>A corresponding dictionary of agents keyed by their entID</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(dict, dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.max_num_agents">
+<em class="property">property </em><code class="sig-name descname">max_num_agents</code><a class="headerlink" href="#nmmo.Env.max_num_agents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.num_agents">
+<em class="property">property </em><code class="sig-name descname">num_agents</code><a class="headerlink" href="#nmmo.Env.num_agents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.seed">
+<code class="sig-name descname">seed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reseeds the environment (making it deterministic).
+<cite>reset()</cite> must be called after <cite>seed()</cite>, and before <cite>step()</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>State returns a global view of the environment appropriate for
+centralized training decentralized execution methods like QMIX</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Env.unwrapped">
+<em class="property">property </em><code class="sig-name descname">unwrapped</code><a class="headerlink" href="#nmmo.Env.unwrapped" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Agent">
+<em class="property">class </em><code class="sig-prename descclassname">nmmo.</code><code class="sig-name descname">Agent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">idx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for agents</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> – A Config object</p></li>
+<li><p><strong>idx</strong> – Unique AgentID int</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="nmmo.Agent.scripted">
+<code class="sig-name descname">scripted</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Agent.scripted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Agent.name">
+<code class="sig-name descname">name</code><em class="property"> = 'Neural_'</em><a class="headerlink" href="#nmmo.Agent.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized">
+<em class="property">class </em><code class="sig-prename descclassname">nmmo.</code><code class="sig-name descname">Serialized</code><a class="headerlink" href="#nmmo.Serialized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.dict">
+<code class="sig-name descname">dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity">
+<em class="property">class </em><code class="sig-name descname">Entity</code><a class="headerlink" href="#nmmo.Serialized.Entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.N">
+<em class="property">static </em><code class="sig-name descname">N</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.N" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.Self">
+<em class="property">class </em><code class="sig-name descname">Self</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Self" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Self.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Self.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Self.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.Self.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Self.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.Self.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Self.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Self.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Self.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.Self.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Self.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Self.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Self.index">
+<code class="sig-name descname">index</code><em class="property"> = 0</em><a class="headerlink" href="#nmmo.Serialized.Entity.Self.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Self.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Self.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Self.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Self.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.ID">
+<em class="property">class </em><code class="sig-name descname">ID</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.ID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.ID.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.ID.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.ID.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.ID.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.ID.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Serialized.Entity.ID.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.ID.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.ID.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.ID.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.ID.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.ID.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.ID.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.ID.index">
+<code class="sig-name descname">index</code><em class="property"> = 1</em><a class="headerlink" href="#nmmo.Serialized.Entity.ID.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.ID.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.ID.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.ID.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.ID.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.AttackerID">
+<em class="property">class </em><code class="sig-name descname">AttackerID</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.AttackerID.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.AttackerID.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.AttackerID.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.AttackerID.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.AttackerID.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.AttackerID.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.AttackerID.index">
+<code class="sig-name descname">index</code><em class="property"> = 2</em><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.AttackerID.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.AttackerID.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.Level">
+<em class="property">class </em><code class="sig-name descname">Level</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Level.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Level.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Level.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.Level.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Level.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Serialized.Entity.Level.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Level.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Level.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Level.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.Level.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Level.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Level.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Level.index">
+<code class="sig-name descname">index</code><em class="property"> = 3</em><a class="headerlink" href="#nmmo.Serialized.Entity.Level.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Level.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Level.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Level.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Level.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.Population">
+<em class="property">class </em><code class="sig-name descname">Population</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Population" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Population.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Population.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Population.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.Population.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Population.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.Population.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Population.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Population.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Population.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.Population.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Population.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Population.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Population.index">
+<code class="sig-name descname">index</code><em class="property"> = 4</em><a class="headerlink" href="#nmmo.Serialized.Entity.Population.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Population.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Population.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Population.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Population.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.R">
+<em class="property">class </em><code class="sig-name descname">R</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.R" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.R.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.R.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.R.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.R.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.R.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.R.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.R.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.R.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.R.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.R.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.R.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.R.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.R.index">
+<code class="sig-name descname">index</code><em class="property"> = 5</em><a class="headerlink" href="#nmmo.Serialized.Entity.R.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.R.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.R.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.R.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.R.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.C">
+<em class="property">class </em><code class="sig-name descname">C</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.C" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.C.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.C.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.C.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.C.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.C.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.C.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.C.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.C.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.C.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.C.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.C.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.C.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.C.index">
+<code class="sig-name descname">index</code><em class="property"> = 6</em><a class="headerlink" href="#nmmo.Serialized.Entity.C.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.C.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.C.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.C.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.C.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.Damage">
+<em class="property">class </em><code class="sig-name descname">Damage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Damage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Damage.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Damage.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Damage.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Damage.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Damage.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Damage.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Damage.index">
+<code class="sig-name descname">index</code><em class="property"> = 7</em><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Damage.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Damage.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.TimeAlive">
+<em class="property">class </em><code class="sig-name descname">TimeAlive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.TimeAlive.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.TimeAlive.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.TimeAlive.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.TimeAlive.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.TimeAlive.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.TimeAlive.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.TimeAlive.index">
+<code class="sig-name descname">index</code><em class="property"> = 8</em><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.TimeAlive.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.TimeAlive.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.Food">
+<em class="property">class </em><code class="sig-name descname">Food</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Food" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Food.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Food.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Food.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.Food.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Food.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Serialized.Entity.Food.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Food.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Food.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Food.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.Food.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Food.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Food.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Food.index">
+<code class="sig-name descname">index</code><em class="property"> = 9</em><a class="headerlink" href="#nmmo.Serialized.Entity.Food.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Food.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Food.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Food.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Food.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.Water">
+<em class="property">class </em><code class="sig-name descname">Water</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Water" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Water.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Water.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Water.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.Water.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Water.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Serialized.Entity.Water.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Water.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Water.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Water.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.Water.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Water.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Water.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Water.index">
+<code class="sig-name descname">index</code><em class="property"> = 10</em><a class="headerlink" href="#nmmo.Serialized.Entity.Water.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Water.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Water.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Water.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Water.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.Health">
+<em class="property">class </em><code class="sig-name descname">Health</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Health" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Health.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Health.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Health.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.Health.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Health.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Serialized.Entity.Health.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Health.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Health.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Health.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.Health.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Health.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Health.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Health.index">
+<code class="sig-name descname">index</code><em class="property"> = 11</em><a class="headerlink" href="#nmmo.Serialized.Entity.Health.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Health.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Health.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Health.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Health.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Entity.Freeze">
+<em class="property">class </em><code class="sig-name descname">Freeze</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Freeze.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Freeze.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Freeze.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Freeze.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Freeze.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Freeze.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Entity.Freeze.index">
+<code class="sig-name descname">index</code><em class="property"> = 12</em><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Freeze.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Entity.Freeze.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Tile">
+<em class="property">class </em><code class="sig-name descname">Tile</code><a class="headerlink" href="#nmmo.Serialized.Tile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.N">
+<em class="property">static </em><code class="sig-name descname">N</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.N" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Tile.NEnts">
+<em class="property">class </em><code class="sig-name descname">NEnts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.NEnts.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.NEnts.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.NEnts.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.NEnts.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.NEnts.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.NEnts.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.NEnts.index">
+<code class="sig-name descname">index</code><em class="property"> = 0</em><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.NEnts.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.NEnts.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Tile.Index">
+<em class="property">class </em><code class="sig-name descname">Index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.Index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.Index.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.Index.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.Index.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Tile.Index.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.Index.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Tile.Index.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.Index.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.Index.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.Index.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Tile.Index.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.Index.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.Index.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.Index.index">
+<code class="sig-name descname">index</code><em class="property"> = 1</em><a class="headerlink" href="#nmmo.Serialized.Tile.Index.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.Index.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.Index.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.Index.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.Index.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Tile.R">
+<em class="property">class </em><code class="sig-name descname">R</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.R" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.R.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.R.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.R.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Tile.R.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.R.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Tile.R.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.R.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.R.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.R.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Tile.R.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.R.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.R.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.R.index">
+<code class="sig-name descname">index</code><em class="property"> = 2</em><a class="headerlink" href="#nmmo.Serialized.Tile.R.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.R.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.R.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.R.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.R.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Serialized.Tile.C">
+<em class="property">class </em><code class="sig-name descname">C</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataframe</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.C" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.C.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.C.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.C.CONTINUOUS">
+<code class="sig-name descname">CONTINUOUS</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Tile.C.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.C.DISCRETE">
+<code class="sig-name descname">DISCRETE</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.Serialized.Tile.C.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.C.decrement">
+<code class="sig-name descname">decrement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.C.decrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.C.empty">
+<em class="property">property </em><code class="sig-name descname">empty</code><a class="headerlink" href="#nmmo.Serialized.Tile.C.empty" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.C.increment">
+<code class="sig-name descname">increment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.C.increment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Serialized.Tile.C.index">
+<code class="sig-name descname">index</code><em class="property"> = 3</em><a class="headerlink" href="#nmmo.Serialized.Tile.C.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.C.packet">
+<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.C.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Serialized.Tile.C.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.C.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Action">
+<em class="property">class </em><code class="sig-prename descclassname">nmmo.</code><code class="sig-name descname">Action</code><a class="headerlink" href="#nmmo.Action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
+<dl class="py attribute">
+<dt id="nmmo.Action.nodeType">
+<code class="sig-name descname">nodeType</code><em class="property"> = 2</em><a class="headerlink" href="#nmmo.Action.nodeType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Action.edges">
+<code class="sig-name descname">edges</code><em class="property"> = [&lt;class 'nmmo.io.action.Move'&gt;, &lt;class 'nmmo.io.action.Attack'&gt;]</em><a class="headerlink" href="#nmmo.Action.edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Action.n">
+<code class="sig-name descname">n</code><em class="property"> = 7</em><a class="headerlink" href="#nmmo.Action.n" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Action.args">
+<code class="sig-name descname">args</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">entity</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Action.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Action.hook">
+<code class="sig-name descname">hook</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Action.hook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Action.N">
+<em class="property">classmethod </em><code class="sig-name descname">N</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Action.N" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Action.arguments">
+<code class="sig-name descname">arguments</code><em class="property"> = [&lt;class 'nmmo.io.action.North'&gt;, &lt;class 'nmmo.io.action.South'&gt;, &lt;class 'nmmo.io.action.East'&gt;, &lt;class 'nmmo.io.action.West'&gt;, &lt;class 'nmmo.io.action.Melee'&gt;, &lt;class 'nmmo.io.action.Range'&gt;, &lt;class 'nmmo.io.action.Mage'&gt;]</em><a class="headerlink" href="#nmmo.Action.arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Action.leaf">
+<code class="sig-name descname">leaf</code><em class="property"> = False</em><a class="headerlink" href="#nmmo.Action.leaf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Action.priority">
+<code class="sig-name descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#nmmo.Action.priority" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="nmmo.Action.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#nmmo.Action.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.Overlay">
+<em class="property">class </em><code class="sig-prename descclassname">nmmo.</code><code class="sig-name descname">Overlay</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">realm</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Overlay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Define a overlay for visualization in the client</p>
+<p>Overlays are color images of the same size as the game map.
+They are rendered over the environment with transparency and
+can be used to gain insight about agent behaviors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> – A Config object</p></li>
+<li><p><strong>realm</strong> – An environment</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="nmmo.Overlay.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Overlay.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute per-tick updates to this overlay. Override per overlay.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obs</strong> – Observation returned by the environment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="nmmo.Overlay.register">
+<code class="sig-name descname">register</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Overlay.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the overlay and register it within realm. Override per overlay.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nmmo.OverlayRegistry">
+<em class="property">class </em><code class="sig-prename descclassname">nmmo.</code><code class="sig-name descname">OverlayRegistry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">realm</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.OverlayRegistry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manager class for overlays</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> – A Config object</p></li>
+<li><p><strong>realm</strong> – An environment</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="nmmo.OverlayRegistry.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obs</span></em>, <em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">cmd</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.OverlayRegistry.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Per-tick overlay updates</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obs</strong> – Observation returned by the environment</p></li>
+<li><p><strong>pos</strong> – Client camera focus position</p></li>
+<li><p><strong>cmd</strong> – User command returned by the client</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.core.agent.html">nmmo.core.agent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.core.config.html">nmmo.core.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.core.env.html">nmmo.core.env module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.core.map.html">nmmo.core.map module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.core.realm.html">nmmo.core.realm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.core.terrain.html">nmmo.core.terrain module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.core.tile.html">nmmo.core.tile module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.entity.html">nmmo.entity.entity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.npc.html">nmmo.entity.npc module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.player.html">nmmo.entity.player module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.io.html">nmmo.io namespace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html">nmmo.io.action module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.stimulus.html">nmmo.io.stimulus module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.html">nmmo.lib package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html">nmmo.lib.colors module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.log.html">nmmo.lib.log module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html">nmmo.lib.material module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.overlay.html">nmmo.lib.overlay module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.priorityqueue.html">nmmo.lib.priorityqueue module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.utils.html">nmmo.lib.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.html">nmmo.systems package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.html">nmmo.systems.ai package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.attack.html">nmmo.systems.ai.attack module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.behavior.html">nmmo.systems.ai.behavior module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.dynamic_programming.html">nmmo.systems.ai.dynamic_programming module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.move.html">nmmo.systems.ai.move module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.policy.html">nmmo.systems.ai.policy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html">nmmo.systems.ai.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.achievement.html">nmmo.systems.achievement module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.combat.html">nmmo.systems.combat module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.droptable.html">nmmo.systems.droptable module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.equipment.html">nmmo.systems.equipment module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.experience.html">nmmo.systems.experience module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html">nmmo.systems.skill module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.infrastructure.html">nmmo.infrastructure module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.websocket.html">nmmo.websocket module</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="nmmo.core.html" class="btn btn-neutral float-right" title="nmmo.core package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../rst/api.html" class="btn btn-neutral float-left" title="User API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Joseph Suarez.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    :root {
+      --foreground: #000000;
+      --background: #000e0e;
+      --accent:     #005050;
+      --text:       #bbbbbb;
+      --title:      #00bbbb;
+      --monochrome: #bbbbbb;
+      --link:       #ffffff;
+    }
+
+    body {
+      color: var(--text);
+    }
+
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: var(--background);
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: var(--foreground);
+    }
+    .wy-nav-content {
+      background: var(--background);
+    }
+    .wy-nav-content-wrap {
+      background: var(--foreground);
+    }
+
+    .wy-table-responsive table td, .wy-table-responsive table th {
+      /* !important prevents the common CSS stylesheets from
+             overriding this as on RTD they are loaded after this stylesheet */
+      white-space: normal !important;
+    }
+       
+    .wy-table-responsive {
+      overflow: visible !important;
+    }
+
+    //This one is the one that does something?
+    .row-odd {
+      background: #ff0000;
+    }
+
+    .row-even {
+      background: var(--accent);
+    }
+
+    html.writer-html5 .rst-content table.docutils th {
+      border: 1px solid var(--accent);
+    }
+
+    /* Top line */
+    hr {
+      border-top-color: teal;
+      border-top-style: solid;
+      border-top-width: 3px;
+    }
+
+    html.writer-html4 .rst-content dl:not(.docutils) > dt, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple) > dt {
+      background: var(--foreground);
+      color: var(--text);
+      border-top: var(--accent);
+    }
+
+html.writer-html4 .rst-content dl:not(.docutils) dl:not(.field-list) > dt, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple) dl:not(.field-list) > dt {
+      background: var(--foreground);
+      color: var(--text);
+      border-top: var(--accent);
+    }
+
+html.writer-html4 .rst-content dl:not(.docutils) dl:not(.field-list) > dt, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple) dl:not(.field-list) > dt {
+      background: var(--foreground);
+      color: var(--text);
+      border-top: var(--accent);
+    }
+
+
+
+    /* ****** Begin Tables ****** */
+
+    /*Don't even think about changing this.
+    Spent 3 hours pulling this from an rtd bitbucket PR*/ 
+    wy-table-odd td, .wy-table-striped tr:nth-child(2n-1) td, .rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
+      background-color: var(--foreground);
+    }
+
+    wy-table-even td, .wy-table-striped tr:nth-child(2n) td, .rst-content table.docutils:not(.field-list) tr:nth-child(2n) td {
+      background-color: var(--background);
+    }
+
+    /* Outer table */
+    .wy-table-bordered-all, .rst-content table.docutils {
+      border: 1px solid #0f0;
+        border-top-color: var(--accent);
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-right-color: var(--accent);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-bottom-color: var(--accent);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-left-color: var(--accent);
+        border-left-style: solid;
+        border-left-width: 1px;
+        border-image-outset: 0;
+        border-image-repeat: stretch;
+        border-image-slice: 100%;
+        border-image-source: none;
+        border-image-width: 1;
+    }
+
+    /* Table header underline */
+    .wy-table thead th, .rst-content table.docutils thead th, .rst-content table.field-list thead th {
+        font-weight: bold;
+        border-bottom-color: rgb(055, 0, 0);
+        border-bottom-style: solid;
+        border-bottom-width: 0px;
+    }
+
+    /* Inner table border */
+    .wy-table-bordered-all td, .rst-content table.docutils td {
+        border-bottom-color: rgb(255, 0, 0);
+        border-bottom-style: solid;
+        border-bottom-width: 0px;
+        border-left-color: rgb(255, 0, 0);
+        border-left-style: solid;
+        border-left-width: 0px;
+    }
+    /* ****** End Tables ****** */
+
+    /* ****** Start selection for left sidebar ****** */
+    .wy-menu-vertical li.current{
+      background: var(--foreground);
+    }
+
+    .wy-menu-vertical li.toctree-l1.current > a{
+      background: var(--foreground);
+      border-top-color: lime;
+      border-top-style: solid;
+      border-top-width: 3px;
+      border-bottom-color: lime;
+      border-bottom-style: solid;
+      border-bottom-width: 3px;
+      
+    }
+
+    .rst-content pre.literal-block, .rst-content div[class^="highlight"] {
+      border-top-color: var(--accent);
+      border-top-style: solid;
+      border-top-width: 1px;
+      border-right-color: var(--accent);
+      border-right-style: solid;
+      border-right-width: 1px;
+      border-bottom-color: var(--accent);
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-left-color: var(--accent);
+      border-left-style: solid;
+      border-left-width: 1px;
+      border-image-outset: 0;
+      border-image-repeat: stretch;
+      border-image-slice: 100%;
+      border-image-source: none;
+      border-image-width: 1;
+    }
+
+    .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a {
+      display: block;
+      background: var(--accent);
+      padding: .4045em 4.045em;
+    }
+
+    .wy-menu-vertical li.toctree-l2.current > a {
+      background: var(--foreground);
+      padding: .4045em 2.427em;
+    }
+
+    .wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a {
+      display: block;
+      background: var(--foreground);
+      padding: .4045em 5.663em;
+    }
+
+    .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a {
+      display: block;
+      background: var(--foreground);
+      padding: .4045em 4.045em;
+    }
+
+    /* ****** End selection for left sidebar ****** */
+
+    /* Bullet(?) blocks */
+    .rst-content dl:not(.docutils) dt {
+      display: table;
+      margin: 6px 0;
+      margin-top: 6px;
+      font-size: 90%;
+      line-height: normal;
+      background: var(--foreground);
+      color: var(--text);
+      border-top: solid 6px var(--accent);
+      padding: 6px;
+      position: relative;
+    }
+
+    /* ****** Start Code Blocks ****** */
+    .highlight-python {
+      background: var(--accent);
+      border: var(--accent);
+    }
+
+    .highlight {
+      background: var(--foreground);
+      color: var(--accent);
+    }
+    /* ****** End Code Blocks ****** */
+
+    /* Buttons */
+    .btn-neutral {
+      background-color: var(--accent) !important;
+      color: var(--title) !important;
+    }
+
+    /* Buttons */
+    .btn-neutral:visited {
+      background-color: var(--accent) !important;
+      color: var(--title) !important;
+    }
+
+    .rst-content dl:not(.docutils) dl dt {
+      margin-bottom: 6px;
+      border-left: solid 0px var(--foreground);
+      background: var(--background);
+      color: var(--text);
+      }
+
+    code, .rst-content tt, .rst-content code {
+      background-color: var(--foreground);
+      border-top-width: 0px;
+      border-bottom-width: 0px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+    }
+
+    .rst-content dl:not(.docutils) dl dt {
+      border-left-color: var(--background);
+    }
+
+    .rst-content tt, .rst-content tt, .rst-content code {
+      color: var(--title);
+    }
+
+    .rst-content tt.xref, a .rst-content tt, .rst-content tt.xref, .rst-content code.xref, a .rst-content tt, a .rst-content code {
+      color: var(--title);
+    }
+
+    .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a {
+      color: var(--text);
+    }
+
+    .wy-menu-vertical li.on a, .wy-menu-vertical li.current > a {
+      color: #00ff00;
+    }
+
+    .wy-menu-vertical li.current a {
+      border-right: solid 1px (--background);
+      padding: .4045em 2.427em;
+    }
+
+    .wy-menu-vertical header, .wy-menu-vertical p.caption {
+       color: var(--title);
+       line-height: 32px;
+       font-weight: bold;
+       text-transform: uppercase;
+       font-size: 85%;
+       white-space: nowrap;
+    }
+
+    footer {
+      color: var(--accent);
+    }
+
+    p {
+      color: var(--text);
+    }
+    h1 {
+      color: var(--title);
+      font-size: 150%
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 125%
+    }
+
+    h3 {
+      color: var(--accent);
+    }
+
+    h4 {
+      color: var(--accent);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      padding-left: 1em; 
+      text-indent: -.7em;
+    }
+
+    li {
+      content: "• ";
+      color: var(--title); /* or whatever color you prefer */
+      }
+
+    a:link {
+      color: var(--link);
+    }
+
+    a:visited {
+      color: var(--link);
+    }
+
+    a:hover {
+      color: lime;
+    }
+
+    a:active {
+      color: lime;
+    }
+
+
+  </style>
+
+
+</body>
+</html>

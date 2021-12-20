@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Introduction &mdash; Neural MMO v1.5.3 1.5.3 documentation</title>
+  <title>Introduction &mdash; Neural MMO v1.5.3 1.5.3.0 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Config" href="neural_mmo.forge.blade.core.config.html" />
+    <link rel="next" title="User API" href="api.html" />
     <link rel="prev" title="Index" href="../index.html" /> 
 </head>
 
@@ -94,16 +94,14 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-generate-environments"> Generate Environments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="neural_mmo.forge.blade.core.config.html">Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#procedural-terrain">Procedural Terrain</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-create-policies"> Create Policies</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#scripted-api">Scripted API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="neural_mmo.forge.trinity.scripted.io.html">Scripted Observation Wrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scripted-api">Scripted API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#rllib-integration">RLlib Integration</a></li>
@@ -281,25 +279,33 @@
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">AICrowd Competition setup</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gitlab</span><span class="o">.</span><span class="n">aicrowd</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neural</span><span class="o">-</span><span class="n">mmo</span><span class="o">/</span><span class="n">neural</span><span class="o">-</span><span class="n">mmo</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">kit</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span> <span class="c1">#Competition uses the old package</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Setup from source (Recommended). Windows + WSL Users: Install the server on WSL and the client on Windows.</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Setup from source with baselines(Recommended). Windows + WSL Users: Install the server and baselines on WSL and the client on Windows.</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span>
 
-<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">single</span><span class="o">-</span><span class="n">branch</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">environment</span>
-<span class="n">bash</span> <span class="n">environment</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">sh</span> <span class="c1"># --CORE_ONLY to omit RLlib requirements</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">environment</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">client</span>
 
-<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">single</span><span class="o">-</span><span class="n">branch</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">client</span>
+<span class="n">cd</span> <span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span><span class="p">[</span><span class="n">rllib</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Headless setup</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">nmmo</span><span class="p">[</span><span class="n">rllib</span><span class="p">]</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span> <span class="n">nmmo</span><span class="o">-</span><span class="n">baselines</span>
 </pre></div>
 </div>
 </div>
 <dl class="simple">
 <dt><strong>Required Configuration</strong></dt><dd><ul class="simple">
-<li><p>Edit projekt/config.py as per the instructions therein to match your hardware specs</p></li>
-<li><p>Create a file wandb_api_key in the repo root and paste in your WanDB API key. This new integration is now so important to logging and evaluation that we are requiring it by default. Do not commit this file.</p></li>
+<li><p>Edit baselines/config.py as per the instructions therein to match your hardware specs</p></li>
+<li><p>Create a file wandb_api_key in baselines and paste in your WanDB API key. This new integration is now so important to logging and evaluation that we are requiring it by default. Do not commit this file.</p></li>
 <li><p>Add <cite>custom_metrics[k] = filt; continue</cite> after line 175 in your RLlib metrics file (usually ~/anaconda3/lib/python3.8/site-packages/ray/rllib/evaluation/metrics.py). This is an RLlib limitation which we hope to resolve in the next version.</p></li>
 </ul>
 </dd>
@@ -315,7 +321,7 @@
 </div>
 <div class="section" id="cli">
 <h2>CLI<a class="headerlink" href="#cli" title="Permalink to this headline">¶</a></h2>
-<p>Forge is the main file for the included demo and starter project (/projekt). It includes commands for map generation, training, evaluation, visualization, and rendering. To view documentation:</p>
+<p>Forge is the main file for the baselines and demo project. It includes commands for training, evaluation, and rendering. To view documentation:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">Forge</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
 </pre></div>
 </div>
@@ -343,9 +349,6 @@ COMMANDS
      evaluate
        Evaluate a model against EVAL_AGENTS models
 
-     generate
-       Generate game maps for the current --config setting
-
      render
        Start a WebSocket server that autoconnects to the 3D Unity client
 
@@ -361,25 +364,20 @@ COMMANDS
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>We recommend that new users start with one of the default configurations provided with the environment. Similarly, competition participants should start with the configuration provided for the current round.</p>
 <p>Experienced users can create custom environments that are better suited to their specific research interests. We further recommend reviewing the game wiki’s description of the vanilla mechanics before heavily modifying them. Enable a specific set of game systems by inheriting from their respective configs, in addition to the base class. <strong>Note that you must inherit from game systems last.</strong> For example:</p>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">Example config enabling the resource and progression systems</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Example config enabling the resource and progression systems</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExampleSelectGameSystemsConfig</span><span class="p">(</span><span class="n">SmallMaps</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">Resource</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">Progression</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
 </div>
 <p>Customize each game system by overriding exposed config properties:</p>
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">Example config enabling the resource and progression systems</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Example config enabling the resource and progression systems</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExampleCustomizeGameSystemsConfig</span><span class="p">(</span><span class="n">SmallMaps</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">Resource</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">Progression</span><span class="p">):</span>
     <span class="c1"># Example core config customization</span>
     <span class="n">NMOB</span>                    <span class="o">=</span> <span class="mi">512</span>
     <span class="n">NENT</span>                    <span class="o">=</span> <span class="mi">128</span>
-
-    <span class="c1"># Example terrain generation customization</span>
-    <span class="n">TERRAIN_CENTER</span>             <span class="o">=</span> <span class="mi">512</span>
-    <span class="n">TERRAIN_WATER</span>              <span class="o">=</span> <span class="mf">0.40</span>
-    <span class="n">TERRAIN_GRASS</span>              <span class="o">=</span> <span class="mf">0.55</span>
 
     <span class="c1"># Example progression system customization</span>
     <span class="n">PROGRESSION_BASE_XP_SCALE</span>           <span class="o">=</span> <span class="mi">10</span>
@@ -389,21 +387,30 @@ COMMANDS
 </div>
 <p>A full list of config properties is available here:</p>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="neural_mmo.forge.blade.core.config.html">Config</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="procedural-terrain">
 <h2>Procedural Terrain<a class="headerlink" href="#procedural-terrain" title="Permalink to this headline">¶</a></h2>
-<p>Once you have selected or written a config, you will need to generate maps for training and/or evaluation. Generating image previews of each map can be useful in certain circumstances, but note that this will take additional space and time. The previews for max sized maps are huge, so we’ll only generate PNGs for smaller ones.</p>
-<div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">Generate small and large game maps</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">Forge</span><span class="o">.</span><span class="n">py</span> <span class="n">generate</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">SmallMaps</span> <span class="o">--</span><span class="n">TERRAIN_RENDER</span>
-<span class="n">python</span> <span class="n">Forge</span><span class="o">.</span><span class="n">py</span> <span class="n">generate</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">LargeMaps</span>
+<p>Terrain generation is controlled by a number of parameters prefixed with <a href="#id13"><span class="problematic" id="id14">TERRAIN_</span></a>. The config documentation details them all, and you can experiment with larger modifications to the procedural generation source in neural_mmo/forgeblade/core/terrain.py. For coarse-grained customization, define a new config as per the example below:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Example config enabling the resource and progression systems</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExampleCustomizeTerrainGeneration</span><span class="p">(</span><span class="n">SmallMaps</span><span class="p">):</span>
+    <span class="c1">#Generated maps path</span>
+    <span class="n">PATH_MAPS</span> <span class="o">=</span> <span class="s1">&#39;maps/custom&#39;</span>
+
+    <span class="c1">#Number of maps generated</span>
+    <span class="n">TERRAIN_TRAIN_MAPS</span>         <span class="o">=</span> <span class="mi">32</span>
+    <span class="n">TERRAIN_EVAL_MAPS</span>          <span class="o">=</span> <span class="mi">32</span>
+
+    <span class="c1">#Terrain generation parameters</span>
+    <span class="n">TERRAIN_CENTER</span>             <span class="o">=</span> <span class="mi">512</span>
+    <span class="n">TERRAIN_WATER</span>              <span class="o">=</span> <span class="mf">0.40</span>
+    <span class="n">TERRAIN_GRASS</span>              <span class="o">=</span> <span class="mf">0.55</span>
 </pre></div>
 </div>
 </div>
+<p>The terrain generator only checks if the specified PATH_MAPS directory is empty. Be sure to clear out any maps from old config versions. Provided the directory is empty, maps will be generated the first time the env is reset. For fine-grained customization over map generation, you may directly modify nmmo.core.terrain.py. An API hook to allow you to do this more easily without needing the environment source is coming soon.</p>
+<p>Generating image previews of each map can be useful in certain circumstances, but note that this will take additional space and time. To do so, clear out PATH_MAPS and set TERRAIN_RENDER=True. The previews for max sized maps are huge, so we’ll only generate PNGs for smaller ones.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Generating 256 training and 64 evaluation maps:
 100%|████████████████████████████████████████████████| 320/320 [01:35&lt;00:00,  3.34it/s]
 Generating 256 training and 64 evaluation maps:
@@ -411,11 +418,10 @@ Generating 256 training and 64 evaluation maps:
 </pre></div>
 </div>
 <p>Generating small maps without rendering takes around 10 seconds on a modern CPU.</p>
-<div class="figure align-default" id="id9">
+<div class="figure align-default" id="id10">
 <img alt="../_images/map1.png" src="../_images/map1.png" />
-<p class="caption"><span class="caption-text">Example map from resource/maps/procedural-small/map1/map.png</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Example map from resource/maps/procedural-small/map1/map.png</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
-<p>Terrain generation is controlled by a number of parameters prefixed with <a href="#id12"><span class="problematic" id="id13">TERRAIN_</span></a>. The config documentation details them all, and you can experiment with larger modifications to the procedural generation source in neural_mmo/forgeblade/core/terrain.py.</p>
 </div>
 </div>
 <div class="section" id="icon-create-policies">
@@ -424,19 +430,16 @@ Generating 256 training and 64 evaluation maps:
 <h2>Scripted API<a class="headerlink" href="#scripted-api" title="Permalink to this headline">¶</a></h2>
 <p>Neural MMO provides compact tensor observations that are difficult to integrate with scripted policies and change from version to version. We therefore provide a simple wrapper class that enables users to extract named attributes without direct dependence on the underlying structure of observations, documented here:</p>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="neural_mmo.forge.trinity.scripted.io.html">Scripted Observation Wrapper</a></li>
-</ul>
 </div>
-<p>We will occasionally modify the set of available attributes. In these instances, we will publish upgrade scripts where possible and lists of larger changes requiring individual attention where needed.</p>
-<p>Each Neural MMO release will include a set of <a class="reference external" href="https://github.com/jsuarez5341/neural-mmo/blob/master/neural_mmo/forge/trinity/scripted/baselines.py">[scripted baselines]</a>. You may find these useful as references for creating your own models. You are also free to leverage any of the utility classes included with these baselines, but do note that these are not part of the official API and may change from version to version.</p>
+<p>We will occasionally modify the set of available attributes. In these instances, we will publish upgrade scripts upon request. We will provide individual guidance via Discord in cases where larger changes are needed.</p>
+<p>Each Neural MMO release will include a set of <a class="reference external" href="https://github.com/NeuralMMO/baselines/blob/main/scripted/baselines.py">[scripted baselines]</a>. You may find these useful as references for creating your own models. You are also free to leverage any of the utility classes included with these baselines, but do note that these are not part of the official API and may change from version to version.</p>
 </div>
 <div class="section" id="rllib-integration">
 <h2>RLlib Integration<a class="headerlink" href="#rllib-integration" title="Permalink to this headline">¶</a></h2>
 <p>The baseline model and associated training and evaluation code in projekt/rllib_wrapper.py demonstrate how to use RLlib with Neural MMO. Note that RLlib is not a hard dependency of the platform: Neural MMO provides an otherwise-standard Gym interface extended for multiagent. That said, all of our trained baselines rely on RLlib, and we strongly suggest using it unless you fancy writing your own segmented trajectory collectors, hierarchical observation/action processing, variable agent population batching, etc.</p>
 <p>To re-evaluate or re-train the pretrained baseline:</p>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">Training and evaluation through Ray Tune with WanDB logging</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Training and evaluation through Ray Tune with WanDB logging</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">Forge</span><span class="o">.</span><span class="n">py</span> <span class="n">evaluate</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">CompetitionRound1</span>
 <span class="n">python</span> <span class="n">Forge</span><span class="o">.</span><span class="n">py</span> <span class="n">train</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">CompetitionRound1</span> <span class="o">--</span><span class="n">RESTORE</span><span class="o">=</span><span class="kc">None</span>
 </pre></div>
@@ -476,9 +479,9 @@ Generating 256 training and 64 evaluation maps:
 <div class="line"><strong>Windows:</strong> Launch neural-mmo-client/UnityClient/neural-mmo.exe from Windows 10</div>
 </div>
 <p>The server will take a few seconds to load the pretrained policy and connect to the client.</p>
-<div class="figure align-default" id="id11">
+<div class="figure align-default" id="id12">
 <img alt="../_images/ui.png" src="../_images/ui.png" />
-<p class="caption"><span class="caption-text">You should see this view once the map loads</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">You should see this view once the map loads</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 <p>The on-screen instructions demonstrate how to pan and zoom in the environment. You can also click on agents to examine their skill levels. The in-game console (which you can toggle with the tilde key) give you access to a number of overlays. Note that the LargeMaps config requires a good workstation to render and you should avoid zooming all the way out.</p>
 <img alt="../_images/overlays.png" src="../_images/overlays.png" />
@@ -492,7 +495,7 @@ Generating 256 training and 64 evaluation maps:
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="neural_mmo.forge.blade.core.config.html" class="btn btn-neutral float-right" title="Config" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="api.html" class="btn btn-neutral float-right" title="User API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="../index.html" class="btn btn-neutral float-left" title="Index" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

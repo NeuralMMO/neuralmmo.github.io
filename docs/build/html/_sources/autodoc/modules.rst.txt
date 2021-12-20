@@ -1,7 +1,7 @@
-projekt
-=======
+nmmo
+====
 
 .. toctree::
    :maxdepth: 4
 
-   projekt
+   nmmo

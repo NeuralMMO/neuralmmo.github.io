@@ -5,24 +5,67 @@
 |icon| User API
 ###############
 
-Neural MMO's core Env API is a simple multiagent analog to the standard OpenAI Gym API. It also includes a configuration file for customizing everything from terrain generation to spawning behavior to game mechanics
+Neural MMO provides a pettingzoo compliant environment API, a agent base class, and a deep configuration system
 
-.. toctree::
-   :maxdepth: 4
+Environment
+-----------
 
-   neural_mmo.forge.blade.core.config
-   neural_mmo.forge.trinity.env
+.. autoclass:: nmmo.Env
+   :members:
+   :noindex:
 
-This is all that most environments provide. However, Neural MMO is not a single-task environment: it is a platform built to support a wide diversity of research. The current release includes a scripted API and an evaluation + visualization suite for creating custom dashboards and in-game overlays. If you wish to make use of these custom features, familiarize yourself with the /projekt demo code and refer to these additional docs:
+.. autoclass:: nmmo.Agent
+   :members: __init__, __call__
+   :noindex:
 
-.. toctree::
-   :maxdepth: 4
+Config
+------
 
-   neural_mmo.forge.trinity.scripted.baselines
-   neural_mmo.forge.trinity.scripted.io
-   neural_mmo.forge.trinity.evaluator
-   neural_mmo.forge.trinity.overlay
-   neural_mmo.forge.trinity.formatting
+.. automodule:: nmmo.config
+   :members: Config, Small, Medium, Large, Resource, Combat, Progression, NPC, SequentialLoader, TeamLoader
+   :undoc-members:
+   :noindex:
+
+Scripting
+---------
+
+To support scripted models, we provide a small wrapper class for extracting meaningful attributes from observation tensors. We also expose static definitions of the environment's materials and observation/action spaces. The core environment ships with a random example agent; more are available in the accompanying baselines repository.
+
+.. automodule:: nmmo.scripting
+   :members:
+   :noindex:
+
+.. autoclass:: nmmo.Serialized
+   :members:
+   :undoc-members:
+   :noindex:
+
+.. automodule:: nmmo.action
+   :members:
+   :undoc-members:
+   :noindex:
+
+.. automodule:: nmmo.material
+   :members: Lava, Water, Grass, Scrub, Forest, Stone, Orerock, All, Impassible, Habitable
+   :noindex:
+
+.. automodule:: nmmo.agent
+   :members: Random
+   :noindex:
+
+Overlays
+--------
+
+For visualization, the Overlay API enables users to write custom 2D overlays to be rendered in the Unity3D client
+
+
+.. autoclass:: nmmo.Overlay
+   :members:
+   :noindex:
+
+.. autoclass:: nmmo.OverlayRegistry
+   :members:
+   :noindex:
 
 |icon| Developer API
 ####################
@@ -32,5 +75,4 @@ The doctree below contains automatically generated documentation for the entire 
 .. toctree::
    :maxdepth: 4
 
-   ../autodoc/neural_mmo.projekt
-   ../autodoc/neural_mmo.forge
+   ../autodoc/nmmo

@@ -32,8 +32,10 @@ project = 'Neural MMO v1.5.3'
 copyright = '2020, Joseph Suarez'
 author = 'Joseph Suarez'
 
+
 # The full version, including alpha/beta/rc tags
-release = '1.5.3'
+import nmmo
+release = nmmo.version
 
 # -- General configuration ---------------------------------------------------
 
@@ -49,6 +51,9 @@ extensions = [
 
 #Don't sort method names
 autodoc_member_order = 'bysource'
+
+#Include __init__
+autoclass_content = 'both'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

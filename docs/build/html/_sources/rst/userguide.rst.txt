@@ -57,21 +57,29 @@ Official support: Ubuntu 20.04, Windows 10 + WSL, and MacOS
    :caption: AICrowd Competition setup
 
    git clone https://gitlab.aicrowd.com/neural-mmo/neural-mmo-starter-kit
-   pip install neural-mmo
+   pip install neural-mmo #Competition uses the old package
 
 .. code-block:: python
-   :caption: Setup from source (Recommended). Windows + WSL Users: Install the server on WSL and the client on Windows.
+   :caption: Setup from source with baselines(Recommended). Windows + WSL Users: Install the server and baselines on WSL and the client on Windows.
 
    mkdir neural-mmo && cd neural-mmo
 
-   git clone --single-branch --depth=1 https://github.com/neuralmmo/environment
-   bash environment/scripts/setup.sh # --CORE_ONLY to omit RLlib requirements
+   git clone --depth=1 https://github.com/neuralmmo/environment
+   git clone --depth=1 https://github.com/neuralmmo/baselines
+   git clone --depth=1 https://github.com/neuralmmo/client
+   
+   cd environment && pip install -e .[rllib]
 
-   git clone --single-branch --depth=1 https://github.com/neuralmmo/client
+.. code-block:: python
+   :caption: Headless setup
+
+   pip install nmmo[rllib]
+   git clone --depth=1 https://github.com/neuralmmo/baselines nmmo-baselines
+   
 
 **Required Configuration**
-   - Edit projekt/config.py as per the instructions therein to match your hardware specs
-   - Create a file wandb_api_key in the repo root and paste in your WanDB API key. This new integration is now so important to logging and evaluation that we are requiring it by default. Do not commit this file.
+   - Edit baselines/config.py as per the instructions therein to match your hardware specs
+   - Create a file wandb_api_key in baselines and paste in your WanDB API key. This new integration is now so important to logging and evaluation that we are requiring it by default. Do not commit this file.
    - Add `custom_metrics[k] = filt; continue` after line 175 in your RLlib metrics file (usually ~/anaconda3/lib/python3.8/site-packages/ray/rllib/evaluation/metrics.py). This is an RLlib limitation which we hope to resolve in the next version.
 
 **Troubleshooting**
@@ -85,7 +93,7 @@ Problems? Post in #support on the `[Discord] <https://discord.gg/BkMmFUC>`_. Ser
 CLI
 ***
 
-Forge is the main file for the included demo and starter project (/projekt). It includes commands for map generation, training, evaluation, visualization, and rendering. To view documentation:
+Forge is the main file for the baselines and demo project. It includes commands for training, evaluation, and rendering. To view documentation:
 
 .. code-block:: python
 
@@ -116,9 +124,6 @@ Forge is the main file for the included demo and starter project (/projekt). It 
 
        evaluate
          Evaluate a model against EVAL_AGENTS models
-
-       generate
-         Generate game maps for the current --config setting
 
        render
          Start a WebSocket server that autoconnects to the 3D Unity client
@@ -152,11 +157,6 @@ Customize each game system by overriding exposed config properties:
       NMOB                    = 512
       NENT                    = 128
 
-      # Example terrain generation customization
-      TERRAIN_CENTER             = 512
-      TERRAIN_WATER              = 0.40
-      TERRAIN_GRASS              = 0.55
-
       # Example progression system customization
       PROGRESSION_BASE_XP_SCALE           = 10
       PROGRESSION_CONSTITUTION_XP_SCALE   = 2
@@ -171,13 +171,27 @@ A full list of config properties is available here:
 Procedural Terrain
 ******************
 
-Once you have selected or written a config, you will need to generate maps for training and/or evaluation. Generating image previews of each map can be useful in certain circumstances, but note that this will take additional space and time. The previews for max sized maps are huge, so we'll only generate PNGs for smaller ones.
+Terrain generation is controlled by a number of parameters prefixed with TERRAIN_. The config documentation details them all, and you can experiment with larger modifications to the procedural generation source in neural_mmo/forgeblade/core/terrain.py. For coarse-grained customization, define a new config as per the example below:
 
 .. code-block:: python
-  :caption: Generate small and large game maps
+  :caption: Example config enabling the resource and progression systems
 
-  python Forge.py generate --config=SmallMaps --TERRAIN_RENDER
-  python Forge.py generate --config=LargeMaps
+  class ExampleCustomizeTerrainGeneration(SmallMaps):
+      #Generated maps path
+      PATH_MAPS = 'maps/custom'
+
+      #Number of maps generated
+      TERRAIN_TRAIN_MAPS         = 32
+      TERRAIN_EVAL_MAPS          = 32
+
+      #Terrain generation parameters
+      TERRAIN_CENTER             = 512
+      TERRAIN_WATER              = 0.40
+      TERRAIN_GRASS              = 0.55
+
+The terrain generator only checks if the specified PATH_MAPS directory is empty. Be sure to clear out any maps from old config versions. Provided the directory is empty, maps will be generated the first time the env is reset. For fine-grained customization over map generation, you may directly modify nmmo.core.terrain.py. An API hook to allow you to do this more easily without needing the environment source is coming soon.
+
+Generating image previews of each map can be useful in certain circumstances, but note that this will take additional space and time. To do so, clear out PATH_MAPS and set TERRAIN_RENDER=True. The previews for max sized maps are huge, so we'll only generate PNGs for smaller ones.
 
 .. code-block:: text
 
@@ -192,7 +206,6 @@ Generating small maps without rendering takes around 10 seconds on a modern CPU.
 
    Example map from resource/maps/procedural-small/map1/map.png
 
-Terrain generation is controlled by a number of parameters prefixed with TERRAIN_. The config documentation details them all, and you can experiment with larger modifications to the procedural generation source in neural_mmo/forgeblade/core/terrain.py.
 
 |icon| Create Policies
 ######################
@@ -205,11 +218,11 @@ Neural MMO provides compact tensor observations that are difficult to integrate 
 .. toctree::
   :maxdepth: 4
 
-  neural_mmo.forge.trinity.scripted.io
+  nmmo.infra.scripting
 
-We will occasionally modify the set of available attributes. In these instances, we will publish upgrade scripts where possible and lists of larger changes requiring individual attention where needed.
+We will occasionally modify the set of available attributes. In these instances, we will publish upgrade scripts upon request. We will provide individual guidance via Discord in cases where larger changes are needed.
 
-Each Neural MMO release will include a set of `[scripted baselines] <https://github.com/jsuarez5341/neural-mmo/blob/master/neural_mmo/forge/trinity/scripted/baselines.py>`_. You may find these useful as references for creating your own models. You are also free to leverage any of the utility classes included with these baselines, but do note that these are not part of the official API and may change from version to version.
+Each Neural MMO release will include a set of `[scripted baselines] <https://github.com/NeuralMMO/baselines/blob/main/scripted/baselines.py>`_. You may find these useful as references for creating your own models. You are also free to leverage any of the utility classes included with these baselines, but do note that these are not part of the official API and may change from version to version.
 
 RLlib Integration
 *****************
