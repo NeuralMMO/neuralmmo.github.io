@@ -53,6 +53,16 @@ To support scripted models, we provide a small wrapper class for extracting mean
    :members: Random
    :noindex:
 
+Procedural Generation
+---------------------
+
+The default map generator is multioctave perlin noise that is itself seeded using perlin noise to create terrain of varying local frequency. Use the MAP_GENERATOR config argument to supply your own generator classes. We suggest subclassing the default and overriding the generate_map method. For procedural generation beyond maps, customize game system mechanics dynamically to modify mechanics per-environment.
+
+.. automodule:: nmmo.terrain
+   :members:
+   :noindex:
+
+
 Overlays
 --------
 
