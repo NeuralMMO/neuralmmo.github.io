@@ -49,15 +49,7 @@ Citation to be updated upon the release of NeurIPS 2021 proceedings. See Updates
 Installation
 ************
 
-NOTE: Today (December 14/15) we are in the process of moving NMMO to an organization repo. Report errors in installation in the Discord
-
 Official support: Ubuntu 20.04, Windows 10 + WSL, and MacOS
-
-.. code-block:: python
-   :caption: AICrowd Competition setup
-
-   git clone https://gitlab.aicrowd.com/neural-mmo/neural-mmo-starter-kit
-   pip install neural-mmo #Competition uses the old package
 
 .. code-block:: python
    :caption: Setup from source with baselines(Recommended). Windows + WSL Users: Install the server and baselines on WSL and the client on Windows.
@@ -77,7 +69,7 @@ Official support: Ubuntu 20.04, Windows 10 + WSL, and MacOS
    git clone --depth=1 https://github.com/neuralmmo/baselines nmmo-baselines
    
 
-**Required Configuration**
+**Required Baselines Configuration**
    - Edit baselines/config.py as per the instructions therein to match your hardware specs
    - Create a file wandb_api_key in baselines and paste in your WanDB API key. This new integration is now so important to logging and evaluation that we are requiring it by default. Do not commit this file.
    - Add `custom_metrics[k] = filt; continue` after line 175 in your RLlib metrics file (usually ~/anaconda3/lib/python3.8/site-packages/ray/rllib/evaluation/metrics.py). This is an RLlib limitation which we hope to resolve in the next version.
@@ -90,28 +82,28 @@ Official support: Ubuntu 20.04, Windows 10 + WSL, and MacOS
 
 Problems? Post in #support on the `[Discord] <https://discord.gg/BkMmFUC>`_. Seriously, do this. Do not raise Github issues for support. You will get a reply much faster (often instantly) on Discord.
 
-CLI
-***
+Baselines CLI
+*************
 
-Forge is the main file for the baselines and demo project. It includes commands for training, evaluation, and rendering. To view documentation:
+The main file for the baselines and demo project includes commands for training, evaluation, and rendering. To view documentation:
 
 .. code-block:: python
 
-  python Forge.py --help
+  python main.py --help
 
 .. code-block:: text
 
   NAME
-      Forge.py --help - Neural MMO CLI powered by Google Fire
+      main.py --help - Neural MMO CLI powered by Google Fire
 
   SYNOPSIS
-      Forge.py --help - COMMAND
+      main.py --help - COMMAND
 
   DESCRIPTION
       Main file for the RLlib demo included with Neural MMO.
 
       Usage:
-         python Forge.py <COMMAND> --config=<CONFIG> --ARG1=<ARG1> ...
+         python main.py <COMMAND> --config=<CONFIG> --ARG1=<ARG1> ...
 
       The User API documents core env flags. Additional config options specific
       to this demo are available in projekt/config.py.
@@ -131,80 +123,63 @@ Forge is the main file for the baselines and demo project. It includes commands 
        train
          Train a model using the current --config setting
 
-|icon| Generate Environments
-############################
+|icon| Environment Configuration
+################################
 
-Configuration
-*************
-
-We recommend that new users start with one of the default configurations provided with the environment. Similarly, competition participants should start with the configuration provided for the current round.
-
-Experienced users can create custom environments that are better suited to their specific research interests. We further recommend reviewing the game wiki's description of the vanilla mechanics before heavily modifying them. Enable a specific set of game systems by inheriting from their respective configs, in addition to the base class. **Note that you must inherit from game systems last.** For example:
+Neural MMO provides a base Config with Small, Medium, and Large presets and a set of game systems. Enable game systems by subclassing a preset. For example, the default config when unspecified is:
 
 .. code-block:: python
-  :caption: Example config enabling the resource and progression systems
 
-  class ExampleSelectGameSystemsConfig(SmallMaps, config.Resource, config.Progression):
+  class DefaultConfig(nmmo.config.Medium, nmmo.config.AllGameSystems):
       pass
 
-Customize each game system by overriding exposed config properties:
+Maps will be generated upon environment instantiation according the the provided config. Note that maps are cached by defaultHere are some examples:
+
+.. figure:: /resource/image/map.png
+   :caption: Enable image previews with TERRAIN_RENDER. Downscale from 128x128 px/tile by setting the MAP_PREVIEW_DOWNSCALE factor
+
+   Example map from resource/maps/procedural-small/map1/map.png
+
+Customize terrain generation and game balance by overriding preset and game system configuration parameters:
 
 .. code-block:: python
-  :caption: Example config enabling the resource and progression systems
 
-  class ExampleCustomizeGameSystemsConfig(SmallMaps, config.Resource, config.Progression):
+  class ExampleCustomConfig(nmmo.config.Small, nmmo.config.Resource, nmmo.config.Progression):
       # Example core config customization
       NMOB                    = 512
       NENT                    = 128
 
-      # Example progression system customization
-      PROGRESSION_BASE_XP_SCALE           = 10
-      PROGRESSION_CONSTITUTION_XP_SCALE   = 2
+      # Custom map storage location
+      PATH_MAPS               = 'maps/custom'
 
-A full list of config properties is available here:
+      # Number of maps generated
+      # EVALUATE ON HELD-OUT MAPS!
+      # See baselines/config.py for an example
+      NMAPS                   = 32
 
-.. toctree::
-  :maxdepth: 4
-
-  neural_mmo.forge.blade.core.config
-
-Procedural Terrain
-******************
-
-Terrain generation is controlled by a number of parameters prefixed with TERRAIN_. The config documentation details them all, and you can experiment with larger modifications to the procedural generation source in neural_mmo/forgeblade/core/terrain.py. For coarse-grained customization, define a new config as per the example below:
-
-.. code-block:: python
-  :caption: Example config enabling the resource and progression systems
-
-  class ExampleCustomizeTerrainGeneration(SmallMaps):
-      #Generated maps path
-      PATH_MAPS = 'maps/custom'
-
-      #Number of maps generated
-      TERRAIN_TRAIN_MAPS         = 32
-      TERRAIN_EVAL_MAPS          = 32
-
-      #Terrain generation parameters
+      # Terrain generation parameters
       TERRAIN_CENTER             = 512
       TERRAIN_WATER              = 0.40
       TERRAIN_GRASS              = 0.55
 
-The terrain generator only checks if the specified PATH_MAPS directory is empty. Be sure to clear out any maps from old config versions. Provided the directory is empty, maps will be generated the first time the env is reset. For fine-grained customization over map generation, you may directly modify nmmo.core.terrain.py. An API hook to allow you to do this more easily without needing the environment source is coming soon.
+      # Progression system rebalancing
+      PROGRESSION_BASE_XP_SCALE           = 10
+      PROGRESSION_CONSTITUTION_XP_SCALE   = 2
 
-Generating image previews of each map can be useful in certain circumstances, but note that this will take additional space and time. To do so, clear out PATH_MAPS and set TERRAIN_RENDER=True. The previews for max sized maps are huge, so we'll only generate PNGs for smaller ones.
+The config docs provide a full list of parameters:
 
-.. code-block:: text
+.. toctree::
+  :maxdepth: 4
 
-  Generating 256 training and 64 evaluation maps:
-  100%|████████████████████████████████████████████████| 320/320 [01:35<00:00,  3.34it/s]
-  Generating 256 training and 64 evaluation maps:
-  100%|████████████████████████████████████████████████| 320/320 [09:53<00:00,  1.85s/it]
+  nmmo.config
 
-Generating small maps without rendering takes around 10 seconds on a modern CPU.
 
-.. figure:: /resource/image/map.png
 
-   Example map from resource/maps/procedural-small/map1/map.png
+A few important notes:
+   - Maps are cached at PATH_MAPS for reuse. If you are actively tweaking TERRAIN_ generation parameters, you **will** forget to delete the old maps between runs. Set FORCE_MAP_GENERATION=True to avoid this.
+   - Not all game configurations lend themselves to balanced and interesting gameplay. We recommend spending some time watching the baseline agents and reviewing the game wiki's description of the vanilla mechanics before diving too deep into custom configurations.
+
+The environment is fully open-source, and we encourage more creative modding beyond what the configs provide. Come chat on `Discord <https://discord.gg/BkMmFUC>`_ if you're doing something cool!
 
 
 |icon| Create Policies
@@ -234,8 +209,8 @@ To re-evaluate or re-train the pretrained baseline:
 .. code-block:: python
   :caption: Training and evaluation through Ray Tune with WanDB logging
 
-  python Forge.py evaluate --config=CompetitionRound1
-  python Forge.py train --config=CompetitionRound1 --RESTORE=None
+  python main.py evaluate --config=CompetitionRound1
+  python main.py train --config=CompetitionRound1 --RESTORE=None
 
 If a job crashes, you can resume training with `--RESUME=True --RESTORE=None`
 
@@ -274,7 +249,7 @@ Rendering the environment requires launching both a server and a client. To laun
 
 .. code-block:: python
 
-  python Forge.py render --config=CompetitionRound1
+  python main.py render --config=CompetitionRound1
 
 | **Linux/MacOS:** Launch *client.sh* in a separate shell or click the associated executable
 | **Windows:** Launch neural-mmo-client/UnityClient/neural-mmo.exe from Windows 10
