@@ -82,49 +82,14 @@ Official support: Ubuntu 20.04, Windows 10 + WSL, and MacOS
 
 Problems? Post in #support on the `[Discord] <https://discord.gg/BkMmFUC>`_. Seriously, do this. Do not raise Github issues for support. You will get a reply much faster (often instantly) on Discord.
 
-Baselines CLI
-*************
+|icon| Environment
+##################
 
-The main file for the baselines and demo project includes commands for training, evaluation, and rendering. To view documentation:
+Neural MMO provides a standard PettingZoo (multiagent analog to OpenAI Gym) API. The configuration options include proce and a  environment configuration system 
 
-.. code-block:: python
 
-  python main.py --help
-
-.. code-block:: text
-
-  NAME
-      main.py --help - Neural MMO CLI powered by Google Fire
-
-  SYNOPSIS
-      main.py --help - COMMAND
-
-  DESCRIPTION
-      Main file for the RLlib demo included with Neural MMO.
-
-      Usage:
-         python main.py <COMMAND> --config=<CONFIG> --ARG1=<ARG1> ...
-
-      The User API documents core env flags. Additional config options specific
-      to this demo are available in projekt/config.py.
-
-      The --config flag may be used to load an entire group of options at once.
-      Select one of the defaults from projekt/config.py or write your own.
-
-  COMMANDS
-      COMMAND is one of the following:
-
-       evaluate
-         Evaluate a model against EVAL_AGENTS models
-
-       render
-         Start a WebSocket server that autoconnects to the 3D Unity client
-
-       train
-         Train a model using the current --config setting
-
-|icon| Environment Configuration
-################################
+|icon| Configuration
+####################
 
 Neural MMO provides a base Config with Small, Medium, and Large presets and a set of game systems. Enable game systems by subclassing a preset. For example, the default config when unspecified is:
 
@@ -173,13 +138,53 @@ The config docs provide a full list of parameters:
 
   nmmo.config
 
-
-
 A few important notes:
    - Maps are cached at PATH_MAPS for reuse. If you are actively tweaking TERRAIN_ generation parameters, you **will** forget to delete the old maps between runs. Set FORCE_MAP_GENERATION=True to avoid this.
    - Not all game configurations lend themselves to balanced and interesting gameplay. We recommend spending some time watching the baseline agents and reviewing the game wiki's description of the vanilla mechanics before diving too deep into custom configurations.
 
 The environment is fully open-source, and we encourage more creative modding beyond what the configs provide. Come chat on `Discord <https://discord.gg/BkMmFUC>`_ if you're doing something cool!
+
+
+Baselines CLI
+*************
+
+The main file for the baselines and demo project includes commands for training, evaluation, and rendering. To view documentation:
+
+.. code-block:: python
+
+  python main.py --help
+
+.. code-block:: text
+
+  NAME
+      main.py --help - Neural MMO CLI powered by Google Fire
+
+  SYNOPSIS
+      main.py --help - COMMAND
+
+  DESCRIPTION
+      Main file for the RLlib demo included with Neural MMO.
+
+      Usage:
+         python main.py <COMMAND> --config=<CONFIG> --ARG1=<ARG1> ...
+
+      The User API documents core env flags. Additional config options specific
+      to this demo are available in projekt/config.py.
+
+      The --config flag may be used to load an entire group of options at once.
+      Select one of the defaults from projekt/config.py or write your own.
+
+  COMMANDS
+      COMMAND is one of the following:
+
+       evaluate
+         Evaluate a model against EVAL_AGENTS models
+
+       render
+         Start a WebSocket server that autoconnects to the 3D Unity client
+
+       train
+         Train a model using the current --config setting
 
 
 |icon| Create Policies
@@ -193,16 +198,16 @@ Neural MMO provides compact tensor observations that are difficult to integrate 
 .. toctree::
   :maxdepth: 4
 
-  nmmo.infra.scripting
+  nmmo.scripting
 
-We will occasionally modify the set of available attributes. In these instances, we will publish upgrade scripts upon request. We will provide individual guidance via Discord in cases where larger changes are needed.
+We will occasionally modify the set of available attributes. In these instances, we will publish upgrade scripts upon request. We will provide individual guidance via Discord in cases where larger changes are needed. 
 
-Each Neural MMO release will include a set of `[scripted baselines] <https://github.com/NeuralMMO/baselines/blob/main/scripted/baselines.py>`_. You may find these useful as references for creating your own models. You are also free to leverage any of the utility classes included with these baselines, but do note that these are not part of the official API and may change from version to version.
+baselines/scripted includes a set of scripted models and utilities. You may find these useful as references for creating your own models.
 
 RLlib Integration
 *****************
 
-The baseline model and associated training and evaluation code in projekt/rllib_wrapper.py demonstrate how to use RLlib with Neural MMO. Note that RLlib is not a hard dependency of the platform: Neural MMO provides an otherwise-standard Gym interface extended for multiagent. That said, all of our trained baselines rely on RLlib, and we strongly suggest using it unless you fancy writing your own segmented trajectory collectors, hierarchical observation/action processing, variable agent population batching, etc.
+The baseline model and associated training and evaluation code in baselines/rllib_wrapper.py demonstrate how to use RLlib with Neural MMO. Note that RLlib is not a hard dependency of the platform: Neural MMO provides an otherwise-standard Gym interface extended for multiagent. That said, all of our trained baselines rely on RLlib, and we strongly suggest using it unless you fancy writing your own segmented trajectory collectors, hierarchical observation/action processing, variable agent population batching, etc.
 
 To re-evaluate or re-train the pretrained baseline:
 
