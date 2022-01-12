@@ -4,15 +4,18 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.websocket module &mdash; Neural MMO v1.5.3 1.5.3.0 documentation</title>
+  <title>nmmo.websocket module &mdash; Neural MMO 1.5.3.5 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -40,7 +43,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Overview" href="../rst/game_wiki.html" />
-    <link rel="prev" title="nmmo.scripting module" href="nmmo.scripting.html" /> 
+    <link rel="prev" title="nmmo.version module" href="nmmo.version.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -54,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.3
+            <a href="../index.html" class="icon icon-home"> Neural MMO
           
 
           
@@ -85,34 +88,38 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html"> Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-generate-environments"> Generate Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-create-policies"> Create Policies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-evaluate-agents"> Evaluate Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-installation"> Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-creating-environments"> Creating Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-defining-rewards-and-tasks"> Defining Rewards and Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-scripting-and-classic-ai"> Scripting and Classic AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-baselines"> Baselines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#evaluation-methods">Evaluation Methods</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html"> User API</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-developer-api"> Developer API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.lib.html">nmmo.lib package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.systems.html">nmmo.systems package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.infrastructure.html">nmmo.infrastructure module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.version.html">nmmo.version module</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">nmmo.websocket module</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Game Wiki</span></p>
+<p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html"> Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-game-systems"> Game Systems</a></li>
@@ -121,13 +128,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-progression"> Progression</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Baselines</span></p>
+<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Evaluation Protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-small-maps"> Small Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-large-maps"> Large Maps</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Updates</span></p>
+<p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html"> Video Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-publications"> Publications</a></li>
@@ -136,7 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-additional-links"> Additional Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-patch-notes-version-history"> Patch Notes + Version History</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Guide</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html"> Foreword</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-contributing"> Contributing</a></li>
@@ -147,18 +154,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-observation-representation"> Observation Representation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-model-io"> Model IO</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Ideology</span></p>
+<p class="caption" role="heading"><span class="caption-text">Ideology</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html"> Abstract</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html#icon-failure-modes"> Failure Modes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Administrative</span></p>
+<p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html"> Authorship, License, Disclaimer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#icon-assets"> Assets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#ags-namesake"> Namesake</a></li>
 </ul>
-<p class="caption"><span class="caption-text">NeurIPS</span></p>
+<p class="caption" role="heading"><span class="caption-text">NeurIPS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/neurips.html"> NeurIPS 2021 Dataset Track Supplementary Material</a></li>
 </ul>
@@ -176,7 +183,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.3</a>
+          <a href="../index.html">Neural MMO</a>
         
       </nav>
 
@@ -232,27 +239,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-nmmo.websocket">
+  <section id="module-nmmo.websocket">
 <span id="nmmo-websocket-module"></span><h1>nmmo.websocket module<a class="headerlink" href="#module-nmmo.websocket" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="nmmo.websocket.GodswordServerProtocol">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.websocket.</code><code class="sig-name descname">GodswordServerProtocol</code><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.websocket.</span></span><span class="sig-name descname"><span class="pre">GodswordServerProtocol</span></span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">autobahn.twisted.websocket.WebSocketServerProtocol</span></code></p>
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onOpen">
-<code class="sig-name descname">onOpen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onOpen" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onOpen">
+<span class="sig-name descname"><span class="pre">onOpen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onOpen" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onOpen()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onClose">
-<code class="sig-name descname">onClose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">wasClean</span></em>, <em class="sig-param"><span class="n">code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reason</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onClose" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onClose">
+<span class="sig-name descname"><span class="pre">onClose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wasClean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onClose" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onClose()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.connectionMade">
-<code class="sig-name descname">connectionMade</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.connectionMade" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.connectionMade">
+<span class="sig-name descname"><span class="pre">connectionMade</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.connectionMade" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called when a connection is made.</p>
 <p>This may be considered the initializer of the protocol, because
 it is called when the connection is completed.  For clients,
@@ -263,8 +270,8 @@ send any greeting or initial message, do it here.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.connectionLost">
-<code class="sig-name descname">connectionLost</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">reason</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.connectionLost" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.connectionLost">
+<span class="sig-name descname"><span class="pre">connectionLost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reason</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.connectionLost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called when the connection is shut down.</p>
 <p>Clear any circular references here, and any external references
 to this Protocol.  The connection has been closed.</p>
@@ -272,14 +279,14 @@ to this Protocol.  The connection has been closed.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onMessage">
-<code class="sig-name descname">onMessage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">packet</span></em>, <em class="sig-param"><span class="n">isBinary</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onMessage">
+<span class="sig-name descname"><span class="pre">onMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isBinary</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onMessage()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onConnect">
-<code class="sig-name descname">onConnect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onConnect" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onConnect">
+<span class="sig-name descname"><span class="pre">onConnect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onConnect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Callback fired during WebSocket opening handshake when new WebSocket client
 connection is about to be established.</p>
 <p>When you want to accept the connection, return the accepted protocol
@@ -297,226 +304,262 @@ to accept the WebSocket connection request.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.serverPacket">
-<code class="sig-name descname">serverPacket</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.serverPacket" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.serverPacket">
+<span class="sig-name descname"><span class="pre">serverPacket</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.serverPacket" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendUpdate">
-<code class="sig-name descname">sendUpdate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendUpdate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendUpdate">
+<span class="sig-name descname"><span class="pre">sendUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendUpdate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODES_ALLOWED">
-<code class="sig-name descname">CLOSE_STATUS_CODES_ALLOWED</code><em class="property"> = [1000, 1001, 1002, 1003, 1007, 1008, 1009, 1010, 1011, 1012, 1013]</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODES_ALLOWED" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODES_ALLOWED">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODES_ALLOWED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[1000,</span> <span class="pre">1001,</span> <span class="pre">1002,</span> <span class="pre">1003,</span> <span class="pre">1007,</span> <span class="pre">1008,</span> <span class="pre">1009,</span> <span class="pre">1010,</span> <span class="pre">1011,</span> <span class="pre">1012,</span> <span class="pre">1013]</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODES_ALLOWED" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status codes allowed to send in close.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_ABNORMAL_CLOSE">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_ABNORMAL_CLOSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1006</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_ABNORMAL_CLOSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abnormal close of connection. (MUST NOT be used as status code when sending a close).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_GOING_AWAY">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_GOING_AWAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1001</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_GOING_AWAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Going away.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_INTERNAL_ERROR">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_INTERNAL_ERROR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1011</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_INTERNAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>The peer encountered an unexpected condition or internal error.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_INVALID_PAYLOAD">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_INVALID_PAYLOAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1007</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_INVALID_PAYLOAD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalid frame payload data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_MANDATORY_EXTENSION">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_MANDATORY_EXTENSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1010</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_MANDATORY_EXTENSION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mandatory extension.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_MESSAGE_TOO_BIG">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_MESSAGE_TOO_BIG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1009</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_MESSAGE_TOO_BIG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Message too big.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_NORMAL">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_NORMAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1000</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_NORMAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normal close of connection.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_NULL">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_NULL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1005</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_NULL" title="Permalink to this definition">¶</a></dt>
+<dd><p>No status received. (MUST NOT be used as status code when sending a close).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_POLICY_VIOLATION">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_POLICY_VIOLATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1008</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_POLICY_VIOLATION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Policy violation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_PROTOCOL_ERROR">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_PROTOCOL_ERROR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1002</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_PROTOCOL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Protocol error.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_RESERVED1">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_RESERVED1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1004</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_RESERVED1" title="Permalink to this definition">¶</a></dt>
+<dd><p>RESERVED</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_SERVICE_RESTART">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_SERVICE_RESTART</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1012</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_SERVICE_RESTART" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service restart.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_TLS_HANDSHAKE_FAILED">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_TLS_HANDSHAKE_FAILED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1015</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_TLS_HANDSHAKE_FAILED" title="Permalink to this definition">¶</a></dt>
+<dd><p>TLS handshake failed, i.e. server certificate could not be verified. (MUST NOT be used as status code when sending a close).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_TRY_AGAIN_LATER">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_TRY_AGAIN_LATER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1013</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_TRY_AGAIN_LATER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try again later.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_UNASSIGNED1">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_UNASSIGNED1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1014</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_UNASSIGNED1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unassiged.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_UNSUPPORTED_DATA">
+<span class="sig-name descname"><span class="pre">CLOSE_STATUS_CODE_UNSUPPORTED_DATA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1003</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_UNSUPPORTED_DATA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unsupported data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS">
+<span class="sig-name descname"><span class="pre">CONFIG_ATTRS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['logOctets',</span> <span class="pre">'logFrames',</span> <span class="pre">'trackTimings',</span> <span class="pre">'utf8validateIncoming',</span> <span class="pre">'applyMask',</span> <span class="pre">'maxFramePayloadSize',</span> <span class="pre">'maxMessagePayloadSize',</span> <span class="pre">'autoFragmentSize',</span> <span class="pre">'failByDrop',</span> <span class="pre">'echoCloseCodeReason',</span> <span class="pre">'openHandshakeTimeout',</span> <span class="pre">'closeHandshakeTimeout',</span> <span class="pre">'tcpNoDelay',</span> <span class="pre">'autoPingInterval',</span> <span class="pre">'autoPingTimeout',</span> <span class="pre">'autoPingSize',</span> <span class="pre">'versions',</span> <span class="pre">'webStatus',</span> <span class="pre">'requireMaskedClientFrames',</span> <span class="pre">'maskServerFrames',</span> <span class="pre">'perMessageCompressionAccept',</span> <span class="pre">'serveFlashSocketPolicy',</span> <span class="pre">'flashSocketPolicy',</span> <span class="pre">'allowedOrigins',</span> <span class="pre">'allowedOriginsPatterns',</span> <span class="pre">'allowNullOrigin',</span> <span class="pre">'maxConnections',</span> <span class="pre">'trustXForwardedFor']</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_ABNORMAL_CLOSE">
-<code class="sig-name descname">CLOSE_STATUS_CODE_ABNORMAL_CLOSE</code><em class="property"> = 1006</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_ABNORMAL_CLOSE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_CLIENT">
+<span class="sig-name descname"><span class="pre">CONFIG_ATTRS_CLIENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['version',</span> <span class="pre">'acceptMaskedServerFrames',</span> <span class="pre">'maskClientFrames',</span> <span class="pre">'serverConnectionDropTimeout',</span> <span class="pre">'perMessageCompressionOffers',</span> <span class="pre">'perMessageCompressionAccept']</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_CLIENT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration attributes specific to clients.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_COMMON">
+<span class="sig-name descname"><span class="pre">CONFIG_ATTRS_COMMON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['logOctets',</span> <span class="pre">'logFrames',</span> <span class="pre">'trackTimings',</span> <span class="pre">'utf8validateIncoming',</span> <span class="pre">'applyMask',</span> <span class="pre">'maxFramePayloadSize',</span> <span class="pre">'maxMessagePayloadSize',</span> <span class="pre">'autoFragmentSize',</span> <span class="pre">'failByDrop',</span> <span class="pre">'echoCloseCodeReason',</span> <span class="pre">'openHandshakeTimeout',</span> <span class="pre">'closeHandshakeTimeout',</span> <span class="pre">'tcpNoDelay',</span> <span class="pre">'autoPingInterval',</span> <span class="pre">'autoPingTimeout',</span> <span class="pre">'autoPingSize']</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_COMMON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration attributes common to servers and clients.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_SERVER">
+<span class="sig-name descname"><span class="pre">CONFIG_ATTRS_SERVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['versions',</span> <span class="pre">'webStatus',</span> <span class="pre">'requireMaskedClientFrames',</span> <span class="pre">'maskServerFrames',</span> <span class="pre">'perMessageCompressionAccept',</span> <span class="pre">'serveFlashSocketPolicy',</span> <span class="pre">'flashSocketPolicy',</span> <span class="pre">'allowedOrigins',</span> <span class="pre">'allowedOriginsPatterns',</span> <span class="pre">'allowNullOrigin',</span> <span class="pre">'maxConnections',</span> <span class="pre">'trustXForwardedFor']</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_SERVER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration attributes specific to servers.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.DEFAULT_SPEC_VERSION">
+<span class="sig-name descname"><span class="pre">DEFAULT_SPEC_VERSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.DEFAULT_SPEC_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd><p>final
+RFC6455.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Default WebSocket protocol spec version this implementation speaks</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.MESSAGE_TYPE_BINARY">
+<span class="sig-name descname"><span class="pre">MESSAGE_TYPE_BINARY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.MESSAGE_TYPE_BINARY" title="Permalink to this definition">¶</a></dt>
+<dd><p>WebSocket binary message type (arbitrary binary payload).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.MESSAGE_TYPE_TEXT">
+<span class="sig-name descname"><span class="pre">MESSAGE_TYPE_TEXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.MESSAGE_TYPE_TEXT" title="Permalink to this definition">¶</a></dt>
+<dd><p>WebSocket text message type (UTF-8 payload).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.PROTOCOL_TO_SPEC_VERSION">
+<span class="sig-name descname"><span class="pre">PROTOCOL_TO_SPEC_VERSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{8:</span> <span class="pre">12,</span> <span class="pre">13:</span> <span class="pre">18}</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.PROTOCOL_TO_SPEC_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mapping from protocol version to the latest protocol spec (draft) version
+using that protocol version.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.SEND_STATE_GROUND">
+<span class="sig-name descname"><span class="pre">SEND_STATE_GROUND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SEND_STATE_GROUND" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_GOING_AWAY">
-<code class="sig-name descname">CLOSE_STATUS_CODE_GOING_AWAY</code><em class="property"> = 1001</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_GOING_AWAY" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.SEND_STATE_INSIDE_MESSAGE">
+<span class="sig-name descname"><span class="pre">SEND_STATE_INSIDE_MESSAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SEND_STATE_INSIDE_MESSAGE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_INTERNAL_ERROR">
-<code class="sig-name descname">CLOSE_STATUS_CODE_INTERNAL_ERROR</code><em class="property"> = 1011</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_INTERNAL_ERROR" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.SEND_STATE_INSIDE_MESSAGE_FRAME">
+<span class="sig-name descname"><span class="pre">SEND_STATE_INSIDE_MESSAGE_FRAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SEND_STATE_INSIDE_MESSAGE_FRAME" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_INVALID_PAYLOAD">
-<code class="sig-name descname">CLOSE_STATUS_CODE_INVALID_PAYLOAD</code><em class="property"> = 1007</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_INVALID_PAYLOAD" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.SEND_STATE_MESSAGE_BEGIN">
+<span class="sig-name descname"><span class="pre">SEND_STATE_MESSAGE_BEGIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SEND_STATE_MESSAGE_BEGIN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_MANDATORY_EXTENSION">
-<code class="sig-name descname">CLOSE_STATUS_CODE_MANDATORY_EXTENSION</code><em class="property"> = 1010</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_MANDATORY_EXTENSION" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.SPEC_TO_PROTOCOL_VERSION">
+<span class="sig-name descname"><span class="pre">SPEC_TO_PROTOCOL_VERSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{10:</span> <span class="pre">8,</span> <span class="pre">11:</span> <span class="pre">8,</span> <span class="pre">12:</span> <span class="pre">8,</span> <span class="pre">13:</span> <span class="pre">13,</span> <span class="pre">14:</span> <span class="pre">13,</span> <span class="pre">15:</span> <span class="pre">13,</span> <span class="pre">16:</span> <span class="pre">13,</span> <span class="pre">17:</span> <span class="pre">13,</span> <span class="pre">18:</span> <span class="pre">13}</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SPEC_TO_PROTOCOL_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mapping from protocol spec (draft) version to protocol version.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.STATE_CLOSED">
+<span class="sig-name descname"><span class="pre">STATE_CLOSED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.STATE_CLOSED" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_MESSAGE_TOO_BIG">
-<code class="sig-name descname">CLOSE_STATUS_CODE_MESSAGE_TOO_BIG</code><em class="property"> = 1009</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_MESSAGE_TOO_BIG" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.STATE_CLOSING">
+<span class="sig-name descname"><span class="pre">STATE_CLOSING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.STATE_CLOSING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_NORMAL">
-<code class="sig-name descname">CLOSE_STATUS_CODE_NORMAL</code><em class="property"> = 1000</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_NORMAL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.STATE_CONNECTING">
+<span class="sig-name descname"><span class="pre">STATE_CONNECTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.STATE_CONNECTING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_NULL">
-<code class="sig-name descname">CLOSE_STATUS_CODE_NULL</code><em class="property"> = 1005</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_NULL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.STATE_OPEN">
+<span class="sig-name descname"><span class="pre">STATE_OPEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.STATE_OPEN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_POLICY_VIOLATION">
-<code class="sig-name descname">CLOSE_STATUS_CODE_POLICY_VIOLATION</code><em class="property"> = 1008</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_POLICY_VIOLATION" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.STATE_PROXY_CONNECTING">
+<span class="sig-name descname"><span class="pre">STATE_PROXY_CONNECTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.STATE_PROXY_CONNECTING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_PROTOCOL_ERROR">
-<code class="sig-name descname">CLOSE_STATUS_CODE_PROTOCOL_ERROR</code><em class="property"> = 1002</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_PROTOCOL_ERROR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.SUPPORTED_PROTOCOL_VERSIONS">
+<span class="sig-name descname"><span class="pre">SUPPORTED_PROTOCOL_VERSIONS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[8,</span> <span class="pre">13]</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SUPPORTED_PROTOCOL_VERSIONS" title="Permalink to this definition">¶</a></dt>
+<dd><p>WebSocket protocol versions supported by this implementation.</p>
+</dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_RESERVED1">
-<code class="sig-name descname">CLOSE_STATUS_CODE_RESERVED1</code><em class="property"> = 1004</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_RESERVED1" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_SERVICE_RESTART">
-<code class="sig-name descname">CLOSE_STATUS_CODE_SERVICE_RESTART</code><em class="property"> = 1012</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_SERVICE_RESTART" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_TLS_HANDSHAKE_FAILED">
-<code class="sig-name descname">CLOSE_STATUS_CODE_TLS_HANDSHAKE_FAILED</code><em class="property"> = 1015</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_TLS_HANDSHAKE_FAILED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_TRY_AGAIN_LATER">
-<code class="sig-name descname">CLOSE_STATUS_CODE_TRY_AGAIN_LATER</code><em class="property"> = 1013</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_TRY_AGAIN_LATER" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_UNASSIGNED1">
-<code class="sig-name descname">CLOSE_STATUS_CODE_UNASSIGNED1</code><em class="property"> = 1014</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_UNASSIGNED1" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_UNSUPPORTED_DATA">
-<code class="sig-name descname">CLOSE_STATUS_CODE_UNSUPPORTED_DATA</code><em class="property"> = 1003</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_UNSUPPORTED_DATA" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS">
-<code class="sig-name descname">CONFIG_ATTRS</code><em class="property"> = ['logOctets', 'logFrames', 'trackTimings', 'utf8validateIncoming', 'applyMask', 'maxFramePayloadSize', 'maxMessagePayloadSize', 'autoFragmentSize', 'failByDrop', 'echoCloseCodeReason', 'openHandshakeTimeout', 'closeHandshakeTimeout', 'tcpNoDelay', 'autoPingInterval', 'autoPingTimeout', 'autoPingSize', 'versions', 'webStatus', 'requireMaskedClientFrames', 'maskServerFrames', 'perMessageCompressionAccept', 'serveFlashSocketPolicy', 'flashSocketPolicy', 'allowedOrigins', 'allowedOriginsPatterns', 'allowNullOrigin', 'maxConnections', 'trustXForwardedFor']</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_CLIENT">
-<code class="sig-name descname">CONFIG_ATTRS_CLIENT</code><em class="property"> = ['version', 'acceptMaskedServerFrames', 'maskClientFrames', 'serverConnectionDropTimeout', 'perMessageCompressionOffers', 'perMessageCompressionAccept']</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_CLIENT" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_COMMON">
-<code class="sig-name descname">CONFIG_ATTRS_COMMON</code><em class="property"> = ['logOctets', 'logFrames', 'trackTimings', 'utf8validateIncoming', 'applyMask', 'maxFramePayloadSize', 'maxMessagePayloadSize', 'autoFragmentSize', 'failByDrop', 'echoCloseCodeReason', 'openHandshakeTimeout', 'closeHandshakeTimeout', 'tcpNoDelay', 'autoPingInterval', 'autoPingTimeout', 'autoPingSize']</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_COMMON" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_SERVER">
-<code class="sig-name descname">CONFIG_ATTRS_SERVER</code><em class="property"> = ['versions', 'webStatus', 'requireMaskedClientFrames', 'maskServerFrames', 'perMessageCompressionAccept', 'serveFlashSocketPolicy', 'flashSocketPolicy', 'allowedOrigins', 'allowedOriginsPatterns', 'allowNullOrigin', 'maxConnections', 'trustXForwardedFor']</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.CONFIG_ATTRS_SERVER" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.DEFAULT_SPEC_VERSION">
-<code class="sig-name descname">DEFAULT_SPEC_VERSION</code><em class="property"> = 18</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.DEFAULT_SPEC_VERSION" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.MESSAGE_TYPE_BINARY">
-<code class="sig-name descname">MESSAGE_TYPE_BINARY</code><em class="property"> = 2</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.MESSAGE_TYPE_BINARY" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.MESSAGE_TYPE_TEXT">
-<code class="sig-name descname">MESSAGE_TYPE_TEXT</code><em class="property"> = 1</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.MESSAGE_TYPE_TEXT" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.PROTOCOL_TO_SPEC_VERSION">
-<code class="sig-name descname">PROTOCOL_TO_SPEC_VERSION</code><em class="property"> = {8: 12, 13: 18}</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.PROTOCOL_TO_SPEC_VERSION" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.SEND_STATE_GROUND">
-<code class="sig-name descname">SEND_STATE_GROUND</code><em class="property"> = 0</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SEND_STATE_GROUND" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.SEND_STATE_INSIDE_MESSAGE">
-<code class="sig-name descname">SEND_STATE_INSIDE_MESSAGE</code><em class="property"> = 2</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SEND_STATE_INSIDE_MESSAGE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.SEND_STATE_INSIDE_MESSAGE_FRAME">
-<code class="sig-name descname">SEND_STATE_INSIDE_MESSAGE_FRAME</code><em class="property"> = 3</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SEND_STATE_INSIDE_MESSAGE_FRAME" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.SEND_STATE_MESSAGE_BEGIN">
-<code class="sig-name descname">SEND_STATE_MESSAGE_BEGIN</code><em class="property"> = 1</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SEND_STATE_MESSAGE_BEGIN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.SPEC_TO_PROTOCOL_VERSION">
-<code class="sig-name descname">SPEC_TO_PROTOCOL_VERSION</code><em class="property"> = {10: 8, 11: 8, 12: 8, 13: 13, 14: 13, 15: 13, 16: 13, 17: 13, 18: 13}</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SPEC_TO_PROTOCOL_VERSION" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.STATE_CLOSED">
-<code class="sig-name descname">STATE_CLOSED</code><em class="property"> = 0</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.STATE_CLOSED" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.STATE_CLOSING">
-<code class="sig-name descname">STATE_CLOSING</code><em class="property"> = 2</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.STATE_CLOSING" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.STATE_CONNECTING">
-<code class="sig-name descname">STATE_CONNECTING</code><em class="property"> = 1</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.STATE_CONNECTING" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.STATE_OPEN">
-<code class="sig-name descname">STATE_OPEN</code><em class="property"> = 3</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.STATE_OPEN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.STATE_PROXY_CONNECTING">
-<code class="sig-name descname">STATE_PROXY_CONNECTING</code><em class="property"> = 4</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.STATE_PROXY_CONNECTING" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.SUPPORTED_PROTOCOL_VERSIONS">
-<code class="sig-name descname">SUPPORTED_PROTOCOL_VERSIONS</code><em class="property"> = [8, 13]</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SUPPORTED_PROTOCOL_VERSIONS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.SUPPORTED_SPEC_VERSIONS">
-<code class="sig-name descname">SUPPORTED_SPEC_VERSIONS</code><em class="property"> = [10, 11, 12, 13, 14, 15, 16, 17, 18]</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SUPPORTED_SPEC_VERSIONS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.SUPPORTED_SPEC_VERSIONS">
+<span class="sig-name descname"><span class="pre">SUPPORTED_SPEC_VERSIONS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[10,</span> <span class="pre">11,</span> <span class="pre">12,</span> <span class="pre">13,</span> <span class="pre">14,</span> <span class="pre">15,</span> <span class="pre">16,</span> <span class="pre">17,</span> <span class="pre">18]</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.SUPPORTED_SPEC_VERSIONS" title="Permalink to this definition">¶</a></dt>
+<dd><p>WebSocket protocol spec (draft) versions supported by this implementation.
+Use of version 18 indicates RFC6455. Use of versions &lt; 18 indicate actual
+draft spec versions (Hybi-Drafts).</p>
+</dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.beginMessage">
-<code class="sig-name descname">beginMessage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">isBinary</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">doNotCompress</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.beginMessage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.beginMessage">
+<span class="sig-name descname"><span class="pre">beginMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">isBinary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doNotCompress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.beginMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.beginMessage()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.beginMessageFrame">
-<code class="sig-name descname">beginMessageFrame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">length</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.beginMessageFrame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.beginMessageFrame">
+<span class="sig-name descname"><span class="pre">beginMessageFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.beginMessageFrame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.beginMessageFrame()</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.connected">
-<code class="sig-name descname">connected</code><em class="property"> = 0</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.connected" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.connected">
+<span class="sig-name descname"><span class="pre">connected</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.connected" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.consumeData">
-<code class="sig-name descname">consumeData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.consumeData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.consumeData">
+<span class="sig-name descname"><span class="pre">consumeData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.consumeData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Consume buffered (incoming) data.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.dataReceived">
-<code class="sig-name descname">dataReceived</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.dataReceived" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.dataReceived">
+<span class="sig-name descname"><span class="pre">dataReceived</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.dataReceived" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called whenever data is received.</p>
 <p>Use this method to translate to a higher-level message.  Usually, some
 callback will be made upon the receipt of each complete protocol
@@ -531,88 +574,88 @@ differing chunk sizes, down to one byte at a time.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.dropConnection">
-<code class="sig-name descname">dropConnection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">abort</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.dropConnection" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.dropConnection">
+<span class="sig-name descname"><span class="pre">dropConnection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">abort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.dropConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Drop the underlying TCP connection.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.endMessage">
-<code class="sig-name descname">endMessage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.endMessage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.endMessage">
+<span class="sig-name descname"><span class="pre">endMessage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.endMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.endMessage()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.failHandshake">
-<code class="sig-name descname">failHandshake</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">reason</span></em>, <em class="sig-param"><span class="n">code</span><span class="o">=</span><span class="default_value">400</span></em>, <em class="sig-param"><span class="n">responseHeaders</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.failHandshake" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.failHandshake">
+<span class="sig-name descname"><span class="pre">failHandshake</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reason</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">responseHeaders</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.failHandshake" title="Permalink to this definition">¶</a></dt>
 <dd><p>During opening handshake the client request was invalid, we send a HTTP
 error response and then drop the connection.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.get_channel_id">
-<code class="sig-name descname">get_channel_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel_id_type</span><span class="o">=</span><span class="default_value">'tls-unique'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.get_channel_id" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.get_channel_id">
+<span class="sig-name descname"><span class="pre">get_channel_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_id_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'tls-unique'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.get_channel_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.wamp.interfaces.ITransport.get_channel_id()</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.log">
-<code class="sig-name descname">log</code><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.log" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.log">
+<span class="sig-name descname"><span class="pre">log</span></span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.log" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.logPrefix">
-<code class="sig-name descname">logPrefix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.logPrefix" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.logPrefix">
+<span class="sig-name descname"><span class="pre">logPrefix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.logPrefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a prefix matching the class name, to identify log messages
 related to this protocol instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.logRxFrame">
-<code class="sig-name descname">logRxFrame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">frameHeader</span></em>, <em class="sig-param"><span class="n">payload</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.logRxFrame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.logRxFrame">
+<span class="sig-name descname"><span class="pre">logRxFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frameHeader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.logRxFrame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hook fired right after WebSocket frame has been received and decoded,
 but only when self.logFrames == True.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.logRxOctets">
-<code class="sig-name descname">logRxOctets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.logRxOctets" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.logRxOctets">
+<span class="sig-name descname"><span class="pre">logRxOctets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.logRxOctets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hook fired right after raw octets have been received, but only when
 self.logOctets == True.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.logTxFrame">
-<code class="sig-name descname">logTxFrame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">frameHeader</span></em>, <em class="sig-param"><span class="n">payload</span></em>, <em class="sig-param"><span class="n">repeatLength</span></em>, <em class="sig-param"><span class="n">chopsize</span></em>, <em class="sig-param"><span class="n">sync</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.logTxFrame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.logTxFrame">
+<span class="sig-name descname"><span class="pre">logTxFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frameHeader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeatLength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chopsize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.logTxFrame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hook fired right after WebSocket frame has been encoded and sent, but
 only when self.logFrames == True.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.logTxOctets">
-<code class="sig-name descname">logTxOctets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">sync</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.logTxOctets" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.logTxOctets">
+<span class="sig-name descname"><span class="pre">logTxOctets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.logTxOctets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hook fired right after raw octets have been sent, but only when
 self.logOctets == True.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.makeConnection">
-<code class="sig-name descname">makeConnection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">transport</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.makeConnection" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.makeConnection">
+<span class="sig-name descname"><span class="pre">makeConnection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transport</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.makeConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make a connection to a transport and a server.</p>
 <p>This sets the ‘transport’ attribute of this Protocol, and calls the
 connectionMade() callback.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onAutoPingTimeout">
-<code class="sig-name descname">onAutoPingTimeout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onAutoPingTimeout" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onAutoPingTimeout">
+<span class="sig-name descname"><span class="pre">onAutoPingTimeout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onAutoPingTimeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>When doing automatic ping/pongs to detect broken connection, the peer
 did not reply in time to our ping. We drop the connection.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onCloseFrame">
-<code class="sig-name descname">onCloseFrame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span></em>, <em class="sig-param"><span class="n">reasonRaw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onCloseFrame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onCloseFrame">
+<span class="sig-name descname"><span class="pre">onCloseFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reasonRaw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onCloseFrame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Callback when a Close frame was received. The default implementation answers by
 sending a Close when no Close was sent before. Otherwise it drops
 the TCP connection either immediately (when we are a server) or after a timeout
@@ -628,128 +671,128 @@ the TCP connection either immediately (when we are a server) or after a timeout
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onCloseHandshakeTimeout">
-<code class="sig-name descname">onCloseHandshakeTimeout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onCloseHandshakeTimeout" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onCloseHandshakeTimeout">
+<span class="sig-name descname"><span class="pre">onCloseHandshakeTimeout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onCloseHandshakeTimeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>We expected the peer to respond to us initiating a close handshake. It didn’t
 respond (in time self.closeHandshakeTimeout) with a close response frame though.
 So we drop the connection, but set self.wasClean = False.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onFrameBegin">
-<code class="sig-name descname">onFrameBegin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onFrameBegin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onFrameBegin">
+<span class="sig-name descname"><span class="pre">onFrameBegin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onFrameBegin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Begin of receive new frame.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onFrameData">
-<code class="sig-name descname">onFrameData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onFrameData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onFrameData">
+<span class="sig-name descname"><span class="pre">onFrameData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onFrameData" title="Permalink to this definition">¶</a></dt>
 <dd><p>New data received within frame.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onFrameEnd">
-<code class="sig-name descname">onFrameEnd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onFrameEnd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onFrameEnd">
+<span class="sig-name descname"><span class="pre">onFrameEnd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onFrameEnd" title="Permalink to this definition">¶</a></dt>
 <dd><p>End of frame received.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onMessageBegin">
-<code class="sig-name descname">onMessageBegin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">isBinary</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageBegin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onMessageBegin">
+<span class="sig-name descname"><span class="pre">onMessageBegin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">isBinary</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageBegin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onMessageBegin()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onMessageEnd">
-<code class="sig-name descname">onMessageEnd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageEnd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onMessageEnd">
+<span class="sig-name descname"><span class="pre">onMessageEnd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageEnd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onMessageEnd()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onMessageFrame">
-<code class="sig-name descname">onMessageFrame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageFrame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onMessageFrame">
+<span class="sig-name descname"><span class="pre">onMessageFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageFrame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onMessageFrame()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onMessageFrameBegin">
-<code class="sig-name descname">onMessageFrameBegin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">length</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageFrameBegin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onMessageFrameBegin">
+<span class="sig-name descname"><span class="pre">onMessageFrameBegin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageFrameBegin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onMessageFrameBegin()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onMessageFrameData">
-<code class="sig-name descname">onMessageFrameData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageFrameData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onMessageFrameData">
+<span class="sig-name descname"><span class="pre">onMessageFrameData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageFrameData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onMessageFrameData()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onMessageFrameEnd">
-<code class="sig-name descname">onMessageFrameEnd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageFrameEnd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onMessageFrameEnd">
+<span class="sig-name descname"><span class="pre">onMessageFrameEnd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onMessageFrameEnd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onMessageFrameEnd()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onOpenHandshakeTimeout">
-<code class="sig-name descname">onOpenHandshakeTimeout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onOpenHandshakeTimeout" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onOpenHandshakeTimeout">
+<span class="sig-name descname"><span class="pre">onOpenHandshakeTimeout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onOpenHandshakeTimeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>We expected the peer to complete the opening handshake with to us.
 It didn’t do so (in time self.openHandshakeTimeout).
 So we drop the connection, but set self.wasClean = False.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onPing">
-<code class="sig-name descname">onPing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onPing" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onPing">
+<span class="sig-name descname"><span class="pre">onPing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onPing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onPing()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onPong">
-<code class="sig-name descname">onPong</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onPong" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onPong">
+<span class="sig-name descname"><span class="pre">onPong</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onPong" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.onPong()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.onServerConnectionDropTimeout">
-<code class="sig-name descname">onServerConnectionDropTimeout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onServerConnectionDropTimeout" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onServerConnectionDropTimeout">
+<span class="sig-name descname"><span class="pre">onServerConnectionDropTimeout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onServerConnectionDropTimeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>We (a client) expected the peer (a server) to drop the connection,
 but it didn’t (in time self.serverConnectionDropTimeout).
 So we drop the connection, but set self.wasClean = False.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.peer">
-<code class="sig-name descname">peer</code><em class="property"> = '&lt;never connected&gt;'</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.peer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.peer">
+<span class="sig-name descname"><span class="pre">peer</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&lt;never</span> <span class="pre">connected&gt;'</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.peer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.processControlFrame">
-<code class="sig-name descname">processControlFrame</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.processControlFrame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.processControlFrame">
+<span class="sig-name descname"><span class="pre">processControlFrame</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.processControlFrame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Process a completely received control frame.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.processData">
-<code class="sig-name descname">processData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.processData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.processData">
+<span class="sig-name descname"><span class="pre">processData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.processData" title="Permalink to this definition">¶</a></dt>
 <dd><p>After WebSocket handshake has been completed, this procedure will do
 all subsequent processing of incoming bytes.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.processHandshake">
-<code class="sig-name descname">processHandshake</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.processHandshake" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.processHandshake">
+<span class="sig-name descname"><span class="pre">processHandshake</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.processHandshake" title="Permalink to this definition">¶</a></dt>
 <dd><p>Process WebSocket opening handshake request from client.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.processProxyConnect">
-<code class="sig-name descname">processProxyConnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.processProxyConnect" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.processProxyConnect">
+<span class="sig-name descname"><span class="pre">processProxyConnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.processProxyConnect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Process proxy connect.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.registerProducer">
-<code class="sig-name descname">registerProducer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">producer</span></em>, <em class="sig-param"><span class="n">streaming</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.registerProducer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.registerProducer">
+<span class="sig-name descname"><span class="pre">registerProducer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">producer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">streaming</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.registerProducer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register a Twisted producer with this protocol.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -762,22 +805,22 @@ all subsequent processing of incoming bytes.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendClose">
-<code class="sig-name descname">sendClose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reason</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendClose" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendClose">
+<span class="sig-name descname"><span class="pre">sendClose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendClose" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.sendClose()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendCloseFrame">
-<code class="sig-name descname">sendCloseFrame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reasonUtf8</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">isReply</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendCloseFrame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendCloseFrame">
+<span class="sig-name descname"><span class="pre">sendCloseFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reasonUtf8</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isReply</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendCloseFrame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send a close frame and update protocol state. Note, that this is
 an internal method which deliberately allows not send close
 frame with invalid payload.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendData">
-<code class="sig-name descname">sendData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">sync</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">chopsize</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendData">
+<span class="sig-name descname"><span class="pre">sendData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chopsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wrapper for self.transport.write which allows to give a chopsize.
 When asked to chop up writing to TCP stream, we write only chopsize
 octets and then give up control to select() in underlying reactor so
@@ -788,8 +831,8 @@ socket.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendFrame">
-<code class="sig-name descname">sendFrame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opcode</span></em>, <em class="sig-param"><span class="n">payload</span><span class="o">=</span><span class="default_value">b''</span></em>, <em class="sig-param"><span class="n">fin</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">rsv</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">mask</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payload_len</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">chopsize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sync</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendFrame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendFrame">
+<span class="sig-name descname"><span class="pre">sendFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opcode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">b''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rsv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chopsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendFrame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send out frame. Normally only used internally via sendMessage(),
 sendPing(), sendPong() and sendClose().</p>
 <p>This method deliberately allows to send invalid frames (that is frames
@@ -805,69 +848,69 @@ without having to construct potentially large messages themselves.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendHtml">
-<code class="sig-name descname">sendHtml</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">html</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendHtml" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendHtml">
+<span class="sig-name descname"><span class="pre">sendHtml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">html</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendHtml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send HTML page HTTP response.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendHttpErrorResponse">
-<code class="sig-name descname">sendHttpErrorResponse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span></em>, <em class="sig-param"><span class="n">reason</span></em>, <em class="sig-param"><span class="n">responseHeaders</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendHttpErrorResponse" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendHttpErrorResponse">
+<span class="sig-name descname"><span class="pre">sendHttpErrorResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reason</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">responseHeaders</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendHttpErrorResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send out HTTP error response.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendMessage">
-<code class="sig-name descname">sendMessage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span></em>, <em class="sig-param"><span class="n">isBinary</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">fragmentSize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sync</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">doNotCompress</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendMessage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendMessage">
+<span class="sig-name descname"><span class="pre">sendMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isBinary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fragmentSize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doNotCompress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.sendMessage()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendMessageFrame">
-<code class="sig-name descname">sendMessageFrame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span></em>, <em class="sig-param"><span class="n">sync</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendMessageFrame" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendMessageFrame">
+<span class="sig-name descname"><span class="pre">sendMessageFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendMessageFrame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.sendMessageFrame()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendMessageFrameData">
-<code class="sig-name descname">sendMessageFrameData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span></em>, <em class="sig-param"><span class="n">sync</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendMessageFrameData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendMessageFrameData">
+<span class="sig-name descname"><span class="pre">sendMessageFrameData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendMessageFrameData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.sendMessageFrameData()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendPing">
-<code class="sig-name descname">sendPing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendPing" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendPing">
+<span class="sig-name descname"><span class="pre">sendPing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendPing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.sendPing()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendPong">
-<code class="sig-name descname">sendPong</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendPong" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendPong">
+<span class="sig-name descname"><span class="pre">sendPong</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendPong" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.sendPong()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendPreparedMessage">
-<code class="sig-name descname">sendPreparedMessage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">preparedMsg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendPreparedMessage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendPreparedMessage">
+<span class="sig-name descname"><span class="pre">sendPreparedMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preparedMsg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendPreparedMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketChannel.sendPreparedMessage()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendRedirect">
-<code class="sig-name descname">sendRedirect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendRedirect" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendRedirect">
+<span class="sig-name descname"><span class="pre">sendRedirect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendRedirect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send HTTP Redirect (303) response.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.sendServerStatus">
-<code class="sig-name descname">sendServerStatus</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">redirectUrl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redirectAfter</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendServerStatus" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.sendServerStatus">
+<span class="sig-name descname"><span class="pre">sendServerStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redirectUrl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redirectAfter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.sendServerStatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Used to send out server status/version upon receiving a HTTP/GET without
 upgrade to WebSocket header (and option serverStatus is True).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.setTrackTimings">
-<code class="sig-name descname">setTrackTimings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.setTrackTimings" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.setTrackTimings">
+<span class="sig-name descname"><span class="pre">setTrackTimings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.setTrackTimings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable tracking of detailed timings.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -877,50 +920,59 @@ upgrade to WebSocket header (and option serverStatus is True).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.succeedHandshake">
-<code class="sig-name descname">succeedHandshake</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">res</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.succeedHandshake" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.succeedHandshake">
+<span class="sig-name descname"><span class="pre">succeedHandshake</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.succeedHandshake" title="Permalink to this definition">¶</a></dt>
 <dd><p>Callback after onConnect() returns successfully. Generates the response for the handshake.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.GodswordServerProtocol.transport">
-<code class="sig-name descname">transport</code><em class="property"> = None</em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.transport" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.transport">
+<span class="sig-name descname"><span class="pre">transport</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.transport" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.GodswordServerProtocol.unregisterProducer">
-<code class="sig-name descname">unregisterProducer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.unregisterProducer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.unregisterProducer">
+<span class="sig-name descname"><span class="pre">unregisterProducer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.unregisterProducer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unregister Twisted producer with this protocol.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.is_closed">
+<span class="sig-name descname"><span class="pre">is_closed</span></span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.is_closed" title="Permalink to this definition">¶</a></dt>
+<dd><p>a Future/Deferred that fires when we hit STATE_CLOSED</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.websocket.WSServerFactory">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.websocket.</code><code class="sig-name descname">WSServerFactory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ip</span></em>, <em class="sig-param"><span class="n">realm</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.websocket.</span></span><span class="sig-name descname"><span class="pre">WSServerFactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">autobahn.twisted.websocket.WebSocketServerFactory</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>In addition to all arguments to the constructor of
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketServerChannelFactory()</span></code>,
 you can supply a <code class="docutils literal notranslate"><span class="pre">reactor</span></code> keyword argument to specify the
 Twisted reactor to be used.</p>
+</div>
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">packet</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.clientConnectionMade">
-<code class="sig-name descname">clientConnectionMade</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.clientConnectionMade" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.clientConnectionMade">
+<span class="sig-name descname"><span class="pre">clientConnectionMade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.clientConnectionMade" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.clientConnectionLost">
-<code class="sig-name descname">clientConnectionLost</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.clientConnectionLost" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.clientConnectionLost">
+<span class="sig-name descname"><span class="pre">clientConnectionLost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.clientConnectionLost" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.buildProtocol">
-<code class="sig-name descname">buildProtocol</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">addr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.buildProtocol" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.buildProtocol">
+<span class="sig-name descname"><span class="pre">buildProtocol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">addr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.buildProtocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an instance of a subclass of Protocol.</p>
 <p>The returned instance will handle input on an incoming server
 connection, and an attribute “factory” pointing to the creating
@@ -932,22 +984,22 @@ new connection.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.doStart">
-<code class="sig-name descname">doStart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.doStart" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.doStart">
+<span class="sig-name descname"><span class="pre">doStart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.doStart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make sure startFactory is called.</p>
 <p>Users should not call this function themselves!</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.doStop">
-<code class="sig-name descname">doStop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.doStop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.doStop">
+<span class="sig-name descname"><span class="pre">doStop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.doStop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make sure stopFactory is called.</p>
 <p>Users should not call this function themselves!</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.forProtocol">
-<em class="property">classmethod </em><code class="sig-name descname">forProtocol</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">protocol</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.forProtocol" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.forProtocol">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">forProtocol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">protocol</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.forProtocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a factory for the given protocol.</p>
 <p>It sets the C{protocol} attribute and returns the constructed factory
 instance.</p>
@@ -958,8 +1010,8 @@ instance.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.getConnectionCount">
-<code class="sig-name descname">getConnectionCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.getConnectionCount" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.getConnectionCount">
+<span class="sig-name descname"><span class="pre">getConnectionCount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.getConnectionCount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get number of currently connected clients.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -969,34 +1021,35 @@ instance.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.WSServerFactory.isServer">
-<code class="sig-name descname">isServer</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.websocket.WSServerFactory.isServer" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.isServer">
+<span class="sig-name descname"><span class="pre">isServer</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.websocket.WSServerFactory.isServer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag indicating if this factory is client- or server-side.</p>
+</dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.WSServerFactory.log">
-<code class="sig-name descname">log</code><a class="headerlink" href="#nmmo.websocket.WSServerFactory.log" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.log">
+<span class="sig-name descname"><span class="pre">log</span></span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.log" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.logPrefix">
-<code class="sig-name descname">logPrefix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.logPrefix" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.logPrefix">
+<span class="sig-name descname"><span class="pre">logPrefix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.logPrefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describe this factory for log messages.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.WSServerFactory.noisy">
-<code class="sig-name descname">noisy</code><em class="property"> = True</em><a class="headerlink" href="#nmmo.websocket.WSServerFactory.noisy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.noisy">
+<span class="sig-name descname"><span class="pre">noisy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.websocket.WSServerFactory.noisy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.WSServerFactory.numPorts">
-<code class="sig-name descname">numPorts</code><em class="property"> = 0</em><a class="headerlink" href="#nmmo.websocket.WSServerFactory.numPorts" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.numPorts">
+<span class="sig-name descname"><span class="pre">numPorts</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.websocket.WSServerFactory.numPorts" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.prepareMessage">
-<code class="sig-name descname">prepareMessage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">payload</span></em>, <em class="sig-param"><span class="n">isBinary</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">doNotCompress</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.prepareMessage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.prepareMessage">
+<span class="sig-name descname"><span class="pre">prepareMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isBinary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doNotCompress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.prepareMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prepare a WebSocket message. This can be later sent on multiple
 instances of <code class="xref py py-class docutils literal notranslate"><span class="pre">autobahn.websocket.WebSocketProtocol</span></code> using
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">autobahn.websocket.WebSocketProtocol.sendPreparedMessage()</span></code>.</p>
@@ -1022,32 +1075,32 @@ WebSocket connection. Use when you know the payload incompressible
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.websocket.WSServerFactory.protocol">
-<code class="sig-name descname">protocol</code><a class="headerlink" href="#nmmo.websocket.WSServerFactory.protocol" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.protocol">
+<span class="sig-name descname"><span class="pre">protocol</span></span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.protocol" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">autobahn.websocket.protocol.WebSocketServerProtocol</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.resetProtocolOptions">
-<code class="sig-name descname">resetProtocolOptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.resetProtocolOptions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.resetProtocolOptions">
+<span class="sig-name descname"><span class="pre">resetProtocolOptions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.resetProtocolOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketServerChannelFactory.resetProtocolOptions()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.setProtocolOptions">
-<code class="sig-name descname">setProtocolOptions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">versions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webStatus</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">utf8validateIncoming</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maskServerFrames</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requireMaskedClientFrames</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">applyMask</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maxFramePayloadSize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maxMessagePayloadSize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoFragmentSize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failByDrop</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">echoCloseCodeReason</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">openHandshakeTimeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">closeHandshakeTimeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tcpNoDelay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">perMessageCompressionAccept</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoPingInterval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoPingTimeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">autoPingSize</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">serveFlashSocketPolicy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flashSocketPolicy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowedOrigins</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowNullOrigin</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">maxConnections</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trustXForwardedFor</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.setProtocolOptions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.setProtocolOptions">
+<span class="sig-name descname"><span class="pre">setProtocolOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">versions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webStatus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">utf8validateIncoming</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maskServerFrames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requireMaskedClientFrames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">applyMask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxFramePayloadSize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxMessagePayloadSize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoFragmentSize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">failByDrop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">echoCloseCodeReason</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">openHandshakeTimeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closeHandshakeTimeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tcpNoDelay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perMessageCompressionAccept</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoPingInterval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoPingTimeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoPingSize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">serveFlashSocketPolicy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flashSocketPolicy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowedOrigins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowNullOrigin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxConnections</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trustXForwardedFor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.setProtocolOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketServerChannelFactory.setProtocolOptions()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.setSessionParameters">
-<code class="sig-name descname">setSessionParameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">protocols</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">headers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">externalPort</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.setSessionParameters" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.setSessionParameters">
+<span class="sig-name descname"><span class="pre">setSessionParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protocols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">externalPort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.setSessionParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements <code class="xref py py-func docutils literal notranslate"><span class="pre">autobahn.websocket.interfaces.IWebSocketServerChannelFactory.setSessionParameters()</span></code></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.startFactory">
-<code class="sig-name descname">startFactory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.startFactory" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.startFactory">
+<span class="sig-name descname"><span class="pre">startFactory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.startFactory" title="Permalink to this definition">¶</a></dt>
 <dd><p>This will be called before I begin listening on a Port or Connector.</p>
 <p>It will only be called once, even if the factory is connected
 to multiple ports.</p>
@@ -1057,8 +1110,8 @@ as connecting to a database, opening files, etcetera.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.WSServerFactory.stopFactory">
-<code class="sig-name descname">stopFactory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.stopFactory" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.stopFactory">
+<span class="sig-name descname"><span class="pre">stopFactory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.stopFactory" title="Permalink to this definition">¶</a></dt>
 <dd><p>This will be called before I stop listening on all Ports/Connectors.</p>
 <p>This can be overridden to perform ‘shutdown’ tasks such as disconnecting
 database connections, closing files, etc.</p>
@@ -1070,22 +1123,22 @@ directly.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.websocket.Application">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.websocket.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realm</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.Application" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.Application">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.websocket.</span></span><span class="sig-name descname"><span class="pre">Application</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="nmmo.websocket.Application.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">packet</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.Application.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.Application.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.Application.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.websocket.Application.kill">
-<code class="sig-name descname">kill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.Application.kill" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.websocket.Application.kill">
+<span class="sig-name descname"><span class="pre">kill</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.Application.kill" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
@@ -1094,7 +1147,7 @@ directly.</p>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../rst/game_wiki.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="nmmo.scripting.html" class="btn btn-neutral float-left" title="nmmo.scripting module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nmmo.version.html" class="btn btn-neutral float-left" title="nmmo.version module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
