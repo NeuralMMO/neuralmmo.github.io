@@ -4,15 +4,18 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.lib.colors module &mdash; Neural MMO v1.5.3 1.5.3.0 documentation</title>
+  <title>nmmo.lib.colors module &mdash; Neural MMO 1.5.3.5 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -54,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.3
+            <a href="../index.html" class="icon icon-home"> Neural MMO
           
 
           
@@ -85,22 +88,25 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html"> Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-generate-environments"> Generate Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-create-policies"> Create Policies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-evaluate-agents"> Evaluate Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-installation"> Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-creating-environments"> Creating Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-defining-rewards-and-tasks"> Defining Rewards and Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-scripting-and-classic-ai"> Scripting and Classic AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-baselines"> Baselines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#evaluation-methods">Evaluation Methods</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html"> User API</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-developer-api"> Developer API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="nmmo.lib.html">nmmo.lib package</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">nmmo.lib.colors module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.lib.log.html">nmmo.lib.log module</a></li>
@@ -114,13 +120,14 @@
 <li class="toctree-l3"><a class="reference internal" href="nmmo.infrastructure.html">nmmo.infrastructure module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.version.html">nmmo.version module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.websocket.html">nmmo.websocket module</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Game Wiki</span></p>
+<p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html"> Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-game-systems"> Game Systems</a></li>
@@ -129,13 +136,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-progression"> Progression</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Baselines</span></p>
+<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Evaluation Protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-small-maps"> Small Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-large-maps"> Large Maps</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Updates</span></p>
+<p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html"> Video Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-publications"> Publications</a></li>
@@ -144,7 +151,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-additional-links"> Additional Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-patch-notes-version-history"> Patch Notes + Version History</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Guide</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html"> Foreword</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-contributing"> Contributing</a></li>
@@ -155,18 +162,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-observation-representation"> Observation Representation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-model-io"> Model IO</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Ideology</span></p>
+<p class="caption" role="heading"><span class="caption-text">Ideology</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html"> Abstract</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html#icon-failure-modes"> Failure Modes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Administrative</span></p>
+<p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html"> Authorship, License, Disclaimer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#icon-assets"> Assets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#ags-namesake"> Namesake</a></li>
 </ul>
-<p class="caption"><span class="caption-text">NeurIPS</span></p>
+<p class="caption" role="heading"><span class="caption-text">NeurIPS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/neurips.html"> NeurIPS 2021 Dataset Track Supplementary Material</a></li>
 </ul>
@@ -184,7 +191,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.3</a>
+          <a href="../index.html">Neural MMO</a>
         
       </nav>
 
@@ -242,328 +249,328 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-nmmo.lib.colors">
+  <section id="module-nmmo.lib.colors">
 <span id="nmmo-lib-colors-module"></span><h1>nmmo.lib.colors module<a class="headerlink" href="#module-nmmo.lib.colors" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="nmmo.lib.colors.rgb">
-<code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">rgb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">h</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.rgb" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.rgb">
+<span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">rgb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.rgb" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="nmmo.lib.colors.rgbNorm">
-<code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">rgbNorm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">h</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.rgbNorm" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.rgbNorm">
+<span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">rgbNorm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.rgbNorm" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="nmmo.lib.colors.makeColor">
-<code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">makeColor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">idx</span></em>, <em class="sig-param"><span class="n">h</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">s</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">v</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.makeColor" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.makeColor">
+<span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">makeColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.makeColor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.lib.colors.Color">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">Color</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">hexVal</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Color" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Color">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">Color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hexVal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="nmmo.lib.colors.Color.packet">
-<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Color.packet" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Color.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Color.packet" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.lib.colors.Color256">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">Color256</code><a class="headerlink" href="#nmmo.lib.colors.Color256" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Color256">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">Color256</span></span><a class="headerlink" href="#nmmo.lib.colors.Color256" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="nmmo.lib.colors.Color256.make256">
-<code class="sig-name descname">make256</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Color256.make256" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Color256.make256">
+<span class="sig-name descname"><span class="pre">make256</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Color256.make256" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Color256.colors">
-<code class="sig-name descname">colors</code><em class="property"> = [&lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;]</em><a class="headerlink" href="#nmmo.lib.colors.Color256.colors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Color256.colors">
+<span class="sig-name descname"><span class="pre">colors</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;]</span></em><a class="headerlink" href="#nmmo.lib.colors.Color256.colors" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.lib.colors.Color16">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">Color16</code><a class="headerlink" href="#nmmo.lib.colors.Color16" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Color16">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">Color16</span></span><a class="headerlink" href="#nmmo.lib.colors.Color16" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="nmmo.lib.colors.Color16.make">
-<code class="sig-name descname">make</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Color16.make" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Color16.make">
+<span class="sig-name descname"><span class="pre">make</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Color16.make" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Color16.colors">
-<code class="sig-name descname">colors</code><em class="property"> = [&lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;, &lt;nmmo.lib.colors.Color object&gt;]</em><a class="headerlink" href="#nmmo.lib.colors.Color16.colors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Color16.colors">
+<span class="sig-name descname"><span class="pre">colors</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;]</span></em><a class="headerlink" href="#nmmo.lib.colors.Color16.colors" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.lib.colors.Tier">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">Tier</code><a class="headerlink" href="#nmmo.lib.colors.Tier" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Tier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">Tier</span></span><a class="headerlink" href="#nmmo.lib.colors.Tier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Tier.BLACK">
-<code class="sig-name descname">BLACK</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Tier.BLACK" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Tier.BLACK">
+<span class="sig-name descname"><span class="pre">BLACK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Tier.BLACK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Tier.WOOD">
-<code class="sig-name descname">WOOD</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Tier.WOOD" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Tier.WOOD">
+<span class="sig-name descname"><span class="pre">WOOD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Tier.WOOD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Tier.BRONZE">
-<code class="sig-name descname">BRONZE</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Tier.BRONZE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Tier.BRONZE">
+<span class="sig-name descname"><span class="pre">BRONZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Tier.BRONZE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Tier.SILVER">
-<code class="sig-name descname">SILVER</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Tier.SILVER" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Tier.SILVER">
+<span class="sig-name descname"><span class="pre">SILVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Tier.SILVER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Tier.GOLD">
-<code class="sig-name descname">GOLD</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Tier.GOLD" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Tier.GOLD">
+<span class="sig-name descname"><span class="pre">GOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Tier.GOLD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Tier.PLATINUM">
-<code class="sig-name descname">PLATINUM</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Tier.PLATINUM" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Tier.PLATINUM">
+<span class="sig-name descname"><span class="pre">PLATINUM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Tier.PLATINUM" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Tier.DIAMOND">
-<code class="sig-name descname">DIAMOND</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Tier.DIAMOND" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Tier.DIAMOND">
+<span class="sig-name descname"><span class="pre">DIAMOND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Tier.DIAMOND" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.lib.colors.Swatch">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">Swatch</code><a class="headerlink" href="#nmmo.lib.colors.Swatch" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Swatch">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">Swatch</span></span><a class="headerlink" href="#nmmo.lib.colors.Swatch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="nmmo.lib.colors.Swatch.colors">
-<code class="sig-name descname">colors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Swatch.colors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Swatch.colors">
+<span class="sig-name descname"><span class="pre">colors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Swatch.colors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return list of swatch colors</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.lib.colors.Swatch.rand">
-<code class="sig-name descname">rand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Swatch.rand" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Swatch.rand">
+<span class="sig-name descname"><span class="pre">rand</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Swatch.rand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return random swatch color</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.lib.colors.Neon">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">Neon</code><a class="headerlink" href="#nmmo.lib.colors.Neon" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">Neon</span></span><a class="headerlink" href="#nmmo.lib.colors.Neon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.lib.colors.Swatch" title="nmmo.lib.colors.Swatch"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.colors.Swatch</span></code></a></p>
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.RED">
-<code class="sig-name descname">RED</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.RED" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.RED">
+<span class="sig-name descname"><span class="pre">RED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.RED" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.ORANGE">
-<code class="sig-name descname">ORANGE</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.ORANGE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.ORANGE">
+<span class="sig-name descname"><span class="pre">ORANGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.ORANGE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.YELLOW">
-<code class="sig-name descname">YELLOW</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.YELLOW" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.YELLOW">
+<span class="sig-name descname"><span class="pre">YELLOW</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.YELLOW" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.GREEN">
-<code class="sig-name descname">GREEN</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.GREEN" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.GREEN">
+<span class="sig-name descname"><span class="pre">GREEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.GREEN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.MINT">
-<code class="sig-name descname">MINT</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.MINT" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.MINT">
+<span class="sig-name descname"><span class="pre">MINT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.MINT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.CYAN">
-<code class="sig-name descname">CYAN</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.CYAN" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.CYAN">
+<span class="sig-name descname"><span class="pre">CYAN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.CYAN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.BLUE">
-<code class="sig-name descname">BLUE</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.BLUE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.BLUE">
+<span class="sig-name descname"><span class="pre">BLUE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.BLUE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.PURPLE">
-<code class="sig-name descname">PURPLE</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.PURPLE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.PURPLE">
+<span class="sig-name descname"><span class="pre">PURPLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.PURPLE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.MAGENTA">
-<code class="sig-name descname">MAGENTA</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.MAGENTA" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.MAGENTA">
+<span class="sig-name descname"><span class="pre">MAGENTA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.MAGENTA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.FUCHSIA">
-<code class="sig-name descname">FUCHSIA</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.FUCHSIA" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.FUCHSIA">
+<span class="sig-name descname"><span class="pre">FUCHSIA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.FUCHSIA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.SPRING">
-<code class="sig-name descname">SPRING</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.SPRING" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.SPRING">
+<span class="sig-name descname"><span class="pre">SPRING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.SPRING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.SKY">
-<code class="sig-name descname">SKY</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.SKY" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.SKY">
+<span class="sig-name descname"><span class="pre">SKY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.SKY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.WHITE">
-<code class="sig-name descname">WHITE</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.WHITE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.WHITE">
+<span class="sig-name descname"><span class="pre">WHITE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.WHITE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.GRAY">
-<code class="sig-name descname">GRAY</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.GRAY" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.GRAY">
+<span class="sig-name descname"><span class="pre">GRAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.GRAY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.BLACK">
-<code class="sig-name descname">BLACK</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.BLACK" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.BLACK">
+<span class="sig-name descname"><span class="pre">BLACK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.BLACK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.BLOOD">
-<code class="sig-name descname">BLOOD</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.BLOOD" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.BLOOD">
+<span class="sig-name descname"><span class="pre">BLOOD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.BLOOD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.BROWN">
-<code class="sig-name descname">BROWN</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.BROWN" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.BROWN">
+<span class="sig-name descname"><span class="pre">BROWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.BROWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.GOLD">
-<code class="sig-name descname">GOLD</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.GOLD" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.GOLD">
+<span class="sig-name descname"><span class="pre">GOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.GOLD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.SILVER">
-<code class="sig-name descname">SILVER</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.SILVER" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.SILVER">
+<span class="sig-name descname"><span class="pre">SILVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.SILVER" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.TERM">
-<code class="sig-name descname">TERM</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.TERM" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.TERM">
+<span class="sig-name descname"><span class="pre">TERM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.TERM" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Neon.MASK">
-<code class="sig-name descname">MASK</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Neon.MASK" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.MASK">
+<span class="sig-name descname"><span class="pre">MASK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Neon.MASK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.lib.colors.Neon.colors">
-<code class="sig-name descname">colors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Neon.colors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.colors">
+<span class="sig-name descname"><span class="pre">colors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Neon.colors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return list of swatch colors</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.lib.colors.Neon.rand">
-<code class="sig-name descname">rand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Neon.rand" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Neon.rand">
+<span class="sig-name descname"><span class="pre">rand</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Neon.rand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return random swatch color</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.lib.colors.Solid">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">Solid</code><a class="headerlink" href="#nmmo.lib.colors.Solid" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">Solid</span></span><a class="headerlink" href="#nmmo.lib.colors.Solid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.lib.colors.Swatch" title="nmmo.lib.colors.Swatch"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.colors.Swatch</span></code></a></p>
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Solid.BLUE">
-<code class="sig-name descname">BLUE</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Solid.BLUE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.BLUE">
+<span class="sig-name descname"><span class="pre">BLUE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Solid.BLUE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Solid.ORANGE">
-<code class="sig-name descname">ORANGE</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Solid.ORANGE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.ORANGE">
+<span class="sig-name descname"><span class="pre">ORANGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Solid.ORANGE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Solid.GREEN">
-<code class="sig-name descname">GREEN</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Solid.GREEN" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.GREEN">
+<span class="sig-name descname"><span class="pre">GREEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Solid.GREEN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Solid.RED">
-<code class="sig-name descname">RED</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Solid.RED" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.RED">
+<span class="sig-name descname"><span class="pre">RED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Solid.RED" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Solid.PURPLE">
-<code class="sig-name descname">PURPLE</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Solid.PURPLE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.PURPLE">
+<span class="sig-name descname"><span class="pre">PURPLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Solid.PURPLE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Solid.BROWN">
-<code class="sig-name descname">BROWN</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Solid.BROWN" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.BROWN">
+<span class="sig-name descname"><span class="pre">BROWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Solid.BROWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Solid.PINK">
-<code class="sig-name descname">PINK</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Solid.PINK" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.PINK">
+<span class="sig-name descname"><span class="pre">PINK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Solid.PINK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Solid.GREY">
-<code class="sig-name descname">GREY</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Solid.GREY" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.GREY">
+<span class="sig-name descname"><span class="pre">GREY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Solid.GREY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Solid.CHARTREUSE">
-<code class="sig-name descname">CHARTREUSE</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Solid.CHARTREUSE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.CHARTREUSE">
+<span class="sig-name descname"><span class="pre">CHARTREUSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Solid.CHARTREUSE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.lib.colors.Solid.SKY">
-<code class="sig-name descname">SKY</code><em class="property"> = &lt;nmmo.lib.colors.Color object&gt;</em><a class="headerlink" href="#nmmo.lib.colors.Solid.SKY" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.SKY">
+<span class="sig-name descname"><span class="pre">SKY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.lib.colors.Color</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.colors.Solid.SKY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.lib.colors.Solid.colors">
-<code class="sig-name descname">colors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Solid.colors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.colors">
+<span class="sig-name descname"><span class="pre">colors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Solid.colors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return list of swatch colors</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.lib.colors.Solid.rand">
-<code class="sig-name descname">rand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Solid.rand" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Solid.rand">
+<span class="sig-name descname"><span class="pre">rand</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Solid.rand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return random swatch color</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.lib.colors.Palette">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.lib.colors.</code><code class="sig-name descname">Palette</code><span class="sig-paren">(</span><em class="sig-param">initial_swatch=&lt;class 'nmmo.lib.colors.Neon'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Palette" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Palette">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.colors.</span></span><span class="sig-name descname"><span class="pre">Palette</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_swatch=&lt;class</span> <span class="pre">'nmmo.lib.colors.Neon'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Palette" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="nmmo.lib.colors.Palette.color">
-<code class="sig-name descname">color</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">idx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Palette.color" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.colors.Palette.color">
+<span class="sig-name descname"><span class="pre">color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.colors.Palette.color" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

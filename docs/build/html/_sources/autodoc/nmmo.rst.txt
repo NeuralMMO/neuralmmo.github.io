@@ -24,4 +24,5 @@ nmmo package
    nmmo.infrastructure
    nmmo.overlay
    nmmo.scripting
+   nmmo.version
    nmmo.websocket

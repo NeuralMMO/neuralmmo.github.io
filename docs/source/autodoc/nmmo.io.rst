@@ -1,5 +1,11 @@
-nmmo.io namespace
-=================
+nmmo.io package
+===============
+
+.. automodule:: nmmo.io
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:
 
 
 .. toctree::

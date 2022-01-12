@@ -4,15 +4,18 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.entity.player module &mdash; Neural MMO v1.5.3 1.5.3.0 documentation</title>
+  <title>nmmo.entity.player module &mdash; Neural MMO 1.5.3.5 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,17 +32,17 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="nmmo.io namespace" href="nmmo.io.html" />
+    <link rel="next" title="nmmo.io package" href="nmmo.io.html" />
     <link rel="prev" title="nmmo.entity.npc module" href="nmmo.entity.npc.html" /> 
 </head>
 
@@ -54,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.3
+            <a href="../index.html" class="icon icon-home"> Neural MMO
           
 
           
@@ -85,15 +88,18 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html"> Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-generate-environments"> Generate Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-create-policies"> Create Policies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-evaluate-agents"> Evaluate Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-installation"> Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-creating-environments"> Creating Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-defining-rewards-and-tasks"> Defining Rewards and Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-scripting-and-classic-ai"> Scripting and Classic AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-baselines"> Baselines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#evaluation-methods">Evaluation Methods</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html"> User API</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-developer-api"> Developer API</a><ul class="current">
@@ -105,19 +111,20 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">nmmo.entity.player module</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.lib.html">nmmo.lib package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.systems.html">nmmo.systems package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.infrastructure.html">nmmo.infrastructure module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.version.html">nmmo.version module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.websocket.html">nmmo.websocket module</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Game Wiki</span></p>
+<p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html"> Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-game-systems"> Game Systems</a></li>
@@ -126,13 +133,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-progression"> Progression</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Baselines</span></p>
+<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Evaluation Protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-small-maps"> Small Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-large-maps"> Large Maps</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Updates</span></p>
+<p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html"> Video Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-publications"> Publications</a></li>
@@ -141,7 +148,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-additional-links"> Additional Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-patch-notes-version-history"> Patch Notes + Version History</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Guide</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html"> Foreword</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-contributing"> Contributing</a></li>
@@ -152,18 +159,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-observation-representation"> Observation Representation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-model-io"> Model IO</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Ideology</span></p>
+<p class="caption" role="heading"><span class="caption-text">Ideology</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html"> Abstract</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html#icon-failure-modes"> Failure Modes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Administrative</span></p>
+<p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html"> Authorship, License, Disclaimer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#icon-assets"> Assets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#ags-namesake"> Namesake</a></li>
 </ul>
-<p class="caption"><span class="caption-text">NeurIPS</span></p>
+<p class="caption" role="heading"><span class="caption-text">NeurIPS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/neurips.html"> NeurIPS 2021 Dataset Track Supplementary Material</a></li>
 </ul>
@@ -181,7 +188,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.3</a>
+          <a href="../index.html">Neural MMO</a>
         
       </nav>
 
@@ -239,71 +246,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-nmmo.entity.player">
+  <section id="module-nmmo.entity.player">
 <span id="nmmo-entity-player-module"></span><h1>nmmo.entity.player module<a class="headerlink" href="#module-nmmo.entity.player" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="nmmo.entity.player.Player">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.entity.player.</code><code class="sig-name descname">Player</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realm</span></em>, <em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">agent</span></em>, <em class="sig-param"><span class="n">color</span></em>, <em class="sig-param"><span class="n">pop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.entity.player.Player">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.player.</span></span><span class="sig-name descname"><span class="pre">Player</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity" title="nmmo.entity.entity.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.entity.entity.Entity</span></code></a></p>
-<dl class="py method">
-<dt id="nmmo.entity.player.Player.serial">
-<em class="property">property </em><code class="sig-name descname">serial</code><a class="headerlink" href="#nmmo.entity.player.Player.serial" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.serial">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serial</span></span><a class="headerlink" href="#nmmo.entity.player.Player.serial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.isPlayer">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isPlayer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.player.Player.isPlayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.population">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">population</span></span><a class="headerlink" href="#nmmo.entity.player.Player.population" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.entity.player.Player.isPlayer">
-<em class="property">property </em><code class="sig-name descname">isPlayer</code><a class="headerlink" href="#nmmo.entity.player.Player.isPlayer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.applyDamage">
+<span class="sig-name descname"><span class="pre">applyDamage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dmg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player.applyDamage" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.entity.player.Player.population">
-<em class="property">property </em><code class="sig-name descname">population</code><a class="headerlink" href="#nmmo.entity.player.Player.population" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.receiveDamage">
+<span class="sig-name descname"><span class="pre">receiveDamage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player.receiveDamage" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.entity.player.Player.applyDamage">
-<code class="sig-name descname">applyDamage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dmg</span></em>, <em class="sig-param"><span class="n">style</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player.applyDamage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.receiveLoot">
+<span class="sig-name descname"><span class="pre">receiveLoot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loadout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player.receiveLoot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.entity.player.Player.receiveDamage">
-<code class="sig-name descname">receiveDamage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="n">dmg</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player.receiveDamage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.alive">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alive</span></span><a class="headerlink" href="#nmmo.entity.player.Player.alive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.isNPC">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isNPC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.player.Player.isNPC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.pos">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#nmmo.entity.player.Player.pos" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.entity.player.Player.receiveLoot">
-<code class="sig-name descname">receiveLoot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">loadout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player.receiveLoot" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.entity.player.Player.packet">
-<code class="sig-name descname">packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player.packet" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.entity.player.Player.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realm</span></em>, <em class="sig-param"><span class="n">actions</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.entity.player.Player.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.player.Player.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Post-action update. Do not include history</p>
 </dd></dl>
 
-<dl class="py method">
-<dt id="nmmo.entity.player.Player.alive">
-<em class="property">property </em><code class="sig-name descname">alive</code><a class="headerlink" href="#nmmo.entity.player.Player.alive" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.entity.player.Player.isNPC">
-<em class="property">property </em><code class="sig-name descname">isNPC</code><a class="headerlink" href="#nmmo.entity.player.Player.isNPC" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.entity.player.Player.pos">
-<em class="property">property </em><code class="sig-name descname">pos</code><a class="headerlink" href="#nmmo.entity.player.Player.pos" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
@@ -311,7 +318,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="nmmo.io.html" class="btn btn-neutral float-right" title="nmmo.io namespace" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="nmmo.io.html" class="btn btn-neutral float-right" title="nmmo.io package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="nmmo.entity.npc.html" class="btn btn-neutral float-left" title="nmmo.entity.npc module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

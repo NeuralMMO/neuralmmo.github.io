@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.core.tile module &mdash; Neural MMO 1.5.3.5 documentation</title>
+  <title>nmmo.version module &mdash; Neural MMO 1.5.3.5 documentation</title>
   
 
   
@@ -42,8 +42,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="nmmo.entity package" href="nmmo.entity.html" />
-    <link rel="prev" title="nmmo.core.terrain module" href="nmmo.core.terrain.html" /> 
+    <link rel="next" title="nmmo.websocket module" href="nmmo.websocket.html" />
+    <link rel="prev" title="nmmo.scripting module" href="nmmo.scripting.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,16 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html"> User API</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-developer-api"> Developer API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="nmmo.core.agent.html">nmmo.core.agent module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nmmo.core.config.html">nmmo.core.config module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nmmo.core.env.html">nmmo.core.env module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nmmo.core.map.html">nmmo.core.map module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nmmo.core.realm.html">nmmo.core.realm module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nmmo.core.terrain.html">nmmo.core.terrain module</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">nmmo.core.tile module</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.lib.html">nmmo.lib package</a></li>
@@ -121,7 +112,7 @@
 <li class="toctree-l3"><a class="reference internal" href="nmmo.infrastructure.html">nmmo.infrastructure module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nmmo.version.html">nmmo.version module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">nmmo.version module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.websocket.html">nmmo.websocket module</a></li>
 </ul>
 </li>
@@ -229,15 +220,13 @@
         
           <li><a href="nmmo.html">nmmo package</a> &raquo;</li>
         
-          <li><a href="nmmo.core.html">nmmo.core package</a> &raquo;</li>
-        
-      <li>nmmo.core.tile module</li>
+      <li>nmmo.version module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/autodoc/nmmo.core.tile.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/autodoc/nmmo.version.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -250,85 +239,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="module-nmmo.core.tile">
-<span id="nmmo-core-tile-module"></span><h1>nmmo.core.tile module<a class="headerlink" href="#module-nmmo.core.tile" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.tile.</span></span><span class="sig-name descname"><span class="pre">Tile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.tile.Tile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.serial">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serial</span></span><a class="headerlink" href="#nmmo.core.tile.Tile.serial" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.repr">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">repr</span></span><a class="headerlink" href="#nmmo.core.tile.Tile.repr" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.pos">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#nmmo.core.tile.Tile.pos" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.habitable">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">habitable</span></span><a class="headerlink" href="#nmmo.core.tile.Tile.habitable" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.vacant">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vacant</span></span><a class="headerlink" href="#nmmo.core.tile.Tile.vacant" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.occupied">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">occupied</span></span><a class="headerlink" href="#nmmo.core.tile.Tile.occupied" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.impassible">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">impassible</span></span><a class="headerlink" href="#nmmo.core.tile.Tile.impassible" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.lava">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lava</span></span><a class="headerlink" href="#nmmo.core.tile.Tile.lava" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.static">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">static</span></span><a class="headerlink" href="#nmmo.core.tile.Tile.static" title="Permalink to this definition">¶</a></dt>
-<dd><p>No updates needed</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.tile.Tile.reset" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.addEnt">
-<span class="sig-name descname"><span class="pre">addEnt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.tile.Tile.addEnt" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.delEnt">
-<span class="sig-name descname"><span class="pre">delEnt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.tile.Tile.delEnt" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.step">
-<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.tile.Tile.step" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.core.tile.Tile.harvest">
-<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.tile.Tile.harvest" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+  <section id="module-nmmo.version">
+<span id="nmmo-version-module"></span><h1>nmmo.version module<a class="headerlink" href="#module-nmmo.version" title="Permalink to this headline">¶</a></h1>
 </section>
 
 
@@ -337,8 +249,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="nmmo.entity.html" class="btn btn-neutral float-right" title="nmmo.entity package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="nmmo.core.terrain.html" class="btn btn-neutral float-left" title="nmmo.core.terrain module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nmmo.websocket.html" class="btn btn-neutral float-right" title="nmmo.websocket module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="nmmo.scripting.html" class="btn btn-neutral float-left" title="nmmo.scripting module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

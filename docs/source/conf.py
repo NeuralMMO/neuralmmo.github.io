@@ -28,14 +28,14 @@ sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # -- Project information -----------------------------------------------------
 
-project = 'Neural MMO v1.5.3'
+project = 'Neural MMO'
 copyright = '2020, Joseph Suarez'
 author = 'Joseph Suarez'
 
 
 # The full version, including alpha/beta/rc tags
 import nmmo
-release = nmmo.version
+release = nmmo.__version__
 
 # -- General configuration ---------------------------------------------------
 

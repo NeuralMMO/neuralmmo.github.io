@@ -4,15 +4,18 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.infrastructure module &mdash; Neural MMO v1.5.3 1.5.3.0 documentation</title>
+  <title>nmmo.infrastructure module &mdash; Neural MMO 1.5.3.5 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -54,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.3
+            <a href="../index.html" class="icon icon-home"> Neural MMO
           
 
           
@@ -85,34 +88,38 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html"> Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-generate-environments"> Generate Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-create-policies"> Create Policies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-evaluate-agents"> Evaluate Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-installation"> Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-creating-environments"> Creating Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-defining-rewards-and-tasks"> Defining Rewards and Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-scripting-and-classic-ai"> Scripting and Classic AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-baselines"> Baselines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#evaluation-methods">Evaluation Methods</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html"> User API</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-developer-api"> Developer API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.lib.html">nmmo.lib package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.systems.html">nmmo.systems package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">nmmo.infrastructure module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.version.html">nmmo.version module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.websocket.html">nmmo.websocket module</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Game Wiki</span></p>
+<p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html"> Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-game-systems"> Game Systems</a></li>
@@ -121,13 +128,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-progression"> Progression</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Baselines</span></p>
+<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Evaluation Protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-small-maps"> Small Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-large-maps"> Large Maps</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Updates</span></p>
+<p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html"> Video Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-publications"> Publications</a></li>
@@ -136,7 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-additional-links"> Additional Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-patch-notes-version-history"> Patch Notes + Version History</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Guide</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html"> Foreword</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-contributing"> Contributing</a></li>
@@ -147,18 +154,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-observation-representation"> Observation Representation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-model-io"> Model IO</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Ideology</span></p>
+<p class="caption" role="heading"><span class="caption-text">Ideology</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html"> Abstract</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html#icon-failure-modes"> Failure Modes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Administrative</span></p>
+<p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html"> Authorship, License, Disclaimer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#icon-assets"> Assets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#ags-namesake"> Namesake</a></li>
 </ul>
-<p class="caption"><span class="caption-text">NeurIPS</span></p>
+<p class="caption" role="heading"><span class="caption-text">NeurIPS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/neurips.html"> NeurIPS 2021 Dataset Track Supplementary Material</a></li>
 </ul>
@@ -176,7 +183,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.3</a>
+          <a href="../index.html">Neural MMO</a>
         
       </nav>
 
@@ -232,7 +239,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-nmmo.infrastructure">
+  <section id="module-nmmo.infrastructure">
 <span id="nmmo-infrastructure-module"></span><h1>nmmo.infrastructure module<a class="headerlink" href="#module-nmmo.infrastructure" title="Permalink to this headline">¶</a></h1>
 <p>Infrastructure layer for representing agent observations</p>
 <p>Maintains a synchronized + serialized representation of agent observations in
@@ -242,219 +249,219 @@ slices instead of a lengthy traversal over hundreds of game properties.</p>
 to follow the correct instantiation protocol, e.g. as used for defining
 agent/tile observations, when adding new types observations to the code</p>
 <dl class="py class">
-<dt id="nmmo.infrastructure.DataType">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.infrastructure.</code><code class="sig-name descname">DataType</code><a class="headerlink" href="#nmmo.infrastructure.DataType" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.DataType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">DataType</span></span><a class="headerlink" href="#nmmo.infrastructure.DataType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
-<dt id="nmmo.infrastructure.DataType.CONTINUOUS">
-<code class="sig-name descname">CONTINUOUS</code><a class="headerlink" href="#nmmo.infrastructure.DataType.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.DataType.CONTINUOUS">
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><a class="headerlink" href="#nmmo.infrastructure.DataType.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.float32</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.infrastructure.DataType.DISCRETE">
-<code class="sig-name descname">DISCRETE</code><a class="headerlink" href="#nmmo.infrastructure.DataType.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.DataType.DISCRETE">
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><a class="headerlink" href="#nmmo.infrastructure.DataType.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.int32</span></code></p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.infrastructure.Index">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.infrastructure.</code><code class="sig-name descname">Index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prealloc</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Index">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">Index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prealloc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Lookup index of attribute names</p>
 <dl class="py method">
-<dt id="nmmo.infrastructure.Index.full">
-<code class="sig-name descname">full</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.full" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Index.full">
+<span class="sig-name descname"><span class="pre">full</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.full" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Index.remove">
-<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.remove" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Index.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.remove" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Index.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Index.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Index.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.get" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Index.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Index.teg">
-<code class="sig-name descname">teg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">row</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.teg" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Index.teg">
+<span class="sig-name descname"><span class="pre">teg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.teg" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Index.expand">
-<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cur</span></em>, <em class="sig-param"><span class="n">nxt</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.expand" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Index.expand">
+<span class="sig-name descname"><span class="pre">expand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index.expand" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.infrastructure.ContinuousTable">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.infrastructure.</code><code class="sig-name descname">ContinuousTable</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">obj</em>, <em class="sig-param">prealloc</em>, <em class="sig-param">dtype=&lt;class 'numpy.float32'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.ContinuousTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">ContinuousTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prealloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.float32'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Flat tensor representation for a set of continuous attributes</p>
 <dl class="py method">
-<dt id="nmmo.infrastructure.ContinuousTable.initAttr">
-<code class="sig-name descname">initAttr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">attr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable.initAttr" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.ContinuousTable.initAttr">
+<span class="sig-name descname"><span class="pre">initAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable.initAttr" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.ContinuousTable.initData">
-<code class="sig-name descname">initData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nRows</span></em>, <em class="sig-param"><span class="n">nCols</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable.initData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.ContinuousTable.initData">
+<span class="sig-name descname"><span class="pre">initData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nRows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nCols</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable.initData" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.ContinuousTable.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">row</span></em>, <em class="sig-param"><span class="n">attr</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.ContinuousTable.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.ContinuousTable.expand">
-<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cur</span></em>, <em class="sig-param"><span class="n">nxt</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable.expand" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.ContinuousTable.expand">
+<span class="sig-name descname"><span class="pre">expand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable.expand" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.ContinuousTable.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rows</span></em>, <em class="sig-param"><span class="n">pad</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable.get" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.ContinuousTable.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.infrastructure.DiscreteTable">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.infrastructure.</code><code class="sig-name descname">DiscreteTable</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">obj</em>, <em class="sig-param">prealloc</em>, <em class="sig-param">dtype=&lt;class 'numpy.int32'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.DiscreteTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">DiscreteTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prealloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.int32'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.infrastructure.ContinuousTable" title="nmmo.infrastructure.ContinuousTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.infrastructure.ContinuousTable</span></code></a></p>
 <p>Flat tensor representation for a set of discrete attributes</p>
 <dl class="py method">
-<dt id="nmmo.infrastructure.DiscreteTable.initAttr">
-<code class="sig-name descname">initAttr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">attr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable.initAttr" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.DiscreteTable.initAttr">
+<span class="sig-name descname"><span class="pre">initAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable.initAttr" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.DiscreteTable.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">row</span></em>, <em class="sig-param"><span class="n">attr</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.DiscreteTable.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.DiscreteTable.expand">
-<code class="sig-name descname">expand</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cur</span></em>, <em class="sig-param"><span class="n">nxt</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable.expand" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.DiscreteTable.expand">
+<span class="sig-name descname"><span class="pre">expand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cur</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable.expand" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.DiscreteTable.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rows</span></em>, <em class="sig-param"><span class="n">pad</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable.get" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.DiscreteTable.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.DiscreteTable.initData">
-<code class="sig-name descname">initData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nRows</span></em>, <em class="sig-param"><span class="n">nCols</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable.initData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.DiscreteTable.initData">
+<span class="sig-name descname"><span class="pre">initData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nRows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nCols</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable.initData" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.infrastructure.Grid">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.infrastructure.</code><code class="sig-name descname">Grid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">R</span></em>, <em class="sig-param"><span class="n">C</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Grid">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">Grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Flat representation of tile/agent positions</p>
 <dl class="py method">
-<dt id="nmmo.infrastructure.Grid.zero">
-<code class="sig-name descname">zero</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid.zero" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Grid.zero">
+<span class="sig-name descname"><span class="pre">zero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid.zero" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Grid.set">
-<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid.set" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Grid.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid.set" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Grid.move">
-<code class="sig-name descname">move</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">nxt</span></em>, <em class="sig-param"><span class="n">row</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid.move" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Grid.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid.move" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Grid.window">
-<code class="sig-name descname">window</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rStart</span></em>, <em class="sig-param"><span class="n">rEnd</span></em>, <em class="sig-param"><span class="n">cStart</span></em>, <em class="sig-param"><span class="n">cEnd</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid.window" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Grid.window">
+<span class="sig-name descname"><span class="pre">window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rStart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rEnd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cStart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cEnd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid.window" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.infrastructure.GridTables">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.infrastructure.</code><code class="sig-name descname">GridTables</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">pad</span></em>, <em class="sig-param"><span class="n">prealloc</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">expansion</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.GridTables">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">GridTables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prealloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expansion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Combines a Grid + Index + Continuous and Discrete tables</p>
 <p>Together, these data structures provide a robust and efficient
 flat tensor representation of an entire class of observations,
 such as agents or tiles</p>
 <dl class="py method">
-<dt id="nmmo.infrastructure.GridTables.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ent</span></em>, <em class="sig-param"><span class="n">radius</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">entity</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables.get" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.GridTables.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.GridTables.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.GridTables.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.GridTables.move">
-<code class="sig-name descname">move</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">nxt</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables.move" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.GridTables.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables.move" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.GridTables.init">
-<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables.init" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.GridTables.init">
+<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables.init" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.GridTables.remove">
-<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables.remove" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.GridTables.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables.remove" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.infrastructure.Dataframe">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.infrastructure.</code><code class="sig-name descname">Dataframe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Dataframe">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">Dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Infrastructure wrapper class</p>
 <dl class="py method">
-<dt id="nmmo.infrastructure.Dataframe.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Dataframe.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Dataframe.remove">
-<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe.remove" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Dataframe.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe.remove" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Dataframe.init">
-<code class="sig-name descname">init</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe.init" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Dataframe.init">
+<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe.init" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Dataframe.move">
-<code class="sig-name descname">move</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em>, <em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">nxt</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe.move" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Dataframe.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nxt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe.move" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.infrastructure.Dataframe.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe.get" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.infrastructure.Dataframe.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

@@ -4,15 +4,18 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.systems.achievement module &mdash; Neural MMO v1.5.3 1.5.3.0 documentation</title>
+  <title>nmmo.systems.achievement module &mdash; Neural MMO 1.5.3.5 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,10 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -54,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.3
+            <a href="../index.html" class="icon icon-home"> Neural MMO
           
 
           
@@ -85,22 +88,25 @@
               
             
             
-              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html"> Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-generate-environments"> Generate Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-create-policies"> Create Policies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-evaluate-agents"> Evaluate Agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-installation"> Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-creating-environments"> Creating Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-defining-rewards-and-tasks"> Defining Rewards and Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-scripting-and-classic-ai"> Scripting and Classic AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-baselines"> Baselines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#evaluation-methods">Evaluation Methods</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html"> User API</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-developer-api"> Developer API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.lib.html">nmmo.lib package</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="nmmo.systems.html">nmmo.systems package</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="nmmo.systems.ai.html">nmmo.systems.ai package</a></li>
@@ -115,13 +121,14 @@
 <li class="toctree-l3"><a class="reference internal" href="nmmo.infrastructure.html">nmmo.infrastructure module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.version.html">nmmo.version module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.websocket.html">nmmo.websocket module</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Game Wiki</span></p>
+<p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html"> Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-game-systems"> Game Systems</a></li>
@@ -130,13 +137,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-progression"> Progression</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Baselines</span></p>
+<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Evaluation Protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-small-maps"> Small Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-large-maps"> Large Maps</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Updates</span></p>
+<p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html"> Video Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-publications"> Publications</a></li>
@@ -145,7 +152,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-additional-links"> Additional Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-patch-notes-version-history"> Patch Notes + Version History</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Guide</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html"> Foreword</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-contributing"> Contributing</a></li>
@@ -156,18 +163,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-observation-representation"> Observation Representation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/devguide.html#icon-model-io"> Model IO</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Ideology</span></p>
+<p class="caption" role="heading"><span class="caption-text">Ideology</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html"> Abstract</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/ideology.html#icon-failure-modes"> Failure Modes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Administrative</span></p>
+<p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html"> Authorship, License, Disclaimer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#icon-assets"> Assets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/administrative.html#ags-namesake"> Namesake</a></li>
 </ul>
-<p class="caption"><span class="caption-text">NeurIPS</span></p>
+<p class="caption" role="heading"><span class="caption-text">NeurIPS</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/neurips.html"> NeurIPS 2021 Dataset Track Supplementary Material</a></li>
 </ul>
@@ -185,7 +192,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.3</a>
+          <a href="../index.html">Neural MMO</a>
         
       </nav>
 
@@ -243,177 +250,67 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-nmmo.systems.achievement">
+  <section id="module-nmmo.systems.achievement">
 <span id="nmmo-systems-achievement-module"></span><h1>nmmo.systems.achievement module<a class="headerlink" href="#module-nmmo.systems.achievement" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="nmmo.systems.achievement.Tier">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.systems.achievement.</code><code class="sig-name descname">Tier</code><a class="headerlink" href="#nmmo.systems.achievement.Tier" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Task">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.achievement.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reward</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Task" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
-<dt id="nmmo.systems.achievement.Tier.EASY">
-<code class="sig-name descname">EASY</code><em class="property"> = 4</em><a class="headerlink" href="#nmmo.systems.achievement.Tier.EASY" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="nmmo.systems.achievement.Tier.NORMAL">
-<code class="sig-name descname">NORMAL</code><em class="property"> = 10</em><a class="headerlink" href="#nmmo.systems.achievement.Tier.NORMAL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Task.condition">
+<span class="sig-name descname"><span class="pre">condition</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span></em><a class="headerlink" href="#nmmo.systems.achievement.Task.condition" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="nmmo.systems.achievement.Tier.HARD">
-<code class="sig-name descname">HARD</code><em class="property"> = 25</em><a class="headerlink" href="#nmmo.systems.achievement.Tier.HARD" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Task.target">
+<span class="sig-name descname"><span class="pre">target</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.systems.achievement.Task.target" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Task.reward">
+<span class="sig-name descname"><span class="pre">reward</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.systems.achievement.Task.reward" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.systems.achievement.Diary">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.systems.achievement.</code><code class="sig-name descname">Diary</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Diary" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Diary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.achievement.</span></span><span class="sig-name descname"><span class="pre">Diary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tasks</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Diary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Diary.stats">
-<em class="property">property </em><code class="sig-name descname">stats</code><a class="headerlink" href="#nmmo.systems.achievement.Diary.stats" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Diary.completed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">completed</span></span><a class="headerlink" href="#nmmo.systems.achievement.Diary.completed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Diary.cumulative_reward">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cumulative_reward</span></span><a class="headerlink" href="#nmmo.systems.achievement.Diary.cumulative_reward" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.systems.achievement.Diary.score">
-<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aggregate</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Diary.score" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Diary.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realm</span></em>, <em class="sig-param"><span class="n">entity</span></em>, <em class="sig-param"><span class="n">aggregate</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">dry</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Diary.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Diary.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Diary.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="nmmo.systems.achievement.Achievement">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.systems.achievement.</code><code class="sig-name descname">Achievement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">easy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">normal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hard</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Achievement" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Achievement">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.achievement.</span></span><span class="sig-name descname"><span class="pre">Achievement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reward</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Achievement" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Achievement.stats">
-<em class="property">property </em><code class="sig-name descname">stats</code><a class="headerlink" href="#nmmo.systems.achievement.Achievement.stats" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Achievement.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nmmo.systems.achievement.Achievement.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="nmmo.systems.achievement.Achievement.score">
-<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">progress</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Achievement.score" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Achievement.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">dry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Achievement.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.achievement.Achievement.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Achievement.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="py class">
-<dt id="nmmo.systems.achievement.Lifetime">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.systems.achievement.</code><code class="sig-name descname">Lifetime</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">easy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">normal</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hard</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Lifetime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.achievement.Achievement" title="nmmo.systems.achievement.Achievement"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.achievement.Achievement</span></code></a></p>
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Lifetime.score">
-<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">progress</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Lifetime.score" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Lifetime.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realm</span></em>, <em class="sig-param"><span class="n">entity</span></em>, <em class="sig-param"><span class="n">dry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Lifetime.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Lifetime.stats">
-<em class="property">property </em><code class="sig-name descname">stats</code><a class="headerlink" href="#nmmo.systems.achievement.Lifetime.stats" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="nmmo.systems.achievement.PlayerKills">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.systems.achievement.</code><code class="sig-name descname">PlayerKills</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.PlayerKills" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.achievement.Achievement" title="nmmo.systems.achievement.Achievement"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.achievement.Achievement</span></code></a></p>
-<dl class="py method">
-<dt id="nmmo.systems.achievement.PlayerKills.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realm</span></em>, <em class="sig-param"><span class="n">entity</span></em>, <em class="sig-param"><span class="n">dry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.PlayerKills.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.PlayerKills.score">
-<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">progress</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.PlayerKills.score" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.PlayerKills.stats">
-<em class="property">property </em><code class="sig-name descname">stats</code><a class="headerlink" href="#nmmo.systems.achievement.PlayerKills.stats" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="nmmo.systems.achievement.Equipment">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.systems.achievement.</code><code class="sig-name descname">Equipment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Equipment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.achievement.Achievement" title="nmmo.systems.achievement.Achievement"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.achievement.Achievement</span></code></a></p>
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Equipment.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realm</span></em>, <em class="sig-param"><span class="n">entity</span></em>, <em class="sig-param"><span class="n">dry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Equipment.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Equipment.score">
-<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">progress</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Equipment.score" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Equipment.stats">
-<em class="property">property </em><code class="sig-name descname">stats</code><a class="headerlink" href="#nmmo.systems.achievement.Equipment.stats" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="nmmo.systems.achievement.Exploration">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.systems.achievement.</code><code class="sig-name descname">Exploration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Exploration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.achievement.Achievement" title="nmmo.systems.achievement.Achievement"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.achievement.Achievement</span></code></a></p>
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Exploration.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realm</span></em>, <em class="sig-param"><span class="n">entity</span></em>, <em class="sig-param"><span class="n">dry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Exploration.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Exploration.score">
-<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">progress</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Exploration.score" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Exploration.stats">
-<em class="property">property </em><code class="sig-name descname">stats</code><a class="headerlink" href="#nmmo.systems.achievement.Exploration.stats" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="nmmo.systems.achievement.Foraging">
-<em class="property">class </em><code class="sig-prename descclassname">nmmo.systems.achievement.</code><code class="sig-name descname">Foraging</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Foraging" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.achievement.Achievement" title="nmmo.systems.achievement.Achievement"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.achievement.Achievement</span></code></a></p>
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Foraging.score">
-<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">progress</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Foraging.score" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Foraging.stats">
-<em class="property">property </em><code class="sig-name descname">stats</code><a class="headerlink" href="#nmmo.systems.achievement.Foraging.stats" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="nmmo.systems.achievement.Foraging.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">realm</span></em>, <em class="sig-param"><span class="n">entity</span></em>, <em class="sig-param"><span class="n">dry</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.achievement.Foraging.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
+</section>
 
 
            </div>
