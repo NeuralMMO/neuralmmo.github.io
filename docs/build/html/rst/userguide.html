@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Introduction &mdash; Neural MMO 1.5.3.5 documentation</title>
+  <title>Introduction &mdash; Neural MMO 1.5.3.7 documentation</title>
   
 
   
@@ -96,7 +96,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#icon-defining-rewards-and-tasks"> Defining Rewards and Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-demos"> Demos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#minimal-example">Minimal Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rewards-tasks">Rewards &amp; Tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#skill-rating">Skill Rating</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-scripting-and-classic-ai"> Scripting and Classic AI</a><ul class="simple">
 </ul>
 </li>
@@ -283,9 +288,35 @@
 </section>
 <section id="icon-installation">
 <h1><img alt="icon" src="../_images/icon_pixel.png" /> Installation<a class="headerlink" href="#icon-installation" title="Permalink to this headline">¶</a></h1>
-<p>Official support: Ubuntu 20.04, Windows 10 + WSL, and MacOS. Tested with Anaconda Python 3.9</p>
+<p>Official support: Ubuntu 20.04, WSL, and MacOS. Tested with Anaconda Python 3.9</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">Recommended setup from source with baselines. Windows + WSL Users: Install the server and baselines on WSL and the client on Windows.</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-text">Packaged installation</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install NMMO with baseline dependencies</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">nmmo</span><span class="p">[</span><span class="n">rllib</span><span class="p">]</span>
+
+<span class="c1"># Clone baselines repository. Optional but recommended: setup WanDB integration.</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span> <span class="n">nmmo</span><span class="o">-</span><span class="n">baselines</span>
+<span class="n">echo</span> <span class="n">YOUR_WANDB_API_KEY</span> <span class="o">&gt;</span> <span class="n">nmmo</span><span class="o">-</span><span class="n">baselines</span><span class="o">/</span><span class="n">wandb_api_key</span>
+
+<span class="c1">#Run a quick demo (download client below)</span>
+<span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">demo</span>
+</pre></div>
+</div>
+</div>
+<p>Download the latest client <a class="reference external" href="https://github.com/neuralmmo/client/releases">here</a> (WSL users: do this on your Windows host). Start the demo and run the executable for your platform in client/UnityClient/. After a few seconds, the demo console will show a connection message and the client will load the map.</p>
+<p><strong>Required RLlib patch:</strong> Add <cite>custom_metrics[k] = filt; continue</cite> after line 175 in your RLlib metrics file (usually ~/anaconda3/lib/python3.8/site-packages/ray/rllib/evaluation/metrics.py)</p>
+<p><strong>Troubleshooting:</strong> If you are training on GPU and get an IndexError error on self.device, set gpu_ids=[0] in ray/rllib/policy/torch_policy.py:150 (typically in ~/anaconda3/lib/python3.8/site-packages)</p>
+<p><strong>Support:</strong> Post in #support on the <a class="reference external" href="https://discord.gg/BkMmFUC">[Discord]</a>. Seriously, do this. Do not raise Github issues for support. You will get a reply much faster (often instantly) on Discord.</p>
+<p>You can also install headless or entirely from source (WanDB setup and RLlib patch still required)</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Headless setup for training</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">nmmo</span><span class="p">[</span><span class="n">rllib</span><span class="p">]</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span> <span class="n">nmmo</span><span class="o">-</span><span class="n">baselines</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Setup from source for developers</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span>
 
 <span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">environment</span>
@@ -293,29 +324,12 @@
 <span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">client</span>
 
 <span class="n">cd</span> <span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span><span class="p">[</span><span class="n">rllib</span><span class="p">]</span>
+
+<span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">demo</span>
+<span class="o">./</span><span class="n">client</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Headless setup</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">nmmo</span><span class="p">[</span><span class="n">rllib</span><span class="p">]</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span> <span class="n">nmmo</span><span class="o">-</span><span class="n">baselines</span>
-</pre></div>
-</div>
-</div>
-<dl>
-<dt><strong>Required Baselines Configuration</strong></dt><dd><blockquote>
-<div><ul class="simple">
-<li><p>Create a file wandb_api_key in baselines and paste in your WanDB API key. This new integration is now so important to logging and evaluation that we are requiring it by default. Do not commit this file.</p></li>
-<li><p>Add <cite>custom_metrics[k] = filt; continue</cite> after line 175 in your RLlib metrics file (usually ~/anaconda3/lib/python3.8/site-packages/ray/rllib/evaluation/metrics.py). This is an RLlib limitation which we hope to resolve in the next version.</p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>If you are training on GPU and get an IndexError error on self.device, set gpu_ids=[0] in ray/rllib/policy/torch_policy.py:150 (typically in ~/anaconda3/lib/python3.8/site-packages)</p></li>
-</ul>
-</dd>
-</dl>
-<p>Problems? Post in #support on the <a class="reference external" href="https://discord.gg/BkMmFUC">[Discord]</a>. Seriously, do this. Do not raise Github issues for support. You will get a reply much faster (often instantly) on Discord.</p>
 </section>
 <section id="icon-creating-environments">
 <h1><img alt="icon" src="../_images/icon_pixel.png" /> Creating Environments<a class="headerlink" href="#icon-creating-environments" title="Permalink to this headline">¶</a></h1>
@@ -324,7 +338,7 @@
     <span class="k">pass</span>
 </pre></div>
 </div>
-<p>Maps will be generated upon environment instantiation according the the provided config and cached at PATH_MAPS for reuse. If you are actively tweaking <a href="#id8"><span class="problematic" id="id9">TERRAIN_</span></a> generation parameters, remember to delete the old maps between runs or set FORCE_MAP_GENERATION=True.</p>
+<p>Maps will be generated upon environment instantiation according the the provided config and cached at PATH_MAPS for reuse. If you are actively tweaking <a href="#id9"><span class="problematic" id="id10">TERRAIN_</span></a> generation parameters, remember to delete the old maps between runs or set FORCE_MAP_GENERATION=True.</p>
 <p>Customize terrain generation and game balance by overriding preset and game system configuration parameters:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExampleCustomConfig</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Small</span><span class="p">,</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Resource</span><span class="p">,</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Progression</span><span class="p">):</span>
     <span class="c1"># Example core config customization</span>
@@ -357,10 +371,10 @@
 <section id="icon-rendering-and-overlays">
 <h1><img alt="icon" src="../_images/icon_pixel.png" /> Rendering and Overlays<a class="headerlink" href="#icon-rendering-and-overlays" title="Permalink to this headline">¶</a></h1>
 <p>Your first call to env.render() will open a WebSocket server. Open the executable for your platform in client/UnityClient or, if you are on Unix, use the provided environment/client.sh script. You should see connection printouts and, after a few seconds, the map should render in the client (note that large maps require a good workstation).</p>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id7">
 <img alt="../_images/ui.png" src="../_images/ui.png" />
 <figcaption>
-<p><span class="caption-text">You should see this view once the map loads</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">You should see this view once the map loads</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>The on-screen instructions demonstrate how to pan and zoom in the environment. You can also click on agents to examine their skill levels. The in-game console (which you can toggle with the tilde key) give you access to a number of overlays.</p>
@@ -369,36 +383,176 @@
 <p>See the User API for details on how to write your own overlays.</p>
 <p>The server will take a few seconds to load the pretrained policy and connect to the client.</p>
 </section>
-<section id="icon-defining-rewards-and-tasks">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Defining Rewards and Tasks<a class="headerlink" href="#icon-defining-rewards-and-tasks" title="Permalink to this headline">¶</a></h1>
-<p>By default, Neural MMO provides a reward signal of -1 for dying and 0 for everything else. You may override this reward function and have full access to game and player state in doing so. For example, to add an additional reward signal of 1 per player defeated:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nmmo</span> <span class="kn">import</span> <span class="n">Env</span>
+<section id="icon-demos">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Demos<a class="headerlink" href="#icon-demos" title="Permalink to this headline">¶</a></h1>
+<p>The baselines repository includes a number of runnable examples documented below</p>
+<section id="minimal-example">
+<h2>Minimal Example<a class="headerlink" href="#minimal-example" title="Permalink to this headline">¶</a></h2>
+<p>Simulates and renders a small environment inhabited by scripted agents. This example should be self-explanatory to those familiar with the standard OpenAI gym interface – with a few exceptions. First, the environment itself computes actions for scripted agents. This is to enable easier usage with RLlib and will likely change once RLlib provides better support for scripted models. Second, the env.terminal() function returns additional logging information about the simulation. This will be explored in later examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Documented at neuralmmo.github.io&#39;&#39;&#39;</span>
 
-<span class="k">class</span> <span class="nc">PlayerKillRewardEnv</span><span class="p">(</span><span class="n">Env</span><span class="p">):</span>
+<span class="kn">from</span> <span class="nn">pdb</span> <span class="kn">import</span> <span class="n">set_trace</span> <span class="k">as</span> <span class="n">T</span>
+
+<span class="kn">import</span> <span class="nn">nmmo</span>
+
+<span class="kn">from</span> <span class="nn">scripted</span> <span class="kn">import</span> <span class="n">baselines</span>
+
+
+<span class="k">def</span> <span class="nf">simulate</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">render</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">horizon</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)):</span>
+    <span class="sd">&#39;&#39;&#39;Simulate an environment for a fixed horizon&#39;&#39;&#39;</span>
+    <span class="n">env</span> <span class="o">=</span> <span class="n">env</span><span class="p">(</span><span class="n">config</span><span class="p">())</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">render</span><span class="p">:</span>
+            <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+
+        <span class="c1"># Scripted API computes actions</span>
+        <span class="n">obs</span><span class="p">,</span> <span class="n">rewards</span><span class="p">,</span> <span class="n">dones</span><span class="p">,</span> <span class="n">infos</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">actions</span><span class="o">=</span><span class="p">{})</span>
+
+        <span class="c1"># Later examples will use a fixed horizon</span>
+        <span class="n">t</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;=</span> <span class="n">horizon</span><span class="p">:</span>
+            <span class="k">break</span>
+
+    <span class="c1"># Called at the end of simulation to obtain logs</span>
+    <span class="k">return</span> <span class="n">env</span><span class="o">.</span><span class="n">terminal</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Small</span><span class="p">,</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">AllGameSystems</span><span class="p">):</span>
+    <span class="c1"># Agents will be instantiated using these templates</span>
+    <span class="n">AGENTS</span>    <span class="o">=</span> <span class="p">[</span><span class="n">baselines</span><span class="o">.</span><span class="n">Meander</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Forage</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Combat</span><span class="p">]</span>
+
+    <span class="c1">#Set a unique path for demo maps</span>
+    <span class="n">PATH_MAPS</span> <span class="o">=</span> <span class="s1">&#39;maps/demos&#39;</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">simulate</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">Env</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">render</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Run the example script from /baselines:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">minimal</span>
+</pre></div>
+</div>
+<p>Open the client executable for your platform (downloaded separately as per setup) to render the environment.</p>
+<figure class="align-default">
+<img alt="resource/demos/minimal.png" src="resource/demos/minimal.png" />
+</figure>
+<p>This is the only example for which we will show boilerplate code. The full source for all examples is available in /baselines/demos</p>
+</section>
+<section id="rewards-tasks">
+<h2>Rewards &amp; Tasks<a class="headerlink" href="#rewards-tasks" title="Permalink to this headline">¶</a></h2>
+<p>By default, Neural MMO provides a reward signal of -1 for dying and 0 for everything else. You may override this reward function and have full access to game and player state in doing so. For example, to add an additional reward signal of 0.1 per player defeated:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PlayerKillRewardEnv</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">Env</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Assigns a reward of 0.1 per player defeated and the default -1 reward for dying&#39;&#39;&#39;</span>
     <span class="k">def</span> <span class="nf">reward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+        <span class="n">reward</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">reward</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="s1">&#39;kills&#39;</span><span class="p">):</span>
             <span class="n">player</span><span class="o">.</span><span class="n">kills</span> <span class="o">=</span> <span class="mi">0</span>
 
         <span class="n">kills</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">playerKills</span>
         <span class="k">if</span> <span class="n">kills</span> <span class="o">&gt;</span> <span class="n">player</span><span class="o">.</span><span class="n">kills</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">kills</span> <span class="o">-</span> <span class="n">player</span><span class="o">.</span><span class="n">kills</span>
-            <span class="n">player</span><span class="o">.</span><span class="n">kills</span> <span class="o">=</span> <span class="n">kills</span>
+            <span class="n">reward</span> <span class="o">+=</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="p">(</span><span class="n">kills</span> <span class="o">-</span> <span class="n">player</span><span class="o">.</span><span class="n">kills</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">reward</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">reward</span><span class="p">,</span> <span class="n">info</span>
 </pre></div>
 </div>
 <p>One drawback of such definitions is the potential for reward farming. For example, agents may learn to do nothing but fight other weaker agents, completely ignoring other interesting elements of the environment. At the same time, combat could be difficult to learn without a dedicated signal. Our task API resolves this problem by enabling you to set fixed milestones instead of repeatedly farmable rewards:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nmmo</span> <span class="kn">import</span> <span class="n">Task</span>
-
-<span class="k">def</span> <span class="nf">player_kills</span><span class="p">(</span><span class="n">realm</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">player_kills</span><span class="p">(</span><span class="n">realm</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Total number of players defeated&#39;&#39;&#39;</span>
     <span class="k">return</span> <span class="n">player</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">playerKills</span>
-
-<span class="k">class</span> <span class="nc">ExampleCustomConfig</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Default</span><span class="p">):</span>
-    <span class="n">TASKS</span> <span class="o">=</span> <span class="p">[</span><span class="n">Task</span><span class="p">(</span><span class="n">player_kills</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">reward</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">Task</span><span class="p">(</span><span class="n">player_kills</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">reward</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span>
 </pre></div>
 </div>
-<p>Agents will now receive a reward of 1 for defeating one and five players – a strong incentive to score a kill and a weaker incentive to continue down the path of combat, which must then be balanced against other competing incentives. This reward will be added to the reward() method and also to the infos dict returned by step() for use with methods requiring per-task information.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PlayerKillTaskConfig</span><span class="p">(</span><span class="n">minimal</span><span class="o">.</span><span class="n">Config</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Assign reward 1 for the first and third kills&#39;&#39;&#39;</span>
+    <span class="n">TASKS</span>  <span class="o">=</span> <span class="p">[</span><span class="n">Task</span><span class="p">(</span><span class="n">player_kills</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">reward</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="n">Task</span><span class="p">(</span><span class="n">player_kills</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">reward</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span>
+    <span class="n">AGENTS</span> <span class="o">=</span> <span class="p">[</span><span class="n">baselines</span><span class="o">.</span><span class="n">Combat</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Agents will now receive a reward of 2 for defeating one and three players – a strong incentive to score a kill and a weaker incentive to continue down the path of combat, which must then be balanced against other competing incentives. This reward will be added to the reward() method and also to the infos dict returned by step() for use with methods requiring per-task information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">rewards_and_tasks</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Task Reward: 0.531, Tasks Complete: 0.266
+</pre></div>
+</div>
 <p>Note that this API is considered somewhat of an advanced feature – it provides access to full game state and requires users to peruse the associated source code to take full advantage.</p>
+</section>
+<section id="skill-rating">
+<h2>Skill Rating<a class="headerlink" href="#skill-rating" title="Permalink to this headline">¶</a></h2>
+<p>Absolute reward is a poor metric of performance in open-ended multiagent settings because environment difficulty is dependent on the skill of other agents. Skill ranking algorithms allow us to instead compute the relative performance of different policies within the same shared world.</p>
+<p>OpenSkill wrapper for estimating rank from a series of scores from different policies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rank</span><span class="p">(</span><span class="n">policy_ids</span><span class="p">,</span> <span class="n">scores</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Compute policy rankings from per-agent scores&#39;&#39;&#39;</span>
+    <span class="n">agents</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">policy_id</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">policy_ids</span><span class="p">,</span> <span class="n">scores</span><span class="p">):</span>
+        <span class="n">agents</span><span class="p">[</span><span class="n">policy_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span> <span class="o">+</span> <span class="mf">1e-8</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">())</span>
+
+    <span class="c1"># Double argsort returns ranks</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span>
+                    <span class="p">[</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="k">for</span> <span class="n">policy</span><span class="p">,</span> <span class="n">vals</span> <span class="ow">in</span> 
+                    <span class="nb">sorted</span><span class="p">(</span><span class="n">agents</span><span class="o">.</span><span class="n">items</span><span class="p">())]))</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">OpenSkillRating</span><span class="p">:</span>
+    <span class="sd">&#39;&#39;&#39;Rating wrapper&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">100</span><span class="o">/</span><span class="mi">3</span><span class="p">):</span>
+        <span class="c1"># 95% win chance against 2*sigma lower SR</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ratings</span> <span class="o">=</span> <span class="p">{</span><span class="n">agent</span><span class="o">.</span><span class="vm">__name__</span><span class="p">:</span> <span class="n">openskill</span><span class="o">.</span><span class="n">Rating</span><span class="p">(</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">agent</span> <span class="ow">in</span> <span class="n">Config</span><span class="o">.</span><span class="n">AGENTS</span><span class="p">}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mu</span>    <span class="o">=</span> <span class="n">mu</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span> <span class="o">=</span> <span class="n">sigma</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">anchor</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ranks</span><span class="p">):</span>
+        <span class="n">teams</span> <span class="o">=</span> <span class="p">[[</span><span class="n">e</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ratings</span><span class="o">.</span><span class="n">values</span><span class="p">())]</span>
+        <span class="n">ratings</span> <span class="o">=</span> <span class="n">openskill</span><span class="o">.</span><span class="n">rate</span><span class="p">(</span><span class="n">teams</span><span class="p">,</span> <span class="n">rank</span><span class="o">=</span><span class="n">ranks</span><span class="p">)</span>
+        <span class="n">ratings</span> <span class="o">=</span> <span class="p">[</span><span class="n">openskill</span><span class="o">.</span><span class="n">create_rating</span><span class="p">(</span><span class="n">team</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">team</span> <span class="ow">in</span> <span class="n">ratings</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">agent_name</span><span class="p">,</span> <span class="n">rating</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ratings</span><span class="p">,</span> <span class="n">ratings</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ratings</span><span class="p">[</span><span class="n">agent_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">rating</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">anchor</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">anchor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="s1">&#39;Meander&#39;</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">agent_name</span><span class="p">,</span> <span class="n">rating</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ratings</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">rating</span><span class="o">.</span><span class="n">sigma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span>
+            <span class="k">if</span> <span class="n">agent_name</span> <span class="o">==</span> <span class="n">anchor</span><span class="p">:</span>
+                <span class="n">rating</span><span class="o">.</span><span class="n">mu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mu</span>
+                <span class="n">rating</span><span class="o">.</span><span class="n">sigma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span>
+</pre></div>
+</div>
+<p>The results of each environment simulation are treated as a single game, and several are required to obtain reasonable skill rating estimates. We therefore include a quick ray wrapper for running several environments in parallel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">parallel_simulations</span><span class="p">(</span><span class="n">cores</span><span class="p">,</span> <span class="n">horizon</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Simulate environments in parallel and compute skill ratings&#39;&#39;&#39;</span>
+    <span class="n">nmmo</span><span class="o">.</span><span class="n">MapGenerator</span><span class="p">(</span><span class="n">Config</span><span class="p">())</span><span class="o">.</span><span class="n">generate_all_maps</span><span class="p">()</span>
+
+    <span class="c1"># Parallel sim using base ray</span>
+    <span class="n">all_stats</span> <span class="o">=</span> <span class="n">ray</span><span class="o">.</span><span class="n">get</span><span class="p">([</span>
+            <span class="n">ray</span><span class="o">.</span><span class="n">remote</span><span class="p">(</span><span class="n">minimal</span><span class="o">.</span><span class="n">simulate</span><span class="p">)</span><span class="o">.</span><span class="n">remote</span><span class="p">(</span>
+                    <span class="n">nmmo</span><span class="o">.</span><span class="n">Env</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">horizon</span><span class="o">=</span><span class="n">horizon</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cores</span><span class="p">)])</span>
+
+    <span class="k">for</span> <span class="n">stats</span> <span class="ow">in</span> <span class="n">all_stats</span><span class="p">:</span>
+        <span class="n">stats</span>      <span class="o">=</span> <span class="n">stats</span><span class="p">[</span><span class="s1">&#39;Stats&#39;</span><span class="p">]</span>
+        <span class="n">ranks</span>      <span class="o">=</span> <span class="n">rank</span><span class="p">(</span><span class="n">stats</span><span class="p">[</span><span class="s1">&#39;PolicyID&#39;</span><span class="p">],</span> <span class="n">stats</span><span class="p">[</span><span class="s1">&#39;Task_Reward&#39;</span><span class="p">])</span>
+        <span class="n">sr</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ranks</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="n">sr</span><span class="o">.</span><span class="n">ratings</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We use a larger scale config to more closely match the baseline setting:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Default</span><span class="p">):</span>
+    <span class="n">AGENTS</span> <span class="o">=</span> <span class="p">[</span><span class="n">baselines</span><span class="o">.</span><span class="n">Meander</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Forage</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Combat</span><span class="p">]</span>
+    <span class="n">TASKS</span>  <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">All</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="icon-scripting-and-classic-ai">
 <h1><img alt="icon" src="../_images/icon_pixel.png" /> Scripting and Classic AI<a class="headerlink" href="#icon-scripting-and-classic-ai" title="Permalink to this headline">¶</a></h1>
@@ -454,8 +608,8 @@ COMMANDS
 </section>
 <section id="reevaluating-reproducing-the-baseline">
 <h2>Reevaluating/Reproducing the Baseline<a class="headerlink" href="#reevaluating-reproducing-the-baseline" title="Permalink to this headline">¶</a></h2>
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">Training and evaluation through Ray Tune with WanDB logging</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Training and evaluation through Ray Tune with WanDB logging</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">evaluate</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">baselines</span><span class="o">.</span><span class="n">Medium</span> <span class="o">--</span><span class="n">scale</span><span class="o">=</span><span class="n">Baseline</span>
 <span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">train</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">baselines</span><span class="o">.</span><span class="n">Medium</span> <span class="o">--</span><span class="n">scale</span><span class="o">=</span><span class="n">Baseline</span> <span class="o">--</span><span class="n">RESTORE</span><span class="o">=</span><span class="kc">None</span>
 

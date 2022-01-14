@@ -33,6 +33,8 @@
 |icon| Presentations
 ####################
 
+`[Slides] <https://docs.google.com/presentation/d/1CCYZNBWV6u_EW0h_NeL_BnJzBx_sMv--Q8P4TACM3Bs/edit?usp=sharing>`_ `Neural MMO: Building a Massively Multiagent Research Platform with Ray and RLlib <https://www.youtube.com/watch?v=9V6EvSEMREg>`_ (Ray Summit 2021, Online) (v1.5)
+
 `[Slides] <https://docs.google.com/presentation/d/1HYdoe3btw1USWaufBO1yuqFIOg-XW8E2wX0vZal0LtY/edit?usp=sharing>`_ `Neural MMO: A Saga in Deep Reinforcement Learning <https://www.twitch.tv/videos/900545247?t=03h03m06s>`_ (English Week 2021, IUT Vannes) (v1.5)
 
 `Neural MMO v1.3: A Massively Multiagent Game Environment for Training and Evaluating Neural Networks <https://underline.io/lecture/167-neural-mmo-v1.3-a-massively-multiagent-game-environment-for-training-and-evaluating-neural-networks>`_ (AAMAS 2020)

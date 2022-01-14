@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo package &mdash; Neural MMO 1.5.3.5 documentation</title>
+  <title>nmmo package &mdash; Neural MMO 1.5.3.7 documentation</title>
   
 
   
@@ -94,7 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-installation"> Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-creating-environments"> Creating Environments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-defining-rewards-and-tasks"> Defining Rewards and Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-demos"> Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-scripting-and-classic-ai"> Scripting and Classic AI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-baselines"> Baselines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#evaluation-methods">Evaluation Methods</a></li>
@@ -601,6 +601,41 @@ centralized training decentralized execution methods like QMIX</p>
 <dt class="sig sig-object py" id="nmmo.Agent.name">
 <span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Neural_'</span></em><a class="headerlink" href="#nmmo.Agent.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.MapGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">MapGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.MapGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Procedural map generation</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.MapGenerator.loadTextures">
+<span class="sig-name descname"><span class="pre">loadTextures</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.MapGenerator.loadTextures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called during setup; loads and resizes tile pngs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.MapGenerator.generate_all_maps">
+<span class="sig-name descname"><span class="pre">generate_all_maps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.MapGenerator.generate_all_maps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates NMAPS maps according to generate_map</p>
+<p>Provides additional utilities for saving to .npy and rendering png previews</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.MapGenerator.generate_map">
+<span class="sig-name descname"><span class="pre">generate_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.MapGenerator.generate_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a single map</p>
+<p>The default method is a relatively complex multiscale perlin noise method.
+This is not just standard multioctave noise – we are seeding multioctave noise
+itself with perlin noise to create localized deviations in scale, plus additional
+biasing to decrease terrain frequency towards the center of the map</p>
+<p>We found that this creates more visually interesting terrain and more deviation in
+required planning horizon across different parts of the map. This is by no means a
+gold-standard: you are free to override this method and create customized terrain
+generation more suitable for your application. Simply pass MAP_GENERATOR=YourMapGenClass
+as a config argument.</p>
+</dd></dl>
 
 </dd></dl>
 
