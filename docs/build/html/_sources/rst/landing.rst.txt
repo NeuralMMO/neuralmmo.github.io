@@ -77,11 +77,11 @@ Official support: Ubuntu 20.04, WSL, and MacOS. Tested with Anaconda Python 3.9
    pip install nmmo[rllib]
    
    # Clone baselines repository. Optional but recommended: setup WanDB integration.
-   git clone --depth=1 https://github.com/neuralmmo/baselines nmmo-baselines
+   git clone https://github.com/neuralmmo/baselines nmmo-baselines
    echo YOUR_WANDB_API_KEY > nmmo-baselines/wandb_api_key
 
    #Run a quick demo (download client below)
-   python main.py render #--NUM_GPUS=0 if no CUDA
+   python -m demos.minimal
 
 Download the latest client `here <https://github.com/neuralmmo/client/releases>`_ (WSL users: do this on your Windows host). Start the demo and run the executable for your platform in client/UnityClient/. After a few seconds, the demo console will show a connection message and the client will load the map. The on-screen instructions demonstrate how to pan and zoom. You can also click on agents to examine their skill levels. The in-game console (which you can toggle with tab) gives you access to a number of overlay visualiztions.
 
@@ -97,21 +97,18 @@ You can also install headless or entirely from source (WanDB setup and RLlib pat
    :caption: Headless setup for training
 
    pip install nmmo[rllib]
-   git clone --depth=1 https://github.com/neuralmmo/baselines nmmo-baselines
+   git clone https://github.com/neuralmmo/baselines nmmo-baselines
  
 .. code-block:: python
-   :caption: Setup from source for developers
+   :caption: Setup from source for developers (slow without --depth=1)
 
    mkdir neural-mmo && cd neural-mmo
 
-   git clone --depth=1 https://github.com/neuralmmo/environment
-   git clone --depth=1 https://github.com/neuralmmo/baselines
-   git clone --depth=1 https://github.com/neuralmmo/client
+   git clone https://github.com/neuralmmo/environment
+   git clone https://github.com/neuralmmo/baselines
+   git clone https://github.com/neuralmmo/client
    
    cd environment && pip install -e .[all]
-
-   python main.py render
-   ./client.sh
 
 |icon| Gallary
 ##############
