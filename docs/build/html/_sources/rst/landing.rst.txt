@@ -113,19 +113,10 @@ You can also install headless or entirely from source (WanDB setup and RLlib pat
 |icon| Gallary
 ##############
 
-Multiscale Terrain Generation
-*****************************
+Perspective and UI
+******************
 
-.. figure:: /resource/image/large_map.png
-
-|
-
-Renderer and UI
-***************
-
-.. figure:: /resource/image/stats.png
-
-.. figure:: /resource/image/rendered_map.png
+.. figure:: /resource/image/minimal.png
 
 | 
 
@@ -133,6 +124,20 @@ Overlays
 ********
 
 .. figure:: /resource/image/overlays.png
+
+| 
+
+Multiscale Terrain Generation
+*****************************
+
+.. figure:: /resource/image/large_map.png
+
+|
+
+Overhead Render
+***************
+
+.. figure:: /resource/image/rendered_map.png
 
 | 
 
