@@ -106,9 +106,10 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-rewards-tasks"> Rewards &amp; Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-skill-rating"> Skill Rating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-terrain-generation"> Terrain Generation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-training"> Training</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#baseline">Baseline</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
@@ -290,6 +291,10 @@
     <span class="c1">#Set a unique path for demo maps</span>
     <span class="n">PATH_MAPS</span> <span class="o">=</span> <span class="s1">&#39;maps/demos&#39;</span>
 
+    <span class="c1">#Force terrain generation -- avoids unexpected behavior from caching</span>
+    <span class="n">FORCE_MAP_GENERATION</span> <span class="o">=</span> <span class="kc">True</span>
+
+
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">simulate</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">Env</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">render</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -301,8 +306,11 @@
 </div>
 <p>Open the client executable for your platform (downloaded separately as per setup) to render the environment.</p>
 <figure class="align-default">
-<img alt="resource/demos/minimal.png" src="resource/demos/minimal.png" />
+<img alt="../_images/minimal.png" src="../_images/minimal.png" />
 </figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>This is the only example for which we will show boilerplate code. The full source for all examples is available in /baselines/demos</p>
 </section>
 <section id="icon-config-classes">
@@ -354,6 +362,55 @@
 <div class="toctree-wrapper compound">
 </div>
 <p>As an example, we implement a simple scripted agent that jumps into lava upon spawning:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">LavaAgent</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">Agent</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Likes to jump in lava&#39;&#39;&#39;</span>
+
+    <span class="c1"># Color of rendered agents</span>
+    <span class="n">color</span>    <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">Neon</span><span class="o">.</span><span class="n">RED</span>
+
+    <span class="c1"># Required flag indicates scripted/neural</span>
+    <span class="n">scripted</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obs</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Override __call__ to specify agent behavior&#39;&#39;&#39;</span>
+
+        <span class="c1"># Wrapper that extracts data from tensorized obs</span>
+        <span class="n">ob</span>    <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">scripting</span><span class="o">.</span><span class="n">Observation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="n">obs</span><span class="p">)</span>
+
+        <span class="c1"># Vector representation of the current agent</span>
+        <span class="n">agent</span> <span class="o">=</span> <span class="n">ob</span><span class="o">.</span><span class="n">agent</span>
+
+        <span class="c1"># Static fn extracts attributes from vector objects</span>
+        <span class="n">attribute</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">scripting</span><span class="o">.</span><span class="n">Observation</span><span class="o">.</span><span class="n">attribute</span>
+
+        <span class="n">Tile</span>      <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Serialized</span><span class="o">.</span><span class="n">Tile</span>
+        <span class="n">lava</span>      <span class="o">=</span> <span class="n">material</span><span class="o">.</span><span class="n">Lava</span><span class="o">.</span><span class="n">index</span>
+
+        <span class="c1"># ob.tile: extract single tile from observation</span>
+        <span class="c1"># attribute: extract Index attribute from vector</span>
+        <span class="n">direction</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">attribute</span><span class="p">(</span><span class="n">ob</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Tile</span><span class="o">.</span><span class="n">Index</span><span class="p">)</span> <span class="o">==</span> <span class="n">lava</span><span class="p">:</span>
+            <span class="n">direction</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">North</span>
+
+        <span class="k">if</span> <span class="n">attribute</span><span class="p">(</span><span class="n">ob</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Tile</span><span class="o">.</span><span class="n">Index</span><span class="p">)</span> <span class="o">==</span> <span class="n">lava</span><span class="p">:</span>
+            <span class="n">direction</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">South</span>
+
+        <span class="k">if</span> <span class="n">attribute</span><span class="p">(</span><span class="n">ob</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Tile</span><span class="o">.</span><span class="n">Index</span><span class="p">)</span> <span class="o">==</span> <span class="n">lava</span><span class="p">:</span>
+            <span class="n">direction</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">East</span>
+
+        <span class="k">if</span> <span class="n">attribute</span><span class="p">(</span><span class="n">ob</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">Tile</span><span class="o">.</span><span class="n">Index</span><span class="p">)</span> <span class="o">==</span> <span class="n">lava</span><span class="p">:</span>
+            <span class="n">direction</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">West</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">direction</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{}</span>
+
+        <span class="c1"># Actions and arg names specified in nmmo.action</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Move</span><span class="p">:</span> <span class="p">{</span><span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Direction</span><span class="p">:</span> <span class="n">direction</span><span class="p">}}</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">scripted</span>
+</pre></div>
+</div>
 <p>We will occasionally modify the set of available attributes. In these instances, we will publish upgrade scripts upon request. We will provide individual guidance via Discord in cases where larger changes are needed.</p>
 </section>
 <section id="icon-rewards-tasks">
@@ -423,7 +480,7 @@
             <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cores</span><span class="p">)])</span>
 
     <span class="c1"># NMMO OpenSkill wrapper for computing SR</span>
-    <span class="n">sr</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">OpenSkillRating</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">AGENTS</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">baselines</span><span class="o">.</span><span class="n">Meander</span><span class="p">)</span>
+    <span class="n">sr</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">OpenSkillRating</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">AGENTS</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">baselines</span><span class="o">.</span><span class="n">Combat</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">stats</span> <span class="ow">in</span> <span class="n">all_stats</span><span class="p">:</span>
         <span class="n">stats</span> <span class="o">=</span> <span class="n">stats</span><span class="p">[</span><span class="s1">&#39;Stats&#39;</span><span class="p">]</span>
 
@@ -449,29 +506,88 @@
     <span class="n">PATH_MAPS</span> <span class="o">=</span> <span class="s1">&#39;maps/medium/evaluation/&#39;</span>
 </pre></div>
 </div>
-<p>A difference of 100 SR implies 99.7 percent confidence that the given policy is better than the opponent. Within around 20 simulations, the skill rating estimate is confident that the Combat policy is better than the Forage policy.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">3.1827</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">12.730</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">6.3592</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">24.626</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">9.5378</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">35.717</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">12.716</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">46.050</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">15.887</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">55.679</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">19.037</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">64.664</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">22.155</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">73.066</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">25.229</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">80.941</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">28.249</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">88.340</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">31.207</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">95.313</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">34.098</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">101.90</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">36.917</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">108.14</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">39.661</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">114.06</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">42.330</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">119.70</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">44.922</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">125.08</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">47.439</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">130.23</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">49.882</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">135.15</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">52.252</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">139.88</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">54.552</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">144.42</span>
-<span class="n">Meander</span><span class="p">:</span> <span class="mf">1e-09</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">56.784</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mf">148.79</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">evaluate_sr</span>
 </pre></div>
 </div>
+<p>A difference of 100 SR implies 99.7 percent confidence that the given policy is better than the opponent. By default, evaluation anchors Combat to 1500 SR as a baseline. Within around 10 simulations, the skill rating estimate is confident that the Forage baseline is better than the Meander baseline.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Meander</span><span class="p">:</span> <span class="mf">990.44</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">1009.5</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="n">Meander</span><span class="p">:</span> <span class="mf">982.45</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">1017.5</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="n">Meander</span><span class="p">:</span> <span class="mf">975.69</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">1024.2</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="n">Meander</span><span class="p">:</span> <span class="mf">969.91</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">1030.0</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="n">Meander</span><span class="p">:</span> <span class="mf">964.90</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">1035.0</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="n">Meander</span><span class="p">:</span> <span class="mf">960.49</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">1039.4</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="n">Meander</span><span class="p">:</span> <span class="mf">956.58</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">1043.3</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="n">Meander</span><span class="p">:</span> <span class="mf">953.07</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">1046.8</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="n">Meander</span><span class="p">:</span> <span class="mf">949.89</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">1050.0</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="n">Meander</span><span class="p">:</span> <span class="mf">946.99</span>   <span class="n">Forage</span><span class="p">:</span> <span class="mf">1052.9</span>   <span class="n">Combat</span><span class="p">:</span> <span class="mi">1500</span>
+</pre></div>
+</div>
+</section>
+<section id="icon-terrain-generation">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Terrain Generation<a class="headerlink" href="#icon-terrain-generation" title="Permalink to this headline">¶</a></h1>
+<p>Neural MMO provides a config hook for custom terrain generaton. Override the base class and single-map generation method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CustomMapGenerator</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">MapGenerator</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Subclass the base NMMO Map Generator&#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">generate_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Override the default per-map generation method&#39;&#39;&#39;</span>
+        <span class="n">config</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span>
+        <span class="n">size</span>    <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">TERRAIN_SIZE</span>
+
+        <span class="c1"># Create fractal and material placeholders</span>
+        <span class="n">fractal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span> <span class="c1">#Unused in demo</span>
+        <span class="n">matl</span>    <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+                <span class="n">linf</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">size</span><span class="o">//</span><span class="mi">2</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">size</span> <span class="o">//</span> <span class="mi">2</span><span class="p">))</span>
+
+                <span class="c1"># Set per-tile materials</span>
+                <span class="k">if</span> <span class="n">linf</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+                    <span class="n">matl</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Terrain</span><span class="o">.</span><span class="n">STONE</span>
+                <span class="k">elif</span> <span class="n">linf</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">:</span>
+                    <span class="n">matl</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Terrain</span><span class="o">.</span><span class="n">WATER</span>
+                <span class="k">elif</span> <span class="n">linf</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
+                    <span class="n">matl</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Terrain</span><span class="o">.</span><span class="n">FOREST</span>
+                <span class="k">elif</span> <span class="n">linf</span> <span class="o">&lt;=</span> <span class="n">size</span><span class="o">//</span><span class="mi">2</span> <span class="o">-</span> <span class="n">config</span><span class="o">.</span><span class="n">TERRAIN_BORDER</span><span class="p">:</span>
+                    <span class="n">matl</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Terrain</span><span class="o">.</span><span class="n">GRASS</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">matl</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Terrain</span><span class="o">.</span><span class="n">LAVA</span>
+
+        <span class="c1"># Return signature includes fractal and material</span>
+        <span class="c1"># Pass a zero array if fractal is not relevant</span>
+        <span class="k">return</span> <span class="n">fractal</span><span class="p">,</span> <span class="n">matl</span>
+</pre></div>
+</div>
+<p>Note that the nmmo.Terrain class is populated with materials at runtime – these properties are not available before instantiating a map generator. Finally, set the MAP_GENERATOR property to your custom class and run the demo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CustomTerrainGeneration</span><span class="p">(</span><span class="n">minimal</span><span class="o">.</span><span class="n">Config</span><span class="p">):</span>
+    <span class="c1"># Enable custom generator</span>
+    <span class="n">MAP_GENERATOR</span>         <span class="o">=</span> <span class="n">CustomMapGenerator</span>
+
+    <span class="c1"># Render preview to maps/custom</span>
+    <span class="n">GENERATE_MAP_PREVIEWS</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>Run the demo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">terrain_generation</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../_images/custom_map.png" src="../_images/custom_map.png" />
+</figure>
+<p>Note that the PNG preview generator crops TERRAIN_BORDER tiles by default to omit the lava border.</p>
+<figure class="align-default">
+<img alt="../_images/custom_map_render.png" src="../_images/custom_map_render.png" />
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="simple">
+<dt><strong>Common Bugs</strong></dt><dd><ul class="simple">
+<li><p>Ensure that generated maps contain a TERRAIN_BORDER wide lava border. This is used to pad agent observations.</p></li>
+<li><p>The spawn area must be unobstructed. Making the lava border too wide (e.g. off-by-one) will obstruct all spawn tiles.</p></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section id="icon-rendering-and-overlays">
 <h1><img alt="icon" src="../_images/icon_pixel.png" /> Rendering and Overlays<a class="headerlink" href="#icon-rendering-and-overlays" title="Permalink to this headline">¶</a></h1>
@@ -505,7 +621,16 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">overlays</span><span class="p">[</span><span class="s1">&#39;lifetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Lifetime</span>
 </pre></div>
 </div>
-<p>The overlay will be provided to the client automatically and available using the specified “lifetime” registry name. In this example, green regions correspond to areas traversed by longer-lived agents and could help indicate the quality of local resource distributions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">overlays</span>
+</pre></div>
+</div>
+<p>The overlay will be provided to the client automatically and available using the specified “lifetime” console command. In this example, green regions correspond to areas traversed by longer-lived agents and could help indicate the quality of local resource distributions.</p>
+<figure class="align-default">
+<img alt="../_images/custom_overlay.png" src="../_images/custom_overlay.png" />
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>The client includes some default overlays, such as counts/exploration, which is computed by splatting the agent’s current position to the map. You can do more impressive things with a bit more compute. For example, the baselines repository provide the tileValues and entityValues overlays, which simulate an agent on every tile and computes the value function with respect to local tiles/entities. Note that overlays making use of network internals are not defined for scripted models.</p>
 </section>
 <section id="icon-training">
@@ -550,27 +675,23 @@
 </pre></div>
 </div>
 <p>This demo also provides scripted baseline evaluations</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">training</span> <span class="n">baselines</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">training</span> <span class="n">baselines</span>
 </pre></div>
 </div>
-</div></blockquote>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Average Scripted Forage Lifetime: 73.78125
 Average Scripted Meander Lifetime: 34.125
 Note that these are noisy estimates on one env
 </pre></div>
 </div>
 <p>Train from scratch:</p>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">training</span> <span class="n">neural</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">training</span> <span class="n">neural</span>
 </pre></div>
 </div>
-</div></blockquote>
 <p>We strongly recommend setting up WanDB as per the installation guide, as it will allow you to monitor training. Compare your results to ours in this <a class="reference external" href="https://github.com/neuralmmo">notebook</a>.</p>
 </section>
-<section id="next-steps">
-<h1>Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h1>
-<p>If you’ve made it this far, you’re ready to use the platform in your own research. Join the Discord for support and consider our open call for research if applicable. We also recommend checking out the baselines to get an idea of what has been done so far.</p>
+<section id="baseline">
+<h1>Baseline<a class="headerlink" href="#baseline" title="Permalink to this headline">¶</a></h1>
+<p>If you’ve made it this far, you’re ready to use the platform in your own research. Join the Discord for support and consider our open call for research if applicable. We also recommend checking out the <a class="reference external" href="https://wandb.ai/jsuarez/NeuralMMO/reportlist">baselines</a> to get an idea of what has been done so far.</p>
 </section>
 
 

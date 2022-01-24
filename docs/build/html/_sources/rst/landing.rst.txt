@@ -10,7 +10,7 @@
 ..
   **News:** We have released an open call for collaborations following several recent usability improvements and a successful pilot project
 
-**Quick links:** `Github <https://github.com/neuralmmo>`_ | `Discord <https://discord.gg/BkMmFUC>`_ | `Twitter <https://twitter.com/jsuarez5341>`_ | `NeurIPS 2021 Preprint <http://arxiv.org/abs/2110.07594>`_
+**Quick links:** `Github <https://github.com/neuralmmo>`_ | `Baselines <https://wandb.ai/jsuarez/NeuralMMO/reportlist>`_ | `NeurIPS 2021 Preprint <http://arxiv.org/abs/2110.07594>`_ | `Discord <https://discord.gg/BkMmFUC>`_ | `Twitter <https://twitter.com/jsuarez5341>`_
 
 |icon| Introduction
 ###################

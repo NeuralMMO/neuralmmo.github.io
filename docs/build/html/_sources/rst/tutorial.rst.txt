@@ -24,7 +24,9 @@ Run the example script from /baselines:
 
 Open the client executable for your platform (downloaded separately as per setup) to render the environment.
 
-.. figure:: /resource/demos/minimal.png
+.. figure:: /resource/image/minimal.png
+
+|
 
 This is the only example for which we will show boilerplate code. The full source for all examples is available in /baselines/demos
 
@@ -91,8 +93,12 @@ Neural MMO provides compact tensor observations that are difficult to integrate 
 
 As an example, we implement a simple scripted agent that jumps into lava upon spawning:
 
-.. literalinclude:: ../../../../baselines/demos/scripting.py
+.. literalinclude:: ../../../../baselines/demos/scripted.py
   :pyobject: LavaAgent
+
+.. code-block:: python
+
+   python -m demos.scripted
 
 We will occasionally modify the set of available attributes. In these instances, we will publish upgrade scripts upon request. We will provide individual guidance via Discord in cases where larger changes are needed. 
 
@@ -101,15 +107,15 @@ We will occasionally modify the set of available attributes. In these instances,
 
 By default, Neural MMO provides a reward signal of -1 for dying and 0 for everything else. You may override this reward function and have full access to game and player state in doing so. For example, to add an additional reward signal of 0.1 per player defeated:
 
-.. literalinclude:: ../../../../baselines/demos/rewards_and_tasks_api.py
+.. literalinclude:: ../../../../baselines/demos/rewards_and_tasks.py
   :pyobject: PlayerKillRewardEnv
 
 One drawback of such definitions is the potential for reward farming. For example, agents may learn to do nothing but fight other weaker agents, completely ignoring other interesting elements of the environment. At the same time, combat could be difficult to learn without a dedicated signal. Our task API resolves this problem by enabling you to set fixed milestones instead of repeatedly farmable rewards:
 
-.. literalinclude:: ../../../../baselines/demos/rewards_and_tasks_api.py
+.. literalinclude:: ../../../../baselines/demos/rewards_and_tasks.py
   :pyobject: player_kills
 
-.. literalinclude:: ../../../../baselines/demos/rewards_and_tasks_api.py
+.. literalinclude:: ../../../../baselines/demos/rewards_and_tasks.py
   :pyobject: PlayerKillTaskConfig
 
 Agents will now receive a reward of 2 for defeating one and three players -- a strong incentive to score a kill and a weaker incentive to continue down the path of combat, which must then be balanced against other competing incentives. This reward will be added to the reward() method and also to the infos dict returned by step() for use with methods requiring per-task information.
@@ -147,30 +153,55 @@ We use a larger scale config to more closely match the baseline setting:
 .. literalinclude:: ../../../../baselines/demos/evaluate_sr.py
   :pyobject: Config
 
-A difference of 100 SR implies 99.7 percent confidence that the given policy is better than the opponent. Within around 20 simulations, the skill rating estimate is confident that the Combat policy is better than the Forage policy.
+.. code-block:: python
+
+   python -m demos.evaluate_sr
+
+A difference of 100 SR implies 99.7 percent confidence that the given policy is better than the opponent. By default, evaluation anchors Combat to 1500 SR as a baseline. Within around 10 simulations, the skill rating estimate is confident that the Forage baseline is better than the Meander baseline.
 
 .. code-block:: python
 
-   Meander: 1e-09   Forage: 3.1827   Combat: 12.730
-   Meander: 1e-09   Forage: 6.3592   Combat: 24.626
-   Meander: 1e-09   Forage: 9.5378   Combat: 35.717
-   Meander: 1e-09   Forage: 12.716   Combat: 46.050
-   Meander: 1e-09   Forage: 15.887   Combat: 55.679
-   Meander: 1e-09   Forage: 19.037   Combat: 64.664
-   Meander: 1e-09   Forage: 22.155   Combat: 73.066
-   Meander: 1e-09   Forage: 25.229   Combat: 80.941
-   Meander: 1e-09   Forage: 28.249   Combat: 88.340
-   Meander: 1e-09   Forage: 31.207   Combat: 95.313
-   Meander: 1e-09   Forage: 34.098   Combat: 101.90
-   Meander: 1e-09   Forage: 36.917   Combat: 108.14
-   Meander: 1e-09   Forage: 39.661   Combat: 114.06
-   Meander: 1e-09   Forage: 42.330   Combat: 119.70
-   Meander: 1e-09   Forage: 44.922   Combat: 125.08
-   Meander: 1e-09   Forage: 47.439   Combat: 130.23
-   Meander: 1e-09   Forage: 49.882   Combat: 135.15
-   Meander: 1e-09   Forage: 52.252   Combat: 139.88
-   Meander: 1e-09   Forage: 54.552   Combat: 144.42
-   Meander: 1e-09   Forage: 56.784   Combat: 148.79
+   Meander: 990.44   Forage: 1009.5   Combat: 1500
+   Meander: 982.45   Forage: 1017.5   Combat: 1500
+   Meander: 975.69   Forage: 1024.2   Combat: 1500
+   Meander: 969.91   Forage: 1030.0   Combat: 1500
+   Meander: 964.90   Forage: 1035.0   Combat: 1500
+   Meander: 960.49   Forage: 1039.4   Combat: 1500
+   Meander: 956.58   Forage: 1043.3   Combat: 1500
+   Meander: 953.07   Forage: 1046.8   Combat: 1500
+   Meander: 949.89   Forage: 1050.0   Combat: 1500
+   Meander: 946.99   Forage: 1052.9   Combat: 1500
+
+|icon| Terrain Generation
+#########################
+
+Neural MMO provides a config hook for custom terrain generaton. Override the base class and single-map generation method:
+
+.. literalinclude:: ../../../../baselines/demos/terrain_generation.py
+  :pyobject: CustomMapGenerator
+
+Note that the nmmo.Terrain class is populated with materials at runtime -- these properties are not available before instantiating a map generator. Finally, set the MAP_GENERATOR property to your custom class and run the demo:
+
+.. literalinclude:: ../../../../baselines/demos/terrain_generation.py
+  :pyobject: CustomTerrainGeneration
+
+Run the demo:
+
+.. code-block:: python
+
+   python -m demos.terrain_generation
+
+.. figure:: /resource/image/custom_map.png
+
+Note that the PNG preview generator crops TERRAIN_BORDER tiles by default to omit the lava border.
+
+.. figure:: /resource/image/custom_map_render.png
+
+|
+
+**Common Bugs**
+  - Ensure that generated maps contain a TERRAIN_BORDER wide lava border. This is used to pad agent observations.
+  - The spawn area must be unobstructed. Making the lava border too wide (e.g. off-by-one) will obstruct all spawn tiles.
 
 |icon| Rendering and Overlays
 #############################
@@ -187,8 +218,16 @@ Include custom overlays by subclassing the environment as follows:
 
 .. literalinclude:: ../../../../baselines/demos/overlays.py
   :pyobject: LifetimeOverlayEnv
- 
-The overlay will be provided to the client automatically and available using the specified "lifetime" registry name. In this example, green regions correspond to areas traversed by longer-lived agents and could help indicate the quality of local resource distributions.
+
+.. code-block:: python
+
+   python -m demos.overlays
+
+The overlay will be provided to the client automatically and available using the specified "lifetime" console command. In this example, green regions correspond to areas traversed by longer-lived agents and could help indicate the quality of local resource distributions.
+
+.. figure:: /resource/image/custom_overlay.png
+
+|
 
 The client includes some default overlays, such as counts/exploration, which is computed by splatting the agent's current position to the map. You can do more impressive things with a bit more compute. For example, the baselines repository provide the tileValues and entityValues overlays, which simulate an agent on every tile and computes the value function with respect to local tiles/entities. Note that overlays making use of network internals are not defined for scripted models.
 
@@ -207,7 +246,7 @@ The environment config rewards agents for survival (-1 for death) and exploratio
 
 This demo also provides scripted baseline evaluations
 
- .. code-block:: python
+.. code-block:: python
 
    python -m demos.training baselines
 
@@ -219,14 +258,14 @@ This demo also provides scripted baseline evaluations
 
 Train from scratch:
 
- .. code-block:: python
+.. code-block:: python
 
    python -m demos.training neural
 
 We strongly recommend setting up WanDB as per the installation guide, as it will allow you to monitor training. Compare your results to ours in this `notebook <https://github.com/neuralmmo>`_.
 
-Next Steps
-##########
+Baseline
+########
 
-If you've made it this far, you're ready to use the platform in your own research. Join the Discord for support and consider our open call for research if applicable. We also recommend checking out the baselines to get an idea of what has been done so far.
+If you've made it this far, you're ready to use the platform in your own research. Join the Discord for support and consider our open call for research if applicable. We also recommend checking out the `baselines <https://wandb.ai/jsuarez/NeuralMMO/reportlist>`_ to get an idea of what has been done so far.
 
