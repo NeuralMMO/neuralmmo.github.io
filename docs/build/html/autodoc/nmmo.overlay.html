@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.overlay module &mdash; Neural MMO 1.5.3.7 documentation</title>
+  <title>nmmo.overlay module &mdash; Neural MMO 1.5.3.10 documentation</title>
   
 
   
@@ -90,14 +90,21 @@
             
               <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html"> Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-installation"> Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-creating-environments"> Creating Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-demos"> Demos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-scripting-and-classic-ai"> Scripting and Classic AI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-baselines"> Baselines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#evaluation-methods">Evaluation Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html"> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html#icon-installation"> Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html#icon-gallary"> Gallary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html#icon-call-for-collaborations"> Call for Collaborations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html"> Minimal Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-config-classes"> Config Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-scripted-api"> Scripted API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-rewards-tasks"> Rewards &amp; Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-skill-rating"> Skill Rating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-training"> Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#next-steps">Next Steps</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
@@ -130,7 +137,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Evaluation Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-evaluation-protocol"> Evaluation Protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-small-maps"> Small Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-large-maps"> Large Maps</a></li>
 </ul>
@@ -243,7 +251,7 @@
 <span id="nmmo-overlay-module"></span><h1>nmmo.overlay module<a class="headerlink" href="#module-nmmo.overlay" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.overlay.OverlayRegistry">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.overlay.</span></span><span class="sig-name descname"><span class="pre">OverlayRegistry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.OverlayRegistry" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.overlay.</span></span><span class="sig-name descname"><span class="pre">OverlayRegistry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.OverlayRegistry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Manager class for overlays</p>
 <dl class="field-list simple">
@@ -254,6 +262,11 @@
 </ul>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.overlay.OverlayRegistry.init">
+<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.OverlayRegistry.init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.overlay.OverlayRegistry.step">
 <span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.OverlayRegistry.step" title="Permalink to this definition">¶</a></dt>
@@ -273,7 +286,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.overlay.Overlay">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.overlay.</span></span><span class="sig-name descname"><span class="pre">Overlay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.Overlay" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.overlay.</span></span><span class="sig-name descname"><span class="pre">Overlay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.Overlay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Define a overlay for visualization in the client</p>
 <p>Overlays are color images of the same size as the game map.
@@ -308,7 +321,7 @@ can be used to gain insight about agent behaviors.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.overlay.Skills">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.overlay.</span></span><span class="sig-name descname"><span class="pre">Skills</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.Skills" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.overlay.</span></span><span class="sig-name descname"><span class="pre">Skills</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.Skills" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.overlay.Overlay" title="nmmo.overlay.Overlay"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.overlay.Overlay</span></code></a></p>
 <p>Indicates whether agents specialize in foraging or combat</p>
 <dl class="py method">
@@ -328,7 +341,7 @@ tiles as agents walk over them</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.overlay.Counts">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.overlay.</span></span><span class="sig-name descname"><span class="pre">Counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.Counts" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.overlay.</span></span><span class="sig-name descname"><span class="pre">Counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.Counts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.overlay.Overlay" title="nmmo.overlay.Overlay"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.overlay.Overlay</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -355,7 +368,7 @@ tiles as agents walk over them</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.overlay.Wilderness">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.overlay.</span></span><span class="sig-name descname"><span class="pre">Wilderness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.Wilderness" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.overlay.</span></span><span class="sig-name descname"><span class="pre">Wilderness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.overlay.Wilderness" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.overlay.Overlay" title="nmmo.overlay.Overlay"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.overlay.Overlay</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

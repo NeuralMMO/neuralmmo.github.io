@@ -4,6 +4,68 @@
 
    Neural MMO provides standard training and evaluation settings along with pretrained and scripted baselines. You can learn more about them below.
 
+Provides pretrained and scripted models with all associated training code for the latter. Demonstrates usage with `RLlib <https://docs.ray.io/en/master/rllib.html>`_ and `WanDB <https://wandb.ai>`_ for logging and visualization. Note that these are dependencies only of the basline and not of the core environment.
+
+|icon| CLI
+##########
+
+The main file for the baselines and demo project includes commands for training, evaluation, and rendering. To view documentation:
+
+.. code-block:: python
+
+  python main.py --help
+
+.. code-block:: text
+
+  NAME
+      main.py --help - Neural MMO CLI powered by Google Fire
+
+  SYNOPSIS
+      main.py --help - COMMAND
+
+  DESCRIPTION
+      Main file for the RLlib demo included with Neural MMO.
+
+      Usage:
+         python main.py <COMMAND> --config=<CONFIG> --ARG1=<ARG1> ...
+
+      The User API documents core env flags. Additional config options specific
+      to this demo are available in projekt/config.py.
+
+      The --config flag may be used to load an entire group of options at once.
+      Select one of the defaults from projekt/config.py or write your own.
+
+  COMMANDS
+      COMMAND is one of the following:
+
+       evaluate
+         Evaluate a model against EVAL_AGENTS models
+
+       generate
+         Manually generate maps using the current --config setting
+
+       render
+         Start a WebSocket server that autoconnects to the 3D Unity client
+
+       train
+         Train a model using the current --config setting
+
+
+Reevaluating/Reproducing the Baseline
+************************
+.. code-block:: python
+  :caption: Training and evaluation through Ray Tune with WanDB logging
+
+  python main.py evaluate --config=baselines.Medium --scale=Baseline
+  python main.py train --config=baselines.Medium --scale=Baseline --RESTORE=None
+
+  # The config/scale defaults already actually point to the baseline
+  python main.py evaluate
+  python main.py train --RESTORE=None
+
+
+If a job crashes, you can resume training with `--RESUME=True --RESTORE=None`
+
 |icon| Evaluation Protocol
 ##########################
 
@@ -232,3 +294,5 @@ Exploration          0.00       532.00        49.50        61.95
 .. figure:: /resource/image/baselines/LargeMaps/scripted-combat.png
 
    **Reproduction:** neural-mmo-forge visualize --config=LargeMaps --MODEL=scripted-combat
+
+

@@ -16,4 +16,5 @@ nmmo.lib package
    nmmo.lib.material
    nmmo.lib.overlay
    nmmo.lib.priorityqueue
+   nmmo.lib.rating
    nmmo.lib.utils

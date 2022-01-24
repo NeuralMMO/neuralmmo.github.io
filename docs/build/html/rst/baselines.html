@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Evaluation Protocol &mdash; Neural MMO 1.5.3.7 documentation</title>
+  <title>CLI &mdash; Neural MMO 1.5.3.10 documentation</title>
   
 
   
@@ -90,14 +90,21 @@
             
               <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html"> Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html#icon-installation"> Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html#icon-creating-environments"> Creating Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html#icon-demos"> Demos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html#icon-scripting-and-classic-ai"> Scripting and Classic AI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html#icon-baselines"> Baselines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="userguide.html#evaluation-methods">Evaluation Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landing.html"> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landing.html#icon-installation"> Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landing.html#icon-gallary"> Gallary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landing.html#icon-call-for-collaborations"> Call for Collaborations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html"> Minimal Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-config-classes"> Config Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-scripted-api"> Scripted API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-rewards-tasks"> Rewards &amp; Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-skill-rating"> Skill Rating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-training"> Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#next-steps">Next Steps</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
@@ -115,7 +122,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#"> Evaluation Protocol</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"> CLI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reevaluating-reproducing-the-baseline">Reevaluating/Reproducing the Baseline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-evaluation-protocol"> Evaluation Protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-small-maps"> Small Maps</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#neural-baseline">Neural Baseline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#untrained">Untrained</a></li>
@@ -215,7 +226,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li> Evaluation Protocol</li>
+      <li> CLI</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -240,6 +251,63 @@
 <p><span class="caption-text">Neural MMO provides standard training and evaluation settings along with pretrained and scripted baselines. You can learn more about them below.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
+<p>Provides pretrained and scripted models with all associated training code for the latter. Demonstrates usage with <a class="reference external" href="https://docs.ray.io/en/master/rllib.html">RLlib</a> and <a class="reference external" href="https://wandb.ai">WanDB</a> for logging and visualization. Note that these are dependencies only of the basline and not of the core environment.</p>
+<section id="icon-cli">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> CLI<a class="headerlink" href="#icon-cli" title="Permalink to this headline">¶</a></h1>
+<p>The main file for the baselines and demo project includes commands for training, evaluation, and rendering. To view documentation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NAME
+    main.py --help - Neural MMO CLI powered by Google Fire
+
+SYNOPSIS
+    main.py --help - COMMAND
+
+DESCRIPTION
+    Main file for the RLlib demo included with Neural MMO.
+
+    Usage:
+       python main.py &lt;COMMAND&gt; --config=&lt;CONFIG&gt; --ARG1=&lt;ARG1&gt; ...
+
+    The User API documents core env flags. Additional config options specific
+    to this demo are available in projekt/config.py.
+
+    The --config flag may be used to load an entire group of options at once.
+    Select one of the defaults from projekt/config.py or write your own.
+
+COMMANDS
+    COMMAND is one of the following:
+
+     evaluate
+       Evaluate a model against EVAL_AGENTS models
+
+     generate
+       Manually generate maps using the current --config setting
+
+     render
+       Start a WebSocket server that autoconnects to the 3D Unity client
+
+     train
+       Train a model using the current --config setting
+</pre></div>
+</div>
+<section id="reevaluating-reproducing-the-baseline">
+<h2>Reevaluating/Reproducing the Baseline<a class="headerlink" href="#reevaluating-reproducing-the-baseline" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Training and evaluation through Ray Tune with WanDB logging</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">evaluate</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">baselines</span><span class="o">.</span><span class="n">Medium</span> <span class="o">--</span><span class="n">scale</span><span class="o">=</span><span class="n">Baseline</span>
+<span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">train</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">baselines</span><span class="o">.</span><span class="n">Medium</span> <span class="o">--</span><span class="n">scale</span><span class="o">=</span><span class="n">Baseline</span> <span class="o">--</span><span class="n">RESTORE</span><span class="o">=</span><span class="kc">None</span>
+
+<span class="c1"># The config/scale defaults already actually point to the baseline</span>
+<span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">evaluate</span>
+<span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">train</span> <span class="o">--</span><span class="n">RESTORE</span><span class="o">=</span><span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+<p>If a job crashes, you can resume training with <cite>–RESUME=True –RESTORE=None</cite></p>
+</section>
+</section>
 <section id="icon-evaluation-protocol">
 <h1><img alt="icon" src="../_images/icon_pixel.png" /> Evaluation Protocol<a class="headerlink" href="#icon-evaluation-protocol" title="Permalink to this headline">¶</a></h1>
 <dl class="simple">
@@ -317,10 +385,10 @@
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id7">
 <img alt="../_images/small-map.png" src="../_images/small-map.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=SmallMaps –MODEL=small-map</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=SmallMaps –MODEL=small-map</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -382,10 +450,10 @@
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id8">
 <img alt="../_images/None.png" src="../_images/None.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=SmallMaps –MODEL=None</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=SmallMaps –MODEL=None</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -447,10 +515,10 @@
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id8">
+<figure class="align-default" id="id9">
 <img alt="../_images/large-map.png" src="../_images/large-map.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=SmallMaps –MODEL=large-map</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=SmallMaps –MODEL=large-map</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -512,10 +580,10 @@
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id9">
+<figure class="align-default" id="id10">
 <img alt="../_images/scripted-forage.png" src="../_images/scripted-forage.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=SmallMaps –MODEL=scripted-forage</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=SmallMaps –MODEL=scripted-forage</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -577,10 +645,10 @@
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id10">
+<figure class="align-default" id="id11">
 <img alt="../_images/scripted-combat.png" src="../_images/scripted-combat.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=SmallMaps –MODEL=scripted-combat</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=SmallMaps –MODEL=scripted-combat</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -647,10 +715,10 @@
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id11">
+<figure class="align-default" id="id12">
 <img alt="../_images/large-map1.png" src="../_images/large-map1.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=LargeMaps –MODEL=large-map</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=LargeMaps –MODEL=large-map</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -712,10 +780,10 @@
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id12">
+<figure class="align-default" id="id13">
 <img alt="../_images/None1.png" src="../_images/None1.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=LargeMaps –MODEL=None</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=LargeMaps –MODEL=None</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -777,10 +845,10 @@
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id13">
+<figure class="align-default" id="id14">
 <img alt="../_images/small-map1.png" src="../_images/small-map1.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=LargeMaps –MODEL=small-map</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=LargeMaps –MODEL=small-map</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -842,10 +910,10 @@
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id14">
+<figure class="align-default" id="id15">
 <img alt="../_images/scripted-forage1.png" src="../_images/scripted-forage1.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=LargeMaps –MODEL=scripted-forage</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=LargeMaps –MODEL=scripted-forage</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -906,10 +974,10 @@
 </tr>
 </tbody>
 </table>
-<figure class="align-default" id="id15">
+<figure class="align-default" id="id16">
 <img alt="../_images/scripted-combat1.png" src="../_images/scripted-combat1.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=LargeMaps –MODEL=scripted-combat</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text"><strong>Reproduction:</strong> neural-mmo-forge visualize –config=LargeMaps –MODEL=scripted-combat</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>

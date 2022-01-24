@@ -1,0 +1,750 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Introduction &mdash; Neural MMO 1.5.3.10 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Minimal Example" href="tutorial.html" />
+    <link rel="prev" title="Index" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Neural MMO
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-installation"> Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-gallary"> Gallary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rendered-map-and-ui">Rendered Map and UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overlays">Overlays</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-call-for-collaborations"> Call for Collaborations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html"> Minimal Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-config-classes"> Config Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-scripted-api"> Scripted API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-rewards-tasks"> Rewards &amp; Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-skill-rating"> Skill Rating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-training"> Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#next-steps">Next Steps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html"> User API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-developer-api"> Developer API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html"> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-game-systems"> Game Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-resource-system"> Resource System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-combat"> Combat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-progression"> Progression</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html"> CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-evaluation-protocol"> Evaluation Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-small-maps"> Small Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-large-maps"> Large Maps</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Updates</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="updates.html"> Video Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-publications"> Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-presentations"> Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-update-slides"> Update Slides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-additional-links"> Additional Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-patch-notes-version-history"> Patch Notes + Version History</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html"> Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-contributing"> Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-code-structure"> Code Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-style"> Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-tech-stack"> Tech Stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-client-map-representation"> Client Map Representation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-observation-representation"> Observation Representation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-model-io"> Model IO</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ideology</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ideology.html"> Abstract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideology.html#icon-failure-modes"> Failure Modes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html"> Authorship, License, Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html#icon-assets"> Assets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html#ags-namesake"> Namesake</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">NeurIPS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="neurips.html"> NeurIPS 2021 Dataset Track Supplementary Material</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Neural MMO</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li> Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/rst/landing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <figure class="align-default">
+<img alt="../_images/splash.png" src="../_images/splash.png" />
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Quick links:</strong> <a class="reference external" href="https://github.com/neuralmmo">Github</a> | <a class="reference external" href="https://discord.gg/BkMmFUC">Discord</a> | <a class="reference external" href="https://twitter.com/jsuarez5341">Twitter</a> | <a class="reference external" href="http://arxiv.org/abs/2110.07594">NeurIPS 2021</a></p>
+<section id="icon-introduction">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Introduction<a class="headerlink" href="#icon-introduction" title="Permalink to this headline">¶</a></h1>
+<p>Neural MMO is an open-source and computationally accessible research platform that simulates populations of agents in procedurally generated virtual worlds. We support basic foraging tasks involving a few agents for a couple of minutes, thousand-agent joint survival + exploration + combat over multiple hours, and everything between.</p>
+<center>
+  <video width=100% height="auto" nocontrols autoplay muted loop>
+    <source src="_static/zoom.mp4" type="video/mp4">
+    Your browser does not support this mp4.
+  </video>
+</center><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Environments provide a standard PettingZoo API and support though our community <a class="reference external" href="https://discord.gg/BkMmFUC">Discord</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nmmo</span> <span class="kn">import</span> <span class="n">Env</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">Env</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="c1"># Default environment. Keep reading for config options</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># Compute with your model</span>
+    <span class="n">obs</span><span class="p">,</span> <span class="n">rewards</span><span class="p">,</span> <span class="n">dones</span><span class="p">,</span> <span class="n">infos</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Our goal is to support a broad base of multiagent research that would be impractical or impossible to conduct on other environments. The project was most recently <a class="reference external" href="http://arxiv.org/abs/2110.07594">published</a> at NeurIPS 2021 (full list).</p>
+<div class="video_wrapper" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/hYYA8_wFF7Q" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>@proceedings{NEURIPS2021,
+  author = {Joseph Suarez, Yilun Du, Clare Zhu, Igor Mordatch, Phillip Isola},
+  booktitle = {Advances in Neural Information Processing Systems},
+  title = {The Neural MMO Platform for Massively Multiagent Research},
+  url = {http://arxiv.org/abs/2110.07594},
+  volume = {33},
+  year = {2021}
+}
+</pre></div>
+</div>
+<p>In the presentation above, I coin the term <strong>Foundation Policies</strong>, analogous to <strong>Foundation Models</strong>, as a grounding motivation for investing in environment complexity and generality. A key contribution of Neural MMO is to do so efficiently and interpretably by adapting techniques from classic MMO development for deep learning.</p>
+<p>The associated poster provides a high level overview of the workflow intended to support most research on the platform. For a more thorough walkthrough of features and usage, read on.</p>
+<figure class="align-default">
+<img alt="../_images/NMMO_NeurIPS2021_Poster.jpg" src="../_images/NMMO_NeurIPS2021_Poster.jpg" />
+</figure>
+</section>
+<section id="icon-installation">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Installation<a class="headerlink" href="#icon-installation" title="Permalink to this headline">¶</a></h1>
+<p>Official support: Ubuntu 20.04, WSL, and MacOS. Tested with Anaconda Python 3.9</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Packaged installation</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install NMMO with baseline dependencies</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">nmmo</span><span class="p">[</span><span class="n">rllib</span><span class="p">]</span>
+
+<span class="c1"># Clone baselines repository. Optional but recommended: setup WanDB integration.</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span> <span class="n">nmmo</span><span class="o">-</span><span class="n">baselines</span>
+<span class="n">echo</span> <span class="n">YOUR_WANDB_API_KEY</span> <span class="o">&gt;</span> <span class="n">nmmo</span><span class="o">-</span><span class="n">baselines</span><span class="o">/</span><span class="n">wandb_api_key</span>
+
+<span class="c1">#Run a quick demo (download client below)</span>
+<span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">render</span> <span class="c1">#--NUM_GPUS=0 if no CUDA</span>
+</pre></div>
+</div>
+</div>
+<p>Download the latest client <a class="reference external" href="https://github.com/neuralmmo/client/releases">here</a> (WSL users: do this on your Windows host). Start the demo and run the executable for your platform in client/UnityClient/. After a few seconds, the demo console will show a connection message and the client will load the map. The on-screen instructions demonstrate how to pan and zoom. You can also click on agents to examine their skill levels. The in-game console (which you can toggle with tab) gives you access to a number of overlay visualiztions.</p>
+<p><strong>Required RLlib patch:</strong> Add <cite>custom_metrics[k] = filt; continue</cite> after line 175 in your RLlib metrics file (usually ~/anaconda3/lib/python3.8/site-packages/ray/rllib/evaluation/metrics.py)</p>
+<p><strong>Troubleshooting:</strong> If you are training on GPU and get an IndexError error on self.device, set gpu_ids=[0] in ray/rllib/policy/torch_policy.py:150 (typically in ~/anaconda3/lib/python3.8/site-packages)</p>
+<p><strong>Support:</strong> Post in #support on the <a class="reference external" href="https://discord.gg/BkMmFUC">[Discord]</a>. Seriously, do this. Do not raise Github issues for support. You will get a reply much faster (often instantly) on Discord.</p>
+<p>You can also install headless or entirely from source (WanDB setup and RLlib patch still required)</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Headless setup for training</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">nmmo</span><span class="p">[</span><span class="n">rllib</span><span class="p">]</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span> <span class="n">nmmo</span><span class="o">-</span><span class="n">baselines</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Setup from source for developers</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span>
+
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">environment</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">client</span>
+
+<span class="n">cd</span> <span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span><span class="p">[</span><span class="nb">all</span><span class="p">]</span>
+
+<span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">render</span>
+<span class="o">./</span><span class="n">client</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="icon-gallary">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Gallary<a class="headerlink" href="#icon-gallary" title="Permalink to this headline">¶</a></h1>
+<section id="rendered-map-and-ui">
+<h2>Rendered Map and UI<a class="headerlink" href="#rendered-map-and-ui" title="Permalink to this headline">¶</a></h2>
+<figure class="align-default">
+<img alt="../_images/rendered_map.png" src="../_images/rendered_map.png" />
+</figure>
+<figure class="align-default">
+<img alt="../_images/stats.png" src="../_images/stats.png" />
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="overlays">
+<h2>Overlays<a class="headerlink" href="#overlays" title="Permalink to this headline">¶</a></h2>
+<figure class="align-default">
+<img alt="../_images/overlays.png" src="../_images/overlays.png" />
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="icon-call-for-collaborations">
+<span id="collaborations"></span><h1><img alt="icon" src="../_images/icon_pixel.png" /> Call for Collaborations<a class="headerlink" href="#icon-call-for-collaborations" title="Permalink to this headline">¶</a></h1>
+<p>We are launching an open call for research on the platform in early February. Check back soon for news!</p>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="Minimal Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Index" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Joseph Suarez.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    :root {
+      --foreground: #000000;
+      --background: #000e0e;
+      --accent:     #005050;
+      --text:       #bbbbbb;
+      --title:      #00bbbb;
+      --monochrome: #bbbbbb;
+      --link:       #ffffff;
+    }
+
+    body {
+      color: var(--text);
+    }
+
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: var(--background);
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: var(--foreground);
+    }
+    .wy-nav-content {
+      background: var(--background);
+    }
+    .wy-nav-content-wrap {
+      background: var(--foreground);
+    }
+
+    .wy-table-responsive table td, .wy-table-responsive table th {
+      /* !important prevents the common CSS stylesheets from
+             overriding this as on RTD they are loaded after this stylesheet */
+      white-space: normal !important;
+    }
+       
+    .wy-table-responsive {
+      overflow: visible !important;
+    }
+
+    //This one is the one that does something?
+    .row-odd {
+      background: #ff0000;
+    }
+
+    .row-even {
+      background: var(--accent);
+    }
+
+    html.writer-html5 .rst-content table.docutils th {
+      border: 1px solid var(--accent);
+    }
+
+    /* Top line */
+    hr {
+      border-top-color: teal;
+      border-top-style: solid;
+      border-top-width: 3px;
+    }
+
+    html.writer-html4 .rst-content dl:not(.docutils) > dt, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple) > dt {
+      background: var(--foreground);
+      color: var(--text);
+      border-top: var(--accent);
+    }
+
+html.writer-html4 .rst-content dl:not(.docutils) dl:not(.field-list) > dt, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple) dl:not(.field-list) > dt {
+      background: var(--foreground);
+      color: var(--text);
+      border-top: var(--accent);
+    }
+
+html.writer-html4 .rst-content dl:not(.docutils) dl:not(.field-list) > dt, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple) dl:not(.field-list) > dt {
+      background: var(--foreground);
+      color: var(--text);
+      border-top: var(--accent);
+    }
+
+
+
+    /* ****** Begin Tables ****** */
+
+    /*Don't even think about changing this.
+    Spent 3 hours pulling this from an rtd bitbucket PR*/ 
+    wy-table-odd td, .wy-table-striped tr:nth-child(2n-1) td, .rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
+      background-color: var(--foreground);
+    }
+
+    wy-table-even td, .wy-table-striped tr:nth-child(2n) td, .rst-content table.docutils:not(.field-list) tr:nth-child(2n) td {
+      background-color: var(--background);
+    }
+
+    /* Outer table */
+    .wy-table-bordered-all, .rst-content table.docutils {
+      border: 1px solid #0f0;
+        border-top-color: var(--accent);
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-right-color: var(--accent);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-bottom-color: var(--accent);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-left-color: var(--accent);
+        border-left-style: solid;
+        border-left-width: 1px;
+        border-image-outset: 0;
+        border-image-repeat: stretch;
+        border-image-slice: 100%;
+        border-image-source: none;
+        border-image-width: 1;
+    }
+
+    /* Table header underline */
+    .wy-table thead th, .rst-content table.docutils thead th, .rst-content table.field-list thead th {
+        font-weight: bold;
+        border-bottom-color: rgb(055, 0, 0);
+        border-bottom-style: solid;
+        border-bottom-width: 0px;
+    }
+
+    /* Inner table border */
+    .wy-table-bordered-all td, .rst-content table.docutils td {
+        border-bottom-color: rgb(255, 0, 0);
+        border-bottom-style: solid;
+        border-bottom-width: 0px;
+        border-left-color: rgb(255, 0, 0);
+        border-left-style: solid;
+        border-left-width: 0px;
+    }
+    /* ****** End Tables ****** */
+
+    /* ****** Start selection for left sidebar ****** */
+    .wy-menu-vertical li.current{
+      background: var(--foreground);
+    }
+
+    .wy-menu-vertical li.toctree-l1.current > a{
+      background: var(--foreground);
+      border-top-color: lime;
+      border-top-style: solid;
+      border-top-width: 3px;
+      border-bottom-color: lime;
+      border-bottom-style: solid;
+      border-bottom-width: 3px;
+      
+    }
+
+    .rst-content pre.literal-block, .rst-content div[class^="highlight"] {
+      border-top-color: var(--accent);
+      border-top-style: solid;
+      border-top-width: 1px;
+      border-right-color: var(--accent);
+      border-right-style: solid;
+      border-right-width: 1px;
+      border-bottom-color: var(--accent);
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-left-color: var(--accent);
+      border-left-style: solid;
+      border-left-width: 1px;
+      border-image-outset: 0;
+      border-image-repeat: stretch;
+      border-image-slice: 100%;
+      border-image-source: none;
+      border-image-width: 1;
+    }
+
+    .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a {
+      display: block;
+      background: var(--accent);
+      padding: .4045em 4.045em;
+    }
+
+    .wy-menu-vertical li.toctree-l2.current > a {
+      background: var(--foreground);
+      padding: .4045em 2.427em;
+    }
+
+    .wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a {
+      display: block;
+      background: var(--foreground);
+      padding: .4045em 5.663em;
+    }
+
+    .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a {
+      display: block;
+      background: var(--foreground);
+      padding: .4045em 4.045em;
+    }
+
+    /* ****** End selection for left sidebar ****** */
+
+    /* Bullet(?) blocks */
+    .rst-content dl:not(.docutils) dt {
+      display: table;
+      margin: 6px 0;
+      margin-top: 6px;
+      font-size: 90%;
+      line-height: normal;
+      background: var(--foreground);
+      color: var(--text);
+      border-top: solid 6px var(--accent);
+      padding: 6px;
+      position: relative;
+    }
+
+    /* ****** Start Code Blocks ****** */
+    .highlight-python {
+      background: var(--accent);
+      border: var(--accent);
+    }
+
+    .highlight {
+      background: var(--foreground);
+      color: var(--accent);
+    }
+    /* ****** End Code Blocks ****** */
+
+    /* Buttons */
+    .btn-neutral {
+      background-color: var(--accent) !important;
+      color: var(--title) !important;
+    }
+
+    /* Buttons */
+    .btn-neutral:visited {
+      background-color: var(--accent) !important;
+      color: var(--title) !important;
+    }
+
+    .rst-content dl:not(.docutils) dl dt {
+      margin-bottom: 6px;
+      border-left: solid 0px var(--foreground);
+      background: var(--background);
+      color: var(--text);
+      }
+
+    code, .rst-content tt, .rst-content code {
+      background-color: var(--foreground);
+      border-top-width: 0px;
+      border-bottom-width: 0px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+    }
+
+    .rst-content dl:not(.docutils) dl dt {
+      border-left-color: var(--background);
+    }
+
+    .rst-content tt, .rst-content tt, .rst-content code {
+      color: var(--title);
+    }
+
+    .rst-content tt.xref, a .rst-content tt, .rst-content tt.xref, .rst-content code.xref, a .rst-content tt, a .rst-content code {
+      color: var(--title);
+    }
+
+    .wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a {
+      color: var(--text);
+    }
+
+    .wy-menu-vertical li.on a, .wy-menu-vertical li.current > a {
+      color: #00ff00;
+    }
+
+    .wy-menu-vertical li.current a {
+      border-right: solid 1px (--background);
+      padding: .4045em 2.427em;
+    }
+
+    .wy-menu-vertical header, .wy-menu-vertical p.caption {
+       color: var(--title);
+       line-height: 32px;
+       font-weight: bold;
+       text-transform: uppercase;
+       font-size: 85%;
+       white-space: nowrap;
+    }
+
+    footer {
+      color: var(--accent);
+    }
+
+    p {
+      color: var(--text);
+    }
+    h1 {
+      color: var(--title);
+      font-size: 150%
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 125%
+    }
+
+    h3 {
+      color: var(--accent);
+    }
+
+    h4 {
+      color: var(--accent);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      padding-left: 1em; 
+      text-indent: -.7em;
+    }
+
+    li {
+      content: "• ";
+      color: var(--title); /* or whatever color you prefer */
+      }
+
+    a:link {
+      color: var(--link);
+    }
+
+    a:visited {
+      color: var(--link);
+    }
+
+    a:hover {
+      color: lime;
+    }
+
+    a:active {
+      color: lime;
+    }
+
+
+  </style>
+
+
+</body>
+</html>

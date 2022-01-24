@@ -26,6 +26,13 @@ Config
    :undoc-members:
    :noindex:
 
+Ratings
+-------
+
+.. autoclass:: nmmo.OpenSkillRating
+   :members:
+   :noindex:
+
 Scripting
 ---------
 

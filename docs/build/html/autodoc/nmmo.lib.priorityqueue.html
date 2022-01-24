@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.lib.priorityqueue module &mdash; Neural MMO 1.5.3.7 documentation</title>
+  <title>nmmo.lib.priorityqueue module &mdash; Neural MMO 1.5.3.10 documentation</title>
   
 
   
@@ -42,7 +42,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="nmmo.lib.utils module" href="nmmo.lib.utils.html" />
+    <link rel="next" title="nmmo.lib.rating module" href="nmmo.lib.rating.html" />
     <link rel="prev" title="nmmo.lib.overlay module" href="nmmo.lib.overlay.html" /> 
 </head>
 
@@ -90,14 +90,21 @@
             
               <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html"> Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-installation"> Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-creating-environments"> Creating Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-demos"> Demos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-scripting-and-classic-ai"> Scripting and Classic AI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-baselines"> Baselines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#evaluation-methods">Evaluation Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html"> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html#icon-installation"> Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html#icon-gallary"> Gallary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html#icon-call-for-collaborations"> Call for Collaborations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html"> Minimal Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-config-classes"> Config Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-scripted-api"> Scripted API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-rewards-tasks"> Rewards &amp; Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-skill-rating"> Skill Rating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-training"> Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#next-steps">Next Steps</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
@@ -113,6 +120,7 @@
 <li class="toctree-l4"><a class="reference internal" href="nmmo.lib.material.html">nmmo.lib.material module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.lib.overlay.html">nmmo.lib.overlay module</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">nmmo.lib.priorityqueue module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.lib.rating.html">nmmo.lib.rating module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.lib.utils.html">nmmo.lib.utils module</a></li>
 </ul>
 </li>
@@ -138,7 +146,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Evaluation Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-evaluation-protocol"> Evaluation Protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-small-maps"> Small Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-large-maps"> Large Maps</a></li>
 </ul>
@@ -253,7 +262,7 @@
 <span id="nmmo-lib-priorityqueue-module"></span><h1>nmmo.lib.priorityqueue module<a class="headerlink" href="#module-nmmo.lib.priorityqueue" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.priorityqueue.PriorityQueue">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.priorityqueue.</span></span><span class="sig-name descname"><span class="pre">PriorityQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">capacity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.priorityqueue.PriorityQueue" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.priorityqueue.</span></span><span class="sig-name descname"><span class="pre">PriorityQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">capacity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.priorityqueue.PriorityQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.lib.priorityqueue.PriorityQueue.get">
@@ -272,17 +281,17 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.lib.priorityqueue.PriorityQueue.peek">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">peek</span></span><a class="headerlink" href="#nmmo.lib.priorityqueue.PriorityQueue.peek" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">peek</span></span><a class="headerlink" href="#nmmo.lib.priorityqueue.PriorityQueue.peek" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.lib.priorityqueue.PriorityQueue.peekPriority">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">peekPriority</span></span><a class="headerlink" href="#nmmo.lib.priorityqueue.PriorityQueue.peekPriority" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">peekPriority</span></span><a class="headerlink" href="#nmmo.lib.priorityqueue.PriorityQueue.peekPriority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.lib.priorityqueue.PriorityQueue.peekValue">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">peekValue</span></span><a class="headerlink" href="#nmmo.lib.priorityqueue.PriorityQueue.peekValue" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">peekValue</span></span><a class="headerlink" href="#nmmo.lib.priorityqueue.PriorityQueue.peekValue" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -302,7 +311,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.lib.priorityqueue.PriorityQueue.n">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n</span></span><a class="headerlink" href="#nmmo.lib.priorityqueue.PriorityQueue.n" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n</span></span><a class="headerlink" href="#nmmo.lib.priorityqueue.PriorityQueue.n" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -315,7 +324,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="nmmo.lib.utils.html" class="btn btn-neutral float-right" title="nmmo.lib.utils module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="nmmo.lib.rating.html" class="btn btn-neutral float-right" title="nmmo.lib.rating module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="nmmo.lib.overlay.html" class="btn btn-neutral float-left" title="nmmo.lib.overlay module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

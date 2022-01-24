@@ -5,7 +5,13 @@ Index
    :maxdepth: 8
    :caption: User Guide
 
-   rst/userguide
+   rst/landing
+
+.. toctree::
+   :maxdepth: 8
+   :caption: Tutorials
+
+   rst/tutorial
 
 .. toctree::
    :maxdepth: 8

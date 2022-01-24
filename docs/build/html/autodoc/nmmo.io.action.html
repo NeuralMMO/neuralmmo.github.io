@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.io.action module &mdash; Neural MMO 1.5.3.7 documentation</title>
+  <title>nmmo.io.action module &mdash; Neural MMO 1.5.3.10 documentation</title>
   
 
   
@@ -90,14 +90,21 @@
             
               <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html"> Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-installation"> Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-creating-environments"> Creating Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-demos"> Demos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-scripting-and-classic-ai"> Scripting and Classic AI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#icon-baselines"> Baselines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/userguide.html#evaluation-methods">Evaluation Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html"> Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html#icon-installation"> Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html#icon-gallary"> Gallary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/landing.html#icon-call-for-collaborations"> Call for Collaborations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html"> Minimal Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-config-classes"> Config Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-scripted-api"> Scripted API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-rewards-tasks"> Rewards &amp; Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-skill-rating"> Skill Rating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-training"> Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#next-steps">Next Steps</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
@@ -134,7 +141,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Evaluation Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-evaluation-protocol"> Evaluation Protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-small-maps"> Small Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-large-maps"> Large Maps</a></li>
 </ul>
@@ -249,63 +257,63 @@
 <span id="nmmo-io-action-module"></span><h1>nmmo.io.action module<a class="headerlink" href="#module-nmmo.io.action" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.NodeType">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">NodeType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.NodeType" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">NodeType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.NodeType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>An enumeration.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.NodeType.STATIC">
-<span class="sig-name descname"><span class="pre">STATIC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.io.action.NodeType.STATIC" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">STATIC</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.io.action.NodeType.STATIC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.NodeType.SELECTION">
-<span class="sig-name descname"><span class="pre">SELECTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.NodeType.SELECTION" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">SELECTION</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.NodeType.SELECTION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.NodeType.ACTION">
-<span class="sig-name descname"><span class="pre">ACTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.NodeType.ACTION" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ACTION</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.NodeType.ACTION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.NodeType.CONSTANT">
-<span class="sig-name descname"><span class="pre">CONSTANT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#nmmo.io.action.NodeType.CONSTANT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONSTANT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#nmmo.io.action.NodeType.CONSTANT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.NodeType.VARIABLE">
-<span class="sig-name descname"><span class="pre">VARIABLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#nmmo.io.action.NodeType.VARIABLE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">VARIABLE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#nmmo.io.action.NodeType.VARIABLE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Node">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><a class="headerlink" href="#nmmo.io.action.Node" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><a class="headerlink" href="#nmmo.io.action.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Node.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.Node.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.Node.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Node.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Node.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Node.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Node.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Node.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Node.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Node.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Node.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Node.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.Node.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Node.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Node.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -317,27 +325,27 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Fixed">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Fixed</span></span><a class="headerlink" href="#nmmo.io.action.Fixed" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Fixed</span></span><a class="headerlink" href="#nmmo.io.action.Fixed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Action">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Action</span></span><a class="headerlink" href="#nmmo.io.action.Action" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Action</span></span><a class="headerlink" href="#nmmo.io.action.Action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Action.nodeType">
-<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.Action.nodeType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.Action.nodeType" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Action.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.Move'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Attack'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Action.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.Move'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Attack'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Action.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Action.n">
-<span class="sig-name descname"><span class="pre">n</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#nmmo.io.action.Action.n" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">n</span></span><em class="property"> <span class="pre">=</span> <span class="pre">7</span></em><a class="headerlink" href="#nmmo.io.action.Action.n" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -352,43 +360,43 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.Action.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Action.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Action.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Action.arguments">
-<span class="sig-name descname"><span class="pre">arguments</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.North'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.South'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.East'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.West'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Melee'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Range'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Mage'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Action.arguments" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">arguments</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.North'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.South'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.East'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.West'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Melee'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Range'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Mage'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Action.arguments" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Action.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Action.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Action.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Action.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Action.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Action.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Action.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Action.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Action.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Move">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Move</span></span><a class="headerlink" href="#nmmo.io.action.Move" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Move</span></span><a class="headerlink" href="#nmmo.io.action.Move" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Move.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.io.action.Move.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.io.action.Move.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Move.nodeType">
-<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.Move.nodeType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.Move.nodeType" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -398,17 +406,17 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Move.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.Direction'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Move.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.Direction'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Move.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Move.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.io.action.Move.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.io.action.Move.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.Move.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Move.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Move.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -418,14 +426,14 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Move.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Move.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Move.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Direction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Direction</span></span><a class="headerlink" href="#nmmo.io.action.Direction" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Direction</span></span><a class="headerlink" href="#nmmo.io.action.Direction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Direction.argType">
@@ -435,7 +443,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Direction.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.North'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.South'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.East'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.West'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Direction.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.North'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.South'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.East'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.West'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Direction.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -445,38 +453,38 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.Direction.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Direction.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Direction.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Direction.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Direction.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Direction.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Direction.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Direction.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Direction.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Direction.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Direction.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Direction.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.North">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">North</span></span><a class="headerlink" href="#nmmo.io.action.North" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">North</span></span><a class="headerlink" href="#nmmo.io.action.North" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.North.delta">
-<span class="sig-name descname"><span class="pre">delta</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(-1,</span> <span class="pre">0)</span></em><a class="headerlink" href="#nmmo.io.action.North.delta" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">delta</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(-1,</span> <span class="pre">0)</span></em><a class="headerlink" href="#nmmo.io.action.North.delta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.North.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.North.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.North.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -486,48 +494,48 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.North.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.North.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.North.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.North.idx">
-<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.io.action.North.idx" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#nmmo.io.action.North.idx" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.North.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.North.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.North.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.North.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.North.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.North.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.North.serial">
-<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0,)</span></em><a class="headerlink" href="#nmmo.io.action.North.serial" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(0,)</span></em><a class="headerlink" href="#nmmo.io.action.North.serial" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.North.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.North.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.North.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.South">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">South</span></span><a class="headerlink" href="#nmmo.io.action.South" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">South</span></span><a class="headerlink" href="#nmmo.io.action.South" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.South.delta">
-<span class="sig-name descname"><span class="pre">delta</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(1,</span> <span class="pre">0)</span></em><a class="headerlink" href="#nmmo.io.action.South.delta" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">delta</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">0)</span></em><a class="headerlink" href="#nmmo.io.action.South.delta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.South.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.South.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.South.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -537,48 +545,48 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.South.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.South.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.South.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.South.idx">
-<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.io.action.South.idx" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.io.action.South.idx" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.South.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.South.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.South.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.South.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.South.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.South.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.South.serial">
-<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(1,)</span></em><a class="headerlink" href="#nmmo.io.action.South.serial" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(1,)</span></em><a class="headerlink" href="#nmmo.io.action.South.serial" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.South.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.South.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.South.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.East">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">East</span></span><a class="headerlink" href="#nmmo.io.action.East" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">East</span></span><a class="headerlink" href="#nmmo.io.action.East" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.East.delta">
-<span class="sig-name descname"><span class="pre">delta</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0,</span> <span class="pre">1)</span></em><a class="headerlink" href="#nmmo.io.action.East.delta" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">delta</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1)</span></em><a class="headerlink" href="#nmmo.io.action.East.delta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.East.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.East.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.East.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -588,48 +596,48 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.East.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.East.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.East.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.East.idx">
-<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.East.idx" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.East.idx" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.East.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.East.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.East.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.East.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.East.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.East.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.East.serial">
-<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(2,)</span></em><a class="headerlink" href="#nmmo.io.action.East.serial" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(2,)</span></em><a class="headerlink" href="#nmmo.io.action.East.serial" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.East.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.East.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.East.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.West">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">West</span></span><a class="headerlink" href="#nmmo.io.action.West" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">West</span></span><a class="headerlink" href="#nmmo.io.action.West" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.West.delta">
-<span class="sig-name descname"><span class="pre">delta</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(0,</span> <span class="pre">-1)</span></em><a class="headerlink" href="#nmmo.io.action.West.delta" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">delta</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">-1)</span></em><a class="headerlink" href="#nmmo.io.action.West.delta" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.West.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.West.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.West.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -639,63 +647,63 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.West.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.West.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.West.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.West.idx">
-<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.West.idx" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.West.idx" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.West.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.West.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.West.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.West.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.West.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.West.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.West.serial">
-<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(3,)</span></em><a class="headerlink" href="#nmmo.io.action.West.serial" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(3,)</span></em><a class="headerlink" href="#nmmo.io.action.West.serial" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.West.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.West.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.West.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Attack">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Attack</span></span><a class="headerlink" href="#nmmo.io.action.Attack" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Attack</span></span><a class="headerlink" href="#nmmo.io.action.Attack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Attack.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.io.action.Attack.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#nmmo.io.action.Attack.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Attack.nodeType">
-<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.Attack.nodeType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.Attack.nodeType" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Attack.n">
-<span class="sig-name descname"><span class="pre">n</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.Attack.n" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">n</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.Attack.n" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Attack.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.Style'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Target'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Attack.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.Style'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Target'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Attack.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Attack.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.io.action.Attack.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.io.action.Attack.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -715,7 +723,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.Attack.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Attack.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Attack.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -725,14 +733,14 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Attack.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Attack.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Attack.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Style">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Style</span></span><a class="headerlink" href="#nmmo.io.action.Style" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Style</span></span><a class="headerlink" href="#nmmo.io.action.Style" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Style.argType">
@@ -742,7 +750,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Style.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.Melee'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Range'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Mage'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Style.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;class</span> <span class="pre">'nmmo.io.action.Melee'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Range'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.io.action.Mage'&gt;]</span></em><a class="headerlink" href="#nmmo.io.action.Style.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -752,38 +760,38 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.Style.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Style.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Style.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Style.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Style.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Style.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Style.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Style.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Style.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Style.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Style.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Style.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Target">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Target</span></span><a class="headerlink" href="#nmmo.io.action.Target" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Target</span></span><a class="headerlink" href="#nmmo.io.action.Target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Target.argType">
-<span class="sig-name descname"><span class="pre">argType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Target.argType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">argType</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Target.argType" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.Target.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Target.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Target.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -793,43 +801,43 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Target.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.Target.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.Target.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Target.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Target.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Target.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Target.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Target.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Target.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Target.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Target.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Target.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Melee</span></span><a class="headerlink" href="#nmmo.io.action.Melee" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Melee</span></span><a class="headerlink" href="#nmmo.io.action.Melee" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee.nodeType">
-<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.Melee.nodeType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.Melee.nodeType" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.io.action.Melee.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#nmmo.io.action.Melee.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee.freeze">
-<span class="sig-name descname"><span class="pre">freeze</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Melee.freeze" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">freeze</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Melee.freeze" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -844,7 +852,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Melee.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Melee.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -854,53 +862,53 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.Melee.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.Melee.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee.idx">
-<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#nmmo.io.action.Melee.idx" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#nmmo.io.action.Melee.idx" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Melee.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Melee.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Melee.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Melee.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee.serial">
-<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(4,)</span></em><a class="headerlink" href="#nmmo.io.action.Melee.serial" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(4,)</span></em><a class="headerlink" href="#nmmo.io.action.Melee.serial" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Melee.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Melee.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Melee.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Range">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Range</span></span><a class="headerlink" href="#nmmo.io.action.Range" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Range</span></span><a class="headerlink" href="#nmmo.io.action.Range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Range.nodeType">
-<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.Range.nodeType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.Range.nodeType" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Range.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.io.action.Range.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.io.action.Range.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Range.freeze">
-<span class="sig-name descname"><span class="pre">freeze</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Range.freeze" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">freeze</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Range.freeze" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -915,7 +923,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.Range.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Range.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Range.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -925,53 +933,53 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Range.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.Range.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.Range.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Range.idx">
-<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#nmmo.io.action.Range.idx" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#nmmo.io.action.Range.idx" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Range.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Range.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Range.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Range.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Range.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Range.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Range.serial">
-<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(5,)</span></em><a class="headerlink" href="#nmmo.io.action.Range.serial" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(5,)</span></em><a class="headerlink" href="#nmmo.io.action.Range.serial" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Range.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Range.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Range.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Mage</span></span><a class="headerlink" href="#nmmo.io.action.Mage" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Mage</span></span><a class="headerlink" href="#nmmo.io.action.Mage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage.nodeType">
-<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.Mage.nodeType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nmmo.io.action.Mage.nodeType" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.Mage.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nmmo.io.action.Mage.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage.freeze">
-<span class="sig-name descname"><span class="pre">freeze</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.io.action.Mage.freeze" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">freeze</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.io.action.Mage.freeze" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -986,7 +994,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage.N">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Mage.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.io.action.Mage.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -996,51 +1004,51 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage.edges">
-<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.Mage.edges" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">edges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#nmmo.io.action.Mage.edges" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage.idx">
-<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#nmmo.io.action.Mage.idx" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">idx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">6</span></em><a class="headerlink" href="#nmmo.io.action.Mage.idx" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Mage.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.io.action.Mage.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Mage.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Mage.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage.serial">
-<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(6,)</span></em><a class="headerlink" href="#nmmo.io.action.Mage.serial" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">serial</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(6,)</span></em><a class="headerlink" href="#nmmo.io.action.Mage.serial" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.io.action.Mage.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Mage.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.io.action.Mage.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Message">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Message</span></span><a class="headerlink" href="#nmmo.io.action.Message" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Message</span></span><a class="headerlink" href="#nmmo.io.action.Message" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.Exchange">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Exchange</span></span><a class="headerlink" href="#nmmo.io.action.Exchange" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">Exchange</span></span><a class="headerlink" href="#nmmo.io.action.Exchange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.io.action.BecomeSkynet">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">BecomeSkynet</span></span><a class="headerlink" href="#nmmo.io.action.BecomeSkynet" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.io.action.</span></span><span class="sig-name descname"><span class="pre">BecomeSkynet</span></span><a class="headerlink" href="#nmmo.io.action.BecomeSkynet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
