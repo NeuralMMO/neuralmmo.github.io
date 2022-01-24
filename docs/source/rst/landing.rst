@@ -10,7 +10,7 @@
 ..
   **News:** We have released an open call for collaborations following several recent usability improvements and a successful pilot project
 
-**Quick links:** `Github <https://github.com/neuralmmo>`_ | `Discord <https://discord.gg/BkMmFUC>`_ | `Twitter <https://twitter.com/jsuarez5341>`_ | `NeurIPS 2021 <http://arxiv.org/abs/2110.07594>`_
+**Quick links:** `Github <https://github.com/neuralmmo>`_ | `Discord <https://discord.gg/BkMmFUC>`_ | `Twitter <https://twitter.com/jsuarez5341>`_ | `NeurIPS 2021 Preprint <http://arxiv.org/abs/2110.07594>`_
 
 |icon| Introduction
 ###################
@@ -63,6 +63,8 @@ The associated poster provides a high level overview of the workflow intended to
 
 .. figure:: /resource/figure/web/NMMO_NeurIPS2021_Poster.jpg
 
+|
+
 |icon| Installation
 ###################
 
@@ -114,12 +116,19 @@ You can also install headless or entirely from source (WanDB setup and RLlib pat
 |icon| Gallary
 ##############
 
-Rendered Map and UI
-*******************
+Multiscale Terrain Generation
+*****************************
 
-.. figure:: /resource/image/rendered_map.png
+.. figure:: /resource/image/large_map.png
+
+|
+
+Renderer and UI
+***************
 
 .. figure:: /resource/image/stats.png
+
+.. figure:: /resource/image/rendered_map.png
 
 | 
 

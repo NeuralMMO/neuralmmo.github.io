@@ -5,6 +5,8 @@
 
 .. figure:: /resource/image/splash.png
 
+|
+
 The baselines repository includes a number of examples. We recommend that new users follow the installation guide first and then run each example while reading this walkthrough.
 
 |icon| Minimal Example
@@ -36,12 +38,11 @@ Neural MMO provides a base Config with Small, Medium, and Large presets and a se
   class DefaultConfig(nmmo.config.Medium, nmmo.config.AllGameSystems):
       pass
 
-Maps will be generated upon environment instantiation according the the provided config and cached at PATH_MAPS for reuse. If you are actively tweaking TERRAIN_ generation parameters, remember to delete the old maps between runs or set FORCE_MAP_GENERATION=True.
+Maps will be generated upon environment instantiation according the the provided config and cached at PATH_MAPS for reuse. If you are actively tweaking TERRAIN_ generation parameters, remember to delete the old maps between runs or set FORCE_MAP_GENERATION=True. Generate previews with --GENERATE_MAP_PREVIEWS.
 
 .. figure:: /resource/image/map.png
-   :caption: Enable image previews with TERRAIN_RENDER. Downscale from 128x128 px/tile by setting the MAP_PREVIEW_DOWNSCALE factor
 
-   Example map from resource/maps/procedural-small/map1/map.png
+|
 
 Customize terrain generation and game balance by overriding preset and game system configuration parameters:
 

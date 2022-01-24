@@ -2,6 +2,8 @@
 
 .. figure:: /resource/image/splash.png
 
+|
+
 |icon| NeurIPS 2021 Dataset Track Supplementary Material
 ########################################################
 

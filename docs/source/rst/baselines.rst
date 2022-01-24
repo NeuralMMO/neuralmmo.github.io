@@ -52,7 +52,7 @@ The main file for the baselines and demo project includes commands for training,
 
 
 Reevaluating/Reproducing the Baseline
-************************
+*************************************
 .. code-block:: python
   :caption: Training and evaluation through Ray Tune with WanDB logging
 

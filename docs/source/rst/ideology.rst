@@ -2,6 +2,8 @@
 
 .. figure:: /resource/image/splash.png
 
+|
+
 |icon| Abstract
 ###############
 

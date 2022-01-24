@@ -8,6 +8,8 @@
 
 .. figure:: /resource/image/splash.png
 
+|
+
 |icon| Foreword
 ###############
 

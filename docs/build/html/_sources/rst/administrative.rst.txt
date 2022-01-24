@@ -21,6 +21,8 @@
 
 .. figure:: /resource/image/splash.png
 
+|
+
 |icon| Authorship, License, Disclaimer
 ######################################
 

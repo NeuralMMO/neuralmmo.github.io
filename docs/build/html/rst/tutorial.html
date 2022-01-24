@@ -235,6 +235,9 @@
   <figure class="align-default">
 <img alt="../_images/splash.png" src="../_images/splash.png" />
 </figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>The baselines repository includes a number of examples. We recommend that new users follow the installation guide first and then run each example while reading this walkthrough.</p>
 <section id="icon-minimal-example">
 <h1><img alt="icon" src="../_images/icon_pixel.png" /> Minimal Example<a class="headerlink" href="#icon-minimal-example" title="Permalink to this headline">¶</a></h1>
@@ -309,7 +312,13 @@
     <span class="k">pass</span>
 </pre></div>
 </div>
-<p>Maps will be generated upon environment instantiation according the the provided config and cached at PATH_MAPS for reuse. If you are actively tweaking <a href="#id1"><span class="problematic" id="id2">TERRAIN_</span></a> generation parameters, remember to delete the old maps between runs or set FORCE_MAP_GENERATION=True.</p>
+<p>Maps will be generated upon environment instantiation according the the provided config and cached at PATH_MAPS for reuse. If you are actively tweaking <a href="#id1"><span class="problematic" id="id2">TERRAIN_</span></a> generation parameters, remember to delete the old maps between runs or set FORCE_MAP_GENERATION=True. Generate previews with –GENERATE_MAP_PREVIEWS.</p>
+<figure class="align-default">
+<img alt="../_images/map1.png" src="../_images/map1.png" />
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>Customize terrain generation and game balance by overriding preset and game system configuration parameters:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExampleCustomConfig</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Small</span><span class="p">,</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Resource</span><span class="p">,</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Progression</span><span class="p">):</span>
     <span class="c1"># Example core config customization</span>
