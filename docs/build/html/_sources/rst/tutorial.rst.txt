@@ -264,8 +264,7 @@ Train from scratch:
 
 We strongly recommend setting up WanDB as per the installation guide, as it will allow you to monitor training. Compare your results to ours in this `notebook <https://github.com/neuralmmo>`_.
 
-Baseline
-########
+|icon| Next Steps
+#################
 
-If you've made it this far, you're ready to use the platform in your own research. Join the Discord for support and consider our open call for research if applicable. We also recommend checking out the `baselines <https://wandb.ai/jsuarez/NeuralMMO/reportlist>`_ to get an idea of what has been done so far.
-
+If you've made it this far, you're ready to use the platform in your own research. Join the Discord for support and consider our open call for research if applicable. We also recommend checking out the baselines to get an idea of what has been done so far.

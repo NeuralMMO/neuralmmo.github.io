@@ -4,13 +4,10 @@
 
 |
 
-|icon| User API
-###############
+Neural MMO provides a pettingzoo compliant environment API, an extensive configuration system, and support for agent scripting, OpenSkill evaluation, custom terrain generation, and overlay visualization. This section is intended as a reference -- the tutorials provide a much better starting point for most users.
 
-Neural MMO provides a pettingzoo compliant environment API, a agent base class, and a deep configuration system
-
-Environment
------------
+|icon| Environment
+##################
 
 .. autoclass:: nmmo.Env
    :members:
@@ -20,23 +17,23 @@ Environment
    :members: __init__, __call__
    :noindex:
 
-Config
-------
+|icon| Config
+#############
 
 .. automodule:: nmmo.config
    :members: Config, Small, Medium, Large, Resource, Combat, Progression, NPC, SequentialLoader, TeamLoader
    :undoc-members:
    :noindex:
 
-Ratings
--------
+|icon| Ratings
+##############
 
 .. autoclass:: nmmo.OpenSkillRating
    :members:
    :noindex:
 
-Scripting
----------
+|icon| Scripting
+################
 
 To support scripted models, we provide a small wrapper class for extracting meaningful attributes from observation tensors. We also expose static definitions of the environment's materials and observation/action spaces. The core environment ships with a random example agent; more are available in the accompanying baselines repository.
 
@@ -62,18 +59,21 @@ To support scripted models, we provide a small wrapper class for extracting mean
    :members: Random
    :noindex:
 
-Procedural Generation
----------------------
+|icon| Procedural Generation
+############################
 
 The default map generator is multioctave perlin noise that is itself seeded using perlin noise to create terrain of varying local frequency. Use the MAP_GENERATOR config argument to supply your own generator classes. We suggest subclassing the default and overriding the generate_map method. For procedural generation beyond maps, customize game system mechanics dynamically to modify mechanics per-environment.
 
-.. automodule:: nmmo.terrain
+.. autoclass:: nmmo.MapGenerator
    :members:
    :noindex:
 
+.. autoclass:: nmmo.Terrain
+   :members:
+   :noindex:
 
-Overlays
---------
+|icon| Overlays
+###############
 
 For visualization, the Overlay API enables users to write custom 2D overlays to be rendered in the Unity3D client
 
@@ -86,10 +86,10 @@ For visualization, the Overlay API enables users to write custom 2D overlays to 
    :members:
    :noindex:
 
-|icon| Developer API
-####################
+|icon| Reference
+################
 
-The doctree below contains automatically generated documentation for the entire project. This is not intended for typical users but is a useful reference for Neural MMO developers and contributors.
+The doctree below contains automatically generated documentation for the entire project. Most users will only need the more thoroughly documented user API above.
 
 .. toctree::
    :maxdepth: 4

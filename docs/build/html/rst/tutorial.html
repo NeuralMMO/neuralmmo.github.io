@@ -42,7 +42,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="User API" href="api.html" />
+    <link rel="next" title="CLI" href="baselines.html" />
     <link rel="prev" title="Introduction" href="landing.html" /> 
 </head>
 
@@ -109,12 +109,22 @@
 <li class="toctree-l1"><a class="reference internal" href="#icon-terrain-generation"> Terrain Generation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-training"> Training</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#baseline">Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-next-steps"> Next Steps</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api.html"> User API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html#icon-developer-api"> Developer API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html"> CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html#reproduce-reevaluate">Reproduce/Reevaluate</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html"> Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-config"> Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-ratings"> Ratings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-scripting"> Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-procedural-generation"> Procedural Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-overlays"> Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-reference"> Reference</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
@@ -125,13 +135,6 @@
 <li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-progression"> Progression</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="baselines.html"> CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-evaluation-protocol"> Evaluation Protocol</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-small-maps"> Small Maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-large-maps"> Large Maps</a></li>
-</ul>
 <p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="updates.html"> Video Demos</a></li>
@@ -140,22 +143,6 @@
 <li class="toctree-l1"><a class="reference internal" href="updates.html#icon-update-slides"> Update Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updates.html#icon-additional-links"> Additional Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updates.html#icon-patch-notes-version-history"> Patch Notes + Version History</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html"> Foreword</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-contributing"> Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-code-structure"> Code Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-style"> Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-tech-stack"> Tech Stack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-client-map-representation"> Client Map Representation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-observation-representation"> Observation Representation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-model-io"> Model IO</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Ideology</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ideology.html"> Abstract</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ideology.html#icon-failure-modes"> Failure Modes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
 <ul>
@@ -689,9 +676,9 @@ Note that these are noisy estimates on one env
 </div>
 <p>We strongly recommend setting up WanDB as per the installation guide, as it will allow you to monitor training. Compare your results to ours in this <a class="reference external" href="https://github.com/neuralmmo">notebook</a>.</p>
 </section>
-<section id="baseline">
-<h1>Baseline<a class="headerlink" href="#baseline" title="Permalink to this headline">¶</a></h1>
-<p>If you’ve made it this far, you’re ready to use the platform in your own research. Join the Discord for support and consider our open call for research if applicable. We also recommend checking out the <a class="reference external" href="https://wandb.ai/jsuarez/NeuralMMO/reportlist">baselines</a> to get an idea of what has been done so far.</p>
+<section id="icon-next-steps">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Next Steps<a class="headerlink" href="#icon-next-steps" title="Permalink to this headline">¶</a></h1>
+<p>If you’ve made it this far, you’re ready to use the platform in your own research. Join the Discord for support and consider our open call for research if applicable. We also recommend checking out the baselines to get an idea of what has been done so far.</p>
 </section>
 
 
@@ -700,7 +687,7 @@ Note that these are noisy estimates on one env
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="api.html" class="btn btn-neutral float-right" title="User API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="baselines.html" class="btn btn-neutral float-right" title="CLI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="landing.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

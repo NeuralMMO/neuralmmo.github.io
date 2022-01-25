@@ -15,7 +15,13 @@ Index
 
 .. toctree::
    :maxdepth: 8
-   :caption: Documentation
+   :caption: Baselines
+
+   rst/baselines
+
+.. toctree::
+   :maxdepth: 8
+   :caption: API
 
    rst/api
 
@@ -27,28 +33,10 @@ Index
 
 .. toctree::
    :maxdepth: 8
-   :caption: Baselines
-
-   rst/baselines
-
-.. toctree::
-   :maxdepth: 8
    :caption: Updates
 
    rst/updates
 
-.. toctree::
-   :maxdepth: 8
-   :caption: Developer Guide
-
-   rst/devguide
-
-.. toctree::
-   :maxdepth: 8
-   :caption: Ideology
-
-   rst/ideology
- 
 .. toctree::
    :maxdepth: 8
    :caption: Administrative

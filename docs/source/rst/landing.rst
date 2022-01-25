@@ -3,7 +3,14 @@
 .. role:: python(code)
     :language: python
 
-.. figure:: /resource/image/splash.png
+.. raw:: html
+
+    <center>
+      <video width=100% height="auto" nocontrols autoplay muted loop>
+        <source src="_static/zoom.mp4" type="video/mp4">
+        Your browser does not support this mp4.
+      </video>
+    </center>
 
 |
 
@@ -15,19 +22,7 @@
 |icon| Introduction
 ###################
 
-Neural MMO is an open-source and computationally accessible research platform that simulates populations of agents in procedurally generated virtual worlds. We support basic foraging tasks involving a few agents for a couple of minutes, thousand-agent joint survival + exploration + combat over multiple hours, and everything between.
-
-.. raw:: html
-
-    <center>
-      <video width=100% height="auto" nocontrols autoplay muted loop>
-        <source src="_static/zoom.mp4" type="video/mp4">
-        Your browser does not support this mp4.
-      </video>
-    </center>
-
-|
-Environments provide a standard PettingZoo API and support though our community `Discord <https://discord.gg/BkMmFUC>`_
+Neural MMO is an open-source and computationally accessible research platform that simulates populations of agents in procedurally generated virtual worlds. We support basic foraging tasks involving a few agents for a couple of minutes, thousand-agent joint survival + exploration + combat over multiple hours, and everything between. Our goal is to support a broad base of multiagent research that would be impractical or impossible to conduct on other environments.
 
 .. code-block:: python
 
@@ -40,7 +35,7 @@ Environments provide a standard PettingZoo API and support though our community 
        actions = {} # Compute with your model
        obs, rewards, dones, infos = env.step(actions)
 
-Our goal is to support a broad base of multiagent research that would be impractical or impossible to conduct on other environments. The project was most recently `published <http://arxiv.org/abs/2110.07594>`_ at NeurIPS 2021 (full list).
+Environments provide a standard PettingZoo API. Join our community Discord and post in `#support <https://discord.gg/GhDQT4zKKW>`_ for help (do not raise Github issues for support). See the quick links above for source code, baselines, latest publications, social media, and news!
 
 .. youtube:: hYYA8_wFF7Q
    :width: 100%
@@ -89,8 +84,6 @@ Download the latest client `here <https://github.com/neuralmmo/client/releases>`
 
 **Troubleshooting:** If you are training on GPU and get an IndexError error on self.device, set gpu_ids=[0] in ray/rllib/policy/torch_policy.py:150 (typically in ~/anaconda3/lib/python3.8/site-packages)
 
-**Support:** Post in #support on the `[Discord] <https://discord.gg/BkMmFUC>`_. Seriously, do this. Do not raise Github issues for support. You will get a reply much faster (often instantly) on Discord.
-
 You can also install headless or entirely from source (WanDB setup and RLlib patch still required)
 
 .. code-block:: python
@@ -113,19 +106,10 @@ You can also install headless or entirely from source (WanDB setup and RLlib pat
 |icon| Gallary
 ##############
 
-Multiscale Terrain Generation
-*****************************
+Perspective and UI
+******************
 
-.. figure:: /resource/image/large_map.png
-
-|
-
-Renderer and UI
-***************
-
-.. figure:: /resource/image/stats.png
-
-.. figure:: /resource/image/rendered_map.png
+.. figure:: /resource/image/minimal.png
 
 | 
 
@@ -136,9 +120,40 @@ Overlays
 
 | 
 
+Multiscale Terrain Generation
+*****************************
+
+.. figure:: /resource/image/large_map.png
+
+|
+
+Overhead Render
+***************
+
+.. figure:: /resource/image/rendered_map.png
+
+| 
+
 .. _collaborations:
 
 |icon| Call for Collaborations
 ##############################
 
-We are launching an open call for research on the platform in early February. Check back soon for news!
+Following the platform's recent `publication <http://arxiv.org/abs/2110.07594>`_ in NeurIPS 2021, we are excited to announce an open call for collaborations!
+
+Eligibility *(at least one of)*
+   - You are affiliated with an academic lab (professor/PhD student/postdoc)
+   - You have previously published in a relevent area (RL, PCG, etc)
+   - You are a corporate researcher with substantial freedom to publish
+   - You have a substantial engineering background and want to help with core development
+
+Excepting prospective developers, your objectives should include first-author publication at a top venue. We (Joseph Suarez and Phillip Isola, MIT) would be included as second authors. Compared to working independently, we can offer:
+
+Benefits:
+   - Extended support and custom features
+   - Project-specific guidance, having developed the platform
+   - An invitation to our monthly group meetings
+   - Scoop insurance (we avoid duplicate projects)
+   - Introductions to other practitioners in our community
+
+Contact me via Discord or email (in the publication) if you are interested.

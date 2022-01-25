@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>User API &mdash; Neural MMO 1.5.3.11 documentation</title>
+  <title>Environment &mdash; Neural MMO 1.5.3.11 documentation</title>
   
 
   
@@ -43,7 +43,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="nmmo package" href="../autodoc/nmmo.html" />
-    <link rel="prev" title="Minimal Example" href="tutorial.html" /> 
+    <link rel="prev" title="CLI" href="baselines.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,20 +105,22 @@
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-terrain-generation"> Terrain Generation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-training"> Training</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html#baseline">Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html#icon-next-steps"> Next Steps</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html"> CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html#reproduce-reevaluate">Reproduce/Reevaluate</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#"> User API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#environment">Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#config">Config</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ratings">Ratings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#scripting">Scripting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#procedural-generation">Procedural Generation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#overlays">Overlays</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="#icon-developer-api"> Developer API</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"> Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-config"> Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-ratings"> Ratings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-scripting"> Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-procedural-generation"> Procedural Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-overlays"> Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-reference"> Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../autodoc/nmmo.html">nmmo package</a></li>
 </ul>
 </li>
@@ -132,13 +134,6 @@
 <li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-progression"> Progression</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="baselines.html"> CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-evaluation-protocol"> Evaluation Protocol</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-small-maps"> Small Maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-large-maps"> Large Maps</a></li>
-</ul>
 <p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="updates.html"> Video Demos</a></li>
@@ -147,22 +142,6 @@
 <li class="toctree-l1"><a class="reference internal" href="updates.html#icon-update-slides"> Update Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updates.html#icon-additional-links"> Additional Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updates.html#icon-patch-notes-version-history"> Patch Notes + Version History</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html"> Foreword</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-contributing"> Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-code-structure"> Code Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-style"> Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-tech-stack"> Tech Stack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-client-map-representation"> Client Map Representation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-observation-representation"> Observation Representation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devguide.html#icon-model-io"> Model IO</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Ideology</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ideology.html"> Abstract</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ideology.html#icon-failure-modes"> Failure Modes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
 <ul>
@@ -221,7 +200,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li> User API</li>
+      <li> Environment</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -246,11 +225,9 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="icon-user-api">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> User API<a class="headerlink" href="#icon-user-api" title="Permalink to this headline">¶</a></h1>
-<p>Neural MMO provides a pettingzoo compliant environment API, a agent base class, and a deep configuration system</p>
-<section id="environment">
-<h2>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h2>
+<p>Neural MMO provides a pettingzoo compliant environment API, an extensive configuration system, and support for agent scripting, OpenSkill evaluation, custom terrain generation, and overlay visualization. This section is intended as a reference – the tutorials provide a much better starting point for most users.</p>
+<section id="icon-environment">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Environment<a class="headerlink" href="#icon-environment" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
@@ -596,8 +573,8 @@ computation costs, we omit lava tiles from this method</p>
 </dd></dl>
 
 </section>
-<section id="config">
-<h2>Config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h2>
+<section id="icon-config">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Config<a class="headerlink" href="#icon-config" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.config.</span></span><span class="sig-name descname"><span class="pre">Config</span></span></dt>
@@ -1244,8 +1221,8 @@ and allows lower level attackers to hit stronger opponents</p>
 </dd></dl>
 
 </section>
-<section id="ratings">
-<h2>Ratings<a class="headerlink" href="#ratings" title="Permalink to this headline">¶</a></h2>
+<section id="icon-ratings">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Ratings<a class="headerlink" href="#icon-ratings" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">OpenSkillRating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">33.333333333333336</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor_mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1500</span></span></em><span class="sig-paren">)</span></dt>
@@ -1291,8 +1268,8 @@ Provide either ranks OR policy_ids and scores</p>
 </dd></dl>
 
 </section>
-<section id="scripting">
-<h2>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline">¶</a></h2>
+<section id="icon-scripting">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Scripting<a class="headerlink" href="#icon-scripting" title="Permalink to this headline">¶</a></h1>
 <p>To support scripted models, we provide a small wrapper class for extracting meaningful attributes from observation tensors. We also expose static definitions of the environment’s materials and observation/action spaces. The core environment ships with a random example agent; more are available in the accompanying baselines repository.</p>
 <dl class="py class">
 <dt class="sig sig-object py">
@@ -1664,12 +1641,52 @@ Provide either ranks OR policy_ids and scores</p>
 </dd></dl>
 
 </section>
-<section id="procedural-generation">
-<h2>Procedural Generation<a class="headerlink" href="#procedural-generation" title="Permalink to this headline">¶</a></h2>
+<section id="icon-procedural-generation">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Procedural Generation<a class="headerlink" href="#icon-procedural-generation" title="Permalink to this headline">¶</a></h1>
 <p>The default map generator is multioctave perlin noise that is itself seeded using perlin noise to create terrain of varying local frequency. Use the MAP_GENERATOR config argument to supply your own generator classes. We suggest subclassing the default and overriding the generate_map method. For procedural generation beyond maps, customize game system mechanics dynamically to modify mechanics per-environment.</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">MapGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Procedural map generation</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">loadTextures</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Called during setup; loads and resizes tile pngs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">generate_all_maps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Generates NMAPS maps according to generate_map</p>
+<p>Provides additional utilities for saving to .npy and rendering png previews</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">generate_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Generate a single map</p>
+<p>The default method is a relatively complex multiscale perlin noise method.
+This is not just standard multioctave noise – we are seeding multioctave noise
+itself with perlin noise to create localized deviations in scale, plus additional
+biasing to decrease terrain frequency towards the center of the map</p>
+<p>We found that this creates more visually interesting terrain and more deviation in
+required planning horizon across different parts of the map. This is by no means a
+gold-standard: you are free to override this method and create customized terrain
+generation more suitable for your application. Simply pass MAP_GENERATOR=YourMapGenClass
+as a config argument.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Terrain</span></span></dt>
+<dd><p>Terrain material class; populated at runtime</p>
+</dd></dl>
+
 </section>
-<section id="overlays">
-<h2>Overlays<a class="headerlink" href="#overlays" title="Permalink to this headline">¶</a></h2>
+<section id="icon-overlays">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Overlays<a class="headerlink" href="#icon-overlays" title="Permalink to this headline">¶</a></h1>
 <p>For visualization, the Overlay API enables users to write custom 2D overlays to be rendered in the Unity3D client</p>
 <dl class="py class">
 <dt class="sig sig-object py">
@@ -1735,10 +1752,9 @@ can be used to gain insight about agent behaviors.</p>
 </dd></dl>
 
 </section>
-</section>
-<section id="icon-developer-api">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Developer API<a class="headerlink" href="#icon-developer-api" title="Permalink to this headline">¶</a></h1>
-<p>The doctree below contains automatically generated documentation for the entire project. This is not intended for typical users but is a useful reference for Neural MMO developers and contributors.</p>
+<section id="icon-reference">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Reference<a class="headerlink" href="#icon-reference" title="Permalink to this headline">¶</a></h1>
+<p>The doctree below contains automatically generated documentation for the entire project. Most users will only need the more thoroughly documented user API above.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../autodoc/nmmo.html">nmmo package</a><ul>
@@ -1809,7 +1825,7 @@ can be used to gain insight about agent behaviors.</p>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../autodoc/nmmo.html" class="btn btn-neutral float-right" title="nmmo package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="tutorial.html" class="btn btn-neutral float-left" title="Minimal Example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="baselines.html" class="btn btn-neutral float-left" title="CLI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

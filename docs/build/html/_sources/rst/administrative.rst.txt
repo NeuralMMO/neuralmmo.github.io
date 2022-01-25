@@ -26,7 +26,12 @@
 |icon| Authorship, License, Disclaimer
 ######################################
 
-I, `[Joseph Suarez] <https://github.com/jsuarez5341>`_, am the primary author of Neural MMO. I plan to continue development for at least the duration of my EECS PhD at MIT or until someone convinces me that there is a better way to solve AGI. Everything written in the source and documentation is my own opinion. I do not speak for OpenAI, MIT, Clare, Phillip, Igor, or anyone else involved in the project.
+I, `[Joseph Suarez] <https://people.csail.mit.edu/jsuarez/>`_, am the primary author of Neural MMO. I plan to continue development for at least the duration of my EECS PhD at MIT or until someone convinces me that there is a better way to solve AGI. Everything written in the source and documentation is my own opinion. I do not speak for OpenAI, MIT, Clare, Phillip, Igor, or anyone else involved in the project.
+
+2022 (winter): v1.5.2-3 releases
+   - Neural MMO v1.5.2 published at NeurIPS 2021
+   = AICrowd competition concludes
+   - Open call for collaborations
 
 2021 (summer): v1.5.1 release
    - Neural MMO v1.5.1 AICrowd competition launched
@@ -68,15 +73,15 @@ Open source contributors, listed by time since latest contribution. Discord hand
 |icon| Assets
 #############
 
-Some assets used in this project belong to `[Jagex] <https://www.jagex.com/en-GB/>`_, the creators of Runescape, such as
+Some assets previously used in this project belong to `[Jagex] <https://www.jagex.com/en-GB/>`_, the creators of Runescape, such as
 
 |ags| |earth| |water| |fire| |air|
 
-We currently use them for flavor as an homage to the game that inspired the project. We believe these fall under fair use as a not-for-profit project for the advancement of artificial intelligence research -- however, we are more than happy to remove them upon request. We do own the 2D and 3D files for agents, represented by three neurons.
+We have since removed them from prominant use but have left a few as an homage to the game that inspired the project. We believe these fall under fair use as a not-for-profit project for the advancement of artificial intelligence research -- however, we are more than happy to remove them upon request. We do own the 2D and 3D files for agents, represented by three neurons.
 
 |red| |blue| |green| |fuchsia| |orange| |mint| |purple| |spring| |yellow| |cyan| |magenta| |sky|
 
 |ags| Namesake
 ##############
 
-Neural MMO was originally named "Projekt: Godsword" (God-Sword). The name comes from two sources: CD Projekt Red, my personal favorite game dev studio, and OldSchool Runescape, which contains an iconic set of weapons called godswords. The latter is a particularly good model for AI environments; the former is more of a soft inspiration. While we now refer to the project simply as (the first) Neural MMO, the source files and API retain several of the original naming conventions for flavor.
+Neural MMO was originally named "Projekt: Godsword" (God-Sword). The name comes from two sources: CD Projekt Red, my personal favorite game dev studio, and OldSchool Runescape, which contains an iconic set of weapons called godswords. The latter is a particularly good model for AI environments; the former is more of a soft inspiration. We now refer to the project simply as (the first) Neural MMO.

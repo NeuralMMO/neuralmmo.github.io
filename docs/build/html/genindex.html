@@ -102,12 +102,22 @@
 <li class="toctree-l1"><a class="reference internal" href="rst/tutorial.html#icon-terrain-generation"> Terrain Generation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/tutorial.html#icon-training"> Training</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/tutorial.html#baseline">Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/tutorial.html#icon-next-steps"> Next Steps</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="rst/api.html"> User API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/api.html#icon-developer-api"> Developer API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html"> CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#reproduce-reevaluate">Reproduce/Reevaluate</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rst/api.html"> Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/api.html#icon-config"> Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/api.html#icon-ratings"> Ratings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/api.html#icon-scripting"> Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/api.html#icon-procedural-generation"> Procedural Generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/api.html#icon-overlays"> Overlays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/api.html#icon-reference"> Reference</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
@@ -118,13 +128,6 @@
 <li class="toctree-l1"><a class="reference internal" href="rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/game_wiki.html#icon-progression"> Progression</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html"> CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#icon-evaluation-protocol"> Evaluation Protocol</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#icon-small-maps"> Small Maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#icon-large-maps"> Large Maps</a></li>
-</ul>
 <p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="rst/updates.html"> Video Demos</a></li>
@@ -133,22 +136,6 @@
 <li class="toctree-l1"><a class="reference internal" href="rst/updates.html#icon-update-slides"> Update Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/updates.html#icon-additional-links"> Additional Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/updates.html#icon-patch-notes-version-history"> Patch Notes + Version History</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="rst/devguide.html"> Foreword</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/devguide.html#icon-contributing"> Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/devguide.html#icon-code-structure"> Code Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/devguide.html#icon-style"> Style</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/devguide.html#icon-tech-stack"> Tech Stack</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/devguide.html#icon-client-map-representation"> Client Map Representation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/devguide.html#icon-observation-representation"> Observation Representation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/devguide.html#icon-model-io"> Model IO</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Ideology</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="rst/ideology.html"> Abstract</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/ideology.html#icon-failure-modes"> Failure Modes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
 <ul>
@@ -3985,8 +3972,12 @@
         <li><a href="autodoc/nmmo.html#nmmo.Env.terminal">(nmmo.Env method)</a>
 </li>
       </ul></li>
-      <li><a href="autodoc/nmmo.core.terrain.html#nmmo.core.terrain.Terrain">Terrain (class in nmmo.core.terrain)</a>
+      <li><a href="autodoc/nmmo.html#nmmo.Terrain">Terrain (class in nmmo)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.core.terrain.html#nmmo.core.terrain.Terrain">(class in nmmo.core.terrain)</a>
 </li>
+      </ul></li>
       <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.TERRAIN_BORDER">TERRAIN_BORDER (nmmo.core.config.Config attribute)</a>
 
       <ul>
