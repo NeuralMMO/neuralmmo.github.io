@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Introduction &mdash; Neural MMO 1.5.3.11 documentation</title>
+  <title>Introduction &mdash; Neural MMO 1.5.3.13 documentation</title>
   
 
   
@@ -92,7 +92,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#"> Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-installation"> Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#icon-gallary"> Gallary</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="#icon-gallery"> Gallery</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#perspective-and-ui">Perspective and UI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#overlays">Overlays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#multiscale-terrain-generation">Multiscale Terrain Generation</a></li>
@@ -287,7 +287,7 @@
 </div>
 </div>
 <p>Download the latest client <a class="reference external" href="https://github.com/neuralmmo/client/releases">here</a> (WSL users: do this on your Windows host). Start the demo and run the executable for your platform in client/UnityClient/. After a few seconds, the demo console will show a connection message and the client will load the map. The on-screen instructions demonstrate how to pan and zoom. You can also click on agents to examine their skill levels. The in-game console (which you can toggle with tab) gives you access to a number of overlay visualiztions.</p>
-<p><strong>Required RLlib patch:</strong> Add <cite>custom_metrics[k] = filt; continue</cite> after line 175 in your RLlib metrics file (usually ~/anaconda3/lib/python3.8/site-packages/ray/rllib/evaluation/metrics.py)</p>
+<p><strong>Required RLlib patch:</strong> Add <cite>custom_metrics[k] = v_list; continue</cite> after line 193 (175 pre-master) in your RLlib metrics file (usually ~/anaconda3/lib/python3.8/site-packages/ray/rllib/evaluation/metrics.py)</p>
 <p><strong>Troubleshooting:</strong> If you are training on GPU and get an IndexError error on self.device, set gpu_ids=[0] in ray/rllib/policy/torch_policy.py:150 (typically in ~/anaconda3/lib/python3.8/site-packages)</p>
 <p>You can also install headless or entirely from source (WanDB setup and RLlib patch still required)</p>
 <div class="literal-block-wrapper docutils container" id="id2">
@@ -310,8 +310,8 @@
 </div>
 </div>
 </section>
-<section id="icon-gallary">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Gallary<a class="headerlink" href="#icon-gallary" title="Permalink to this headline">¶</a></h1>
+<section id="icon-gallery">
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Gallery<a class="headerlink" href="#icon-gallery" title="Permalink to this headline">¶</a></h1>
 <section id="perspective-and-ui">
 <h2>Perspective and UI<a class="headerlink" href="#perspective-and-ui" title="Permalink to this headline">¶</a></h2>
 <figure class="align-default">

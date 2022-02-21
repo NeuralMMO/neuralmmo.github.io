@@ -80,7 +80,7 @@ Official support: Ubuntu 20.04, WSL, and MacOS. Tested with Anaconda Python 3.9
 
 Download the latest client `here <https://github.com/neuralmmo/client/releases>`_ (WSL users: do this on your Windows host). Start the demo and run the executable for your platform in client/UnityClient/. After a few seconds, the demo console will show a connection message and the client will load the map. The on-screen instructions demonstrate how to pan and zoom. You can also click on agents to examine their skill levels. The in-game console (which you can toggle with tab) gives you access to a number of overlay visualiztions.
 
-**Required RLlib patch:** Add `custom_metrics[k] = filt; continue` after line 175 in your RLlib metrics file (usually ~/anaconda3/lib/python3.8/site-packages/ray/rllib/evaluation/metrics.py)
+**Required RLlib patch:** Add `custom_metrics[k] = v_list; continue` after line 193 (175 pre-master) in your RLlib metrics file (usually ~/anaconda3/lib/python3.8/site-packages/ray/rllib/evaluation/metrics.py)
 
 **Troubleshooting:** If you are training on GPU and get an IndexError error on self.device, set gpu_ids=[0] in ray/rllib/policy/torch_policy.py:150 (typically in ~/anaconda3/lib/python3.8/site-packages)
 
@@ -103,7 +103,7 @@ You can also install headless or entirely from source (WanDB setup and RLlib pat
    
    cd environment && pip install -e .[all]
 
-|icon| Gallary
+|icon| Gallery
 ##############
 
 Perspective and UI
