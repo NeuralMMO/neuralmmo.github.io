@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.lib.utils module &mdash; Neural MMO 1.5.3.13 documentation</title>
+  <title>nmmo.lib.utils module &mdash; Neural MMO 1.5.4.0 documentation</title>
   
 
   
@@ -104,13 +104,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-skill-rating"> Skill Rating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-terrain-generation"> Terrain Generation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-training"> Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-next-steps"> Next Steps</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#reproduce-reevaluate">Reproduce/Reevaluate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Training and Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#reproducing-the-baseline">Reproducing the Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#what-happened-to-rllib">What Happened to RLlib?</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul class="current">
@@ -136,7 +136,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.systems.html">nmmo.systems package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.emulation.html">nmmo.emulation module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.infrastructure.html">nmmo.infrastructure module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.integrations.html">nmmo.integrations module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.version.html">nmmo.version module</a></li>
@@ -250,7 +252,7 @@
 <span id="nmmo-lib-utils-module"></span><h1>nmmo.lib.utils module<a class="headerlink" href="#module-nmmo.lib.utils" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.utils.staticproperty">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">staticproperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fdel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.utils.staticproperty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">staticproperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fdel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.utils.staticproperty" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">property</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.lib.utils.staticproperty.deleter">
@@ -289,13 +291,13 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.utils.classproperty">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">classproperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.utils.classproperty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">classproperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.utils.classproperty" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.utils.Iterable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">Iterable</span></span><a class="headerlink" href="#nmmo.lib.utils.Iterable" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">Iterable</span></span><a class="headerlink" href="#nmmo.lib.utils.Iterable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.lib.utils.Iterable.values">
@@ -312,7 +314,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.utils.StaticIterable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">StaticIterable</span></span><a class="headerlink" href="#nmmo.lib.utils.StaticIterable" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">StaticIterable</span></span><a class="headerlink" href="#nmmo.lib.utils.StaticIterable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.lib.utils.StaticIterable.mro">
@@ -324,7 +326,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.utils.NameComparable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">NameComparable</span></span><a class="headerlink" href="#nmmo.lib.utils.NameComparable" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">NameComparable</span></span><a class="headerlink" href="#nmmo.lib.utils.NameComparable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.lib.utils.NameComparable.mro">
@@ -336,7 +338,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.utils.IterableNameComparable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">IterableNameComparable</span></span><a class="headerlink" href="#nmmo.lib.utils.IterableNameComparable" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.utils.</span></span><span class="sig-name descname"><span class="pre">IterableNameComparable</span></span><a class="headerlink" href="#nmmo.lib.utils.IterableNameComparable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.lib.utils.Iterable" title="nmmo.lib.utils.Iterable"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.utils.Iterable</span></code></a>, <a class="reference internal" href="#nmmo.lib.utils.NameComparable" title="nmmo.lib.utils.NameComparable"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.utils.NameComparable</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.lib.utils.IterableNameComparable.mro">

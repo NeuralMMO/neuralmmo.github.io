@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.core.agent module &mdash; Neural MMO 1.5.3.13 documentation</title>
+  <title>nmmo.core.agent module &mdash; Neural MMO 1.5.4.0 documentation</title>
   
 
   
@@ -104,13 +104,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-skill-rating"> Skill Rating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-terrain-generation"> Terrain Generation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-training"> Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-next-steps"> Next Steps</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#reproduce-reevaluate">Reproduce/Reevaluate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Training and Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#reproducing-the-baseline">Reproducing the Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#what-happened-to-rllib">What Happened to RLlib?</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul class="current">
@@ -136,7 +136,9 @@
 <li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.lib.html">nmmo.lib package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.systems.html">nmmo.systems package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.emulation.html">nmmo.emulation module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.infrastructure.html">nmmo.infrastructure module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.integrations.html">nmmo.integrations module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.version.html">nmmo.version module</a></li>
@@ -250,7 +252,7 @@
 <span id="nmmo-core-agent-module"></span><h1>nmmo.core.agent module<a class="headerlink" href="#module-nmmo.core.agent" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.agent.Agent">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.agent.</span></span><span class="sig-name descname"><span class="pre">Agent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.agent.Agent" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.core.agent.</span></span><span class="sig-name descname"><span class="pre">Agent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.agent.Agent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Base class for agents</p>
 <dl class="field-list simple">
@@ -263,19 +265,19 @@
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.agent.Agent.scripted">
-<span class="sig-name descname"><span class="pre">scripted</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.agent.Agent.scripted" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">scripted</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.agent.Agent.scripted" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.agent.Agent.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Neural_'</span></em><a class="headerlink" href="#nmmo.core.agent.Agent.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Neural_'</span></em><a class="headerlink" href="#nmmo.core.agent.Agent.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.agent.Random">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.agent.</span></span><span class="sig-name descname"><span class="pre">Random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.agent.Random" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.core.agent.</span></span><span class="sig-name descname"><span class="pre">Random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.agent.Random" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.core.agent.Agent" title="nmmo.core.agent.Agent"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.agent.Agent</span></code></a></p>
 <p>Moves randomly, including bumping into things and falling into lava</p>
 <p>Base class for agents</p>
@@ -289,12 +291,12 @@
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.agent.Random.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Neural_'</span></em><a class="headerlink" href="#nmmo.core.agent.Random.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Neural_'</span></em><a class="headerlink" href="#nmmo.core.agent.Random.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.agent.Random.scripted">
-<span class="sig-name descname"><span class="pre">scripted</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.agent.Random.scripted" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">scripted</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.agent.Random.scripted" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

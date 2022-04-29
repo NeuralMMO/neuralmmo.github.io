@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Index &mdash; Neural MMO 1.5.3.13 documentation</title>
+  <title>Index &mdash; Neural MMO 1.5.4.0 documentation</title>
   
 
   
@@ -101,13 +101,13 @@
 <li class="toctree-l1"><a class="reference internal" href="rst/tutorial.html#icon-skill-rating"> Skill Rating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/tutorial.html#icon-terrain-generation"> Terrain Generation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/tutorial.html#icon-training"> Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/tutorial.html#icon-next-steps"> Next Steps</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html"> CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#reproduce-reevaluate">Reproduce/Reevaluate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html"> Training and Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#reproducing-the-baseline">Reproducing the Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#what-happened-to-rllib">What Happened to RLlib?</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
@@ -261,6 +261,10 @@
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.action_space">(nmmo.Env method)</a>
 </li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.action_space">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.action_space">(nmmo.integrations.SB3Env method)</a>
+</li>
       </ul></li>
       <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.NPCManager.actions">actions() (nmmo.core.realm.NPCManager method)</a>
 </li>
@@ -338,12 +342,16 @@
       </ul></li>
       <li><a href="autodoc/nmmo.lib.material.html#nmmo.lib.material.All">All (class in nmmo.lib.material)</a>
 </li>
-      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.AllGameSystems">AllGameSystems (class in nmmo.core.config)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autodoc/nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating.anchor_baseline">anchor_baseline() (nmmo.lib.rating.OpenSkillRating method)</a>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.AllGameSystems">AllGameSystems (class in nmmo.core.config)</a>
 </li>
+      <li><a href="autodoc/nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating.anchor_baseline">anchor_baseline() (nmmo.lib.rating.OpenSkillRating method)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.html#nmmo.OpenSkillRating.anchor_baseline">(nmmo.OpenSkillRating method)</a>
+</li>
+      </ul></li>
       <li><a href="autodoc/nmmo.systems.ai.move.html#nmmo.systems.ai.move.antipathfind">antipathfind() (in module nmmo.systems.ai.move)</a>
 </li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.Application">Application (class in nmmo.websocket)</a>
@@ -456,6 +464,8 @@
         <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.BASE_HEALTH">(nmmo.core.config.Small attribute)</a>
 </li>
       </ul></li>
+      <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.batch_obs">batch_obs() (in module nmmo.emulation)</a>
+</li>
       <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.BecomeSkynet">BecomeSkynet (class in nmmo.io.action)</a>
 </li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.beginMessage">beginMessage() (nmmo.websocket.GodswordServerProtocol method)</a>
@@ -464,10 +474,10 @@
 </li>
       <li><a href="autodoc/nmmo.lib.log.html#nmmo.lib.log.Benchmarker.bench">bench() (nmmo.lib.log.Benchmarker method)</a>
 </li>
-      <li><a href="autodoc/nmmo.lib.log.html#nmmo.lib.log.Benchmarker">Benchmarker (class in nmmo.lib.log)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autodoc/nmmo.lib.log.html#nmmo.lib.log.Benchmarker">Benchmarker (class in nmmo.lib.log)</a>
+</li>
       <li><a href="autodoc/nmmo.lib.colors.html#nmmo.lib.colors.Neon.BLACK">BLACK (nmmo.lib.colors.Neon attribute)</a>
 
       <ul>
@@ -530,6 +540,10 @@
 </li>
       <li><a href="autodoc/nmmo.lib.utils.html#nmmo.lib.utils.classproperty">classproperty (class in nmmo.lib.utils)</a>
 </li>
+      <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.cleanrl_vec_envs">cleanrl_vec_envs() (in module nmmo.integrations)</a>
+</li>
+      <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv">CleanRLEnv (class in nmmo.integrations)</a>
+</li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.WSServerFactory.clientConnectionLost">clientConnectionLost() (nmmo.websocket.WSServerFactory method)</a>
 </li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.WSServerFactory.clientConnectionMade">clientConnectionMade() (nmmo.websocket.WSServerFactory method)</a>
@@ -550,6 +564,10 @@
 
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.close">(nmmo.Env method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.close">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.close">(nmmo.integrations.SB3Env method)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.CLOSE_STATUS_CODE_ABNORMAL_CLOSE">CLOSE_STATUS_CODE_ABNORMAL_CLOSE (nmmo.websocket.GodswordServerProtocol attribute)</a>
@@ -721,6 +739,8 @@
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.connectionLost">connectionLost() (nmmo.websocket.GodswordServerProtocol method)</a>
 </li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.connectionMade">connectionMade() (nmmo.websocket.GodswordServerProtocol method)</a>
+</li>
+      <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.const_horizon">const_horizon() (in module nmmo.emulation)</a>
 </li>
       <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.NodeType.CONSTANT">CONSTANT (nmmo.io.action.NodeType attribute)</a>
 </li>
@@ -965,6 +985,10 @@
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.dense">(nmmo.Env method)</a>
 </li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.dense">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.dense">(nmmo.integrations.SB3Env method)</a>
+</li>
       </ul></li>
       <li><a href="autodoc/nmmo.lib.colors.html#nmmo.lib.colors.Tier.DIAMOND">DIAMOND (nmmo.lib.colors.Tier attribute)</a>
 </li>
@@ -1192,6 +1216,54 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.EMULATE_CONST_HORIZON">EMULATE_CONST_HORIZON (nmmo.core.config.Config attribute)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.EMULATE_CONST_HORIZON">(nmmo.core.config.Default attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.EMULATE_CONST_HORIZON">(nmmo.core.config.Large attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.EMULATE_CONST_HORIZON">(nmmo.core.config.Medium attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.EMULATE_CONST_HORIZON">(nmmo.core.config.Small attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.EMULATE_CONST_NENT">EMULATE_CONST_NENT (nmmo.core.config.Config attribute)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.EMULATE_CONST_NENT">(nmmo.core.config.Default attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.EMULATE_CONST_NENT">(nmmo.core.config.Large attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.EMULATE_CONST_NENT">(nmmo.core.config.Medium attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.EMULATE_CONST_NENT">(nmmo.core.config.Small attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.EMULATE_FLAT_ATN">EMULATE_FLAT_ATN (nmmo.core.config.Config attribute)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.EMULATE_FLAT_ATN">(nmmo.core.config.Default attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.EMULATE_FLAT_ATN">(nmmo.core.config.Large attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.EMULATE_FLAT_ATN">(nmmo.core.config.Medium attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.EMULATE_FLAT_ATN">(nmmo.core.config.Small attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.EMULATE_FLAT_OBS">EMULATE_FLAT_OBS (nmmo.core.config.Config attribute)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.EMULATE_FLAT_OBS">(nmmo.core.config.Default attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.EMULATE_FLAT_OBS">(nmmo.core.config.Large attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.EMULATE_FLAT_OBS">(nmmo.core.config.Medium attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.EMULATE_FLAT_OBS">(nmmo.core.config.Small attribute)</a>
+</li>
+      </ul></li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.endMessage">endMessage() (nmmo.websocket.GodswordServerProtocol method)</a>
 </li>
       <li><a href="autodoc/nmmo.entity.entity.html#nmmo.entity.entity.Entity">Entity (class in nmmo.entity.entity)</a>
@@ -1422,6 +1494,16 @@
 
       <ul>
         <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Action.hook">(nmmo.io.action.Action method)</a>
+</li>
+      </ul></li>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.HORIZON">HORIZON (nmmo.core.config.Default attribute)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.HORIZON">(nmmo.core.config.Large attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.HORIZON">(nmmo.core.config.Medium attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.HORIZON">(nmmo.core.config.Small attribute)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.systems.ai.policy.html#nmmo.systems.ai.policy.hostile">hostile() (in module nmmo.systems.ai.policy)</a>
@@ -1768,9 +1850,21 @@
       </ul></li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.WSServerFactory.isServer">isServer (nmmo.websocket.WSServerFactory attribute)</a>
 </li>
-      <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.EntityGroup.items">items() (nmmo.core.realm.EntityGroup method)</a>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.items">items() (nmmo.core.config.Config method)</a>
 
       <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.items">(nmmo.core.config.Default method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.items">(nmmo.core.config.Large method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.items">(nmmo.core.config.Medium method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.items">(nmmo.core.config.Small method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Template.items">(nmmo.core.config.Template method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.EntityGroup.items">(nmmo.core.realm.EntityGroup method)</a>
+</li>
         <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.NPCManager.items">(nmmo.core.realm.NPCManager method)</a>
 </li>
         <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.PlayerManager.items">(nmmo.core.realm.PlayerManager method)</a>
@@ -1786,9 +1880,21 @@
 <h2 id="K">K</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.EntityGroup.keys">keys() (nmmo.core.realm.EntityGroup method)</a>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.keys">keys() (nmmo.core.config.Config method)</a>
 
       <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.keys">(nmmo.core.config.Default method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.keys">(nmmo.core.config.Large method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.keys">(nmmo.core.config.Medium method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.keys">(nmmo.core.config.Small method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Template.keys">(nmmo.core.config.Template method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.EntityGroup.keys">(nmmo.core.realm.EntityGroup method)</a>
+</li>
         <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.NPCManager.keys">(nmmo.core.realm.NPCManager method)</a>
 </li>
         <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.PlayerManager.keys">(nmmo.core.realm.PlayerManager method)</a>
@@ -1884,6 +1990,12 @@
 </li>
       <li><a href="autodoc/nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.lInfty">lInfty() (in module nmmo.systems.ai.utils)</a>
 </li>
+      <li><a href="autodoc/nmmo.core.env.html#nmmo.core.env.Replay.load">load() (nmmo.core.env.Replay class method)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.html#nmmo.Replay.load">(nmmo.Replay class method)</a>
+</li>
+      </ul></li>
       <li><a href="autodoc/nmmo.systems.equipment.html#nmmo.systems.equipment.Loadout">Loadout (class in nmmo.systems.equipment)</a>
 </li>
       <li><a href="autodoc/nmmo.core.terrain.html#nmmo.core.terrain.MapGenerator.loadTextures">loadTextures() (nmmo.core.terrain.MapGenerator method)</a>
@@ -1902,6 +2014,10 @@
 
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.log">(nmmo.Env method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.log">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.log">(nmmo.integrations.SB3Env method)</a>
 </li>
         <li><a href="autodoc/nmmo.lib.log.html#nmmo.lib.log.Blob.log">(nmmo.lib.log.Blob method)</a>
 </li>
@@ -1993,6 +2109,10 @@
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.max_num_agents">(nmmo.Env property)</a>
 </li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.max_num_agents">(nmmo.integrations.CleanRLEnv property)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.max_num_agents">(nmmo.integrations.SB3Env property)</a>
+</li>
       </ul></li>
       <li><a href="autodoc/nmmo.systems.ai.dynamic_programming.html#nmmo.systems.ai.dynamic_programming.max_value_around">max_value_around() (in module nmmo.systems.ai.dynamic_programming)</a>
 </li>
@@ -2027,6 +2147,10 @@
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.metadata">(nmmo.Env attribute)</a>
 </li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.metadata">(nmmo.integrations.CleanRLEnv attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.metadata">(nmmo.integrations.SB3Env attribute)</a>
+</li>
       </ul></li>
       <li><a href="autodoc/nmmo.lib.colors.html#nmmo.lib.colors.Neon.MINT">MINT (nmmo.lib.colors.Neon attribute)</a>
 </li>
@@ -2052,6 +2176,8 @@
 </li>
         <li><a href="autodoc/nmmo.core.tile.html#module-nmmo.core.tile">nmmo.core.tile</a>
 </li>
+        <li><a href="autodoc/nmmo.emulation.html#module-nmmo.emulation">nmmo.emulation</a>
+</li>
         <li><a href="autodoc/nmmo.entity.html#module-nmmo.entity">nmmo.entity</a>
 </li>
         <li><a href="autodoc/nmmo.entity.entity.html#module-nmmo.entity.entity">nmmo.entity.entity</a>
@@ -2061,6 +2187,8 @@
         <li><a href="autodoc/nmmo.entity.player.html#module-nmmo.entity.player">nmmo.entity.player</a>
 </li>
         <li><a href="autodoc/nmmo.infrastructure.html#module-nmmo.infrastructure">nmmo.infrastructure</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#module-nmmo.integrations">nmmo.integrations</a>
 </li>
         <li><a href="autodoc/nmmo.io.html#module-nmmo.io">nmmo.io</a>
 </li>
@@ -2145,6 +2273,8 @@
         <li><a href="autodoc/nmmo.lib.utils.html#nmmo.lib.utils.StaticIterable.mro">(nmmo.lib.utils.StaticIterable method)</a>
 </li>
       </ul></li>
+      <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.multiagent_to_singleagent">multiagent_to_singleagent() (in module nmmo.emulation)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -2317,6 +2447,13 @@
 </li>
       </ul></li>
       <li>
+    nmmo.emulation
+
+      <ul>
+        <li><a href="autodoc/nmmo.emulation.html#module-nmmo.emulation">module</a>
+</li>
+      </ul></li>
+      <li>
     nmmo.entity
 
       <ul>
@@ -2349,6 +2486,13 @@
 
       <ul>
         <li><a href="autodoc/nmmo.infrastructure.html#module-nmmo.infrastructure">module</a>
+</li>
+      </ul></li>
+      <li>
+    nmmo.integrations
+
+      <ul>
+        <li><a href="autodoc/nmmo.integrations.html#module-nmmo.integrations">module</a>
 </li>
       </ul></li>
       <li>
@@ -2442,6 +2586,8 @@
         <li><a href="autodoc/nmmo.scripting.html#module-nmmo.scripting">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     nmmo.systems
 
@@ -2449,8 +2595,6 @@
         <li><a href="autodoc/nmmo.systems.html#module-nmmo.systems">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     nmmo.systems.achievement
 
@@ -2678,16 +2822,16 @@
       </ul></li>
       <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.NPCManager">NPCManager (class in nmmo.core.realm)</a>
 </li>
-      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.NPOP">NPOP (nmmo.core.config.Config attribute)</a>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.NPOP">NPOP (nmmo.core.config.Config property)</a>
 
       <ul>
-        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.NPOP">(nmmo.core.config.Default attribute)</a>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.NPOP">(nmmo.core.config.Default property)</a>
 </li>
-        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.NPOP">(nmmo.core.config.Large attribute)</a>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.NPOP">(nmmo.core.config.Large property)</a>
 </li>
-        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.NPOP">(nmmo.core.config.Medium attribute)</a>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.NPOP">(nmmo.core.config.Medium property)</a>
 </li>
-        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.NPOP">(nmmo.core.config.Small attribute)</a>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.NPOP">(nmmo.core.config.Small property)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.NSTIM">NSTIM (nmmo.core.config.Config attribute)</a>
@@ -2719,6 +2863,10 @@
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.num_agents">(nmmo.Env property)</a>
 </li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.num_agents">(nmmo.integrations.CleanRLEnv property)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.num_agents">(nmmo.integrations.SB3Env property)</a>
+</li>
       </ul></li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.WSServerFactory.numPorts">numPorts (nmmo.websocket.WSServerFactory attribute)</a>
 </li>
@@ -2736,6 +2884,10 @@
 
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.observation_space">(nmmo.Env method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.observation_space">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.observation_space">(nmmo.integrations.SB3Env method)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.core.tile.html#nmmo.core.tile.Tile.occupied">occupied (nmmo.core.tile.Tile property)</a>
@@ -2766,10 +2918,10 @@
 </li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.onMessageFrameBegin">onMessageFrameBegin() (nmmo.websocket.GodswordServerProtocol method)</a>
 </li>
-      <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.onMessageFrameData">onMessageFrameData() (nmmo.websocket.GodswordServerProtocol method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.onMessageFrameData">onMessageFrameData() (nmmo.websocket.GodswordServerProtocol method)</a>
+</li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.onMessageFrameEnd">onMessageFrameEnd() (nmmo.websocket.GodswordServerProtocol method)</a>
 </li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.onOpen">onOpen() (nmmo.websocket.GodswordServerProtocol method)</a>
@@ -2782,8 +2934,12 @@
 </li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.onServerConnectionDropTimeout">onServerConnectionDropTimeout() (nmmo.websocket.GodswordServerProtocol method)</a>
 </li>
-      <li><a href="autodoc/nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating">OpenSkillRating (class in nmmo.lib.rating)</a>
+      <li><a href="autodoc/nmmo.html#nmmo.OpenSkillRating">OpenSkillRating (class in nmmo)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating">(class in nmmo.lib.rating)</a>
 </li>
+      </ul></li>
       <li><a href="autodoc/nmmo.lib.colors.html#nmmo.lib.colors.Neon.ORANGE">ORANGE (nmmo.lib.colors.Neon attribute)</a>
 
       <ul>
@@ -2822,6 +2978,12 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.pack_atn_space">pack_atn_space() (in module nmmo.emulation)</a>
+</li>
+      <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.pack_obs">pack_obs() (in module nmmo.emulation)</a>
+</li>
+      <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.pack_obs_space">pack_obs_space() (in module nmmo.emulation)</a>
+</li>
       <li><a href="autodoc/nmmo.core.map.html#nmmo.core.map.Map.packet">packet (nmmo.core.map.Map property)</a>
 
       <ul>
@@ -2972,6 +3134,8 @@
         <li><a href="autodoc/nmmo.systems.skill.html#nmmo.systems.skill.Skills.packet">(nmmo.systems.skill.Skills method)</a>
 </li>
       </ul></li>
+      <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.pad_const_nent">pad_const_nent() (in module nmmo.emulation)</a>
+</li>
       <li><a href="autodoc/nmmo.lib.colors.html#nmmo.lib.colors.Palette">Palette (class in nmmo.lib.colors)</a>
 </li>
       <li><a href="autodoc/nmmo.entity.npc.html#nmmo.entity.npc.Passive">Passive (class in nmmo.entity.npc)</a>
@@ -3096,6 +3260,18 @@
 
       <ul>
         <li><a href="autodoc/nmmo.entity.player.html#nmmo.entity.player.Player.population">(nmmo.entity.player.Player property)</a>
+</li>
+      </ul></li>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.population_mapping_fn">population_mapping_fn() (nmmo.core.config.Config method)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.population_mapping_fn">(nmmo.core.config.Default method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.population_mapping_fn">(nmmo.core.config.Large method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.population_mapping_fn">(nmmo.core.config.Medium method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.population_mapping_fn">(nmmo.core.config.Small method)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.core.tile.html#nmmo.core.tile.Tile.pos">pos (nmmo.core.tile.Tile property)</a>
@@ -3319,6 +3495,10 @@
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.register">(nmmo.Env method)</a>
 </li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.register">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.register">(nmmo.integrations.SB3Env method)</a>
+</li>
         <li><a href="autodoc/nmmo.lib.log.html#nmmo.lib.log.Quill.register">(nmmo.lib.log.Quill method)</a>
 </li>
         <li><a href="autodoc/nmmo.html#nmmo.Overlay.register">(nmmo.Overlay method)</a>
@@ -3360,14 +3540,28 @@
         <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.RENDER">(nmmo.core.config.Small attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autodoc/nmmo.core.env.html#nmmo.core.env.Env.render">render() (nmmo.core.env.Env method)</a>
 
       <ul>
+        <li><a href="autodoc/nmmo.core.env.html#nmmo.core.env.Replay.render">(nmmo.core.env.Replay method)</a>
+</li>
         <li><a href="autodoc/nmmo.core.terrain.html#nmmo.core.terrain.Save.render">(nmmo.core.terrain.Save method)</a>
 </li>
         <li><a href="autodoc/nmmo.html#nmmo.Env.render">(nmmo.Env method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.render">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.render">(nmmo.integrations.SB3Env method)</a>
+</li>
+        <li><a href="autodoc/nmmo.html#nmmo.Replay.render">(nmmo.Replay method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autodoc/nmmo.html#nmmo.Replay">Replay (class in nmmo)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.core.env.html#nmmo.core.env.Replay">(class in nmmo.core.env)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.core.map.html#nmmo.core.map.Map.repr">repr (nmmo.core.map.Map property)</a>
@@ -3391,7 +3585,13 @@
 </li>
         <li><a href="autodoc/nmmo.core.tile.html#nmmo.core.tile.Tile.reset">(nmmo.core.tile.Tile method)</a>
 </li>
+        <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.SingleAgentEnv.reset">(nmmo.emulation.SingleAgentEnv method)</a>
+</li>
         <li><a href="autodoc/nmmo.html#nmmo.Env.reset">(nmmo.Env method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.reset">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.reset">(nmmo.integrations.SB3Env method)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.WSServerFactory.resetProtocolOptions">resetProtocolOptions() (nmmo.websocket.WSServerFactory method)</a>
@@ -3467,10 +3667,16 @@
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.reward">(nmmo.Env method)</a>
 </li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.reward">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.reward">(nmmo.integrations.SB3Env method)</a>
+</li>
       </ul></li>
       <li><a href="autodoc/nmmo.lib.colors.html#nmmo.lib.colors.rgb">rgb() (in module nmmo.lib.colors)</a>
 </li>
       <li><a href="autodoc/nmmo.lib.colors.html#nmmo.lib.colors.rgbNorm">rgbNorm() (in module nmmo.lib.colors)</a>
+</li>
+      <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.rllib_env_cls">rllib_env_cls() (in module nmmo.integrations)</a>
 </li>
       <li><a href="autodoc/nmmo.systems.droptable.html#nmmo.systems.droptable.Drop.roll">roll() (nmmo.systems.droptable.Drop method)</a>
 
@@ -3485,6 +3691,28 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autodoc/nmmo.core.terrain.html#nmmo.core.terrain.Save">Save (class in nmmo.core.terrain)</a>
+</li>
+      <li><a href="autodoc/nmmo.core.env.html#nmmo.core.env.Replay.save">save() (nmmo.core.env.Replay method)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.html#nmmo.Replay.save">(nmmo.Replay method)</a>
+</li>
+      </ul></li>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.SAVE_REPLAY">SAVE_REPLAY (nmmo.core.config.Config attribute)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.SAVE_REPLAY">(nmmo.core.config.Default attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.SAVE_REPLAY">(nmmo.core.config.Large attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.SAVE_REPLAY">(nmmo.core.config.Medium attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.SAVE_REPLAY">(nmmo.core.config.Small attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.sb3_vec_envs">sb3_vec_envs() (in module nmmo.integrations)</a>
+</li>
+      <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env">SB3Env (class in nmmo.integrations)</a>
 </li>
       <li><a href="autodoc/nmmo.html#nmmo.Agent.scripted">scripted (nmmo.Agent attribute)</a>
 
@@ -3502,6 +3730,10 @@
         <li><a href="autodoc/nmmo.core.env.html#nmmo.core.env.Env.seed">(nmmo.core.env.Env method)</a>
 </li>
         <li><a href="autodoc/nmmo.html#nmmo.Env.seed">(nmmo.Env method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.seed">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.seed">(nmmo.integrations.SB3Env method)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.NodeType.SELECTION">SELECTION (nmmo.io.action.NodeType attribute)</a>
@@ -3706,6 +3938,8 @@
         <li><a href="autodoc/nmmo.infrastructure.html#nmmo.infrastructure.Grid.set">(nmmo.infrastructure.Grid method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autodoc/nmmo.systems.skill.html#nmmo.systems.skill.CombatSkill.setExpByLevel">setExpByLevel() (nmmo.systems.skill.CombatSkill method)</a>
 
       <ul>
@@ -3726,8 +3960,6 @@
         <li><a href="autodoc/nmmo.systems.skill.html#nmmo.systems.skill.Skill.setExpByLevel">(nmmo.systems.skill.Skill method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.WSServerFactory.setProtocolOptions">setProtocolOptions() (nmmo.websocket.WSServerFactory method)</a>
 </li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.WSServerFactory.setSessionParameters">setSessionParameters() (nmmo.websocket.WSServerFactory method)</a>
@@ -3744,6 +3976,8 @@
         <li><a href="autodoc/nmmo.lib.colors.html#nmmo.lib.colors.Tier.SILVER">(nmmo.lib.colors.Tier attribute)</a>
 </li>
       </ul></li>
+      <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.SingleAgentEnv">SingleAgentEnv (class in nmmo.emulation)</a>
+</li>
       <li><a href="autodoc/nmmo.systems.skill.html#nmmo.systems.skill.Skill">Skill (class in nmmo.systems.skill)</a>
 </li>
       <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Mage.skill">skill() (nmmo.io.action.Mage method)</a>
@@ -3861,6 +4095,10 @@
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.state">(nmmo.Env method)</a>
 </li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.state">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.state">(nmmo.integrations.SB3Env method)</a>
+</li>
       </ul></li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.STATE_CLOSED">STATE_CLOSED (nmmo.websocket.GodswordServerProtocol attribute)</a>
 </li>
@@ -3880,6 +4118,12 @@
 </li>
       <li><a href="autodoc/nmmo.lib.utils.html#nmmo.lib.utils.staticproperty">staticproperty (class in nmmo.lib.utils)</a>
 </li>
+      <li><a href="autodoc/nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating.stats">stats (nmmo.lib.rating.OpenSkillRating property)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.html#nmmo.OpenSkillRating.stats">(nmmo.OpenSkillRating property)</a>
+</li>
+      </ul></li>
       <li><a href="autodoc/nmmo.entity.entity.html#nmmo.entity.entity.Status">Status (class in nmmo.entity.entity)</a>
 </li>
       <li><a href="autodoc/nmmo.core.env.html#nmmo.core.env.Env.step">step() (nmmo.core.env.Env method)</a>
@@ -3891,7 +4135,13 @@
 </li>
         <li><a href="autodoc/nmmo.core.tile.html#nmmo.core.tile.Tile.step">(nmmo.core.tile.Tile method)</a>
 </li>
+        <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.SingleAgentEnv.step">(nmmo.emulation.SingleAgentEnv method)</a>
+</li>
         <li><a href="autodoc/nmmo.html#nmmo.Env.step">(nmmo.Env method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.step">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.step">(nmmo.integrations.SB3Env method)</a>
 </li>
         <li><a href="autodoc/nmmo.overlay.html#nmmo.overlay.OverlayRegistry.step">(nmmo.overlay.OverlayRegistry method)</a>
 </li>
@@ -3970,6 +4220,10 @@
 
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.terminal">(nmmo.Env method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.terminal">(nmmo.integrations.CleanRLEnv method)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.terminal">(nmmo.integrations.SB3Env method)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.html#nmmo.Terrain">Terrain (class in nmmo)</a>
@@ -4204,6 +4458,8 @@
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autodoc/nmmo.emulation.html#nmmo.emulation.unpack_obs">unpack_obs() (in module nmmo.emulation)</a>
+</li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.GodswordServerProtocol.unregisterProducer">unregisterProducer() (nmmo.websocket.GodswordServerProtocol method)</a>
 </li>
       <li><a href="autodoc/nmmo.core.env.html#nmmo.core.env.Env.unwrapped">unwrapped (nmmo.core.env.Env property)</a>
@@ -4211,10 +4467,16 @@
       <ul>
         <li><a href="autodoc/nmmo.html#nmmo.Env.unwrapped">(nmmo.Env property)</a>
 </li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.CleanRLEnv.unwrapped">(nmmo.integrations.CleanRLEnv property)</a>
+</li>
+        <li><a href="autodoc/nmmo.integrations.html#nmmo.integrations.SB3Env.unwrapped">(nmmo.integrations.SB3Env property)</a>
+</li>
       </ul></li>
       <li><a href="autodoc/nmmo.systems.ai.behavior.html#nmmo.systems.ai.behavior.update">update() (in module nmmo.systems.ai.behavior)</a>
 
       <ul>
+        <li><a href="autodoc/nmmo.core.env.html#nmmo.core.env.Replay.update">(nmmo.core.env.Replay method)</a>
+</li>
         <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.EntityGroup.update">(nmmo.core.realm.EntityGroup method)</a>
 </li>
         <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.NPCManager.update">(nmmo.core.realm.NPCManager method)</a>
@@ -4295,6 +4557,8 @@
 </li>
         <li><a href="autodoc/nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating.update">(nmmo.lib.rating.OpenSkillRating method)</a>
 </li>
+        <li><a href="autodoc/nmmo.html#nmmo.OpenSkillRating.update">(nmmo.OpenSkillRating method)</a>
+</li>
         <li><a href="autodoc/nmmo.html#nmmo.Overlay.update">(nmmo.Overlay method)</a>
 </li>
         <li><a href="autodoc/nmmo.overlay.html#nmmo.overlay.Counts.update">(nmmo.overlay.Counts method)</a>
@@ -4304,6 +4568,8 @@
         <li><a href="autodoc/nmmo.overlay.html#nmmo.overlay.Skills.update">(nmmo.overlay.Skills method)</a>
 </li>
         <li><a href="autodoc/nmmo.overlay.html#nmmo.overlay.Wilderness.update">(nmmo.overlay.Wilderness method)</a>
+</li>
+        <li><a href="autodoc/nmmo.html#nmmo.Replay.update">(nmmo.Replay method)</a>
 </li>
         <li><a href="autodoc/nmmo.html#nmmo.Serialized.Entity.AttackerID.update">(nmmo.Serialized.Entity.AttackerID method)</a>
 </li>
@@ -4390,9 +4656,21 @@
 </li>
       <li><a href="autodoc/nmmo.systems.droptable.html#nmmo.systems.droptable.Range.value">value (nmmo.systems.droptable.Range property)</a>
 </li>
-      <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.EntityGroup.values">values() (nmmo.core.realm.EntityGroup method)</a>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.values">values() (nmmo.core.config.Config method)</a>
 
       <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.values">(nmmo.core.config.Default method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.values">(nmmo.core.config.Large method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.values">(nmmo.core.config.Medium method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.values">(nmmo.core.config.Small method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Template.values">(nmmo.core.config.Template method)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.EntityGroup.values">(nmmo.core.realm.EntityGroup method)</a>
+</li>
         <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.NPCManager.values">(nmmo.core.realm.NPCManager method)</a>
 </li>
         <li><a href="autodoc/nmmo.core.realm.html#nmmo.core.realm.PlayerManager.values">(nmmo.core.realm.PlayerManager method)</a>

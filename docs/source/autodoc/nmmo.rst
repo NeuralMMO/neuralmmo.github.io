@@ -21,7 +21,9 @@ nmmo package
 .. toctree::
    :maxdepth: 4
 
+   nmmo.emulation
    nmmo.infrastructure
+   nmmo.integrations
    nmmo.overlay
    nmmo.scripting
    nmmo.version

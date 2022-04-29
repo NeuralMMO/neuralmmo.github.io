@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.systems.skill module &mdash; Neural MMO 1.5.3.13 documentation</title>
+  <title>nmmo.systems.skill module &mdash; Neural MMO 1.5.4.0 documentation</title>
   
 
   
@@ -42,7 +42,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="nmmo.infrastructure module" href="nmmo.infrastructure.html" />
+    <link rel="next" title="nmmo.emulation module" href="nmmo.emulation.html" />
     <link rel="prev" title="nmmo.systems.experience module" href="nmmo.systems.experience.html" /> 
 </head>
 
@@ -104,13 +104,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-skill-rating"> Skill Rating</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-terrain-generation"> Terrain Generation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-rendering-and-overlays"> Rendering and Overlays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-training"> Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/tutorial.html#icon-next-steps"> Next Steps</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> CLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#reproduce-reevaluate">Reproduce/Reevaluate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Training and Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#reproducing-the-baseline">Reproducing the Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#what-happened-to-rllib">What Happened to RLlib?</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul class="current">
@@ -136,7 +136,9 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">nmmo.systems.skill module</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.emulation.html">nmmo.emulation module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.infrastructure.html">nmmo.infrastructure module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.integrations.html">nmmo.integrations module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.version.html">nmmo.version module</a></li>
@@ -250,7 +252,7 @@
 <span id="nmmo-systems-skill-module"></span><h1>nmmo.systems.skill module<a class="headerlink" href="#module-nmmo.systems.skill" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.SkillGroup">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">SkillGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.SkillGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">SkillGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.SkillGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.SkillGroup.update">
@@ -266,7 +268,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Skill">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Skill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skill" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Skill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skill" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Skill.skillItems">
@@ -291,14 +293,14 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Skill.level">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Skill.level" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Skill.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Harvesting">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Harvesting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Harvesting" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Harvesting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Harvesting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.SkillGroup" title="nmmo.systems.skill.SkillGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.SkillGroup</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Harvesting.packet">
@@ -314,7 +316,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Combat">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Combat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Combat" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Combat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Combat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.SkillGroup" title="nmmo.systems.skill.SkillGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.SkillGroup</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Combat.packet">
@@ -340,7 +342,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Skills">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Skills</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skills" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Skills</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skills" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Harvesting" title="nmmo.systems.skill.Harvesting"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Harvesting</span></code></a>, <a class="reference internal" href="#nmmo.systems.skill.Combat" title="nmmo.systems.skill.Combat"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Combat</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Skills.applyDamage">
@@ -366,11 +368,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">CombatSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">CombatSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Skill" title="nmmo.systems.skill.Skill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Skill</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill.level">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.level" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -398,7 +400,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Constitution">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Constitution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Constitution" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Constitution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Constitution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.CombatSkill" title="nmmo.systems.skill.CombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.CombatSkill</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Constitution.update">
@@ -407,7 +409,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Constitution.level">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Constitution.level" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Constitution.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -430,11 +432,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Melee">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Melee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Melee" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Melee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Melee" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.CombatSkill" title="nmmo.systems.skill.CombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.CombatSkill</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Melee.level">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Melee.level" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Melee.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -462,11 +464,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Range">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Range" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.CombatSkill" title="nmmo.systems.skill.CombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.CombatSkill</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Range.level">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Range.level" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Range.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -494,11 +496,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Mage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Mage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Mage" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Mage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Mage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.CombatSkill" title="nmmo.systems.skill.CombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.CombatSkill</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Mage.level">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Mage.level" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Mage.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -526,11 +528,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Defense">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Defense</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Defense" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Defense</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Defense" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.CombatSkill" title="nmmo.systems.skill.CombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.CombatSkill</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Defense.level">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Defense.level" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Defense.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -558,7 +560,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Fishing">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Fishing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Fishing" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Fishing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Fishing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Skill" title="nmmo.systems.skill.Skill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Skill</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Fishing.update">
@@ -567,7 +569,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Fishing.level">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Fishing.level" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Fishing.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -590,7 +592,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Hunting">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Hunting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Hunting" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Hunting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Hunting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Skill" title="nmmo.systems.skill.Skill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Skill</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Hunting.update">
@@ -599,7 +601,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Hunting.level">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Hunting.level" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Hunting.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -628,7 +630,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="nmmo.infrastructure.html" class="btn btn-neutral float-right" title="nmmo.infrastructure module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="nmmo.emulation.html" class="btn btn-neutral float-right" title="nmmo.emulation module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="nmmo.systems.experience.html" class="btn btn-neutral float-left" title="nmmo.systems.experience module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

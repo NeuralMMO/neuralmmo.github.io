@@ -231,39 +231,6 @@ The overlay will be provided to the client automatically and available using the
 
 The client includes some default overlays, such as counts/exploration, which is computed by splatting the agent's current position to the map. You can do more impressive things with a bit more compute. For example, the baselines repository provide the tileValues and entityValues overlays, which simulate an agent on every tile and computes the value function with respect to local tiles/entities. Note that overlays making use of network internals are not defined for scripted models.
 
-|icon| Training
-###############
-
-The default baseline was trained using 32 cores and 1 RTX 3080 for 3-4 days. This scale was chosen to represent what should be reasonably available to most academic labs, but is not required for meaningful research on the platform. This demo provides a config trainable on a 4 core, 1 GPU device in under 24 hours, surpassing random performance within the first hour of training (around 50 epochs) and a strong scripted baseline within 10 hours (around 400 epochs).
-
-The environment config rewards agents for survival (-1 for death) and exploration (0.05 per tile from spawn) as follows:
-
-.. literalinclude:: ../../../../baselines/demos/training.py
-  :pyobject: SmallExploreEnv
- 
-.. literalinclude:: ../../../../baselines/demos/training.py
-  :pyobject: SmallExploreConfig
-
-This demo also provides scripted baseline evaluations
-
-.. code-block:: python
-
-   python -m demos.training baselines
-
-.. code-block:: text
-
-   Average Scripted Forage Lifetime: 73.78125
-   Average Scripted Meander Lifetime: 34.125
-   Note that these are noisy estimates on one env
-
-Train from scratch:
-
-.. code-block:: python
-
-   python -m demos.training neural
-
-We strongly recommend setting up WanDB as per the installation guide, as it will allow you to monitor training. Compare your results to ours in this `notebook <https://github.com/neuralmmo>`_.
-
 |icon| Next Steps
 #################
 
