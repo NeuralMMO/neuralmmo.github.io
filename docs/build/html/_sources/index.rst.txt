@@ -9,15 +9,15 @@ Index
 
 .. toctree::
    :maxdepth: 8
-   :caption: Tutorials
-
-   rst/tutorial
-
-.. toctree::
-   :maxdepth: 8
    :caption: Baselines
 
    rst/baselines
+
+.. toctree::
+   :maxdepth: 8
+   :caption: Tutorials
+
+   rst/tutorial
 
 .. toctree::
    :maxdepth: 8
