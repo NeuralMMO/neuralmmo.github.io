@@ -17,7 +17,7 @@
 ..
   **News:** We have released an open call for collaborations following several recent usability improvements and a successful pilot project
 
-**Quick links:** `Github <https://github.com/neuralmmo>`_ | `Baselines <https://wandb.ai/jsuarez/NeuralMMO/reportlist>`_ | `NeurIPS 2021 Preprint <http://arxiv.org/abs/2110.07594>`_ | `Discord <https://discord.gg/BkMmFUC>`_ | `Twitter <https://twitter.com/jsuarez5341>`_
+**Quick links:** `Github <https://github.com/neuralmmo>`_ | `Baselines <https://wandb.ai/jsuarez/NeuralMMO/reportlist>`_ | `NeurIPS 2021 Paper <https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round1.html>`_ | `Discord <https://discord.gg/BkMmFUC>`_ | `Twitter <https://twitter.com/jsuarez5341>`_
 
 |icon| Introduction
 ###################
@@ -43,12 +43,14 @@ Environments provide a standard PettingZoo API. Join our community Discord and p
 |
 .. code-block:: text
 
-  @proceedings{NEURIPS2021,
-    author = {Joseph Suarez, Yilun Du, Clare Zhu, Igor Mordatch, Phillip Isola},
-    booktitle = {Advances in Neural Information Processing Systems},
+  @inproceedings{NEURIPS DATASETS AND BENCHMARKS2021_44f683a8,
+    author = {Suarez, Joseph and Du, Yilun and Zhu, Clare and Mordatch, Igor and Isola, Phillip},
+    booktitle = {Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks},
+    editor = {J. Vanschoren and S. Yeung},
+    pages = {},
     title = {The Neural MMO Platform for Massively Multiagent Research},
-    url = {http://arxiv.org/abs/2110.07594},
-    volume = {33},
+    url = {https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/44f683a84163b3523afe57c2e008bc8c-Paper-round1.pdf},
+    volume = {1},
     year = {2021}
   }
 
@@ -135,7 +137,7 @@ Overhead Render
 |icon| Call for Collaborations
 ##############################
 
-Following the platform's recent `publication <http://arxiv.org/abs/2110.07594>`_ in NeurIPS 2021, we are excited to announce an open call for collaborations!
+Following the platform's recent `publication <https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round1.html>`_ in NeurIPS 2021, we are excited to announce an open call for collaborations!
 
 Eligibility *(at least one of)*
    - You are affiliated with an academic lab (professor/PhD student/postdoc)
