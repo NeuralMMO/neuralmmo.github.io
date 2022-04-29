@@ -82,14 +82,6 @@ Official support: Ubuntu 20.04, WSL, and MacOS. Tested with Anaconda Python 3.9
 
 Download the latest client `here <https://github.com/neuralmmo/client/releases>`_ (WSL users: do this on your Windows host). Start the demo and run the executable for your platform in client/UnityClient/. After a few seconds, the demo console will show a connection message and the client will load the map. The on-screen instructions demonstrate how to pan and zoom. You can also click on agents to examine their skill levels. The in-game console (which you can toggle with tab) gives you access to a number of overlay visualiztions.
 
-You can also install headless or entirely from source (WanDB setup still required)
-
-.. code-block:: python
-   :caption: Headless setup for training
-
-   pip install nmmo[cleanrl]
-   git clone https://github.com/neuralmmo/baselines nmmo-baselines
- 
 .. code-block:: python
    :caption: Setup from source for developers (slow without --depth=1)
 
@@ -99,6 +91,7 @@ You can also install headless or entirely from source (WanDB setup still require
    git clone https://github.com/neuralmmo/baselines
    git clone https://github.com/neuralmmo/client
    
+   echo YOUR_WANDB_API_KEY > baselines/wandb_api_key
    cd environment && pip install -e .[all]
 
 |icon| Gallery
