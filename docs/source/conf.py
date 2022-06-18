@@ -29,6 +29,7 @@ sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 # -- Project information -----------------------------------------------------
 
 # The full version, including alpha/beta/rc tags
+# Currently import is broken, copy version manually for now
 #import nmmo
 release = 'v1.5.5.0'#nmmo.__version__
 
