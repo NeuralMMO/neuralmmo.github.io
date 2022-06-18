@@ -4,11 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.infrastructure module &mdash; Neural MMO v1.5.4.0 1.5.4.0 documentation</title>
+  <title>nmmo.infrastructure module &mdash; Neural MMO vv1.5.5.0 v1.5.5.0 documentation</title>
   
 
   
@@ -35,6 +35,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -57,7 +58,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.4.0
+            <a href="../index.html" class="icon icon-home"> Neural MMO vv1.5.5.0
           
 
           
@@ -98,7 +99,8 @@
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Training and Evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#reproducing-the-baseline">Reproducing the Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-emulation-cleanrl"> Emulation + CleanRL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-reporting-your-results"> Reporting Your Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#what-happened-to-rllib">What Happened to RLlib?</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
@@ -181,7 +183,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.4.0</a>
+          <a href="../index.html">Neural MMO vv1.5.5.0</a>
         
       </nav>
 
@@ -238,7 +240,7 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.infrastructure">
-<span id="nmmo-infrastructure-module"></span><h1>nmmo.infrastructure module<a class="headerlink" href="#module-nmmo.infrastructure" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-infrastructure-module"></span><h1>nmmo.infrastructure module<a class="headerlink" href="#module-nmmo.infrastructure" title="Permalink to this heading">¶</a></h1>
 <p>Infrastructure layer for representing agent observations</p>
 <p>Maintains a synchronized + serialized representation of agent observations in
 flat tensors. This allows for fast observation processing as a set of tensor
@@ -248,25 +250,25 @@ to follow the correct instantiation protocol, e.g. as used for defining
 agent/tile observations, when adding new types observations to the code</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.infrastructure.DataType">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">DataType</span></span><a class="headerlink" href="#nmmo.infrastructure.DataType" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">DataType</span></span><a class="headerlink" href="#nmmo.infrastructure.DataType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.infrastructure.DataType.CONTINUOUS">
 <span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><a class="headerlink" href="#nmmo.infrastructure.DataType.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.float32</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">float32</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.infrastructure.DataType.DISCRETE">
 <span class="sig-name descname"><span class="pre">DISCRETE</span></span><a class="headerlink" href="#nmmo.infrastructure.DataType.DISCRETE" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.int32</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">int32</span></code></p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.infrastructure.Index">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">Index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prealloc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">Index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prealloc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Lookup index of attribute names</p>
 <dl class="py method">
@@ -303,7 +305,7 @@ agent/tile observations, when adding new types observations to the code</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.infrastructure.ContinuousTable">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">ContinuousTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">config</span></em>, <em class="sig-param"><span class="pre">obj</span></em>, <em class="sig-param"><span class="pre">prealloc</span></em>, <em class="sig-param"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.float32'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">ContinuousTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prealloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.float32'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.ContinuousTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Flat tensor representation for a set of continuous attributes</p>
 <dl class="py method">
@@ -335,8 +337,8 @@ agent/tile observations, when adding new types observations to the code</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.infrastructure.DiscreteTable">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">DiscreteTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">config</span></em>, <em class="sig-param"><span class="pre">obj</span></em>, <em class="sig-param"><span class="pre">prealloc</span></em>, <em class="sig-param"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.int32'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.infrastructure.ContinuousTable" title="nmmo.infrastructure.ContinuousTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.infrastructure.ContinuousTable</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">DiscreteTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prealloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.int32'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.infrastructure.ContinuousTable" title="nmmo.infrastructure.ContinuousTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContinuousTable</span></code></a></p>
 <p>Flat tensor representation for a set of discrete attributes</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.infrastructure.DiscreteTable.initAttr">
@@ -367,7 +369,7 @@ agent/tile observations, when adding new types observations to the code</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.infrastructure.Grid">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">Grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">Grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Flat representation of tile/agent positions</p>
 <dl class="py method">
@@ -394,7 +396,7 @@ agent/tile observations, when adding new types observations to the code</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.infrastructure.GridTables">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">GridTables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prealloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expansion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">GridTables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prealloc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expansion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.GridTables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Combines a Grid + Index + Continuous and Discrete tables</p>
 <p>Together, these data structures provide a robust and efficient
@@ -429,7 +431,7 @@ such as agents or tiles</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.infrastructure.Dataframe">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">Dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">Dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.Dataframe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Infrastructure wrapper class</p>
 <dl class="py method">

@@ -4,11 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.lib.rating module &mdash; Neural MMO v1.5.4.0 1.5.4.0 documentation</title>
+  <title>nmmo.lib.rating module &mdash; Neural MMO vv1.5.5.0 v1.5.5.0 documentation</title>
   
 
   
@@ -35,6 +35,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -57,7 +58,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.4.0
+            <a href="../index.html" class="icon icon-home"> Neural MMO vv1.5.5.0
           
 
           
@@ -98,7 +99,8 @@
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Training and Evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#reproducing-the-baseline">Reproducing the Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-emulation-cleanrl"> Emulation + CleanRL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-reporting-your-results"> Reporting Your Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#what-happened-to-rllib">What Happened to RLlib?</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
@@ -190,7 +192,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.4.0</a>
+          <a href="../index.html">Neural MMO vv1.5.5.0</a>
         
       </nav>
 
@@ -249,7 +251,7 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.lib.rating">
-<span id="nmmo-lib-rating-module"></span><h1>nmmo.lib.rating module<a class="headerlink" href="#module-nmmo.lib.rating" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-lib-rating-module"></span><h1>nmmo.lib.rating module<a class="headerlink" href="#module-nmmo.lib.rating" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="nmmo.lib.rating.rank">
 <span class="sig-prename descclassname"><span class="pre">nmmo.lib.rating.</span></span><span class="sig-name descname"><span class="pre">rank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.rating.rank" title="Permalink to this definition">¶</a></dt>
@@ -258,13 +260,13 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.rating.OpenSkillRating">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.rating.</span></span><span class="sig-name descname"><span class="pre">OpenSkillRating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">33.333333333333336</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor_mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1500</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.rating.OpenSkillRating" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.rating.</span></span><span class="sig-name descname"><span class="pre">OpenSkillRating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">33.333333333333336</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor_mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1500</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.rating.OpenSkillRating" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>OpenSkill Rating wrapper for estimating relative policy skill</p>
 <p>Provides a simple method for updating skill estimates from raw
 per-agent scores as are typically returned by the environment.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>agents</strong> – List of agent classes to rank</p></li>
 <li><p><strong>anchor</strong> – Baseline policy name to anchor to mu</p></li>
@@ -275,7 +277,7 @@ per-agent scores as are typically returned by the environment.</p>
 </dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.lib.rating.OpenSkillRating.stats">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">stats</span></span><a class="headerlink" href="#nmmo.lib.rating.OpenSkillRating.stats" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stats</span></span><a class="headerlink" href="#nmmo.lib.rating.OpenSkillRating.stats" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -285,14 +287,14 @@ per-agent scores as are typically returned by the environment.</p>
 <p>You should call this function once per simulated environment
 Provide either ranks OR policy_ids and scores</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ranks</strong> – List of ranks in the same order as agents</p></li>
 <li><p><strong>policy_ids</strong> – List of policy IDs for each agent episode</p></li>
 <li><p><strong>scores</strong> – List of scores for each agent episode</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Dictionary of ratings keyed by agent names</p>
 </dd>
 </dl>

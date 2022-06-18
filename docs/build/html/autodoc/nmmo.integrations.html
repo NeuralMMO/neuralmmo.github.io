@@ -4,11 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.integrations module &mdash; Neural MMO v1.5.4.0 1.5.4.0 documentation</title>
+  <title>nmmo.integrations module &mdash; Neural MMO vv1.5.5.0 v1.5.5.0 documentation</title>
   
 
   
@@ -35,6 +35,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -57,7 +58,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.4.0
+            <a href="../index.html" class="icon icon-home"> Neural MMO vv1.5.5.0
           
 
           
@@ -98,7 +99,8 @@
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html"> Training and Evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#reproducing-the-baseline">Reproducing the Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-emulation-cleanrl"> Emulation + CleanRL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#icon-reporting-your-results"> Reporting Your Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/baselines.html#what-happened-to-rllib">What Happened to RLlib?</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
@@ -181,7 +183,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.4.0</a>
+          <a href="../index.html">Neural MMO vv1.5.5.0</a>
         
       </nav>
 
@@ -238,7 +240,7 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.integrations">
-<span id="nmmo-integrations-module"></span><h1>nmmo.integrations module<a class="headerlink" href="#module-nmmo.integrations" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-integrations-module"></span><h1>nmmo.integrations module<a class="headerlink" href="#module-nmmo.integrations" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="nmmo.integrations.rllib_env_cls">
 <span class="sig-prename descclassname"><span class="pre">nmmo.integrations.</span></span><span class="sig-name descname"><span class="pre">rllib_env_cls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.rllib_env_cls" title="Permalink to this definition">¶</a></dt>
@@ -246,10 +248,10 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.integrations.SB3Env">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.integrations.</span></span><span class="sig-name descname"><span class="pre">SB3Env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.SB3Env" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="nmmo.core.env.html#nmmo.core.env.Env" title="nmmo.core.env.Env"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.env.Env</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.integrations.</span></span><span class="sig-name descname"><span class="pre">SB3Env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.SB3Env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nmmo.core.env.html#nmmo.core.env.Env" title="nmmo.core.env.Env"><code class="xref py py-class docutils literal notranslate"><span class="pre">Env</span></code></a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>config</strong> – A forge.blade.core.Config object or subclass object</p>
 </dd>
 </dl>
@@ -258,7 +260,7 @@
 <span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.SB3Env.step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simulates one game tick or timestep</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>actions</strong> – <p>A dictionary of agent decisions of format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
    <span class="n">agent_1</span><span class="p">:</span> <span class="p">{</span>
@@ -285,7 +287,7 @@ Perform this conditional processing to make batched action
 computation easier.</p>
 </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><dl>
 <dt>observations:</dt><dd><p>A dictionary of agent observations of format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -343,7 +345,7 @@ agent_2: None,
 </dl>
 </p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(dict, dict, dict, None)</p>
 </dd>
 </dl>
@@ -354,17 +356,17 @@ agent_2: None,
 <span class="sig-name descname"><span class="pre">action_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.SB3Env.action_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Neural MMO Action Space</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>agent</strong> – Agent ID</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>gym.spaces object contained the structured actions
 for the specified agent. Each action is parameterized by a list
 of discrete-valued arguments. These consist of both fixed, k-way
 choices (such as movement direction) and selections from the
 observation space (such as targeting)</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>actions</p>
 </dd>
 </dl>
@@ -392,7 +394,7 @@ learned agent value function for the entire map. This would require
 computing a forward pass for one agent per tile. To cut down on
 computation costs, we omit lava tiles from this method</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><dl class="simple">
 <dt>observations:</dt><dd><p>A dictionary of agent observations as specified by step()</p>
 </dd>
@@ -401,7 +403,7 @@ computation costs, we omit lava tiles from this method</p>
 </dl>
 </p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>(dict, dict)</p>
 </dd>
 </dl>
@@ -415,7 +417,7 @@ computation costs, we omit lava tiles from this method</p>
 to compute summary stats and populate the dashboard. You should not
 call it manually. Instead, override this method to customize logging.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>ent</strong> – An agent</p>
 </dd>
 </dl>
@@ -423,35 +425,35 @@ call it manually. Instead, override this method to customize logging.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.integrations.SB3Env.max_num_agents">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">max_num_agents</span></span><a class="headerlink" href="#nmmo.integrations.SB3Env.max_num_agents" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_num_agents</span></span><a class="headerlink" href="#nmmo.integrations.SB3Env.max_num_agents" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.integrations.SB3Env.metadata">
-<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'name':</span> <span class="pre">'neural-mmo',</span> <span class="pre">'render.modes':</span> <span class="pre">['human']}</span></em><a class="headerlink" href="#nmmo.integrations.SB3Env.metadata" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'name':</span> <span class="pre">'neural-mmo',</span> <span class="pre">'render.modes':</span> <span class="pre">['human']}</span></em><a class="headerlink" href="#nmmo.integrations.SB3Env.metadata" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.integrations.SB3Env.num_agents">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">num_agents</span></span><a class="headerlink" href="#nmmo.integrations.SB3Env.num_agents" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_agents</span></span><a class="headerlink" href="#nmmo.integrations.SB3Env.num_agents" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.integrations.SB3Env.observation_space">
-<span class="sig-name descname"><span class="pre">observation_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.SB3Env.observation_space" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">observation_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.SB3Env.observation_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Neural MMO Observation Space</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>agent</strong> – Agent ID</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>gym.spaces object contained the structured observation
 for the specified agent. Each visible object is represented by
 continuous and discrete vectors of attributes. A 2-layer attentional
 encoder can be used to convert this structured observation into
 a flat vector embedding.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>observation</p>
 </dd>
 </dl>
@@ -465,7 +467,7 @@ a flat vector embedding.</p>
 client sends cmd to server -&gt; server computes overlay update -&gt;
 register(overlay) -&gt; overlay is sent to client -&gt; overlay rendered</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>values</strong> – A map-sized (self.size) array of floating point values</p>
 </dd>
 </dl>
@@ -476,10 +478,10 @@ register(overlay) -&gt; overlay is sent to client -&gt; overlay rendered</p>
 <span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'human'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nmmo.integrations.SB3Env.render" title="Permalink to this definition">¶</a></dt>
 <dd><p>Data packet used by the renderer</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A packet of data for the client</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>packet</p>
 </dd>
 </dl>
@@ -491,16 +493,16 @@ register(overlay) -&gt; overlay is sent to client -&gt; overlay rendered</p>
 <dd><p>OpenAI Gym API reset function</p>
 <p>Loads a new game map and returns initial observations</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>idx</strong> – Map index to load. Selects a random map by default</p></li>
 <li><p><strong>step</strong> – Whether to step the environment and return initial obs</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Initial obs if step=True, None otherwise</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>obs</p>
 </dd>
 </dl>
@@ -513,7 +515,7 @@ therefore recommend the standard approach of resetting after a long
 but finite horizon: ~1000 timesteps for small maps and
 5000+ timesteps for large maps</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>observations, as documented by step()</p>
 </dd>
 </dl>
@@ -527,14 +529,14 @@ but finite horizon: ~1000 timesteps for small maps and
 access to the environment state via self.realm. Our baselines do not
 modify this method; specify any changes when comparing to baselines</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>player</strong> – player object</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The reward for the actions on the previous timestep of the
 entity identified by entID.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>reward</p>
 </dd>
 </dl>
@@ -564,10 +566,10 @@ agents that are still alive at the end of that horizon. This function
 performs that logging and returns the associated a data structure
 containing logs for the entire evaluation</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>ent</strong> – An agent</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Log datastructure</p>
 </dd>
 </dl>
@@ -575,17 +577,17 @@ containing logs for the entire evaluation</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.integrations.SB3Env.unwrapped">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">unwrapped</span></span><a class="headerlink" href="#nmmo.integrations.SB3Env.unwrapped" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unwrapped</span></span><a class="headerlink" href="#nmmo.integrations.SB3Env.unwrapped" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.integrations.CleanRLEnv">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.integrations.</span></span><span class="sig-name descname"><span class="pre">CleanRLEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.integrations.SB3Env" title="nmmo.integrations.SB3Env"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.integrations.SB3Env</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.integrations.</span></span><span class="sig-name descname"><span class="pre">CleanRLEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.integrations.SB3Env" title="nmmo.integrations.SB3Env"><code class="xref py py-class docutils literal notranslate"><span class="pre">SB3Env</span></code></a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>config</strong> – A forge.blade.core.Config object or subclass object</p>
 </dd>
 </dl>
@@ -594,17 +596,17 @@ containing logs for the entire evaluation</p>
 <span class="sig-name descname"><span class="pre">action_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.action_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Neural MMO Action Space</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>agent</strong> – Agent ID</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>gym.spaces object contained the structured actions
 for the specified agent. Each action is parameterized by a list
 of discrete-valued arguments. These consist of both fixed, k-way
 choices (such as movement direction) and selections from the
 observation space (such as targeting)</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>actions</p>
 </dd>
 </dl>
@@ -632,7 +634,7 @@ learned agent value function for the entire map. This would require
 computing a forward pass for one agent per tile. To cut down on
 computation costs, we omit lava tiles from this method</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><dl class="simple">
 <dt>observations:</dt><dd><p>A dictionary of agent observations as specified by step()</p>
 </dd>
@@ -641,7 +643,7 @@ computation costs, we omit lava tiles from this method</p>
 </dl>
 </p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>(dict, dict)</p>
 </dd>
 </dl>
@@ -655,7 +657,7 @@ computation costs, we omit lava tiles from this method</p>
 to compute summary stats and populate the dashboard. You should not
 call it manually. Instead, override this method to customize logging.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>ent</strong> – An agent</p>
 </dd>
 </dl>
@@ -663,35 +665,35 @@ call it manually. Instead, override this method to customize logging.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.integrations.CleanRLEnv.max_num_agents">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">max_num_agents</span></span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.max_num_agents" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_num_agents</span></span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.max_num_agents" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.integrations.CleanRLEnv.metadata">
-<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'name':</span> <span class="pre">'neural-mmo',</span> <span class="pre">'render.modes':</span> <span class="pre">['human']}</span></em><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.metadata" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'name':</span> <span class="pre">'neural-mmo',</span> <span class="pre">'render.modes':</span> <span class="pre">['human']}</span></em><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.metadata" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.integrations.CleanRLEnv.num_agents">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">num_agents</span></span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.num_agents" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_agents</span></span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.num_agents" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.integrations.CleanRLEnv.observation_space">
-<span class="sig-name descname"><span class="pre">observation_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.observation_space" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">observation_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.observation_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Neural MMO Observation Space</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>agent</strong> – Agent ID</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>gym.spaces object contained the structured observation
 for the specified agent. Each visible object is represented by
 continuous and discrete vectors of attributes. A 2-layer attentional
 encoder can be used to convert this structured observation into
 a flat vector embedding.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>observation</p>
 </dd>
 </dl>
@@ -705,7 +707,7 @@ a flat vector embedding.</p>
 client sends cmd to server -&gt; server computes overlay update -&gt;
 register(overlay) -&gt; overlay is sent to client -&gt; overlay rendered</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>values</strong> – A map-sized (self.size) array of floating point values</p>
 </dd>
 </dl>
@@ -716,10 +718,10 @@ register(overlay) -&gt; overlay is sent to client -&gt; overlay rendered</p>
 <span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'human'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.render" title="Permalink to this definition">¶</a></dt>
 <dd><p>Data packet used by the renderer</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A packet of data for the client</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>packet</p>
 </dd>
 </dl>
@@ -731,16 +733,16 @@ register(overlay) -&gt; overlay is sent to client -&gt; overlay rendered</p>
 <dd><p>OpenAI Gym API reset function</p>
 <p>Loads a new game map and returns initial observations</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>idx</strong> – Map index to load. Selects a random map by default</p></li>
 <li><p><strong>step</strong> – Whether to step the environment and return initial obs</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Initial obs if step=True, None otherwise</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>obs</p>
 </dd>
 </dl>
@@ -753,7 +755,7 @@ therefore recommend the standard approach of resetting after a long
 but finite horizon: ~1000 timesteps for small maps and
 5000+ timesteps for large maps</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>observations, as documented by step()</p>
 </dd>
 </dl>
@@ -767,14 +769,14 @@ but finite horizon: ~1000 timesteps for small maps and
 access to the environment state via self.realm. Our baselines do not
 modify this method; specify any changes when comparing to baselines</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>player</strong> – player object</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The reward for the actions on the previous timestep of the
 entity identified by entID.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>reward</p>
 </dd>
 </dl>
@@ -799,7 +801,7 @@ centralized training decentralized execution methods like QMIX</p>
 <span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simulates one game tick or timestep</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>actions</strong> – <p>A dictionary of agent decisions of format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
    <span class="n">agent_1</span><span class="p">:</span> <span class="p">{</span>
@@ -826,7 +828,7 @@ Perform this conditional processing to make batched action
 computation easier.</p>
 </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><dl>
 <dt>observations:</dt><dd><p>A dictionary of agent observations of format:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -884,7 +886,7 @@ agent_2: None,
 </dl>
 </p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>(dict, dict, dict, None)</p>
 </dd>
 </dl>
@@ -900,10 +902,10 @@ agents that are still alive at the end of that horizon. This function
 performs that logging and returns the associated a data structure
 containing logs for the entire evaluation</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>ent</strong> – An agent</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Log datastructure</p>
 </dd>
 </dl>
@@ -911,7 +913,7 @@ containing logs for the entire evaluation</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.integrations.CleanRLEnv.unwrapped">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">unwrapped</span></span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.unwrapped" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unwrapped</span></span><a class="headerlink" href="#nmmo.integrations.CleanRLEnv.unwrapped" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -923,8 +925,12 @@ containing logs for the entire evaluation</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nmmo.integrations.cleanrl_vec_envs">
-<span class="sig-prename descclassname"><span class="pre">nmmo.integrations.</span></span><span class="sig-name descname"><span class="pre">cleanrl_vec_envs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_config_cls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.cleanrl_vec_envs" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-prename descclassname"><span class="pre">nmmo.integrations.</span></span><span class="sig-name descname"><span class="pre">cleanrl_vec_envs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_classes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.integrations.cleanrl_vec_envs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a vector environment object from a list of configs.</p>
+<p>Each subenv points to a single agent, but many agents can share the same env.
+All envs must have the same observation and action space, but they can have
+different numbers of agents</p>
+</dd></dl>
 
 </section>
 

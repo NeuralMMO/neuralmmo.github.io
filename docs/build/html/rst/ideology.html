@@ -4,11 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Abstract &mdash; Neural MMO v1.5.4.0 1.5.4.0 documentation</title>
+  <title>Abstract &mdash; Neural MMO vv1.5.5.0 v1.5.5.0 documentation</title>
   
 
   
@@ -35,6 +35,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -55,7 +56,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.4.0
+            <a href="../index.html" class="icon icon-home"> Neural MMO vv1.5.5.0
           
 
           
@@ -96,7 +97,8 @@
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="baselines.html"> Training and Evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baselines.html#reproducing-the-baseline">Reproducing the Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-emulation-cleanrl"> Emulation + CleanRL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-reporting-your-results"> Reporting Your Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="baselines.html#what-happened-to-rllib">What Happened to RLlib?</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
@@ -162,7 +164,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.4.0</a>
+          <a href="../index.html">Neural MMO vv1.5.5.0</a>
         
       </nav>
 
@@ -221,14 +223,14 @@
 <div class="line"><br /></div>
 </div>
 <section id="icon-abstract">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Abstract<a class="headerlink" href="#icon-abstract" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Abstract<a class="headerlink" href="#icon-abstract" title="Permalink to this heading">¶</a></h1>
 <p>Progress in multiagent intelligence research is fundamentally limited by the complexity of environments available for study. Neural MMO is a massively multiagent AI research platform inspired by Massively Multiplayer Online (MMO) role playing games – self-contained worlds featuring thousands of agents per persistent macrocosm, diverse skilling systems, local and global economies, complex emergent social structures, and ad-hoc high-stakes single and team based conflict.  Our goal is not to simulate the near-infinite physical processes of life on Earth but instead to construct an efficient facsimile that incentivizes the emergence of high-level social and general artificial intelligence. To this end, we consider MMOs the best proxy for the real world among human games.</p>
 <img alt="../_images/overview.svg" src="../_images/overview.svg" /><p>The long-term goal of Neural MMO is <strong>agents that scale to the complexity of the real world</strong>. The project is divided into research and engineering modules that cleanly segment this objective into concrete and approachable research and engineering tasks: <em>agents that scale to the complexity of their environment</em> and <em>environments that scale to the complexity of the real world</em>.</p>
 <p>This dual problem formulation is core to the guiding ideology of the project. Depending on your own personal conception of where the field is as the moment, this may seem like a practical philosophy, AGI cultism, or anything in between. Regardless, see this <a class="reference external" href="https://docs.google.com/document/d/1_76rYTPtPysSh2_cFFz3Mfso-9VL3_tF5ziaIZ8qmS8/edit?usp=sharing">[Two Pager]</a> for a more thorough overview of the project approach and objective.</p>
 <p>The discussion of failure modes below is mostly intended to dissuade skepticism, which thus far I’ve found correlates perfectly with lack of familiarity with MMOs. If you are very familiar with MMOs + current AI research and are still skeptical, please contact me on the Discord – I’d love to hear your views.</p>
 </section>
 <section id="icon-failure-modes">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Failure Modes<a class="headerlink" href="#icon-failure-modes" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Failure Modes<a class="headerlink" href="#icon-failure-modes" title="Permalink to this heading">¶</a></h1>
 <dl class="simple">
 <dt>We are currently aware of three failure cases for the project:</dt><dd><ul class="simple">
 <li><p>Computational infeasibility</p></li>

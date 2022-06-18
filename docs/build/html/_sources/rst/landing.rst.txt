@@ -70,8 +70,8 @@ Official support: Ubuntu 20.04, WSL, and MacOS. Tested with Anaconda Python 3.9
 .. code-block:: python
    :caption: Packaged installation
    
-   # Install NMMO with baseline dependencies
-   pip install nmmo[cleanrl]
+   # Install NMMO with baseline dependencies (quotes for mac compatibility).
+   pip install "nmmo[cleanrl]"
    
    # Clone baselines repository. Optional but recommended: setup WanDB integration.
    git clone https://github.com/neuralmmo/baselines nmmo-baselines

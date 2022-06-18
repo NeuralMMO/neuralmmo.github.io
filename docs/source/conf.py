@@ -29,8 +29,8 @@ sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 # -- Project information -----------------------------------------------------
 
 # The full version, including alpha/beta/rc tags
-import nmmo
-release = nmmo.__version__
+#import nmmo
+release = 'v1.5.5.0'#nmmo.__version__
 
 project = f'Neural MMO v{release}'
 copyright = '2020, Joseph Suarez'

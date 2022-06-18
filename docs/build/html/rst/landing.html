@@ -4,11 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Introduction &mdash; Neural MMO v1.5.4.0 1.5.4.0 documentation</title>
+  <title>Introduction &mdash; Neural MMO vv1.5.5.0 v1.5.5.0 documentation</title>
   
 
   
@@ -35,6 +35,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -57,7 +58,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.4.0
+            <a href="../index.html" class="icon icon-home"> Neural MMO vv1.5.5.0
           
 
           
@@ -104,7 +105,8 @@
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="baselines.html"> Training and Evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baselines.html#reproducing-the-baseline">Reproducing the Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-emulation-cleanrl"> Emulation + CleanRL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselines.html#icon-reporting-your-results"> Reporting Your Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="baselines.html#what-happened-to-rllib">What Happened to RLlib?</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
@@ -170,7 +172,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.4.0</a>
+          <a href="../index.html">Neural MMO vv1.5.5.0</a>
         
       </nav>
 
@@ -232,7 +234,7 @@
 </div>
 <p><strong>Quick links:</strong> <a class="reference external" href="https://github.com/neuralmmo">Github</a> | <a class="reference external" href="https://wandb.ai/jsuarez/NeuralMMO/reportlist">Baselines</a> | <a class="reference external" href="https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round1.html">NeurIPS 2021 Paper</a> | <a class="reference external" href="https://discord.gg/BkMmFUC">Discord</a> | <a class="reference external" href="https://twitter.com/jsuarez5341">Twitter</a></p>
 <section id="icon-introduction">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Introduction<a class="headerlink" href="#icon-introduction" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Introduction<a class="headerlink" href="#icon-introduction" title="Permalink to this heading">¶</a></h1>
 <p>Neural MMO is an open-source and computationally accessible research platform that simulates populations of agents in procedurally generated virtual worlds. We support basic foraging tasks involving a few agents for a couple of minutes, thousand-agent joint survival + exploration + combat over multiple hours, and everything between. Our goal is to support a broad base of multiagent research that would be impractical or impossible to conduct on other environments.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nmmo</span> <span class="kn">import</span> <span class="n">Env</span>
 
@@ -272,12 +274,12 @@
 </div>
 </section>
 <section id="icon-installation">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Installation<a class="headerlink" href="#icon-installation" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Installation<a class="headerlink" href="#icon-installation" title="Permalink to this heading">¶</a></h1>
 <p>Official support: Ubuntu 20.04, WSL, and MacOS. Tested with Anaconda Python 3.9</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Packaged installation</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install NMMO with baseline dependencies</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">nmmo</span><span class="p">[</span><span class="n">cleanrl</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install NMMO with baseline dependencies (quotes for mac compatibility).</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;nmmo[cleanrl]&quot;</span>
 
 <span class="c1"># Clone baselines repository. Optional but recommended: setup WanDB integration.</span>
 <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span> <span class="n">nmmo</span><span class="o">-</span><span class="n">baselines</span>
@@ -304,9 +306,9 @@
 </div>
 </section>
 <section id="icon-gallery">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Gallery<a class="headerlink" href="#icon-gallery" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Gallery<a class="headerlink" href="#icon-gallery" title="Permalink to this heading">¶</a></h1>
 <section id="perspective-and-ui">
-<h2>Perspective and UI<a class="headerlink" href="#perspective-and-ui" title="Permalink to this headline">¶</a></h2>
+<h2>Perspective and UI<a class="headerlink" href="#perspective-and-ui" title="Permalink to this heading">¶</a></h2>
 <figure class="align-default">
 <img alt="../_images/minimal.png" src="../_images/minimal.png" />
 </figure>
@@ -315,7 +317,7 @@
 </div>
 </section>
 <section id="overlays">
-<h2>Overlays<a class="headerlink" href="#overlays" title="Permalink to this headline">¶</a></h2>
+<h2>Overlays<a class="headerlink" href="#overlays" title="Permalink to this heading">¶</a></h2>
 <figure class="align-default">
 <img alt="../_images/overlays.png" src="../_images/overlays.png" />
 </figure>
@@ -324,7 +326,7 @@
 </div>
 </section>
 <section id="multiscale-terrain-generation">
-<h2>Multiscale Terrain Generation<a class="headerlink" href="#multiscale-terrain-generation" title="Permalink to this headline">¶</a></h2>
+<h2>Multiscale Terrain Generation<a class="headerlink" href="#multiscale-terrain-generation" title="Permalink to this heading">¶</a></h2>
 <figure class="align-default">
 <img alt="../_images/large_map.png" src="../_images/large_map.png" />
 </figure>
@@ -333,7 +335,7 @@
 </div>
 </section>
 <section id="overhead-render">
-<h2>Overhead Render<a class="headerlink" href="#overhead-render" title="Permalink to this headline">¶</a></h2>
+<h2>Overhead Render<a class="headerlink" href="#overhead-render" title="Permalink to this heading">¶</a></h2>
 <figure class="align-default">
 <img alt="../_images/rendered_map.png" src="../_images/rendered_map.png" />
 </figure>
@@ -343,7 +345,7 @@
 </section>
 </section>
 <section id="icon-call-for-collaborations">
-<span id="collaborations"></span><h1><img alt="icon" src="../_images/icon_pixel.png" /> Call for Collaborations<a class="headerlink" href="#icon-call-for-collaborations" title="Permalink to this headline">¶</a></h1>
+<span id="collaborations"></span><h1><img alt="icon" src="../_images/icon_pixel.png" /> Call for Collaborations<a class="headerlink" href="#icon-call-for-collaborations" title="Permalink to this heading">¶</a></h1>
 <p>Following the platform’s recent <a class="reference external" href="https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round1.html">publication</a> in NeurIPS 2021, we are excited to announce an open call for collaborations!</p>
 <dl class="simple">
 <dt>Eligibility <em>(at least one of)</em></dt><dd><ul class="simple">

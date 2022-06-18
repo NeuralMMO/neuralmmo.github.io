@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Index &mdash; Neural MMO v1.5.4.0 1.5.4.0 documentation</title>
+  <title>Index &mdash; Neural MMO vv1.5.5.0 v1.5.5.0 documentation</title>
   
 
   
@@ -34,6 +34,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -54,7 +55,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Neural MMO v1.5.4.0
+            <a href="index.html" class="icon icon-home"> Neural MMO vv1.5.5.0
           
 
           
@@ -95,7 +96,8 @@
 <p class="caption" role="heading"><span class="caption-text">Baselines</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="rst/baselines.html"> Training and Evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#reproducing-the-baseline">Reproducing the Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#icon-emulation-cleanrl"> Emulation + CleanRL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#icon-reporting-your-results"> Reporting Your Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/baselines.html#what-happened-to-rllib">What Happened to RLlib?</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
@@ -161,7 +163,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Neural MMO v1.5.4.0</a>
+          <a href="index.html">Neural MMO vv1.5.5.0</a>
         
       </nav>
 
@@ -340,10 +342,10 @@
         <li><a href="autodoc/nmmo.entity.player.html#nmmo.entity.player.Player.alive">(nmmo.entity.player.Player property)</a>
 </li>
       </ul></li>
-      <li><a href="autodoc/nmmo.lib.material.html#nmmo.lib.material.All">All (class in nmmo.lib.material)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="autodoc/nmmo.lib.material.html#nmmo.lib.material.All">All (class in nmmo.lib.material)</a>
+</li>
       <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.AllGameSystems">AllGameSystems (class in nmmo.core.config)</a>
 </li>
       <li><a href="autodoc/nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating.anchor_baseline">anchor_baseline() (nmmo.lib.rating.OpenSkillRating method)</a>
@@ -412,12 +414,6 @@
         <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Style.argType">(nmmo.io.action.Style attribute)</a>
 </li>
         <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Target.argType">(nmmo.io.action.Target attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="autodoc/nmmo.html#nmmo.Action.arguments">arguments (nmmo.Action attribute)</a>
-
-      <ul>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Action.arguments">(nmmo.io.action.Action attribute)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.systems.equipment.html#nmmo.systems.equipment.Armor">Armor (class in nmmo.systems.equipment)</a>
@@ -1106,13 +1102,9 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.East">East (class in nmmo.io.action)</a>
 </li>
-      <li><a href="autodoc/nmmo.html#nmmo.Action.edges">edges (nmmo.Action attribute)</a>
+      <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Attack.edges">edges (nmmo.io.action.Attack attribute)</a>
 
       <ul>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Action.edges">(nmmo.io.action.Action attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Attack.edges">(nmmo.io.action.Attack attribute)</a>
-</li>
         <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Direction.edges">(nmmo.io.action.Direction attribute)</a>
 </li>
         <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.East.edges">(nmmo.io.action.East attribute)</a>
@@ -1136,6 +1128,12 @@
         <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Target.edges">(nmmo.io.action.Target attribute)</a>
 </li>
         <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.West.edges">(nmmo.io.action.West attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="autodoc/nmmo.html#nmmo.Action.edges">edges() (nmmo.Action static method)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Action.edges">(nmmo.io.action.Action static method)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous.empty">empty (nmmo.io.stimulus.Continuous property)</a>
@@ -1518,22 +1516,6 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.East.idx">idx (nmmo.io.action.East attribute)</a>
-
-      <ul>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Mage.idx">(nmmo.io.action.Mage attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Melee.idx">(nmmo.io.action.Melee attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.North.idx">(nmmo.io.action.North attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Range.idx">(nmmo.io.action.Range attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.South.idx">(nmmo.io.action.South attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.West.idx">(nmmo.io.action.West attribute)</a>
-</li>
-      </ul></li>
       <li><a href="autodoc/nmmo.lib.material.html#nmmo.lib.material.Impassible">Impassible (class in nmmo.lib.material)</a>
 </li>
       <li><a href="autodoc/nmmo.core.tile.html#nmmo.core.tile.Tile.impassible">impassible (nmmo.core.tile.Tile property)</a>
@@ -2281,10 +2263,10 @@
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="autodoc/nmmo.html#nmmo.Action.n">n (nmmo.Action attribute)</a>
+      <li><a href="autodoc/nmmo.html#nmmo.Action.n">n (nmmo.Action property)</a>
 
       <ul>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Action.n">(nmmo.io.action.Action attribute)</a>
+        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Action.n">(nmmo.io.action.Action property)</a>
 </li>
         <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Attack.n">(nmmo.io.action.Attack attribute)</a>
 </li>
@@ -3656,6 +3638,18 @@
       </ul></li>
       <li><a href="autodoc/nmmo.entity.entity.html#nmmo.entity.entity.Resources">Resources (class in nmmo.entity.entity)</a>
 </li>
+      <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Config.RESPAWN">RESPAWN (nmmo.core.config.Config attribute)</a>
+
+      <ul>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Default.RESPAWN">(nmmo.core.config.Default attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Large.RESPAWN">(nmmo.core.config.Large attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Medium.RESPAWN">(nmmo.core.config.Medium attribute)</a>
+</li>
+        <li><a href="autodoc/nmmo.core.config.html#nmmo.core.config.Small.RESPAWN">(nmmo.core.config.Small attribute)</a>
+</li>
+      </ul></li>
       <li><a href="autodoc/nmmo.systems.achievement.html#nmmo.systems.achievement.Task.reward">reward (nmmo.systems.achievement.Task attribute)</a>
 
       <ul>
@@ -3782,20 +3776,6 @@
 
       <ul>
         <li><a href="autodoc/nmmo.entity.player.html#nmmo.entity.player.Player.serial">(nmmo.entity.player.Player property)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.East.serial">(nmmo.io.action.East attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Mage.serial">(nmmo.io.action.Mage attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Melee.serial">(nmmo.io.action.Melee attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.North.serial">(nmmo.io.action.North attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.Range.serial">(nmmo.io.action.Range attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.South.serial">(nmmo.io.action.South attribute)</a>
-</li>
-        <li><a href="autodoc/nmmo.io.action.html#nmmo.io.action.West.serial">(nmmo.io.action.West attribute)</a>
 </li>
       </ul></li>
       <li><a href="autodoc/nmmo.html#nmmo.Serialized">Serialized (class in nmmo)</a>
@@ -3938,8 +3918,6 @@
         <li><a href="autodoc/nmmo.infrastructure.html#nmmo.infrastructure.Grid.set">(nmmo.infrastructure.Grid method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autodoc/nmmo.systems.skill.html#nmmo.systems.skill.CombatSkill.setExpByLevel">setExpByLevel() (nmmo.systems.skill.CombatSkill method)</a>
 
       <ul>
@@ -3960,6 +3938,8 @@
         <li><a href="autodoc/nmmo.systems.skill.html#nmmo.systems.skill.Skill.setExpByLevel">(nmmo.systems.skill.Skill method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.WSServerFactory.setProtocolOptions">setProtocolOptions() (nmmo.websocket.WSServerFactory method)</a>
 </li>
       <li><a href="autodoc/nmmo.websocket.html#nmmo.websocket.WSServerFactory.setSessionParameters">setSessionParameters() (nmmo.websocket.WSServerFactory method)</a>
