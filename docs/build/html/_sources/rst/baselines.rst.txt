@@ -23,7 +23,10 @@ The baseline was trained on single Titan Xp GPU with 32 cores for 3 days. Perfor
 .. code-block:: python
   :caption: Reproduce the baseline from scratch
 
-  python evaluate.py
+  python main.py
+
+  # Check that your install is working with a couple cores
+  python main.py debug
 
 Your latest checkpoint will be saved to model.pt. Note that the default config specifies 1B agent steps. You can kill jobs early once SR is stable ("Agent" in the WanDB logs). The scripted combat baseline is fixed to 1500 SR. Exceeding this threshold means your agent is better than the scripted combat baseline, according to average performance across a variety of tasks including exploration, foraging, and combat.
 
