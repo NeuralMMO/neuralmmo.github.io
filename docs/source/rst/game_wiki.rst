@@ -315,18 +315,26 @@ If the Exchange system is enabled:
 Equipment
 *********
 
-Agents gain access to an additional 5 inventory slots for equipped items: a hat, top, bottom, held item (tool or weapon), and a stack of ammunition.
+Agents gain access to an additional 5 inventory slots for equipped items: a hat, top, bottom, held item, and a stack of ammunition.
 
 **Requires:** Combat and Item system
 
 If the Progression system is enabled:
  - All items appear in level 1-10 variants. 
- - Agents can equip and use items of a maximum level equal to their highest skill level
+ - Agents can equip armor up to the level of their highest skill
+ - Agents can equip weapons up to the level of the associated skill
+
+If the Profession system is enabled:
+ - Agents can equip ammunition and tools up to the level of the associated skill
 
 Profession
 **********
 
-Adds 5 new skills and 5 new corresponding resources:
+The Profession system adds 5 new gathering skills that provide supplies for exploration and combat. Unlike in the Resource system, materials gathered from the Profession system are added to the agent's inventory as items.
+
+**Requires:** Item system
+
+In the base progression system:
  - Prospecting, Carving, Alchemy: gather resources used as ammunition to enhance melee, range, and mage attacks
  - Fishing, Herbalism: gather resources that can be consumed to restore food, water, and health
 
@@ -337,6 +345,13 @@ Agents gain access to an environment-wide market where they can buy items from a
 
 **Requires:** Item and Equipment or Profession systems
 
+In the base Exchange system:
+ - Agents place sell offers on the market for one of their items at a particular price
+ - The item is immediately removed from the seller's inventory
+ - Other agents can immediately buy that item and receive it
+ - If multiple agents attempt to buy the same item at the same time, the market will attempt to fulfill the request from another seller at a price no more than 10% higher.
+
+Note that agents only observe the current best offer for each item of each level. This prevents unbounded blowup of the observation and action spaces.
 
 |icon| Skills
 #############
