@@ -240,7 +240,7 @@
 <span id="nmmo-package"></span><h1>nmmo package<a class="headerlink" href="#module-nmmo" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Env">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pettingzoo.utils.env.ParallelEnv</span></code></p>
 <p>Environment wrapper for Neural MMO using the Parallel PettingZoo API</p>
 <p>Neural MMO provides complex environments featuring structured observations/actions,
@@ -253,12 +253,12 @@ with RLlib as demonstrated in the /projekt wrapper is highly recommended.</p>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Env.metadata">
-<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'name':</span> <span class="pre">'neural-mmo',</span> <span class="pre">'render.modes':</span> <span class="pre">['human']}</span></em><a class="headerlink" href="#nmmo.Env.metadata" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'name':</span> <span class="pre">'neural-mmo',</span> <span class="pre">'render.modes':</span> <span class="pre">['human']}</span></em><a class="headerlink" href="#nmmo.Env.metadata" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Env.observation_space">
-<span class="sig-name descname"><span class="pre">observation_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.observation_space" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">observation_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Env.observation_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Neural MMO Observation Space</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -549,12 +549,12 @@ computation costs, we omit lava tiles from this method</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Env.max_num_agents">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">max_num_agents</span></span><a class="headerlink" href="#nmmo.Env.max_num_agents" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_num_agents</span></span><a class="headerlink" href="#nmmo.Env.max_num_agents" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Env.num_agents">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">num_agents</span></span><a class="headerlink" href="#nmmo.Env.num_agents" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_agents</span></span><a class="headerlink" href="#nmmo.Env.num_agents" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -573,14 +573,14 @@ centralized training decentralized execution methods like QMIX</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Env.unwrapped">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">unwrapped</span></span><a class="headerlink" href="#nmmo.Env.unwrapped" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unwrapped</span></span><a class="headerlink" href="#nmmo.Env.unwrapped" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Agent">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Agent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Agent" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Agent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Agent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Base class for agents</p>
 <dl class="field-list simple">
@@ -593,19 +593,19 @@ centralized training decentralized execution methods like QMIX</p>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Agent.scripted">
-<span class="sig-name descname"><span class="pre">scripted</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Agent.scripted" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">scripted</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Agent.scripted" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Agent.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Neural_'</span></em><a class="headerlink" href="#nmmo.Agent.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Neural_'</span></em><a class="headerlink" href="#nmmo.Agent.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.MapGenerator">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">MapGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.MapGenerator" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">MapGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.MapGenerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Procedural map generation</p>
 <dl class="py method">
@@ -640,14 +640,14 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Terrain">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Terrain</span></span><a class="headerlink" href="#nmmo.Terrain" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Terrain</span></span><a class="headerlink" href="#nmmo.Terrain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Terrain material class; populated at runtime</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Serialized</span></span><a class="headerlink" href="#nmmo.Serialized" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Serialized</span></span><a class="headerlink" href="#nmmo.Serialized" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.dict">
@@ -656,16 +656,16 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Entity</span></span><a class="headerlink" href="#nmmo.Serialized.Entity" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Entity</span></span><a class="headerlink" href="#nmmo.Serialized.Entity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.N">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Self">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Self</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Self" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Self</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Self" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Self.init">
@@ -674,12 +674,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Self.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Self.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Self.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Self.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Self.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Self.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -689,7 +689,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Self.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Self.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Self.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -699,7 +699,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Self.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Self.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Self.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -716,7 +716,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.ID">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.ID" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.ID" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.ID.init">
@@ -725,12 +725,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.ID.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.ID.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.ID.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.ID.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.ID.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.ID.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -740,7 +740,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.ID.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.ID.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.ID.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -750,7 +750,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.ID.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.ID.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.ID.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -767,7 +767,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.AttackerID">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">AttackerID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AttackerID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.AttackerID.init">
@@ -776,12 +776,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.AttackerID.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.AttackerID.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -791,7 +791,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.AttackerID.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -801,7 +801,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.AttackerID.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.AttackerID.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -818,7 +818,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Level">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Level" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Level.init">
@@ -827,12 +827,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Level.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Level.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Level.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Level.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Level.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Level.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -842,7 +842,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Level.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Level.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Level.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -852,7 +852,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Level.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Level.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Level.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -869,7 +869,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Population">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Population</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Population" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Population</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Population" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Population.init">
@@ -878,12 +878,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Population.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Population.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Population.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Population.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Population.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Population.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -893,7 +893,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Population.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Population.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Population.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -903,7 +903,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Population.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Population.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Population.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -920,7 +920,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.R">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">R</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.R" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">R</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.R" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.R.init">
@@ -929,12 +929,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.R.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.R.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.R.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.R.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.R.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.R.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -944,7 +944,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.R.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.R.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.R.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -954,7 +954,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.R.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.R.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.R.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -971,7 +971,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.C">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">C</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.C" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">C</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.C" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.C.init">
@@ -980,12 +980,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.C.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.C.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.C.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.C.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.C.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.C.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -995,7 +995,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.C.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.C.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.C.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1005,7 +1005,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.C.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">6</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.C.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.C.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1022,7 +1022,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Damage">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Damage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Damage" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Damage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Damage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Damage.init">
@@ -1031,12 +1031,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Damage.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Damage.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1046,7 +1046,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Damage.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1056,7 +1056,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Damage.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">7</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Damage.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1073,7 +1073,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.TimeAlive">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">TimeAlive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TimeAlive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.TimeAlive.init">
@@ -1082,12 +1082,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.TimeAlive.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.TimeAlive.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1097,7 +1097,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.TimeAlive.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1107,7 +1107,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.TimeAlive.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.TimeAlive.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1124,7 +1124,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Food">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Food</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Food" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Food</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Food" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Food.init">
@@ -1133,12 +1133,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Food.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Food.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Food.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Food.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Food.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Food.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1148,7 +1148,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Food.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Food.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Food.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1158,7 +1158,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Food.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Food.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Food.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1175,7 +1175,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Water">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Water</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Water" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Water</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Water" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Water.init">
@@ -1184,12 +1184,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Water.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Water.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Water.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Water.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Water.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Water.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1199,7 +1199,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Water.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Water.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Water.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1209,7 +1209,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Water.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Water.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Water.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1226,7 +1226,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Health">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Health</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Health" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Health</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Health" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Health.init">
@@ -1235,12 +1235,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Health.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Health.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Health.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Health.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Health.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Health.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1250,7 +1250,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Health.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Health.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Health.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1260,7 +1260,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Health.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">11</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Health.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Health.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1277,7 +1277,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Freeze">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Freeze</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Freeze</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Freeze.init">
@@ -1286,12 +1286,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Freeze.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Freeze.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1301,7 +1301,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Freeze.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1311,7 +1311,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Entity.Freeze.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">12</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#nmmo.Serialized.Entity.Freeze.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1330,16 +1330,16 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Tile</span></span><a class="headerlink" href="#nmmo.Serialized.Tile" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Tile</span></span><a class="headerlink" href="#nmmo.Serialized.Tile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.N">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.NEnts">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">NEnts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NEnts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous" title="nmmo.io.stimulus.Continuous"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Continuous</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.NEnts.init">
@@ -1348,12 +1348,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.NEnts.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.NEnts.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1363,7 +1363,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.NEnts.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1373,7 +1373,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.NEnts.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.NEnts.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1390,7 +1390,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.Index">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.Index" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.Index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.Index.init">
@@ -1399,12 +1399,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.Index.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.Index.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.Index.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.Index.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.Index.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.Index.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1414,7 +1414,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.Index.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Tile.Index.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Tile.Index.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1424,7 +1424,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.Index.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.Index.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.Index.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1441,7 +1441,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.R">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">R</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.R" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">R</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.R" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.R.init">
@@ -1450,12 +1450,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.R.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.R.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.R.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.R.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.R.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.R.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1465,7 +1465,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.R.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Tile.R.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Tile.R.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1475,7 +1475,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.R.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.R.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.R.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1492,7 +1492,7 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.C">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">C</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.C" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">C</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Serialized.Tile.C" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete" title="nmmo.io.stimulus.Discrete"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.stimulus.Discrete</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.C.init">
@@ -1501,12 +1501,12 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.C.CONTINUOUS">
-<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.C.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.C.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.C.DISCRETE">
-<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.C.DISCRETE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DISCRETE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.C.DISCRETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1516,7 +1516,7 @@ as a config argument.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.C.empty">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Tile.C.empty" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">empty</span></span><a class="headerlink" href="#nmmo.Serialized.Tile.C.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1526,7 +1526,7 @@ as a config argument.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Serialized.Tile.C.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.C.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.Serialized.Tile.C.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1547,22 +1547,22 @@ as a config argument.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Action">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Action</span></span><a class="headerlink" href="#nmmo.Action" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Action</span></span><a class="headerlink" href="#nmmo.Action" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node" title="nmmo.io.action.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.io.action.Node</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Action.nodeType">
-<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nmmo.Action.nodeType" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">nodeType</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.Action.nodeType" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Action.edges">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Action.edges" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Action.edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of valid actions</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.Action.n">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">n</span></span><a class="headerlink" href="#nmmo.Action.n" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n</span></span><a class="headerlink" href="#nmmo.Action.n" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1577,50 +1577,50 @@ as a config argument.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Action.N">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Action.N" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Action.N" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Action.leaf">
-<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.Action.leaf" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">leaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.Action.leaf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Action.priority">
-<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.Action.priority" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.Action.priority" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Action.type">
-<span class="sig-name descname"><span class="pre">type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.Action.type" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.Action.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Task">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reward</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Task" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">condition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reward</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Task" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Task.condition">
-<span class="sig-name descname"><span class="pre">condition</span></span><em class="property"><span class="pre">:</span> <span class="pre">Callable</span></em><a class="headerlink" href="#nmmo.Task.condition" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">condition</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span></em><a class="headerlink" href="#nmmo.Task.condition" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Task.target">
-<span class="sig-name descname"><span class="pre">target</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#nmmo.Task.target" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">target</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.Task.target" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.Task.reward">
-<span class="sig-name descname"><span class="pre">reward</span></span><em class="property"><span class="pre">:</span> <span class="pre">float</span></em><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#nmmo.Task.reward" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reward</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.Task.reward" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Overlay">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Overlay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Overlay" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Overlay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Overlay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Define a overlay for visualization in the client</p>
 <p>Overlays are color images of the same size as the game map.
@@ -1655,7 +1655,7 @@ can be used to gain insight about agent behaviors.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.OverlayRegistry">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">OverlayRegistry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.OverlayRegistry" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">OverlayRegistry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.OverlayRegistry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Manager class for overlays</p>
 <dl class="field-list simple">
@@ -1690,7 +1690,7 @@ can be used to gain insight about agent behaviors.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.Replay">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Replay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Replay" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Replay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Replay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Replay.update">
@@ -1704,7 +1704,7 @@ can be used to gain insight about agent behaviors.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.Replay.load">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Replay.load" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.Replay.load" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1716,7 +1716,7 @@ can be used to gain insight about agent behaviors.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.OpenSkillRating">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">OpenSkillRating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">33.333333333333336</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor_mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1500</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.OpenSkillRating" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">OpenSkillRating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">33.333333333333336</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor_mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1500</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.OpenSkillRating" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>OpenSkill Rating wrapper for estimating relative policy skill</p>
 <p>Provides a simple method for updating skill estimates from raw
@@ -1733,7 +1733,7 @@ per-agent scores as are typically returned by the environment.</p>
 </dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.OpenSkillRating.stats">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">stats</span></span><a class="headerlink" href="#nmmo.OpenSkillRating.stats" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stats</span></span><a class="headerlink" href="#nmmo.OpenSkillRating.stats" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">

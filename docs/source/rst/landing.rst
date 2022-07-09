@@ -19,6 +19,8 @@
 
 **Quick links:** `Github <https://github.com/neuralmmo>`_ | `Baselines <https://wandb.ai/jsuarez/NeuralMMO/reportlist>`_ | `NeurIPS 2021 Paper <https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round1.html>`_ | `Discord <https://discord.gg/BkMmFUC>`_ | `Twitter <https://twitter.com/jsuarez5341>`_
 
+**Announcements:** v1.6 is now live in beta! Build from source using the v1.6 branches in the environment and baselines. New documentation, including an updated game wiki, in progress `here <https://neuralmmo.github.io/beta>`_
+
 |icon| Introduction
 ###################
 
