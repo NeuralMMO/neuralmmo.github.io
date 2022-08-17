@@ -17,4 +17,5 @@ nmmo.lib package
    nmmo.lib.overlay
    nmmo.lib.priorityqueue
    nmmo.lib.rating
+   nmmo.lib.spawn
    nmmo.lib.utils

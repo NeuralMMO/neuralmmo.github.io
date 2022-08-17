@@ -21,5 +21,8 @@ nmmo.systems package
    nmmo.systems.combat
    nmmo.systems.droptable
    nmmo.systems.equipment
+   nmmo.systems.exchange
    nmmo.systems.experience
+   nmmo.systems.inventory
+   nmmo.systems.item
    nmmo.systems.skill

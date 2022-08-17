@@ -19,6 +19,8 @@
 
 **Quick links:** `Github <https://github.com/neuralmmo>`_ | `Baselines <https://wandb.ai/jsuarez/NeuralMMO/reportlist>`_ | `NeurIPS 2021 Paper <https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round1.html>`_ | `Discord <https://discord.gg/BkMmFUC>`_ | `Twitter <https://twitter.com/jsuarez5341>`_
 
+`NeurIPS 2022 Competition: <https://www.aicrowd.com/challenges/neurips-2022-the-neural-mmo-challenge>`_ Train teams of agents to compete in a battle royale verses other participants with $20,000 in prizes sponsored by Parametrix.AI and cloud credits sponsored by AWS.
+
 |icon| Introduction
 ###################
 
@@ -130,7 +132,7 @@ Overhead Render
 |icon| Call for Collaborations
 ##############################
 
-Following the platform's recent `publication <https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round1.html>`_ in NeurIPS 2021, we are excited to announce an open call for collaborations!
+Following the platform's `publication <https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round1.html>`_ in NeurIPS 2021, we are excited to announce an open call for collaborations!
 
 Eligibility *(at least one of)*
    - You are affiliated with an academic lab (professor/PhD student/postdoc)
@@ -138,7 +140,7 @@ Eligibility *(at least one of)*
    - You are a corporate researcher with substantial freedom to publish
    - You have a substantial engineering background and want to help with core development
 
-Excepting prospective developers, your objectives should include first-author publication at a top venue. We (Joseph Suarez and Phillip Isola, MIT) would be included as second authors. Compared to working independently, we can offer:
+Excepting prospective developers, your objectives should include first-author publication at a reputable venue. We (Joseph Suarez and Phillip Isola, MIT) would be included in the least important author slots. Compared to working independently, we can offer:
 
 Benefits:
    - Extended support and custom features

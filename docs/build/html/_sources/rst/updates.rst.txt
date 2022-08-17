@@ -30,8 +30,19 @@
 
 `Neural MMO: A Massively Multiagent Game Environment <https://github.com/jsuarez5341/neural-mmo>`_ (OpenAI Blog, 2019) (v1.0)
 
+|icon| Competitions
+###################
+
+`NeurIPS 2022 <https://www.aicrowd.com/challenges/neurips-2022-the-neural-mmo-challenge>`_
+
+`IJCAI 2022 <https://www.aicrowd.com/challenges/ijcai-2022-the-neural-mmo-challenge>`_
+
+`AICrowd 2021 <https://www.aicrowd.com/challenges/the-neural-mmo-challenge>`_
+
 |icon| Presentations
 ####################
+
+`[Slides] <https://docs.google.com/presentation/d/1PJ8a8nFMfZ0AoiM25VoXQ__uzovrjlODIlqFSjQuCOk/edit?usp=sharing>`_ The IJCAI 2022 Neural MMO Challenge
 
 `[Slides] <https://docs.google.com/presentation/d/1CCYZNBWV6u_EW0h_NeL_BnJzBx_sMv--Q8P4TACM3Bs/edit?usp=sharing>`_ `Neural MMO: Building a Massively Multiagent Research Platform with Ray and RLlib <https://www.youtube.com/watch?v=9V6EvSEMREg>`_ (Ray Summit 2021, Online) (v1.5)
 
@@ -62,9 +73,30 @@ Discontinued in v1.4+ -- better demos and patch notes have made these obsolete.
 |icon| Patch Notes + Version History
 ####################################
 
-The `[OpenAI] <https://github.com/openai/neural-mmo>`_ repository only hosts v1.0. My personal `[Github] <https://github.com/jsuarez5341/neural-mmo>`_ hosts the latest version in *master* and all previous versions as separate branches. This documentation page is generated from the latest environment release. Feel free to drop in the Discord #support channel if you are having trouble. You can expect fast fixes to Github issues and even faster replies to Discord PMs.
+The `[OpenAI] <https://github.com/openai/neural-mmo>`_ repository only hosts v1.0. The Neural MMO organization `[Github] <https://github.com/neuralmmo>`_ hosts the latest version in the default branch and all previous versions as separate branches. This documentation page is generated from the latest environment release. Feel free to drop in the Discord #support channel if you are having trouble. You will get much faster fixes here than on Github.
 
-.. figure:: /resource/legacy/v1-5_env.png
+**v1.6:** The Economy Update -- largest to date!
+   - 150+ items: 16 unique items are available in level 1-10 variants
+   - Rebalanced Combat: rock-paper-scissors interaction between styles, simpler and more balanced damage formula
+   - 5 new skills: Fishing, Hunting, Prospecting, Carving, and Alchemy focus on gathering items used for survival and in combat
+   - Weapons and Tools: All 5 new skills and the 3 combat skills have unique weapons and tools to boost their efficacy
+   - Trade: Buy and sell items on a global market
+   - Expanded game wiki with full details
+
+**v1.5.5:** Better Baselines
+   - Slightly exceeds performance of the scripted combat model with CleanRL
+   - Training takes 1 GPU, 32 cores, and <3 days
+   - Includes checkpoints and training code
+
+**v1.5.4:** CleanRL Integration
+   - Emulation layer that makes Neural MMO look like a simpler environment:
+      - Multiagent -> N single-agent environments
+      - Flat observations and actions
+      - Fixed horizons
+   - Single-file CleanRL baseline using the above wrappers
+   - Evaluation tools
+
+**v1.5.3:** PettingZoo Integration
 
 **v1.5.2:** Ray Tune and WanDB Integrations
    - Trinity:
@@ -87,6 +119,8 @@ The `[OpenAI] <https://github.com/openai/neural-mmo>`_ repository only hosts v1.
       - Added competition configs and baselines
    - Trinity: Formal API for scripted agents using the same observation interface as learned models
    - Embyr: Culled vertices and recalculated normals to improve terrain smoothness and performance
+
+.. figure:: /resource/legacy/v1-5_env.png
 
 **v1.5:** Large maps, Dashboard, Scripted Baselines
    - Blade: Full rework to support large environments and scripted players/NPCs

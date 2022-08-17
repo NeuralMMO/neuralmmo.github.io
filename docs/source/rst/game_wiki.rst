@@ -16,27 +16,32 @@ Glossary
 ********
 
 A quick reference of standard game terms:
-- **Tick:** The simulation interval of the server; a timestep. With rendering enabled, the server targets 0.6s/tick.
-- **NPC:** Non-Player Character; any agent not controlled by a user. Sometimes called a *mob*
-- **Spawn:** Entering into the game, e.g. *players spawn with 10 health*
-- **RPG:** Role-Playing Game, e.g. a game in which the player takes on a particular role, usually one removed from modern reality, such as that of a knight or wizard. *MMO* is short for *MMORPG*, as most MMOs are also role-playing games.
-- **XP (exp):** Experience, a stat associated with progression systems to represent levels.
+ - **Tick:** The simulation interval of the server; a timestep. With rendering enabled, the server targets 0.6s/tick.
+ - **NPC:** Non-Player Character; any agent not controlled by a user. Sometimes called a *mob*
+ - **Spawn:** Entering into the game, e.g. *players spawn with 10 health*
+ - **RPG:** Role-Playing Game, e.g. a game in which the player takes on a particular role, usually one removed from modern reality, such as that of a knight or wizard. *MMO* is short for *MMORPG*, as most MMOs are also role-playing games.
+ - **XP (exp):** Experience, a stat associated with progression systems to represent levels.
 
 Features
 ********
 
 Neural MMO includes the following game systems
-- **Terrain:** Procedurally generated maps with obstacles
-- **Resource:** Agents must forage for resources to survive
-- **Combat:** Agent can fight each other
-- **NPC:** Maps are inhabited by mobs of varying friendliness
-- **Progression:** Agents improve various abilities through usage
-- **Item:** Agents can acquire a number of items with distinct uses
-- **Equipment:** Agents can use armor, weapons, and tools
-- **Profession:** Agents can practice distinct jobs
-- **Exchange:** Agents can trade items on a global market
+ - **Terrain:** Procedurally generated maps with obstacles
+ - **Resource:** Agents must forage for resources to survive
+ - **Combat:** Agent can fight each other
+ - **NPC:** Maps are inhabited by mobs of varying friendliness
+ - **Progression:** Agents improve various abilities through usage
+ - **Item:** Agents can acquire a number of items with distinct uses
+ - **Equipment:** Agents can use armor, weapons, and tools
+ - **Profession:** Agents can practice distinct jobs
+ - **Exchange:** Agents can trade items on a global market
 
 Each of these sytems may be configured or disabled individually (with some common sense dependencies). This wiki assumes the default configuration with all game systems enabled and does not provide constants (such as the amount of player health) because these are documented separately as part of the environment config.
+
+Contributing
+************
+
+If you find errors or ambiguities in the documentation, please either submit a PR with the associated fixes or, if it is easier, simply point it out on the Discord. Numerical constants sometimes change as we balance the game mechanics: always double-check your config file when making important decisions.
 
 |icon| IO 
 #########
@@ -213,19 +218,17 @@ Combat
 
 Agents gain access to melee, range, and mage attacks. These obey a rock-paper-scissors dominance relationship: melee beats range beats mage beats melee. Dominance is calculated using the attacker's chosen attack skill and the defender's main combat skill. Attacks inflict damage to the target according to the following formula: *damage = effectiveness multiplier * (attack score - defense score).
 
+**Combat defaults are currently only correctly configured for all systems enabled. The base system information below will be accurate once this is fixed.**
+
 In the base Combat system:
+ - Attacks can inflict damage from 3 squares away
  - Attack score is equal to a flat base damage of 30
  - Defense score is equal to zero
- - The resultant difference is clipped to a minimum of 0
  - Main combat skill is the one an agent has used the most
  - Effective damage multiplier is 1.5 for using the correct style (e.g. mage vs melee) and 1 otherwise
 
-If the Resource system is enabled
- - Damage inflicted drains the same value from the target's food and water, restoring it to the attacker
- - This is a legacy mechanic from early in development and may be revisited as redundant and unintuitive
-
 If the progression system is enabled
- - Base damage is decreased to 25
+ - Base damage is decreased to 0
  - Attack score is increased by 5 for each level of the attacker's offensive skill
  - Defense is increased by 5 for each level of the defender's highest skill
  - Main combat skill is the one with the most experience
@@ -233,14 +236,21 @@ If the progression system is enabled
 If the equipment system is enabled
  - Attack score is increased by the attacker's offensive equipment bonus (weapons, ammunition)
  - Defense score is increased by the defender's defensive bonus (armor, tools)
- - See the Item list for the attack/defense bonus of each equipment item
+ - Attack score for a specific style is increased by 15 if wielding a weapon
+ - Attack score is increased by 15 per weapon or ammunition level
+ - Defense score is increased by 30 if wielding a tool
+ - Defense score is increased by 10 per armor level
 
 With all systems enabled:
 
 .. code-block:: python
-  damage = effectiveness multiplier * ((base damage + attacker level adjustment + attacker equipment adjustment) - (target level adjustment + target equipment adjustment))
 
-This combat formula treats each point of attack as +1 damage and each point of defense as -1 damage. It simply adds damage from all sources and subtracts defense from all sources. The attacker always has an advantage in that they can select the skill strong against the target's main skill. However, the defender can immediately retaliate in the same manner. Additionally, a combat style in which an agent has a higher level and better equipment may outperform one with only the effectiveness multiplier.
+  offense = base damage + attacker level adjustment + attacker equipment adjustment
+  defense = target level adjustment + target equipment adjustment
+  raw_damage = effectiveness multiplier * offense * (15 / (15 + defense))
+  final_damage = max(0, int(damage))
+
+The attacker always has an advantage in that they can select the skill strong against the target's main skill. However, the defender can immediately retaliate in the same manner. Additionally, a combat style in which an agent has a higher level and better equipment may outperform one with only the effectiveness multiplier.
 
 NPC
 ***
@@ -256,18 +266,14 @@ In the base NPC system:
  - Hostile NPCs will actively hunt down and attack other NPCs and players using the same pathing algorithm
 
 If the Equipment system is enabled:
- - NPCs spawn with a full set of armor
- - NPCs spawn with a random weapon
+ - NPCs spawn with random armor piece
 
 If the Profession system is enabled:
  - NPCs spawn with a random tool
 
 If the Progression system is enabled:
  - NPCs will appear in varying levels
- - One randomly chosen piece of equipment (if present) will be equal to the NPC level
- - All other equipment will be equal to the NPC level minus one
- - If this reduces the equipment to level zero, it is not spawned
- - This means a level 1 NPC will have a single level 1 item while a level 2 agent will have a full set of level 1 gear with one level 2 item
+ - Any equipment dropped will be of level equal to the NPC's level
 
 If the Exchange system is enabled:
  - NPCs spawn with gold equal to their level
@@ -287,14 +293,14 @@ In the base Progression system:
  - Level *x+1* requires 10*2^*x* XP
 
 If the Combat system is enabled:
- - Base combat damage is reduced to 25 by increased by 5 per level in the appropriate attack skill
  - Agents are awarded 1 XP per attack
 
 If the Item system is enabled:
  - All items except gold will appear in varying levels
 
 If the Profession system is enabled
- - Agents are awarded 2 XP per resource gathered
+ - Agents are awarded 1 XP per ammunition resource gathered
+ - Agents are awarded 5 XP per consumable resource gathered
 
 Item
 ****
@@ -337,6 +343,11 @@ The Profession system adds 5 new gathering skills that provide supplies for expl
 In the base progression system:
  - Prospecting, Carving, Alchemy: gather resources used as ammunition to enhance melee, range, and mage attacks
  - Fishing, Herbalism: gather resources that can be consumed to restore food, water, and health
+ - There is a 2.5 percent chance to obtain a weapon while gathering ammunition
+ - These drops are intentionally not for the same style as the gathered ammunition
+ - Ore (Prospecting) can drop Wands
+ - Trees (Carving) can drop Swords
+ - Crystals (Alchemy) can drop Bows
 
 Exchange
 ********
@@ -350,8 +361,9 @@ In the base Exchange system:
  - The item is immediately removed from the seller's inventory
  - Other agents can immediately buy that item and receive it
  - If multiple agents attempt to buy the same item at the same time, the market will attempt to fulfill the request from another seller at a price no more than 10% higher.
+ - Buy and sell actions are prioritized per-population based on each agent's entity ID. So if the first agent on a team sells an item, the second agent will have the first chance to buy it. Note that there are some edge cases here, and we would appreciate user feedback.
 
-Note that agents only observe the current best offer for each item of each level. This prevents unbounded blowup of the observation and action spaces.
+Agents only observe the current best offer for each item of each level. This prevents unbounded blowup of the observation and action spaces.
 
 |icon| Skills
 #############
@@ -409,7 +421,7 @@ Resource: Shaving
 Usage: Range ammunition
 
 Alchemy
-******
+*******
 
 Tool: Arcane focus
 Resource: Shard
@@ -426,7 +438,7 @@ Currency used on the market. Inherently valuable as the only medium of exchange.
 Armor: Hat, Top, Bottom
 ***********************
 
-Grants a flat 5 defense per item level
+Grants 10 defense per item level
 
 Requires at least one skill greater than or equal to the item level to equip
 
@@ -435,14 +447,14 @@ Also referred to as helmet, chestplate, and platelegs
 Weapon: Sword, Bow, Wand
 ************************
 
-Grants a flat 15 attack bonus to the pertinent style (melee, range, mage) per item level
+Grants a flat 15  plus 15 attack bonus per item level to the associated style (melee, range, mage)
 
 Requires a pertinent skill level greater than or equal to the item level to equip
 
 Tool: Rod, Gloves, Pickaxe, Chisel, Arcane Focus
 ************************************************
 
-Grants a flat 15 defense per item level
+Grants a flat 30 defense regardless of item level
 
 Requires a pertinent skill level (fishing, herbalism, prospecting, carving, alchemy) greater than or equal to the item level to equip
 

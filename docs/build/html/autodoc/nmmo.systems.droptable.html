@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.systems.droptable module &mdash; Neural MMO v1.5.5.0 1.5.5.0 documentation</title>
+  <title>nmmo.systems.droptable module &mdash; Neural MMO v1.6.0 1.6.0 documentation</title>
   
 
   
@@ -57,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.5.0
+            <a href="../index.html" class="icon icon-home"> Neural MMO v1.6.0
           
 
           
@@ -133,7 +133,10 @@
 <li class="toctree-l4"><a class="reference internal" href="nmmo.systems.combat.html">nmmo.systems.combat module</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">nmmo.systems.droptable module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.systems.equipment.html">nmmo.systems.equipment module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.systems.exchange.html">nmmo.systems.exchange module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.systems.experience.html">nmmo.systems.experience module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.systems.inventory.html">nmmo.systems.inventory module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.systems.item.html">nmmo.systems.item module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.systems.skill.html">nmmo.systems.skill module</a></li>
 </ul>
 </li>
@@ -152,16 +155,16 @@
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html"> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-io"> IO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-game-systems"> Game Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-resource-system"> Resource System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-combat"> Combat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-progression"> Progression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-skills"> Skills</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-items"> Items</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html"> Video Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-publications"> Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-competitions"> Competitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-presentations"> Presentations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-update-slides"> Update Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-additional-links"> Additional Links</a></li>
@@ -191,7 +194,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.5.0</a>
+          <a href="../index.html">Neural MMO v1.6.0</a>
         
       </nav>
 
@@ -252,39 +255,87 @@
   <section id="module-nmmo.systems.droptable">
 <span id="nmmo-systems-droptable-module"></span><h1>nmmo.systems.droptable module<a class="headerlink" href="#module-nmmo.systems.droptable" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.droptable.Range">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.droptable.</span></span><span class="sig-name descname"><span class="pre">Range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mmax</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Range" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Fixed">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.droptable.</span></span><span class="sig-name descname"><span class="pre">Fixed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Fixed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.droptable.Range.value">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#nmmo.systems.droptable.Range.value" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Fixed.roll">
+<span class="sig-name descname"><span class="pre">roll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Fixed.roll" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.droptable.Drop">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.droptable.</span></span><span class="sig-name descname"><span class="pre">Drop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Drop" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.droptable.</span></span><span class="sig-name descname"><span class="pre">Drop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Drop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.droptable.Drop.roll">
-<span class="sig-name descname"><span class="pre">roll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Drop.roll" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">roll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Drop.roll" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.droptable.DropTable">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.droptable.</span></span><span class="sig-name descname"><span class="pre">DropTable</span></span><a class="headerlink" href="#nmmo.systems.droptable.DropTable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Standard">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.droptable.</span></span><span class="sig-name descname"><span class="pre">Standard</span></span><a class="headerlink" href="#nmmo.systems.droptable.Standard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.droptable.DropTable.add">
-<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.DropTable.add" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Standard.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Standard.add" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.droptable.DropTable.roll">
-<span class="sig-name descname"><span class="pre">roll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.DropTable.roll" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Standard.roll">
+<span class="sig-name descname"><span class="pre">roll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Standard.roll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Empty">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.droptable.</span></span><span class="sig-name descname"><span class="pre">Empty</span></span><a class="headerlink" href="#nmmo.systems.droptable.Empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.droptable.Standard" title="nmmo.systems.droptable.Standard"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.droptable.Standard</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Empty.roll">
+<span class="sig-name descname"><span class="pre">roll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Empty.roll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Empty.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Empty.add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Ammunition">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.droptable.</span></span><span class="sig-name descname"><span class="pre">Ammunition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Ammunition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.droptable.Standard" title="nmmo.systems.droptable.Standard"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.droptable.Standard</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Ammunition.roll">
+<span class="sig-name descname"><span class="pre">roll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Ammunition.roll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Ammunition.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Ammunition.add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Consumable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.droptable.</span></span><span class="sig-name descname"><span class="pre">Consumable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Consumable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.droptable.Standard" title="nmmo.systems.droptable.Standard"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.droptable.Standard</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Consumable.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Consumable.add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.droptable.Consumable.roll">
+<span class="sig-name descname"><span class="pre">roll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.droptable.Consumable.roll" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

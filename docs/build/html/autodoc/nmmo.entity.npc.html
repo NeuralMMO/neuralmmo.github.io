@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.entity.npc module &mdash; Neural MMO v1.5.5.0 1.5.5.0 documentation</title>
+  <title>nmmo.entity.npc module &mdash; Neural MMO v1.6.0 1.6.0 documentation</title>
   
 
   
@@ -57,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.5.0
+            <a href="../index.html" class="icon icon-home"> Neural MMO v1.6.0
           
 
           
@@ -148,16 +148,16 @@
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html"> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-io"> IO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-game-systems"> Game Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-resource-system"> Resource System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-combat"> Combat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-progression"> Progression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-skills"> Skills</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-items"> Items</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html"> Video Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-publications"> Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-competitions"> Competitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-presentations"> Presentations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-update-slides"> Update Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-additional-links"> Additional Links</a></li>
@@ -187,7 +187,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.5.0</a>
+          <a href="../index.html">Neural MMO v1.6.0</a>
         
       </nav>
 
@@ -248,8 +248,24 @@
   <section id="module-nmmo.entity.npc">
 <span id="nmmo-entity-npc-module"></span><h1>nmmo.entity.npc module<a class="headerlink" href="#module-nmmo.entity.npc" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
+<dt class="sig sig-object py" id="nmmo.entity.npc.Equipment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">Equipment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">total</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_attack</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_attack</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_attack</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_defense</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_defense</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_defense</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Equipment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.entity.npc.Equipment.total">
+<span class="sig-name descname"><span class="pre">total</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">getter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Equipment.total" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.npc.Equipment.packet">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.entity.npc.Equipment.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">NPC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">NPC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity" title="nmmo.entity.entity.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.entity.entity.Entity</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC.update">
@@ -258,23 +274,13 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="nmmo.entity.npc.NPC.receiveDamage">
+<span class="sig-name descname"><span class="pre">receiveDamage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC.receiveDamage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC.spawn">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">spawn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC.spawn" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.NPC.yieldDrops">
-<span class="sig-name descname"><span class="pre">yieldDrops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC.yieldDrops" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.NPC.gearLevel">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">gearLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC.gearLevel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.NPC.clippedLevels">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">clippedLevels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">danger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC.clippedLevels" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">spawn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC.spawn" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -284,12 +290,12 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC.isNPC">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">isNPC</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.NPC.isNPC" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isNPC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.NPC.isNPC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC.alive">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">alive</span></span><a class="headerlink" href="#nmmo.entity.npc.NPC.alive" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alive</span></span><a class="headerlink" href="#nmmo.entity.npc.NPC.alive" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -299,29 +305,24 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC.isPlayer">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">isPlayer</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.NPC.isPlayer" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isPlayer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.NPC.isPlayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.npc.NPC.level">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#nmmo.entity.npc.NPC.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC.pos">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#nmmo.entity.npc.NPC.pos" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.NPC.receiveDamage">
-<span class="sig-name descname"><span class="pre">receiveDamage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC.receiveDamage" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.NPC.receiveLoot">
-<span class="sig-name descname"><span class="pre">receiveLoot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loadout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC.receiveLoot" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#nmmo.entity.npc.NPC.pos" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Passive">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">Passive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Passive" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">Passive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Passive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.entity.npc.NPC" title="nmmo.entity.npc.NPC"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.entity.npc.NPC</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Passive.decide">
@@ -330,7 +331,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Passive.alive">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">alive</span></span><a class="headerlink" href="#nmmo.entity.npc.Passive.alive" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alive</span></span><a class="headerlink" href="#nmmo.entity.npc.Passive.alive" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -338,24 +339,19 @@
 <span class="sig-name descname"><span class="pre">applyDamage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dmg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Passive.applyDamage" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.Passive.clippedLevels">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">clippedLevels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">danger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Passive.clippedLevels" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.Passive.gearLevel">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">gearLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Passive.gearLevel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Passive.isNPC">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">isNPC</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Passive.isNPC" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isNPC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Passive.isNPC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Passive.isPlayer">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">isPlayer</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Passive.isPlayer" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isPlayer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Passive.isPlayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.npc.Passive.level">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#nmmo.entity.npc.Passive.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -365,7 +361,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Passive.pos">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#nmmo.entity.npc.Passive.pos" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#nmmo.entity.npc.Passive.pos" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -374,13 +370,8 @@
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.Passive.receiveLoot">
-<span class="sig-name descname"><span class="pre">receiveLoot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loadout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Passive.receiveLoot" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Passive.spawn">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">spawn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Passive.spawn" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">spawn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Passive.spawn" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -389,16 +380,11 @@
 <dd><p>Update occurs after actions, e.g. does not include history</p>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.Passive.yieldDrops">
-<span class="sig-name descname"><span class="pre">yieldDrops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Passive.yieldDrops" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">PassiveAggressive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">PassiveAggressive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.entity.npc.NPC" title="nmmo.entity.npc.NPC"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.entity.npc.NPC</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.decide">
@@ -407,7 +393,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.alive">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">alive</span></span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.alive" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alive</span></span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.alive" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -415,24 +401,19 @@
 <span class="sig-name descname"><span class="pre">applyDamage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dmg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.applyDamage" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.clippedLevels">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">clippedLevels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">danger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.clippedLevels" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.gearLevel">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">gearLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.gearLevel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.isNPC">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">isNPC</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.isNPC" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isNPC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.isNPC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.isPlayer">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">isPlayer</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.isPlayer" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isPlayer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.isPlayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.level">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -442,7 +423,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.pos">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.pos" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.pos" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -451,13 +432,8 @@
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.receiveLoot">
-<span class="sig-name descname"><span class="pre">receiveLoot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loadout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.receiveLoot" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.spawn">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">spawn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.spawn" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">spawn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.spawn" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -466,20 +442,15 @@
 <dd><p>Update occurs after actions, e.g. does not include history</p>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.yieldDrops">
-<span class="sig-name descname"><span class="pre">yieldDrops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.yieldDrops" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">Aggressive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Aggressive" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">Aggressive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Aggressive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.entity.npc.NPC" title="nmmo.entity.npc.NPC"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.entity.npc.NPC</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.alive">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">alive</span></span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.alive" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alive</span></span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.alive" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -488,28 +459,23 @@
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.clippedLevels">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">clippedLevels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">danger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.clippedLevels" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.decide">
 <span class="sig-name descname"><span class="pre">decide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.decide" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.gearLevel">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">gearLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.gearLevel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.isNPC">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">isNPC</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Aggressive.isNPC" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isNPC</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Aggressive.isNPC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.isPlayer">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">isPlayer</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Aggressive.isPlayer" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isPlayer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Aggressive.isPlayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.level">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#nmmo.entity.npc.Aggressive.level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -519,7 +485,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.pos">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.pos" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pos</span></span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.pos" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -528,13 +494,8 @@
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.receiveLoot">
-<span class="sig-name descname"><span class="pre">receiveLoot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loadout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.receiveLoot" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.spawn">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">spawn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.spawn" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">spawn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.spawn" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -542,11 +503,6 @@
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update occurs after actions, e.g. does not include history</p>
 </dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.yieldDrops">
-<span class="sig-name descname"><span class="pre">yieldDrops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.yieldDrops" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 

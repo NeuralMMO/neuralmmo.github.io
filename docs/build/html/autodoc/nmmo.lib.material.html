@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.lib.material module &mdash; Neural MMO v1.5.5.0 1.5.5.0 documentation</title>
+  <title>nmmo.lib.material module &mdash; Neural MMO v1.6.0 1.6.0 documentation</title>
   
 
   
@@ -57,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.5.0
+            <a href="../index.html" class="icon icon-home"> Neural MMO v1.6.0
           
 
           
@@ -133,6 +133,7 @@
 <li class="toctree-l4"><a class="reference internal" href="nmmo.lib.overlay.html">nmmo.lib.overlay module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.lib.priorityqueue.html">nmmo.lib.priorityqueue module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.lib.rating.html">nmmo.lib.rating module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.lib.spawn.html">nmmo.lib.spawn module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.lib.utils.html">nmmo.lib.utils module</a></li>
 </ul>
 </li>
@@ -152,16 +153,16 @@
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html"> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-io"> IO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-game-systems"> Game Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-resource-system"> Resource System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-combat"> Combat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-progression"> Progression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-skills"> Skills</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-items"> Items</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html"> Video Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-publications"> Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-competitions"> Competitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-presentations"> Presentations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-update-slides"> Update Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-additional-links"> Additional Links</a></li>
@@ -191,7 +192,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.5.0</a>
+          <a href="../index.html">Neural MMO v1.6.0</a>
         
       </nav>
 
@@ -253,185 +254,650 @@
 <span id="nmmo-lib-material-module"></span><h1>nmmo.lib.material module<a class="headerlink" href="#module-nmmo.lib.material" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.Material">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Material" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Material" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.lib.material.Material.harvestable">
-<span class="sig-name descname"><span class="pre">harvestable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.lib.material.Material.harvestable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.material.Material.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Material.capacity" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.lib.material.Material.capacity">
-<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.lib.material.Material.capacity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.material.Material.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Material.tool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Material.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Material.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Material.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Material.harvest" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.Lava">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Lava</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Lava" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Lava</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Lava" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Lava.tex">
-<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'lava'</span></em><a class="headerlink" href="#nmmo.lib.material.Lava.tex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'lava'</span></em><a class="headerlink" href="#nmmo.lib.material.Lava.tex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Lava.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Lava.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Lava.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Lava.capacity">
-<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.lib.material.Lava.capacity" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Lava.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Lava.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Lava.harvest" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.lib.material.Lava.harvestable">
-<span class="sig-name descname"><span class="pre">harvestable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.lib.material.Lava.harvestable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.material.Lava.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Lava.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Lava.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Lava.tool" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.Water">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Water</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Water" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Water</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Water" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Water.tex">
-<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'water'</span></em><a class="headerlink" href="#nmmo.lib.material.Water.tex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'water'</span></em><a class="headerlink" href="#nmmo.lib.material.Water.tex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Water.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.lib.material.Water.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.lib.material.Water.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Water.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.systems.droptable.Empty</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.material.Water.table" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Water.capacity">
-<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.lib.material.Water.capacity" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Water.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Water.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Water.harvest" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.lib.material.Water.harvestable">
-<span class="sig-name descname"><span class="pre">harvestable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.lib.material.Water.harvestable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.material.Water.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Water.tool" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.Grass">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Grass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Grass" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Grass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Grass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Grass.tex">
-<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'grass'</span></em><a class="headerlink" href="#nmmo.lib.material.Grass.tex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'grass'</span></em><a class="headerlink" href="#nmmo.lib.material.Grass.tex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Grass.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nmmo.lib.material.Grass.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.lib.material.Grass.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Grass.capacity">
-<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.lib.material.Grass.capacity" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Grass.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Grass.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Grass.harvest" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.lib.material.Grass.harvestable">
-<span class="sig-name descname"><span class="pre">harvestable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.lib.material.Grass.harvestable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.material.Grass.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Grass.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Grass.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Grass.tool" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.Scrub">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Scrub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Scrub" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Scrub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Scrub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Scrub.tex">
-<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'scrub'</span></em><a class="headerlink" href="#nmmo.lib.material.Scrub.tex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'scrub'</span></em><a class="headerlink" href="#nmmo.lib.material.Scrub.tex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Scrub.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nmmo.lib.material.Scrub.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.lib.material.Scrub.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Scrub.capacity">
-<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.lib.material.Scrub.capacity" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Scrub.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Scrub.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Scrub.harvest" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.lib.material.Scrub.harvestable">
-<span class="sig-name descname"><span class="pre">harvestable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.lib.material.Scrub.harvestable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.material.Scrub.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Scrub.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Scrub.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Scrub.tool" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.Forest">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Forest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Forest" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Forest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Forest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Forest.tex">
-<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'forest'</span></em><a class="headerlink" href="#nmmo.lib.material.Forest.tex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'forest'</span></em><a class="headerlink" href="#nmmo.lib.material.Forest.tex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Forest.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#nmmo.lib.material.Forest.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#nmmo.lib.material.Forest.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.lib.material.Forest.harvestable">
-<span class="sig-name descname"><span class="pre">harvestable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#nmmo.lib.material.Forest.harvestable" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.lib.material.Forest.degen">
-<span class="sig-name descname"><span class="pre">degen</span></span><a class="headerlink" href="#nmmo.lib.material.Forest.degen" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.material.Forest.deplete">
+<span class="sig-name descname"><span class="pre">deplete</span></span><a class="headerlink" href="#nmmo.lib.material.Forest.deplete" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#nmmo.lib.material.Scrub" title="nmmo.lib.material.Scrub"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Scrub</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Forest.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.systems.droptable.Empty</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.material.Forest.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Forest.capacity">
-<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.lib.material.Forest.capacity" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Forest.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Forest.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Forest.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Forest.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Forest.tool" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.Stone">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Stone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Stone" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Stone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Stone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Stone.tex">
-<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'stone'</span></em><a class="headerlink" href="#nmmo.lib.material.Stone.tex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'stone'</span></em><a class="headerlink" href="#nmmo.lib.material.Stone.tex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Stone.index">
-<span class="sig-name descname"><span class="pre">index</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#nmmo.lib.material.Stone.index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#nmmo.lib.material.Stone.index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Stone.capacity">
-<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nmmo.lib.material.Stone.capacity" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Stone.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Stone.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Stone.harvest" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.lib.material.Stone.harvestable">
-<span class="sig-name descname"><span class="pre">harvestable</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#nmmo.lib.material.Stone.harvestable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.lib.material.Stone.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Stone.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Stone.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Stone.tool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Slag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Slag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Slag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Slag.tex">
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'slag'</span></em><a class="headerlink" href="#nmmo.lib.material.Slag.tex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Slag.index">
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#nmmo.lib.material.Slag.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Slag.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Slag.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Slag.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Slag.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Slag.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Slag.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Slag.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Slag.tool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ore">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Ore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Ore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ore.tex">
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ore'</span></em><a class="headerlink" href="#nmmo.lib.material.Ore.tex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ore.index">
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#nmmo.lib.material.Ore.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ore.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Ore.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ore.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><a class="headerlink" href="#nmmo.lib.material.Ore.tool" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Pickaxe" title="nmmo.systems.item.Pickaxe"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.item.Pickaxe</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ore.deplete">
+<span class="sig-name descname"><span class="pre">deplete</span></span><a class="headerlink" href="#nmmo.lib.material.Ore.deplete" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#nmmo.lib.material.Slag" title="nmmo.lib.material.Slag"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Slag</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ore.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Ore.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ore.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Ore.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Stump">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Stump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Stump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Stump.tex">
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'stump'</span></em><a class="headerlink" href="#nmmo.lib.material.Stump.tex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Stump.index">
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#nmmo.lib.material.Stump.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Stump.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Stump.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Stump.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Stump.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Stump.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Stump.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Stump.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Stump.tool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Tree">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Tree.tex">
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'tree'</span></em><a class="headerlink" href="#nmmo.lib.material.Tree.tex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Tree.index">
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#nmmo.lib.material.Tree.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Tree.deplete">
+<span class="sig-name descname"><span class="pre">deplete</span></span><a class="headerlink" href="#nmmo.lib.material.Tree.deplete" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#nmmo.lib.material.Stump" title="nmmo.lib.material.Stump"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Stump</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Tree.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><a class="headerlink" href="#nmmo.lib.material.Tree.tool" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Chisel" title="nmmo.systems.item.Chisel"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.item.Chisel</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Tree.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Tree.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Tree.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Tree.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Tree.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Tree.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fragment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Fragment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Fragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fragment.tex">
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fragment'</span></em><a class="headerlink" href="#nmmo.lib.material.Fragment.tex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fragment.index">
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#nmmo.lib.material.Fragment.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fragment.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Fragment.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fragment.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Fragment.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fragment.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Fragment.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fragment.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Fragment.tool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Crystal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Crystal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Crystal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Crystal.tex">
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'crystal'</span></em><a class="headerlink" href="#nmmo.lib.material.Crystal.tex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Crystal.index">
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#nmmo.lib.material.Crystal.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Crystal.deplete">
+<span class="sig-name descname"><span class="pre">deplete</span></span><a class="headerlink" href="#nmmo.lib.material.Crystal.deplete" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#nmmo.lib.material.Fragment" title="nmmo.lib.material.Fragment"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Fragment</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Crystal.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><a class="headerlink" href="#nmmo.lib.material.Crystal.tool" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Arcane" title="nmmo.systems.item.Arcane"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.item.Arcane</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Crystal.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Crystal.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Crystal.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Crystal.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Crystal.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Crystal.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Weeds">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Weeds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Weeds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Weeds.tex">
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'weeds'</span></em><a class="headerlink" href="#nmmo.lib.material.Weeds.tex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Weeds.index">
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#nmmo.lib.material.Weeds.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Weeds.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Weeds.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Weeds.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Weeds.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Weeds.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Weeds.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Weeds.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Weeds.tool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Herb">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Herb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Herb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Herb.tex">
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'herb'</span></em><a class="headerlink" href="#nmmo.lib.material.Herb.tex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Herb.index">
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#nmmo.lib.material.Herb.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Herb.deplete">
+<span class="sig-name descname"><span class="pre">deplete</span></span><a class="headerlink" href="#nmmo.lib.material.Herb.deplete" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#nmmo.lib.material.Weeds" title="nmmo.lib.material.Weeds"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Weeds</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Herb.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><a class="headerlink" href="#nmmo.lib.material.Herb.tool" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gloves" title="nmmo.systems.item.Gloves"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.item.Gloves</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Herb.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.systems.droptable.Standard</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.material.Herb.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Herb.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Herb.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Herb.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Herb.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ocean">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Ocean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Ocean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ocean.tex">
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ocean'</span></em><a class="headerlink" href="#nmmo.lib.material.Ocean.tex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ocean.index">
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#nmmo.lib.material.Ocean.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ocean.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Ocean.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ocean.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Ocean.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ocean.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Ocean.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Ocean.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#nmmo.lib.material.Ocean.tool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fish">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Fish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Fish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.lib.material.Material" title="nmmo.lib.material.Material"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Material</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fish.tex">
+<span class="sig-name descname"><span class="pre">tex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fish'</span></em><a class="headerlink" href="#nmmo.lib.material.Fish.tex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fish.index">
+<span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#nmmo.lib.material.Fish.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fish.deplete">
+<span class="sig-name descname"><span class="pre">deplete</span></span><a class="headerlink" href="#nmmo.lib.material.Fish.deplete" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#nmmo.lib.material.Ocean" title="nmmo.lib.material.Ocean"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.material.Ocean</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fish.tool">
+<span class="sig-name descname"><span class="pre">tool</span></span><a class="headerlink" href="#nmmo.lib.material.Fish.tool" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Rod" title="nmmo.systems.item.Rod"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.item.Rod</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fish.table">
+<span class="sig-name descname"><span class="pre">table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;nmmo.systems.droptable.Standard</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#nmmo.lib.material.Fish.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fish.capacity">
+<span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#nmmo.lib.material.Fish.capacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.material.Fish.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Fish.harvest" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.Meta">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Meta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bases</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Meta" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Meta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bases</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.material.Meta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.lib.material.Meta.mro">
@@ -443,51 +909,68 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.All">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">All</span></span><a class="headerlink" href="#nmmo.lib.material.All" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">All</span></span><a class="headerlink" href="#nmmo.lib.material.All" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>List of all materials</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.All.materials">
-<span class="sig-name descname"><span class="pre">materials</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{&lt;class</span> <span class="pre">'nmmo.lib.material.Lava'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Stone'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Forest'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Scrub'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Grass'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Water'&gt;}</span></em><a class="headerlink" href="#nmmo.lib.material.All.materials" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">materials</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&lt;class</span> <span class="pre">'nmmo.lib.material.Slag'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Herb'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Stone'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Fish'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Weeds'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Forest'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Crystal'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Scrub'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Tree'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Fragment'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Grass'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Stump'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Water'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Ore'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Ocean'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Lava'&gt;}</span></em><a class="headerlink" href="#nmmo.lib.material.All.materials" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.All.indices">
-<span class="sig-name descname"><span class="pre">indices</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5}</span></em><a class="headerlink" href="#nmmo.lib.material.All.indices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">indices</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10,</span> <span class="pre">11,</span> <span class="pre">12,</span> <span class="pre">13,</span> <span class="pre">14,</span> <span class="pre">15}</span></em><a class="headerlink" href="#nmmo.lib.material.All.indices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.Impassible">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Impassible</span></span><a class="headerlink" href="#nmmo.lib.material.Impassible" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Impassible</span></span><a class="headerlink" href="#nmmo.lib.material.Impassible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Materials that agents cannot walk through</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Impassible.materials">
-<span class="sig-name descname"><span class="pre">materials</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{&lt;class</span> <span class="pre">'nmmo.lib.material.Lava'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Stone'&gt;}</span></em><a class="headerlink" href="#nmmo.lib.material.Impassible.materials" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">materials</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&lt;class</span> <span class="pre">'nmmo.lib.material.Lava'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Fish'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Stone'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Water'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Ocean'&gt;}</span></em><a class="headerlink" href="#nmmo.lib.material.Impassible.materials" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Impassible.indices">
-<span class="sig-name descname"><span class="pre">indices</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{0,</span> <span class="pre">5}</span></em><a class="headerlink" href="#nmmo.lib.material.Impassible.indices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">indices</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{0,</span> <span class="pre">1,</span> <span class="pre">5,</span> <span class="pre">14,</span> <span class="pre">15}</span></em><a class="headerlink" href="#nmmo.lib.material.Impassible.indices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.material.Habitable">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Habitable</span></span><a class="headerlink" href="#nmmo.lib.material.Habitable" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Habitable</span></span><a class="headerlink" href="#nmmo.lib.material.Habitable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Materials that agents cannot walk on</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Habitable.materials">
-<span class="sig-name descname"><span class="pre">materials</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{&lt;class</span> <span class="pre">'nmmo.lib.material.Forest'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Grass'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Scrub'&gt;}</span></em><a class="headerlink" href="#nmmo.lib.material.Habitable.materials" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">materials</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&lt;class</span> <span class="pre">'nmmo.lib.material.Slag'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Herb'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Weeds'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Forest'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Crystal'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Scrub'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Tree'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Fragment'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Grass'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Stump'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Ore'&gt;}</span></em><a class="headerlink" href="#nmmo.lib.material.Habitable.materials" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.lib.material.Habitable.indices">
-<span class="sig-name descname"><span class="pre">indices</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{2,</span> <span class="pre">3,</span> <span class="pre">4}</span></em><a class="headerlink" href="#nmmo.lib.material.Habitable.indices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">indices</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10,</span> <span class="pre">11,</span> <span class="pre">12,</span> <span class="pre">13}</span></em><a class="headerlink" href="#nmmo.lib.material.Habitable.indices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.material.Harvestable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.material.</span></span><span class="sig-name descname"><span class="pre">Harvestable</span></span><a class="headerlink" href="#nmmo.lib.material.Harvestable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Materials that agents can harvest</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Harvestable.indices">
+<span class="sig-name descname"><span class="pre">indices</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{1,</span> <span class="pre">4,</span> <span class="pre">7,</span> <span class="pre">9,</span> <span class="pre">11,</span> <span class="pre">13,</span> <span class="pre">15}</span></em><a class="headerlink" href="#nmmo.lib.material.Harvestable.indices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.material.Harvestable.materials">
+<span class="sig-name descname"><span class="pre">materials</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{&lt;class</span> <span class="pre">'nmmo.lib.material.Herb'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Fish'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Forest'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Crystal'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Tree'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Water'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.lib.material.Ore'&gt;}</span></em><a class="headerlink" href="#nmmo.lib.material.Harvestable.materials" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

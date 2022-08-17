@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>nmmo.systems.skill module &mdash; Neural MMO v1.5.5.0 1.5.5.0 documentation</title>
+  <title>nmmo.systems.skill module &mdash; Neural MMO v1.6.0 1.6.0 documentation</title>
   
 
   
@@ -43,7 +43,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="nmmo.emulation module" href="nmmo.emulation.html" />
-    <link rel="prev" title="nmmo.systems.experience module" href="nmmo.systems.experience.html" /> 
+    <link rel="prev" title="nmmo.systems.item module" href="nmmo.systems.item.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -57,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.5.0
+            <a href="../index.html" class="icon icon-home"> Neural MMO v1.6.0
           
 
           
@@ -133,7 +133,10 @@
 <li class="toctree-l4"><a class="reference internal" href="nmmo.systems.combat.html">nmmo.systems.combat module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.systems.droptable.html">nmmo.systems.droptable module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.systems.equipment.html">nmmo.systems.equipment module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.systems.exchange.html">nmmo.systems.exchange module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.systems.experience.html">nmmo.systems.experience module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.systems.inventory.html">nmmo.systems.inventory module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.systems.item.html">nmmo.systems.item module</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">nmmo.systems.skill module</a></li>
 </ul>
 </li>
@@ -152,16 +155,16 @@
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html"> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-io"> IO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-game-systems"> Game Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-resource-system"> Resource System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-combat"> Combat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-progression"> Progression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-skills"> Skills</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/game_wiki.html#icon-items"> Items</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html"> Video Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-publications"> Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-competitions"> Competitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-presentations"> Presentations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-update-slides"> Update Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/updates.html#icon-additional-links"> Additional Links</a></li>
@@ -191,7 +194,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.5.0</a>
+          <a href="../index.html">Neural MMO v1.6.0</a>
         
       </nav>
 
@@ -253,11 +256,11 @@
 <span id="nmmo-systems-skill-module"></span><h1>nmmo.systems.skill module<a class="headerlink" href="#module-nmmo.systems.skill" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.SkillGroup">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">SkillGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.SkillGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">SkillGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.SkillGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.SkillGroup.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.SkillGroup.update" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.SkillGroup.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -269,7 +272,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Skill">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Skill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skill" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Skill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skill" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Skill.skillItems">
@@ -283,8 +286,8 @@
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Skill.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skill.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.Skill.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skill.add_xp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -292,36 +295,215 @@
 <span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skill.setExpByLevel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.NonCombatSkill">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">NonCombatSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.NonCombatSkill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Skill" title="nmmo.systems.skill.Skill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Skill</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.NonCombatSkill.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.NonCombatSkill.add_xp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.NonCombatSkill.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.NonCombatSkill.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.NonCombatSkill.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.NonCombatSkill.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.NonCombatSkill.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.NonCombatSkill.skillItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.HarvestSkill">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">HarvestSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.HarvestSkill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.NonCombatSkill" title="nmmo.systems.skill.NonCombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.NonCombatSkill</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.HarvestSkill.processDrops">
+<span class="sig-name descname"><span class="pre">processDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropTable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.HarvestSkill.processDrops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.HarvestSkill.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.HarvestSkill.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.HarvestSkill.harvestAdjacent">
+<span class="sig-name descname"><span class="pre">harvestAdjacent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.HarvestSkill.harvestAdjacent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.HarvestSkill.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.HarvestSkill.add_xp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.HarvestSkill.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.HarvestSkill.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.HarvestSkill.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.HarvestSkill.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.HarvestSkill.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.HarvestSkill.skillItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.AmmunitionSkill">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">AmmunitionSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.AmmunitionSkill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.HarvestSkill" title="nmmo.systems.skill.HarvestSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.HarvestSkill</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.AmmunitionSkill.processDrops">
+<span class="sig-name descname"><span class="pre">processDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropTable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.AmmunitionSkill.processDrops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.AmmunitionSkill.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.AmmunitionSkill.add_xp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.AmmunitionSkill.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.AmmunitionSkill.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.AmmunitionSkill.harvestAdjacent">
+<span class="sig-name descname"><span class="pre">harvestAdjacent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.AmmunitionSkill.harvestAdjacent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.AmmunitionSkill.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.AmmunitionSkill.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.AmmunitionSkill.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.AmmunitionSkill.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.AmmunitionSkill.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.AmmunitionSkill.skillItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.ConsumableSkill">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">ConsumableSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.ConsumableSkill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.HarvestSkill" title="nmmo.systems.skill.HarvestSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.HarvestSkill</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.ConsumableSkill.processDrops">
+<span class="sig-name descname"><span class="pre">processDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropTable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.ConsumableSkill.processDrops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.ConsumableSkill.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.ConsumableSkill.add_xp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.ConsumableSkill.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.ConsumableSkill.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.ConsumableSkill.harvestAdjacent">
+<span class="sig-name descname"><span class="pre">harvestAdjacent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.ConsumableSkill.harvestAdjacent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.ConsumableSkill.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.ConsumableSkill.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.ConsumableSkill.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.ConsumableSkill.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.ConsumableSkill.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.ConsumableSkill.skillItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Basic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Basic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Basic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.SkillGroup" title="nmmo.systems.skill.SkillGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.SkillGroup</span></code></a></p>
 <dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Skill.level">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Skill.level" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.Basic.basicLevel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">basicLevel</span></span><a class="headerlink" href="#nmmo.systems.skill.Basic.basicLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Basic.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Basic.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Basic.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Basic.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Harvesting">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Harvesting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Harvesting" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.Harvest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Harvest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.SkillGroup" title="nmmo.systems.skill.SkillGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.SkillGroup</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Harvesting.packet">
-<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Harvesting.packet" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Harvest.harvestLevel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">harvestLevel</span></span><a class="headerlink" href="#nmmo.systems.skill.Harvest.harvestLevel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Harvesting.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Harvesting.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.Harvest.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Harvest.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Harvest.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Harvest.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Combat">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Combat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Combat" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Combat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Combat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.SkillGroup" title="nmmo.systems.skill.SkillGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.SkillGroup</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Combat.packet">
 <span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Combat.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Combat.combatLevel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">combatLevel</span></span><a class="headerlink" href="#nmmo.systems.skill.Combat.combatLevel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -336,18 +518,33 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Combat.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Combat.update" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Combat.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Skills">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Skills</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skills" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Harvesting" title="nmmo.systems.skill.Harvesting"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Harvesting</span></code></a>, <a class="reference internal" href="#nmmo.systems.skill.Combat" title="nmmo.systems.skill.Combat"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Combat</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Skills</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skills" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Basic" title="nmmo.systems.skill.Basic"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Basic</span></code></a>, <a class="reference internal" href="#nmmo.systems.skill.Harvest" title="nmmo.systems.skill.Harvest"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Harvest</span></code></a>, <a class="reference internal" href="#nmmo.systems.skill.Combat" title="nmmo.systems.skill.Combat"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Combat</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Skills.applyDamage">
 <span class="sig-name descname"><span class="pre">applyDamage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dmg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skills.applyDamage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Skills.basicLevel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">basicLevel</span></span><a class="headerlink" href="#nmmo.systems.skill.Skills.basicLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Skills.combatLevel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">combatLevel</span></span><a class="headerlink" href="#nmmo.systems.skill.Skills.combatLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Skills.harvestLevel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">harvestLevel</span></span><a class="headerlink" href="#nmmo.systems.skill.Skills.harvestLevel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -362,82 +559,18 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Skills.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skills.update" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Skills.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">CombatSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Skill" title="nmmo.systems.skill.Skill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Skill</span></code></a></p>
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill.level">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.level" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill.packet">
-<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.packet" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill.setExpByLevel">
-<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.setExpByLevel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill.skillItems">
-<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.skillItems" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Constitution">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Constitution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Constitution" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.CombatSkill" title="nmmo.systems.skill.CombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.CombatSkill</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Constitution.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Constitution.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Constitution.level">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Constitution.level" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Constitution.packet">
-<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Constitution.packet" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Constitution.setExpByLevel">
-<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Constitution.setExpByLevel" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Constitution.skillItems">
-<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.Constitution.skillItems" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
-</dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Melee">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Melee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Melee" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Melee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Melee" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.CombatSkill" title="nmmo.systems.skill.CombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.CombatSkill</span></code></a></p>
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Melee.level">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Melee.level" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Melee.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Melee.add_xp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -461,15 +594,21 @@
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Melee.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Melee.weakness">
+<span class="sig-name descname"><span class="pre">weakness</span></span><a class="headerlink" href="#nmmo.systems.skill.Melee.weakness" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#nmmo.systems.skill.Mage" title="nmmo.systems.skill.Mage"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Mage</span></code></a></p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Range">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Range" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.CombatSkill" title="nmmo.systems.skill.CombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.CombatSkill</span></code></a></p>
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Range.level">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Range.level" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Range.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Range.add_xp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -493,15 +632,21 @@
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Range.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Range.weakness">
+<span class="sig-name descname"><span class="pre">weakness</span></span><a class="headerlink" href="#nmmo.systems.skill.Range.weakness" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#nmmo.systems.skill.Melee" title="nmmo.systems.skill.Melee"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Melee</span></code></a></p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Mage">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Mage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Mage" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Mage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Mage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.CombatSkill" title="nmmo.systems.skill.CombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.CombatSkill</span></code></a></p>
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Mage.level">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Mage.level" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Mage.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Mage.add_xp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -525,57 +670,178 @@
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Mage.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Mage.weakness">
+<span class="sig-name descname"><span class="pre">weakness</span></span><a class="headerlink" href="#nmmo.systems.skill.Mage.weakness" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#nmmo.systems.skill.Range" title="nmmo.systems.skill.Range"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Range</span></code></a></p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Defense">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Defense</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Defense" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.CombatSkill" title="nmmo.systems.skill.CombatSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.CombatSkill</span></code></a></p>
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Defense.level">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Defense.level" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">CombatSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Skill" title="nmmo.systems.skill.Skill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Skill</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.add_xp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Defense.packet">
-<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Defense.packet" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.packet" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Defense.setExpByLevel">
-<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Defense.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.setExpByLevel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Defense.skillItems">
-<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.Defense.skillItems" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.CombatSkill.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.CombatSkill.skillItems" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Lvl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Lvl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Lvl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Defense.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Defense.update" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.Lvl.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Lvl.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Water">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Water</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Water" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.HarvestSkill" title="nmmo.systems.skill.HarvestSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.HarvestSkill</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Water.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Water.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Water.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Water.add_xp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Water.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Water.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Water.harvestAdjacent">
+<span class="sig-name descname"><span class="pre">harvestAdjacent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Water.harvestAdjacent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Water.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Water.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Water.processDrops">
+<span class="sig-name descname"><span class="pre">processDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropTable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Water.processDrops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Water.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Water.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Water.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.Water.skillItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Food">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Food</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Food" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.HarvestSkill" title="nmmo.systems.skill.HarvestSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.HarvestSkill</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Food.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Food.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Food.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Food.add_xp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Food.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Food.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Food.harvestAdjacent">
+<span class="sig-name descname"><span class="pre">harvestAdjacent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Food.harvestAdjacent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Food.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Food.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Food.processDrops">
+<span class="sig-name descname"><span class="pre">processDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropTable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Food.processDrops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Food.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Food.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Food.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.Food.skillItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Fishing">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Fishing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Fishing" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Skill" title="nmmo.systems.skill.Skill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Skill</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Fishing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Fishing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.ConsumableSkill" title="nmmo.systems.skill.ConsumableSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.ConsumableSkill</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Fishing.update">
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Fishing.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Fishing.level">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Fishing.level" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Fishing.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Fishing.add_xp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Fishing.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Fishing.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Fishing.harvestAdjacent">
+<span class="sig-name descname"><span class="pre">harvestAdjacent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Fishing.harvestAdjacent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.skill.Fishing.packet">
 <span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Fishing.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Fishing.processDrops">
+<span class="sig-name descname"><span class="pre">processDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropTable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Fishing.processDrops" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -592,34 +858,190 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Hunting">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Hunting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Hunting" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.Skill" title="nmmo.systems.skill.Skill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.Skill</span></code></a></p>
+<dt class="sig sig-object py" id="nmmo.systems.skill.Herbalism">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Herbalism</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Herbalism" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.ConsumableSkill" title="nmmo.systems.skill.ConsumableSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.ConsumableSkill</span></code></a></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Hunting.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Hunting.update" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Hunting.level">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#nmmo.systems.skill.Hunting.level" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.Herbalism.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Herbalism.update" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Hunting.packet">
-<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Hunting.packet" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.Herbalism.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Herbalism.add_xp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Hunting.setExpByLevel">
-<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Hunting.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.Herbalism.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Herbalism.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Herbalism.harvestAdjacent">
+<span class="sig-name descname"><span class="pre">harvestAdjacent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Herbalism.harvestAdjacent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Herbalism.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Herbalism.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Herbalism.processDrops">
+<span class="sig-name descname"><span class="pre">processDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropTable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Herbalism.processDrops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Herbalism.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Herbalism.setExpByLevel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.skill.Hunting.skillItems">
-<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.Hunting.skillItems" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.skill.Herbalism.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.Herbalism.skillItems" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Prospecting">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Prospecting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Prospecting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.AmmunitionSkill" title="nmmo.systems.skill.AmmunitionSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.AmmunitionSkill</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Prospecting.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Prospecting.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Prospecting.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Prospecting.add_xp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Prospecting.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Prospecting.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Prospecting.harvestAdjacent">
+<span class="sig-name descname"><span class="pre">harvestAdjacent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Prospecting.harvestAdjacent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Prospecting.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Prospecting.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Prospecting.processDrops">
+<span class="sig-name descname"><span class="pre">processDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropTable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Prospecting.processDrops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Prospecting.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Prospecting.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Prospecting.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.Prospecting.skillItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Carving">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Carving</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Carving" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.AmmunitionSkill" title="nmmo.systems.skill.AmmunitionSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.AmmunitionSkill</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Carving.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Carving.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Carving.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Carving.add_xp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Carving.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Carving.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Carving.harvestAdjacent">
+<span class="sig-name descname"><span class="pre">harvestAdjacent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Carving.harvestAdjacent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Carving.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Carving.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Carving.processDrops">
+<span class="sig-name descname"><span class="pre">processDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropTable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Carving.processDrops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Carving.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Carving.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Carving.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.Carving.skillItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Alchemy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.skill.</span></span><span class="sig-name descname"><span class="pre">Alchemy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillGroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Alchemy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.skill.AmmunitionSkill" title="nmmo.systems.skill.AmmunitionSkill"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.systems.skill.AmmunitionSkill</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Alchemy.add_xp">
+<span class="sig-name descname"><span class="pre">add_xp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Alchemy.add_xp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Alchemy.harvest">
+<span class="sig-name descname"><span class="pre">harvest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Alchemy.harvest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Alchemy.harvestAdjacent">
+<span class="sig-name descname"><span class="pre">harvestAdjacent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deplete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Alchemy.harvestAdjacent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Alchemy.packet">
+<span class="sig-name descname"><span class="pre">packet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Alchemy.packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Alchemy.processDrops">
+<span class="sig-name descname"><span class="pre">processDrops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropTable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Alchemy.processDrops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Alchemy.setExpByLevel">
+<span class="sig-name descname"><span class="pre">setExpByLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Alchemy.setExpByLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Alchemy.skillItems">
+<span class="sig-name descname"><span class="pre">skillItems</span></span><a class="headerlink" href="#nmmo.systems.skill.Alchemy.skillItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.skill.Alchemy.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.skill.Alchemy.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -632,7 +1054,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="nmmo.emulation.html" class="btn btn-neutral float-right" title="nmmo.emulation module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="nmmo.systems.experience.html" class="btn btn-neutral float-left" title="nmmo.systems.experience module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nmmo.systems.item.html" class="btn btn-neutral float-left" title="nmmo.systems.item module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

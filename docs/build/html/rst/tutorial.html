@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Minimal Example &mdash; Neural MMO v1.5.5.0 1.5.5.0 documentation</title>
+  <title>Minimal Example &mdash; Neural MMO v1.6.0 1.6.0 documentation</title>
   
 
   
@@ -57,7 +57,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Neural MMO v1.5.5.0
+            <a href="../index.html" class="icon icon-home"> Neural MMO v1.6.0
           
 
           
@@ -130,16 +130,16 @@
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="game_wiki.html"> Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-io"> IO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-game-systems"> Game Systems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-resource-system"> Resource System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-combat"> Combat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-npc-equipment"> NPC &amp; Equipment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-progression"> Progression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-skills"> Skills</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-items"> Items</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Updates</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="updates.html"> Video Demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updates.html#icon-publications"> Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-competitions"> Competitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updates.html#icon-presentations"> Presentations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updates.html#icon-update-slides"> Update Slides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="updates.html#icon-additional-links"> Additional Links</a></li>
@@ -169,7 +169,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Neural MMO v1.5.5.0</a>
+          <a href="../index.html">Neural MMO v1.6.0</a>
         
       </nav>
 
@@ -265,7 +265,7 @@
     <span class="k">return</span> <span class="n">env</span><span class="o">.</span><span class="n">terminal</span><span class="p">()</span>
 
 
-<span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Large</span><span class="p">,</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">AllGameSystems</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Medium</span><span class="p">,</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">AllGameSystems</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Config objects subclass a nmmo.config.{Small, Medium, Large} template</span>
 
 <span class="sd">    Can also specify config game systems to enable various features&#39;&#39;&#39;</span>
@@ -274,7 +274,15 @@
     <span class="c1"># Meander: randomly wanders around</span>
     <span class="c1"># Forage: explicitly searches for food and water</span>
     <span class="c1"># Combat: forages and actively fights other agents</span>
-    <span class="n">AGENTS</span>    <span class="o">=</span> <span class="p">[</span><span class="n">baselines</span><span class="o">.</span><span class="n">Meander</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Forage</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Combat</span><span class="p">]</span>
+    <span class="n">SPECIALIZE</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">PLAYERS</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">baselines</span><span class="o">.</span><span class="n">Fisher</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Herbalist</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Prospector</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Carver</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Alchemist</span><span class="p">,</span>
+            <span class="n">baselines</span><span class="o">.</span><span class="n">Melee</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Range</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Mage</span><span class="p">]</span>
+
+    <span class="n">PLAYER_N</span> <span class="o">=</span> <span class="mi">128</span>
+
+    <span class="n">PLAYER_DEATH_FOG</span> <span class="o">=</span> <span class="mi">512</span>
 
     <span class="c1">#Set a unique path for demo maps</span>
     <span class="n">PATH_MAPS</span> <span class="o">=</span> <span class="s1">&#39;maps/demos&#39;</span>
@@ -283,12 +291,11 @@
     <span class="n">RENDER</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="c1">#Force terrain generation -- avoids unexpected behavior from caching</span>
-    <span class="n">FORCE_MAP_GENERATION</span> <span class="o">=</span> <span class="kc">True</span>
-
+    <span class="n">MAP_FORCE_GENERATION</span> <span class="o">=</span> <span class="kc">True</span>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">simulate</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">Env</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">render</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">simulate</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">Env</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">render</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run the example script from /baselines:</p>
@@ -407,7 +414,7 @@
 <section id="icon-rewards-tasks">
 <h1><img alt="icon" src="../_images/icon_pixel.png" /> Rewards &amp; Tasks<a class="headerlink" href="#icon-rewards-tasks" title="Permalink to this headline">¶</a></h1>
 <p>By default, Neural MMO provides a reward signal of -1 for dying and 0 for everything else. You may override this reward function and have full access to game and player state in doing so. For example, to add an additional reward signal of 0.1 per player defeated:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PlayerKillRewardEnv</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">Env</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PlayerKillRewardEnv</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">Env</span><span class="p">,</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Combat</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Reward 0.1 per player defeated, -1 for death&#39;&#39;&#39;</span>
     <span class="k">def</span> <span class="nf">reward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
         <span class="c1"># Default -1 reward for death</span>
@@ -437,7 +444,7 @@
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PlayerKillTaskConfig</span><span class="p">(</span><span class="n">minimal</span><span class="o">.</span><span class="n">Config</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Assign reward 1 for the first and third kills&#39;&#39;&#39;</span>
-    <span class="n">AGENTS</span> <span class="o">=</span> <span class="p">[</span><span class="n">baselines</span><span class="o">.</span><span class="n">Combat</span><span class="p">]</span>
+    <span class="n">PLAYERS</span> <span class="o">=</span> <span class="p">[</span><span class="n">baselines</span><span class="o">.</span><span class="n">Range</span><span class="p">]</span>
 
     <span class="c1"># Task params: reward fn, score to complete, completion reward</span>
     <span class="n">TASKS</span>  <span class="o">=</span> <span class="p">[</span><span class="n">Task</span><span class="p">(</span><span class="n">player_kills</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">reward</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span>
@@ -472,7 +479,7 @@
             <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cores</span><span class="p">)])</span>
 
     <span class="c1"># NMMO OpenSkill wrapper for computing SR</span>
-    <span class="n">sr</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">OpenSkillRating</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">AGENTS</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">baselines</span><span class="o">.</span><span class="n">Combat</span><span class="p">)</span>
+    <span class="n">sr</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">OpenSkillRating</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">PLAYERS</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">baselines</span><span class="o">.</span><span class="n">Range</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">stats</span> <span class="ow">in</span> <span class="n">all_stats</span><span class="p">:</span>
         <span class="n">stats</span> <span class="o">=</span> <span class="n">stats</span><span class="p">[</span><span class="s1">&#39;Stats&#39;</span><span class="p">]</span>
 
@@ -491,8 +498,8 @@
 <p>We use a larger scale config to more closely match the baseline setting:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Default</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Default baseline config with only scripted agents&#39;&#39;&#39;</span>
-    <span class="n">AGENTS</span> <span class="o">=</span> <span class="p">[</span><span class="n">baselines</span><span class="o">.</span><span class="n">Meander</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Forage</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Combat</span><span class="p">]</span>
-    <span class="n">TASKS</span>  <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">All</span>
+    <span class="n">PLAYERS</span> <span class="o">=</span> <span class="p">[</span><span class="n">baselines</span><span class="o">.</span><span class="n">Meander</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Forage</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Range</span><span class="p">]</span>
+    <span class="n">TASKS</span>   <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">All</span>
 
     <span class="c1"># Share maps with baseline evaluations</span>
     <span class="n">PATH_MAPS</span> <span class="o">=</span> <span class="s1">&#39;maps/medium/evaluation/&#39;</span>
@@ -523,7 +530,7 @@
     <span class="k">def</span> <span class="nf">generate_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39;Override the default per-map generation method&#39;&#39;&#39;</span>
         <span class="n">config</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span>
-        <span class="n">size</span>    <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">TERRAIN_SIZE</span>
+        <span class="n">size</span>    <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">MAP_SIZE</span>
 
         <span class="c1"># Create fractal and material placeholders</span>
         <span class="n">fractal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span> <span class="c1">#Unused in demo</span>
@@ -540,7 +547,7 @@
                     <span class="n">matl</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Terrain</span><span class="o">.</span><span class="n">WATER</span>
                 <span class="k">elif</span> <span class="n">linf</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
                     <span class="n">matl</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Terrain</span><span class="o">.</span><span class="n">FOREST</span>
-                <span class="k">elif</span> <span class="n">linf</span> <span class="o">&lt;=</span> <span class="n">size</span><span class="o">//</span><span class="mi">2</span> <span class="o">-</span> <span class="n">config</span><span class="o">.</span><span class="n">TERRAIN_BORDER</span><span class="p">:</span>
+                <span class="k">elif</span> <span class="n">linf</span> <span class="o">&lt;=</span> <span class="n">size</span><span class="o">//</span><span class="mi">2</span> <span class="o">-</span> <span class="n">config</span><span class="o">.</span><span class="n">MAP_BORDER</span><span class="p">:</span>
                     <span class="n">matl</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Terrain</span><span class="o">.</span><span class="n">GRASS</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">matl</span><span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Terrain</span><span class="o">.</span><span class="n">LAVA</span>
