@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -123,6 +125,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html#icon-overlays"> Overlays</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-reference"> Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Env"><code class="docutils literal notranslate"><span class="pre">Env</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.MapGenerator"><code class="docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Terrain"><code class="docutils literal notranslate"><span class="pre">Terrain</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Serialized"><code class="docutils literal notranslate"><span class="pre">Serialized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Overlay"><code class="docutils literal notranslate"><span class="pre">Overlay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OverlayRegistry"><code class="docutils literal notranslate"><span class="pre">OverlayRegistry</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Replay"><code class="docutils literal notranslate"><span class="pre">Replay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OpenSkillRating"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
@@ -249,17 +262,372 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.lib">
-<span id="nmmo-lib-package"></span><h1>nmmo.lib package<a class="headerlink" href="#module-nmmo.lib" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-lib-package"></span><h1>nmmo.lib package<a class="headerlink" href="#module-nmmo.lib" title="Permalink to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.colors.html">nmmo.lib.colors module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.log.html">nmmo.lib.log module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.material.html">nmmo.lib.material module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.overlay.html">nmmo.lib.overlay module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.priorityqueue.html">nmmo.lib.priorityqueue module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.rating.html">nmmo.lib.rating module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.spawn.html">nmmo.lib.spawn module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.utils.html">nmmo.lib.utils module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.colors.html">nmmo.lib.colors module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.rgb"><code class="docutils literal notranslate"><span class="pre">rgb()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.rgbNorm"><code class="docutils literal notranslate"><span class="pre">rgbNorm()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.makeColor"><code class="docutils literal notranslate"><span class="pre">makeColor()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Color"><code class="docutils literal notranslate"><span class="pre">Color</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Color.packet"><code class="docutils literal notranslate"><span class="pre">Color.packet()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Color256"><code class="docutils literal notranslate"><span class="pre">Color256</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Color256.make256"><code class="docutils literal notranslate"><span class="pre">Color256.make256()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Color256.colors"><code class="docutils literal notranslate"><span class="pre">Color256.colors</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Color16"><code class="docutils literal notranslate"><span class="pre">Color16</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Color16.make"><code class="docutils literal notranslate"><span class="pre">Color16.make()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Color16.colors"><code class="docutils literal notranslate"><span class="pre">Color16.colors</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Tier"><code class="docutils literal notranslate"><span class="pre">Tier</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Tier.BLACK"><code class="docutils literal notranslate"><span class="pre">Tier.BLACK</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Tier.WOOD"><code class="docutils literal notranslate"><span class="pre">Tier.WOOD</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Tier.BRONZE"><code class="docutils literal notranslate"><span class="pre">Tier.BRONZE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Tier.SILVER"><code class="docutils literal notranslate"><span class="pre">Tier.SILVER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Tier.GOLD"><code class="docutils literal notranslate"><span class="pre">Tier.GOLD</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Tier.PLATINUM"><code class="docutils literal notranslate"><span class="pre">Tier.PLATINUM</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Tier.DIAMOND"><code class="docutils literal notranslate"><span class="pre">Tier.DIAMOND</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Swatch"><code class="docutils literal notranslate"><span class="pre">Swatch</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Swatch.colors"><code class="docutils literal notranslate"><span class="pre">Swatch.colors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Swatch.rand"><code class="docutils literal notranslate"><span class="pre">Swatch.rand()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon"><code class="docutils literal notranslate"><span class="pre">Neon</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.RED"><code class="docutils literal notranslate"><span class="pre">Neon.RED</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.ORANGE"><code class="docutils literal notranslate"><span class="pre">Neon.ORANGE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.YELLOW"><code class="docutils literal notranslate"><span class="pre">Neon.YELLOW</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.GREEN"><code class="docutils literal notranslate"><span class="pre">Neon.GREEN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.MINT"><code class="docutils literal notranslate"><span class="pre">Neon.MINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.CYAN"><code class="docutils literal notranslate"><span class="pre">Neon.CYAN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.BLUE"><code class="docutils literal notranslate"><span class="pre">Neon.BLUE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.PURPLE"><code class="docutils literal notranslate"><span class="pre">Neon.PURPLE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.MAGENTA"><code class="docutils literal notranslate"><span class="pre">Neon.MAGENTA</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.FUCHSIA"><code class="docutils literal notranslate"><span class="pre">Neon.FUCHSIA</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.SPRING"><code class="docutils literal notranslate"><span class="pre">Neon.SPRING</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.SKY"><code class="docutils literal notranslate"><span class="pre">Neon.SKY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.WHITE"><code class="docutils literal notranslate"><span class="pre">Neon.WHITE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.GRAY"><code class="docutils literal notranslate"><span class="pre">Neon.GRAY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.BLACK"><code class="docutils literal notranslate"><span class="pre">Neon.BLACK</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.BLOOD"><code class="docutils literal notranslate"><span class="pre">Neon.BLOOD</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.BROWN"><code class="docutils literal notranslate"><span class="pre">Neon.BROWN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.GOLD"><code class="docutils literal notranslate"><span class="pre">Neon.GOLD</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.SILVER"><code class="docutils literal notranslate"><span class="pre">Neon.SILVER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.TERM"><code class="docutils literal notranslate"><span class="pre">Neon.TERM</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.MASK"><code class="docutils literal notranslate"><span class="pre">Neon.MASK</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.colors"><code class="docutils literal notranslate"><span class="pre">Neon.colors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Neon.rand"><code class="docutils literal notranslate"><span class="pre">Neon.rand()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid"><code class="docutils literal notranslate"><span class="pre">Solid</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.BLUE"><code class="docutils literal notranslate"><span class="pre">Solid.BLUE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.ORANGE"><code class="docutils literal notranslate"><span class="pre">Solid.ORANGE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.GREEN"><code class="docutils literal notranslate"><span class="pre">Solid.GREEN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.RED"><code class="docutils literal notranslate"><span class="pre">Solid.RED</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.PURPLE"><code class="docutils literal notranslate"><span class="pre">Solid.PURPLE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.BROWN"><code class="docutils literal notranslate"><span class="pre">Solid.BROWN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.PINK"><code class="docutils literal notranslate"><span class="pre">Solid.PINK</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.GREY"><code class="docutils literal notranslate"><span class="pre">Solid.GREY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.CHARTREUSE"><code class="docutils literal notranslate"><span class="pre">Solid.CHARTREUSE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.SKY"><code class="docutils literal notranslate"><span class="pre">Solid.SKY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.colors"><code class="docutils literal notranslate"><span class="pre">Solid.colors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Solid.rand"><code class="docutils literal notranslate"><span class="pre">Solid.rand()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Palette"><code class="docutils literal notranslate"><span class="pre">Palette</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.colors.html#nmmo.lib.colors.Palette.color"><code class="docutils literal notranslate"><span class="pre">Palette.color()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.log.html">nmmo.lib.log module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.Logger"><code class="docutils literal notranslate"><span class="pre">Logger</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.Logger.log"><code class="docutils literal notranslate"><span class="pre">Logger.log()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.MilestoneLogger"><code class="docutils literal notranslate"><span class="pre">MilestoneLogger</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.MilestoneLogger.log_min"><code class="docutils literal notranslate"><span class="pre">MilestoneLogger.log_min()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.MilestoneLogger.log_max"><code class="docutils literal notranslate"><span class="pre">MilestoneLogger.log_max()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.MilestoneLogger.log"><code class="docutils literal notranslate"><span class="pre">MilestoneLogger.log()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.Quill"><code class="docutils literal notranslate"><span class="pre">Quill</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.Quill.register"><code class="docutils literal notranslate"><span class="pre">Quill.register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.Quill.log_env"><code class="docutils literal notranslate"><span class="pre">Quill.log_env()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.Quill.log_player"><code class="docutils literal notranslate"><span class="pre">Quill.log_player()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.Quill.packet"><code class="docutils literal notranslate"><span class="pre">Quill.packet</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.Benchmarker"><code class="docutils literal notranslate"><span class="pre">Benchmarker</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.Benchmarker.wrap"><code class="docutils literal notranslate"><span class="pre">Benchmarker.wrap()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.log.html#nmmo.lib.log.Benchmarker.bench"><code class="docutils literal notranslate"><span class="pre">Benchmarker.bench()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.material.html">nmmo.lib.material module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Material"><code class="docutils literal notranslate"><span class="pre">Material</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Material.capacity"><code class="docutils literal notranslate"><span class="pre">Material.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Material.tool"><code class="docutils literal notranslate"><span class="pre">Material.tool</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Material.table"><code class="docutils literal notranslate"><span class="pre">Material.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Material.harvest"><code class="docutils literal notranslate"><span class="pre">Material.harvest()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Lava"><code class="docutils literal notranslate"><span class="pre">Lava</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Lava.tex"><code class="docutils literal notranslate"><span class="pre">Lava.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Lava.index"><code class="docutils literal notranslate"><span class="pre">Lava.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Lava.capacity"><code class="docutils literal notranslate"><span class="pre">Lava.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Lava.harvest"><code class="docutils literal notranslate"><span class="pre">Lava.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Lava.table"><code class="docutils literal notranslate"><span class="pre">Lava.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Lava.tool"><code class="docutils literal notranslate"><span class="pre">Lava.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Water"><code class="docutils literal notranslate"><span class="pre">Water</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Water.tex"><code class="docutils literal notranslate"><span class="pre">Water.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Water.index"><code class="docutils literal notranslate"><span class="pre">Water.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Water.table"><code class="docutils literal notranslate"><span class="pre">Water.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Water.capacity"><code class="docutils literal notranslate"><span class="pre">Water.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Water.harvest"><code class="docutils literal notranslate"><span class="pre">Water.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Water.tool"><code class="docutils literal notranslate"><span class="pre">Water.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Grass"><code class="docutils literal notranslate"><span class="pre">Grass</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Grass.tex"><code class="docutils literal notranslate"><span class="pre">Grass.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Grass.index"><code class="docutils literal notranslate"><span class="pre">Grass.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Grass.capacity"><code class="docutils literal notranslate"><span class="pre">Grass.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Grass.harvest"><code class="docutils literal notranslate"><span class="pre">Grass.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Grass.table"><code class="docutils literal notranslate"><span class="pre">Grass.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Grass.tool"><code class="docutils literal notranslate"><span class="pre">Grass.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Scrub"><code class="docutils literal notranslate"><span class="pre">Scrub</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Scrub.tex"><code class="docutils literal notranslate"><span class="pre">Scrub.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Scrub.index"><code class="docutils literal notranslate"><span class="pre">Scrub.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Scrub.capacity"><code class="docutils literal notranslate"><span class="pre">Scrub.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Scrub.harvest"><code class="docutils literal notranslate"><span class="pre">Scrub.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Scrub.table"><code class="docutils literal notranslate"><span class="pre">Scrub.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Scrub.tool"><code class="docutils literal notranslate"><span class="pre">Scrub.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Forest"><code class="docutils literal notranslate"><span class="pre">Forest</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Forest.tex"><code class="docutils literal notranslate"><span class="pre">Forest.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Forest.index"><code class="docutils literal notranslate"><span class="pre">Forest.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Forest.deplete"><code class="docutils literal notranslate"><span class="pre">Forest.deplete</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Forest.table"><code class="docutils literal notranslate"><span class="pre">Forest.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Forest.capacity"><code class="docutils literal notranslate"><span class="pre">Forest.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Forest.harvest"><code class="docutils literal notranslate"><span class="pre">Forest.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Forest.tool"><code class="docutils literal notranslate"><span class="pre">Forest.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stone"><code class="docutils literal notranslate"><span class="pre">Stone</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stone.tex"><code class="docutils literal notranslate"><span class="pre">Stone.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stone.index"><code class="docutils literal notranslate"><span class="pre">Stone.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stone.capacity"><code class="docutils literal notranslate"><span class="pre">Stone.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stone.harvest"><code class="docutils literal notranslate"><span class="pre">Stone.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stone.table"><code class="docutils literal notranslate"><span class="pre">Stone.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stone.tool"><code class="docutils literal notranslate"><span class="pre">Stone.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Slag"><code class="docutils literal notranslate"><span class="pre">Slag</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Slag.tex"><code class="docutils literal notranslate"><span class="pre">Slag.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Slag.index"><code class="docutils literal notranslate"><span class="pre">Slag.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Slag.capacity"><code class="docutils literal notranslate"><span class="pre">Slag.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Slag.harvest"><code class="docutils literal notranslate"><span class="pre">Slag.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Slag.table"><code class="docutils literal notranslate"><span class="pre">Slag.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Slag.tool"><code class="docutils literal notranslate"><span class="pre">Slag.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ore"><code class="docutils literal notranslate"><span class="pre">Ore</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ore.tex"><code class="docutils literal notranslate"><span class="pre">Ore.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ore.index"><code class="docutils literal notranslate"><span class="pre">Ore.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ore.capacity"><code class="docutils literal notranslate"><span class="pre">Ore.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ore.tool"><code class="docutils literal notranslate"><span class="pre">Ore.tool</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ore.deplete"><code class="docutils literal notranslate"><span class="pre">Ore.deplete</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ore.harvest"><code class="docutils literal notranslate"><span class="pre">Ore.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ore.table"><code class="docutils literal notranslate"><span class="pre">Ore.table</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stump"><code class="docutils literal notranslate"><span class="pre">Stump</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stump.tex"><code class="docutils literal notranslate"><span class="pre">Stump.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stump.index"><code class="docutils literal notranslate"><span class="pre">Stump.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stump.capacity"><code class="docutils literal notranslate"><span class="pre">Stump.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stump.harvest"><code class="docutils literal notranslate"><span class="pre">Stump.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stump.table"><code class="docutils literal notranslate"><span class="pre">Stump.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Stump.tool"><code class="docutils literal notranslate"><span class="pre">Stump.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Tree"><code class="docutils literal notranslate"><span class="pre">Tree</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Tree.tex"><code class="docutils literal notranslate"><span class="pre">Tree.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Tree.index"><code class="docutils literal notranslate"><span class="pre">Tree.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Tree.deplete"><code class="docutils literal notranslate"><span class="pre">Tree.deplete</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Tree.tool"><code class="docutils literal notranslate"><span class="pre">Tree.tool</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Tree.capacity"><code class="docutils literal notranslate"><span class="pre">Tree.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Tree.harvest"><code class="docutils literal notranslate"><span class="pre">Tree.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Tree.table"><code class="docutils literal notranslate"><span class="pre">Tree.table</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fragment"><code class="docutils literal notranslate"><span class="pre">Fragment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fragment.tex"><code class="docutils literal notranslate"><span class="pre">Fragment.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fragment.index"><code class="docutils literal notranslate"><span class="pre">Fragment.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fragment.capacity"><code class="docutils literal notranslate"><span class="pre">Fragment.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fragment.harvest"><code class="docutils literal notranslate"><span class="pre">Fragment.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fragment.table"><code class="docutils literal notranslate"><span class="pre">Fragment.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fragment.tool"><code class="docutils literal notranslate"><span class="pre">Fragment.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Crystal"><code class="docutils literal notranslate"><span class="pre">Crystal</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Crystal.tex"><code class="docutils literal notranslate"><span class="pre">Crystal.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Crystal.index"><code class="docutils literal notranslate"><span class="pre">Crystal.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Crystal.deplete"><code class="docutils literal notranslate"><span class="pre">Crystal.deplete</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Crystal.tool"><code class="docutils literal notranslate"><span class="pre">Crystal.tool</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Crystal.capacity"><code class="docutils literal notranslate"><span class="pre">Crystal.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Crystal.harvest"><code class="docutils literal notranslate"><span class="pre">Crystal.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Crystal.table"><code class="docutils literal notranslate"><span class="pre">Crystal.table</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Weeds"><code class="docutils literal notranslate"><span class="pre">Weeds</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Weeds.tex"><code class="docutils literal notranslate"><span class="pre">Weeds.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Weeds.index"><code class="docutils literal notranslate"><span class="pre">Weeds.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Weeds.capacity"><code class="docutils literal notranslate"><span class="pre">Weeds.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Weeds.harvest"><code class="docutils literal notranslate"><span class="pre">Weeds.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Weeds.table"><code class="docutils literal notranslate"><span class="pre">Weeds.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Weeds.tool"><code class="docutils literal notranslate"><span class="pre">Weeds.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Herb"><code class="docutils literal notranslate"><span class="pre">Herb</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Herb.tex"><code class="docutils literal notranslate"><span class="pre">Herb.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Herb.index"><code class="docutils literal notranslate"><span class="pre">Herb.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Herb.deplete"><code class="docutils literal notranslate"><span class="pre">Herb.deplete</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Herb.tool"><code class="docutils literal notranslate"><span class="pre">Herb.tool</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Herb.table"><code class="docutils literal notranslate"><span class="pre">Herb.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Herb.capacity"><code class="docutils literal notranslate"><span class="pre">Herb.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Herb.harvest"><code class="docutils literal notranslate"><span class="pre">Herb.harvest()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ocean"><code class="docutils literal notranslate"><span class="pre">Ocean</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ocean.tex"><code class="docutils literal notranslate"><span class="pre">Ocean.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ocean.index"><code class="docutils literal notranslate"><span class="pre">Ocean.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ocean.capacity"><code class="docutils literal notranslate"><span class="pre">Ocean.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ocean.harvest"><code class="docutils literal notranslate"><span class="pre">Ocean.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ocean.table"><code class="docutils literal notranslate"><span class="pre">Ocean.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Ocean.tool"><code class="docutils literal notranslate"><span class="pre">Ocean.tool</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fish"><code class="docutils literal notranslate"><span class="pre">Fish</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fish.tex"><code class="docutils literal notranslate"><span class="pre">Fish.tex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fish.index"><code class="docutils literal notranslate"><span class="pre">Fish.index</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fish.deplete"><code class="docutils literal notranslate"><span class="pre">Fish.deplete</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fish.tool"><code class="docutils literal notranslate"><span class="pre">Fish.tool</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fish.table"><code class="docutils literal notranslate"><span class="pre">Fish.table</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fish.capacity"><code class="docutils literal notranslate"><span class="pre">Fish.capacity</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Fish.harvest"><code class="docutils literal notranslate"><span class="pre">Fish.harvest()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Meta"><code class="docutils literal notranslate"><span class="pre">Meta</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Meta.mro"><code class="docutils literal notranslate"><span class="pre">Meta.mro()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.All"><code class="docutils literal notranslate"><span class="pre">All</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.All.materials"><code class="docutils literal notranslate"><span class="pre">All.materials</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.All.indices"><code class="docutils literal notranslate"><span class="pre">All.indices</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Impassible"><code class="docutils literal notranslate"><span class="pre">Impassible</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Impassible.materials"><code class="docutils literal notranslate"><span class="pre">Impassible.materials</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Impassible.indices"><code class="docutils literal notranslate"><span class="pre">Impassible.indices</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Habitable"><code class="docutils literal notranslate"><span class="pre">Habitable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Habitable.materials"><code class="docutils literal notranslate"><span class="pre">Habitable.materials</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Habitable.indices"><code class="docutils literal notranslate"><span class="pre">Habitable.indices</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Harvestable"><code class="docutils literal notranslate"><span class="pre">Harvestable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Harvestable.indices"><code class="docutils literal notranslate"><span class="pre">Harvestable.indices</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.material.html#nmmo.lib.material.Harvestable.materials"><code class="docutils literal notranslate"><span class="pre">Harvestable.materials</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.overlay.html">nmmo.lib.overlay module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.overlay.html#nmmo.lib.overlay.norm"><code class="docutils literal notranslate"><span class="pre">norm()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.overlay.html#nmmo.lib.overlay.clip"><code class="docutils literal notranslate"><span class="pre">clip()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.overlay.html#nmmo.lib.overlay.twoTone"><code class="docutils literal notranslate"><span class="pre">twoTone()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.priorityqueue.html">nmmo.lib.priorityqueue module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue"><code class="docutils literal notranslate"><span class="pre">PriorityQueue</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue.get"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.get()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue.push"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.push()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue.pop"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.pop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue.peek"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.peek</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue.peekPriority"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.peekPriority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue.peekValue"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.peekValue</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue.tolist"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.tolist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue.priorities"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.priorities()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue.print"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.print()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.priorityqueue.html#nmmo.lib.priorityqueue.PriorityQueue.n"><code class="docutils literal notranslate"><span class="pre">PriorityQueue.n</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.rating.html">nmmo.lib.rating module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.rating.html#nmmo.lib.rating.rank"><code class="docutils literal notranslate"><span class="pre">rank()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating.stats"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating.stats</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating.update"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.rating.html#nmmo.lib.rating.OpenSkillRating.anchor_baseline"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating.anchor_baseline()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.spawn.html">nmmo.lib.spawn module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader"><code class="docutils literal notranslate"><span class="pre">SequentialLoader</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.TeamLoader"><code class="docutils literal notranslate"><span class="pre">TeamLoader</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.spawn_continuous"><code class="docutils literal notranslate"><span class="pre">spawn_continuous()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.old_spawn_concurrent"><code class="docutils literal notranslate"><span class="pre">old_spawn_concurrent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.spawn_concurrent"><code class="docutils literal notranslate"><span class="pre">spawn_concurrent()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.lib.utils.html">nmmo.lib.utils module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.staticproperty"><code class="docutils literal notranslate"><span class="pre">staticproperty</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.staticproperty.deleter"><code class="docutils literal notranslate"><span class="pre">staticproperty.deleter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.staticproperty.fdel"><code class="docutils literal notranslate"><span class="pre">staticproperty.fdel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.staticproperty.fget"><code class="docutils literal notranslate"><span class="pre">staticproperty.fget</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.staticproperty.fset"><code class="docutils literal notranslate"><span class="pre">staticproperty.fset</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.staticproperty.getter"><code class="docutils literal notranslate"><span class="pre">staticproperty.getter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.staticproperty.setter"><code class="docutils literal notranslate"><span class="pre">staticproperty.setter()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.classproperty"><code class="docutils literal notranslate"><span class="pre">classproperty</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.Iterable"><code class="docutils literal notranslate"><span class="pre">Iterable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.Iterable.values"><code class="docutils literal notranslate"><span class="pre">Iterable.values()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.Iterable.mro"><code class="docutils literal notranslate"><span class="pre">Iterable.mro()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.StaticIterable"><code class="docutils literal notranslate"><span class="pre">StaticIterable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.StaticIterable.mro"><code class="docutils literal notranslate"><span class="pre">StaticIterable.mro()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.NameComparable"><code class="docutils literal notranslate"><span class="pre">NameComparable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.NameComparable.mro"><code class="docutils literal notranslate"><span class="pre">NameComparable.mro()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.IterableNameComparable"><code class="docutils literal notranslate"><span class="pre">IterableNameComparable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.IterableNameComparable.mro"><code class="docutils literal notranslate"><span class="pre">IterableNameComparable.mro()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.IterableNameComparable.values"><code class="docutils literal notranslate"><span class="pre">IterableNameComparable.values()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.seed"><code class="docutils literal notranslate"><span class="pre">seed()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.linf"><code class="docutils literal notranslate"><span class="pre">linf()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.lib.utils.html#nmmo.lib.utils.inBounds"><code class="docutils literal notranslate"><span class="pre">inBounds()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>

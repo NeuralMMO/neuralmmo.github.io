@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -123,6 +125,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html#icon-overlays"> Overlays</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-reference"> Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Env"><code class="docutils literal notranslate"><span class="pre">Env</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.MapGenerator"><code class="docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Terrain"><code class="docutils literal notranslate"><span class="pre">Terrain</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Serialized"><code class="docutils literal notranslate"><span class="pre">Serialized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Overlay"><code class="docutils literal notranslate"><span class="pre">Overlay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OverlayRegistry"><code class="docutils literal notranslate"><span class="pre">OverlayRegistry</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Replay"><code class="docutils literal notranslate"><span class="pre">Replay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OpenSkillRating"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">nmmo.entity package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.entity.entity.html">nmmo.entity.entity module</a></li>
@@ -244,12 +257,126 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.entity">
-<span id="nmmo-entity-package"></span><h1>nmmo.entity package<a class="headerlink" href="#module-nmmo.entity" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-entity-package"></span><h1>nmmo.entity package<a class="headerlink" href="#module-nmmo.entity" title="Permalink to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.entity.entity.html">nmmo.entity.entity module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.entity.npc.html">nmmo.entity.npc module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.entity.player.html">nmmo.entity.player module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.entity.entity.html">nmmo.entity.entity module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Resources"><code class="docutils literal notranslate"><span class="pre">Resources</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Resources.update"><code class="docutils literal notranslate"><span class="pre">Resources.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Resources.packet"><code class="docutils literal notranslate"><span class="pre">Resources.packet()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Status"><code class="docutils literal notranslate"><span class="pre">Status</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Status.update"><code class="docutils literal notranslate"><span class="pre">Status.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Status.packet"><code class="docutils literal notranslate"><span class="pre">Status.packet()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.History"><code class="docutils literal notranslate"><span class="pre">History</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.History.update"><code class="docutils literal notranslate"><span class="pre">History.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.History.packet"><code class="docutils literal notranslate"><span class="pre">History.packet()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Base"><code class="docutils literal notranslate"><span class="pre">Base</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Base.update"><code class="docutils literal notranslate"><span class="pre">Base.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Base.pos"><code class="docutils literal notranslate"><span class="pre">Base.pos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Base.packet"><code class="docutils literal notranslate"><span class="pre">Base.packet()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity"><code class="docutils literal notranslate"><span class="pre">Entity</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity.packet"><code class="docutils literal notranslate"><span class="pre">Entity.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity.update"><code class="docutils literal notranslate"><span class="pre">Entity.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity.receiveDamage"><code class="docutils literal notranslate"><span class="pre">Entity.receiveDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity.applyDamage"><code class="docutils literal notranslate"><span class="pre">Entity.applyDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity.pos"><code class="docutils literal notranslate"><span class="pre">Entity.pos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity.alive"><code class="docutils literal notranslate"><span class="pre">Entity.alive</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity.isPlayer"><code class="docutils literal notranslate"><span class="pre">Entity.isPlayer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity.isNPC"><code class="docutils literal notranslate"><span class="pre">Entity.isNPC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity.level"><code class="docutils literal notranslate"><span class="pre">Entity.level</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.entity.npc.html">nmmo.entity.npc module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Equipment"><code class="docutils literal notranslate"><span class="pre">Equipment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Equipment.total"><code class="docutils literal notranslate"><span class="pre">Equipment.total()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Equipment.packet"><code class="docutils literal notranslate"><span class="pre">Equipment.packet</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC"><code class="docutils literal notranslate"><span class="pre">NPC</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC.update"><code class="docutils literal notranslate"><span class="pre">NPC.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC.receiveDamage"><code class="docutils literal notranslate"><span class="pre">NPC.receiveDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC.spawn"><code class="docutils literal notranslate"><span class="pre">NPC.spawn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC.packet"><code class="docutils literal notranslate"><span class="pre">NPC.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC.isNPC"><code class="docutils literal notranslate"><span class="pre">NPC.isNPC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC.alive"><code class="docutils literal notranslate"><span class="pre">NPC.alive</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC.applyDamage"><code class="docutils literal notranslate"><span class="pre">NPC.applyDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC.isPlayer"><code class="docutils literal notranslate"><span class="pre">NPC.isPlayer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC.level"><code class="docutils literal notranslate"><span class="pre">NPC.level</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.NPC.pos"><code class="docutils literal notranslate"><span class="pre">NPC.pos</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive"><code class="docutils literal notranslate"><span class="pre">Passive</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.decide"><code class="docutils literal notranslate"><span class="pre">Passive.decide()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.alive"><code class="docutils literal notranslate"><span class="pre">Passive.alive</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.applyDamage"><code class="docutils literal notranslate"><span class="pre">Passive.applyDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.isNPC"><code class="docutils literal notranslate"><span class="pre">Passive.isNPC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.isPlayer"><code class="docutils literal notranslate"><span class="pre">Passive.isPlayer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.level"><code class="docutils literal notranslate"><span class="pre">Passive.level</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.packet"><code class="docutils literal notranslate"><span class="pre">Passive.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.pos"><code class="docutils literal notranslate"><span class="pre">Passive.pos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.receiveDamage"><code class="docutils literal notranslate"><span class="pre">Passive.receiveDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.spawn"><code class="docutils literal notranslate"><span class="pre">Passive.spawn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Passive.update"><code class="docutils literal notranslate"><span class="pre">Passive.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.decide"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.decide()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.alive"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.alive</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.applyDamage"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.applyDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.isNPC"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.isNPC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.isPlayer"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.isPlayer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.level"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.level</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.packet"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.pos"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.pos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.receiveDamage"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.receiveDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.spawn"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.spawn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.PassiveAggressive.update"><code class="docutils literal notranslate"><span class="pre">PassiveAggressive.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive"><code class="docutils literal notranslate"><span class="pre">Aggressive</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.alive"><code class="docutils literal notranslate"><span class="pre">Aggressive.alive</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.applyDamage"><code class="docutils literal notranslate"><span class="pre">Aggressive.applyDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.decide"><code class="docutils literal notranslate"><span class="pre">Aggressive.decide()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.isNPC"><code class="docutils literal notranslate"><span class="pre">Aggressive.isNPC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.isPlayer"><code class="docutils literal notranslate"><span class="pre">Aggressive.isPlayer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.level"><code class="docutils literal notranslate"><span class="pre">Aggressive.level</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.packet"><code class="docutils literal notranslate"><span class="pre">Aggressive.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.pos"><code class="docutils literal notranslate"><span class="pre">Aggressive.pos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.receiveDamage"><code class="docutils literal notranslate"><span class="pre">Aggressive.receiveDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.spawn"><code class="docutils literal notranslate"><span class="pre">Aggressive.spawn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.npc.html#nmmo.entity.npc.Aggressive.update"><code class="docutils literal notranslate"><span class="pre">Aggressive.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.entity.player.html">nmmo.entity.player module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player"><code class="docutils literal notranslate"><span class="pre">Player</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.serial"><code class="docutils literal notranslate"><span class="pre">Player.serial</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.isPlayer"><code class="docutils literal notranslate"><span class="pre">Player.isPlayer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.population"><code class="docutils literal notranslate"><span class="pre">Player.population</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.level"><code class="docutils literal notranslate"><span class="pre">Player.level</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.applyDamage"><code class="docutils literal notranslate"><span class="pre">Player.applyDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.receiveDamage"><code class="docutils literal notranslate"><span class="pre">Player.receiveDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.equipment"><code class="docutils literal notranslate"><span class="pre">Player.equipment</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.packet"><code class="docutils literal notranslate"><span class="pre">Player.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.alive"><code class="docutils literal notranslate"><span class="pre">Player.alive</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.isNPC"><code class="docutils literal notranslate"><span class="pre">Player.isNPC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.pos"><code class="docutils literal notranslate"><span class="pre">Player.pos</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.entity.player.html#nmmo.entity.player.Player.update"><code class="docutils literal notranslate"><span class="pre">Player.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </section>

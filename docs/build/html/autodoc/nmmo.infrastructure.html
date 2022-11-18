@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -123,13 +125,33 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html#icon-overlays"> Overlays</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-reference"> Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Env"><code class="docutils literal notranslate"><span class="pre">Env</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.MapGenerator"><code class="docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Terrain"><code class="docutils literal notranslate"><span class="pre">Terrain</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Serialized"><code class="docutils literal notranslate"><span class="pre">Serialized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Overlay"><code class="docutils literal notranslate"><span class="pre">Overlay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OverlayRegistry"><code class="docutils literal notranslate"><span class="pre">OverlayRegistry</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Replay"><code class="docutils literal notranslate"><span class="pre">Replay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OpenSkillRating"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.lib.html">nmmo.lib package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.systems.html">nmmo.systems package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.emulation.html">nmmo.emulation module</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">nmmo.infrastructure module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">nmmo.infrastructure module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nmmo.infrastructure.DataType"><code class="docutils literal notranslate"><span class="pre">DataType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nmmo.infrastructure.Index"><code class="docutils literal notranslate"><span class="pre">Index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nmmo.infrastructure.ContinuousTable"><code class="docutils literal notranslate"><span class="pre">ContinuousTable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nmmo.infrastructure.DiscreteTable"><code class="docutils literal notranslate"><span class="pre">DiscreteTable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nmmo.infrastructure.Grid"><code class="docutils literal notranslate"><span class="pre">Grid</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nmmo.infrastructure.GridTables"><code class="docutils literal notranslate"><span class="pre">GridTables</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nmmo.infrastructure.Dataframe"><code class="docutils literal notranslate"><span class="pre">Dataframe</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.integrations.html">nmmo.integrations module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
@@ -239,7 +261,7 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.infrastructure">
-<span id="nmmo-infrastructure-module"></span><h1>nmmo.infrastructure module<a class="headerlink" href="#module-nmmo.infrastructure" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-infrastructure-module"></span><h1>nmmo.infrastructure module<a class="headerlink" href="#module-nmmo.infrastructure" title="Permalink to this heading">¶</a></h1>
 <p>Infrastructure layer for representing agent observations</p>
 <p>Maintains a synchronized + serialized representation of agent observations in
 flat tensors. This allows for fast observation processing as a set of tensor
@@ -254,13 +276,13 @@ agent/tile observations, when adding new types observations to the code</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.infrastructure.DataType.CONTINUOUS">
 <span class="sig-name descname"><span class="pre">CONTINUOUS</span></span><a class="headerlink" href="#nmmo.infrastructure.DataType.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.float32</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">float32</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.infrastructure.DataType.DISCRETE">
 <span class="sig-name descname"><span class="pre">DISCRETE</span></span><a class="headerlink" href="#nmmo.infrastructure.DataType.DISCRETE" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.int32</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">int32</span></code></p>
 </dd></dl>
 
 </dd></dl>
@@ -337,7 +359,7 @@ agent/tile observations, when adding new types observations to the code</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.infrastructure.DiscreteTable">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.infrastructure.</span></span><span class="sig-name descname"><span class="pre">DiscreteTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prealloc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.int32'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.infrastructure.DiscreteTable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.infrastructure.ContinuousTable" title="nmmo.infrastructure.ContinuousTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.infrastructure.ContinuousTable</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.infrastructure.ContinuousTable" title="nmmo.infrastructure.ContinuousTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContinuousTable</span></code></a></p>
 <p>Flat tensor representation for a set of discrete attributes</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.infrastructure.DiscreteTable.initAttr">

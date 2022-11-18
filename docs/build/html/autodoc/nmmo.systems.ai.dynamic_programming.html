@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -123,6 +125,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html#icon-overlays"> Overlays</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-reference"> Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Env"><code class="docutils literal notranslate"><span class="pre">Env</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.MapGenerator"><code class="docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Terrain"><code class="docutils literal notranslate"><span class="pre">Terrain</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Serialized"><code class="docutils literal notranslate"><span class="pre">Serialized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Overlay"><code class="docutils literal notranslate"><span class="pre">Overlay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OverlayRegistry"><code class="docutils literal notranslate"><span class="pre">OverlayRegistry</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Replay"><code class="docutils literal notranslate"><span class="pre">Replay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OpenSkillRating"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
@@ -255,7 +268,7 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.systems.ai.dynamic_programming">
-<span id="nmmo-systems-ai-dynamic-programming-module"></span><h1>nmmo.systems.ai.dynamic_programming module<a class="headerlink" href="#module-nmmo.systems.ai.dynamic_programming" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-systems-ai-dynamic-programming-module"></span><h1>nmmo.systems.ai.dynamic_programming module<a class="headerlink" href="#module-nmmo.systems.ai.dynamic_programming" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="nmmo.systems.ai.dynamic_programming.map_to_rewards">
 <span class="sig-prename descclassname"><span class="pre">nmmo.systems.ai.dynamic_programming.</span></span><span class="sig-name descname"><span class="pre">map_to_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tiles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.systems.ai.dynamic_programming.map_to_rewards" title="Permalink to this definition">¶</a></dt>
@@ -268,22 +281,22 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nmmo.systems.ai.dynamic_programming.values_around">
-<span class="sig-prename descclassname"><span class="pre">nmmo.systems.ai.dynamic_programming.</span></span><span class="sig-name descname"><span class="pre">values_around</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position:</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_matrix:</span> <span class="pre">List[List[float]])</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'float'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.ai.dynamic_programming.values_around" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nmmo.systems.ai.dynamic_programming.</span></span><span class="sig-name descname"><span class="pre">values_around</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position:</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_matrix:</span> <span class="pre">~typing.List[~typing.List[float]])</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'float'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.ai.dynamic_programming.values_around" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nmmo.systems.ai.dynamic_programming.max_value_around">
-<span class="sig-prename descclassname"><span class="pre">nmmo.systems.ai.dynamic_programming.</span></span><span class="sig-name descname"><span class="pre">max_value_around</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">position:</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'int'&gt;),</span> <span class="pre">value_matrix:</span> <span class="pre">List[List[float]]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#nmmo.systems.ai.dynamic_programming.max_value_around" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nmmo.systems.ai.dynamic_programming.</span></span><span class="sig-name descname"><span class="pre">max_value_around</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">position:</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'int'&gt;),</span> <span class="pre">value_matrix:</span> <span class="pre">~typing.List[~typing.List[float]]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#nmmo.systems.ai.dynamic_programming.max_value_around" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nmmo.systems.ai.dynamic_programming.max_value_position_around">
-<span class="sig-prename descclassname"><span class="pre">nmmo.systems.ai.dynamic_programming.</span></span><span class="sig-name descname"><span class="pre">max_value_position_around</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position:</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_matrix:</span> <span class="pre">List[List[float]])</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.ai.dynamic_programming.max_value_position_around" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nmmo.systems.ai.dynamic_programming.</span></span><span class="sig-name descname"><span class="pre">max_value_position_around</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position:</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_matrix:</span> <span class="pre">~typing.List[~typing.List[float]])</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.ai.dynamic_programming.max_value_position_around" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="nmmo.systems.ai.dynamic_programming.max_value_direction_around">
-<span class="sig-prename descclassname"><span class="pre">nmmo.systems.ai.dynamic_programming.</span></span><span class="sig-name descname"><span class="pre">max_value_direction_around</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position:</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_matrix:</span> <span class="pre">List[List[float]])</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.ai.dynamic_programming.max_value_direction_around" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">nmmo.systems.ai.dynamic_programming.</span></span><span class="sig-name descname"><span class="pre">max_value_direction_around</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position:</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_matrix:</span> <span class="pre">~typing.List[~typing.List[float]])</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.ai.dynamic_programming.max_value_direction_around" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>

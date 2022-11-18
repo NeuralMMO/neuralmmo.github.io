@@ -99,6 +99,13 @@ Download the latest client `here <https://github.com/neuralmmo/client/releases>`
 |icon| Gallery
 ##############
 
+Isometric
+*********
+
+.. figure:: /resource/image/isometric.png
+
+| 
+
 Perspective and UI
 ******************
 

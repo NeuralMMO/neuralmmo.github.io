@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -123,6 +125,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html#icon-overlays"> Overlays</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-reference"> Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Env"><code class="docutils literal notranslate"><span class="pre">Env</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.MapGenerator"><code class="docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Terrain"><code class="docutils literal notranslate"><span class="pre">Terrain</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Serialized"><code class="docutils literal notranslate"><span class="pre">Serialized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Overlay"><code class="docutils literal notranslate"><span class="pre">Overlay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OverlayRegistry"><code class="docutils literal notranslate"><span class="pre">OverlayRegistry</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Replay"><code class="docutils literal notranslate"><span class="pre">Replay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OpenSkillRating"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating</span></code></a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="nmmo.core.agent.html">nmmo.core.agent module</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">nmmo.core.config module</a></li>
@@ -250,7 +263,7 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.core.config">
-<span id="nmmo-core-config-module"></span><h1>nmmo.core.config module<a class="headerlink" href="#module-nmmo.core.config" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-core-config-module"></span><h1>nmmo.core.config module<a class="headerlink" href="#module-nmmo.core.config" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.config.Template">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.config.</span></span><span class="sig-name descname"><span class="pre">Template</span></span><a class="headerlink" href="#nmmo.core.config.Template" title="Permalink to this definition">¶</a></dt>
@@ -295,7 +308,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.config.Config">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.config.</span></span><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#nmmo.core.config.Config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Template" title="nmmo.core.config.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Template</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Template" title="nmmo.core.config.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a></p>
 <p>An environment configuration object</p>
 <p>Global constants are defined as static class variables. You can override
 any Config variable using standard CLI syntax (e.g. –NENT=128).</p>
@@ -457,7 +470,8 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.PLAYER_LOADER">
 <span class="sig-name descname"><span class="pre">PLAYER_LOADER</span></span><a class="headerlink" href="#nmmo.core.config.Config.PLAYER_LOADER" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.spawn.SequentialLoader</span></code></a></p>
+<dd><p>Agent loader class specifying spawn sampling</p>
+<p>alias of <a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">SequentialLoader</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -545,25 +559,25 @@ if the current population size is zero.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.PATH_ROOT">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_ROOT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_ROOT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.PATH_CWD">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/neuralmmo.beta.github.io/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_CWD" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/neuralmmo.github.io/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_CWD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.PATH_RESOURCE">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_RESOURCE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_RESOURCE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.PATH_TILE">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_TILE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_TILE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -1211,7 +1225,7 @@ if the current population size is zero.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.config.</span></span><span class="sig-name descname"><span class="pre">AllGameSystems</span></span><a class="headerlink" href="#nmmo.core.config.AllGameSystems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Terrain" title="nmmo.core.config.Terrain"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Terrain</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Resource" title="nmmo.core.config.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Resource</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Combat" title="nmmo.core.config.Combat"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Combat</span></code></a>, <a class="reference internal" href="#nmmo.core.config.NPC" title="nmmo.core.config.NPC"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.NPC</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Progression" title="nmmo.core.config.Progression"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Progression</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Item" title="nmmo.core.config.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Item</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Equipment" title="nmmo.core.config.Equipment"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Equipment</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Profession" title="nmmo.core.config.Profession"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Profession</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Exchange" title="nmmo.core.config.Exchange"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Exchange</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Communication" title="nmmo.core.config.Communication"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Communication</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Terrain" title="nmmo.core.config.Terrain"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terrain</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Resource" title="nmmo.core.config.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">Resource</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Combat" title="nmmo.core.config.Combat"><code class="xref py py-class docutils literal notranslate"><span class="pre">Combat</span></code></a>, <a class="reference internal" href="#nmmo.core.config.NPC" title="nmmo.core.config.NPC"><code class="xref py py-class docutils literal notranslate"><span class="pre">NPC</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Progression" title="nmmo.core.config.Progression"><code class="xref py py-class docutils literal notranslate"><span class="pre">Progression</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Item" title="nmmo.core.config.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">Item</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Equipment" title="nmmo.core.config.Equipment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Equipment</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Profession" title="nmmo.core.config.Profession"><code class="xref py py-class docutils literal notranslate"><span class="pre">Profession</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Exchange" title="nmmo.core.config.Exchange"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exchange</span></code></a>, <a class="reference internal" href="#nmmo.core.config.Communication" title="nmmo.core.config.Communication"><code class="xref py py-class docutils literal notranslate"><span class="pre">Communication</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.COMBAT_DAMAGE_FORMULA">
 <span class="sig-name descname"><span class="pre">COMBAT_DAMAGE_FORMULA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offense</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defense</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.config.AllGameSystems.COMBAT_DAMAGE_FORMULA" title="Permalink to this definition">¶</a></dt>
@@ -1744,7 +1758,7 @@ if the current population size is zero.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.config.Small">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.config.</span></span><span class="sig-name descname"><span class="pre">Small</span></span><a class="headerlink" href="#nmmo.core.config.Small" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Config" title="nmmo.core.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Config</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Config" title="nmmo.core.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a></p>
 <p>A small config for debugging and experiments with an expensive outer loop</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.EMULATE_CONST_HORIZON">
@@ -1849,7 +1863,7 @@ if the current population size is zero.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.PATH_CWD">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/neuralmmo.beta.github.io/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_CWD" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/neuralmmo.github.io/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_CWD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -1861,19 +1875,19 @@ if the current population size is zero.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.PATH_RESOURCE">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_RESOURCE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_RESOURCE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.PATH_ROOT">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_ROOT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_ROOT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.PATH_TILE">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_TILE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_TILE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -1910,7 +1924,7 @@ if the current population size is zero.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.PLAYER_LOADER">
 <span class="sig-name descname"><span class="pre">PLAYER_LOADER</span></span><a class="headerlink" href="#nmmo.core.config.Small.PLAYER_LOADER" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.spawn.SequentialLoader</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">SequentialLoader</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2088,7 +2102,7 @@ if the current population size is zero.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.config.</span></span><span class="sig-name descname"><span class="pre">Medium</span></span><a class="headerlink" href="#nmmo.core.config.Medium" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Config" title="nmmo.core.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Config</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Config" title="nmmo.core.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a></p>
 <p>A medium config suitable for most academic-scale research</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.EMULATE_CONST_HORIZON">
@@ -2193,7 +2207,7 @@ if the current population size is zero.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.PATH_CWD">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/neuralmmo.beta.github.io/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_CWD" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/neuralmmo.github.io/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_CWD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -2205,19 +2219,19 @@ if the current population size is zero.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.PATH_RESOURCE">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_RESOURCE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_RESOURCE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.PATH_ROOT">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_ROOT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_ROOT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.PATH_TILE">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_TILE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_TILE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -2254,7 +2268,7 @@ if the current population size is zero.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.PLAYER_LOADER">
 <span class="sig-name descname"><span class="pre">PLAYER_LOADER</span></span><a class="headerlink" href="#nmmo.core.config.Medium.PLAYER_LOADER" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.spawn.SequentialLoader</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">SequentialLoader</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2427,7 +2441,7 @@ if the current population size is zero.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.config.Large">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.config.</span></span><span class="sig-name descname"><span class="pre">Large</span></span><a class="headerlink" href="#nmmo.core.config.Large" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Config" title="nmmo.core.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Config</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Config" title="nmmo.core.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">Config</span></code></a></p>
 <p>A large config suitable for large-scale research or fast models</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.EMULATE_CONST_HORIZON">
@@ -2532,7 +2546,7 @@ if the current population size is zero.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.PATH_CWD">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/neuralmmo.beta.github.io/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_CWD" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/neuralmmo.github.io/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_CWD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -2544,19 +2558,19 @@ if the current population size is zero.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.PATH_RESOURCE">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_RESOURCE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_RESOURCE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.PATH_ROOT">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_ROOT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_ROOT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.PATH_TILE">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_TILE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_TILE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -2593,7 +2607,7 @@ if the current population size is zero.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.PLAYER_LOADER">
 <span class="sig-name descname"><span class="pre">PLAYER_LOADER</span></span><a class="headerlink" href="#nmmo.core.config.Large.PLAYER_LOADER" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.spawn.SequentialLoader</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">SequentialLoader</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2766,7 +2780,7 @@ if the current population size is zero.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.config.Default">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.config.</span></span><span class="sig-name descname"><span class="pre">Default</span></span><a class="headerlink" href="#nmmo.core.config.Default" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Medium" title="nmmo.core.config.Medium"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.Medium</span></code></a>, <a class="reference internal" href="#nmmo.core.config.AllGameSystems" title="nmmo.core.config.AllGameSystems"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.config.AllGameSystems</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.core.config.Medium" title="nmmo.core.config.Medium"><code class="xref py py-class docutils literal notranslate"><span class="pre">Medium</span></code></a>, <a class="reference internal" href="#nmmo.core.config.AllGameSystems" title="nmmo.core.config.AllGameSystems"><code class="xref py py-class docutils literal notranslate"><span class="pre">AllGameSystems</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.COMBAT_DAMAGE_FORMULA">
 <span class="sig-name descname"><span class="pre">COMBAT_DAMAGE_FORMULA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offense</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defense</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.config.Default.COMBAT_DAMAGE_FORMULA" title="Permalink to this definition">¶</a></dt>
@@ -3132,7 +3146,7 @@ if the current population size is zero.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PATH_CWD">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/neuralmmo.beta.github.io/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_CWD" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/neuralmmo.github.io/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_CWD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -3150,19 +3164,19 @@ if the current population size is zero.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PATH_RESOURCE">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_RESOURCE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_RESOURCE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PATH_ROOT">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_ROOT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_ROOT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PATH_TILE">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/neural-mmo/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_TILE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/home/jsuarez/code/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_TILE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -3199,7 +3213,7 @@ if the current population size is zero.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PLAYER_LOADER">
 <span class="sig-name descname"><span class="pre">PLAYER_LOADER</span></span><a class="headerlink" href="#nmmo.core.config.Default.PLAYER_LOADER" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.lib.spawn.SequentialLoader</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">SequentialLoader</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">

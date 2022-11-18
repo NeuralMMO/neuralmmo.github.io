@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -123,6 +125,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html#icon-overlays"> Overlays</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-reference"> Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Env"><code class="docutils literal notranslate"><span class="pre">Env</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.MapGenerator"><code class="docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Terrain"><code class="docutils literal notranslate"><span class="pre">Terrain</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Serialized"><code class="docutils literal notranslate"><span class="pre">Serialized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Overlay"><code class="docutils literal notranslate"><span class="pre">Overlay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OverlayRegistry"><code class="docutils literal notranslate"><span class="pre">OverlayRegistry</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Replay"><code class="docutils literal notranslate"><span class="pre">Replay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OpenSkillRating"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
@@ -134,7 +147,12 @@
 <li class="toctree-l3"><a class="reference internal" href="nmmo.overlay.html">nmmo.overlay module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.scripting.html">nmmo.scripting module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.version.html">nmmo.version module</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">nmmo.websocket module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">nmmo.websocket module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nmmo.websocket.GodswordServerProtocol"><code class="docutils literal notranslate"><span class="pre">GodswordServerProtocol</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nmmo.websocket.WSServerFactory"><code class="docutils literal notranslate"><span class="pre">WSServerFactory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nmmo.websocket.Application"><code class="docutils literal notranslate"><span class="pre">Application</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -239,11 +257,11 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.websocket">
-<span id="nmmo-websocket-module"></span><h1>nmmo.websocket module<a class="headerlink" href="#module-nmmo.websocket" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-websocket-module"></span><h1>nmmo.websocket module<a class="headerlink" href="#module-nmmo.websocket" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.websocket.</span></span><span class="sig-name descname"><span class="pre">GodswordServerProtocol</span></span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">autobahn.twisted.websocket.WebSocketServerProtocol</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">WebSocketServerProtocol</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.websocket.GodswordServerProtocol.onOpen">
 <span class="sig-name descname"><span class="pre">onOpen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.onOpen" title="Permalink to this definition">¶</a></dt>
@@ -296,7 +314,7 @@ HTTP headers, with <cite>headers</cite> being a dictionary of key-values.</p>
 <p>Throw <code class="xref py py-class docutils literal notranslate"><span class="pre">autobahn.websocket.types.ConnectionDeny</span></code> when you don’t want
 to accept the WebSocket connection request.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>request</strong> (instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">autobahn.websocket.protocol.ConnectionRequest</span></code>) – WebSocket connection request information.</p>
 </dd>
 </dl>
@@ -443,7 +461,7 @@ to accept the WebSocket connection request.</p>
 <dd><p>final
 RFC6455.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Default WebSocket protocol spec version this implementation speaks</p>
 </dd>
 </dl>
@@ -660,7 +678,7 @@ sending a Close when no Close was sent before. Otherwise it drops
 the TCP connection either immediately (when we are a server) or after a timeout
 (when we are a client and expect the server to drop the TCP).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>code</strong> (<em>int</em>) – Close status code, if there was one (<code class="xref py py-class docutils literal notranslate"><span class="pre">WebSocketProtocol</span></code>.CLOSE_STATUS_CODE_*).</p></li>
 <li><p><strong>reasonRaw</strong> (<em>bytes</em>) – Close reason (when present, a status code MUST have been also be present).</p></li>
@@ -794,7 +812,7 @@ all subsequent processing of incoming bytes.</p>
 <span class="sig-name descname"><span class="pre">registerProducer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">producer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">streaming</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.registerProducer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register a Twisted producer with this protocol.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>producer</strong> (<em>object</em>) – A Twisted push or pull producer.</p></li>
 <li><p><strong>streaming</strong> (<em>bool</em>) – Producer type.</p></li>
@@ -912,7 +930,7 @@ upgrade to WebSocket header (and option serverStatus is True).</p>
 <span class="sig-name descname"><span class="pre">setTrackTimings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.GodswordServerProtocol.setTrackTimings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable tracking of detailed timings.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>enable</strong> (<em>bool</em>) – Turn time tracking on/off.</p>
 </dd>
 </dl>
@@ -946,7 +964,7 @@ upgrade to WebSocket header (and option serverStatus is True).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.websocket.</span></span><span class="sig-name descname"><span class="pre">WSServerFactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">autobahn.twisted.websocket.WebSocketServerFactory</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">WebSocketServerFactory</span></code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In addition to all arguments to the constructor of
@@ -1013,7 +1031,7 @@ instance.</p>
 <span class="sig-name descname"><span class="pre">getConnectionCount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.getConnectionCount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get number of currently connected clients.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int – Number of currently connected clients.</p>
 </dd>
 </dl>
@@ -1056,7 +1074,7 @@ instances of <code class="xref py py-class docutils literal notranslate"><span c
 <em>same</em> payload into WebSocket messages multiple times when that
 same payload is to be sent out on multiple connections.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>payload</strong> (<em>bytes</em>) – The message payload.</p></li>
 <li><p><strong>isBinary</strong> (<em>bool</em>) – <cite>True</cite> iff payload is binary, else the payload must be
@@ -1067,7 +1085,7 @@ WebSocket connection. Use when you know the payload incompressible
 (e.g. encrypted or already compressed).</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>obj – An instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">autobahn.websocket.protocol.PreparedMessage</span></code>.</p>
 </dd>
 </dl>
@@ -1076,7 +1094,7 @@ WebSocket connection. Use when you know the payload incompressible
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.websocket.WSServerFactory.protocol">
 <span class="sig-name descname"><span class="pre">protocol</span></span><a class="headerlink" href="#nmmo.websocket.WSServerFactory.protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">autobahn.websocket.protocol.WebSocketServerProtocol</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">WebSocketServerProtocol</span></code></p>
 </dd></dl>
 
 <dl class="py method">

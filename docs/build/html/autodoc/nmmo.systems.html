@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -123,6 +125,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html#icon-overlays"> Overlays</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-reference"> Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Env"><code class="docutils literal notranslate"><span class="pre">Env</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.MapGenerator"><code class="docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Terrain"><code class="docutils literal notranslate"><span class="pre">Terrain</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Serialized"><code class="docutils literal notranslate"><span class="pre">Serialized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Overlay"><code class="docutils literal notranslate"><span class="pre">Overlay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OverlayRegistry"><code class="docutils literal notranslate"><span class="pre">OverlayRegistry</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Replay"><code class="docutils literal notranslate"><span class="pre">Replay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OpenSkillRating"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.io.html">nmmo.io package</a></li>
@@ -251,31 +264,694 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.systems">
-<span id="nmmo-systems-package"></span><h1>nmmo.systems package<a class="headerlink" href="#module-nmmo.systems" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-systems-package"></span><h1>nmmo.systems package<a class="headerlink" href="#module-nmmo.systems" title="Permalink to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="nmmo.systems.ai.html">nmmo.systems.ai package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.attack.html">nmmo.systems.ai.attack module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.behavior.html">nmmo.systems.ai.behavior module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.dynamic_programming.html">nmmo.systems.ai.dynamic_programming module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.move.html">nmmo.systems.ai.move module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.policy.html">nmmo.systems.ai.policy module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.utils.html">nmmo.systems.ai.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.behavior.html">nmmo.systems.ai.behavior module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.behavior.html#nmmo.systems.ai.behavior.update"><code class="docutils literal notranslate"><span class="pre">update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.behavior.html#nmmo.systems.ai.behavior.pathfind"><code class="docutils literal notranslate"><span class="pre">pathfind()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.behavior.html#nmmo.systems.ai.behavior.explore"><code class="docutils literal notranslate"><span class="pre">explore()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.behavior.html#nmmo.systems.ai.behavior.meander"><code class="docutils literal notranslate"><span class="pre">meander()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.behavior.html#nmmo.systems.ai.behavior.evade"><code class="docutils literal notranslate"><span class="pre">evade()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.behavior.html#nmmo.systems.ai.behavior.hunt"><code class="docutils literal notranslate"><span class="pre">hunt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.behavior.html#nmmo.systems.ai.behavior.attack"><code class="docutils literal notranslate"><span class="pre">attack()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.dynamic_programming.html">nmmo.systems.ai.dynamic_programming module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.dynamic_programming.html#nmmo.systems.ai.dynamic_programming.map_to_rewards"><code class="docutils literal notranslate"><span class="pre">map_to_rewards()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.dynamic_programming.html#nmmo.systems.ai.dynamic_programming.compute_values"><code class="docutils literal notranslate"><span class="pre">compute_values()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.dynamic_programming.html#nmmo.systems.ai.dynamic_programming.values_around"><code class="docutils literal notranslate"><span class="pre">values_around()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.dynamic_programming.html#nmmo.systems.ai.dynamic_programming.max_value_around"><code class="docutils literal notranslate"><span class="pre">max_value_around()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.dynamic_programming.html#nmmo.systems.ai.dynamic_programming.max_value_position_around"><code class="docutils literal notranslate"><span class="pre">max_value_position_around()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.dynamic_programming.html#nmmo.systems.ai.dynamic_programming.max_value_direction_around"><code class="docutils literal notranslate"><span class="pre">max_value_direction_around()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.move.html">nmmo.systems.ai.move module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.move.html#nmmo.systems.ai.move.rand"><code class="docutils literal notranslate"><span class="pre">rand()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.move.html#nmmo.systems.ai.move.randomSafe"><code class="docutils literal notranslate"><span class="pre">randomSafe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.move.html#nmmo.systems.ai.move.habitable"><code class="docutils literal notranslate"><span class="pre">habitable()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.move.html#nmmo.systems.ai.move.towards"><code class="docutils literal notranslate"><span class="pre">towards()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.move.html#nmmo.systems.ai.move.bullrush"><code class="docutils literal notranslate"><span class="pre">bullrush()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.move.html#nmmo.systems.ai.move.pathfind"><code class="docutils literal notranslate"><span class="pre">pathfind()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.move.html#nmmo.systems.ai.move.antipathfind"><code class="docutils literal notranslate"><span class="pre">antipathfind()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.policy.html">nmmo.systems.ai.policy module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.policy.html#nmmo.systems.ai.policy.passive"><code class="docutils literal notranslate"><span class="pre">passive()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.policy.html#nmmo.systems.ai.policy.neutral"><code class="docutils literal notranslate"><span class="pre">neutral()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.policy.html#nmmo.systems.ai.policy.hostile"><code class="docutils literal notranslate"><span class="pre">hostile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.ai.utils.html">nmmo.systems.ai.utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.validTarget"><code class="docutils literal notranslate"><span class="pre">validTarget()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.validResource"><code class="docutils literal notranslate"><span class="pre">validResource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.directionTowards"><code class="docutils literal notranslate"><span class="pre">directionTowards()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.closestTarget"><code class="docutils literal notranslate"><span class="pre">closestTarget()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.distance"><code class="docutils literal notranslate"><span class="pre">distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.lInf"><code class="docutils literal notranslate"><span class="pre">lInf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.adjacentPos"><code class="docutils literal notranslate"><span class="pre">adjacentPos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.cropTilesAround"><code class="docutils literal notranslate"><span class="pre">cropTilesAround()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.inSight"><code class="docutils literal notranslate"><span class="pre">inSight()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.vacant"><code class="docutils literal notranslate"><span class="pre">vacant()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.meander"><code class="docutils literal notranslate"><span class="pre">meander()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.l1"><code class="docutils literal notranslate"><span class="pre">l1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.l2"><code class="docutils literal notranslate"><span class="pre">l2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.lInfty"><code class="docutils literal notranslate"><span class="pre">lInfty()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.aStar"><code class="docutils literal notranslate"><span class="pre">aStar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.adjacentDeltas"><code class="docutils literal notranslate"><span class="pre">adjacentDeltas()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.l1Deltas"><code class="docutils literal notranslate"><span class="pre">l1Deltas()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.posSum"><code class="docutils literal notranslate"><span class="pre">posSum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.adjacentEmptyPos"><code class="docutils literal notranslate"><span class="pre">adjacentEmptyPos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.adjacentTiles"><code class="docutils literal notranslate"><span class="pre">adjacentTiles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.adjacentMats"><code class="docutils literal notranslate"><span class="pre">adjacentMats()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.ai.utils.html#nmmo.systems.ai.utils.adjacencyDelMatPairs"><code class="docutils literal notranslate"><span class="pre">adjacencyDelMatPairs()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.achievement.html">nmmo.systems.achievement module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.combat.html">nmmo.systems.combat module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.droptable.html">nmmo.systems.droptable module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.equipment.html">nmmo.systems.equipment module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.exchange.html">nmmo.systems.exchange module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.experience.html">nmmo.systems.experience module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.inventory.html">nmmo.systems.inventory module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.item.html">nmmo.systems.item module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.skill.html">nmmo.systems.skill module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.achievement.html">nmmo.systems.achievement module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Task.condition"><code class="docutils literal notranslate"><span class="pre">Task.condition</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Task.target"><code class="docutils literal notranslate"><span class="pre">Task.target</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Task.reward"><code class="docutils literal notranslate"><span class="pre">Task.reward</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Diary"><code class="docutils literal notranslate"><span class="pre">Diary</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Diary.completed"><code class="docutils literal notranslate"><span class="pre">Diary.completed</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Diary.cumulative_reward"><code class="docutils literal notranslate"><span class="pre">Diary.cumulative_reward</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Diary.update"><code class="docutils literal notranslate"><span class="pre">Diary.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Achievement"><code class="docutils literal notranslate"><span class="pre">Achievement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Achievement.name"><code class="docutils literal notranslate"><span class="pre">Achievement.name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.achievement.html#nmmo.systems.achievement.Achievement.update"><code class="docutils literal notranslate"><span class="pre">Achievement.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.combat.html">nmmo.systems.combat module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.combat.html#nmmo.systems.combat.level"><code class="docutils literal notranslate"><span class="pre">level()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.combat.html#nmmo.systems.combat.damage_multiplier"><code class="docutils literal notranslate"><span class="pre">damage_multiplier()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.combat.html#nmmo.systems.combat.attack"><code class="docutils literal notranslate"><span class="pre">attack()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.combat.html#nmmo.systems.combat.danger"><code class="docutils literal notranslate"><span class="pre">danger()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.combat.html#nmmo.systems.combat.spawn"><code class="docutils literal notranslate"><span class="pre">spawn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.droptable.html">nmmo.systems.droptable module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Fixed"><code class="docutils literal notranslate"><span class="pre">Fixed</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Fixed.roll"><code class="docutils literal notranslate"><span class="pre">Fixed.roll()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Drop"><code class="docutils literal notranslate"><span class="pre">Drop</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Drop.roll"><code class="docutils literal notranslate"><span class="pre">Drop.roll()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Standard"><code class="docutils literal notranslate"><span class="pre">Standard</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Standard.add"><code class="docutils literal notranslate"><span class="pre">Standard.add()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Standard.roll"><code class="docutils literal notranslate"><span class="pre">Standard.roll()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Empty"><code class="docutils literal notranslate"><span class="pre">Empty</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Empty.roll"><code class="docutils literal notranslate"><span class="pre">Empty.roll()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Empty.add"><code class="docutils literal notranslate"><span class="pre">Empty.add()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Ammunition"><code class="docutils literal notranslate"><span class="pre">Ammunition</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Ammunition.roll"><code class="docutils literal notranslate"><span class="pre">Ammunition.roll()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Ammunition.add"><code class="docutils literal notranslate"><span class="pre">Ammunition.add()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Consumable"><code class="docutils literal notranslate"><span class="pre">Consumable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Consumable.add"><code class="docutils literal notranslate"><span class="pre">Consumable.add()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.droptable.html#nmmo.systems.droptable.Consumable.roll"><code class="docutils literal notranslate"><span class="pre">Consumable.roll()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.equipment.html">nmmo.systems.equipment module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Loadout"><code class="docutils literal notranslate"><span class="pre">Loadout</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Loadout.defense"><code class="docutils literal notranslate"><span class="pre">Loadout.defense</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Loadout.packet"><code class="docutils literal notranslate"><span class="pre">Loadout.packet()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Armor"><code class="docutils literal notranslate"><span class="pre">Armor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Armor.packet"><code class="docutils literal notranslate"><span class="pre">Armor.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Armor.color"><code class="docutils literal notranslate"><span class="pre">Armor.color</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Chestplate"><code class="docutils literal notranslate"><span class="pre">Chestplate</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Chestplate.color"><code class="docutils literal notranslate"><span class="pre">Chestplate.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Chestplate.packet"><code class="docutils literal notranslate"><span class="pre">Chestplate.packet()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Platelegs"><code class="docutils literal notranslate"><span class="pre">Platelegs</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Platelegs.color"><code class="docutils literal notranslate"><span class="pre">Platelegs.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.equipment.html#nmmo.systems.equipment.Platelegs.packet"><code class="docutils literal notranslate"><span class="pre">Platelegs.packet()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.exchange.html">nmmo.systems.exchange module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Offer"><code class="docutils literal notranslate"><span class="pre">Offer</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue"><code class="docutils literal notranslate"><span class="pre">Queue</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.push"><code class="docutils literal notranslate"><span class="pre">Queue.push()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.peek"><code class="docutils literal notranslate"><span class="pre">Queue.peek()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.append"><code class="docutils literal notranslate"><span class="pre">Queue.append()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.appendleft"><code class="docutils literal notranslate"><span class="pre">Queue.appendleft()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.clear"><code class="docutils literal notranslate"><span class="pre">Queue.clear()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.copy"><code class="docutils literal notranslate"><span class="pre">Queue.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.count"><code class="docutils literal notranslate"><span class="pre">Queue.count()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.extend"><code class="docutils literal notranslate"><span class="pre">Queue.extend()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.extendleft"><code class="docutils literal notranslate"><span class="pre">Queue.extendleft()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.index"><code class="docutils literal notranslate"><span class="pre">Queue.index()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.insert"><code class="docutils literal notranslate"><span class="pre">Queue.insert()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.maxlen"><code class="docutils literal notranslate"><span class="pre">Queue.maxlen</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.pop"><code class="docutils literal notranslate"><span class="pre">Queue.pop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.popleft"><code class="docutils literal notranslate"><span class="pre">Queue.popleft()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.remove"><code class="docutils literal notranslate"><span class="pre">Queue.remove()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.reverse"><code class="docutils literal notranslate"><span class="pre">Queue.reverse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Queue.rotate"><code class="docutils literal notranslate"><span class="pre">Queue.rotate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.ItemListings"><code class="docutils literal notranslate"><span class="pre">ItemListings</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.ItemListings.step"><code class="docutils literal notranslate"><span class="pre">ItemListings.step()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.ItemListings.price"><code class="docutils literal notranslate"><span class="pre">ItemListings.price</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.ItemListings.supply"><code class="docutils literal notranslate"><span class="pre">ItemListings.supply</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.ItemListings.empty"><code class="docutils literal notranslate"><span class="pre">ItemListings.empty</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.ItemListings.buy"><code class="docutils literal notranslate"><span class="pre">ItemListings.buy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.ItemListings.sell"><code class="docutils literal notranslate"><span class="pre">ItemListings.sell()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Exchange"><code class="docutils literal notranslate"><span class="pre">Exchange</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Exchange.dataframeKeys"><code class="docutils literal notranslate"><span class="pre">Exchange.dataframeKeys</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Exchange.dataframeVals"><code class="docutils literal notranslate"><span class="pre">Exchange.dataframeVals</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Exchange.packet"><code class="docutils literal notranslate"><span class="pre">Exchange.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Exchange.step"><code class="docutils literal notranslate"><span class="pre">Exchange.step()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Exchange.available"><code class="docutils literal notranslate"><span class="pre">Exchange.available()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Exchange.buy"><code class="docutils literal notranslate"><span class="pre">Exchange.buy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.exchange.html#nmmo.systems.exchange.Exchange.sell"><code class="docutils literal notranslate"><span class="pre">Exchange.sell()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.experience.html">nmmo.systems.experience module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.experience.html#nmmo.systems.experience.ExperienceCalculator"><code class="docutils literal notranslate"><span class="pre">ExperienceCalculator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.experience.html#nmmo.systems.experience.ExperienceCalculator.expAtLevel"><code class="docutils literal notranslate"><span class="pre">ExperienceCalculator.expAtLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.experience.html#nmmo.systems.experience.ExperienceCalculator.levelAtExp"><code class="docutils literal notranslate"><span class="pre">ExperienceCalculator.levelAtExp()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.inventory.html">nmmo.systems.inventory module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment"><code class="docutils literal notranslate"><span class="pre">Equipment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment.total"><code class="docutils literal notranslate"><span class="pre">Equipment.total()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment.conditional_packet"><code class="docutils literal notranslate"><span class="pre">Equipment.conditional_packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment.item_level"><code class="docutils literal notranslate"><span class="pre">Equipment.item_level</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment.melee_attack"><code class="docutils literal notranslate"><span class="pre">Equipment.melee_attack</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment.range_attack"><code class="docutils literal notranslate"><span class="pre">Equipment.range_attack</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment.mage_attack"><code class="docutils literal notranslate"><span class="pre">Equipment.mage_attack</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment.melee_defense"><code class="docutils literal notranslate"><span class="pre">Equipment.melee_defense</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment.range_defense"><code class="docutils literal notranslate"><span class="pre">Equipment.range_defense</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment.mage_defense"><code class="docutils literal notranslate"><span class="pre">Equipment.mage_defense</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Equipment.packet"><code class="docutils literal notranslate"><span class="pre">Equipment.packet</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Inventory"><code class="docutils literal notranslate"><span class="pre">Inventory</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Inventory.space"><code class="docutils literal notranslate"><span class="pre">Inventory.space</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Inventory.dataframeKeys"><code class="docutils literal notranslate"><span class="pre">Inventory.dataframeKeys</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Inventory.packet"><code class="docutils literal notranslate"><span class="pre">Inventory.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Inventory.receive"><code class="docutils literal notranslate"><span class="pre">Inventory.receive()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.inventory.html#nmmo.systems.inventory.Inventory.remove"><code class="docutils literal notranslate"><span class="pre">Inventory.remove()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.item.html">nmmo.systems.item module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.ItemID"><code class="docutils literal notranslate"><span class="pre">ItemID</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.ItemID.item_ids"><code class="docutils literal notranslate"><span class="pre">ItemID.item_ids</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.ItemID.id_items"><code class="docutils literal notranslate"><span class="pre">ItemID.id_items</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.ItemID.register"><code class="docutils literal notranslate"><span class="pre">ItemID.register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.ItemID.get"><code class="docutils literal notranslate"><span class="pre">ItemID.get()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Item"><code class="docutils literal notranslate"><span class="pre">Item</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Item.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Item.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Item.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Item.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Item.signature"><code class="docutils literal notranslate"><span class="pre">Item.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Item.packet"><code class="docutils literal notranslate"><span class="pre">Item.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Item.use"><code class="docutils literal notranslate"><span class="pre">Item.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Stack"><code class="docutils literal notranslate"><span class="pre">Stack</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gold"><code class="docutils literal notranslate"><span class="pre">Gold</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gold.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Gold.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gold.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Gold.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gold.packet"><code class="docutils literal notranslate"><span class="pre">Gold.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gold.signature"><code class="docutils literal notranslate"><span class="pre">Gold.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gold.use"><code class="docutils literal notranslate"><span class="pre">Gold.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Equipment"><code class="docutils literal notranslate"><span class="pre">Equipment</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Equipment.packet"><code class="docutils literal notranslate"><span class="pre">Equipment.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Equipment.color"><code class="docutils literal notranslate"><span class="pre">Equipment.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Equipment.use"><code class="docutils literal notranslate"><span class="pre">Equipment.use()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Equipment.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Equipment.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Equipment.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Equipment.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Equipment.signature"><code class="docutils literal notranslate"><span class="pre">Equipment.signature</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Armor"><code class="docutils literal notranslate"><span class="pre">Armor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Armor.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Armor.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Armor.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Armor.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Armor.color"><code class="docutils literal notranslate"><span class="pre">Armor.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Armor.packet"><code class="docutils literal notranslate"><span class="pre">Armor.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Armor.signature"><code class="docutils literal notranslate"><span class="pre">Armor.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Armor.use"><code class="docutils literal notranslate"><span class="pre">Armor.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Hat"><code class="docutils literal notranslate"><span class="pre">Hat</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Hat.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Hat.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Hat.equip"><code class="docutils literal notranslate"><span class="pre">Hat.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Hat.unequip"><code class="docutils literal notranslate"><span class="pre">Hat.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Hat.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Hat.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Hat.color"><code class="docutils literal notranslate"><span class="pre">Hat.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Hat.packet"><code class="docutils literal notranslate"><span class="pre">Hat.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Hat.signature"><code class="docutils literal notranslate"><span class="pre">Hat.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Hat.use"><code class="docutils literal notranslate"><span class="pre">Hat.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Top"><code class="docutils literal notranslate"><span class="pre">Top</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Top.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Top.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Top.equip"><code class="docutils literal notranslate"><span class="pre">Top.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Top.unequip"><code class="docutils literal notranslate"><span class="pre">Top.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Top.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Top.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Top.color"><code class="docutils literal notranslate"><span class="pre">Top.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Top.packet"><code class="docutils literal notranslate"><span class="pre">Top.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Top.signature"><code class="docutils literal notranslate"><span class="pre">Top.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Top.use"><code class="docutils literal notranslate"><span class="pre">Top.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bottom"><code class="docutils literal notranslate"><span class="pre">Bottom</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bottom.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Bottom.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bottom.equip"><code class="docutils literal notranslate"><span class="pre">Bottom.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bottom.unequip"><code class="docutils literal notranslate"><span class="pre">Bottom.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bottom.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Bottom.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bottom.color"><code class="docutils literal notranslate"><span class="pre">Bottom.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bottom.packet"><code class="docutils literal notranslate"><span class="pre">Bottom.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bottom.signature"><code class="docutils literal notranslate"><span class="pre">Bottom.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bottom.use"><code class="docutils literal notranslate"><span class="pre">Bottom.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Weapon"><code class="docutils literal notranslate"><span class="pre">Weapon</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Weapon.equip"><code class="docutils literal notranslate"><span class="pre">Weapon.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Weapon.unequip"><code class="docutils literal notranslate"><span class="pre">Weapon.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Weapon.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Weapon.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Weapon.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Weapon.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Weapon.color"><code class="docutils literal notranslate"><span class="pre">Weapon.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Weapon.packet"><code class="docutils literal notranslate"><span class="pre">Weapon.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Weapon.signature"><code class="docutils literal notranslate"><span class="pre">Weapon.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Weapon.use"><code class="docutils literal notranslate"><span class="pre">Weapon.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Sword"><code class="docutils literal notranslate"><span class="pre">Sword</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Sword.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Sword.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Sword.equip"><code class="docutils literal notranslate"><span class="pre">Sword.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Sword.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Sword.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Sword.color"><code class="docutils literal notranslate"><span class="pre">Sword.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Sword.packet"><code class="docutils literal notranslate"><span class="pre">Sword.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Sword.signature"><code class="docutils literal notranslate"><span class="pre">Sword.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Sword.unequip"><code class="docutils literal notranslate"><span class="pre">Sword.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Sword.use"><code class="docutils literal notranslate"><span class="pre">Sword.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bow"><code class="docutils literal notranslate"><span class="pre">Bow</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bow.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Bow.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bow.equip"><code class="docutils literal notranslate"><span class="pre">Bow.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bow.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Bow.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bow.color"><code class="docutils literal notranslate"><span class="pre">Bow.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bow.packet"><code class="docutils literal notranslate"><span class="pre">Bow.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bow.signature"><code class="docutils literal notranslate"><span class="pre">Bow.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bow.unequip"><code class="docutils literal notranslate"><span class="pre">Bow.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Bow.use"><code class="docutils literal notranslate"><span class="pre">Bow.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Wand"><code class="docutils literal notranslate"><span class="pre">Wand</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Wand.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Wand.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Wand.equip"><code class="docutils literal notranslate"><span class="pre">Wand.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Wand.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Wand.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Wand.color"><code class="docutils literal notranslate"><span class="pre">Wand.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Wand.packet"><code class="docutils literal notranslate"><span class="pre">Wand.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Wand.signature"><code class="docutils literal notranslate"><span class="pre">Wand.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Wand.unequip"><code class="docutils literal notranslate"><span class="pre">Wand.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Wand.use"><code class="docutils literal notranslate"><span class="pre">Wand.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Tool"><code class="docutils literal notranslate"><span class="pre">Tool</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Tool.equip"><code class="docutils literal notranslate"><span class="pre">Tool.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Tool.unequip"><code class="docutils literal notranslate"><span class="pre">Tool.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Tool.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Tool.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Tool.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Tool.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Tool.color"><code class="docutils literal notranslate"><span class="pre">Tool.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Tool.packet"><code class="docutils literal notranslate"><span class="pre">Tool.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Tool.signature"><code class="docutils literal notranslate"><span class="pre">Tool.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Tool.use"><code class="docutils literal notranslate"><span class="pre">Tool.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Rod"><code class="docutils literal notranslate"><span class="pre">Rod</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Rod.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Rod.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Rod.equip"><code class="docutils literal notranslate"><span class="pre">Rod.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Rod.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Rod.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Rod.color"><code class="docutils literal notranslate"><span class="pre">Rod.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Rod.packet"><code class="docutils literal notranslate"><span class="pre">Rod.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Rod.signature"><code class="docutils literal notranslate"><span class="pre">Rod.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Rod.unequip"><code class="docutils literal notranslate"><span class="pre">Rod.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Rod.use"><code class="docutils literal notranslate"><span class="pre">Rod.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gloves"><code class="docutils literal notranslate"><span class="pre">Gloves</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gloves.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Gloves.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gloves.equip"><code class="docutils literal notranslate"><span class="pre">Gloves.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gloves.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Gloves.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gloves.color"><code class="docutils literal notranslate"><span class="pre">Gloves.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gloves.packet"><code class="docutils literal notranslate"><span class="pre">Gloves.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gloves.signature"><code class="docutils literal notranslate"><span class="pre">Gloves.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gloves.unequip"><code class="docutils literal notranslate"><span class="pre">Gloves.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Gloves.use"><code class="docutils literal notranslate"><span class="pre">Gloves.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Pickaxe"><code class="docutils literal notranslate"><span class="pre">Pickaxe</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Pickaxe.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Pickaxe.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Pickaxe.equip"><code class="docutils literal notranslate"><span class="pre">Pickaxe.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Pickaxe.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Pickaxe.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Pickaxe.color"><code class="docutils literal notranslate"><span class="pre">Pickaxe.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Pickaxe.packet"><code class="docutils literal notranslate"><span class="pre">Pickaxe.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Pickaxe.signature"><code class="docutils literal notranslate"><span class="pre">Pickaxe.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Pickaxe.unequip"><code class="docutils literal notranslate"><span class="pre">Pickaxe.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Pickaxe.use"><code class="docutils literal notranslate"><span class="pre">Pickaxe.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Chisel"><code class="docutils literal notranslate"><span class="pre">Chisel</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Chisel.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Chisel.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Chisel.equip"><code class="docutils literal notranslate"><span class="pre">Chisel.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Chisel.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Chisel.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Chisel.color"><code class="docutils literal notranslate"><span class="pre">Chisel.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Chisel.packet"><code class="docutils literal notranslate"><span class="pre">Chisel.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Chisel.signature"><code class="docutils literal notranslate"><span class="pre">Chisel.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Chisel.unequip"><code class="docutils literal notranslate"><span class="pre">Chisel.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Chisel.use"><code class="docutils literal notranslate"><span class="pre">Chisel.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Arcane"><code class="docutils literal notranslate"><span class="pre">Arcane</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Arcane.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Arcane.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Arcane.equip"><code class="docutils literal notranslate"><span class="pre">Arcane.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Arcane.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Arcane.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Arcane.color"><code class="docutils literal notranslate"><span class="pre">Arcane.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Arcane.packet"><code class="docutils literal notranslate"><span class="pre">Arcane.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Arcane.signature"><code class="docutils literal notranslate"><span class="pre">Arcane.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Arcane.unequip"><code class="docutils literal notranslate"><span class="pre">Arcane.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Arcane.use"><code class="docutils literal notranslate"><span class="pre">Arcane.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ammunition"><code class="docutils literal notranslate"><span class="pre">Ammunition</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ammunition.equip"><code class="docutils literal notranslate"><span class="pre">Ammunition.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ammunition.unequip"><code class="docutils literal notranslate"><span class="pre">Ammunition.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ammunition.fire"><code class="docutils literal notranslate"><span class="pre">Ammunition.fire()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ammunition.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Ammunition.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ammunition.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Ammunition.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ammunition.color"><code class="docutils literal notranslate"><span class="pre">Ammunition.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ammunition.packet"><code class="docutils literal notranslate"><span class="pre">Ammunition.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ammunition.signature"><code class="docutils literal notranslate"><span class="pre">Ammunition.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ammunition.use"><code class="docutils literal notranslate"><span class="pre">Ammunition.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap"><code class="docutils literal notranslate"><span class="pre">Scrap</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Scrap.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap.equip"><code class="docutils literal notranslate"><span class="pre">Scrap.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap.damage"><code class="docutils literal notranslate"><span class="pre">Scrap.damage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Scrap.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap.color"><code class="docutils literal notranslate"><span class="pre">Scrap.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap.fire"><code class="docutils literal notranslate"><span class="pre">Scrap.fire()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap.packet"><code class="docutils literal notranslate"><span class="pre">Scrap.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap.signature"><code class="docutils literal notranslate"><span class="pre">Scrap.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap.unequip"><code class="docutils literal notranslate"><span class="pre">Scrap.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Scrap.use"><code class="docutils literal notranslate"><span class="pre">Scrap.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving"><code class="docutils literal notranslate"><span class="pre">Shaving</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Shaving.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving.equip"><code class="docutils literal notranslate"><span class="pre">Shaving.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving.damage"><code class="docutils literal notranslate"><span class="pre">Shaving.damage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Shaving.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving.color"><code class="docutils literal notranslate"><span class="pre">Shaving.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving.fire"><code class="docutils literal notranslate"><span class="pre">Shaving.fire()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving.packet"><code class="docutils literal notranslate"><span class="pre">Shaving.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving.signature"><code class="docutils literal notranslate"><span class="pre">Shaving.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving.unequip"><code class="docutils literal notranslate"><span class="pre">Shaving.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shaving.use"><code class="docutils literal notranslate"><span class="pre">Shaving.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard"><code class="docutils literal notranslate"><span class="pre">Shard</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Shard.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard.equip"><code class="docutils literal notranslate"><span class="pre">Shard.equip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard.damage"><code class="docutils literal notranslate"><span class="pre">Shard.damage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Shard.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard.color"><code class="docutils literal notranslate"><span class="pre">Shard.color</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard.fire"><code class="docutils literal notranslate"><span class="pre">Shard.fire()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard.packet"><code class="docutils literal notranslate"><span class="pre">Shard.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard.signature"><code class="docutils literal notranslate"><span class="pre">Shard.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard.unequip"><code class="docutils literal notranslate"><span class="pre">Shard.unequip()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Shard.use"><code class="docutils literal notranslate"><span class="pre">Shard.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Consumable"><code class="docutils literal notranslate"><span class="pre">Consumable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Consumable.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Consumable.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Consumable.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Consumable.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Consumable.packet"><code class="docutils literal notranslate"><span class="pre">Consumable.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Consumable.signature"><code class="docutils literal notranslate"><span class="pre">Consumable.signature</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Consumable.use"><code class="docutils literal notranslate"><span class="pre">Consumable.use()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ration"><code class="docutils literal notranslate"><span class="pre">Ration</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ration.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Ration.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ration.use"><code class="docutils literal notranslate"><span class="pre">Ration.use()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ration.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Ration.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ration.packet"><code class="docutils literal notranslate"><span class="pre">Ration.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Ration.signature"><code class="docutils literal notranslate"><span class="pre">Ration.signature</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Poultice"><code class="docutils literal notranslate"><span class="pre">Poultice</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Poultice.ITEM_ID"><code class="docutils literal notranslate"><span class="pre">Poultice.ITEM_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Poultice.use"><code class="docutils literal notranslate"><span class="pre">Poultice.use()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Poultice.INSTANCE_ID"><code class="docutils literal notranslate"><span class="pre">Poultice.INSTANCE_ID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Poultice.packet"><code class="docutils literal notranslate"><span class="pre">Poultice.packet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.item.html#nmmo.systems.item.Poultice.signature"><code class="docutils literal notranslate"><span class="pre">Poultice.signature</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.systems.skill.html">nmmo.systems.skill module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.SkillGroup"><code class="docutils literal notranslate"><span class="pre">SkillGroup</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.SkillGroup.update"><code class="docutils literal notranslate"><span class="pre">SkillGroup.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.SkillGroup.packet"><code class="docutils literal notranslate"><span class="pre">SkillGroup.packet()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skill"><code class="docutils literal notranslate"><span class="pre">Skill</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skill.skillItems"><code class="docutils literal notranslate"><span class="pre">Skill.skillItems</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skill.packet"><code class="docutils literal notranslate"><span class="pre">Skill.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skill.add_xp"><code class="docutils literal notranslate"><span class="pre">Skill.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skill.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Skill.setExpByLevel()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.NonCombatSkill"><code class="docutils literal notranslate"><span class="pre">NonCombatSkill</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.NonCombatSkill.add_xp"><code class="docutils literal notranslate"><span class="pre">NonCombatSkill.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.NonCombatSkill.packet"><code class="docutils literal notranslate"><span class="pre">NonCombatSkill.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.NonCombatSkill.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">NonCombatSkill.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.NonCombatSkill.skillItems"><code class="docutils literal notranslate"><span class="pre">NonCombatSkill.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.HarvestSkill"><code class="docutils literal notranslate"><span class="pre">HarvestSkill</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.HarvestSkill.processDrops"><code class="docutils literal notranslate"><span class="pre">HarvestSkill.processDrops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.HarvestSkill.harvest"><code class="docutils literal notranslate"><span class="pre">HarvestSkill.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.HarvestSkill.harvestAdjacent"><code class="docutils literal notranslate"><span class="pre">HarvestSkill.harvestAdjacent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.HarvestSkill.add_xp"><code class="docutils literal notranslate"><span class="pre">HarvestSkill.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.HarvestSkill.packet"><code class="docutils literal notranslate"><span class="pre">HarvestSkill.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.HarvestSkill.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">HarvestSkill.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.HarvestSkill.skillItems"><code class="docutils literal notranslate"><span class="pre">HarvestSkill.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.AmmunitionSkill"><code class="docutils literal notranslate"><span class="pre">AmmunitionSkill</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.AmmunitionSkill.processDrops"><code class="docutils literal notranslate"><span class="pre">AmmunitionSkill.processDrops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.AmmunitionSkill.add_xp"><code class="docutils literal notranslate"><span class="pre">AmmunitionSkill.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.AmmunitionSkill.harvest"><code class="docutils literal notranslate"><span class="pre">AmmunitionSkill.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.AmmunitionSkill.harvestAdjacent"><code class="docutils literal notranslate"><span class="pre">AmmunitionSkill.harvestAdjacent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.AmmunitionSkill.packet"><code class="docutils literal notranslate"><span class="pre">AmmunitionSkill.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.AmmunitionSkill.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">AmmunitionSkill.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.AmmunitionSkill.skillItems"><code class="docutils literal notranslate"><span class="pre">AmmunitionSkill.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.ConsumableSkill"><code class="docutils literal notranslate"><span class="pre">ConsumableSkill</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.ConsumableSkill.processDrops"><code class="docutils literal notranslate"><span class="pre">ConsumableSkill.processDrops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.ConsumableSkill.add_xp"><code class="docutils literal notranslate"><span class="pre">ConsumableSkill.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.ConsumableSkill.harvest"><code class="docutils literal notranslate"><span class="pre">ConsumableSkill.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.ConsumableSkill.harvestAdjacent"><code class="docutils literal notranslate"><span class="pre">ConsumableSkill.harvestAdjacent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.ConsumableSkill.packet"><code class="docutils literal notranslate"><span class="pre">ConsumableSkill.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.ConsumableSkill.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">ConsumableSkill.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.ConsumableSkill.skillItems"><code class="docutils literal notranslate"><span class="pre">ConsumableSkill.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Basic"><code class="docutils literal notranslate"><span class="pre">Basic</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Basic.basicLevel"><code class="docutils literal notranslate"><span class="pre">Basic.basicLevel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Basic.packet"><code class="docutils literal notranslate"><span class="pre">Basic.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Basic.update"><code class="docutils literal notranslate"><span class="pre">Basic.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Harvest"><code class="docutils literal notranslate"><span class="pre">Harvest</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Harvest.harvestLevel"><code class="docutils literal notranslate"><span class="pre">Harvest.harvestLevel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Harvest.packet"><code class="docutils literal notranslate"><span class="pre">Harvest.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Harvest.update"><code class="docutils literal notranslate"><span class="pre">Harvest.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Combat"><code class="docutils literal notranslate"><span class="pre">Combat</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Combat.packet"><code class="docutils literal notranslate"><span class="pre">Combat.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Combat.combatLevel"><code class="docutils literal notranslate"><span class="pre">Combat.combatLevel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Combat.applyDamage"><code class="docutils literal notranslate"><span class="pre">Combat.applyDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Combat.receiveDamage"><code class="docutils literal notranslate"><span class="pre">Combat.receiveDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Combat.update"><code class="docutils literal notranslate"><span class="pre">Combat.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skills"><code class="docutils literal notranslate"><span class="pre">Skills</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skills.applyDamage"><code class="docutils literal notranslate"><span class="pre">Skills.applyDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skills.basicLevel"><code class="docutils literal notranslate"><span class="pre">Skills.basicLevel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skills.combatLevel"><code class="docutils literal notranslate"><span class="pre">Skills.combatLevel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skills.harvestLevel"><code class="docutils literal notranslate"><span class="pre">Skills.harvestLevel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skills.packet"><code class="docutils literal notranslate"><span class="pre">Skills.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skills.receiveDamage"><code class="docutils literal notranslate"><span class="pre">Skills.receiveDamage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Skills.update"><code class="docutils literal notranslate"><span class="pre">Skills.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Melee"><code class="docutils literal notranslate"><span class="pre">Melee</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Melee.add_xp"><code class="docutils literal notranslate"><span class="pre">Melee.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Melee.packet"><code class="docutils literal notranslate"><span class="pre">Melee.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Melee.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Melee.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Melee.skillItems"><code class="docutils literal notranslate"><span class="pre">Melee.skillItems</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Melee.update"><code class="docutils literal notranslate"><span class="pre">Melee.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Melee.weakness"><code class="docutils literal notranslate"><span class="pre">Melee.weakness</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Range"><code class="docutils literal notranslate"><span class="pre">Range</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Range.add_xp"><code class="docutils literal notranslate"><span class="pre">Range.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Range.packet"><code class="docutils literal notranslate"><span class="pre">Range.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Range.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Range.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Range.skillItems"><code class="docutils literal notranslate"><span class="pre">Range.skillItems</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Range.update"><code class="docutils literal notranslate"><span class="pre">Range.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Range.weakness"><code class="docutils literal notranslate"><span class="pre">Range.weakness</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Mage"><code class="docutils literal notranslate"><span class="pre">Mage</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Mage.add_xp"><code class="docutils literal notranslate"><span class="pre">Mage.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Mage.packet"><code class="docutils literal notranslate"><span class="pre">Mage.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Mage.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Mage.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Mage.skillItems"><code class="docutils literal notranslate"><span class="pre">Mage.skillItems</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Mage.update"><code class="docutils literal notranslate"><span class="pre">Mage.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Mage.weakness"><code class="docutils literal notranslate"><span class="pre">Mage.weakness</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.CombatSkill"><code class="docutils literal notranslate"><span class="pre">CombatSkill</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.CombatSkill.add_xp"><code class="docutils literal notranslate"><span class="pre">CombatSkill.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.CombatSkill.packet"><code class="docutils literal notranslate"><span class="pre">CombatSkill.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.CombatSkill.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">CombatSkill.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.CombatSkill.skillItems"><code class="docutils literal notranslate"><span class="pre">CombatSkill.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Lvl"><code class="docutils literal notranslate"><span class="pre">Lvl</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Lvl.update"><code class="docutils literal notranslate"><span class="pre">Lvl.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Water"><code class="docutils literal notranslate"><span class="pre">Water</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Water.update"><code class="docutils literal notranslate"><span class="pre">Water.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Water.add_xp"><code class="docutils literal notranslate"><span class="pre">Water.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Water.harvest"><code class="docutils literal notranslate"><span class="pre">Water.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Water.harvestAdjacent"><code class="docutils literal notranslate"><span class="pre">Water.harvestAdjacent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Water.packet"><code class="docutils literal notranslate"><span class="pre">Water.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Water.processDrops"><code class="docutils literal notranslate"><span class="pre">Water.processDrops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Water.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Water.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Water.skillItems"><code class="docutils literal notranslate"><span class="pre">Water.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Food"><code class="docutils literal notranslate"><span class="pre">Food</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Food.update"><code class="docutils literal notranslate"><span class="pre">Food.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Food.add_xp"><code class="docutils literal notranslate"><span class="pre">Food.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Food.harvest"><code class="docutils literal notranslate"><span class="pre">Food.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Food.harvestAdjacent"><code class="docutils literal notranslate"><span class="pre">Food.harvestAdjacent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Food.packet"><code class="docutils literal notranslate"><span class="pre">Food.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Food.processDrops"><code class="docutils literal notranslate"><span class="pre">Food.processDrops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Food.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Food.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Food.skillItems"><code class="docutils literal notranslate"><span class="pre">Food.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Fishing"><code class="docutils literal notranslate"><span class="pre">Fishing</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Fishing.update"><code class="docutils literal notranslate"><span class="pre">Fishing.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Fishing.add_xp"><code class="docutils literal notranslate"><span class="pre">Fishing.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Fishing.harvest"><code class="docutils literal notranslate"><span class="pre">Fishing.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Fishing.harvestAdjacent"><code class="docutils literal notranslate"><span class="pre">Fishing.harvestAdjacent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Fishing.packet"><code class="docutils literal notranslate"><span class="pre">Fishing.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Fishing.processDrops"><code class="docutils literal notranslate"><span class="pre">Fishing.processDrops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Fishing.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Fishing.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Fishing.skillItems"><code class="docutils literal notranslate"><span class="pre">Fishing.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Herbalism"><code class="docutils literal notranslate"><span class="pre">Herbalism</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Herbalism.update"><code class="docutils literal notranslate"><span class="pre">Herbalism.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Herbalism.add_xp"><code class="docutils literal notranslate"><span class="pre">Herbalism.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Herbalism.harvest"><code class="docutils literal notranslate"><span class="pre">Herbalism.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Herbalism.harvestAdjacent"><code class="docutils literal notranslate"><span class="pre">Herbalism.harvestAdjacent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Herbalism.packet"><code class="docutils literal notranslate"><span class="pre">Herbalism.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Herbalism.processDrops"><code class="docutils literal notranslate"><span class="pre">Herbalism.processDrops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Herbalism.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Herbalism.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Herbalism.skillItems"><code class="docutils literal notranslate"><span class="pre">Herbalism.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Prospecting"><code class="docutils literal notranslate"><span class="pre">Prospecting</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Prospecting.update"><code class="docutils literal notranslate"><span class="pre">Prospecting.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Prospecting.add_xp"><code class="docutils literal notranslate"><span class="pre">Prospecting.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Prospecting.harvest"><code class="docutils literal notranslate"><span class="pre">Prospecting.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Prospecting.harvestAdjacent"><code class="docutils literal notranslate"><span class="pre">Prospecting.harvestAdjacent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Prospecting.packet"><code class="docutils literal notranslate"><span class="pre">Prospecting.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Prospecting.processDrops"><code class="docutils literal notranslate"><span class="pre">Prospecting.processDrops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Prospecting.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Prospecting.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Prospecting.skillItems"><code class="docutils literal notranslate"><span class="pre">Prospecting.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Carving"><code class="docutils literal notranslate"><span class="pre">Carving</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Carving.update"><code class="docutils literal notranslate"><span class="pre">Carving.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Carving.add_xp"><code class="docutils literal notranslate"><span class="pre">Carving.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Carving.harvest"><code class="docutils literal notranslate"><span class="pre">Carving.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Carving.harvestAdjacent"><code class="docutils literal notranslate"><span class="pre">Carving.harvestAdjacent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Carving.packet"><code class="docutils literal notranslate"><span class="pre">Carving.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Carving.processDrops"><code class="docutils literal notranslate"><span class="pre">Carving.processDrops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Carving.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Carving.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Carving.skillItems"><code class="docutils literal notranslate"><span class="pre">Carving.skillItems</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Alchemy"><code class="docutils literal notranslate"><span class="pre">Alchemy</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Alchemy.add_xp"><code class="docutils literal notranslate"><span class="pre">Alchemy.add_xp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Alchemy.harvest"><code class="docutils literal notranslate"><span class="pre">Alchemy.harvest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Alchemy.harvestAdjacent"><code class="docutils literal notranslate"><span class="pre">Alchemy.harvestAdjacent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Alchemy.packet"><code class="docutils literal notranslate"><span class="pre">Alchemy.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Alchemy.processDrops"><code class="docutils literal notranslate"><span class="pre">Alchemy.processDrops()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Alchemy.setExpByLevel"><code class="docutils literal notranslate"><span class="pre">Alchemy.setExpByLevel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Alchemy.skillItems"><code class="docutils literal notranslate"><span class="pre">Alchemy.skillItems</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.systems.skill.html#nmmo.systems.skill.Alchemy.update"><code class="docutils literal notranslate"><span class="pre">Alchemy.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </section>

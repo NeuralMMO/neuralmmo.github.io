@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -229,7 +231,7 @@
 </div>
 <p>The baselines repository includes a number of examples. We recommend that new users follow the installation guide first and then run each example while reading this walkthrough.</p>
 <section id="icon-minimal-example">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Minimal Example<a class="headerlink" href="#icon-minimal-example" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Minimal Example<a class="headerlink" href="#icon-minimal-example" title="Permalink to this heading">¶</a></h1>
 <p>Simulates and renders a small environment inhabited by scripted agents. This example should be self-explanatory to those familiar with the standard OpenAI gym interface – with a few exceptions. First, the environment itself computes actions for scripted agents. This is to enable easier usage with RLlib and will likely change once RLlib provides better support for scripted models. Second, the env.terminal() function returns additional logging information about the simulation. This will be explored in later examples</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;Documented at neuralmmo.github.io&#39;&#39;&#39;</span>
 
@@ -312,7 +314,7 @@
 <p>This is the only example for which we will show boilerplate code. The full source for all examples is available in /baselines/demos</p>
 </section>
 <section id="icon-config-classes">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Config Classes<a class="headerlink" href="#icon-config-classes" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Config Classes<a class="headerlink" href="#icon-config-classes" title="Permalink to this heading">¶</a></h1>
 <p>Neural MMO provides a base Config with Small, Medium, and Large presets and a set of game systems. Enable game systems by subclassing a preset. For example, the default config when unspecified is:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DefaultConfig</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Medium</span><span class="p">,</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">AllGameSystems</span><span class="p">):</span>
     <span class="k">pass</span>
@@ -355,7 +357,7 @@
 <p>Not all game configurations lend themselves to balanced and interesting gameplay. We recommend spending some time watching the baseline agents and reviewing the game wiki’s description of the vanilla mechanics. Once you’re familiar, we encourage more creative modding beyond what the configs provide. Come chat on <a class="reference external" href="https://discord.gg/BkMmFUC">Discord</a> if you’re doing something cool!</p>
 </section>
 <section id="icon-scripted-api">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Scripted API<a class="headerlink" href="#icon-scripted-api" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Scripted API<a class="headerlink" href="#icon-scripted-api" title="Permalink to this heading">¶</a></h1>
 <p>Neural MMO provides compact tensor observations that are difficult to integrate with scripted policies and change from version to version. We therefore provide a simple wrapper class that enables users to extract named attributes without direct dependence on the underlying structure of observations, documented here:</p>
 <div class="toctree-wrapper compound">
 </div>
@@ -412,7 +414,7 @@
 <p>We will occasionally modify the set of available attributes. In these instances, we will publish upgrade scripts upon request. We will provide individual guidance via Discord in cases where larger changes are needed.</p>
 </section>
 <section id="icon-rewards-tasks">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Rewards &amp; Tasks<a class="headerlink" href="#icon-rewards-tasks" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Rewards &amp; Tasks<a class="headerlink" href="#icon-rewards-tasks" title="Permalink to this heading">¶</a></h1>
 <p>By default, Neural MMO provides a reward signal of -1 for dying and 0 for everything else. You may override this reward function and have full access to game and player state in doing so. For example, to add an additional reward signal of 0.1 per player defeated:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PlayerKillRewardEnv</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">Env</span><span class="p">,</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Combat</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Reward 0.1 per player defeated, -1 for death&#39;&#39;&#39;</span>
@@ -461,7 +463,7 @@
 <p>Note that this API is considered somewhat of an advanced feature – it provides access to full game state and requires users to peruse the associated source code to take full advantage.</p>
 </section>
 <section id="icon-skill-rating">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Skill Rating<a class="headerlink" href="#icon-skill-rating" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Skill Rating<a class="headerlink" href="#icon-skill-rating" title="Permalink to this heading">¶</a></h1>
 <p>Absolute reward is a poor metric of performance in open-ended multiagent settings because environment difficulty is dependent on the skill of other agents. Skill ranking algorithms allow us to instead compute the relative performance of different policies within the same shared world.</p>
 <p>OpenSkill wrapper for estimating rank from a series of scores from different policies:</p>
 <p>The results of each environment simulation are treated as a single game, and several are required to obtain reasonable skill rating estimates. We therefore include a quick ray wrapper for running several environments in parallel:</p>
@@ -481,7 +483,7 @@
     <span class="c1"># NMMO OpenSkill wrapper for computing SR</span>
     <span class="n">sr</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">OpenSkillRating</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">PLAYERS</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">baselines</span><span class="o">.</span><span class="n">Range</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">stats</span> <span class="ow">in</span> <span class="n">all_stats</span><span class="p">:</span>
-        <span class="n">stats</span> <span class="o">=</span> <span class="n">stats</span><span class="p">[</span><span class="s1">&#39;Stats&#39;</span><span class="p">]</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">stats</span><span class="p">[</span><span class="s1">&#39;Player&#39;</span><span class="p">]</span>
 
         <span class="c1"># SR updates take a list of policy IDs and scores for all agents</span>
         <span class="n">ratings</span> <span class="o">=</span> <span class="n">sr</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
@@ -498,11 +500,17 @@
 <p>We use a larger scale config to more closely match the baseline setting:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">Default</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Default baseline config with only scripted agents&#39;&#39;&#39;</span>
-    <span class="n">PLAYERS</span> <span class="o">=</span> <span class="p">[</span><span class="n">baselines</span><span class="o">.</span><span class="n">Meander</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Forage</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Range</span><span class="p">]</span>
+    <span class="n">PLAYERS</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">baselines</span><span class="o">.</span><span class="n">Fisher</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Herbalist</span><span class="p">,</span>
+            <span class="n">baselines</span><span class="o">.</span><span class="n">Prospector</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Carver</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Alchemist</span><span class="p">,</span>
+            <span class="n">baselines</span><span class="o">.</span><span class="n">Melee</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Range</span><span class="p">,</span> <span class="n">baselines</span><span class="o">.</span><span class="n">Mage</span><span class="p">]</span>
+    <span class="n">SPECIALIZE</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">TASKS</span>   <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">All</span>
 
     <span class="c1"># Share maps with baseline evaluations</span>
     <span class="n">PATH_MAPS</span> <span class="o">=</span> <span class="s1">&#39;maps/medium/evaluation/&#39;</span>
+
+    <span class="n">MAP_N</span> <span class="o">=</span> <span class="mi">8</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">demos</span><span class="o">.</span><span class="n">evaluate_sr</span>
@@ -523,7 +531,7 @@
 </div>
 </section>
 <section id="icon-terrain-generation">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Terrain Generation<a class="headerlink" href="#icon-terrain-generation" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Terrain Generation<a class="headerlink" href="#icon-terrain-generation" title="Permalink to this heading">¶</a></h1>
 <p>Neural MMO provides a config hook for custom terrain generaton. Override the base class and single-map generation method:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CustomMapGenerator</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">MapGenerator</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Subclass the base NMMO Map Generator&#39;&#39;&#39;</span>
@@ -564,6 +572,10 @@
 
     <span class="c1"># Render preview to maps/custom</span>
     <span class="n">GENERATE_MAP_PREVIEWS</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">MAP_CENTER</span> <span class="o">=</span> <span class="mi">32</span>
+    <span class="n">PLAYER_N</span> <span class="o">=</span> <span class="mi">32</span>
+    <span class="n">NPC_N</span> <span class="o">=</span> <span class="mi">32</span>
 </pre></div>
 </div>
 <p>Run the demo:</p>
@@ -589,7 +601,7 @@
 </dl>
 </section>
 <section id="icon-rendering-and-overlays">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Rendering and Overlays<a class="headerlink" href="#icon-rendering-and-overlays" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Rendering and Overlays<a class="headerlink" href="#icon-rendering-and-overlays" title="Permalink to this heading">¶</a></h1>
 <p>Neural MMO opens a WebSocket server upon the first call to env.render() which connects to the Unity3D client. The client loads game map data upon connection, which may take up to a minute (but typically only a few seconds if you open the client after launching the server).</p>
 <p>The Neural MMO client provides several overlays as tools to help users understand both how their agents are behaving and how they interpret the world. You can write your own using the overlay API:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Lifetime</span><span class="p">(</span><span class="n">nmmo</span><span class="o">.</span><span class="n">overlay</span><span class="o">.</span><span class="n">Overlay</span><span class="p">):</span>
@@ -633,7 +645,7 @@
 <p>The client includes some default overlays, such as counts/exploration, which is computed by splatting the agent’s current position to the map. You can do more impressive things with a bit more compute. For example, the baselines repository provide the tileValues and entityValues overlays, which simulate an agent on every tile and computes the value function with respect to local tiles/entities. Note that overlays making use of network internals are not defined for scripted models.</p>
 </section>
 <section id="icon-next-steps">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Next Steps<a class="headerlink" href="#icon-next-steps" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Next Steps<a class="headerlink" href="#icon-next-steps" title="Permalink to this heading">¶</a></h1>
 <p>If you’ve made it this far, you’re ready to use the platform in your own research. Join the Discord for support and consider our open call for research if applicable. We also recommend checking out the baselines to get an idea of what has been done so far.</p>
 </section>
 

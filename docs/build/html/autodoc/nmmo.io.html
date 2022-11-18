@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -123,6 +125,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html#icon-overlays"> Overlays</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-reference"> Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Env"><code class="docutils literal notranslate"><span class="pre">Env</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.MapGenerator"><code class="docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Terrain"><code class="docutils literal notranslate"><span class="pre">Terrain</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Serialized"><code class="docutils literal notranslate"><span class="pre">Serialized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Overlay"><code class="docutils literal notranslate"><span class="pre">Overlay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OverlayRegistry"><code class="docutils literal notranslate"><span class="pre">OverlayRegistry</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Replay"><code class="docutils literal notranslate"><span class="pre">Replay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OpenSkillRating"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nmmo.entity.html">nmmo.entity package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">nmmo.io package</a><ul>
@@ -243,11 +256,428 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.io">
-<span id="nmmo-io-package"></span><h1>nmmo.io package<a class="headerlink" href="#module-nmmo.io" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-io-package"></span><h1>nmmo.io package<a class="headerlink" href="#module-nmmo.io" title="Permalink to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.io.action.html">nmmo.io.action module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nmmo.io.stimulus.html">nmmo.io.stimulus module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.io.action.html">nmmo.io.action module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.NodeType"><code class="docutils literal notranslate"><span class="pre">NodeType</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.NodeType.STATIC"><code class="docutils literal notranslate"><span class="pre">NodeType.STATIC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.NodeType.SELECTION"><code class="docutils literal notranslate"><span class="pre">NodeType.SELECTION</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.NodeType.ACTION"><code class="docutils literal notranslate"><span class="pre">NodeType.ACTION</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.NodeType.CONSTANT"><code class="docutils literal notranslate"><span class="pre">NodeType.CONSTANT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.NodeType.VARIABLE"><code class="docutils literal notranslate"><span class="pre">NodeType.VARIABLE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node.init"><code class="docutils literal notranslate"><span class="pre">Node.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node.edges"><code class="docutils literal notranslate"><span class="pre">Node.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node.priority"><code class="docutils literal notranslate"><span class="pre">Node.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node.type"><code class="docutils literal notranslate"><span class="pre">Node.type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node.leaf"><code class="docutils literal notranslate"><span class="pre">Node.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node.N"><code class="docutils literal notranslate"><span class="pre">Node.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node.deserialize"><code class="docutils literal notranslate"><span class="pre">Node.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Node.args"><code class="docutils literal notranslate"><span class="pre">Node.args()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Fixed"><code class="docutils literal notranslate"><span class="pre">Fixed</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.nodeType"><code class="docutils literal notranslate"><span class="pre">Action.nodeType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.hooked"><code class="docutils literal notranslate"><span class="pre">Action.hooked</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.init"><code class="docutils literal notranslate"><span class="pre">Action.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.hook"><code class="docutils literal notranslate"><span class="pre">Action.hook()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.n"><code class="docutils literal notranslate"><span class="pre">Action.n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.edges"><code class="docutils literal notranslate"><span class="pre">Action.edges()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.args"><code class="docutils literal notranslate"><span class="pre">Action.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.N"><code class="docutils literal notranslate"><span class="pre">Action.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.deserialize"><code class="docutils literal notranslate"><span class="pre">Action.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.leaf"><code class="docutils literal notranslate"><span class="pre">Action.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.priority"><code class="docutils literal notranslate"><span class="pre">Action.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Action.type"><code class="docutils literal notranslate"><span class="pre">Action.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move"><code class="docutils literal notranslate"><span class="pre">Move</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move.priority"><code class="docutils literal notranslate"><span class="pre">Move.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move.nodeType"><code class="docutils literal notranslate"><span class="pre">Move.nodeType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move.call"><code class="docutils literal notranslate"><span class="pre">Move.call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move.edges"><code class="docutils literal notranslate"><span class="pre">Move.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move.leaf"><code class="docutils literal notranslate"><span class="pre">Move.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move.N"><code class="docutils literal notranslate"><span class="pre">Move.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move.args"><code class="docutils literal notranslate"><span class="pre">Move.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move.deserialize"><code class="docutils literal notranslate"><span class="pre">Move.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move.init"><code class="docutils literal notranslate"><span class="pre">Move.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Move.type"><code class="docutils literal notranslate"><span class="pre">Move.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Direction"><code class="docutils literal notranslate"><span class="pre">Direction</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Direction.argType"><code class="docutils literal notranslate"><span class="pre">Direction.argType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Direction.edges"><code class="docutils literal notranslate"><span class="pre">Direction.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Direction.args"><code class="docutils literal notranslate"><span class="pre">Direction.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Direction.N"><code class="docutils literal notranslate"><span class="pre">Direction.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Direction.deserialize"><code class="docutils literal notranslate"><span class="pre">Direction.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Direction.init"><code class="docutils literal notranslate"><span class="pre">Direction.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Direction.leaf"><code class="docutils literal notranslate"><span class="pre">Direction.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Direction.priority"><code class="docutils literal notranslate"><span class="pre">Direction.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Direction.type"><code class="docutils literal notranslate"><span class="pre">Direction.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.North"><code class="docutils literal notranslate"><span class="pre">North</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.North.delta"><code class="docutils literal notranslate"><span class="pre">North.delta</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.North.N"><code class="docutils literal notranslate"><span class="pre">North.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.North.args"><code class="docutils literal notranslate"><span class="pre">North.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.North.deserialize"><code class="docutils literal notranslate"><span class="pre">North.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.North.edges"><code class="docutils literal notranslate"><span class="pre">North.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.North.init"><code class="docutils literal notranslate"><span class="pre">North.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.North.leaf"><code class="docutils literal notranslate"><span class="pre">North.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.North.priority"><code class="docutils literal notranslate"><span class="pre">North.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.North.type"><code class="docutils literal notranslate"><span class="pre">North.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.South"><code class="docutils literal notranslate"><span class="pre">South</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.South.delta"><code class="docutils literal notranslate"><span class="pre">South.delta</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.South.N"><code class="docutils literal notranslate"><span class="pre">South.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.South.args"><code class="docutils literal notranslate"><span class="pre">South.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.South.deserialize"><code class="docutils literal notranslate"><span class="pre">South.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.South.edges"><code class="docutils literal notranslate"><span class="pre">South.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.South.init"><code class="docutils literal notranslate"><span class="pre">South.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.South.leaf"><code class="docutils literal notranslate"><span class="pre">South.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.South.priority"><code class="docutils literal notranslate"><span class="pre">South.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.South.type"><code class="docutils literal notranslate"><span class="pre">South.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.East"><code class="docutils literal notranslate"><span class="pre">East</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.East.delta"><code class="docutils literal notranslate"><span class="pre">East.delta</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.East.N"><code class="docutils literal notranslate"><span class="pre">East.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.East.args"><code class="docutils literal notranslate"><span class="pre">East.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.East.deserialize"><code class="docutils literal notranslate"><span class="pre">East.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.East.edges"><code class="docutils literal notranslate"><span class="pre">East.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.East.init"><code class="docutils literal notranslate"><span class="pre">East.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.East.leaf"><code class="docutils literal notranslate"><span class="pre">East.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.East.priority"><code class="docutils literal notranslate"><span class="pre">East.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.East.type"><code class="docutils literal notranslate"><span class="pre">East.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.West"><code class="docutils literal notranslate"><span class="pre">West</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.West.delta"><code class="docutils literal notranslate"><span class="pre">West.delta</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.West.N"><code class="docutils literal notranslate"><span class="pre">West.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.West.args"><code class="docutils literal notranslate"><span class="pre">West.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.West.deserialize"><code class="docutils literal notranslate"><span class="pre">West.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.West.edges"><code class="docutils literal notranslate"><span class="pre">West.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.West.init"><code class="docutils literal notranslate"><span class="pre">West.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.West.leaf"><code class="docutils literal notranslate"><span class="pre">West.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.West.priority"><code class="docutils literal notranslate"><span class="pre">West.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.West.type"><code class="docutils literal notranslate"><span class="pre">West.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack"><code class="docutils literal notranslate"><span class="pre">Attack</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.priority"><code class="docutils literal notranslate"><span class="pre">Attack.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.nodeType"><code class="docutils literal notranslate"><span class="pre">Attack.nodeType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.n"><code class="docutils literal notranslate"><span class="pre">Attack.n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.edges"><code class="docutils literal notranslate"><span class="pre">Attack.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.leaf"><code class="docutils literal notranslate"><span class="pre">Attack.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.inRange"><code class="docutils literal notranslate"><span class="pre">Attack.inRange()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.l1"><code class="docutils literal notranslate"><span class="pre">Attack.l1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.call"><code class="docutils literal notranslate"><span class="pre">Attack.call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.N"><code class="docutils literal notranslate"><span class="pre">Attack.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.args"><code class="docutils literal notranslate"><span class="pre">Attack.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.deserialize"><code class="docutils literal notranslate"><span class="pre">Attack.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.init"><code class="docutils literal notranslate"><span class="pre">Attack.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Attack.type"><code class="docutils literal notranslate"><span class="pre">Attack.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Style"><code class="docutils literal notranslate"><span class="pre">Style</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Style.argType"><code class="docutils literal notranslate"><span class="pre">Style.argType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Style.edges"><code class="docutils literal notranslate"><span class="pre">Style.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Style.args"><code class="docutils literal notranslate"><span class="pre">Style.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Style.N"><code class="docutils literal notranslate"><span class="pre">Style.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Style.deserialize"><code class="docutils literal notranslate"><span class="pre">Style.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Style.init"><code class="docutils literal notranslate"><span class="pre">Style.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Style.leaf"><code class="docutils literal notranslate"><span class="pre">Style.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Style.priority"><code class="docutils literal notranslate"><span class="pre">Style.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Style.type"><code class="docutils literal notranslate"><span class="pre">Style.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Target"><code class="docutils literal notranslate"><span class="pre">Target</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Target.argType"><code class="docutils literal notranslate"><span class="pre">Target.argType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Target.N"><code class="docutils literal notranslate"><span class="pre">Target.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Target.deserialize"><code class="docutils literal notranslate"><span class="pre">Target.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Target.args"><code class="docutils literal notranslate"><span class="pre">Target.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Target.edges"><code class="docutils literal notranslate"><span class="pre">Target.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Target.init"><code class="docutils literal notranslate"><span class="pre">Target.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Target.leaf"><code class="docutils literal notranslate"><span class="pre">Target.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Target.priority"><code class="docutils literal notranslate"><span class="pre">Target.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Target.type"><code class="docutils literal notranslate"><span class="pre">Target.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee"><code class="docutils literal notranslate"><span class="pre">Melee</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.nodeType"><code class="docutils literal notranslate"><span class="pre">Melee.nodeType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.freeze"><code class="docutils literal notranslate"><span class="pre">Melee.freeze</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.attackRange"><code class="docutils literal notranslate"><span class="pre">Melee.attackRange()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.skill"><code class="docutils literal notranslate"><span class="pre">Melee.skill()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.N"><code class="docutils literal notranslate"><span class="pre">Melee.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.args"><code class="docutils literal notranslate"><span class="pre">Melee.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.deserialize"><code class="docutils literal notranslate"><span class="pre">Melee.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.edges"><code class="docutils literal notranslate"><span class="pre">Melee.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.init"><code class="docutils literal notranslate"><span class="pre">Melee.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.leaf"><code class="docutils literal notranslate"><span class="pre">Melee.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.priority"><code class="docutils literal notranslate"><span class="pre">Melee.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Melee.type"><code class="docutils literal notranslate"><span class="pre">Melee.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range"><code class="docutils literal notranslate"><span class="pre">Range</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.nodeType"><code class="docutils literal notranslate"><span class="pre">Range.nodeType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.freeze"><code class="docutils literal notranslate"><span class="pre">Range.freeze</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.attackRange"><code class="docutils literal notranslate"><span class="pre">Range.attackRange()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.skill"><code class="docutils literal notranslate"><span class="pre">Range.skill()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.N"><code class="docutils literal notranslate"><span class="pre">Range.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.args"><code class="docutils literal notranslate"><span class="pre">Range.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.deserialize"><code class="docutils literal notranslate"><span class="pre">Range.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.edges"><code class="docutils literal notranslate"><span class="pre">Range.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.init"><code class="docutils literal notranslate"><span class="pre">Range.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.leaf"><code class="docutils literal notranslate"><span class="pre">Range.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.priority"><code class="docutils literal notranslate"><span class="pre">Range.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Range.type"><code class="docutils literal notranslate"><span class="pre">Range.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage"><code class="docutils literal notranslate"><span class="pre">Mage</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.nodeType"><code class="docutils literal notranslate"><span class="pre">Mage.nodeType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.freeze"><code class="docutils literal notranslate"><span class="pre">Mage.freeze</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.attackRange"><code class="docutils literal notranslate"><span class="pre">Mage.attackRange()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.skill"><code class="docutils literal notranslate"><span class="pre">Mage.skill()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.N"><code class="docutils literal notranslate"><span class="pre">Mage.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.args"><code class="docutils literal notranslate"><span class="pre">Mage.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.deserialize"><code class="docutils literal notranslate"><span class="pre">Mage.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.edges"><code class="docutils literal notranslate"><span class="pre">Mage.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.init"><code class="docutils literal notranslate"><span class="pre">Mage.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.leaf"><code class="docutils literal notranslate"><span class="pre">Mage.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.priority"><code class="docutils literal notranslate"><span class="pre">Mage.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Mage.type"><code class="docutils literal notranslate"><span class="pre">Mage.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Use"><code class="docutils literal notranslate"><span class="pre">Use</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Use.priority"><code class="docutils literal notranslate"><span class="pre">Use.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Use.edges"><code class="docutils literal notranslate"><span class="pre">Use.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Use.call"><code class="docutils literal notranslate"><span class="pre">Use.call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Use.N"><code class="docutils literal notranslate"><span class="pre">Use.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Use.args"><code class="docutils literal notranslate"><span class="pre">Use.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Use.deserialize"><code class="docutils literal notranslate"><span class="pre">Use.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Use.init"><code class="docutils literal notranslate"><span class="pre">Use.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Use.leaf"><code class="docutils literal notranslate"><span class="pre">Use.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Use.type"><code class="docutils literal notranslate"><span class="pre">Use.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Give"><code class="docutils literal notranslate"><span class="pre">Give</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Give.priority"><code class="docutils literal notranslate"><span class="pre">Give.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Give.edges"><code class="docutils literal notranslate"><span class="pre">Give.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Give.call"><code class="docutils literal notranslate"><span class="pre">Give.call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Give.N"><code class="docutils literal notranslate"><span class="pre">Give.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Give.args"><code class="docutils literal notranslate"><span class="pre">Give.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Give.deserialize"><code class="docutils literal notranslate"><span class="pre">Give.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Give.init"><code class="docutils literal notranslate"><span class="pre">Give.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Give.leaf"><code class="docutils literal notranslate"><span class="pre">Give.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Give.type"><code class="docutils literal notranslate"><span class="pre">Give.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Item"><code class="docutils literal notranslate"><span class="pre">Item</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Item.argType"><code class="docutils literal notranslate"><span class="pre">Item.argType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Item.N"><code class="docutils literal notranslate"><span class="pre">Item.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Item.args"><code class="docutils literal notranslate"><span class="pre">Item.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Item.deserialize"><code class="docutils literal notranslate"><span class="pre">Item.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Item.edges"><code class="docutils literal notranslate"><span class="pre">Item.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Item.init"><code class="docutils literal notranslate"><span class="pre">Item.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Item.leaf"><code class="docutils literal notranslate"><span class="pre">Item.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Item.priority"><code class="docutils literal notranslate"><span class="pre">Item.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Item.type"><code class="docutils literal notranslate"><span class="pre">Item.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy"><code class="docutils literal notranslate"><span class="pre">Buy</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy.priority"><code class="docutils literal notranslate"><span class="pre">Buy.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy.argType"><code class="docutils literal notranslate"><span class="pre">Buy.argType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy.edges"><code class="docutils literal notranslate"><span class="pre">Buy.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy.call"><code class="docutils literal notranslate"><span class="pre">Buy.call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy.N"><code class="docutils literal notranslate"><span class="pre">Buy.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy.args"><code class="docutils literal notranslate"><span class="pre">Buy.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy.deserialize"><code class="docutils literal notranslate"><span class="pre">Buy.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy.init"><code class="docutils literal notranslate"><span class="pre">Buy.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy.leaf"><code class="docutils literal notranslate"><span class="pre">Buy.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Buy.type"><code class="docutils literal notranslate"><span class="pre">Buy.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell"><code class="docutils literal notranslate"><span class="pre">Sell</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell.priority"><code class="docutils literal notranslate"><span class="pre">Sell.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell.argType"><code class="docutils literal notranslate"><span class="pre">Sell.argType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell.edges"><code class="docutils literal notranslate"><span class="pre">Sell.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell.call"><code class="docutils literal notranslate"><span class="pre">Sell.call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell.N"><code class="docutils literal notranslate"><span class="pre">Sell.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell.args"><code class="docutils literal notranslate"><span class="pre">Sell.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell.deserialize"><code class="docutils literal notranslate"><span class="pre">Sell.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell.init"><code class="docutils literal notranslate"><span class="pre">Sell.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell.leaf"><code class="docutils literal notranslate"><span class="pre">Sell.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Sell.type"><code class="docutils literal notranslate"><span class="pre">Sell.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.init_discrete"><code class="docutils literal notranslate"><span class="pre">init_discrete()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Price"><code class="docutils literal notranslate"><span class="pre">Price</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Price.argType"><code class="docutils literal notranslate"><span class="pre">Price.argType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Price.init"><code class="docutils literal notranslate"><span class="pre">Price.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Price.edges"><code class="docutils literal notranslate"><span class="pre">Price.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Price.args"><code class="docutils literal notranslate"><span class="pre">Price.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Price.N"><code class="docutils literal notranslate"><span class="pre">Price.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Price.deserialize"><code class="docutils literal notranslate"><span class="pre">Price.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Price.leaf"><code class="docutils literal notranslate"><span class="pre">Price.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Price.priority"><code class="docutils literal notranslate"><span class="pre">Price.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Price.type"><code class="docutils literal notranslate"><span class="pre">Price.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Token"><code class="docutils literal notranslate"><span class="pre">Token</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Token.argType"><code class="docutils literal notranslate"><span class="pre">Token.argType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Token.init"><code class="docutils literal notranslate"><span class="pre">Token.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Token.edges"><code class="docutils literal notranslate"><span class="pre">Token.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Token.args"><code class="docutils literal notranslate"><span class="pre">Token.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Token.N"><code class="docutils literal notranslate"><span class="pre">Token.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Token.deserialize"><code class="docutils literal notranslate"><span class="pre">Token.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Token.leaf"><code class="docutils literal notranslate"><span class="pre">Token.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Token.priority"><code class="docutils literal notranslate"><span class="pre">Token.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Token.type"><code class="docutils literal notranslate"><span class="pre">Token.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm"><code class="docutils literal notranslate"><span class="pre">Comm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm.argType"><code class="docutils literal notranslate"><span class="pre">Comm.argType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm.priority"><code class="docutils literal notranslate"><span class="pre">Comm.priority</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm.edges"><code class="docutils literal notranslate"><span class="pre">Comm.edges</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm.call"><code class="docutils literal notranslate"><span class="pre">Comm.call()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm.N"><code class="docutils literal notranslate"><span class="pre">Comm.N()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm.args"><code class="docutils literal notranslate"><span class="pre">Comm.args()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm.deserialize"><code class="docutils literal notranslate"><span class="pre">Comm.deserialize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm.init"><code class="docutils literal notranslate"><span class="pre">Comm.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm.leaf"><code class="docutils literal notranslate"><span class="pre">Comm.leaf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.Comm.type"><code class="docutils literal notranslate"><span class="pre">Comm.type</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.action.html#nmmo.io.action.BecomeSkynet"><code class="docutils literal notranslate"><span class="pre">BecomeSkynet</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nmmo.io.stimulus.html">nmmo.io.stimulus module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.SerializedVariable"><code class="docutils literal notranslate"><span class="pre">SerializedVariable</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.SerializedVariable.CONTINUOUS"><code class="docutils literal notranslate"><span class="pre">SerializedVariable.CONTINUOUS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.SerializedVariable.DISCRETE"><code class="docutils literal notranslate"><span class="pre">SerializedVariable.DISCRETE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.SerializedVariable.init"><code class="docutils literal notranslate"><span class="pre">SerializedVariable.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.SerializedVariable.packet"><code class="docutils literal notranslate"><span class="pre">SerializedVariable.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.SerializedVariable.update"><code class="docutils literal notranslate"><span class="pre">SerializedVariable.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.SerializedVariable.increment"><code class="docutils literal notranslate"><span class="pre">SerializedVariable.increment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.SerializedVariable.decrement"><code class="docutils literal notranslate"><span class="pre">SerializedVariable.decrement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.SerializedVariable.empty"><code class="docutils literal notranslate"><span class="pre">SerializedVariable.empty</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous"><code class="docutils literal notranslate"><span class="pre">Continuous</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous.CONTINUOUS"><code class="docutils literal notranslate"><span class="pre">Continuous.CONTINUOUS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous.DISCRETE"><code class="docutils literal notranslate"><span class="pre">Continuous.DISCRETE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous.decrement"><code class="docutils literal notranslate"><span class="pre">Continuous.decrement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous.empty"><code class="docutils literal notranslate"><span class="pre">Continuous.empty</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous.increment"><code class="docutils literal notranslate"><span class="pre">Continuous.increment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous.init"><code class="docutils literal notranslate"><span class="pre">Continuous.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous.packet"><code class="docutils literal notranslate"><span class="pre">Continuous.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Continuous.update"><code class="docutils literal notranslate"><span class="pre">Continuous.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete"><code class="docutils literal notranslate"><span class="pre">Discrete</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete.DISCRETE"><code class="docutils literal notranslate"><span class="pre">Discrete.DISCRETE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete.CONTINUOUS"><code class="docutils literal notranslate"><span class="pre">Discrete.CONTINUOUS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete.decrement"><code class="docutils literal notranslate"><span class="pre">Discrete.decrement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete.empty"><code class="docutils literal notranslate"><span class="pre">Discrete.empty</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete.increment"><code class="docutils literal notranslate"><span class="pre">Discrete.increment()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete.init"><code class="docutils literal notranslate"><span class="pre">Discrete.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete.packet"><code class="docutils literal notranslate"><span class="pre">Discrete.packet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Discrete.update"><code class="docutils literal notranslate"><span class="pre">Discrete.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized"><code class="docutils literal notranslate"><span class="pre">Serialized</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.dict"><code class="docutils literal notranslate"><span class="pre">Serialized.dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.enabled"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.N"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.N()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Self"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Self</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.ID"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.ID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.AttackerID"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.AttackerID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Level"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Level</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.ItemLevel"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.ItemLevel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Comm"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Comm</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Population"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Population</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.R"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.R</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.C"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.C</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Damage"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Damage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.TimeAlive"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.TimeAlive</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Freeze"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Freeze</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Gold"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Gold</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Health"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Health</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Food"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Food</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Water"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Water</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Melee"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Melee</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Range"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Mage"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Mage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Fishing"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Fishing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Herbalism"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Herbalism</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Prospecting"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Prospecting</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Carving"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Carving</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Entity.Alchemy"><code class="docutils literal notranslate"><span class="pre">Serialized.Entity.Alchemy</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Tile"><code class="docutils literal notranslate"><span class="pre">Serialized.Tile</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Tile.enabled"><code class="docutils literal notranslate"><span class="pre">Serialized.Tile.enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Tile.N"><code class="docutils literal notranslate"><span class="pre">Serialized.Tile.N()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Tile.NEnts"><code class="docutils literal notranslate"><span class="pre">Serialized.Tile.NEnts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Tile.Index"><code class="docutils literal notranslate"><span class="pre">Serialized.Tile.Index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Tile.R"><code class="docutils literal notranslate"><span class="pre">Serialized.Tile.R</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Tile.C"><code class="docutils literal notranslate"><span class="pre">Serialized.Tile.C</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item"><code class="docutils literal notranslate"><span class="pre">Serialized.Item</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.enabled"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.N"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.N()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.ID"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.ID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.Index"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.Index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.Level"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.Level</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.Capacity"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.Capacity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.Quantity"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.Quantity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.Tradable"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.Tradable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.MeleeAttack"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.MeleeAttack</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.RangeAttack"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.RangeAttack</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.MageAttack"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.MageAttack</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.MeleeDefense"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.MeleeDefense</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.RangeDefense"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.RangeDefense</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.MageDefense"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.MageDefense</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.HealthRestore"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.HealthRestore</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.ResourceRestore"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.ResourceRestore</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.Price"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.Price</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Item.Equipped"><code class="docutils literal notranslate"><span class="pre">Serialized.Item.Equipped</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market"><code class="docutils literal notranslate"><span class="pre">Serialized.Market</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.enabled"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.N"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.N()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.ID"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.ID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.Index"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.Index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.Level"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.Level</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.Capacity"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.Capacity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.Quantity"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.Quantity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.Tradable"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.Tradable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.MeleeAttack"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.MeleeAttack</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.RangeAttack"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.RangeAttack</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.MageAttack"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.MageAttack</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.MeleeDefense"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.MeleeDefense</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.RangeDefense"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.RangeDefense</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.MageDefense"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.MageDefense</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.HealthRestore"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.HealthRestore</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.ResourceRestore"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.ResourceRestore</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.Price"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.Price</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.Serialized.Market.Equipped"><code class="docutils literal notranslate"><span class="pre">Serialized.Market.Equipped</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.attr"><code class="docutils literal notranslate"><span class="pre">attr</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nmmo.io.stimulus.html#nmmo.io.stimulus.obj"><code class="docutils literal notranslate"><span class="pre">obj</span></code></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>

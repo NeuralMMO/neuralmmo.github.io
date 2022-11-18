@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -123,6 +125,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/api.html#icon-overlays"> Overlays</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../rst/api.html#icon-reference"> Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="nmmo.html">nmmo package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Env"><code class="docutils literal notranslate"><span class="pre">Env</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Agent"><code class="docutils literal notranslate"><span class="pre">Agent</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.MapGenerator"><code class="docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Terrain"><code class="docutils literal notranslate"><span class="pre">Terrain</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Serialized"><code class="docutils literal notranslate"><span class="pre">Serialized</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Action"><code class="docutils literal notranslate"><span class="pre">Action</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Overlay"><code class="docutils literal notranslate"><span class="pre">Overlay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OverlayRegistry"><code class="docutils literal notranslate"><span class="pre">OverlayRegistry</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.Replay"><code class="docutils literal notranslate"><span class="pre">Replay</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="nmmo.html#nmmo.OpenSkillRating"><code class="docutils literal notranslate"><span class="pre">OpenSkillRating</span></code></a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="nmmo.core.html">nmmo.core package</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="nmmo.core.agent.html">nmmo.core.agent module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nmmo.core.config.html">nmmo.core.config module</a></li>
@@ -250,7 +263,7 @@
            <div itemprop="articleBody">
             
   <section id="module-nmmo.core.realm">
-<span id="nmmo-core-realm-module"></span><h1>nmmo.core.realm module<a class="headerlink" href="#module-nmmo.core.realm" title="Permalink to this headline">¶</a></h1>
+<span id="nmmo-core-realm-module"></span><h1>nmmo.core.realm module<a class="headerlink" href="#module-nmmo.core.realm" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="nmmo.core.realm.prioritized">
 <span class="sig-prename descclassname"><span class="pre">nmmo.core.realm.</span></span><span class="sig-name descname"><span class="pre">prioritized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entities</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merged</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.realm.prioritized" title="Permalink to this definition">¶</a></dt>
@@ -260,7 +273,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.realm.EntityGroup">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.realm.</span></span><span class="sig-name descname"><span class="pre">EntityGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.realm.EntityGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Mapping</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.core.realm.EntityGroup.items">
 <span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">a</span> <span class="pre">set-like</span> <span class="pre">object</span> <span class="pre">providing</span> <span class="pre">a</span> <span class="pre">view</span> <span class="pre">on</span> <span class="pre">D's</span> <span class="pre">items</span></span></span><a class="headerlink" href="#nmmo.core.realm.EntityGroup.items" title="Permalink to this definition">¶</a></dt>
@@ -326,7 +339,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.realm.NPCManager">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.realm.</span></span><span class="sig-name descname"><span class="pre">NPCManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.realm.NPCManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.core.realm.EntityGroup" title="nmmo.core.realm.EntityGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.realm.EntityGroup</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.core.realm.EntityGroup" title="nmmo.core.realm.EntityGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">EntityGroup</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.core.realm.NPCManager.reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.realm.NPCManager.reset" title="Permalink to this definition">¶</a></dt>
@@ -397,7 +410,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.core.realm.PlayerManager">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.core.realm.</span></span><span class="sig-name descname"><span class="pre">PlayerManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.realm.PlayerManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.core.realm.EntityGroup" title="nmmo.core.realm.EntityGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">nmmo.core.realm.EntityGroup</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.core.realm.EntityGroup" title="nmmo.core.realm.EntityGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">EntityGroup</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.core.realm.PlayerManager.reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.realm.PlayerManager.reset" title="Permalink to this definition">¶</a></dt>
@@ -475,7 +488,7 @@
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.realm.Realm.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset the environment and load the specified map</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>idx</strong> – Map index to load</p>
 </dd>
 </dl>
@@ -504,7 +517,7 @@
 <span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.realm.Realm.step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run game logic for one tick</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>actions</strong> – Dict of agent actions</p>
 </dd>
 </dl>

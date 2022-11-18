@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -225,7 +227,7 @@
 </div>
 <p>Neural MMO provides standard environment configurations along with scripted models, baselines pretrained with <a class="reference external" href="https://github.com/vwxyzjn/cleanrl">CleanRL</a>, and training/evaluation logs hosted by <a class="reference external" href="https://wandb.ai">WanDB</a>. Check the latest baseline reports <a class="reference external" href="https://wandb.ai/jsuarez/NeuralMMO/reportlist">here</a> and older RLlib baselines <a class="reference external" href="https://wandb.ai/jsuarez/NeuralMMO-Old/reportlist">here</a>.</p>
 <section id="icon-training-and-evaluation">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Training and Evaluation<a class="headerlink" href="#icon-training-and-evaluation" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Training and Evaluation<a class="headerlink" href="#icon-training-and-evaluation" title="Permalink to this heading">¶</a></h1>
 <p>To evaluate the latest baseline’s SR (skill rating) verses scripted opponents:</p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">Evaluate the latest baseline</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
@@ -249,18 +251,18 @@
 <p>Your latest checkpoint will be saved to model.pt. Note that the default config specifies 1B agent steps. You can kill jobs early once SR is stable (“Agent” in the WanDB logs). The scripted combat baseline is fixed to 1500 SR. Exceeding this threshold means your agent is better than the scripted combat baseline, according to average performance across a variety of tasks including exploration, foraging, and combat.</p>
 </section>
 <section id="icon-emulation-cleanrl">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Emulation + CleanRL<a class="headerlink" href="#icon-emulation-cleanrl" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Emulation + CleanRL<a class="headerlink" href="#icon-emulation-cleanrl" title="Permalink to this heading">¶</a></h1>
 <p>Our main file is adapted from a minimal single-file PPO implementation from <a class="reference external" href="https://github.com/vwxyzjn/cleanrl">CleanRL</a> built for single-agent learning on Atari with flat observations and discrete actions. Neural MMO has large agent populations and heirarchical IO (observation + action) spaces. v1.5.4+ includes emulation layers that make Neural MMO look as simple as Atari from the perspective of RL frameworks (i.e. CleanRL).</p>
 <p>There are a number of associated features, including padding and flattening the observations (they’re unpacked directly within the neural net), flattening the action space (to a single multi-discrete space, reconstructed in the environment), and splitting multiagent environments into a list of single-agent environments. The main file for our baselines enables these features with <cite>nmmo.integrations.cleanrl_vec_envs</cite>, which accepts a list env configs as its sole parameter.</p>
 <p>The only major limitation compared to the previous RLlib trainer is that the env must have a fixed number of agents. Introducing a variable agent population results in a variable batch size in which the average trajectory is 90 percent padding. This results in instability during training, even when masking the loss (because of a much smaller effective batch size). Creating sufficiently large, constant-size batches without padding would require a complete rewrite of CleanRL and would not be efficient if the core design of CleanRL were maintained. Instead, we respawn agents during training and randomize the number of agents per training environment. This mitigates curriculum issues associated with training on a fixed-size population.</p>
 </section>
 <section id="icon-reporting-your-results">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Reporting Your Results<a class="headerlink" href="#icon-reporting-your-results" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Reporting Your Results<a class="headerlink" href="#icon-reporting-your-results" title="Permalink to this heading">¶</a></h1>
 <p>Training is performed on a pool of procedurally generated maps. Evaluation is performed on separate held-out maps never seen during training. Approaches that modify these parameters, alter the reward function, or substantially modify the environment configuration are not directly comparable to the baselines below.</p>
 <p>Publications including new models should clearly indicate training scale, domain knowledge assumptions, and any other significant changes to the default configuration. Ideally, they should also include a discussion of agent behavior and supporting training/evaluation plots, overlay figures, and/or other evidence specific to the associated work.</p>
 </section>
 <section id="what-happened-to-rllib">
-<h1>What Happened to RLlib?<a class="headerlink" href="#what-happened-to-rllib" title="Permalink to this headline">¶</a></h1>
+<h1>What Happened to RLlib?<a class="headerlink" href="#what-happened-to-rllib" title="Permalink to this heading">¶</a></h1>
 <p>We used <a class="reference external" href="https://docs.ray.io/en/master/rllib.html">RLlib</a> as our sole infrastructure backend prior to v1.5.4. It is a powerful toolkit, but its steep learning curve made it unappealing to many of our potential users. As such, we have written a number of compatibility layers that enable Neural MMO to be used with CleanRL, and it should now be quite easy to use it with most other frameworks as well. Performance is not quite on par with RLlib yet, but we have nonetheless decided to focus on our CleanRL wrapper for now since it enables many more people to start using the platform quickly. We did not have time to properly test multiple integrations for v1.5.4 but will be revisiting RLlib support shortly after the v1.6 release. For now, you can use v1.5.3 if you want better models and are comfortable working with RLlib. The commands for using it are below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Default setting</span>
 <span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">evaluate</span>

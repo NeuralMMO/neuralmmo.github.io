@@ -4,7 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -35,7 +35,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -264,10 +266,10 @@
 <div class="line"><br /></div>
 </div>
 <section id="icon-overview">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Overview<a class="headerlink" href="#icon-overview" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Overview<a class="headerlink" href="#icon-overview" title="Permalink to this heading">¶</a></h1>
 <p>Neural MMO is inspired by classic Massively Multiplayer Online Role-Playing Games. Most of the game systems are adapted from existing games, but they are not copied directly for two reasons. First, the mechanics of actual MMOs are substantially more complex and require dozens to hundreds of hours of investment in order to understand. As Neural MMO is primarily a research platform, we aim to keep it accessible for that purpose. Second, many common game mechanics result in complex and inefficient observation and action spaces. We have made the necessary adaptations to preserve as much environment expressivity as possible without compromising efficiency.</p>
 <section id="glossary">
-<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
 <dt>A quick reference of standard game terms:</dt><dd><ul class="simple">
 <li><p><strong>Tick:</strong> The simulation interval of the server; a timestep. With rendering enabled, the server targets 0.6s/tick.</p></li>
@@ -280,7 +282,7 @@
 </dl>
 </section>
 <section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
 <dt>Neural MMO includes the following game systems</dt><dd><ul class="simple">
 <li><p><strong>Terrain:</strong> Procedurally generated maps with obstacles</p></li>
@@ -298,18 +300,18 @@
 <p>Each of these sytems may be configured or disabled individually (with some common sense dependencies). This wiki assumes the default configuration with all game systems enabled and does not provide constants (such as the amount of player health) because these are documented separately as part of the environment config.</p>
 </section>
 <section id="contributing">
-<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">¶</a></h2>
 <p>If you find errors or ambiguities in the documentation, please either submit a PR with the associated fixes or, if it is easier, simply point it out on the Discord. Numerical constants sometimes change as we balance the game mechanics: always double-check your config file when making important decisions.</p>
 </section>
 </section>
 <section id="icon-io">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> IO<a class="headerlink" href="#icon-io" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> IO<a class="headerlink" href="#icon-io" title="Permalink to this heading">¶</a></h1>
 <section id="encoding">
-<h2>Encoding<a class="headerlink" href="#encoding" title="Permalink to this headline">¶</a></h2>
+<h2>Encoding<a class="headerlink" href="#encoding" title="Permalink to this heading">¶</a></h2>
 <p>By default, Neural MMO flattens the observation of each agent into a fixed-length array and accepts a multidiscrete action obtained by flattening the arguments of all actions. This makes the environment compatible with nearly any reinforcement learning library. The baselines repository includes subnetworks that unflatten, process, and reflatten observations and actions. This makes it possible to treat Neural MMO as a much simpler environment without any loss of expressivity. The information below is therefore mainly to enumerate agent capabilities.</p>
 </section>
 <section id="observation-space">
-<h2>Observation Space<a class="headerlink" href="#observation-space" title="Permalink to this headline">¶</a></h2>
+<h2>Observation Space<a class="headerlink" href="#observation-space" title="Permalink to this heading">¶</a></h2>
 <p>Each agent observes a groups of entities comprising nearby tiles and agents, its own inventory, and the market. Continuous and discrete tensors of attributes parametrize each entity group. An extra variable <em>N</em> counts the number of entities per group.</p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text">Observation space of a single agent</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
@@ -346,7 +348,7 @@
 </div>
 </section>
 <section id="action-space">
-<h2>Action Space<a class="headerlink" href="#action-space" title="Permalink to this headline">¶</a></h2>
+<h2>Action Space<a class="headerlink" href="#action-space" title="Permalink to this heading">¶</a></h2>
 <p>Each agent may take multiple actions per tick – one from each category. Each action accepts arguments.</p>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">Action space of a single agent</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
@@ -406,7 +408,7 @@
 </section>
 </section>
 <section id="icon-game-systems">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Game Systems<a class="headerlink" href="#icon-game-systems" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Game Systems<a class="headerlink" href="#icon-game-systems" title="Permalink to this heading">¶</a></h1>
 <p>Neural MMO uses a tile-based grid engine. This is a much less significant limitation on environment expressivity than some modern reinforcement learning practitioners would suggest: several classic MMOs supporting thousands of players, reasonably realistic economies, and diverse gameplay features also use this structure internally.</p>
 <p>Neural MMO includes the following game systems
 - <strong>Terrain:</strong> Procedurally generated maps with obstacles
@@ -420,7 +422,7 @@
 - <strong>Exchange:</strong> Agents can trade items on a global market</p>
 <p>Each game system is individually toggleable and configurable, with a few common sense interdependencies. This wiki primarily addresses the default config with all game systems enabled as the impact of disabling any particular system is fairly obvious. We do, however, point out some important interactions. Also note that all numerical values stated below are configurable, and you should always check the base config for the latest values.</p>
 <section id="base">
-<h2>Base<a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h2>
+<h2>Base<a class="headerlink" href="#base" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
 <dt>The base environment with no game systems enabled provides empty, square maps</dt><dd><ul class="simple">
 <li><p>The terrain is made of grass that agents can walk on freely</p></li>
@@ -431,7 +433,7 @@
 </dl>
 </section>
 <section id="terrain">
-<h2>Terrain<a class="headerlink" href="#terrain" title="Permalink to this headline">¶</a></h2>
+<h2>Terrain<a class="headerlink" href="#terrain" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
 <dt>Procedurally generates maps with obstacles and resources.</dt><dd><ul class="simple">
 <li><p>Adds the stone tile type that blocks agent movement</p></li>
@@ -455,7 +457,7 @@
 <p>The default generation algorithm is more sophisticated than typical Perlin noise – it actually stretches the space of one Perlin fractal using a second Perlin fractal. It further attempts to scale spacial frequency to be higher at the edges of the map and lower at the center. This effect is not noticable in small maps but creates large deviations in local terrain structure in larger maps.</p>
 </section>
 <section id="resource">
-<h2>Resource<a class="headerlink" href="#resource" title="Permalink to this headline">¶</a></h2>
+<h2>Resource<a class="headerlink" href="#resource" title="Permalink to this heading">¶</a></h2>
 <dl class="simple">
 <dt>Agents must forage for food and water in order to survive. Foliage tiles containing food and water tiles containing … well, water … are added to the map. A foliage tile is consumed when an agent steps on it. Agents cannot step on water tiles but can drink by being adjacent. This does not deplete the tile.</dt><dd><ul class="simple">
 <li><p>Agents spawn with 100 food and 100 water</p></li>
@@ -470,7 +472,7 @@
 <p>Consumed foliage tiles regenerate with a small probability each subsequent tick. This temporary unavailibility places a carrying capacity on local regions.</p>
 </section>
 <section id="combat">
-<h2>Combat<a class="headerlink" href="#combat" title="Permalink to this headline">¶</a></h2>
+<h2>Combat<a class="headerlink" href="#combat" title="Permalink to this heading">¶</a></h2>
 <p>Agents gain access to melee, range, and mage attacks. These obey a rock-paper-scissors dominance relationship: melee beats range beats mage beats melee. Dominance is calculated using the attacker’s chosen attack skill and the defender’s main combat skill. Attacks inflict damage to the target according to the following formula: <a href="#id1"><span class="problematic" id="id2">*</span></a>damage = effectiveness multiplier * (attack score - defense score).</p>
 <p><strong>Combat defaults are currently only correctly configured for all systems enabled. The base system information below will be accurate once this is fixed.</strong></p>
 <dl class="simple">
@@ -509,7 +511,7 @@
 <p>The attacker always has an advantage in that they can select the skill strong against the target’s main skill. However, the defender can immediately retaliate in the same manner. Additionally, a combat style in which an agent has a higher level and better equipment may outperform one with only the effectiveness multiplier.</p>
 </section>
 <section id="npc">
-<h2>NPC<a class="headerlink" href="#npc" title="Permalink to this headline">¶</a></h2>
+<h2>NPC<a class="headerlink" href="#npc" title="Permalink to this heading">¶</a></h2>
 <p>Adds NPCs (non-playable characters) to the environment</p>
 <p><strong>Requires:</strong> Combat system</p>
 <dl class="simple">
@@ -541,7 +543,7 @@
 <p>Generally, Passive NPCs will spawn towards the edges of the map, Hostile NPCs spawn in the middle, and Neutral NPCs spawn somewhere between. The exact number and power distribution of NPCs varies by environment config.</p>
 </section>
 <section id="progression">
-<h2>Progression<a class="headerlink" href="#progression" title="Permalink to this headline">¶</a></h2>
+<h2>Progression<a class="headerlink" href="#progression" title="Permalink to this heading">¶</a></h2>
 <p>Adds a leveling system that enables agents to become better at things by doing them.</p>
 <p><strong>Requires:</strong> Combat or Profession system</p>
 <dl class="simple">
@@ -567,7 +569,7 @@
 </dl>
 </section>
 <section id="item">
-<h2>Item<a class="headerlink" href="#item" title="Permalink to this headline">¶</a></h2>
+<h2>Item<a class="headerlink" href="#item" title="Permalink to this heading">¶</a></h2>
 <p>Agents gain an inventory that can hold 12 items. Which items are available is dependent upon which other systems are enabled.</p>
 <p><strong>Requires:</strong> Equipment or Profession system</p>
 <dl class="simple">
@@ -586,7 +588,7 @@
 </dl>
 </section>
 <section id="equipment">
-<h2>Equipment<a class="headerlink" href="#equipment" title="Permalink to this headline">¶</a></h2>
+<h2>Equipment<a class="headerlink" href="#equipment" title="Permalink to this heading">¶</a></h2>
 <p>Agents gain access to an additional 5 inventory slots for equipped items: a hat, top, bottom, held item, and a stack of ammunition.</p>
 <p><strong>Requires:</strong> Combat and Item system</p>
 <dl class="simple">
@@ -603,7 +605,7 @@
 </dl>
 </section>
 <section id="profession">
-<h2>Profession<a class="headerlink" href="#profession" title="Permalink to this headline">¶</a></h2>
+<h2>Profession<a class="headerlink" href="#profession" title="Permalink to this heading">¶</a></h2>
 <p>The Profession system adds 5 new gathering skills that provide supplies for exploration and combat. Unlike in the Resource system, materials gathered from the Profession system are added to the agent’s inventory as items.</p>
 <p><strong>Requires:</strong> Item system</p>
 <dl class="simple">
@@ -620,7 +622,7 @@
 </dl>
 </section>
 <section id="exchange">
-<h2>Exchange<a class="headerlink" href="#exchange" title="Permalink to this headline">¶</a></h2>
+<h2>Exchange<a class="headerlink" href="#exchange" title="Permalink to this heading">¶</a></h2>
 <p>Agents gain access to an environment-wide market where they can buy items from and sell items to each other using gold.</p>
 <p><strong>Requires:</strong> Item and Equipment or Profession systems</p>
 <dl class="simple">
@@ -637,89 +639,89 @@
 </section>
 </section>
 <section id="icon-skills">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Skills<a class="headerlink" href="#icon-skills" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Skills<a class="headerlink" href="#icon-skills" title="Permalink to this heading">¶</a></h1>
 <section id="melee">
-<h2>Melee<a class="headerlink" href="#melee" title="Permalink to this headline">¶</a></h2>
+<h2>Melee<a class="headerlink" href="#melee" title="Permalink to this heading">¶</a></h2>
 <p>Weapon: Sword
 Ammunition: Scrap
 Strong against: Range
 Weak against: Mage</p>
 </section>
 <section id="range">
-<h2>Range<a class="headerlink" href="#range" title="Permalink to this headline">¶</a></h2>
+<h2>Range<a class="headerlink" href="#range" title="Permalink to this heading">¶</a></h2>
 <p>Weapon: Bow
 Ammunition: Shaving
 Strong against: Mage
 Weak against: Melee</p>
 </section>
 <section id="mage">
-<h2>Mage<a class="headerlink" href="#mage" title="Permalink to this headline">¶</a></h2>
+<h2>Mage<a class="headerlink" href="#mage" title="Permalink to this heading">¶</a></h2>
 <p>Weapon: Wand
 Ammunition: Shard
 Strong against: Melee
 Weak against: Range</p>
 </section>
 <section id="fishing">
-<h2>Fishing<a class="headerlink" href="#fishing" title="Permalink to this headline">¶</a></h2>
+<h2>Fishing<a class="headerlink" href="#fishing" title="Permalink to this heading">¶</a></h2>
 <p>Tool: Rod
 Resource: Ration
 Usage: Restores food and water</p>
 </section>
 <section id="herbalism">
-<h2>Herbalism<a class="headerlink" href="#herbalism" title="Permalink to this headline">¶</a></h2>
+<h2>Herbalism<a class="headerlink" href="#herbalism" title="Permalink to this heading">¶</a></h2>
 <p>Tool: Gloves
 Resource: Poultice
 Usage: Restores health</p>
 </section>
 <section id="prospecting">
-<h2>Prospecting<a class="headerlink" href="#prospecting" title="Permalink to this headline">¶</a></h2>
+<h2>Prospecting<a class="headerlink" href="#prospecting" title="Permalink to this heading">¶</a></h2>
 <p>Tool: Pickaxe
 Resource: Scrap
 Usage: Melee ammunition</p>
 </section>
 <section id="carving">
-<h2>Carving<a class="headerlink" href="#carving" title="Permalink to this headline">¶</a></h2>
+<h2>Carving<a class="headerlink" href="#carving" title="Permalink to this heading">¶</a></h2>
 <p>Tool: Chisel
 Resource: Shaving
 Usage: Range ammunition</p>
 </section>
 <section id="alchemy">
-<h2>Alchemy<a class="headerlink" href="#alchemy" title="Permalink to this headline">¶</a></h2>
+<h2>Alchemy<a class="headerlink" href="#alchemy" title="Permalink to this heading">¶</a></h2>
 <p>Tool: Arcane focus
 Resource: Shard
 Usage: Mage ammunition</p>
 </section>
 </section>
 <section id="icon-items">
-<h1><img alt="icon" src="../_images/icon_pixel.png" /> Items<a class="headerlink" href="#icon-items" title="Permalink to this headline">¶</a></h1>
+<h1><img alt="icon" src="../_images/icon_pixel.png" /> Items<a class="headerlink" href="#icon-items" title="Permalink to this heading">¶</a></h1>
 <section id="gold">
-<h2>Gold<a class="headerlink" href="#gold" title="Permalink to this headline">¶</a></h2>
+<h2>Gold<a class="headerlink" href="#gold" title="Permalink to this heading">¶</a></h2>
 <p>Currency used on the market. Inherently valuable as the only medium of exchange.</p>
 </section>
 <section id="armor-hat-top-bottom">
-<h2>Armor: Hat, Top, Bottom<a class="headerlink" href="#armor-hat-top-bottom" title="Permalink to this headline">¶</a></h2>
+<h2>Armor: Hat, Top, Bottom<a class="headerlink" href="#armor-hat-top-bottom" title="Permalink to this heading">¶</a></h2>
 <p>Grants 10 defense per item level</p>
 <p>Requires at least one skill greater than or equal to the item level to equip</p>
 <p>Also referred to as helmet, chestplate, and platelegs</p>
 </section>
 <section id="weapon-sword-bow-wand">
-<h2>Weapon: Sword, Bow, Wand<a class="headerlink" href="#weapon-sword-bow-wand" title="Permalink to this headline">¶</a></h2>
+<h2>Weapon: Sword, Bow, Wand<a class="headerlink" href="#weapon-sword-bow-wand" title="Permalink to this heading">¶</a></h2>
 <p>Grants a flat 15  plus 15 attack bonus per item level to the associated style (melee, range, mage)</p>
 <p>Requires a pertinent skill level greater than or equal to the item level to equip</p>
 </section>
 <section id="tool-rod-gloves-pickaxe-chisel-arcane-focus">
-<h2>Tool: Rod, Gloves, Pickaxe, Chisel, Arcane Focus<a class="headerlink" href="#tool-rod-gloves-pickaxe-chisel-arcane-focus" title="Permalink to this headline">¶</a></h2>
+<h2>Tool: Rod, Gloves, Pickaxe, Chisel, Arcane Focus<a class="headerlink" href="#tool-rod-gloves-pickaxe-chisel-arcane-focus" title="Permalink to this heading">¶</a></h2>
 <p>Grants a flat 30 defense regardless of item level</p>
 <p>Requires a pertinent skill level (fishing, herbalism, prospecting, carving, alchemy) greater than or equal to the item level to equip</p>
 <p>Enables an agent to collect a pertinent resource (ration, poultice, scrap, shaving, shard) at a level equal to the item level</p>
 </section>
 <section id="ration">
-<h2>Ration<a class="headerlink" href="#ration" title="Permalink to this headline">¶</a></h2>
+<h2>Ration<a class="headerlink" href="#ration" title="Permalink to this heading">¶</a></h2>
 <p>Consume to restore 5 food and water per item level.</p>
 <p>Requires at least one skill greater than or equal to the item level to use</p>
 </section>
 <section id="poultice">
-<h2>Poultice<a class="headerlink" href="#poultice" title="Permalink to this headline">¶</a></h2>
+<h2>Poultice<a class="headerlink" href="#poultice" title="Permalink to this heading">¶</a></h2>
 <p>Consume to restore 5 health per item level.</p>
 <p>Requires at least one skill greater than or equal to the item level to use</p>
 </section>
