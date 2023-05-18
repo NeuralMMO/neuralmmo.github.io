@@ -1,0 +1,1000 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="v2.0" href="updates.html" /><link rel="prev" title="Environment" href="api.html" />
+
+    <!-- Generated with Sphinx 5.0.0 and Furo 2023.03.27 -->
+        <title>Overview of a typical game of NMMO - Neural MMO 2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #005050;
+  --color-foreground-muted: #005050;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #bbcccc;
+  --color-background-hover: #efeff4ff;
+  --color-background-hover--transparent: #efeff400;
+  --color-background-border: #005050;
+  --color-background-item: #ccc;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: black;
+  --color-brand-content: black;
+  --color-inline-code-background: #f8f9fb;
+  --color-highlighted-background: #ddeeff;
+  --color-guilabel-background: #ddeeff80;
+  --color-guilabel-border: #bedaf580;
+  --color-card-background: #bbcccc;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-problematic: #ee5151;
+  --color-foreground-primary: #f1f1f1;
+  --color-foreground-secondary: #00bbbb;
+  --color-foreground-muted: #00bbbb;
+  --color-foreground-border: #666666;
+  --color-background-primary: #061a1a;
+  --color-background-secondary: #000000;
+  --color-background-hover: #1e2124ff;
+  --color-background-hover--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-background-item: #444;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #00bbbb;
+  --color-brand-content: #00bbbb;
+  --color-highlighted-background: #083563;
+  --color-guilabel-background: #08356380;
+  --color-guilabel-border: #13395f80;
+  --color-admonition-background: #18181a;
+  --color-card-border: #1a1c1e;
+  --color-card-background: #000000;
+  --color-card-marginals-background: #1e2124ff;
+  --color-inline-code-background: #00000000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-problematic: #ee5151;
+  --color-foreground-primary: #f1f1f1;
+  --color-foreground-secondary: #00bbbb;
+  --color-foreground-muted: #00bbbb;
+  --color-foreground-border: #666666;
+  --color-background-primary: #061a1a;
+  --color-background-secondary: #000000;
+  --color-background-hover: #1e2124ff;
+  --color-background-hover--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-background-item: #444;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #00bbbb;
+  --color-brand-content: #00bbbb;
+  --color-highlighted-background: #083563;
+  --color-guilabel-background: #08356380;
+  --color-guilabel-border: #13395f80;
+  --color-admonition-background: #18181a;
+  --color-card-border: #1a1c1e;
+  --color-card-background: #000000;
+  --color-card-marginals-background: #1e2124ff;
+  --color-inline-code-background: #00000000;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Neural MMO 2.0 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">Neural MMO 2.0 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="landing.html"> Neural MMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landing.html#icon-2023-competition"> 2023 Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landing.html#icon-platform"> Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html"> Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-config"> Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-procedural-generation"> Procedural Generation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#"> Overview of a typical game of NMMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#about-combat">About Combat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#professions-tools-and-items">Professions, Tools, and Items</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-market"> Market</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-npcs"> NPCs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-tasks"> Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-tiles-quick-reference"> Tiles Quick Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Updates</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="updates.html"> v2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-6"> v1.6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-5"> v1.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-4"> v1.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-3"> v1.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-2"> v1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-1"> v1.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-0"> v1.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v0-x"> v0.x</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html"> Authorship, License, Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html#ags-namesake"> Namesake</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<img alt="" class="sd-card-img" src="../_static/banner.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+</div>
+</div>
+</div>
+<section id="icon-overview-of-a-typical-game-of-nmmo">
+<h1><img alt="icon" src="../_images/icon.png" /> Overview of a typical game of NMMO<a class="headerlink" href="#icon-overview-of-a-typical-game-of-nmmo" title="Permalink to this heading">#</a></h1>
+<p>Before diving into the Game Wiki, why not warm up and read a narrative of a typical game?</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+NMMO Gameplay Narrative<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Our team of 8 agents is trying to survive. Agents spawn around the edges of a large, square map. A potentially hostile team will spawn to the right and to the left of our team.</p>
+<p class="sd-card-text"><em>Tactics</em>
+Immediately, we have a few options. We can attempt to rush into the center of the map and get away from nearby teams. However, we can only see a limited distance ahead. It is possible that we will get trapped by obstacles and be attacked by both nearby teams at the same time.</p>
+<p class="sd-card-text">We could instead attempt to rush and eliminate the team either directly to our right or to our left. This could result in a better than even chance of victory if we catch them off guard. However, we are likely to lose several agents on our team if we do that.</p>
+<p class="sd-card-text">A third option is to send 1-2 agents to each the right and the left to scout and distract the nearby teams. If they behave passively, the scouts can return to the main team safely. If the scouts are caught and perish, they have at least bought some time for the rest of the team to escape into the rest of the map. This was the strategy learned by the winning agents of the most recent competition. This also represents only the opening 15-30 seconds of play in a 10-minute game.</p>
+<p class="sd-card-text"><em>Playing</em>
+The next step of play is to establish an advantage verses the competition. Agents have access to 8 different professions which can be improved through practice. All of these in some way confer a benefit to offensive or defensive capabilities that allow agents to protect themselves. The team must now decide which agents on the team will spend their time improving which skills.</p>
+<ul class="simple">
+<li><p class="sd-card-text">For example, one agent could practice ranged bow-and-arrow combat by fighting weak non-playable characters (NPCs) that roam the map, while another agent practices fletching to provide the former with powerful arrows as ammunition.</p></li>
+<li><p class="sd-card-text">One agent could practice herbalism, allowing them to make potions to heal the rest of the team. One agent could practice Magic, which is a powerful counter to hostile opponents using Melee combat.</p></li>
+<li><p class="sd-card-text">Multiple agents could practice different forms of combat and aggressively challenge more powerful NPCs. Winning yields defensive equipment to share with the rest of the team.</p></li>
+</ul>
+<p class="sd-card-text"><em>Trade-offs and Strategy</em>
+Agents should spread out to search for resources but stay together to create safety in numbers. Agents should diversify their skills but do not have the time to develop expertise in all professions. Agents may sell unneeded items on a global market but should be wary of giving the competition an edge. Agents should proactively seek out potential enemies but only if they catch them unawares or otherwise have a strategic advantage. Ultimately, these decisions are a matter of strategy and opportunism - plans may change to become more aggressive or conservative depending on what resources agents are able to harvest early in the game. This stage of play occupies the next few minutes.</p>
+<p class="sd-card-text"><em>Closing in</em>
+At this stage, the edges of the map become dangerous. Agents will begin taking damage from “poisonous fog” if they do not move towards the center of the map. This fog slowly expands to occupy all but the center of the map - a mechanic borrowed from the battle royale genre of games. This forces encounters between agent teams. If our team did not fight before, it will almost certainly have to now. By this stage, most if not all teams will lose at least a couple of agents. Strategically better teams still maintain positional advantage, either by having more agents remaining or by having acquired better equipment.</p>
+<p class="sd-card-text"><em>Final moments</em>
+At the end of the game, the fog closes to a tight central area. Assuming our team is still alive, we should assess our situation and determine whether we are better or worse equipped than the remaining team(s). If we think we have the advantage, we should aggressively challenge and encircle any weaker opponents attempting to evade us, while being wary of attacks by a third party. If we think we are at a disadvantage, we should attempt to evade and lure opponents into exposing themselves to a third party. These are all tactics that emerged in the previous NMMO competition, and they are reminiscent of the strategies human players employ in many battle royale games.</p>
+</div>
+</details></section>
+<section id="the-game-map">
+<h1>The Game Map<a class="headerlink" href="#the-game-map" title="Permalink to this heading">#</a></h1>
+<p>Each instance of Neural MMO contains an automatically generated tile-based game map of 128 x 128 tiles. The map is surrounded by Void. Agents that attempt to walk into the void dissapear, never to be seen again.</p>
+<dl class="simple">
+<dt>Tiles are broadly categorized as follows:</dt><dd><ul class="simple">
+<li><p><em>Passable</em> tiles can be walked on while <em>obstacle</em> tiles block movement</p></li>
+<li><p><em>Resource</em> tiles can be harvested while <em>non-resource</em> cannot</p></li>
+</ul>
+</dd>
+</dl>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Tile Type</strong></p></th>
+<th class="head"><p><em>Passable</em></p></th>
+<th class="head"><p><em>Obstacle</em></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Resource</strong></p></td>
+<td><p>Foliage, Ore, Tree, Crystal</p></td>
+<td><p>Water, Fish</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Non-resource</strong></p></td>
+<td><p>Grass, Harvested Tile</p></td>
+<td><p>Stone, Void</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Resource</em> tiles may be harvested. <em>Passable</em> tiles are harvested by walking over them and <em>non-passable</em> tiles by walking next to them. The resource is then consumed from the tile. It will regenerate randomly over time on the same tile. The only exception is the Water tile, which provides unlimited resource.</p>
+<p>Visibility range is 7 tiles.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+About the tile generation algorithm<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The default tile generation algorithm is more sophisticated than typical Perlin noise – it stretches the space of one Perlin fractal using a second Perlin fractal. It further attempts to scale spacial frequency to be higher at the edges of the map and lower at the center. This effect is not noticable in small maps but creates large deviations in local terrain structure in larger maps.</p>
+</div>
+</details><section id="icon-survival">
+<h2><img alt="icon" src="../_images/icon.png" /> Survival<a class="headerlink" href="#icon-survival" title="Permalink to this heading">#</a></h2>
+<p>Agents have health, food, and water. These are displayed overhead as green, gold, and blue bars respectively. Agents must stay full, hydrated, and healthy in order to survive.</p>
+<dl class="simple">
+<dt>Losing and gaining resources:</dt><dd><ul class="simple">
+<li><p>Health, food, and water start at 100</p></li>
+<li><p>Agents lose 5 food and 5 water per game tick</p></li>
+<li><p>Agents lose 10 health per tick if out of food</p></li>
+<li><p>Agents lose 10 health per tick if out of water</p></li>
+<li><p>These values add - lose 20 health if out of food and water per tick</p></li>
+<li><p>If above half food and half water, agents regain 10 health per tick</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Tick:</strong> The gameplay consists of time units called “ticks.” When rendering, the game moves at 0.6s/tick.</p>
+<p>Agents can replenish food and water. Walking on a foliage tile restores food to 100. The foliage tile then is harvested and will respawn at a random time in the same place. Walking adjacent to a water tile restores water to 100. Water tiles do not empty.</p>
+</section>
+</section>
+<section id="icon-competition-environment-and-levels">
+<h1><img alt="icon" src="../_images/icon.png" /> Competition Environment and Levels<a class="headerlink" href="#icon-competition-environment-and-levels" title="Permalink to this heading">#</a></h1>
+<p>At the start of a game, all agents on all teams spawn (enter the game) together around the perimeter of the map on the same tile. Agent teams are evenly dispersed around the perimeter.</p>
+<p>Non-Player Characters (NPCs) are any agent not controlled by a user; sometimes called a <em>mob</em>. NPCs are scattered across the entire map. They get stronger and more aggressive towards the center. NPCs are all individuals; they fight each other as well; and they are all controlled by basic scripts. Their aggression and strength levels are correlated, but otherwise are identical.</p>
+<p>Agents can occupy the same tile as other agents. There is no limit to number or type of agents on a single tile, including enemy agents and NPCs.</p>
+<p><strong>Time and Gameplay</strong>
+Each tick provides the opportunity for every Agent and NPC to do any, all or none of the following actions:</p>
+<p><strong>Move 1 tile in any available direction</strong></p>
+<ul class="simple">
+<li><p>Agents cannot move off of the game space, or <strong>into water.</strong></p></li>
+<li><p>As the game progresses, the action space becomes constrained as a fog encircles the board. Agents cannot be in tiles covered in fog, and all gradually move towards the center of the game space.</p></li>
+</ul>
+<p><strong>Attack an Agent - either NPC or from another team</strong></p>
+<ul class="simple">
+<li><p>Attack can only be against one other Agent or NPC</p></li>
+<li><p>To attack, your Agent must be within three tiles as the opponent – actually within a 7x7 square around your Agent.**</p></li>
+</ul>
+<p><strong>Inventory Management</strong></p>
+<p>Inventory capacity is 12 items, including armor, weapon, tools, and consumables.</p>
+<ul class="simple">
+<li><p>Buy or Sell in the Market</p></li>
+<li><p>Destroy an item if no market value</p></li>
+<li><p><strong>Giving an item to a team mate is only permitted when standing on the same tile</strong></p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+About the Observation Space<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<blockquote>
+<div><p class="sd-card-text">Each agent observes a groups of entities comprising nearby tiles and agents, its own inventory, and the market. Continuous and discrete tensors of attributes parametrize each entity group. An extra variable <em>N</em> counts the number of entities per group.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Observation space of a single agent</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<dl>
+<dt>observation_space(agent_id) = {</dt><dd><blockquote>
+<div><p class="sd-card-text">‘AgentId’: Discrete(1),
+‘Entity’ :Box(-1048576.0, 1048576.0, (100, 22), float32),
+‘Inventory’: Box(-1048576.0, 1048576.0, (12, 16), float32),
+‘Market’: Box(-1048576.0, 1048576.0, (640, 16), float32),
+‘Tick’: Box(-1048576.0, 1048576.0, (1, 1), float32),
+‘Tile’: Box(-1048576.0, 1048576.0, (225, 3), float32)</p>
+</div></blockquote>
+<p class="sd-card-text">}</p>
+</dd>
+</dl>
+</div>
+</details><section id="levels">
+<h2>Levels<a class="headerlink" href="#levels" title="Permalink to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Agent Levels</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Levels range from 1 to 10</p></li>
+<li><p>Agents spawn with all skills at level 1 (0 XP)</p></li>
+<li><p>Level x+1 requires 10*2^x* XP</p></li>
+<li><p>Agents are awarded 1 XP per attack</p></li>
+<li><p>Agents are awarded 1 XP per ammunition resource gathered</p></li>
+<li><p>Agents are awarded 5 XP per consumable resource gathered</p></li>
+<li><p>All items except gold will appear in varying levels</p></li>
+</ul>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Items and Equipment Levels</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>All items appear in level 1-10 variants.</p></li>
+<li><p>Agents can equip armor up to the level of their highest skill</p></li>
+<li><p>Agents can equip weapons up to the level of the associated skill</p></li>
+<li><p>Agents can equip ammunition and tools up to the level of the associated skill</p></li>
+</ul>
+</div>
+</div>
+<p>Each agent may take multiple actions per tick – one from each category. Each action accepts arguments.</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Action space of a single agent</span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">action_space</span><span class="p">(</span><span class="n">agent_idx</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Move</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Direction</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">North</span><span class="p">,</span>
+            <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">South</span><span class="p">,</span>
+            <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">East</span><span class="p">,</span>
+            <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">West</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Attack</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Style</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Melee</span><span class="p">,</span>
+            <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Range</span><span class="p">,</span>
+            <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Mage</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Target</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">Entity</span> <span class="n">Pointer</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Use</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Item</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">Inventory</span> <span class="n">Pointer</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Sell</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Item</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">Inventory</span> <span class="n">Pointer</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Price</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">Discrete</span> <span class="n">Value</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Buy</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Item</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">Market</span> <span class="n">Pointer</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Comm</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">nmmo</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">Token</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">Discrete</span> <span class="n">Value</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="about-combat">
+<h1>About Combat<a class="headerlink" href="#about-combat" title="Permalink to this heading">#</a></h1>
+<p>Each agent can attack one opponent per game tick. In a given tick, multiple enemy agents can attack a single agent. Agents select from Melee, Range, and Mage style attacks. An agent’s main combat skill is the one that they use the most / have the highest level in. This is denoted by the hat they are wearing.</p>
+<dl class="simple">
+<dt>Attack skills obey a rock-paper-scissors dominance relationship:</dt><dd><ul class="simple">
+<li><p>Melee beats Range</p></li>
+<li><p>Range beats Mage</p></li>
+<li><p>Mage beats Melee</p></li>
+</ul>
+</dd>
+</dl>
+<p>Attack range is 3 tiles, full sweep view.</p>
+<p><strong>Insert Image</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Choosing attack style</label><div class="sd-tab-content docutils">
+<p>The attacker can select the skill strongest against the target’s main skill. This multiplies the effectiveness of the attack. However, the defender can immediately retaliate in the same way. A strong agent with a higher level and better equipment can still beat a weaker agent, even if the weaker agent uses the attack style that multiplies damage.</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Armor</label><div class="sd-tab-content docutils">
+<p>There are three pieces of armor: Hat, Top, Bottom. Armor requires at least one skill ≥ the item level to equip. Armor provides defense that increases with equipment level.</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Weapons and Tools</label><div class="sd-tab-content docutils">
+<p>Weapons require an associated fighting style skill level ≥ the item level to equip. Weapons boost attacks; higher level weapons provide more boost. Tools grant a flat defense regardless of item level.</p>
+</div>
+</div>
+<dl class="simple">
+<dt><strong>Damage</strong> to health is a randomized function based on several factors, including:</dt><dd><ul class="simple">
+<li><p>Fighting style</p></li>
+<li><p>Combat skill level</p></li>
+<li><p>Weapon level</p></li>
+<li><p>Armor levels</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">COMBAT_DAMAGE_FORMULA</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offense</span><span class="p">,</span> <span class="n">defense</span><span class="p">,</span> <span class="n">multiplier</span><span class="p">):</span>
+<span class="w">   </span><span class="sd">&#39;&#39;&#39;Damage formula&#39;&#39;&#39;</span>
+   <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">multiplier</span> <span class="o">*</span> <span class="p">(</span><span class="n">offense</span> <span class="o">*</span> <span class="p">(</span><span class="mi">15</span> <span class="o">/</span> <span class="p">(</span><span class="mi">15</span> <span class="o">+</span> <span class="n">defense</span><span class="p">))))</span>
+</pre></div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example combat interaction<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Start:</p>
+<p class="sd-card-text"><em>Agent You:</em> 100 HP, poor armor and weapons</p>
+<p class="sd-card-text"><em>Agent Them:</em> 75 HP, good armor and weapons</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="sd-card-text">Tick 1:</p>
+<p class="sd-card-text">You attack them. They lose 18 HP</p>
+<p class="sd-card-text">They attack you. You lose 27 HP</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="sd-card-text">Tick 2:</p>
+<p class="sd-card-text">You attack them. They lose 14 HP</p>
+<p class="sd-card-text">They attack you. You lose 32 HP</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="sd-card-text">Tick 3:</p>
+<p class="sd-card-text">You attack them. They lose 18 HP</p>
+<p class="sd-card-text">They run</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="sd-card-text">Tick 4: You chase and attack them. They lose 15 HP.</p>
+<p class="sd-card-text">They consume a poultice to regain 50 HP and run some more.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p class="sd-card-text">This continues for some time, with your opponent running away, and you chasing them.
+Eventually, you give up and let them go. Your HP is low, and they had to consume a poultice.</p>
+<p class="sd-card-text">Fortunately, this was only a training run, and you now can reconsider your strategy for the next round.</p>
+</div>
+</details></section>
+<section id="professions-tools-and-items">
+<h1>Professions, Tools, and Items<a class="headerlink" href="#professions-tools-and-items" title="Permalink to this heading">#</a></h1>
+<p>There are 8 Professions that Agents can learn and level up in. Agents can improve their skills in multiple Professions, but will not be able to progress in all Professions. How Professions are distributed across Agent teams is a part of game strategy.</p>
+<p>For Skills Prospecting, Carving, and Alchemy, agents walk on the associated resource tile to harvest the resource. Agent receives a different quality/level of resource, depending on agent levels/tools. The resource tile will respawn later in the same place. There is a 2.5 percent chance to obtain a weapon while gathering ammunition on a tile.</p>
+<p><strong>Agents have an inventory that can hold 12 items.</strong></p>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Item Type</strong></p></th>
+<th class="head"><p><em>Profession</em></p></th>
+<th class="head"><p><em>Tool</em></p></th>
+<th class="head"><p><em>Level up method</em></p></th>
+<th class="head"><p><em>HP Effect</em></p></th>
+<th class="head"><p><em>Food/Water Level</em></p></th>
+<th class="head"><p><em>Market Buy/Sell</em></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td rowspan="3"><p><strong>Combat</strong></p></td>
+<td><p>Mage</p></td>
+<td><p>Wand</p></td>
+<td rowspan="3"><p>Hitting and
+damaging
+NPCs and
+Enemies</p></td>
+<td rowspan="3"><p>-HP level
+unless you
+take no
+damage</p></td>
+<td rowspan="3"></td>
+<td><p>Wand</p></td>
+</tr>
+<tr class="row-odd"><td><p>Melee</p></td>
+<td><p>Sword</p></td>
+<td><p>Sword</p></td>
+</tr>
+<tr class="row-even"><td><p>Range</p></td>
+<td><p>Bow</p></td>
+<td><p>Bow</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="5"><p><strong>Gathering</strong></p></td>
+<td><p>Fishing</p></td>
+<td><p>Rod</p></td>
+<td rowspan="5"><p>Level up via
+experience
+and use</p></td>
+<td><p>+HP level</p></td>
+<td rowspan="2"><p>+Food &amp;
+Water level</p></td>
+<td><p>Fish Ration</p></td>
+</tr>
+<tr class="row-even"><td><p>Herbalism</p></td>
+<td><p>Gloves</p></td>
+<td><p>+HP level</p></td>
+<td><p>Poultice</p></td>
+</tr>
+<tr class="row-odd"><td><p>Carving</p></td>
+<td><p>Chisel</p></td>
+<td><p>+HP level</p></td>
+<td rowspan="3"></td>
+<td><p>Chisel &amp; Shaving</p></td>
+</tr>
+<tr class="row-even"><td><p>Prospecting</p></td>
+<td><p>Pickaxe</p></td>
+<td><p>+HP level</p></td>
+<td><p>Pickaxe &amp; Scrap</p></td>
+</tr>
+<tr class="row-odd"><td><p>Alchemy</p></td>
+<td><p>Arcane</p></td>
+<td></td>
+<td><p>Arcane &amp; Shards</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="simple">
+<dt><strong>Tools</strong></dt><dd><ul class="simple">
+<li><p>All Tools provide a flat 30 defense regardless of item level</p></li>
+<li><p>Tools need a relevant skill level (fishing, herbalism, prospecting, carving, alchemy) ≥ the item level to equip</p></li>
+<li><p>Tools enable an agent to collect an associated resource (ration, poultice, scrap, shaving, shard) at a level equal to the item level</p></li>
+</ul>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt><strong>Rations</strong></dt><dd><ul>
+<li><p>Consume rations to restore 5 food and water per item level</p></li>
+<li><p>Requires at least one skill greater than or equal to the item level to use</p>
+<p>A rod is used to collect the rations. Alternatively, agents can buy rations in the market.</p>
+<p>For example, agents can harvest a level 3 fish only with a level 3 rod. If they buy a fish in the market, they can eat level 3 fish by just having any skill level 3 or above. If they buy a ration with a level higher than any of their skills, they can store but cannot eat it until a skill level = the ration level.</p>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt><strong>Poultices</strong></dt><dd><ul class="simple">
+<li><p>Consume to restore 5 health per gloves level.</p></li>
+<li><p>Requires at least one skill greater than or equal to the glove level to use.</p></li>
+</ul>
+<p>The same rules about levels apply to poultices and rations.</p>
+</dd>
+</dl>
+</section>
+<section id="icon-market">
+<h1><img alt="icon" src="../_images/icon.png" /> Market<a class="headerlink" href="#icon-market" title="Permalink to this heading">#</a></h1>
+<p>Gold coins are the currency for buying and selling items in NMMO. Gold coins cannot be sub-divided. Agents set their own prices and receive gold when someone is willing to accept their price. Within the same team, can gift to one another if they are standing on the same tile.</p>
+<dl class="simple">
+<dt>Market interactions are as follows:</dt><dd><ul class="simple">
+<li><p>Agents place sell offers on the market for one of their items at a desired price</p></li>
+<li><p>The item is immediately removed from the seller’s inventory</p></li>
+<li><p>Other agents can immediately buy that item and receive it</p></li>
+<li><p>If multiple agents attempt to buy the same item at the same time, the market will attempt to fulfill the request from another seller at a price no more than 10% higher.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Agents only observe the current best offer for each item of each level. This bounds the observation and action spaces.</p>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="4"><p><strong>BUY and SELL with GOLD</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="4"><p><strong>COMBAT items</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Tools</em></p></td>
+<td><p><em>Ammunitions</em></p></td>
+<td><p><em>Weapons</em></p></td>
+<td><p><em>Armors</em></p></td>
+</tr>
+<tr class="row-even"><td><p>AXE</p></td>
+<td><p>Wood ARROWS</p></td>
+<td><p>BOW</p></td>
+<td><p>HAT</p></td>
+</tr>
+<tr class="row-odd"><td><p>PICKAXE</p></td>
+<td><p>Rock WHETSTONES</p></td>
+<td><p>SWORD</p></td>
+<td><p>TOP</p></td>
+</tr>
+<tr class="row-even"><td><p>CHISEL</p></td>
+<td><p>Magic RUNES</p></td>
+<td><p>WAND</p></td>
+<td><p>BOTTOM</p></td>
+</tr>
+<tr class="row-odd"><td colspan="4"><p><strong>Health items</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><em>Tools</em></p></td>
+<td colspan="3"><p><em>Consumables</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>ROD</p></td>
+<td colspan="3"><p>HARVEST fish to produce RATION items (restore water and food)</p></td>
+</tr>
+<tr class="row-even"><td><p>GLOVES</p></td>
+<td colspan="3"><p>HARVEST herbs to produce POTION items (restore health)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="icon-npcs">
+<h1><img alt="icon" src="../_images/icon.png" /> NPCs<a class="headerlink" href="#icon-npcs" title="Permalink to this heading">#</a></h1>
+<dl class="simple">
+<dt><strong>Characteristics</strong></dt><dd><ul class="simple">
+<li><p>NPCs are controlled by one of three scripted AIs</p></li>
+<li><p>Passive NPCs wander randomly and cannot attack</p></li>
+<li><p>Neutral NPCs wander randomly but will attack aggressors and give chase using a Dijkstra’s algorithm based pathing routine</p></li>
+<li><p>Hostile NPCs will actively hunt down and attack other NPCs and players using the same pathing algorithm</p></li>
+<li><p>NPCs will appear in varying levels</p></li>
+</ul>
+</dd>
+<dt><strong>NPC Items</strong></dt><dd><ul class="simple">
+<li><p>NPCs spawn with random armor piece</p></li>
+<li><p>NPCs spawn with a random tool</p></li>
+<li><p>Any equipment dropped will be of level equal to the NPC’s level</p></li>
+<li><p>NPCs spawn with gold equal to their level</p></li>
+</ul>
+</dd>
+</dl>
+<p>Generally, Passive NPCs will spawn towards the edges of the map, Hostile NPCs spawn in the middle, and Neutral NPCs spawn somewhere between.</p>
+</section>
+<section id="icon-tasks">
+<h1><img alt="icon" src="../_images/icon.png" /> Tasks<a class="headerlink" href="#icon-tasks" title="Permalink to this heading">#</a></h1>
+<p><strong>In process</strong></p>
+<dl class="simple">
+<dt><strong>About Tasks</strong></dt><dd><ul class="simple">
+<li><p>Goal is to accomplish specific tasks from the curriculum for points.</p></li>
+<li><p>Tasks are randomly generated and assigned at the beginning of each round.</p></li>
+<li><p>If a Team accomplishes a Task, they receive 1 point for the round.</p></li>
+<li><p>Each team receives different tasks from one another each round.</p></li>
+<li><p>Difficulty of the tasks evens out, as all teams compete with each other 1024 rounds to determine the best teams overall in that group.</p></li>
+<li><p>Based on the average scores, teams are placed in the next round of 1024 with other teams whose performance matches their own.</p></li>
+</ul>
+</dd>
+</dl>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Sample tasks<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<dl class="simple">
+<dt>Inflict(damage_type, quantity) -</dt><dd><ul class="simple">
+<li><p class="sd-card-text">Damage_type = 3 combat styles</p></li>
+<li><p class="sd-card-text">Quantity = 1-100 HP out of total 100 HP</p></li>
+<li><p class="sd-card-text">Ex. Inflict 5 damage with melee</p></li>
+</ul>
+</dd>
+<dt>Defeat(npc/player, level)</dt><dd><ul class="simple">
+<li><p class="sd-card-text">npc/player = NPC or Player, Unit = 1</p></li>
+<li><p class="sd-card-text">Level = 1-10</p></li>
+<li><p class="sd-card-text">Defeat a level 5 npc</p></li>
+</ul>
+</dd>
+<dt>Achieve(skill, level)</dt><dd><ul class="simple">
+<li><p class="sd-card-text">Skill = 8 skills (Professions)</p></li>
+<li><p class="sd-card-text">Level = 10</p></li>
+<li><p class="sd-card-text">Ex: Achieve level 5 prospecting</p></li>
+</ul>
+</dd>
+<dt>Harvest(resource, level)</dt><dd><ul class="simple">
+<li><p class="sd-card-text">Resource = 5 resources</p></li>
+<li><p class="sd-card-text">Level = 10 levels</p></li>
+<li><p class="sd-card-text">Ex: collect a level 3 shard</p></li>
+</ul>
+</dd>
+<dt>Equip(type, level)</dt><dd><ul class="simple">
+<li><p class="sd-card-text">Type = Hat, Top, Bottom</p></li>
+<li><p class="sd-card-text">Level = 10</p></li>
+<li><p class="sd-card-text">Ex: equip a level 5 hat</p></li>
+</ul>
+</dd>
+<dt>Hoard(gold) - Accumulate a total of 20 gold as a team</dt><dd><ul class="simple">
+<li><p class="sd-card-text">Gold: Units of transaction ingots</p></li>
+</ul>
+</dd>
+<dt>Group(num_tiles, num_teammates) - Always stay within 5 tiles of at least 3 of your teammates</dt><dd><ul class="simple">
+<li><p class="sd-card-text">Num_tiles: Variable starting with tile you’re on as 0</p></li>
+<li><p class="sd-card-text">Num_teammates: Self evident. Stay together-ish</p></li>
+</ul>
+</dd>
+<dt>Spread(num_tiles, num_teammates) - Always stay at least 5 tiles away from at least 3 of your teammates</dt><dd><ul class="simple">
+<li><p class="sd-card-text">Opposite of Group</p></li>
+</ul>
+</dd>
+<dt>Defend(teammate) - Don’t let your 3rd teammate die</dt><dd><ul class="simple">
+<li><p class="sd-card-text">Teammate: Specific member of your team can’t die</p></li>
+</ul>
+</dd>
+<dt>Eliminate(team, direction) - Eliminate the team that spawns to your right</dt><dd><ul class="simple">
+<li><p class="sd-card-text">Team: ID # of team</p></li>
+<li><p class="sd-card-text">Direction: Left; Right</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</details></section>
+<section id="icon-tiles-quick-reference">
+<h1><img alt="icon" src="../_images/icon.png" /> Tiles Quick Reference<a class="headerlink" href="#icon-tiles-quick-reference" title="Permalink to this heading">#</a></h1>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Tile Resource</strong></p></th>
+<th class="head"><p><strong>Purpose</strong></p></th>
+<th class="head"><p><strong>Obtaining</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p><strong>WATER Tile Resources</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>WATER</p></td>
+<td><p>WATER to DRINK</p></td>
+<td><p>Stand next to WATER
+to DRINK</p></td>
+</tr>
+<tr class="row-even"><td><p>FISH</p></td>
+<td><p>RATION item to EAT</p></td>
+<td><p>ROD to HARVEST</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p><strong>GRASS Tile Resources</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>FOOD</p></td>
+<td><p>FOOD to EAT</p></td>
+<td><p>Stand on FOOD
+to EAT</p></td>
+</tr>
+<tr class="row-odd"><td><p>HERB</p></td>
+<td><p>POTION item to
+increase HEALTH</p></td>
+<td><p>GLOVES to HARVEST</p></td>
+</tr>
+<tr class="row-even"><td><p>TREE</p></td>
+<td><p>ARROWS boost BOW
+damage of RANGE combat</p></td>
+<td><p>AXE to HARVEST</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p><strong>STONE Tile Resources</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>ORE</p></td>
+<td><p>WHETSTONES boost SWORD
+damage of MELEE combat</p></td>
+<td><p>PICKAXE to HARVEST</p></td>
+</tr>
+<tr class="row-odd"><td><p>CRYSTAL</p></td>
+<td><p>RUNES boost WAND
+damage of MAGIC combat</p></td>
+<td><p>CHISEL to HARVEST</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><strong>GOLD Resources</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>GOLD</p></td>
+<td><p>BUY items from other
+players on the MARKET</p></td>
+<td><p>SELL items. DEFEAT
+NPCs.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="updates.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"> v2.0</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="api.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"> Environment</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Joseph Suarez
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    </body>
+</html>

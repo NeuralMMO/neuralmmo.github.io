@@ -1,0 +1,697 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Environment" href="api.html" /><link rel="prev" title="Welcome to Neural MMO’s documentation!" href="../index.html" />
+
+    <!-- Generated with Sphinx 5.0.0 and Furo 2023.03.27 -->
+        <title>Neural MMO - Neural MMO 2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #005050;
+  --color-foreground-muted: #005050;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #bbcccc;
+  --color-background-hover: #efeff4ff;
+  --color-background-hover--transparent: #efeff400;
+  --color-background-border: #005050;
+  --color-background-item: #ccc;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: black;
+  --color-brand-content: black;
+  --color-inline-code-background: #f8f9fb;
+  --color-highlighted-background: #ddeeff;
+  --color-guilabel-background: #ddeeff80;
+  --color-guilabel-border: #bedaf580;
+  --color-card-background: #bbcccc;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-problematic: #ee5151;
+  --color-foreground-primary: #f1f1f1;
+  --color-foreground-secondary: #00bbbb;
+  --color-foreground-muted: #00bbbb;
+  --color-foreground-border: #666666;
+  --color-background-primary: #061a1a;
+  --color-background-secondary: #000000;
+  --color-background-hover: #1e2124ff;
+  --color-background-hover--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-background-item: #444;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #00bbbb;
+  --color-brand-content: #00bbbb;
+  --color-highlighted-background: #083563;
+  --color-guilabel-background: #08356380;
+  --color-guilabel-border: #13395f80;
+  --color-admonition-background: #18181a;
+  --color-card-border: #1a1c1e;
+  --color-card-background: #000000;
+  --color-card-marginals-background: #1e2124ff;
+  --color-inline-code-background: #00000000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-problematic: #ee5151;
+  --color-foreground-primary: #f1f1f1;
+  --color-foreground-secondary: #00bbbb;
+  --color-foreground-muted: #00bbbb;
+  --color-foreground-border: #666666;
+  --color-background-primary: #061a1a;
+  --color-background-secondary: #000000;
+  --color-background-hover: #1e2124ff;
+  --color-background-hover--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-background-item: #444;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #00bbbb;
+  --color-brand-content: #00bbbb;
+  --color-highlighted-background: #083563;
+  --color-guilabel-background: #08356380;
+  --color-guilabel-border: #13395f80;
+  --color-admonition-background: #18181a;
+  --color-card-border: #1a1c1e;
+  --color-card-background: #000000;
+  --color-card-marginals-background: #1e2124ff;
+  --color-inline-code-background: #00000000;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Neural MMO 2.0 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">Neural MMO 2.0 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#"> Neural MMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-2023-competition"> 2023 Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-platform"> Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html"> Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-config"> Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#icon-procedural-generation"> Procedural Generation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html"> Overview of a typical game of NMMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#about-combat">About Combat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-market"> Market</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-npcs"> NPCs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-tasks"> Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-tiles-quick-reference"> Tiles Quick Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Updates</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="updates.html"> v2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-6"> v1.6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-5"> v1.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-4"> v1.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-3"> v1.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-2"> v1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-1"> v1.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-0"> v1.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v0-x"> v0.x</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html"> Authorship, License, Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html#ags-namesake"> Namesake</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>News:</strong> 2.0 is now in soft-launch. The environment is stable and a working version of the RL baseline is available, but not everything has been fully tuned and documented.</p>
+<p>Neural MMO is a computationally accessible, open-source research platform that simulates populations of agents in virtual worlds. We challenge you to train a team of agents to complete <em>tasks they have never seen before against opponents they have never seen before on maps they have never seen before</em>. Our objective is to spur research on increasingly general and cognitively realistic environments.</p>
+<div class="sd-card sd-sphinx-override sd-w-75 sd-mt-4 sd-mb-2 sd-ml-auto sd-mr-auto sd-shadow-sm sd-card-hover sd-text-center docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong>Demo Neural MMO in your browser</strong></p>
+</div>
+<a class="sd-stretched-link reference external" href="https://neuralmmo.github.io/client"></a></div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<figure class="align-default">
+<img alt="../_images/poster.png" src="../_images/poster.png" />
+</figure>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Competition</div>
+<p class="sd-card-text">Compete for $20,000 in prizes at NeurIPS 2023</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://www.aicrowd.com/search?utf8=%E2%9C%93&amp;q=neural+mmo"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Baselines</div>
+<p class="sd-card-text">Training curves and metrics on WandB</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://wandb.ai/jsuarez/NeuralMMO/reportlist"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Paper</div>
+<p class="sd-card-text">Read our NeurIPS 2021 Datasets paper</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/44f683a84163b3523afe57c2e008bc8c-Abstract-round1.html"></a></div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Discord</div>
+<p class="sd-card-text">Join our community for support and discussion</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://discord.gg/BkMmFUC"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Github</div>
+<p class="sd-card-text">Neural MMO is free and open-source software</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://github.com/neuralmmo"></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Twitter</div>
+<p class="sd-card-text">Follow the creator on Twitter</p>
+</div>
+<a class="sd-stretched-link reference external" href="https://twitter.com/jsuarez5341"></a></div>
+</div>
+</div>
+</div>
+<section id="icon-neural-mmo">
+<h1><img alt="icon" src="../_images/icon.png" /> Neural MMO<a class="headerlink" href="#icon-neural-mmo" title="Permalink to this heading">#</a></h1>
+<p>Your team of 8 Agents must collect food and water to survive. Each Agent has 8 individual professions to help them collect resources. Resources can be used to create consumable items that restore food, water and heath as well as to create ammunition that increases damage in combat. Higher level resources create better consumables and ammunition. Agents may aquire armor to protect themselves in combat and weapons to increase their damage output. Agents can also trade items on a global market. Agents can attack each other using one of three styles: Melee, Range, and Magic. Agents can level up their skills in each style and in each profession. The world is populated by NPCs that can be defeated to obtain items and increase power.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+PufferTank</label><div class="sd-tab-content docutils">
+<dl class="simple">
+<dt>Docker container including Neural MMO and GPU-accelerated baselines. Guarantees correct dependencies and environment setup. We recommended the following setup for local containerized development:</dt><dd><ul class="simple">
+<li><p>Install Docker Hub, VSCode, and the VSCode dev containers plugin.</p></li>
+<li><p>Clone the competition branch of <a class="reference external" href="https://github.com/PufferAI/PufferTank">PufferTank</a> on Linux/MacOS/WSL</p></li>
+<li><p>VSCode: F1 -&gt; “Remote-Containers: Open Folder in Container” -&gt; Select PufferTank folder</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pufferai</span><span class="o">/</span><span class="n">puffertank</span> <span class="o">--</span><span class="n">branch</span><span class="o">=</span><span class="n">competition</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Pip Package</label><div class="sd-tab-content docutils">
+<p>#WARNING: No pip package during soft launch. Use Docker or source.
+Official support for Ubuntu 20.04/22.04, WSL, and MacOS</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quotes for mac compatibility.</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;nmmo&quot;</span>
+
+<span class="c1"># Clone baselines repository</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Source</label><div class="sd-tab-content docutils">
+<p>Only recommended for developers of Neural MMO who can’t run PufferTank.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span>
+
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">environment</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span>
+
+<span class="n">cd</span> <span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span><span class="p">[</span><span class="nb">all</span><span class="p">]</span>
+
+<span class="c1"># If you want a local copy of the client.</span>
+<span class="c1"># WSL users should run this part on Windows</span>
+<span class="c1"># Download Cocos2d to open</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">client</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+General features of NMMO<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Terrain:</strong> Navigate procedurally generated maps</p></li>
+<li><p class="sd-card-text"><strong>Survival:</strong> Forage for food and water to maintain your health</p></li>
+<li><p class="sd-card-text"><strong>NPC:</strong> Interact with Non-Playable Characters of varying friendliness</p></li>
+<li><p class="sd-card-text"><strong>Combat:</strong> Fight other agents and NPCs with Melee, Range, and Magic</p></li>
+<li><p class="sd-card-text"><strong>Profession:</strong> Use tools to practice Herbalism, Fishing, Prospecting, Carving, and Alchemy</p></li>
+<li><p class="sd-card-text"><strong>Item:</strong> Acquire consumables and and ammunition through professions</p></li>
+<li><p class="sd-card-text"><strong>Equipment:</strong> Increase offensive and defensive capabilities with weapons and armor</p></li>
+<li><p class="sd-card-text"><strong>Progression:</strong> Train combat and profession skills to access higher level items and equipment</p></li>
+<li><p class="sd-card-text"><strong>Exchange:</strong> Trade items and equipment with other agents on a global market</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Contributors<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Joseph Suarez</strong>: Creator and lead developer of Neural MMO.</p>
+<dl class="simple">
+<dt>CarperAI team for NMMO 2.0:</dt><dd><ul class="simple">
+<li><p class="sd-card-text"><strong>David Bloomin</strong>: Rewrite of the engine for 2.0, port and development of the RL baseline</p></li>
+<li><p class="sd-card-text"><strong>Kyoung Whan Choe</strong>: Rewrite of Neural MMO game code and logging for 2.0, contributions to the RL baseline and task system</p></li>
+<li><p class="sd-card-text"><strong>Hao Xiang Li</strong>: Neural MMO 2.0 task system</p></li>
+<li><p class="sd-card-text"><strong>Ryan Sullivan</strong>: Integration with Syllabus for the curriculum learning baseline</p></li>
+<li><p class="sd-card-text"><strong>Nishaanth Kanna</strong>: Co-developer of the ELM curriculum baseline</p></li>
+<li><p class="sd-card-text"><strong>Daniel Scott</strong>: Co-developer of the ELM curriculum baseline</p></li>
+<li><p class="sd-card-text"><strong>Rose S. Shuman</strong>: Technical writing for this documentation site and for the competition</p></li>
+<li><p class="sd-card-text"><strong>Herbie Bradley</strong>: Supervision of the curriculum generation baseline with OpenELM</p></li>
+<li><p class="sd-card-text"><strong>Louis Castricato</strong>: Co-founder and team lead of Carper AI; supervisor of Carper AI development efforts.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="sd-card-text"><strong>Sara Earle</strong>: Created 3D assets and 2D icons for items in NMMO 2.0. Hire her on UpWork if you like what you see here.</p>
+<dl class="simple">
+<dt>Previous open source contributors, listed by time since latest contribution. Discord handle have been used for individuals who have not granted explicit permission to display their real names:</dt><dd><ul class="simple">
+<li><p class="sd-card-text"><strong>Thomas Cloarec</strong>: Developed the dynamic programming backend for scripted baseline agents</p></li>
+<li><p class="sd-card-text"><strong>Jack Garbus</strong>: Major contributions to the logging framework, feedback on the documentation and tutorials</p></li>
+<li><p class="sd-card-text"><strong>&#64;tdimeola</strong>: Feedback on the documentation and tutorials</p></li>
+<li><p class="sd-card-text"><strong>&#64;cehinson</strong>: Mac build of the Unity3D client</p></li>
+<li><p class="sd-card-text"><strong>Yilun Du</strong>: Assisted with experiments for 1.0 at OpenAI</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+BibTex Citation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>@inproceedings{nmmo_neurips,
+   author = {Suarez, Joseph and Du, Yilun and Zhu, Clare and Mordatch, Igor and Isola, Phillip},
+   booktitle = {Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks},
+   editor = {J. Vanschoren and S. Yeung},
+   pages = {},
+   title = {The Neural MMO Platform for Massively Multiagent Research},
+   url = {https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/44f683a84163b3523afe57c2e008bc8c-Paper-round1.pdf},
+   volume = {1},
+   year = {2021}
+}
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="icon-2023-competition">
+<h1><img alt="icon" src="../_images/icon.png" /> 2023 Competition<a class="headerlink" href="#icon-2023-competition" title="Permalink to this heading">#</a></h1>
+<p>Successfully complete the most tasks to win! At stake are $20,000 in prizes sponsored by Parametrix.ai. All submissions receive A100 compute credits for training sponsored by Stability.ai. The competition is currently planned for the start of July 2023.</p>
+<p>Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the objective is for your team of 8 agents to accomplish more tasks than 15 other opponent teams. There are 128 Agents in play at the start of each round, and your submission will be evaluated over thousands of rounds with increasingly difficult tasks. Lobbies are made by a matchmaking algorithm that selects 16 teams of similar skill level. For the RL and Curriculum tracks, all entrants receive up to 8 hours of free A100 compute time per submission to train.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Reinforcement Learning</label><div class="sd-tab-content docutils">
+<p>Train teams of agents using RL to complete tasks. Customize the RL algorithm, model, and reward structure, but leverage a fixed baseline curriculum of tasks for training.</p>
+<p>This is an opportunity for you RL enthusiasts to test your skills building agents that can survive and thrive in a massively multi-agent environment full of potential adversaries. Your task is to implement a <em>policy</em> that defines how your 8 Agent team performs within a novel environment. At the outset of each game, your team will receive a randomly generated task. Complete the task to score a point. We will evaluate submissions against each other over thousands of games. Whoever scores the most points wins.</p>
+<p>The RL track includes control over the RL algorithm, environment rewards signal, observation featurization, and the neural network architecture. The presentation and sampling of tasks are provided by the baseline and are treated as constants. All RL agent teams are trained on the same baseline task curriculum. While hybrid methods are allowed, with the new emphasis on tasks, it is unlikely that pure traditional scripting will be effective.</p>
+<p>We release a baseline repository that includes a model adapted from NetEase’s winning submission to the NeurIPS 2022 competition, a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for simpler training, and WandB for logging and visualization. The baseline is designed to be easy to use and modify. We encourage you to use it as a starting point for your own submissions.</p>
+<dl class="simple">
+<dt>To get started:</dt><dd><ul class="simple">
+<li><p>train.py contains the main training file. Modify hyperprameters and scale here.</p></li>
+<li><p>cleanrl_ppo_lstm.py contains the CleanRL PPO implementation. Modify it to alter the training algorithm. This version includes PufferLib integration and asynchronous environment execution.</p></li>
+<li><p>/model contains the network definition. This is an advanced architecture with a custom featurizer and multiple subnetworks dedicated to processing different types of information.</p></li>
+<li><p>/feature_extractor preprocesses observations from the environment before they are passed to the network. It separately processes the map, inventory, and market observations.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run training. This is very memory intensive!</span>
+<span class="c1"># We are working on a smaller config</span>
+<span class="c1"># The --use_serial_vecenv flat puts envs on a</span>
+<span class="c1"># local process and is useful for debugging</span>
+<span class="n">python</span> <span class="n">train</span><span class="o">.</span><span class="n">py</span>
+
+<span class="c1"># Evaluate a trained checkpoint</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">tools</span><span class="o">.</span><span class="n">evaluate</span> <span class="o">--</span><span class="n">model</span><span class="o">.</span><span class="n">checkpoint</span> <span class="n">model_weights</span><span class="o">/</span><span class="n">achievements_4x10_new</span><span class="mf">.200</span><span class="o">.</span><span class="n">pt</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Curriculum Generation</label><div class="sd-tab-content docutils">
+<p>The Curriculum track is a great way for programmers to compete and participate, without the need for advanced knowledge of AI. In this track, you will design unique and useful curricula for training successful teams on tasks. A curriculum is a structured set of tasks presented to the RL algorithm intelligently to maximize learning. Design the task generator, task sampler, and reward using Python.</p>
+<p>All submitted curricula will be applied to the same baseline RL policy to control a team of agents. Your objective is to create a curriculum of tasks that results in better, more robust learning such that agents are able to complete tasks not seen during training. You will receive performance metrics to see how effective the curriculum is and iterate your training curriculum. The reinforcement learning algorithm, observation featurization, and neural network architecture are provided by the baseline and remain constant across teams.</p>
+<p>The baseline for this track includes a fixed curriculum of tasks and OpenELM integration. For researchers and advanced users, we encourage approaches leveraging <a class="reference external" href="https://arxiv.org/abs/2206.08896">ELM</a> and provide a code generation model with the baselines.</p>
+<p>By default, Neural MMO provides a reward signal of 1 every tick the agent is alive. Our goal is to provide a flexible, powerful high level API to define rewards - and simple enough for even a language model to program. For example, to reward teams for exploring the map</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scenario</span> <span class="o">=</span> <span class="n">Scenario</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<span class="n">scenario</span><span class="o">.</span><span class="n">add_tasks</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">DistanceTraveled</span><span class="p">(</span><span class="n">dist</span><span class="o">=</span><span class="mi">64</span><span class="p">))</span>
+<span class="n">env</span><span class="o">.</span><span class="n">change_task</span><span class="p">(</span><span class="n">scenario</span><span class="o">.</span><span class="n">tasks</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We define a list of tasks, one for each team - to collectively travel 64 tiles away from the starting position. Agents are gradually rewarded as they move away, with a total reward summed to 1 on completion.</p>
+<dl class="simple">
+<dt>Glossary of key terms</dt><dd><ul class="simple">
+<li><p><strong>GameState</strong> is a simplified read-only snapshot view of the environment.</p></li>
+<li><p><strong>Group</strong> is an immutable set of agents.</p></li>
+<li><p><strong>Predicate</strong> is a special, clipped case of Task.</p></li>
+<li><p><strong>Scenario</strong> is a utility class to help assign subjects to tasks.</p></li>
+<li><p><strong>Task</strong> is a mapping from GameState to a reward shared across its (subject: Group). We provide utilities that cover many use cases.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Get started by defining your own tasks by building from our provided set of operators.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">task</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">OR</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">CountEvent</span><span class="p">(</span><span class="n">event</span><span class="o">=</span><span class="s1">&#39;PLAYER_KILL&#39;</span><span class="p">,</span><span class="n">N</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span><span class="n">p</span><span class="o">.</span><span class="n">TickGE</span><span class="p">(</span><span class="n">num_tick</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">task</span> <span class="o">=</span> <span class="n">task</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="n">scenario</span><span class="o">.</span><span class="n">add_tasks</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+
+<span class="c1"># Rewarding the agent for increasing time isn&#39;t helpful for training</span>
+<span class="c1"># Try improving this task!</span>
+</pre></div>
+</div>
+<p>Some possibilities include OR different tasks to count progress towards either, and MUL (overloaded operator “*””) to scale up rewards. It is possible to explicitly assign subjects and groups to tasks.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">env</span><span class="o">.</span><span class="n">change_task</span><span class="p">([</span><span class="n">StayAlive</span><span class="p">(</span><span class="n">Group</span><span class="p">([</span><span class="n">agent</span><span class="p">]))</span> <span class="k">for</span> <span class="n">agent</span> <span class="ow">in</span> <span class="n">agents</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>More expressivity is possible from decorators &#64;define_task and &#64;define_predicate.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@t</span><span class="o">.</span><span class="n">define_task</span>
+<span class="k">def</span> <span class="nf">KillTask</span><span class="p">(</span><span class="n">gs</span><span class="p">:</span> <span class="n">GameState</span><span class="p">,</span>
+             <span class="n">subject</span><span class="p">:</span> <span class="n">Group</span><span class="p">):</span> <span class="c1"># Annotated with Group to expose env variables</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot; Reward 0.1 per player defeated, with a bonus for the 1st and 3rd kills.&quot;&quot;&quot;</span>
+  <span class="n">num_kills</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">subject</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">PLAYER_KILL</span><span class="p">)</span>
+  <span class="n">score</span> <span class="o">=</span> <span class="n">num_kills</span> <span class="o">*</span> <span class="mf">0.1</span>
+
+  <span class="k">if</span> <span class="n">num_kills</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+
+  <span class="c1"># You can use other tasks in a definition!</span>
+  <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">CountEvent</span><span class="p">(</span><span class="n">subject</span><span class="o">=</span><span class="n">subject</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="s1">&#39;PLAYER_KILL&#39;</span><span class="p">,</span><span class="n">N</span><span class="o">=</span><span class="mi">3</span><span class="p">)(</span><span class="n">gs</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">:</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+
+  <span class="k">return</span> <span class="n">score</span>
+
+<span class="c1"># scenario also accepts fn(Group -&gt; Task), and calls this for all desired</span>
+<span class="c1"># Groups. The default behavior (passing in Task) is similar to the</span>
+<span class="c1"># lambda definition below.</span>
+<span class="c1"># Defined across agents instead of teams.</span>
+<span class="n">scenario</span><span class="o">.</span><span class="n">add_tasks</span><span class="p">(</span><span class="k">lambda</span> <span class="n">agent</span><span class="p">:</span> <span class="n">KillTask</span><span class="p">(</span><span class="n">subject</span><span class="o">=</span><span class="n">agent</span><span class="p">),</span> <span class="n">groups</span><span class="o">=</span><span class="s1">&#39;agents&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We return a score for an input GameState and the reward each tick is the change in score. Advanced usage can involve directly inheriting from the base Task class or subclasses.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TaskOperator itself is a subclass of Task</span>
+<span class="k">class</span> <span class="nc">Repeat</span><span class="p">(</span><span class="n">TaskOperator</span><span class="p">):</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">,</span> <span class="n">subject</span><span class="p">:</span> <span class="n">Group</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; The reward each turn is the value of the operand.&quot;&quot;&quot;</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">subject</span><span class="o">=</span><span class="n">subject</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_current_score</span> <span class="o">=</span> <span class="mi">0</span>
+
+  <span class="k">def</span> <span class="nf">_evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gs</span><span class="p">:</span> <span class="n">GameState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_current_score</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tasks</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">gs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_score</span>
+
+  <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">Config</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">Repeat</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+No Holds Barred</label><div class="sd-tab-content docutils">
+<p>Combine RL and curriculum approaches. Entrants provide their own compute to win via any way possible - just don’t hack our servers!</p>
+<p>Deploy both RL and Curriculum approaches to create the ultimate 8 Agent team policy. All methods are open and no constraints on (self-provided) compute. Only restrictions are: no unauthorized modifications of the game or other submissions.</p>
+<p>If you are here, you know how to get started. Use any of the above baselines or build your own from scratch. This is the only track that does not strictly require winners to open-source their code. However, we strongly encourage you to do so.</p>
+</div>
+</div>
+</section>
+<section id="icon-platform">
+<h1><img alt="icon" src="../_images/icon.png" /> Platform<a class="headerlink" href="#icon-platform" title="Permalink to this heading">#</a></h1>
+<p>The project was inspired by classic Massively Multiplayer Online Role-Playing Games (MMOs) - a genre defined by interaction with a large number of other players. It is a platform for creating intelligent agents parameterized by neural networks. Our goal is to support a broad base of multiagent research that would be impractical or impossible to conduct using other environments. Unlike other game genres typically used in research, MMOs simulate persistent worlds that support rich player interactions and a wider variety of progression strategies. These properties seem important to intelligence in the real world.</p>
+<p>In NMMO, Agents in teams must forage for food and water to stay alive and harvest resources to increase their combat and task completion capabilities. Agents can level up their fighting styles and equipment, practice different professions, and engage in trade based on market demand. The world is also populated by non-player characters (NPCs) of varying friendliness. The massively multiagent setting allow player teams to interact in interesting ways and use entirely different strategies.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nmmo</span> <span class="kn">import</span> <span class="n">Env</span>
+
+<span class="c1"># Default environment - see API for config options</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">Env</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+   <span class="n">actions</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># Compute with your model</span>
+   <span class="n">obs</span><span class="p">,</span> <span class="n">rewards</span><span class="p">,</span> <span class="n">dones</span><span class="p">,</span> <span class="n">infos</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Environments provide a standard PettingZoo API. Join our community Discord and post in #support for help (do not raise Github issues for support). See the cards at the top of this page for source code, baselines, latest publications, social media, and news!</p>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="api.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"> Environment</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Joseph Suarez
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    </body>
+</html>

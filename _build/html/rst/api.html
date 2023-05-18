@@ -1,0 +1,1404 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Overview of a typical game of NMMO" href="game_wiki.html" /><link rel="prev" title="Neural MMO" href="landing.html" />
+
+    <!-- Generated with Sphinx 5.0.0 and Furo 2023.03.27 -->
+        <title>Environment - Neural MMO 2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #005050;
+  --color-foreground-muted: #005050;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #bbcccc;
+  --color-background-hover: #efeff4ff;
+  --color-background-hover--transparent: #efeff400;
+  --color-background-border: #005050;
+  --color-background-item: #ccc;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: black;
+  --color-brand-content: black;
+  --color-inline-code-background: #f8f9fb;
+  --color-highlighted-background: #ddeeff;
+  --color-guilabel-background: #ddeeff80;
+  --color-guilabel-border: #bedaf580;
+  --color-card-background: #bbcccc;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-problematic: #ee5151;
+  --color-foreground-primary: #f1f1f1;
+  --color-foreground-secondary: #00bbbb;
+  --color-foreground-muted: #00bbbb;
+  --color-foreground-border: #666666;
+  --color-background-primary: #061a1a;
+  --color-background-secondary: #000000;
+  --color-background-hover: #1e2124ff;
+  --color-background-hover--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-background-item: #444;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #00bbbb;
+  --color-brand-content: #00bbbb;
+  --color-highlighted-background: #083563;
+  --color-guilabel-background: #08356380;
+  --color-guilabel-border: #13395f80;
+  --color-admonition-background: #18181a;
+  --color-card-border: #1a1c1e;
+  --color-card-background: #000000;
+  --color-card-marginals-background: #1e2124ff;
+  --color-inline-code-background: #00000000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-problematic: #ee5151;
+  --color-foreground-primary: #f1f1f1;
+  --color-foreground-secondary: #00bbbb;
+  --color-foreground-muted: #00bbbb;
+  --color-foreground-border: #666666;
+  --color-background-primary: #061a1a;
+  --color-background-secondary: #000000;
+  --color-background-hover: #1e2124ff;
+  --color-background-hover--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-background-item: #444;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #00bbbb;
+  --color-brand-content: #00bbbb;
+  --color-highlighted-background: #083563;
+  --color-guilabel-background: #08356380;
+  --color-guilabel-border: #13395f80;
+  --color-admonition-background: #18181a;
+  --color-card-border: #1a1c1e;
+  --color-card-background: #000000;
+  --color-card-marginals-background: #1e2124ff;
+  --color-inline-code-background: #00000000;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Neural MMO 2.0 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">Neural MMO 2.0 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="landing.html"> Neural MMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landing.html#icon-2023-competition"> 2023 Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landing.html#icon-platform"> Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#"> Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-config"> Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#icon-procedural-generation"> Procedural Generation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html"> Overview of a typical game of NMMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#about-combat">About Combat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-market"> Market</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-npcs"> NPCs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-tasks"> Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-tiles-quick-reference"> Tiles Quick Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Updates</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="updates.html"> v2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-6"> v1.6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-5"> v1.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-4"> v1.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-3"> v1.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-2"> v1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-1"> v1.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v1-0"> v1.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updates.html#icon-v0-x"> v0.x</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html"> Authorship, License, Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html#ags-namesake"> Namesake</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<img alt="" class="sd-card-img" src="../_static/banner.png" />
+<div class="sd-card-img-overlay docutils">
+<div class="sd-card-body docutils">
+</div>
+</div>
+</div>
+<p>Neural MMO provides a pettingzoo compliant environment API, an extensive configuration system, and support for agent scripting, OpenSkill evaluation, custom terrain generation, and overlay visualization. This section is intended as a reference – the tutorials provide a much better starting point for most users.</p>
+<section id="icon-environment">
+<h1><img alt="icon" src="../_images/icon.png" /> Environment<a class="headerlink" href="#icon-environment" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config:</span> <span class="pre">~nmmo.core.config.Default</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.core.config.Default</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed=None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">action_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Neural MMO Action Space</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>agent: Agent ID</p>
+</dd>
+<dt>Returns:</dt><dd><p>actions: gym.spaces object contained the structured actions
+for the specified agent. Each action is parameterized by a list
+of discrete-valued arguments. These consist of both fixed, k-way
+choices (such as movement direction) and selections from the
+observation space (such as targeting)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">agents</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em></dt>
+<dd><p>For conformity with the PettingZoo API only; rendering is external</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">change_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../source/autodoc/nmmo.task.task_api.html#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../source/autodoc/nmmo.task.task_api.html#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Changes the task given to each agent</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>new_task: The task to complete and calculate rewards
+task_encoding: A mapping from eid to encoded task
+embedding_size: The size of each embedding
+reset: Resets the environment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>For conformity with the PettingZoo API only; rendering is external</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">observation_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Neural MMO Observation Space</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>agent: Agent ID</p>
+</dd>
+<dt>Returns:</dt><dd><p>observation: gym.spaces object contained the structured observation
+for the specified agent. Each visible object is represented by
+continuous and discrete vectors of attributes. A 2-layer attentional
+encoder can be used to convert this structured observation into
+a flat vector embedding.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'human'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>For conformity with the PettingZoo API only; rendering is external</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>OpenAI Gym API reset function</p>
+<p>Loads a new game map and returns initial observations</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>idx: Map index to load. Selects a random map by default</p>
+</dd>
+<dt>Returns:</dt><dd><p>observations, as documented by _compute_observations()</p>
+</dd>
+<dt>Notes:</dt><dd><p>Neural MMO simulates a persistent world. Ideally, you should reset
+the environment only once, upon creation. In practice, this approach
+limits the number of parallel environment simulations to the number
+of CPU cores available. At small and medium hardware scale, we
+therefore recommend the standard approach of resetting after a long
+but finite horizon: ~1000 timesteps for small maps and
+5000+ timesteps for large maps</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">seed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Reseeds the environment (making it deterministic).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span></dt>
+<dd><p>State returns a global view of the environment appropriate for
+centralized training decentralized execution methods like QMIX</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Simulates one game tick or timestep</p>
+<dl>
+<dt>Args:</dt><dd><p>actions: A dictionary of agent decisions of format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">{</span>
+      <span class="n">agent_1</span><span class="p">:</span> <span class="p">{</span>
+          <span class="n">action_1</span><span class="p">:</span> <span class="p">[</span><span class="n">arg_1</span><span class="p">,</span> <span class="n">arg_2</span><span class="p">],</span>
+          <span class="n">action_2</span><span class="p">:</span> <span class="p">[</span><span class="o">...</span><span class="p">],</span>
+          <span class="o">...</span>
+      <span class="p">},</span>
+      <span class="n">agent_2</span><span class="p">:</span> <span class="p">{</span>
+          <span class="o">...</span>
+      <span class="p">},</span>
+      <span class="o">...</span>
+    <span class="p">}</span>
+
+<span class="n">Where</span> <span class="n">agent_i</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">integer</span> <span class="n">index</span> <span class="n">of</span> <span class="n">the</span> <span class="n">i</span><span class="s1">&#39;th agent</span>
+
+<span class="n">The</span> <span class="n">environment</span> <span class="n">only</span> <span class="n">evaluates</span> <span class="n">provided</span> <span class="n">actions</span> <span class="k">for</span> <span class="n">provided</span>
+<span class="n">gents</span><span class="o">.</span> <span class="n">Unprovided</span> <span class="n">action</span> <span class="n">types</span> <span class="n">are</span> <span class="n">interpreted</span> <span class="k">as</span> <span class="n">no</span><span class="o">-</span><span class="n">ops</span> <span class="ow">and</span>
+<span class="n">illegal</span> <span class="n">actions</span> <span class="n">are</span> <span class="n">ignored</span>
+
+<span class="n">It</span> <span class="ow">is</span> <span class="n">also</span> <span class="n">possible</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">invalid</span> <span class="n">combinations</span> <span class="n">of</span> <span class="n">valid</span>
+<span class="n">actions</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="n">two</span> <span class="n">movements</span> <span class="ow">or</span> <span class="n">two</span> <span class="n">attacks</span><span class="o">.</span> <span class="n">In</span> <span class="n">this</span> <span class="n">case</span><span class="p">,</span>
+<span class="n">one</span> <span class="n">will</span> <span class="n">be</span> <span class="n">selected</span> <span class="n">arbitrarily</span> <span class="kn">from</span> <span class="nn">each</span> <span class="n">incompatible</span> <span class="n">sets</span><span class="o">.</span>
+
+<span class="n">A</span> <span class="n">well</span><span class="o">-</span><span class="n">formed</span> <span class="n">algorithm</span> <span class="n">should</span> <span class="n">do</span> <span class="n">none</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span><span class="o">.</span> <span class="n">We</span> <span class="n">only</span>
+<span class="n">Perform</span> <span class="n">this</span> <span class="n">conditional</span> <span class="n">processing</span> <span class="n">to</span> <span class="n">make</span> <span class="n">batched</span> <span class="n">action</span>
+<span class="n">computation</span> <span class="n">easier</span><span class="o">.</span>
+</pre></div>
+</div>
+</dd>
+<dt>Returns:</dt><dd><p>(dict, dict, dict, None):</p>
+<dl>
+<dt>observations:</dt><dd><p>A dictionary of agent observations of format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="n">agent_1</span><span class="p">:</span> <span class="n">obs_1</span><span class="p">,</span>
+  <span class="n">agent_2</span><span class="p">:</span> <span class="n">obs_2</span><span class="p">,</span>
+  <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Where agent_i is the integer index of the i’th agent and
+obs_i is specified by the observation_space function.</p>
+</dd>
+<dt>rewards:</dt><dd><p>A dictionary of agent rewards of format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="n">agent_1</span><span class="p">:</span> <span class="n">reward_1</span><span class="p">,</span>
+  <span class="n">agent_2</span><span class="p">:</span> <span class="n">reward_2</span><span class="p">,</span>
+  <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Where agent_i is the integer index of the i’th agent and
+reward_i is the reward of the i’th’ agent.</p>
+<p>By default, agents receive -1 reward for dying and 0 reward for
+all other circumstances. Override Env.reward to specify
+custom reward functions</p>
+</dd>
+<dt>dones:</dt><dd><p>A dictionary of agent done booleans of format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="n">agent_1</span><span class="p">:</span> <span class="n">done_1</span><span class="p">,</span>
+  <span class="n">agent_2</span><span class="p">:</span> <span class="n">done_2</span><span class="p">,</span>
+  <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Where agent_i is the integer index of the i’th agent and
+done_i is a boolean denoting whether the i’th agent has died.</p>
+<p>Note that obs_i will be a garbage placeholder if done_i is true.
+This is provided only for conformity with PettingZoo. Your
+algorithm should not attempt to leverage observations outside of
+trajectory bounds. You can omit garbage obs_i values by setting
+omitDead=True.</p>
+</dd>
+<dt>infos:</dt><dd><p>A dictionary of agent infos of format:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>{</dt><dd><p>agent_1: None,
+agent_2: None,
+…</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>Provided for conformity with PettingZoo</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Agent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obs</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Used by scripted agents to compute actions. Override in subclasses.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>obs: Agent observation provided by the environment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Base class for agents</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>config: A Config object
+idx: Unique AgentID int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="icon-config">
+<h1><img alt="icon" src="../_images/icon.png" /> Config<a class="headerlink" href="#icon-config" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.config.</span></span><span class="sig-name descname"><span class="pre">Combat</span></span></dt>
+<dd><p>Combat Game System</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_DAMAGE_FORMULA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offense</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defense</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Damage formula</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_MAGE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em></dt>
+<dd><p>Mage attack damage</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_MAGE_REACH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em></dt>
+<dd><p>Reach of attacks using the Mage skill</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_MELEE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em></dt>
+<dd><p>Melee attack damage</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_MELEE_REACH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em></dt>
+<dd><p>Reach of attacks using the Melee skill</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_RANGE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em></dt>
+<dd><p>Range attack damage</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_RANGE_REACH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em></dt>
+<dd><p>Reach of attacks using the Range skill</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_SPAWN_IMMUNITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em></dt>
+<dd><p>Agents older than this many ticks cannot attack agents younger than this many ticks</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_STATUS_DURATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em></dt>
+<dd><p>Combat status lasts for this many ticks after the last combat event.
+Combat events include both attacking and being attacked.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_SYSTEM_ENABLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
+<dd><p>Game system flag</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_WEAKNESS_MULTIPLIER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.5</span></em></dt>
+<dd><p>Multiplier for super-effective attacks</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.config.</span></span><span class="sig-name descname"><span class="pre">Config</span></span></dt>
+<dd><p>An environment configuration object</p>
+<p>Global constants are defined as static class variables. You can override
+any Config variable using standard CLI syntax (e.g. –NENT=128).</p>
+<p>The default config as of v1.5 uses 1024x1024 maps with up to 2048 agents
+and 1024 NPCs. It is suitable to time horizons of 8192+ steps. For smaller
+experiments, consider the SmallMaps config.</p>
+<dl class="simple">
+<dt>Notes:</dt><dd><p>We use Google Fire internally to replace standard manual argparse
+definitions for each Config property. This means you can subclass
+Config to add new static attributes – CLI definitions will be
+generated automatically.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BASE_HEALTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em></dt>
+<dd><p>Initial Constitution level and agent health</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">EMULATE_CONST_HORIZON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Emulate a constant HORIZON simulations steps</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">EMULATE_CONST_PLAYER_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Emulate a constant number of agents</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">EMULATE_FLAT_ATN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Emulate a flat action space</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">EMULATE_FLAT_OBS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Emulate a flat observation space</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IMMORTAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Debug parameter: prevents agents from dying except by lava</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">LOG_ENV</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Whether to log env steps (expensive)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">LOG_EVENTS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
+<dd><p>Whether to log events (semi-expensive)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">LOG_FILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd><p>Where to write logs (defaults to console)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">LOG_MILESTONES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
+<dd><p>Whether to log server-firsts (semi-expensive)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">LOG_VERBOSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Whether to log server messages or just stats</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_BORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em></dt>
+<dd><p>Number of lava border tiles surrounding each side of the map</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_CENTER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd><p>Size of each map (number of tiles along each side)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_FORCE_GENERATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
+<dd><p>Whether to regenerate and overwrite existing maps</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_GENERATE_PREVIEWS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Whether map generation should also save .png previews (slow + large file size)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_GENERATOR</span></span></dt>
+<dd><p>alias of <a class="reference internal" href="../source/autodoc/nmmo.core.terrain.html#nmmo.core.terrain.MapGenerator" title="nmmo.core.terrain.MapGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Number of maps to generate</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MAP_N_OBS</span></span></dt>
+<dd><p>Number of distinct tile observations</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_N_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em></dt>
+<dd><p>Number of distinct terrain tile types</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_PREVIEW_DOWNSCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Downscaling factor for png previews</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MAP_SIZE</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/dev-docs'</span></em></dt>
+<dd><p>Working directory</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PATH_MAPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd><p>Generated map directory</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PATH_MAP_SUFFIX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'map{}/map.npy'</span></em></dt>
+<dd><p>Map file name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/environment/nmmo/resource'</span></em></dt>
+<dd><p>Resource directory</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/environment/nmmo'</span></em></dt>
+<dd><p>Global repository directory</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/environment/nmmo/resource/{}.png'</span></em></dt>
+<dd><p>Tile path – format me with tile name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'nmmo.core.agent.Agent'&gt;]</span></em></dt>
+<dd><p>Player classes from which to spawn</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_BASE_HEALTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em></dt>
+<dd><p>Initial agent health</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_DEATH_FOG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd><p>How long before spawning death fog. None for no death fog</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_DEATH_FOG_FINAL_SIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em></dt>
+<dd><p>Number of tiles from the center that the fog stops</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_DEATH_FOG_SPEED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Number of tiles per tick that the fog moves in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_LOADER</span></span></dt>
+<dd><p>alias of <a class="reference internal" href="../source/autodoc/nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">SequentialLoader</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd><p>Maximum number of players spawnable in the environment</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_N_OBS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em></dt>
+<dd><p>Number of distinct agent observations</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PLAYER_POLICIES</span></span></dt>
+<dd><p>Number of player policies</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_SPAWN_TEAMMATE_DISTANCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Buffer tiles between teammates at spawn</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PLAYER_TEAM_SIZE</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PLAYER_VISION_DIAMETER</span></span></dt>
+<dd><p>Size of the square tile crop visible to an agent</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_VISION_RADIUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em></dt>
+<dd><p>Number of tiles an agent can see in any direction</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Flag used to provide action targets mask</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SAVE_REPLAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Flag used to save replays</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">game_system_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.config.</span></span><span class="sig-name descname"><span class="pre">Large</span></span></dt>
+<dd><p>A large config suitable for large-scale research or fast models</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">HORIZON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8192</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_CENTER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1024</span></em></dt>
+<dd><p>Size of each map (number of tiles along each side)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_PREVIEW_DOWNSCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">64</span></em></dt>
+<dd><p>Downscaling factor for png previews</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_SPREAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1024</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PATH_MAPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'maps/large'</span></em></dt>
+<dd><p>Generated map directory</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1024</span></em></dt>
+<dd><p>Maximum number of players spawnable in the environment</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_SPAWN_CLUSTERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1024</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_SPAWN_UNIFORMS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4096</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.config.</span></span><span class="sig-name descname"><span class="pre">Medium</span></span></dt>
+<dd><p>A medium config suitable for most academic-scale research</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">HORIZON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1024</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_CENTER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">128</span></em></dt>
+<dd><p>Size of each map (number of tiles along each side)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_PREVIEW_DOWNSCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em></dt>
+<dd><p>Downscaling factor for png previews</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_SPREAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">128</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PATH_MAPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'maps/medium'</span></em></dt>
+<dd><p>Generated map directory</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">128</span></em></dt>
+<dd><p>Maximum number of players spawnable in the environment</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_SPAWN_CLUSTERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">64</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_SPAWN_UNIFORMS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">256</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.config.</span></span><span class="sig-name descname"><span class="pre">NPC</span></span></dt>
+<dd><p>NPC Game System</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_BASE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em></dt>
+<dd><p>Base NPC damage</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_BASE_DEFENSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<dd><p>Base NPC defense</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em></dt>
+<dd><p>Bonus NPC damage per level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_DEFENSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em></dt>
+<dd><p>Bonus NPC defense per level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em></dt>
+<dd><p>Maximum NPC level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_MIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Minimum NPC level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd><p>Maximum number of NPCs spawnable in the environment</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_SPAWN_AGGRESSIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.8</span></em></dt>
+<dd><p>Percentage distance threshold from spawn for aggressive NPCs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_SPAWN_ATTEMPTS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">25</span></em></dt>
+<dd><p>Number of NPC spawn attempts per tick</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_SPAWN_NEUTRAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.5</span></em></dt>
+<dd><p>Percentage distance threshold from spawn for neutral NPCs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_SPAWN_PASSIVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em></dt>
+<dd><p>Percentage distance threshold from spawn for passive NPCs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_SYSTEM_ENABLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
+<dd><p>Game system flag</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.config.</span></span><span class="sig-name descname"><span class="pre">Progression</span></span></dt>
+<dd><p>Progression Game System</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_AMMUNITION_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Multiplier on top of XP_SCALE for Prospecting, Carving, and Alchemy</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_BASE_DEFENSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<dd><p>Base defense</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_BASE_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Base XP awarded for each skill usage – multiplied by skill level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_COMBAT_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Multiplier on top of XP_SCALE for Melee, Range, and Mage</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_CONSUMABLE_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em></dt>
+<dd><p>Multiplier on top of XP_SCALE for Fishing and Herbalism</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_LEVEL_DEFENSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em></dt>
+<dd><p>Bonus defense per level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_LEVEL_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em></dt>
+<dd><p>Max skill level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_MAGE_BASE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<dd><p>Base Mage attack damage</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_MAGE_LEVEL_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em></dt>
+<dd><p>Bonus Mage attack damage per level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_MELEE_BASE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<dd><p>Base Melee attack damage</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_MELEE_LEVEL_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em></dt>
+<dd><p>Bonus Melee attack damage per level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_RANGE_BASE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<dd><p>Base Range attack damage</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_RANGE_LEVEL_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em></dt>
+<dd><p>Bonus Range attack damage per level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_SYSTEM_ENABLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
+<dd><p>Game system flag</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.config.</span></span><span class="sig-name descname"><span class="pre">Resource</span></span></dt>
+<dd><p>Resource Game System</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_BASE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em></dt>
+<dd><p>Initial level and capacity for Hunting + Fishing resource skills</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_DEHYDRATION_RATE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em></dt>
+<dd><p>Damage per tick without water</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_DEPLETION_RATE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em></dt>
+<dd><p>Depletion rate for food and water</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_FOREST_CAPACITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Maximum number of harvests before a forest tile decays</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_FOREST_RESPAWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.025</span></em></dt>
+<dd><p>Probability that a harvested forest tile will regenerate each tick</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_HARVEST_RESTORE_FRACTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.0</span></em></dt>
+<dd><p>Fraction of maximum capacity restored upon collecting a resource</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_HEALTH_REGEN_THRESHOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.5</span></em></dt>
+<dd><p>Fraction of maximum resource capacity required to regen health</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_HEALTH_RESTORE_FRACTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.1</span></em></dt>
+<dd><p>Fraction of health restored per tick when above half food+water</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_STARVATION_RATE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em></dt>
+<dd><p>Damage per tick without food</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_SYSTEM_ENABLED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
+<dd><p>Game system flag</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.config.</span></span><span class="sig-name descname"><span class="pre">Small</span></span></dt>
+<dd><p>A small config for debugging and experiments with an expensive outer loop</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">HORIZON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">128</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_CENTER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">32</span></em></dt>
+<dd><p>Size of each map (number of tiles along each side)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MAP_PREVIEW_DOWNSCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em></dt>
+<dd><p>Downscaling factor for png previews</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_MAX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_SPREAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">NPC_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">32</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PATH_MAPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'maps/small'</span></em></dt>
+<dd><p>Generated map directory</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PLAYER_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">64</span></em></dt>
+<dd><p>Maximum number of players spawnable in the environment</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_SPAWN_CLUSTERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_SPAWN_UNIFORMS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">TERRAIN_LOG_INTERPOLATE_MIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="icon-procedural-generation">
+<h1><img alt="icon" src="../_images/icon.png" /> Procedural Generation<a class="headerlink" href="#icon-procedural-generation" title="Permalink to this heading">#</a></h1>
+<p>The default map generator is multioctave perlin noise that is itself seeded using perlin noise to create terrain of varying local frequency. Use the MAP_GENERATOR config argument to supply your own generator classes. We suggest subclassing the default and overriding the generate_map method. For procedural generation beyond maps, customize game system mechanics dynamically to modify mechanics per-environment.</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">MapGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Procedural map generation</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">generate_all_maps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Generates NMAPS maps according to generate_map</p>
+<p>Provides additional utilities for saving to .npy and rendering png previews</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">generate_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Generate a single map</p>
+<p>The default method is a relatively complex multiscale perlin noise method.
+This is not just standard multioctave noise – we are seeding multioctave noise
+itself with perlin noise to create localized deviations in scale, plus additional
+biasing to decrease terrain frequency towards the center of the map</p>
+<p>We found that this creates more visually interesting terrain and more deviation in
+required planning horizon across different parts of the map. This is by no means a
+gold-standard: you are free to override this method and create customized terrain
+generation more suitable for your application. Simply pass MAP_GENERATOR=YourMapGenClass
+as a config argument.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">load_textures</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Called during setup; loads and resizes tile pngs</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Terrain</span></span></dt>
+<dd><p>Terrain material class; populated at runtime</p>
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="game_wiki.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"> Overview of a typical game of NMMO</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="landing.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"> Neural MMO</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Joseph Suarez
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    </body>
+</html>

@@ -1,0 +1,837 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
+
+    <!-- Generated with Sphinx 5.0.0 and Furo 2023.03.27 -->
+        <title>nmmo.task.task_api module - Neural MMO 2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #005050;
+  --color-foreground-muted: #005050;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #bbcccc;
+  --color-background-hover: #efeff4ff;
+  --color-background-hover--transparent: #efeff400;
+  --color-background-border: #005050;
+  --color-background-item: #ccc;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: black;
+  --color-brand-content: black;
+  --color-inline-code-background: #f8f9fb;
+  --color-highlighted-background: #ddeeff;
+  --color-guilabel-background: #ddeeff80;
+  --color-guilabel-border: #bedaf580;
+  --color-card-background: #bbcccc;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-problematic: #ee5151;
+  --color-foreground-primary: #f1f1f1;
+  --color-foreground-secondary: #00bbbb;
+  --color-foreground-muted: #00bbbb;
+  --color-foreground-border: #666666;
+  --color-background-primary: #061a1a;
+  --color-background-secondary: #000000;
+  --color-background-hover: #1e2124ff;
+  --color-background-hover--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-background-item: #444;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #00bbbb;
+  --color-brand-content: #00bbbb;
+  --color-highlighted-background: #083563;
+  --color-guilabel-background: #08356380;
+  --color-guilabel-border: #13395f80;
+  --color-admonition-background: #18181a;
+  --color-card-border: #1a1c1e;
+  --color-card-background: #000000;
+  --color-card-marginals-background: #1e2124ff;
+  --color-inline-code-background: #00000000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-problematic: #ee5151;
+  --color-foreground-primary: #f1f1f1;
+  --color-foreground-secondary: #00bbbb;
+  --color-foreground-muted: #00bbbb;
+  --color-foreground-border: #666666;
+  --color-background-primary: #061a1a;
+  --color-background-secondary: #000000;
+  --color-background-hover: #1e2124ff;
+  --color-background-hover--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-background-item: #444;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #00bbbb;
+  --color-brand-content: #00bbbb;
+  --color-highlighted-background: #083563;
+  --color-guilabel-background: #08356380;
+  --color-guilabel-border: #13395f80;
+  --color-admonition-background: #18181a;
+  --color-card-border: #1a1c1e;
+  --color-card-background: #000000;
+  --color-card-marginals-background: #1e2124ff;
+  --color-inline-code-background: #00000000;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Neural MMO 2.0 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Neural MMO 2.0 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/landing.html"> Neural MMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/landing.html#icon-2023-competition"> 2023 Competition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/landing.html#icon-platform"> Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/api.html"> Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/api.html#icon-config"> Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/api.html#icon-procedural-generation"> Procedural Generation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-market"> Market</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-npcs"> NPCs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-tasks"> Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-tiles-quick-reference"> Tiles Quick Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Updates</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/updates.html"> v2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/updates.html#icon-v1-6"> v1.6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/updates.html#icon-v1-5"> v1.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/updates.html#icon-v1-4"> v1.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/updates.html#icon-v1-3"> v1.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/updates.html#icon-v1-2"> v1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/updates.html#icon-v1-1"> v1.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/updates.html#icon-v1-0"> v1.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/updates.html#icon-v0-x"> v0.x</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/administrative.html"> Authorship, License, Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/administrative.html#ags-namesake"> Namesake</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-nmmo.task.task_api">
+<span id="nmmo-task-task-api-module"></span><h1>nmmo.task.task_api module<a class="headerlink" href="#module-nmmo.task.task_api" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.ADD">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">ADD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Real</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.ADD" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.ADD.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.ADD.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.ADD.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.ADD.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.ADD.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.ADD.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.ADD.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.ADD.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.AND">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">AND</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Real</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.AND" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.AND.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.AND.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.AND.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.AND.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.AND.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.AND.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.AND.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.AND.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.IMPLY">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">IMPLY</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.task_api.Predicate" title="nmmo.task.task_api.Predicate"><span class="pre">Predicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.task_api.Predicate" title="nmmo.task.task_api.Predicate"><span class="pre">Predicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.IMPLY" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a>, <a class="reference internal" href="#nmmo.task.task_api.Predicate" title="nmmo.task.task_api.Predicate"><code class="xref py py-class docutils literal notranslate"><span class="pre">Predicate</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.IMPLY.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.IMPLY.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.IMPLY.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.IMPLY.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.IMPLY.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.IMPLY.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.IMPLY.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.IMPLY.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="nmmo.task.task_api.InvalidTaskDefinition">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">InvalidTaskDefinition</span></span><a class="headerlink" href="#nmmo.task.task_api.InvalidTaskDefinition" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.task.task_api.InvalidTaskDefinition.args">
+<span class="sig-name descname"><span class="pre">args</span></span><a class="headerlink" href="#nmmo.task.task_api.InvalidTaskDefinition.args" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.InvalidTaskDefinition.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.InvalidTaskDefinition.with_traceback" title="Permalink to this definition">#</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.MUL">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">MUL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Real</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.MUL" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.MUL.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.MUL.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.MUL.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.MUL.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.MUL.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.MUL.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.MUL.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.MUL.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.NOT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">NOT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Real</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.NOT" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.NOT.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.NOT.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.NOT.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.NOT.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.NOT.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.NOT.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.NOT.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.NOT.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.OR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">OR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Real</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.OR" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.OR.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.OR.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.OR.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.OR.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.OR.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.OR.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.OR.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.OR.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Once">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">Once</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.Once" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Once.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.Once.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Once.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.Once.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Once.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.Once.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Once.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.Once.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.PAND">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">PAND</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.task_api.Predicate" title="nmmo.task.task_api.Predicate"><span class="pre">Predicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.PAND" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a>, <a class="reference internal" href="#nmmo.task.task_api.Predicate" title="nmmo.task.task_api.Predicate"><code class="xref py py-class docutils literal notranslate"><span class="pre">Predicate</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.PAND.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.PAND.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.PAND.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.PAND.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.PAND.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.PAND.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.PAND.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.PAND.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.PNOT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">PNOT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.task_api.Predicate" title="nmmo.task.task_api.Predicate"><span class="pre">Predicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.PNOT" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a>, <a class="reference internal" href="#nmmo.task.task_api.Predicate" title="nmmo.task.task_api.Predicate"><code class="xref py py-class docutils literal notranslate"><span class="pre">Predicate</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.PNOT.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.PNOT.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.PNOT.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.PNOT.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.PNOT.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.PNOT.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.PNOT.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.PNOT.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.POR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">POR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.task_api.Predicate" title="nmmo.task.task_api.Predicate"><span class="pre">Predicate</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.POR" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a>, <a class="reference internal" href="#nmmo.task.task_api.Predicate" title="nmmo.task.task_api.Predicate"><code class="xref py py-class docutils literal notranslate"><span class="pre">Predicate</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.POR.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.POR.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.POR.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.POR.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.POR.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.POR.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.POR.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.POR.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Predicate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">Predicate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.constraint.html#nmmo.task.constraint.Constraint" title="nmmo.task.constraint.Constraint"><span class="pre">Constraint</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.Predicate" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a></p>
+<p>A task with evaluate restricted to boolean values.</p>
+<p>True = 1.0
+False = 0.0</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Predicate.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.Predicate.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Predicate.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.Predicate.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Predicate.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">overload</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.Predicate.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Predicate.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.Predicate.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Repeat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">Repeat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.Repeat" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><code class="xref py py-class docutils literal notranslate"><span class="pre">TaskOperator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Repeat.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.Repeat.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Repeat.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.Repeat.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Repeat.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.Repeat.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Repeat.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.Repeat.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Task">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.constraint.html#nmmo.task.constraint.Constraint" title="nmmo.task.constraint.Constraint"><span class="pre">Constraint</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.Task" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>A task is used to calculate rewards for agents in “assignee”</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Task.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.Task.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Task.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.Task.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Task.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">overload</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.Task.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.Task.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.Task.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.task_api.TaskOperator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">TaskOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Real</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.TaskOperator" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.TaskOperator.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.task.task_api.TaskOperator.check" title="Permalink to this definition">#</a></dt>
+<dd><p>Checks whether the task is valid</p>
+<p>A satisfiable task “makes sense” given a config
+ie. Not trying to reach target off the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.TaskOperator.compute_rewards">
+<span class="sig-name descname"><span class="pre">compute_rewards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.TaskOperator.compute_rewards" title="Permalink to this definition">#</a></dt>
+<dd><p>Environment facing API</p>
+<p>Returns rewards and infos for all agents in subject</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.task_api.TaskOperator.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#nmmo.task.task_api.TaskOperator" title="nmmo.task.task_api.TaskOperator"><span class="pre">nmmo.task.task_api.TaskOperator</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.task_api.TaskOperator.sample" title="Permalink to this definition">#</a></dt>
+<dd><p>Samples a concrete instance of a given task.</p>
+<p>Allows overloading of previous parameters.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.task.task_api.TaskOperator.subject">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#nmmo.task.task_api.TaskOperator.subject" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.task_api.define_predicate">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">define_predicate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#nmmo.task.task_api.Predicate" title="nmmo.task.task_api.Predicate"><span class="pre">nmmo.task.task_api.Predicate</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.define_predicate" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.task_api.define_task">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.task_api.</span></span><span class="sig-name descname"><span class="pre">define_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">nmmo.task.task_api.Task</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.task_api.define_task" title="Permalink to this definition">#</a></dt>
+<dd><p>Syntactic sugar API for defining tasks</p>
+<p>See examples at base_predicates.py</p>
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Joseph Suarez
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    </body>
+</html>
