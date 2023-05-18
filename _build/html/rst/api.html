@@ -311,7 +311,11 @@
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config:</span> <span class="pre">~nmmo.core.config.Default</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.core.config.Default</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed=None</span></span></em><span class="sig-paren">)</span></dt>
-<dd><dl class="py method">
+<dd><p>Environment wrapper for Neural MMO using the Parallel PettingZoo API</p>
+<p>Neural MMO provides complex environments featuring structured observations/actions,
+variably sized agent populations, and long time horizons. Usage in conjunction
+with RLlib as demonstrated in the /projekt wrapper is highly recommended.</p>
+<dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">action_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Neural MMO Action Space</p>
@@ -331,19 +335,6 @@ observation space (such as targeting)</p>
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">agents</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em></dt>
 <dd><p>For conformity with the PettingZoo API only; rendering is external</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">change_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../source/autodoc/nmmo.task.task_api.html#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../source/autodoc/nmmo.task.task_api.html#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">map_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
-<dd><p>Changes the task given to each agent</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>new_task: The task to complete and calculate rewards
-task_encoding: A mapping from eid to encoded task
-embedding_size: The size of each embedding
-reset: Resets the environment</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -545,6 +536,12 @@ idx: Unique AgentID int</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_FRIENDLY_FIRE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
+<dd><p>Whether agents with the same population index can hit each other</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">COMBAT_MAGE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em></dt>
 <dd><p>Mage attack damage</p>
 </dd></dl>
@@ -583,13 +580,6 @@ idx: Unique AgentID int</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">COMBAT_SPAWN_IMMUNITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em></dt>
 <dd><p>Agents older than this many ticks cannot attack agents younger than this many ticks</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">COMBAT_STATUS_DURATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em></dt>
-<dd><p>Combat status lasts for this many ticks after the last combat event.
-Combat events include both attacking and being attacked.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -749,7 +739,7 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/dev-docs'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/docs'</span></em></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -767,19 +757,19 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/environment/nmmo/resource'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource'</span></em></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/environment/nmmo'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo'</span></em></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/environment/nmmo/resource/{}.png'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource/{}.png'</span></em></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -868,8 +858,20 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RENDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Flag used by render mode</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">SAVE_REPLAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
 <dd><p>Flag used to save replays</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">TASKS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em></dt>
+<dd><p>Tasks for which to compute rewards</p>
 </dd></dl>
 
 <dl class="py method">

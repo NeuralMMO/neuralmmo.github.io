@@ -295,51 +295,8 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-nmmo.task.team_helper">
-<span id="nmmo-task-team-helper-module"></span><h1>nmmo.task.team_helper module<a class="headerlink" href="#module-nmmo.task.team_helper" title="Permalink to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="nmmo.task.team_helper.TeamHelper">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.team_helper.</span></span><span class="sig-name descname"><span class="pre">TeamHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_teams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.team_helper.TeamHelper" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Provides a mapping from ent_id to group as equivalent to the grouping
-expected by the policy</p>
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.task.team_helper.TeamHelper.all_agents">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_agents</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></em><a class="headerlink" href="#nmmo.task.team_helper.TeamHelper.all_agents" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.task.team_helper.TeamHelper.all_teams">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_teams</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#nmmo.task.team_helper.TeamHelper.all_teams" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.task.team_helper.TeamHelper.generate_from_config">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generate_from_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.team_helper.TeamHelper.generate_from_config" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.task.team_helper.TeamHelper.left_team">
-<span class="sig-name descname"><span class="pre">left_team</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ent_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></span><a class="headerlink" href="#nmmo.task.team_helper.TeamHelper.left_team" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.task.team_helper.TeamHelper.own_team">
-<span class="sig-name descname"><span class="pre">own_team</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ent_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></span><a class="headerlink" href="#nmmo.task.team_helper.TeamHelper.own_team" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.task.team_helper.TeamHelper.right_team">
-<span class="sig-name descname"><span class="pre">right_team</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ent_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></span><a class="headerlink" href="#nmmo.task.team_helper.TeamHelper.right_team" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.task.team_helper.TeamHelper.team">
-<span class="sig-name descname"><span class="pre">team</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pop_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></span><a class="headerlink" href="#nmmo.task.team_helper.TeamHelper.team" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+          <section id="nmmo-task-team-helper-module">
+<h1>nmmo.task.team_helper module<a class="headerlink" href="#nmmo-task-team-helper-module" title="Permalink to this heading">#</a></h1>
 </section>
 
         </article>

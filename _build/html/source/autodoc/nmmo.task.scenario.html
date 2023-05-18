@@ -295,55 +295,8 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-nmmo.task.scenario">
-<span id="nmmo-task-scenario-module"></span><h1>nmmo.task.scenario module<a class="headerlink" href="#module-nmmo.task.scenario" title="Permalink to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="nmmo.task.scenario.Scenario">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.scenario.</span></span><span class="sig-name descname"><span class="pre">Scenario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.scenario.Scenario" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Utility class to aid in defining common tasks</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.task.scenario.Scenario.add_task">
-<span class="sig-name descname"><span class="pre">add_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.task_api.html#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.scenario.Scenario.add_task" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.task.scenario.Scenario.add_tasks">
-<span class="sig-name descname"><span class="pre">add_tasks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.task_api.html#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.task_api.html#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="nmmo.task.task_api.html#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'teams'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nmmo.task.scenario.Scenario.add_tasks" title="Permalink to this definition">#</a></dt>
-<dd><p>Utility function to define symmetric tasks</p>
-<p>Params:</p>
-<blockquote>
-<div><dl class="simple">
-<dt>tasks:</dt><dd><dl class="simple">
-<dt>Iterable[Task]:</dt><dd><p>For each Task in the iterable, add to scenario.</p>
-</dd>
-<dt>Callable[[Group], Task]:</dt><dd><p>A function taking in a group and return a task.
-The result from applying this function to “groups” is added to 
-the scenario.</p>
-</dd>
-<dt>Task: </dt><dd><p>Mapped to Callable by overriding subject</p>
-</dd>
-</dl>
-</dd>
-<dt>groups: </dt><dd><p>Foreach group in groups, add a task.</p>
-</dd>
-</dl>
-</div></blockquote>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.task.scenario.Scenario.tasks">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tasks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.task_api.html#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#nmmo.task.scenario.Scenario.tasks" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="nmmo.task.scenario.default_task">
-<span class="sig-prename descclassname"><span class="pre">nmmo.task.scenario.</span></span><span class="sig-name descname"><span class="pre">default_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="nmmo.task.task_api.html#nmmo.task.task_api.Task" title="nmmo.task.task_api.Task"><span class="pre">Task</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#nmmo.task.scenario.default_task" title="Permalink to this definition">#</a></dt>
-<dd><p>Generates the default reward on env.init</p>
-</dd></dl>
-
+          <section id="nmmo-task-scenario-module">
+<h1>nmmo.task.scenario module<a class="headerlink" href="#nmmo-task-scenario-module" title="Permalink to this heading">#</a></h1>
 </section>
 
         </article>
