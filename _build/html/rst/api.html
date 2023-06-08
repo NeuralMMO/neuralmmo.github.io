@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Overview of a typical game of NMMO" href="game_wiki.html" /><link rel="prev" title="Neural MMO" href="landing.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="The Game Map" href="game_wiki.html" /><link rel="prev" title="Neural MMO" href="landing.html" />
 
     <!-- Generated with Sphinx 5.0.0 and Furo 2023.03.27 -->
         <title>Environment - Neural MMO 2.0 documentation</title>
@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -311,11 +310,7 @@
 <dl class="py class">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config:</span> <span class="pre">~nmmo.core.config.Default</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.core.config.Default</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed=None</span></span></em><span class="sig-paren">)</span></dt>
-<dd><p>Environment wrapper for Neural MMO using the Parallel PettingZoo API</p>
-<p>Neural MMO provides complex environments featuring structured observations/actions,
-variably sized agent populations, and long time horizons. Usage in conjunction
-with RLlib as demonstrated in the /projekt wrapper is highly recommended.</p>
-<dl class="py method">
+<dd><dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">action_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Neural MMO Action Space</p>
@@ -367,11 +362,13 @@ a flat vector embedding.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">map_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">make_task_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>OpenAI Gym API reset function</p>
 <p>Loads a new game map and returns initial observations</p>
 <dl class="simple">
-<dt>Args:</dt><dd><p>idx: Map index to load. Selects a random map by default</p>
+<dt>Args:</dt><dd><p>map_id: Map index to load. Selects a random map by default
+seed: random seed to use
+make_task_fn: A function to make tasks</p>
 </dd>
 <dt>Returns:</dt><dd><p>observations, as documented by _compute_observations()</p>
 </dd>
@@ -536,12 +533,6 @@ idx: Unique AgentID int</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">COMBAT_FRIENDLY_FIRE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
-<dd><p>Whether agents with the same population index can hit each other</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">COMBAT_MAGE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em></dt>
 <dd><p>Mage attack damage</p>
 </dd></dl>
@@ -580,6 +571,13 @@ idx: Unique AgentID int</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">COMBAT_SPAWN_IMMUNITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em></dt>
 <dd><p>Agents older than this many ticks cannot attack agents younger than this many ticks</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">COMBAT_STATUS_DURATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em></dt>
+<dd><p>Combat status lasts for this many ticks after the last combat event.
+Combat events include both attacking and being attacked.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -645,7 +643,7 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">IMMORTAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
-<dd><p>Debug parameter: prevents agents from dying except by lava</p>
+<dd><p>Debug parameter: prevents agents from dying except by void</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -681,7 +679,7 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">MAP_BORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em></dt>
-<dd><p>Number of lava border tiles surrounding each side of the map</p>
+<dd><p>Number of void border tiles surrounding each side of the map</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -739,7 +737,7 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/docs'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/PufferTank/neuralmmo.github.io'</span></em></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -757,19 +755,19 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource'</span></em></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo'</span></em></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource/{}.png'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource/{}.png'</span></em></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -852,26 +850,8 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
 <dd><p>Flag used to provide action targets mask</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">RENDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
-<dd><p>Flag used by render mode</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">SAVE_REPLAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
-<dd><p>Flag used to save replays</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TASKS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em></dt>
-<dd><p>Tasks for which to compute rewards</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1097,6 +1077,12 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROGRESSION_BASE_LEVEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Initial skill level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">PROGRESSION_BASE_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
 <dd><p>Base XP awarded for each skill usage – multiplied by skill level</p>
 </dd></dl>
@@ -1176,7 +1162,7 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RESOURCE_BASE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em></dt>
-<dd><p>Initial level and capacity for Hunting + Fishing resource skills</p>
+<dd><p>Initial level and capacity for food and water</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1193,14 +1179,14 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">RESOURCE_FOREST_CAPACITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
-<dd><p>Maximum number of harvests before a forest tile decays</p>
+<span class="sig-name descname"><span class="pre">RESOURCE_FOILAGE_CAPACITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
+<dd><p>Maximum number of harvests before a foilage tile decays</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">RESOURCE_FOREST_RESPAWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.025</span></em></dt>
-<dd><p>Probability that a harvested forest tile will regenerate each tick</p>
+<span class="sig-name descname"><span class="pre">RESOURCE_FOILAGE_RESPAWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.025</span></em></dt>
+<dd><p>Probability that a harvested foilage tile will regenerate each tick</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1356,7 +1342,7 @@ as a config argument.</p>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"> Overview of a typical game of NMMO</div>
+                <div class="title">The Game Map</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -313,7 +312,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.State">
-<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'population_id':</span> <span class="pre">1,</span> <span class="pre">'row':</span> <span class="pre">2,</span> <span class="pre">'col':</span> <span class="pre">3,</span> <span class="pre">'damage':</span> <span class="pre">4,</span> <span class="pre">'time_alive':</span> <span class="pre">5,</span> <span class="pre">'freeze':</span> <span class="pre">6,</span> <span class="pre">'item_level':</span> <span class="pre">7,</span> <span class="pre">'attacker_id':</span> <span class="pre">8,</span> <span class="pre">'message':</span> <span class="pre">9,</span> <span class="pre">'gold':</span> <span class="pre">10,</span> <span class="pre">'health':</span> <span class="pre">11,</span> <span class="pre">'food':</span> <span class="pre">12,</span> <span class="pre">'water':</span> <span class="pre">13,</span> <span class="pre">'melee_level':</span> <span class="pre">14,</span> <span class="pre">'range_level':</span> <span class="pre">15,</span> <span class="pre">'mage_level':</span> <span class="pre">16,</span> <span class="pre">'fishing_level':</span> <span class="pre">17,</span> <span class="pre">'herbalism_level':</span> <span class="pre">18,</span> <span class="pre">'prospecting_level':</span> <span class="pre">19,</span> <span class="pre">'carving_level':</span> <span class="pre">20,</span> <span class="pre">'alchemy_level':</span> <span class="pre">21},</span> <span class="pre">num_attributes=22,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.entity.npc.Aggressive.State" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'npc_type':</span> <span class="pre">1,</span> <span class="pre">'row':</span> <span class="pre">2,</span> <span class="pre">'col':</span> <span class="pre">3,</span> <span class="pre">'damage':</span> <span class="pre">4,</span> <span class="pre">'time_alive':</span> <span class="pre">5,</span> <span class="pre">'freeze':</span> <span class="pre">6,</span> <span class="pre">'item_level':</span> <span class="pre">7,</span> <span class="pre">'attacker_id':</span> <span class="pre">8,</span> <span class="pre">'latest_combat_tick':</span> <span class="pre">9,</span> <span class="pre">'message':</span> <span class="pre">10,</span> <span class="pre">'gold':</span> <span class="pre">11,</span> <span class="pre">'health':</span> <span class="pre">12,</span> <span class="pre">'food':</span> <span class="pre">13,</span> <span class="pre">'water':</span> <span class="pre">14,</span> <span class="pre">'melee_level':</span> <span class="pre">15,</span> <span class="pre">'range_level':</span> <span class="pre">16,</span> <span class="pre">'mage_level':</span> <span class="pre">17,</span> <span class="pre">'fishing_level':</span> <span class="pre">18,</span> <span class="pre">'herbalism_level':</span> <span class="pre">19,</span> <span class="pre">'prospecting_level':</span> <span class="pre">20,</span> <span class="pre">'carving_level':</span> <span class="pre">21,</span> <span class="pre">'alchemy_level':</span> <span class="pre">22},</span> <span class="pre">num_attributes=23,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.entity.npc.Aggressive.State" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -347,6 +346,11 @@
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.in_combat">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">in_combat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Aggressive.in_combat" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.is_npc">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_npc</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Aggressive.is_npc" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -364,11 +368,6 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.parse_array">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.parse_array" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.entity.npc.Aggressive.population">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">population</span></span><a class="headerlink" href="#nmmo.entity.npc.Aggressive.population" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -417,7 +416,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">NPC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.entity.npc.</span></span><span class="sig-name descname"><span class="pre">NPC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iden</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">npc_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.entity.npc.NPC" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="nmmo.entity.entity.html#nmmo.entity.entity.Entity" title="nmmo.entity.entity.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">Entity</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC.Limits">
@@ -431,7 +430,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC.State">
-<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'population_id':</span> <span class="pre">1,</span> <span class="pre">'row':</span> <span class="pre">2,</span> <span class="pre">'col':</span> <span class="pre">3,</span> <span class="pre">'damage':</span> <span class="pre">4,</span> <span class="pre">'time_alive':</span> <span class="pre">5,</span> <span class="pre">'freeze':</span> <span class="pre">6,</span> <span class="pre">'item_level':</span> <span class="pre">7,</span> <span class="pre">'attacker_id':</span> <span class="pre">8,</span> <span class="pre">'message':</span> <span class="pre">9,</span> <span class="pre">'gold':</span> <span class="pre">10,</span> <span class="pre">'health':</span> <span class="pre">11,</span> <span class="pre">'food':</span> <span class="pre">12,</span> <span class="pre">'water':</span> <span class="pre">13,</span> <span class="pre">'melee_level':</span> <span class="pre">14,</span> <span class="pre">'range_level':</span> <span class="pre">15,</span> <span class="pre">'mage_level':</span> <span class="pre">16,</span> <span class="pre">'fishing_level':</span> <span class="pre">17,</span> <span class="pre">'herbalism_level':</span> <span class="pre">18,</span> <span class="pre">'prospecting_level':</span> <span class="pre">19,</span> <span class="pre">'carving_level':</span> <span class="pre">20,</span> <span class="pre">'alchemy_level':</span> <span class="pre">21},</span> <span class="pre">num_attributes=22,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.entity.npc.NPC.State" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'npc_type':</span> <span class="pre">1,</span> <span class="pre">'row':</span> <span class="pre">2,</span> <span class="pre">'col':</span> <span class="pre">3,</span> <span class="pre">'damage':</span> <span class="pre">4,</span> <span class="pre">'time_alive':</span> <span class="pre">5,</span> <span class="pre">'freeze':</span> <span class="pre">6,</span> <span class="pre">'item_level':</span> <span class="pre">7,</span> <span class="pre">'attacker_id':</span> <span class="pre">8,</span> <span class="pre">'latest_combat_tick':</span> <span class="pre">9,</span> <span class="pre">'message':</span> <span class="pre">10,</span> <span class="pre">'gold':</span> <span class="pre">11,</span> <span class="pre">'health':</span> <span class="pre">12,</span> <span class="pre">'food':</span> <span class="pre">13,</span> <span class="pre">'water':</span> <span class="pre">14,</span> <span class="pre">'melee_level':</span> <span class="pre">15,</span> <span class="pre">'range_level':</span> <span class="pre">16,</span> <span class="pre">'mage_level':</span> <span class="pre">17,</span> <span class="pre">'fishing_level':</span> <span class="pre">18,</span> <span class="pre">'herbalism_level':</span> <span class="pre">19,</span> <span class="pre">'prospecting_level':</span> <span class="pre">20,</span> <span class="pre">'carving_level':</span> <span class="pre">21,</span> <span class="pre">'alchemy_level':</span> <span class="pre">22},</span> <span class="pre">num_attributes=23,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.entity.npc.NPC.State" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -460,6 +459,11 @@
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.npc.NPC.in_combat">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">in_combat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.NPC.in_combat" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC.is_npc">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_npc</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.NPC.is_npc" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -477,11 +481,6 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.NPC.parse_array">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.entity.npc.NPC.parse_array" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.entity.npc.NPC.population">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">population</span></span><a class="headerlink" href="#nmmo.entity.npc.NPC.population" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -528,7 +527,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Passive.State">
-<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'population_id':</span> <span class="pre">1,</span> <span class="pre">'row':</span> <span class="pre">2,</span> <span class="pre">'col':</span> <span class="pre">3,</span> <span class="pre">'damage':</span> <span class="pre">4,</span> <span class="pre">'time_alive':</span> <span class="pre">5,</span> <span class="pre">'freeze':</span> <span class="pre">6,</span> <span class="pre">'item_level':</span> <span class="pre">7,</span> <span class="pre">'attacker_id':</span> <span class="pre">8,</span> <span class="pre">'message':</span> <span class="pre">9,</span> <span class="pre">'gold':</span> <span class="pre">10,</span> <span class="pre">'health':</span> <span class="pre">11,</span> <span class="pre">'food':</span> <span class="pre">12,</span> <span class="pre">'water':</span> <span class="pre">13,</span> <span class="pre">'melee_level':</span> <span class="pre">14,</span> <span class="pre">'range_level':</span> <span class="pre">15,</span> <span class="pre">'mage_level':</span> <span class="pre">16,</span> <span class="pre">'fishing_level':</span> <span class="pre">17,</span> <span class="pre">'herbalism_level':</span> <span class="pre">18,</span> <span class="pre">'prospecting_level':</span> <span class="pre">19,</span> <span class="pre">'carving_level':</span> <span class="pre">20,</span> <span class="pre">'alchemy_level':</span> <span class="pre">21},</span> <span class="pre">num_attributes=22,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.entity.npc.Passive.State" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'npc_type':</span> <span class="pre">1,</span> <span class="pre">'row':</span> <span class="pre">2,</span> <span class="pre">'col':</span> <span class="pre">3,</span> <span class="pre">'damage':</span> <span class="pre">4,</span> <span class="pre">'time_alive':</span> <span class="pre">5,</span> <span class="pre">'freeze':</span> <span class="pre">6,</span> <span class="pre">'item_level':</span> <span class="pre">7,</span> <span class="pre">'attacker_id':</span> <span class="pre">8,</span> <span class="pre">'latest_combat_tick':</span> <span class="pre">9,</span> <span class="pre">'message':</span> <span class="pre">10,</span> <span class="pre">'gold':</span> <span class="pre">11,</span> <span class="pre">'health':</span> <span class="pre">12,</span> <span class="pre">'food':</span> <span class="pre">13,</span> <span class="pre">'water':</span> <span class="pre">14,</span> <span class="pre">'melee_level':</span> <span class="pre">15,</span> <span class="pre">'range_level':</span> <span class="pre">16,</span> <span class="pre">'mage_level':</span> <span class="pre">17,</span> <span class="pre">'fishing_level':</span> <span class="pre">18,</span> <span class="pre">'herbalism_level':</span> <span class="pre">19,</span> <span class="pre">'prospecting_level':</span> <span class="pre">20,</span> <span class="pre">'carving_level':</span> <span class="pre">21,</span> <span class="pre">'alchemy_level':</span> <span class="pre">22},</span> <span class="pre">num_attributes=23,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.entity.npc.Passive.State" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -562,6 +561,11 @@
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.npc.Passive.in_combat">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">in_combat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Passive.in_combat" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Passive.is_npc">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_npc</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.Passive.is_npc" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -579,11 +583,6 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.Passive.parse_array">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.entity.npc.Passive.parse_array" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.entity.npc.Passive.population">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">population</span></span><a class="headerlink" href="#nmmo.entity.npc.Passive.population" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -630,7 +629,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.State">
-<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'population_id':</span> <span class="pre">1,</span> <span class="pre">'row':</span> <span class="pre">2,</span> <span class="pre">'col':</span> <span class="pre">3,</span> <span class="pre">'damage':</span> <span class="pre">4,</span> <span class="pre">'time_alive':</span> <span class="pre">5,</span> <span class="pre">'freeze':</span> <span class="pre">6,</span> <span class="pre">'item_level':</span> <span class="pre">7,</span> <span class="pre">'attacker_id':</span> <span class="pre">8,</span> <span class="pre">'message':</span> <span class="pre">9,</span> <span class="pre">'gold':</span> <span class="pre">10,</span> <span class="pre">'health':</span> <span class="pre">11,</span> <span class="pre">'food':</span> <span class="pre">12,</span> <span class="pre">'water':</span> <span class="pre">13,</span> <span class="pre">'melee_level':</span> <span class="pre">14,</span> <span class="pre">'range_level':</span> <span class="pre">15,</span> <span class="pre">'mage_level':</span> <span class="pre">16,</span> <span class="pre">'fishing_level':</span> <span class="pre">17,</span> <span class="pre">'herbalism_level':</span> <span class="pre">18,</span> <span class="pre">'prospecting_level':</span> <span class="pre">19,</span> <span class="pre">'carving_level':</span> <span class="pre">20,</span> <span class="pre">'alchemy_level':</span> <span class="pre">21},</span> <span class="pre">num_attributes=22,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.State" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'npc_type':</span> <span class="pre">1,</span> <span class="pre">'row':</span> <span class="pre">2,</span> <span class="pre">'col':</span> <span class="pre">3,</span> <span class="pre">'damage':</span> <span class="pre">4,</span> <span class="pre">'time_alive':</span> <span class="pre">5,</span> <span class="pre">'freeze':</span> <span class="pre">6,</span> <span class="pre">'item_level':</span> <span class="pre">7,</span> <span class="pre">'attacker_id':</span> <span class="pre">8,</span> <span class="pre">'latest_combat_tick':</span> <span class="pre">9,</span> <span class="pre">'message':</span> <span class="pre">10,</span> <span class="pre">'gold':</span> <span class="pre">11,</span> <span class="pre">'health':</span> <span class="pre">12,</span> <span class="pre">'food':</span> <span class="pre">13,</span> <span class="pre">'water':</span> <span class="pre">14,</span> <span class="pre">'melee_level':</span> <span class="pre">15,</span> <span class="pre">'range_level':</span> <span class="pre">16,</span> <span class="pre">'mage_level':</span> <span class="pre">17,</span> <span class="pre">'fishing_level':</span> <span class="pre">18,</span> <span class="pre">'herbalism_level':</span> <span class="pre">19,</span> <span class="pre">'prospecting_level':</span> <span class="pre">20,</span> <span class="pre">'carving_level':</span> <span class="pre">21,</span> <span class="pre">'alchemy_level':</span> <span class="pre">22},</span> <span class="pre">num_attributes=23,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.State" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -664,6 +663,11 @@
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.in_combat">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">in_combat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.in_combat" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.is_npc">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_npc</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.is_npc" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -681,11 +685,6 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.parse_array">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.parse_array" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.entity.npc.PassiveAggressive.population">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">population</span></span><a class="headerlink" href="#nmmo.entity.npc.PassiveAggressive.population" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">

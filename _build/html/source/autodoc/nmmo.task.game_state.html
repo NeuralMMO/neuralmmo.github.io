@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -295,8 +294,163 @@
           </label>
         </div>
         <article role="main">
-          <section id="nmmo-task-game-state-module">
-<h1>nmmo.task.game_state module<a class="headerlink" href="#nmmo-task-game-state-module" title="Permalink to this heading">#</a></h1>
+          <section id="module-nmmo.task.game_state">
+<span id="nmmo-task-game-state-module"></span><h1>nmmo.task.game_state module<a class="headerlink" href="#module-nmmo.task.game_state" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.game_state.ArrayView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.game_state.</span></span><span class="sig-name descname"><span class="pre">ArrayView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapping</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.game_state.GameState" title="nmmo.task.game_state.GameState"><span class="pre">GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.ArrayView" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.game_state.ArrayView.get_attribute">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#nmmo.task.game_state.ArrayView.get_attribute" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.game_state.EntityView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.game_state.</span></span><span class="sig-name descname"><span class="pre">EntityView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.game_state.GameState" title="nmmo.task.game_state.GameState"><span class="pre">GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.EntityView" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.game_state.ArrayView" title="nmmo.task.game_state.ArrayView"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayView</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.game_state.EntityView.get_attribute">
+<span class="sig-name descname"><span class="pre">get_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#nmmo.task.game_state.EntityView.get_attribute" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.game_state.EventCodeView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.game_state.</span></span><span class="sig-name descname"><span class="pre">EventCodeView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.game_state.GameState" title="nmmo.task.game_state.GameState"><span class="pre">GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.EventCodeView" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.game_state.ArrayView" title="nmmo.task.game_state.ArrayView"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayView</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.game_state.EventCodeView.get_attribute">
+<span class="sig-name descname"><span class="pre">get_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#nmmo.task.game_state.EventCodeView.get_attribute" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.game_state.EventView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.game_state.</span></span><span class="sig-name descname"><span class="pre">EventView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.game_state.GameState" title="nmmo.task.game_state.GameState"><span class="pre">GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.EventView" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.game_state.ArrayView" title="nmmo.task.game_state.ArrayView"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayView</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.game_state.EventView.get_attribute">
+<span class="sig-name descname"><span class="pre">get_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#nmmo.task.game_state.EventView.get_attribute" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.game_state.</span></span><span class="sig-name descname"><span class="pre">GameState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_tick</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'int'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'Config'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spawn_pos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'Dict[int,</span> <span class="pre">Tuple[int,</span> <span class="pre">int]]'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alive_agents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'List[int]'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_obs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'Dict[int,</span> <span class="pre">Observation]'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'np.ndarray'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'np.ndarray'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'np.ndarray'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'MutableMapping'</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.GameState" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.alive_agents">
+<span class="sig-name descname"><span class="pre">alive_agents</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#nmmo.task.game_state.GameState.alive_agents" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.cache_result">
+<span class="sig-name descname"><span class="pre">cache_result</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">MutableMapping</span></em><a class="headerlink" href="#nmmo.task.game_state.GameState.cache_result" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.config">
+<span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></em><a class="headerlink" href="#nmmo.task.game_state.GameState.config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.current_tick">
+<span class="sig-name descname"><span class="pre">current_tick</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#nmmo.task.game_state.GameState.current_tick" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.entity_data">
+<span class="sig-name descname"><span class="pre">entity_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#nmmo.task.game_state.GameState.entity_data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.entity_or_none">
+<span class="sig-name descname"><span class="pre">entity_or_none</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ent_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.GameState.entity_or_none" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.env_obs">
+<span class="sig-name descname"><span class="pre">env_obs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="nmmo.core.observation.html#nmmo.core.observation.Observation" title="nmmo.core.observation.Observation"><span class="pre">Observation</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#nmmo.task.game_state.GameState.env_obs" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.event_data">
+<span class="sig-name descname"><span class="pre">event_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#nmmo.task.game_state.GameState.event_data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.get_subject_view">
+<span class="sig-name descname"><span class="pre">get_subject_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.GameState.get_subject_view" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.item_data">
+<span class="sig-name descname"><span class="pre">item_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#nmmo.task.game_state.GameState.item_data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.spawn_pos">
+<span class="sig-name descname"><span class="pre">spawn_pos</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#nmmo.task.game_state.GameState.spawn_pos" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameState.where_in_id">
+<span class="sig-name descname"><span class="pre">where_in_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.GameState.where_in_id" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameStateGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.game_state.</span></span><span class="sig-name descname"><span class="pre">GameStateGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.realm.html#nmmo.core.realm.Realm" title="nmmo.core.realm.Realm"><span class="pre">Realm</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.config.html#nmmo.core.config.Config" title="nmmo.core.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.GameStateGenerator" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GameStateGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.core.realm.html#nmmo.core.realm.Realm" title="nmmo.core.realm.Realm"><span class="pre">Realm</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_obs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="nmmo.core.observation.html#nmmo.core.observation.Observation" title="nmmo.core.observation.Observation"><span class="pre">Observation</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#nmmo.task.game_state.GameState" title="nmmo.task.game_state.GameState"><span class="pre">GameState</span></a></span></span><a class="headerlink" href="#nmmo.task.game_state.GameStateGenerator.generate" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GroupObsView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.game_state.</span></span><span class="sig-name descname"><span class="pre">GroupObsView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.game_state.GameState" title="nmmo.task.game_state.GameState"><span class="pre">GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.GroupObsView" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.game_state.GroupView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.game_state.</span></span><span class="sig-name descname"><span class="pre">GroupView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.game_state.GameState" title="nmmo.task.game_state.GameState"><span class="pre">GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.GroupView" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.game_state.ItemView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.game_state.</span></span><span class="sig-name descname"><span class="pre">ItemView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.game_state.GameState" title="nmmo.task.game_state.GameState"><span class="pre">GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.ItemView" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.game_state.ArrayView" title="nmmo.task.game_state.ArrayView"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayView</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.game_state.ItemView.get_attribute">
+<span class="sig-name descname"><span class="pre">get_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#nmmo.task.game_state.ItemView.get_attribute" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.task.game_state.TileView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.task.game_state.</span></span><span class="sig-name descname"><span class="pre">TileView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#nmmo.task.game_state.GameState" title="nmmo.task.game_state.GameState"><span class="pre">GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.game_state.TileView" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.task.game_state.ArrayView" title="nmmo.task.game_state.ArrayView"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArrayView</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.task.game_state.TileView.get_attribute">
+<span class="sig-name descname"><span class="pre">get_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#nmmo.task.game_state.TileView.get_attribute" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
         </article>

@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -295,8 +294,91 @@
           </label>
         </div>
         <article role="main">
-          <section id="nmmo-render-replay-helper-module">
-<h1>nmmo.render.replay_helper module<a class="headerlink" href="#nmmo-render-replay-helper-module" title="Permalink to this heading">#</a></h1>
+          <section id="module-nmmo.render.replay_helper">
+<span id="nmmo-render-replay-helper-module"></span><h1>nmmo.render.replay_helper module<a class="headerlink" href="#module-nmmo.render.replay_helper" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.DummyReplayHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.render.replay_helper.</span></span><span class="sig-name descname"><span class="pre">DummyReplayHelper</span></span><a class="headerlink" href="#nmmo.render.replay_helper.DummyReplayHelper" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.render.replay_helper.ReplayHelper" title="nmmo.render.replay_helper.ReplayHelper"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReplayHelper</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.DummyReplayHelper.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.DummyReplayHelper.reset" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.DummyReplayHelper.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_prefix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compress</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.DummyReplayHelper.save" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.DummyReplayHelper.set_realm">
+<span class="sig-name descname"><span class="pre">set_realm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nmmo.render.replay_helper.DummyReplayHelper.set_realm" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.DummyReplayHelper.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.DummyReplayHelper.update" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.FileReplayHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.render.replay_helper.</span></span><span class="sig-name descname"><span class="pre">FileReplayHelper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.FileReplayHelper" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.render.replay_helper.ReplayHelper" title="nmmo.render.replay_helper.ReplayHelper"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReplayHelper</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.FileReplayHelper.load">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">replay_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decompress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.FileReplayHelper.load" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.FileReplayHelper.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.FileReplayHelper.reset" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.FileReplayHelper.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_prefix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.FileReplayHelper.save" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.FileReplayHelper.set_realm">
+<span class="sig-name descname"><span class="pre">set_realm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nmmo.render.replay_helper.FileReplayHelper.set_realm" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.FileReplayHelper.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.FileReplayHelper.update" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.ReplayHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.render.replay_helper.</span></span><span class="sig-name descname"><span class="pre">ReplayHelper</span></span><a class="headerlink" href="#nmmo.render.replay_helper.ReplayHelper" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.ReplayHelper.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.ReplayHelper.reset" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.ReplayHelper.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_prefix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compress</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.ReplayHelper.save" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.ReplayHelper.set_realm">
+<span class="sig-name descname"><span class="pre">set_realm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nmmo.render.replay_helper.ReplayHelper.set_realm" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.replay_helper.ReplayHelper.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.replay_helper.ReplayHelper.update" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
         </article>

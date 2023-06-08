@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -295,8 +294,38 @@
           </label>
         </div>
         <article role="main">
-          <section id="nmmo-render-render-client-module">
-<h1>nmmo.render.render_client module<a class="headerlink" href="#nmmo-render-render-client-module" title="Permalink to this heading">#</a></h1>
+          <section id="module-nmmo.render.render_client">
+<span id="nmmo-render-render-client-module"></span><h1>nmmo.render.render_client module<a class="headerlink" href="#module-nmmo.render.render_client" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.render.render_client.WebsocketRenderer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.render.render_client.</span></span><span class="sig-name descname"><span class="pre">WebsocketRenderer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.render.render_client.WebsocketRenderer" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.render_client.WebsocketRenderer.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overlay</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nmmo.render.render_client.WebsocketRenderer.register" title="Permalink to this definition">#</a></dt>
+<dd><p>Register an overlay to be sent to the client</p>
+<p>The intended use of this function is: User types overlay -&gt;
+client sends cmd to server -&gt; server computes overlay update -&gt;
+register(overlay) -&gt; overlay is sent to client -&gt; overlay rendered</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>overlay: A map-sized (self.size) array of floating point values
+overlay must be a numpy array of dimension (<a href="#id1"><span class="problematic" id="id2">*</span></a>(env.size), 3)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.render_client.WebsocketRenderer.render_packet">
+<span class="sig-name descname"><span class="pre">render_packet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packet</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nmmo.render.render_client.WebsocketRenderer.render_packet" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.render.render_client.WebsocketRenderer.render_realm">
+<span class="sig-name descname"><span class="pre">render_realm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nmmo.render.render_client.WebsocketRenderer.render_realm" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
         </article>

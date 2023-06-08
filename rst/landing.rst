@@ -15,7 +15,7 @@ Neural MMO is a computationally accessible, open-source research platform that s
   :margin: 4 2 auto auto
   :text-align: center
 
-  **Demo Neural MMO in your browser**
+  **Click to Demo Neural MMO in your browser**
 
 |
 
@@ -58,7 +58,11 @@ Neural MMO is a computationally accessible, open-source research platform that s
 |icon| Neural MMO
 #################
 
-Your team of 8 Agents must collect food and water to survive. Each Agent has 8 individual professions to help them collect resources. Resources can be used to create consumable items that restore food, water and heath as well as to create ammunition that increases damage in combat. Higher level resources create better consumables and ammunition. Agents may aquire armor to protect themselves in combat and weapons to increase their damage output. Agents can also trade items on a global market. Agents can attack each other using one of three styles: Melee, Range, and Magic. Agents can level up their skills in each style and in each profession. The world is populated by NPCs that can be defeated to obtain items and increase power.
+Your team of 8 Agents must collect food and water to survive. Each Agent has 8 individual professions to help them collect resources. Agents can level up their skills in each profession.
+
+Resources can be used to create consumable items that restore food, water and heath as well as to create ammunition that increases damage in combat. Higher level resources create better consumables and ammunition. Agents can also trade items on a global market.
+
+Agents may aquire armor to protect themselves in combat and weapons to increase their damage output. Agents can attack each other using one of three styles: Melee, Range, and Magic. The world is populated by NPCs that can be defeated to obtain items and increase power.
 
 .. tab-set::
    
@@ -106,17 +110,68 @@ Your team of 8 Agents must collect food and water to survive. Each Agent has 8 i
  
 |
 
-.. dropdown:: General features of NMMO
+.. tab-set:: 
+   
+   .. tab-item:: Resource
 
-  - **Terrain:** Navigate procedurally generated maps
-  - **Survival:** Forage for food and water to maintain your health
-  - **NPC:** Interact with Non-Playable Characters of varying friendliness
-  - **Combat:** Fight other agents and NPCs with Melee, Range, and Magic
-  - **Profession:** Use tools to practice Herbalism, Fishing, Prospecting, Carving, and Alchemy
-  - **Item:** Acquire consumables and and ammunition through professions
-  - **Equipment:** Increase offensive and defensive capabilities with weapons and armor
-  - **Progression:** Train combat and profession skills to access higher level items and equipment
-  - **Exchange:** Trade items and equipment with other agents on a global market
+      Harvest resources with various uses
+
+      .. card::
+         :img-background: /../_static/resource.png
+
+   .. tab-item:: Survival
+
+      Forage for food and water to maintain your health
+
+      .. card::
+         :img-background: /../_static/survival.png
+
+   .. tab-item:: Combat
+
+      Fight other agents and NPCs with Melee, Range, and Magic
+
+      .. card::
+         :img-background: /../_static/combat.png
+
+   .. tab-item:: NPC
+
+      Interact with Non-Playable Characters of varying friendliness
+
+      .. figure:: /../_static/npc.png
+
+   .. tab-item:: Profession & Progression
+
+      Train combat and profession skills to access higher level items and equipment
+
+      .. card::
+         :img-background: /../_static/progression.png
+
+   .. tab-item:: Item
+
+      Acquire consumables and and ammunition through professions
+
+      .. card::
+         :img-background: /../_static/item.png
+
+   .. tab-item:: Equipment
+
+      Increase offensive and defensive capabilities with weapons and armor
+
+      .. card::
+         :img-background: /../_static/equipment.png
+
+   .. tab-item:: Exchange
+
+      Trade items and equipment with other agents on a global market
+
+      .. card::
+         :img-background: /../_static/exchange.png
+
+   .. tab-item:: Terrain
+
+      Navigate procedurally generated maps
+
+      .. figure:: /../_static/terrain.png
 
 .. dropdown:: Contributors
 
@@ -132,6 +187,15 @@ Your team of 8 Agents must collect food and water to survive. Each Agent has 8 i
     - **Rose S. Shuman**: Technical writing for this documentation site and for the competition
     - **Herbie Bradley**: Supervision of the curriculum generation baseline with OpenELM
     - **Louis Castricato**: Co-founder and team lead of Carper AI; supervisor of Carper AI development efforts.
+
+   Parametrix.ai Team. Competition orchestrators and creators of the 2.0 web client.
+    - **Kirsty You**: Product manager, Parametrix.ai
+    - **Yuhao Jiang**: Machine learning researcher, Parametrix.ai
+    - **Qimai Li**: Senior machine learning researcher, Paramerix.ai
+    - **Jiaxin Chen**: Senior machine learning researcher. Co-organizer of 3rd and 4th Neural MMO Challenge
+    - **Xiaolong Zhu**: Senior R&D Director, Paramerix.ai
+
+   **Nick Jenkins**: Layout for design for the competition poster. Adversary.design.
 
    **Sara Earle**: Created 3D assets and 2D icons for items in NMMO 2.0. Hire her on UpWork if you like what you see here.
 
@@ -170,7 +234,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
       Train teams of agents using RL to complete tasks. Customize the RL algorithm, model, and reward structure, but leverage a fixed baseline curriculum of tasks for training.
 
-      This is an opportunity for you RL enthusiasts to test your skills building agents that can survive and thrive in a massively multi-agent environment full of potential adversaries. Your task is to implement a *policy* that defines how your 8 Agent team performs within a novel environment. At the outset of each game, your team will receive a randomly generated task. Complete the task to score a point. We will evaluate submissions against each other over thousands of games. Whoever scores the most points wins.
+      This is an opportunity for you RL enthusiasts to test your skills building agents that can survive and thrive in a massively multiagent environment full of potential adversaries. Your task is to implement a *policy* that defines how your 8 Agent team performs within a novel environment. At the outset of each game, your team will receive a randomly generated task. Complete the task to score a point. We will evaluate submissions against each other over thousands of games. Whoever scores the most points wins.
 
       The RL track includes control over the RL algorithm, environment rewards signal, observation featurization, and the neural network architecture. The presentation and sampling of tasks are provided by the baseline and are treated as constants. All RL agent teams are trained on the same baseline task curriculum. While hybrid methods are allowed, with the new emphasis on tasks, it is unlikely that pure traditional scripting will be effective.
 
@@ -291,9 +355,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 |icon| Platform 
 ###############
 
-The project was inspired by classic Massively Multiplayer Online Role-Playing Games (MMOs) - a genre defined by interaction with a large number of other players. It is a platform for creating intelligent agents parameterized by neural networks. Our goal is to support a broad base of multiagent research that would be impractical or impossible to conduct using other environments. Unlike other game genres typically used in research, MMOs simulate persistent worlds that support rich player interactions and a wider variety of progression strategies. These properties seem important to intelligence in the real world.
-
-In NMMO, Agents in teams must forage for food and water to stay alive and harvest resources to increase their combat and task completion capabilities. Agents can level up their fighting styles and equipment, practice different professions, and engage in trade based on market demand. The world is also populated by non-player characters (NPCs) of varying friendliness. The massively multiagent setting allow player teams to interact in interesting ways and use entirely different strategies. 
+The project was inspired by classic Massively Multiplayer Online Role-Playing Games (MMOs) - a genre defined by interaction with a large number of other players. It is a platform for creating intelligent agents parameterized by neural networks. Our goal is to support a broad base of multiagent research that would be impractical or impossible to conduct using other environments. Unlike other game genres typically used in research, MMOs simulate persistent worlds that support rich player interactions and a wider variety of progression strategies. These properties seem important to intelligence in the real world. The massively multiagent setting allow player teams to interact in interesting ways and use entirely different strategies. 
 
 .. code-block:: python
 
@@ -307,4 +369,4 @@ In NMMO, Agents in teams must forage for food and water to stay alive and harves
       actions = {} # Compute with your model
       obs, rewards, dones, infos = env.step(actions)
 
-Environments provide a standard PettingZoo API. Join our community Discord and post in #support for help (do not raise Github issues for support). See the cards at the top of this page for source code, baselines, latest publications, social media, and news!
+Environments provide a standard PettingZoo API. Join our community  `Discord <https://discord.gg/BkMmFUC>`_ and post in #support for help (do not raise Github issues for support). See the cards at the top of this page for source code, baselines, latest publications, social media, and news!

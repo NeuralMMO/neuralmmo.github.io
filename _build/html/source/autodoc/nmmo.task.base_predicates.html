@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -295,8 +294,182 @@
           </label>
         </div>
         <article role="main">
-          <section id="nmmo-task-base-predicates-module">
-<h1>nmmo.task.base_predicates module<a class="headerlink" href="#nmmo-task-base-predicates-module" title="Permalink to this heading">#</a></h1>
+          <section id="module-nmmo.task.base_predicates">
+<span id="nmmo-task-base-predicates-module"></span><h1>nmmo.task.base_predicates module<a class="headerlink" href="#module-nmmo.task.base_predicates" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.AllDead">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">AllDead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.AllDead" title="Permalink to this definition">#</a></dt>
+<dd><p>True if all subjects are dead.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.AllMembersWithinRange">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">AllMembersWithinRange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.AllMembersWithinRange" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the max l-inf distance of teammates is
+less than or equal to dist</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.AttainSkill">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">AttainSkill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skill:</span> <span class="pre">~nmmo.systems.skill.Skill</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_agent:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.AttainSkill" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the number of agents having skill level GE level
+is greather than or equal to num_agent</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.BuyItem">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">BuyItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item:</span> <span class="pre">type[nmmo.systems.item.Item]</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.BuyItem" title="Permalink to this definition">#</a></dt>
+<dd><p>True if total quantity purchased of item type above level is &gt;= quantity</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.CanSeeAgent">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">CanSeeAgent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.CanSeeAgent" title="Permalink to this definition">#</a></dt>
+<dd><p>True if obj_agent is present in the subjects’ entities obs.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.CanSeeGroup">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">CanSeeGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target:</span> <span class="pre">~typing.Iterable[int]</span> <span class="pre">=</span> <span class="pre">&lt;class</span> <span class="pre">'nmmo.task.constraint.AgentListConstraint'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.CanSeeGroup" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns True if subject can see any of target</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.CanSeeTile">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">CanSeeTile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile_type:</span> <span class="pre">type[nmmo.lib.material.Material]</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.CanSeeTile" title="Permalink to this definition">#</a></dt>
+<dd><p>True if any agent in subject can see a tile of tile_type</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.ConsumeItem">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">ConsumeItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item:</span> <span class="pre">type[nmmo.systems.item.Item]</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.ConsumeItem" title="Permalink to this definition">#</a></dt>
+<dd><p>True if total quantity consumed of item type above level is &gt;= quantity</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.CountEvent">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">CountEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.CountEvent" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the number of events occured in subject corresponding
+to event &gt;= N</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.DefeatEntity">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">DefeatEntity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent_type:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_agent:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.DefeatEntity" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the number of agents (agent_type, &gt;= level) defeated
+is greater than or equal to num_agent</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.DistanceTraveled">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">DistanceTraveled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.DistanceTraveled" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the summed l-inf distance between each agent’s current pos and spawn pos
+is greater than or equal to the specified _dist.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.EarnGold">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">EarnGold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.EarnGold" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the total amount of gold earned is greater than or equal to amount.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.EquipItem">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">EquipItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item:</span> <span class="pre">type[nmmo.systems.item.Item]</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_agent:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.EquipItem" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the number of agents that equip the item (_item_type, &gt;=_level)
+is greater than or equal to _num_agent.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.FullyArmed">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">FullyArmed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combat_style:</span> <span class="pre">type[nmmo.systems.skill.Skill]</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_agent:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.FullyArmed" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the number of fully equipped agents is greater than or equal to _num_agent
+Otherwise false.
+To determine fully equipped, we look at hat, top, bottom, weapon, ammo, respectively,
+and see whether these are equipped and has level greater than or equal to _level.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.HarvestItem">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">HarvestItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item:</span> <span class="pre">type[nmmo.systems.item.Item]</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.HarvestItem" title="Permalink to this definition">#</a></dt>
+<dd><p>True if total quantity harvested of item type above level is &gt;= quantity</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.HoardGold">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">HoardGold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.HoardGold" title="Permalink to this definition">#</a></dt>
+<dd><p>True iff the summed gold of all teammate is greater than or equal to amount.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.InventorySpaceGE">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">InventorySpaceGE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.InventorySpaceGE" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the inventory space of every subjects is greater than or equal to
+the space. Otherwise false.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.ListItem">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">ListItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item:</span> <span class="pre">type[nmmo.systems.item.Item]</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.ListItem" title="Permalink to this definition">#</a></dt>
+<dd><p>True if total quantity listed of item type above level is &gt;= quantity</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.MakeProfit">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">MakeProfit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.MakeProfit" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the total amount of gold earned-spent is greater than or equal to amount.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.OccupyTile">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">OccupyTile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.OccupyTile" title="Permalink to this definition">#</a></dt>
+<dd><p>True if any subject agent is on the desginated tile.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.OwnItem">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">OwnItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item:</span> <span class="pre">type[nmmo.systems.item.Item]</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.OwnItem" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the number of items owned (_item_type, &gt;= level)
+is greater than or equal to quantity.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.ScoreHit">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">ScoreHit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combat_style:</span> <span class="pre">type[nmmo.systems.skill.Skill]</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.DiscreteConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.ScoreHit" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the number of hits scored in style
+combat_style &gt;= count</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.SpendGold">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">SpendGold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.SpendGold" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the total amount of gold spent is greater than or equal to amount.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.StayAlive">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">StayAlive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.StayAlive" title="Permalink to this definition">#</a></dt>
+<dd><p>True if all subjects are alive.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.Success">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">Success</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.game_state.html#nmmo.task.game_state.GameState" title="nmmo.task.game_state.GameState"><span class="pre">GameState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nmmo.task.group.html#nmmo.task.group.Group" title="nmmo.task.group.Group"><span class="pre">Group</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.Success" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns True. For debugging.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.TickGE">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">TickGE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs:</span> <span class="pre">~nmmo.task.game_state.GameState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject:</span> <span class="pre">~nmmo.task.group.Group</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.GroupConstraint</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_tick:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.task.constraint.ScalarConstraint</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.TickGE" title="Permalink to this definition">#</a></dt>
+<dd><p>True if the current tick is greater than or equal to the specified num_tick.
+Is progress counter.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.task.base_predicates.norm">
+<span class="sig-prename descclassname"><span class="pre">nmmo.task.base_predicates.</span></span><span class="sig-name descname"><span class="pre">norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">progress</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.task.base_predicates.norm" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 </section>
 
         </article>

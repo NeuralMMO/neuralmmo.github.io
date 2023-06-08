@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -295,50 +294,8 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-nmmo.lib.rating">
-<span id="nmmo-lib-rating-module"></span><h1>nmmo.lib.rating module<a class="headerlink" href="#module-nmmo.lib.rating" title="Permalink to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="nmmo.lib.rating.OpenSkillRating">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.rating.</span></span><span class="sig-name descname"><span class="pre">OpenSkillRating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">33.333333333333336</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor_mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1500</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.rating.OpenSkillRating" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>OpenSkill Rating wrapper for estimating relative policy skill</p>
-<p>Provides a simple method for updating skill estimates from raw
-per-agent scores as are typically returned by the environment.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.lib.rating.OpenSkillRating.anchor_baseline">
-<span class="sig-name descname"><span class="pre">anchor_baseline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.rating.OpenSkillRating.anchor_baseline" title="Permalink to this definition">#</a></dt>
-<dd><p>Resets the anchor point policy to mu SR</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.lib.rating.OpenSkillRating.stats">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stats</span></span><a class="headerlink" href="#nmmo.lib.rating.OpenSkillRating.stats" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.lib.rating.OpenSkillRating.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ranks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.rating.OpenSkillRating.update" title="Permalink to this definition">#</a></dt>
-<dd><p>Updates internal skill rating estimates for each policy</p>
-<p>You should call this function once per simulated environment
-Provide either ranks OR policy_ids and scores</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>ranks: List of ranks in the same order as agents
-policy_ids: List of policy IDs for each agent episode
-scores: List of scores for each agent episode</p>
-</dd>
-<dt>Returns:</dt><dd><p>Dictionary of ratings keyed by agent names</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="nmmo.lib.rating.rank">
-<span class="sig-prename descclassname"><span class="pre">nmmo.lib.rating.</span></span><span class="sig-name descname"><span class="pre">rank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">policy_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.rating.rank" title="Permalink to this definition">#</a></dt>
-<dd><p>Compute policy rankings from per-agent scores</p>
-</dd></dl>
-
+          <section id="nmmo-lib-rating-module">
+<h1>nmmo.lib.rating module<a class="headerlink" href="#nmmo-lib-rating-module" title="Permalink to this heading">#</a></h1>
 </section>
 
         </article>

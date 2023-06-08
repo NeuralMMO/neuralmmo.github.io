@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -302,13 +301,31 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.spawn.</span></span><span class="sig-name descname"><span class="pre">SequentialLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.spawn.SequentialLoader" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>config.PLAYER_LOADER that spreads out agent populations</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.lib.spawn.SequentialLoader.get_spawn_position">
+<span class="sig-name descname"><span class="pre">get_spawn_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.spawn.SequentialLoader.get_spawn_position" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
-<dl class="py class">
-<dt class="sig sig-object py" id="nmmo.lib.spawn.TeamLoader">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.spawn.</span></span><span class="sig-name descname"><span class="pre">TeamLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.spawn.TeamLoader" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>config.PLAYER_LOADER that loads agent populations adjacent</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.lib.spawn.get_edge_tiles">
+<span class="sig-prename descclassname"><span class="pre">nmmo.lib.spawn.</span></span><span class="sig-name descname"><span class="pre">get_edge_tiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.spawn.get_edge_tiles" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns a list of all edge tiles</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nmmo.lib.spawn.get_team_spawn_positions">
+<span class="sig-prename descclassname"><span class="pre">nmmo.lib.spawn.</span></span><span class="sig-name descname"><span class="pre">get_team_spawn_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_teams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.spawn.get_team_spawn_positions" title="Permalink to this definition">#</a></dt>
+<dd><p>Generates spawn positions for new teams
+Agents in the same team spawn together in the same tile
+Evenly spaces teams around the square map borders</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list of tuple(int, int):</p>
+</dd>
+<dt>position:</dt><dd><p>The position (row, col) to spawn the given teams</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -316,9 +333,9 @@
 <span class="sig-prename descclassname"><span class="pre">nmmo.lib.spawn.</span></span><span class="sig-name descname"><span class="pre">spawn_concurrent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.lib.spawn.spawn_concurrent" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates spawn positions for new agents</p>
 <p>Evenly spaces agents around the borders
-of the square game map</p>
+of the square game map, assuming the edge tiles are all habitable</p>
 <dl class="simple">
-<dt>Returns:</dt><dd><p>tuple(int, int):</p>
+<dt>Returns:</dt><dd><p>list of tuple(int, int):</p>
 </dd>
 <dt>position:</dt><dd><p>The position (row, col) to spawn the given agent</p>
 </dd>

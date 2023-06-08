@@ -5,41 +5,22 @@
 .. card::
     :img-background: /../_static/banner.png
 
-
-
-|icon| Overview of a typical game of NMMO
-*********************************************
-
-Before diving into the Game Wiki, why not warm up and read a narrative of a typical game?
+Feedback on our docs? Contribute changes and suggestions on `Discord <https://github.com/neuralmmo>`_.
 
 .. dropdown:: NMMO Gameplay Narrative
 
-    Our team of 8 agents is trying to survive. Agents spawn around the edges of a large, square map. A potentially hostile team will spawn to the right and to the left of our team. 
+    This Wiki is meant as a quick reference. To understand the game at a high-level, consider this narrative example:
 
-    *Tactics*
-    Immediately, we have a few options. We can attempt to rush into the center of the map and get away from nearby teams. However, we can only see a limited distance ahead. It is possible that we will get trapped by obstacles and be attacked by both nearby teams at the same time. 
+    Our team of 8 agents spawns on the edge of a large square map. At this time, we are assigned a task to complete (see Tasks), with potential hostile teams just out of view to the left and right.
+    
+    Immediate strategic choices arise: rushing into the map center, attempting a quick elimination of nearby teams, or dispatching scouts to gauge the behavior of the nearby teams. This opening flurry of decision making, which encompasses the first 15-30 seconds of a 10-minute game, culminates in a strategic situation that sets the tone for the rest of the game.
 
-    We could instead attempt to rush and eliminate the team either directly to our right or to our left. This could result in a better than even chance of victory if we catch them off guard. However, we are likely to lose several agents on our team if we do that. 
-
-    A third option is to send 1-2 agents to each the right and the left to scout and distract the nearby teams. If they behave passively, the scouts can return to the main team safely. If the scouts are caught and perish, they have at least bought some time for the rest of the team to escape into the rest of the map. This was the strategy learned by the winning agents of the most recent competition. This also represents only the opening 15-30 seconds of play in a 10-minute game.
-
-    *Playing*
-    The next step of play is to establish an advantage verses the competition. Agents have access to 8 different professions which can be improved through practice. All of these in some way confer a benefit to offensive or defensive capabilities that allow agents to protect themselves. The team must now decide which agents on the team will spend their time improving which skills. 
-
-    - For example, one agent could practice ranged bow-and-arrow combat by fighting weak non-playable characters (NPCs) that roam the map, while another agent practices fletching to provide the former with powerful arrows as ammunition. 
-
-    - One agent could practice herbalism, allowing them to make potions to heal the rest of the team. One agent could practice Magic, which is a powerful counter to hostile opponents using Melee combat. 
-
-    - Multiple agents could practice different forms of combat and aggressively challenge more powerful NPCs. Winning yields defensive equipment to share with the rest of the team. 
-
-    *Trade-offs and Strategy*
-    Agents should spread out to search for resources but stay together to create safety in numbers. Agents should diversify their skills but do not have the time to develop expertise in all professions. Agents may sell unneeded items on a global market but should be wary of giving the competition an edge. Agents should proactively seek out potential enemies but only if they catch them unawares or otherwise have a strategic advantage. Ultimately, these decisions are a matter of strategy and opportunism - plans may change to become more aggressive or conservative depending on what resources agents are able to harvest early in the game. This stage of play occupies the next few minutes.
-
-    *Closing in*
-    At this stage, the edges of the map become dangerous. Agents will begin taking damage from "poisonous fog" if they do not move towards the center of the map. This fog slowly expands to occupy all but the center of the map - a mechanic borrowed from the battle royale genre of games. This forces encounters between agent teams. If our team did not fight before, it will almost certainly have to now. By this stage, most if not all teams will lose at least a couple of agents. Strategically better teams still maintain positional advantage, either by having more agents remaining or by having acquired better equipment.
-
-    *Final moments*
-    At the end of the game, the fog closes to a tight central area. Assuming our team is still alive, we should assess our situation and determine whether we are better or worse equipped than the remaining team(s). If we think we have the advantage, we should aggressively challenge and encircle any weaker opponents attempting to evade us, while being wary of attacks by a third party. If we think we are at a disadvantage, we should attempt to evade and lure opponents into exposing themselves to a third party. These are all tactics that emerged in the previous NMMO competition, and they are reminiscent of the strategies human players employ in many battle royale games.
+    The subsequent gameplay phases in Neural MMO 2.0 now depend not only on the surviving agents, nearby resources and terrain, but also on our assigned task. Simple tasks, such as cutting down a tree, can be completed consistently regardless of initial conditions. For harder tasks, such as acquiring high-level equipment, we will have to play more passively if a required resource is far away or if we have lost several agents in the opening stage. But assuming good conditions, we can use the next few minutes to gain an advantage versus the competition. Agents can enhance their capabilities through practice in any of 8 different professions, each conferring unique offensive or defensive benefits. Task completion often requires specific skill levels, prompting agents to specialize and cooperate. For example:
+      - If our task is to obtain level 5 arrows, it would make sense to have one agent practice carving to produce them while another capitalizes on the surplus of ammunition by training ranged combat.
+      - We might assign another agent to practice herbalism and provide healing potions for the team. Provided we can keep this agent safe, it would also be a good candidate to hold the team's gold and attempt to buy items on the exchange.
+      - This would allow us to invest heavily in equipping our range agent to fight powerful NPCs, which have a chance to drop the level 5 axe our carver will need to produce level 5 arrows.
+      
+    These are but a few possibilities, and ultimately, decisions are a matter of strategy and opportunism.
 
 The Game Map
 ************
@@ -103,7 +84,7 @@ Each tick provides the opportunity for every Agent and NPC to do any, all or non
 **Attack an Agent - either NPC or from another team**
 
 - Attack can only be against one other Agent or NPC
-- To attack, your Agent must be within three tiles as the opponent -- actually within a 7x7 square around your Agent.**
+- To attack, your Agent must be within three tiles of the opponent (within a 7x7 square around your Agent).
  
 **Inventory Management**
 
@@ -117,8 +98,8 @@ Inventory capacity is 12 items, including armor, weapon, tools, and consumables.
 
     Each agent observes a groups of entities comprising nearby tiles and agents, its own inventory, and the market. Continuous and discrete tensors of attributes parametrize each entity group. An extra variable *N* counts the number of entities per group.
 
-    .. code-block:: python
-        :caption: Observation space of a single agent
+.. code-block:: python
+  :caption: Observation space of a single agent
 
   observation_space(agent_id) = {
         'AgentId': Discrete(1),
@@ -137,7 +118,7 @@ Levels
 
          - Levels range from 1 to 10
          - Agents spawn with all skills at level 1 (0 XP)
-         - Level x+1 requires 10*2^x* XP
+         - Level n+1 requires 10 x XP x 2^n
          - Agents are awarded 1 XP per attack
 
          - Agents are awarded 1 XP per ammunition resource gathered
@@ -152,7 +133,9 @@ Levels
          - Agents can equip weapons up to the level of the associated skill
          - Agents can equip ammunition and tools up to the level of the associated skill
 
-Each agent may take multiple actions per tick -- one from each category. Each action accepts arguments.
+.. dropdown:: About the Action Space
+
+   Each agent may take multiple actions per tick -- one from each category. Each action accepts a list of arguments. Each argument is a discrete variable. This can be either a standard index (i.e. 0-4 for direction) or a pointer to an entity (i.e. inventory item or agent).
 
 .. code-block:: python
   :caption: Action space of a single agent
@@ -164,6 +147,7 @@ Each agent may take multiple actions per tick -- one from each category. Each ac
               nmmo.action.South,
               nmmo.action.East,
               nmmo.action.West,
+              nmmo.action.Stay,
           },
       },
       nmmo.action.Attack: {
@@ -177,12 +161,33 @@ Each agent may take multiple actions per tick -- one from each category. Each ac
           }
       },
       nmmo.action.Use: {
-          nmmo.action.Item: {
+          nmmo.action.InventoryItem: {
               Inventory Pointer,
           },
       },
+      nmmo.action.Destroy: {
+          nmmo.action.InventoryItem: {
+              Inventory Pointer,
+          },
+      },
+      nmmo.action.Give: {
+          nmmo.action.InventoryItem: {
+              Inventory Pointer,
+          },
+          nmmo.action.Target: {
+              Entity Pointer,
+          }
+      },
+      nmmo.action.GiveGold: {
+          nmmo.action.Price: {
+              Discrete Value,
+          },
+          nmmo.action.Target: {
+              Entity Pointer,
+          }
+      },
       nmmo.action.Sell: {
-          nmmo.action.Item: {
+          nmmo.action.InventoryItem: {
               Inventory Pointer,
           },
           nmmo.action.Price: {
@@ -190,7 +195,7 @@ Each agent may take multiple actions per tick -- one from each category. Each ac
           },
       },
       nmmo.action.Buy: {
-          nmmo.action.Item: {
+          nmmo.action.MarketItem: {
               Market Pointer,
           },
       },
@@ -200,6 +205,7 @@ Each agent may take multiple actions per tick -- one from each category. Each ac
           },
       },
   }
+
 About Combat
 ************
 
@@ -397,8 +403,6 @@ Generally, Passive NPCs will spawn towards the edges of the map, Hostile NPCs sp
 |icon| Tasks
 ************
 
-**In process**
-
 **About Tasks**
   - Goal is to accomplish specific tasks from the curriculum for points.
   - Tasks are randomly generated and assigned at the beginning of each round.
@@ -414,38 +418,56 @@ Generally, Passive NPCs will spawn towards the edges of the map, Hostile NPCs sp
       - Quantity = 1-100 HP out of total 100 HP
       - Ex. Inflict 5 damage with melee
 
+    |
+
     Defeat(npc/player, level)
       - npc/player = NPC or Player, Unit = 1
       - Level = 1-10
       - Defeat a level 5 npc
+
+    |
 
     Achieve(skill, level)
       - Skill = 8 skills (Professions)
       - Level = 10
       - Ex: Achieve level 5 prospecting
 
+    |
+
     Harvest(resource, level)
       - Resource = 5 resources
       - Level = 10 levels
       - Ex: collect a level 3 shard
+
+    |
 
     Equip(type, level)
       - Type = Hat, Top, Bottom
       - Level = 10
       - Ex: equip a level 5 hat
 
+    |
+
     Hoard(gold) - Accumulate a total of 20 gold as a team
       - Gold: Units of transaction ingots
+
+    |
 
     Group(num_tiles, num_teammates) - Always stay within 5 tiles of at least 3 of your teammates
       - Num_tiles: Variable starting with tile you’re on as 0
       - Num_teammates: Self evident. Stay together-ish
 
+    |
+
     Spread(num_tiles, num_teammates) - Always stay at least 5 tiles away from at least 3 of your teammates
       - Opposite of Group
 
+    |
+
     Defend(teammate) - Don’t let your 3rd teammate die
       - Teammate: Specific member of your team can’t die
+
+    |
 
     Eliminate(team, direction) - Eliminate the team that spawns to your right
       - Team: ID # of team

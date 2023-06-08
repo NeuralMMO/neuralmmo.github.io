@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -389,87 +388,6 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Arcane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arcane" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Tool" title="nmmo.systems.item.Tool"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tool</span></code></a></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.ITEM_TYPE_ID">
-<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#nmmo.systems.item.Arcane.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.Limits">
-<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arcane.Limits" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.Query">
-<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Arcane.Query" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.State">
-<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Arcane.State" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.color">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#nmmo.systems.item.Arcane.color" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.destroy">
-<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arcane.destroy" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.equip">
-<span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arcane.equip" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.item_class">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arcane.item_class" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.level_gt">
-<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arcane.level_gt" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.packet">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Arcane.packet" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.parse_array">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Arcane.parse_array" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.register">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arcane.register" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.subclass">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arcane.subclass" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.unequip">
-<span class="sig-name descname"><span class="pre">unequip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arcane.unequip" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Arcane.use">
-<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arcane.use" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.item.Armor">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Armor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Armor" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Equipment" title="nmmo.systems.item.Equipment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Equipment</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
@@ -548,6 +466,183 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.item.Armor.use">
 <span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Armor.use" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Arrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arrow" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Ammunition" title="nmmo.systems.item.Ammunition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ammunition</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.ITEM_TYPE_ID">
+<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#nmmo.systems.item.Arrow.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.Limits">
+<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arrow.Limits" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.Query">
+<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Arrow.Query" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.State">
+<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Arrow.State" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#nmmo.systems.item.Arrow.color" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.damage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">damage</span></span><a class="headerlink" href="#nmmo.systems.item.Arrow.damage" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arrow.destroy" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.equip">
+<span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arrow.equip" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.fire">
+<span class="sig-name descname"><span class="pre">fire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#nmmo.systems.item.Arrow.fire" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.item_class">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arrow.item_class" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.level_gt">
+<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arrow.level_gt" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.packet">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Arrow.packet" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.parse_array">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Arrow.parse_array" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.register">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arrow.register" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.signature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#nmmo.systems.item.Arrow.signature" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.subclass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arrow.subclass" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.unequip">
+<span class="sig-name descname"><span class="pre">unequip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arrow.unequip" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Arrow.use">
+<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Arrow.use" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Axe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Axe" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Tool" title="nmmo.systems.item.Tool"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tool</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.ITEM_TYPE_ID">
+<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#nmmo.systems.item.Axe.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.Limits">
+<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Axe.Limits" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.Query">
+<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Axe.Query" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.State">
+<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Axe.State" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#nmmo.systems.item.Axe.color" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Axe.destroy" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.equip">
+<span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Axe.equip" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.item_class">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Axe.item_class" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.level_gt">
+<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Axe.level_gt" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.packet">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Axe.packet" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.parse_array">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Axe.parse_array" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.register">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Axe.register" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.subclass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Axe.subclass" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.unequip">
+<span class="sig-name descname"><span class="pre">unequip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Axe.unequip" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Axe.use">
+<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Axe.use" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -722,7 +817,7 @@
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Tool" title="nmmo.systems.item.Tool"><code class="xref py py-class docutils literal notranslate"><span class="pre">Tool</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.systems.item.Chisel.ITEM_TYPE_ID">
-<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#nmmo.systems.item.Chisel.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#nmmo.systems.item.Chisel.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -799,7 +894,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.item.Consumable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Consumable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">health_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Consumable" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Consumable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">health_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Consumable" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Item" title="nmmo.systems.item.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">Item</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.systems.item.Consumable.ITEM_TYPE_ID">
@@ -865,7 +960,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.item.Equipment">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Equipment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">health_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Equipment" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Equipment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">health_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Equipment" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Item" title="nmmo.systems.item.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">Item</span></code></a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.systems.item.Equipment.ITEM_TYPE_ID">
@@ -1110,7 +1205,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.systems.item.Item">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">health_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Item" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_attack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melee_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mage_defense</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">health_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_restore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Item" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Subclass</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.systems.item.Item.ITEM_TYPE_ID">
@@ -1256,67 +1351,67 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Poultice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Poultice" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Potion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Potion" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Consumable" title="nmmo.systems.item.Consumable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Consumable</span></code></a></p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.ITEM_TYPE_ID">
-<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#nmmo.systems.item.Poultice.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.ITEM_TYPE_ID">
+<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#nmmo.systems.item.Potion.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.Limits">
-<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Poultice.Limits" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.Limits">
+<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Potion.Limits" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.Query">
-<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Poultice.Query" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.Query">
+<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Potion.Query" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.State">
-<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Poultice.State" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.State">
+<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Potion.State" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.destroy">
-<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Poultice.destroy" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Potion.destroy" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.item_class">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Poultice.item_class" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.item_class">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Potion.item_class" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.level_gt">
-<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Poultice.level_gt" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.level_gt">
+<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Potion.level_gt" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.packet">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Poultice.packet" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.packet">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Potion.packet" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.parse_array">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Poultice.parse_array" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.parse_array">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Potion.parse_array" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.register">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Poultice.register" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.register">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Potion.register" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.subclass">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Poultice.subclass" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.subclass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Potion.subclass" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Poultice.use">
-<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.systems.item.Poultice.use" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Potion.use">
+<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nmmo.systems.item.Potion.use" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1469,289 +1564,178 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Scrap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Scrap" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Runes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Runes" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Ammunition" title="nmmo.systems.item.Ammunition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ammunition</span></code></a></p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.ITEM_TYPE_ID">
-<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#nmmo.systems.item.Scrap.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.ITEM_TYPE_ID">
+<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#nmmo.systems.item.Runes.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.Limits">
-<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Scrap.Limits" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.Limits">
+<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Runes.Limits" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.Query">
-<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Scrap.Query" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.Query">
+<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Runes.Query" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.State">
-<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Scrap.State" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.State">
+<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Runes.State" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.color">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#nmmo.systems.item.Scrap.color" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#nmmo.systems.item.Runes.color" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.damage">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">damage</span></span><a class="headerlink" href="#nmmo.systems.item.Scrap.damage" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.damage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">damage</span></span><a class="headerlink" href="#nmmo.systems.item.Runes.damage" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.destroy">
-<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Scrap.destroy" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Runes.destroy" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.equip">
-<span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Scrap.equip" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.equip">
+<span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Runes.equip" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.fire">
-<span class="sig-name descname"><span class="pre">fire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#nmmo.systems.item.Scrap.fire" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.fire">
+<span class="sig-name descname"><span class="pre">fire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#nmmo.systems.item.Runes.fire" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.item_class">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Scrap.item_class" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.item_class">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Runes.item_class" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.level_gt">
-<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Scrap.level_gt" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.level_gt">
+<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Runes.level_gt" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.packet">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Scrap.packet" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.packet">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Runes.packet" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.parse_array">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Scrap.parse_array" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.parse_array">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Runes.parse_array" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.register">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Scrap.register" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.register">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Runes.register" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.signature">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#nmmo.systems.item.Scrap.signature" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.signature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#nmmo.systems.item.Runes.signature" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.subclass">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Scrap.subclass" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.subclass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Runes.subclass" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.unequip">
-<span class="sig-name descname"><span class="pre">unequip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Scrap.unequip" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.unequip">
+<span class="sig-name descname"><span class="pre">unequip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Runes.unequip" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Scrap.use">
-<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Scrap.use" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Runes.use">
+<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Runes.use" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Shard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shard" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Ammunition" title="nmmo.systems.item.Ammunition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ammunition</span></code></a></p>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Spear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Spear" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Weapon" title="nmmo.systems.item.Weapon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Weapon</span></code></a></p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.ITEM_TYPE_ID">
-<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#nmmo.systems.item.Shard.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.ITEM_TYPE_ID">
+<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#nmmo.systems.item.Spear.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.Limits">
-<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shard.Limits" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.Query">
-<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Shard.Query" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.Limits">
+<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Spear.Limits" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.State">
-<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Shard.State" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.color">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#nmmo.systems.item.Shard.color" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.damage">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">damage</span></span><a class="headerlink" href="#nmmo.systems.item.Shard.damage" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.destroy">
-<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shard.destroy" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.equip">
-<span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shard.equip" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.fire">
-<span class="sig-name descname"><span class="pre">fire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#nmmo.systems.item.Shard.fire" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.item_class">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shard.item_class" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.level_gt">
-<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shard.level_gt" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.packet">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Shard.packet" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.parse_array">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Shard.parse_array" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.register">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shard.register" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.signature">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#nmmo.systems.item.Shard.signature" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.subclass">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shard.subclass" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.unequip">
-<span class="sig-name descname"><span class="pre">unequip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shard.unequip" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shard.use">
-<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shard.use" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Shaving</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shaving" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Ammunition" title="nmmo.systems.item.Ammunition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ammunition</span></code></a></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.ITEM_TYPE_ID">
-<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#nmmo.systems.item.Shaving.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.Limits">
-<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shaving.Limits" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.Query">
+<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Spear.Query" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.Query">
-<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Shaving.Query" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.State">
-<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Shaving.State" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.State">
+<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Spear.State" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.color">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#nmmo.systems.item.Shaving.color" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#nmmo.systems.item.Spear.color" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Spear.destroy" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.equip">
+<span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Spear.equip" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.item_class">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Spear.item_class" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.level_gt">
+<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Spear.level_gt" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.damage">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">damage</span></span><a class="headerlink" href="#nmmo.systems.item.Shaving.damage" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.packet">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Spear.packet" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.destroy">
-<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shaving.destroy" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.parse_array">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Spear.parse_array" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.equip">
-<span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shaving.equip" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.register">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Spear.register" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.fire">
-<span class="sig-name descname"><span class="pre">fire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#nmmo.systems.item.Shaving.fire" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.subclass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Spear.subclass" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.item_class">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shaving.item_class" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.unequip">
+<span class="sig-name descname"><span class="pre">unequip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Spear.unequip" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.level_gt">
-<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shaving.level_gt" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.packet">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Shaving.packet" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.parse_array">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Shaving.parse_array" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.register">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shaving.register" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.signature">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#nmmo.systems.item.Shaving.signature" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.subclass">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shaving.subclass" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.unequip">
-<span class="sig-name descname"><span class="pre">unequip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shaving.unequip" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Shaving.use">
-<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Shaving.use" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="nmmo.systems.item.Spear.use">
+<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Spear.use" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1763,87 +1747,6 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="nmmo.systems.item.Stack.signature">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#nmmo.systems.item.Stack.signature" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Sword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Sword" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Weapon" title="nmmo.systems.item.Weapon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Weapon</span></code></a></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.ITEM_TYPE_ID">
-<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#nmmo.systems.item.Sword.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.Limits">
-<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Sword.Limits" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.Query">
-<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Sword.Query" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.State">
-<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Sword.State" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.color">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#nmmo.systems.item.Sword.color" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.destroy">
-<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Sword.destroy" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.equip">
-<span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Sword.equip" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.item_class">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Sword.item_class" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.level_gt">
-<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Sword.level_gt" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.packet">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Sword.packet" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.parse_array">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Sword.parse_array" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.register">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Sword.register" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.subclass">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Sword.subclass" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.unequip">
-<span class="sig-name descname"><span class="pre">unequip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Sword.unequip" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="nmmo.systems.item.Sword.use">
-<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Sword.use" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2170,6 +2073,102 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="nmmo.systems.item.Weapon.use">
 <span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Weapon.use" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.systems.item.</span></span><span class="sig-name descname"><span class="pre">Whetstone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Whetstone" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nmmo.systems.item.Ammunition" title="nmmo.systems.item.Ammunition"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ammunition</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.ITEM_TYPE_ID">
+<span class="sig-name descname"><span class="pre">ITEM_TYPE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#nmmo.systems.item.Whetstone.ITEM_TYPE_ID" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.Limits">
+<span class="sig-name descname"><span class="pre">Limits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Whetstone.Limits" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.Query">
+<span class="sig-name descname"><span class="pre">Query</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(table=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">by_id=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">owned_by=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;,</span> <span class="pre">for_sale=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Whetstone.Query" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.State">
+<span class="sig-name descname"><span class="pre">State</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">namespace(attr_name_to_col={'id':</span> <span class="pre">0,</span> <span class="pre">'type_id':</span> <span class="pre">1,</span> <span class="pre">'owner_id':</span> <span class="pre">2,</span> <span class="pre">'level':</span> <span class="pre">3,</span> <span class="pre">'capacity':</span> <span class="pre">4,</span> <span class="pre">'quantity':</span> <span class="pre">5,</span> <span class="pre">'melee_attack':</span> <span class="pre">6,</span> <span class="pre">'range_attack':</span> <span class="pre">7,</span> <span class="pre">'mage_attack':</span> <span class="pre">8,</span> <span class="pre">'melee_defense':</span> <span class="pre">9,</span> <span class="pre">'range_defense':</span> <span class="pre">10,</span> <span class="pre">'mage_defense':</span> <span class="pre">11,</span> <span class="pre">'health_restore':</span> <span class="pre">12,</span> <span class="pre">'resource_restore':</span> <span class="pre">13,</span> <span class="pre">'equipped':</span> <span class="pre">14,</span> <span class="pre">'listed_price':</span> <span class="pre">15},</span> <span class="pre">num_attributes=16,</span> <span class="pre">table=&lt;function</span> <span class="pre">SerializedState.subclass.&lt;locals&gt;.Subclass.&lt;lambda&gt;&gt;)</span></em><a class="headerlink" href="#nmmo.systems.item.Whetstone.State" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#nmmo.systems.item.Whetstone.color" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.damage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">damage</span></span><a class="headerlink" href="#nmmo.systems.item.Whetstone.damage" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Whetstone.destroy" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.equip">
+<span class="sig-name descname"><span class="pre">equip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Whetstone.equip" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.fire">
+<span class="sig-name descname"><span class="pre">fire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#nmmo.systems.item.Whetstone.fire" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.item_class">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">item_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Whetstone.item_class" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.level_gt">
+<span class="sig-name descname"><span class="pre">level_gt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Whetstone.level_gt" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.packet">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">packet</span></span><a class="headerlink" href="#nmmo.systems.item.Whetstone.packet" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.parse_array">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">SimpleNamespace</span></span></span><a class="headerlink" href="#nmmo.systems.item.Whetstone.parse_array" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.register">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Whetstone.register" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.signature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#nmmo.systems.item.Whetstone.signature" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.subclass">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subclass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Whetstone.subclass" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.unequip">
+<span class="sig-name descname"><span class="pre">unequip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equip_slot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Whetstone.unequip" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nmmo.systems.item.Whetstone.use">
+<span class="sig-name descname"><span class="pre">use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.systems.item.Whetstone.use" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

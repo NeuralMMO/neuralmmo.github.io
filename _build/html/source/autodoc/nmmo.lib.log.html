@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -297,6 +296,87 @@
         <article role="main">
           <section id="module-nmmo.lib.log">
 <span id="nmmo-lib-log-module"></span><h1>nmmo.lib.log module<a class="headerlink" href="#module-nmmo.lib.log" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.log.</span></span><span class="sig-name descname"><span class="pre">EventCode</span></span><a class="headerlink" href="#nmmo.lib.log.EventCode" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.BUY_ITEM">
+<span class="sig-name descname"><span class="pre">BUY_ITEM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">34</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.BUY_ITEM" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.CONSUME_ITEM">
+<span class="sig-name descname"><span class="pre">CONSUME_ITEM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">21</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.CONSUME_ITEM" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.DESTROY_ITEM">
+<span class="sig-name descname"><span class="pre">DESTROY_ITEM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">23</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.DESTROY_ITEM" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.DRINK_WATER">
+<span class="sig-name descname"><span class="pre">DRINK_WATER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.DRINK_WATER" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.EARN_GOLD">
+<span class="sig-name descname"><span class="pre">EARN_GOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">33</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.EARN_GOLD" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.EAT_FOOD">
+<span class="sig-name descname"><span class="pre">EAT_FOOD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.EAT_FOOD" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.EQUIP_ITEM">
+<span class="sig-name descname"><span class="pre">EQUIP_ITEM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">25</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.EQUIP_ITEM" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.GIVE_GOLD">
+<span class="sig-name descname"><span class="pre">GIVE_GOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">31</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.GIVE_GOLD" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.GIVE_ITEM">
+<span class="sig-name descname"><span class="pre">GIVE_ITEM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">22</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.GIVE_ITEM" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.GO_FARTHEST">
+<span class="sig-name descname"><span class="pre">GO_FARTHEST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.GO_FARTHEST" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.HARVEST_ITEM">
+<span class="sig-name descname"><span class="pre">HARVEST_ITEM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.HARVEST_ITEM" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.LEVEL_UP">
+<span class="sig-name descname"><span class="pre">LEVEL_UP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">41</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.LEVEL_UP" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.LIST_ITEM">
+<span class="sig-name descname"><span class="pre">LIST_ITEM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">32</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.LIST_ITEM" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.PLAYER_KILL">
+<span class="sig-name descname"><span class="pre">PLAYER_KILL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.PLAYER_KILL" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.lib.log.EventCode.SCORE_HIT">
+<span class="sig-name descname"><span class="pre">SCORE_HIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#nmmo.lib.log.EventCode.SCORE_HIT" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="nmmo.lib.log.Logger">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.lib.log.</span></span><span class="sig-name descname"><span class="pre">Logger</span></span><a class="headerlink" href="#nmmo.lib.log.Logger" title="Permalink to this definition">#</a></dt>

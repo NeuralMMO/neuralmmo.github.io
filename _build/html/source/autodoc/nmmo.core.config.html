@@ -235,8 +235,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Game Wiki</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html"> Overview of a typical game of NMMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#the-game-map">The Game Map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html">The Game Map</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#icon-competition-environment-and-levels"> Competition Environment and Levels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#about-combat">About Combat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../rst/game_wiki.html#professions-tools-and-items">Professions, Tools, and Items</a></li>
@@ -308,12 +307,6 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.COMBAT_FRIENDLY_FIRE">
-<span class="sig-name descname"><span class="pre">COMBAT_FRIENDLY_FIRE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.COMBAT_FRIENDLY_FIRE" title="Permalink to this definition">#</a></dt>
-<dd><p>Whether agents with the same population index can hit each other</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.COMBAT_MAGE_DAMAGE">
 <span class="sig-name descname"><span class="pre">COMBAT_MAGE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.COMBAT_MAGE_DAMAGE" title="Permalink to this definition">#</a></dt>
 <dd><p>Mage attack damage</p>
@@ -353,6 +346,13 @@
 <dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.COMBAT_SPAWN_IMMUNITY">
 <span class="sig-name descname"><span class="pre">COMBAT_SPAWN_IMMUNITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.COMBAT_SPAWN_IMMUNITY" title="Permalink to this definition">#</a></dt>
 <dd><p>Agents older than this many ticks cannot attack agents younger than this many ticks</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.COMBAT_STATUS_DURATION">
+<span class="sig-name descname"><span class="pre">COMBAT_STATUS_DURATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.COMBAT_STATUS_DURATION" title="Permalink to this definition">#</a></dt>
+<dd><p>Combat status lasts for this many ticks after the last combat event.
+Combat events include both attacking and being attacked.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -434,6 +434,12 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.EXCHANGE_BASE_GOLD">
+<span class="sig-name descname"><span class="pre">EXCHANGE_BASE_GOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.EXCHANGE_BASE_GOLD" title="Permalink to this definition">#</a></dt>
+<dd><p>Initial gold amount</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.EXCHANGE_LISTING_DURATION">
 <span class="sig-name descname"><span class="pre">EXCHANGE_LISTING_DURATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.EXCHANGE_LISTING_DURATION" title="Permalink to this definition">#</a></dt>
 <dd><p>The number of ticks, during which the item is listed for sale</p>
@@ -452,9 +458,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.ITEM_GIVE_TO_FRIENDLY">
-<span class="sig-name descname"><span class="pre">ITEM_GIVE_TO_FRIENDLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.ITEM_GIVE_TO_FRIENDLY" title="Permalink to this definition">#</a></dt>
-<dd><p>Whether agents with the same population index can give gold/item to each other</p>
+<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.ITEM_ALLOW_GIFT">
+<span class="sig-name descname"><span class="pre">ITEM_ALLOW_GIFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.ITEM_ALLOW_GIFT" title="Permalink to this definition">#</a></dt>
+<dd><p>Whether agents can give gold/item to each other</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -644,6 +650,12 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.PROGRESSION_BASE_LEVEL">
+<span class="sig-name descname"><span class="pre">PROGRESSION_BASE_LEVEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.PROGRESSION_BASE_LEVEL" title="Permalink to this definition">#</a></dt>
+<dd><p>Initial skill level</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.PROGRESSION_BASE_XP_SCALE">
 <span class="sig-name descname"><span class="pre">PROGRESSION_BASE_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.PROGRESSION_BASE_XP_SCALE" title="Permalink to this definition">#</a></dt>
 <dd><p>Base XP awarded for each skill usage – multiplied by skill level</p>
@@ -718,7 +730,7 @@ This also determines the maximum price one can set for an item</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.RESOURCE_BASE">
 <span class="sig-name descname"><span class="pre">RESOURCE_BASE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.RESOURCE_BASE" title="Permalink to this definition">#</a></dt>
-<dd><p>Initial level and capacity for Hunting + Fishing resource skills</p>
+<dd><p>Initial level and capacity for food and water</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -734,15 +746,15 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.RESOURCE_FOREST_CAPACITY">
-<span class="sig-name descname"><span class="pre">RESOURCE_FOREST_CAPACITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.RESOURCE_FOREST_CAPACITY" title="Permalink to this definition">#</a></dt>
-<dd><p>Maximum number of harvests before a forest tile decays</p>
+<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.RESOURCE_FOILAGE_CAPACITY">
+<span class="sig-name descname"><span class="pre">RESOURCE_FOILAGE_CAPACITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.RESOURCE_FOILAGE_CAPACITY" title="Permalink to this definition">#</a></dt>
+<dd><p>Maximum number of harvests before a foilage tile decays</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.RESOURCE_FOREST_RESPAWN">
-<span class="sig-name descname"><span class="pre">RESOURCE_FOREST_RESPAWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.025</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.RESOURCE_FOREST_RESPAWN" title="Permalink to this definition">#</a></dt>
-<dd><p>Probability that a harvested forest tile will regenerate each tick</p>
+<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.RESOURCE_FOILAGE_RESPAWN">
+<span class="sig-name descname"><span class="pre">RESOURCE_FOILAGE_RESPAWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.025</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.RESOURCE_FOILAGE_RESPAWN" title="Permalink to this definition">#</a></dt>
+<dd><p>Probability that a harvested foilage tile will regenerate each tick</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -782,9 +794,9 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.TERRAIN_FOREST">
-<span class="sig-name descname"><span class="pre">TERRAIN_FOREST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.85</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.TERRAIN_FOREST" title="Permalink to this definition">#</a></dt>
-<dd><p>Noise threshold for forest</p>
+<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.TERRAIN_FOILAGE">
+<span class="sig-name descname"><span class="pre">TERRAIN_FOILAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.85</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.TERRAIN_FOILAGE" title="Permalink to this definition">#</a></dt>
+<dd><p>Noise threshold for foilage (food tile)</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -803,12 +815,6 @@ This also determines the maximum price one can set for an item</p>
 <dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.TERRAIN_GRASS">
 <span class="sig-name descname"><span class="pre">TERRAIN_GRASS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.7</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.TERRAIN_GRASS" title="Permalink to this definition">#</a></dt>
 <dd><p>Noise threshold for grass</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.TERRAIN_LAVA">
-<span class="sig-name descname"><span class="pre">TERRAIN_LAVA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.TERRAIN_LAVA" title="Permalink to this definition">#</a></dt>
-<dd><p>Noise threshold for lava generation</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -836,6 +842,12 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.TERRAIN_VOID">
+<span class="sig-name descname"><span class="pre">TERRAIN_VOID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.TERRAIN_VOID" title="Permalink to this definition">#</a></dt>
+<dd><p>Noise threshold for void generation</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.AllGameSystems.TERRAIN_WATER">
 <span class="sig-name descname"><span class="pre">TERRAIN_WATER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.3</span></em><a class="headerlink" href="#nmmo.core.config.AllGameSystems.TERRAIN_WATER" title="Permalink to this definition">#</a></dt>
 <dd><p>Noise threshold for water generation</p>
@@ -858,12 +870,6 @@ This also determines the maximum price one can set for an item</p>
 <dt class="sig sig-object py" id="nmmo.core.config.Combat.COMBAT_DAMAGE_FORMULA">
 <span class="sig-name descname"><span class="pre">COMBAT_DAMAGE_FORMULA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offense</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defense</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nmmo.core.config.Combat.COMBAT_DAMAGE_FORMULA" title="Permalink to this definition">#</a></dt>
 <dd><p>Damage formula</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Combat.COMBAT_FRIENDLY_FIRE">
-<span class="sig-name descname"><span class="pre">COMBAT_FRIENDLY_FIRE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Combat.COMBAT_FRIENDLY_FIRE" title="Permalink to this definition">#</a></dt>
-<dd><p>Whether agents with the same population index can hit each other</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -906,6 +912,13 @@ This also determines the maximum price one can set for an item</p>
 <dt class="sig sig-object py" id="nmmo.core.config.Combat.COMBAT_SPAWN_IMMUNITY">
 <span class="sig-name descname"><span class="pre">COMBAT_SPAWN_IMMUNITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#nmmo.core.config.Combat.COMBAT_SPAWN_IMMUNITY" title="Permalink to this definition">#</a></dt>
 <dd><p>Agents older than this many ticks cannot attack agents younger than this many ticks</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.Combat.COMBAT_STATUS_DURATION">
+<span class="sig-name descname"><span class="pre">COMBAT_STATUS_DURATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.core.config.Combat.COMBAT_STATUS_DURATION" title="Permalink to this definition">#</a></dt>
+<dd><p>Combat status lasts for this many ticks after the last combat event.
+Combat events include both attacking and being attacked.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -991,7 +1004,7 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.IMMORTAL">
 <span class="sig-name descname"><span class="pre">IMMORTAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Config.IMMORTAL" title="Permalink to this definition">#</a></dt>
-<dd><p>Debug parameter: prevents agents from dying except by lava</p>
+<dd><p>Debug parameter: prevents agents from dying except by void</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1027,7 +1040,7 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.MAP_BORDER">
 <span class="sig-name descname"><span class="pre">MAP_BORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#nmmo.core.config.Config.MAP_BORDER" title="Permalink to this definition">#</a></dt>
-<dd><p>Number of lava border tiles surrounding each side of the map</p>
+<dd><p>Number of void border tiles surrounding each side of the map</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1086,7 +1099,7 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.PATH_CWD">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_CWD" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/PufferTank/neuralmmo.github.io'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_CWD" title="Permalink to this definition">#</a></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -1104,19 +1117,19 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.PATH_RESOURCE">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_RESOURCE" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_RESOURCE" title="Permalink to this definition">#</a></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.PATH_ROOT">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_ROOT" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_ROOT" title="Permalink to this definition">#</a></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.PATH_TILE">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_TILE" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Config.PATH_TILE" title="Permalink to this definition">#</a></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -1200,26 +1213,8 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Config.PROVIDE_ACTION_TARGETS">
-<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Config.PROVIDE_ACTION_TARGETS" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Config.PROVIDE_ACTION_TARGETS" title="Permalink to this definition">#</a></dt>
 <dd><p>Flag used to provide action targets mask</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Config.RENDER">
-<span class="sig-name descname"><span class="pre">RENDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Config.RENDER" title="Permalink to this definition">#</a></dt>
-<dd><p>Flag used by render mode</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Config.SAVE_REPLAY">
-<span class="sig-name descname"><span class="pre">SAVE_REPLAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Config.SAVE_REPLAY" title="Permalink to this definition">#</a></dt>
-<dd><p>Flag used to save replays</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Config.TASKS">
-<span class="sig-name descname"><span class="pre">TASKS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.core.config.Config.TASKS" title="Permalink to this definition">#</a></dt>
-<dd><p>Tasks for which to compute rewards</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1276,12 +1271,6 @@ generated automatically.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Default.COMBAT_FRIENDLY_FIRE">
-<span class="sig-name descname"><span class="pre">COMBAT_FRIENDLY_FIRE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Default.COMBAT_FRIENDLY_FIRE" title="Permalink to this definition">#</a></dt>
-<dd><p>Whether agents with the same population index can hit each other</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.COMBAT_MAGE_DAMAGE">
 <span class="sig-name descname"><span class="pre">COMBAT_MAGE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em><a class="headerlink" href="#nmmo.core.config.Default.COMBAT_MAGE_DAMAGE" title="Permalink to this definition">#</a></dt>
 <dd><p>Mage attack damage</p>
@@ -1321,6 +1310,13 @@ generated automatically.</p>
 <dt class="sig sig-object py" id="nmmo.core.config.Default.COMBAT_SPAWN_IMMUNITY">
 <span class="sig-name descname"><span class="pre">COMBAT_SPAWN_IMMUNITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#nmmo.core.config.Default.COMBAT_SPAWN_IMMUNITY" title="Permalink to this definition">#</a></dt>
 <dd><p>Agents older than this many ticks cannot attack agents younger than this many ticks</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.Default.COMBAT_STATUS_DURATION">
+<span class="sig-name descname"><span class="pre">COMBAT_STATUS_DURATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#nmmo.core.config.Default.COMBAT_STATUS_DURATION" title="Permalink to this definition">#</a></dt>
+<dd><p>Combat status lasts for this many ticks after the last combat event.
+Combat events include both attacking and being attacked.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1426,6 +1422,12 @@ generated automatically.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.Default.EXCHANGE_BASE_GOLD">
+<span class="sig-name descname"><span class="pre">EXCHANGE_BASE_GOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.Default.EXCHANGE_BASE_GOLD" title="Permalink to this definition">#</a></dt>
+<dd><p>Initial gold amount</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.EXCHANGE_LISTING_DURATION">
 <span class="sig-name descname"><span class="pre">EXCHANGE_LISTING_DURATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#nmmo.core.config.Default.EXCHANGE_LISTING_DURATION" title="Permalink to this definition">#</a></dt>
 <dd><p>The number of ticks, during which the item is listed for sale</p>
@@ -1445,7 +1447,7 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.IMMORTAL">
 <span class="sig-name descname"><span class="pre">IMMORTAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Default.IMMORTAL" title="Permalink to this definition">#</a></dt>
-<dd><p>Debug parameter: prevents agents from dying except by lava</p>
+<dd><p>Debug parameter: prevents agents from dying except by void</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1455,9 +1457,9 @@ generated automatically.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Default.ITEM_GIVE_TO_FRIENDLY">
-<span class="sig-name descname"><span class="pre">ITEM_GIVE_TO_FRIENDLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Default.ITEM_GIVE_TO_FRIENDLY" title="Permalink to this definition">#</a></dt>
-<dd><p>Whether agents with the same population index can give gold/item to each other</p>
+<dt class="sig sig-object py" id="nmmo.core.config.Default.ITEM_ALLOW_GIFT">
+<span class="sig-name descname"><span class="pre">ITEM_ALLOW_GIFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Default.ITEM_ALLOW_GIFT" title="Permalink to this definition">#</a></dt>
+<dd><p>Whether agents can give gold/item to each other</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1511,7 +1513,7 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.MAP_BORDER">
 <span class="sig-name descname"><span class="pre">MAP_BORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#nmmo.core.config.Default.MAP_BORDER" title="Permalink to this definition">#</a></dt>
-<dd><p>Number of lava border tiles surrounding each side of the map</p>
+<dd><p>Number of void border tiles surrounding each side of the map</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1652,7 +1654,7 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PATH_CWD">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_CWD" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/PufferTank/neuralmmo.github.io'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_CWD" title="Permalink to this definition">#</a></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -1670,19 +1672,19 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PATH_RESOURCE">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_RESOURCE" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_RESOURCE" title="Permalink to this definition">#</a></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PATH_ROOT">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_ROOT" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_ROOT" title="Permalink to this definition">#</a></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PATH_TILE">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_TILE" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Default.PATH_TILE" title="Permalink to this definition">#</a></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -1854,6 +1856,12 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.Default.PROGRESSION_BASE_LEVEL">
+<span class="sig-name descname"><span class="pre">PROGRESSION_BASE_LEVEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.Default.PROGRESSION_BASE_LEVEL" title="Permalink to this definition">#</a></dt>
+<dd><p>Initial skill level</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PROGRESSION_BASE_XP_SCALE">
 <span class="sig-name descname"><span class="pre">PROGRESSION_BASE_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.Default.PROGRESSION_BASE_XP_SCALE" title="Permalink to this definition">#</a></dt>
 <dd><p>Base XP awarded for each skill usage – multiplied by skill level</p>
@@ -1937,20 +1945,14 @@ This also determines the maximum price one can set for an item</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.PROVIDE_ACTION_TARGETS">
-<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Default.PROVIDE_ACTION_TARGETS" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Default.PROVIDE_ACTION_TARGETS" title="Permalink to this definition">#</a></dt>
 <dd><p>Flag used to provide action targets mask</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Default.RENDER">
-<span class="sig-name descname"><span class="pre">RENDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Default.RENDER" title="Permalink to this definition">#</a></dt>
-<dd><p>Flag used by render mode</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.RESOURCE_BASE">
 <span class="sig-name descname"><span class="pre">RESOURCE_BASE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="#nmmo.core.config.Default.RESOURCE_BASE" title="Permalink to this definition">#</a></dt>
-<dd><p>Initial level and capacity for Hunting + Fishing resource skills</p>
+<dd><p>Initial level and capacity for food and water</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1966,15 +1968,15 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Default.RESOURCE_FOREST_CAPACITY">
-<span class="sig-name descname"><span class="pre">RESOURCE_FOREST_CAPACITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.Default.RESOURCE_FOREST_CAPACITY" title="Permalink to this definition">#</a></dt>
-<dd><p>Maximum number of harvests before a forest tile decays</p>
+<dt class="sig sig-object py" id="nmmo.core.config.Default.RESOURCE_FOILAGE_CAPACITY">
+<span class="sig-name descname"><span class="pre">RESOURCE_FOILAGE_CAPACITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.Default.RESOURCE_FOILAGE_CAPACITY" title="Permalink to this definition">#</a></dt>
+<dd><p>Maximum number of harvests before a foilage tile decays</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Default.RESOURCE_FOREST_RESPAWN">
-<span class="sig-name descname"><span class="pre">RESOURCE_FOREST_RESPAWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.025</span></em><a class="headerlink" href="#nmmo.core.config.Default.RESOURCE_FOREST_RESPAWN" title="Permalink to this definition">#</a></dt>
-<dd><p>Probability that a harvested forest tile will regenerate each tick</p>
+<dt class="sig sig-object py" id="nmmo.core.config.Default.RESOURCE_FOILAGE_RESPAWN">
+<span class="sig-name descname"><span class="pre">RESOURCE_FOILAGE_RESPAWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.025</span></em><a class="headerlink" href="#nmmo.core.config.Default.RESOURCE_FOILAGE_RESPAWN" title="Permalink to this definition">#</a></dt>
+<dd><p>Probability that a harvested foilage tile will regenerate each tick</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2008,27 +2010,15 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Default.SAVE_REPLAY">
-<span class="sig-name descname"><span class="pre">SAVE_REPLAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Default.SAVE_REPLAY" title="Permalink to this definition">#</a></dt>
-<dd><p>Flag used to save replays</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Default.TASKS">
-<span class="sig-name descname"><span class="pre">TASKS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.core.config.Default.TASKS" title="Permalink to this definition">#</a></dt>
-<dd><p>Tasks for which to compute rewards</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Default.TERRAIN_FLIP_SEED">
 <span class="sig-name descname"><span class="pre">TERRAIN_FLIP_SEED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Default.TERRAIN_FLIP_SEED" title="Permalink to this definition">#</a></dt>
 <dd><p>Whether to negate the seed used for generation (useful for unique heldout maps)</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Default.TERRAIN_FOREST">
-<span class="sig-name descname"><span class="pre">TERRAIN_FOREST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.85</span></em><a class="headerlink" href="#nmmo.core.config.Default.TERRAIN_FOREST" title="Permalink to this definition">#</a></dt>
-<dd><p>Noise threshold for forest</p>
+<dt class="sig sig-object py" id="nmmo.core.config.Default.TERRAIN_FOILAGE">
+<span class="sig-name descname"><span class="pre">TERRAIN_FOILAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.85</span></em><a class="headerlink" href="#nmmo.core.config.Default.TERRAIN_FOILAGE" title="Permalink to this definition">#</a></dt>
+<dd><p>Noise threshold for foilage (food tile)</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2047,12 +2037,6 @@ This also determines the maximum price one can set for an item</p>
 <dt class="sig sig-object py" id="nmmo.core.config.Default.TERRAIN_GRASS">
 <span class="sig-name descname"><span class="pre">TERRAIN_GRASS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.7</span></em><a class="headerlink" href="#nmmo.core.config.Default.TERRAIN_GRASS" title="Permalink to this definition">#</a></dt>
 <dd><p>Noise threshold for grass</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Default.TERRAIN_LAVA">
-<span class="sig-name descname"><span class="pre">TERRAIN_LAVA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#nmmo.core.config.Default.TERRAIN_LAVA" title="Permalink to this definition">#</a></dt>
-<dd><p>Noise threshold for lava generation</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2077,6 +2061,12 @@ This also determines the maximum price one can set for an item</p>
 <dt class="sig sig-object py" id="nmmo.core.config.Default.TERRAIN_TILES_PER_OCTAVE">
 <span class="sig-name descname"><span class="pre">TERRAIN_TILES_PER_OCTAVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#nmmo.core.config.Default.TERRAIN_TILES_PER_OCTAVE" title="Permalink to this definition">#</a></dt>
 <dd><p>Number of octaves sampled from log2 spaced TERRAIN_FREQUENCY range</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.Default.TERRAIN_VOID">
+<span class="sig-name descname"><span class="pre">TERRAIN_VOID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#nmmo.core.config.Default.TERRAIN_VOID" title="Permalink to this definition">#</a></dt>
+<dd><p>Noise threshold for void generation</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2201,6 +2191,12 @@ This also determines the maximum price one can set for an item</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Exchange Game System</p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.Exchange.EXCHANGE_BASE_GOLD">
+<span class="sig-name descname"><span class="pre">EXCHANGE_BASE_GOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.Exchange.EXCHANGE_BASE_GOLD" title="Permalink to this definition">#</a></dt>
+<dd><p>Initial gold amount</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Exchange.EXCHANGE_LISTING_DURATION">
 <span class="sig-name descname"><span class="pre">EXCHANGE_LISTING_DURATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#nmmo.core.config.Exchange.EXCHANGE_LISTING_DURATION" title="Permalink to this definition">#</a></dt>
 <dd><p>The number of ticks, during which the item is listed for sale</p>
@@ -2239,9 +2235,9 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Item.ITEM_GIVE_TO_FRIENDLY">
-<span class="sig-name descname"><span class="pre">ITEM_GIVE_TO_FRIENDLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Item.ITEM_GIVE_TO_FRIENDLY" title="Permalink to this definition">#</a></dt>
-<dd><p>Whether agents with the same population index can give gold/item to each other</p>
+<dt class="sig sig-object py" id="nmmo.core.config.Item.ITEM_ALLOW_GIFT">
+<span class="sig-name descname"><span class="pre">ITEM_ALLOW_GIFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Item.ITEM_ALLOW_GIFT" title="Permalink to this definition">#</a></dt>
+<dd><p>Whether agents can give gold/item to each other</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2307,7 +2303,7 @@ This also determines the maximum price one can set for an item</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.IMMORTAL">
 <span class="sig-name descname"><span class="pre">IMMORTAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Large.IMMORTAL" title="Permalink to this definition">#</a></dt>
-<dd><p>Debug parameter: prevents agents from dying except by lava</p>
+<dd><p>Debug parameter: prevents agents from dying except by void</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2343,7 +2339,7 @@ This also determines the maximum price one can set for an item</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.MAP_BORDER">
 <span class="sig-name descname"><span class="pre">MAP_BORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#nmmo.core.config.Large.MAP_BORDER" title="Permalink to this definition">#</a></dt>
-<dd><p>Number of lava border tiles surrounding each side of the map</p>
+<dd><p>Number of void border tiles surrounding each side of the map</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2416,7 +2412,7 @@ This also determines the maximum price one can set for an item</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.PATH_CWD">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_CWD" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/PufferTank/neuralmmo.github.io'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_CWD" title="Permalink to this definition">#</a></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -2434,19 +2430,19 @@ This also determines the maximum price one can set for an item</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.PATH_RESOURCE">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_RESOURCE" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_RESOURCE" title="Permalink to this definition">#</a></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.PATH_ROOT">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_ROOT" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_ROOT" title="Permalink to this definition">#</a></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.PATH_TILE">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_TILE" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Large.PATH_TILE" title="Permalink to this definition">#</a></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -2539,26 +2535,8 @@ This also determines the maximum price one can set for an item</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Large.PROVIDE_ACTION_TARGETS">
-<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Large.PROVIDE_ACTION_TARGETS" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Large.PROVIDE_ACTION_TARGETS" title="Permalink to this definition">#</a></dt>
 <dd><p>Flag used to provide action targets mask</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Large.RENDER">
-<span class="sig-name descname"><span class="pre">RENDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Large.RENDER" title="Permalink to this definition">#</a></dt>
-<dd><p>Flag used by render mode</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Large.SAVE_REPLAY">
-<span class="sig-name descname"><span class="pre">SAVE_REPLAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Large.SAVE_REPLAY" title="Permalink to this definition">#</a></dt>
-<dd><p>Flag used to save replays</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Large.TASKS">
-<span class="sig-name descname"><span class="pre">TASKS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.core.config.Large.TASKS" title="Permalink to this definition">#</a></dt>
-<dd><p>Tasks for which to compute rewards</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2641,7 +2619,7 @@ This also determines the maximum price one can set for an item</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.IMMORTAL">
 <span class="sig-name descname"><span class="pre">IMMORTAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Medium.IMMORTAL" title="Permalink to this definition">#</a></dt>
-<dd><p>Debug parameter: prevents agents from dying except by lava</p>
+<dd><p>Debug parameter: prevents agents from dying except by void</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2677,7 +2655,7 @@ This also determines the maximum price one can set for an item</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.MAP_BORDER">
 <span class="sig-name descname"><span class="pre">MAP_BORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#nmmo.core.config.Medium.MAP_BORDER" title="Permalink to this definition">#</a></dt>
-<dd><p>Number of lava border tiles surrounding each side of the map</p>
+<dd><p>Number of void border tiles surrounding each side of the map</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2750,7 +2728,7 @@ This also determines the maximum price one can set for an item</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.PATH_CWD">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_CWD" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/PufferTank/neuralmmo.github.io'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_CWD" title="Permalink to this definition">#</a></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -2768,19 +2746,19 @@ This also determines the maximum price one can set for an item</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.PATH_RESOURCE">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_RESOURCE" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_RESOURCE" title="Permalink to this definition">#</a></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.PATH_ROOT">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_ROOT" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_ROOT" title="Permalink to this definition">#</a></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.PATH_TILE">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_TILE" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PATH_TILE" title="Permalink to this definition">#</a></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -2873,26 +2851,8 @@ This also determines the maximum price one can set for an item</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Medium.PROVIDE_ACTION_TARGETS">
-<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PROVIDE_ACTION_TARGETS" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Medium.PROVIDE_ACTION_TARGETS" title="Permalink to this definition">#</a></dt>
 <dd><p>Flag used to provide action targets mask</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Medium.RENDER">
-<span class="sig-name descname"><span class="pre">RENDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Medium.RENDER" title="Permalink to this definition">#</a></dt>
-<dd><p>Flag used by render mode</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Medium.SAVE_REPLAY">
-<span class="sig-name descname"><span class="pre">SAVE_REPLAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Medium.SAVE_REPLAY" title="Permalink to this definition">#</a></dt>
-<dd><p>Flag used to save replays</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Medium.TASKS">
-<span class="sig-name descname"><span class="pre">TASKS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.core.config.Medium.TASKS" title="Permalink to this definition">#</a></dt>
-<dd><p>Tasks for which to compute rewards</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3107,6 +3067,12 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.Progression.PROGRESSION_BASE_LEVEL">
+<span class="sig-name descname"><span class="pre">PROGRESSION_BASE_LEVEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.Progression.PROGRESSION_BASE_LEVEL" title="Permalink to this definition">#</a></dt>
+<dd><p>Initial skill level</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Progression.PROGRESSION_BASE_XP_SCALE">
 <span class="sig-name descname"><span class="pre">PROGRESSION_BASE_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.Progression.PROGRESSION_BASE_XP_SCALE" title="Permalink to this definition">#</a></dt>
 <dd><p>Base XP awarded for each skill usage – multiplied by skill level</p>
@@ -3188,7 +3154,7 @@ This also determines the maximum price one can set for an item</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Resource.RESOURCE_BASE">
 <span class="sig-name descname"><span class="pre">RESOURCE_BASE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="#nmmo.core.config.Resource.RESOURCE_BASE" title="Permalink to this definition">#</a></dt>
-<dd><p>Initial level and capacity for Hunting + Fishing resource skills</p>
+<dd><p>Initial level and capacity for food and water</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3204,15 +3170,15 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Resource.RESOURCE_FOREST_CAPACITY">
-<span class="sig-name descname"><span class="pre">RESOURCE_FOREST_CAPACITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.Resource.RESOURCE_FOREST_CAPACITY" title="Permalink to this definition">#</a></dt>
-<dd><p>Maximum number of harvests before a forest tile decays</p>
+<dt class="sig sig-object py" id="nmmo.core.config.Resource.RESOURCE_FOILAGE_CAPACITY">
+<span class="sig-name descname"><span class="pre">RESOURCE_FOILAGE_CAPACITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#nmmo.core.config.Resource.RESOURCE_FOILAGE_CAPACITY" title="Permalink to this definition">#</a></dt>
+<dd><p>Maximum number of harvests before a foilage tile decays</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Resource.RESOURCE_FOREST_RESPAWN">
-<span class="sig-name descname"><span class="pre">RESOURCE_FOREST_RESPAWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.025</span></em><a class="headerlink" href="#nmmo.core.config.Resource.RESOURCE_FOREST_RESPAWN" title="Permalink to this definition">#</a></dt>
-<dd><p>Probability that a harvested forest tile will regenerate each tick</p>
+<dt class="sig sig-object py" id="nmmo.core.config.Resource.RESOURCE_FOILAGE_RESPAWN">
+<span class="sig-name descname"><span class="pre">RESOURCE_FOILAGE_RESPAWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.025</span></em><a class="headerlink" href="#nmmo.core.config.Resource.RESOURCE_FOILAGE_RESPAWN" title="Permalink to this definition">#</a></dt>
+<dd><p>Probability that a harvested foilage tile will regenerate each tick</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3290,7 +3256,7 @@ This also determines the maximum price one can set for an item</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.IMMORTAL">
 <span class="sig-name descname"><span class="pre">IMMORTAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Small.IMMORTAL" title="Permalink to this definition">#</a></dt>
-<dd><p>Debug parameter: prevents agents from dying except by lava</p>
+<dd><p>Debug parameter: prevents agents from dying except by void</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3326,7 +3292,7 @@ This also determines the maximum price one can set for an item</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.MAP_BORDER">
 <span class="sig-name descname"><span class="pre">MAP_BORDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#nmmo.core.config.Small.MAP_BORDER" title="Permalink to this definition">#</a></dt>
-<dd><p>Number of lava border tiles surrounding each side of the map</p>
+<dd><p>Number of void border tiles surrounding each side of the map</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3399,7 +3365,7 @@ This also determines the maximum price one can set for an item</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.PATH_CWD">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo/docs'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_CWD" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/PufferTank/neuralmmo.github.io'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_CWD" title="Permalink to this definition">#</a></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -3417,19 +3383,19 @@ This also determines the maximum price one can set for an item</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.PATH_RESOURCE">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_RESOURCE" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_RESOURCE" title="Permalink to this definition">#</a></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.PATH_ROOT">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_ROOT" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_ROOT" title="Permalink to this definition">#</a></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.PATH_TILE">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_TILE" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource/{}.png'</span></em><a class="headerlink" href="#nmmo.core.config.Small.PATH_TILE" title="Permalink to this definition">#</a></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -3522,26 +3488,8 @@ This also determines the maximum price one can set for an item</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="nmmo.core.config.Small.PROVIDE_ACTION_TARGETS">
-<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Small.PROVIDE_ACTION_TARGETS" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#nmmo.core.config.Small.PROVIDE_ACTION_TARGETS" title="Permalink to this definition">#</a></dt>
 <dd><p>Flag used to provide action targets mask</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Small.RENDER">
-<span class="sig-name descname"><span class="pre">RENDER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Small.RENDER" title="Permalink to this definition">#</a></dt>
-<dd><p>Flag used by render mode</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Small.SAVE_REPLAY">
-<span class="sig-name descname"><span class="pre">SAVE_REPLAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#nmmo.core.config.Small.SAVE_REPLAY" title="Permalink to this definition">#</a></dt>
-<dd><p>Flag used to save replays</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Small.TASKS">
-<span class="sig-name descname"><span class="pre">TASKS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#nmmo.core.config.Small.TASKS" title="Permalink to this definition">#</a></dt>
-<dd><p>Tasks for which to compute rewards</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3634,9 +3582,9 @@ This also determines the maximum price one can set for an item</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Terrain.TERRAIN_FOREST">
-<span class="sig-name descname"><span class="pre">TERRAIN_FOREST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.85</span></em><a class="headerlink" href="#nmmo.core.config.Terrain.TERRAIN_FOREST" title="Permalink to this definition">#</a></dt>
-<dd><p>Noise threshold for forest</p>
+<dt class="sig sig-object py" id="nmmo.core.config.Terrain.TERRAIN_FOILAGE">
+<span class="sig-name descname"><span class="pre">TERRAIN_FOILAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.85</span></em><a class="headerlink" href="#nmmo.core.config.Terrain.TERRAIN_FOILAGE" title="Permalink to this definition">#</a></dt>
+<dd><p>Noise threshold for foilage (food tile)</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3655,12 +3603,6 @@ This also determines the maximum price one can set for an item</p>
 <dt class="sig sig-object py" id="nmmo.core.config.Terrain.TERRAIN_GRASS">
 <span class="sig-name descname"><span class="pre">TERRAIN_GRASS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.7</span></em><a class="headerlink" href="#nmmo.core.config.Terrain.TERRAIN_GRASS" title="Permalink to this definition">#</a></dt>
 <dd><p>Noise threshold for grass</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="nmmo.core.config.Terrain.TERRAIN_LAVA">
-<span class="sig-name descname"><span class="pre">TERRAIN_LAVA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#nmmo.core.config.Terrain.TERRAIN_LAVA" title="Permalink to this definition">#</a></dt>
-<dd><p>Noise threshold for lava generation</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3685,6 +3627,12 @@ This also determines the maximum price one can set for an item</p>
 <dt class="sig sig-object py" id="nmmo.core.config.Terrain.TERRAIN_TILES_PER_OCTAVE">
 <span class="sig-name descname"><span class="pre">TERRAIN_TILES_PER_OCTAVE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#nmmo.core.config.Terrain.TERRAIN_TILES_PER_OCTAVE" title="Permalink to this definition">#</a></dt>
 <dd><p>Number of octaves sampled from log2 spaced TERRAIN_FREQUENCY range</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nmmo.core.config.Terrain.TERRAIN_VOID">
+<span class="sig-name descname"><span class="pre">TERRAIN_VOID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0</span></em><a class="headerlink" href="#nmmo.core.config.Terrain.TERRAIN_VOID" title="Permalink to this definition">#</a></dt>
+<dd><p>Noise threshold for void generation</p>
 </dd></dl>
 
 <dl class="py attribute">
