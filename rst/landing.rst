@@ -232,19 +232,18 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
   .. tab-item:: Reinforcement Learning
 
-      Train teams of agents using RL to complete tasks. Customize the RL algorithm, model, and reward structure, but leverage a fixed baseline curriculum of tasks for training.
-
-      This is an opportunity for you RL enthusiasts to test your skills building agents that can survive and thrive in a massively multiagent environment full of potential adversaries. Your task is to implement a *policy* that defines how your 8 Agent team performs within a novel environment. At the outset of each game, your team will receive a randomly generated task. Complete the task to score a point. We will evaluate submissions against each other over thousands of games. Whoever scores the most points wins.
-
-      The RL track includes control over the RL algorithm, environment rewards signal, observation featurization, and the neural network architecture. The presentation and sampling of tasks are provided by the baseline and are treated as constants. All RL agent teams are trained on the same baseline task curriculum. While hybrid methods are allowed, with the new emphasis on tasks, it is unlikely that pure traditional scripting will be effective.
-
-      We release a baseline repository that includes a model adapted from NetEase's winning submission to the NeurIPS 2022 competition, a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for simpler training, and WandB for logging and visualization. The baseline is designed to be easy to use and modify. We encourage you to use it as a starting point for your own submissions.
+      Objective:
+         Train teams of agents using Reinforcement Learning (RL) to complete tasks. The RL track provides a fixed baseline curriculum of tasks for training. 
+         Customize the RL algorithm, model, and reward structure to maximize task completion. 
 
       To get started:
-        - train.py contains the main training file. Modify hyperprameters and scale here.
-        - cleanrl_ppo_lstm.py contains the CleanRL PPO implementation. Modify it to alter the training algorithm. This version includes PufferLib integration and asynchronous environment execution.
-        - /model contains the network definition. This is an advanced architecture with a custom featurizer and multiple subnetworks dedicated to processing different types of information.
-        - /feature_extractor preprocesses observations from the environment before they are passed to the network. It separately processes the map, inventory, and market observations.
+         NMMO Baseline Repository:
+         ├── reinforcement_learning
+         │   ├── config.py
+         │   └── policy.py --> Your policy goes here
+         ├── requirements.txt
+         └── train.py --> Train your policy here
+
 
       .. code-block:: python
 
@@ -257,15 +256,60 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
         # Evaluate a trained checkpoint
         python -m tools.evaluate --model.checkpoint model_weights/achievements_4x10_new.200.pt
 
+      Overview:
+         This competition track is ideal to showcase your RL skills. Successful entrants develop agents that thrive in a massively multiagent environment with potential adversaries, successfully completing assigned tasks. 
+
+         Your RL track objective is to implement a policy for a team of 8 agents that dictates their performance in a new environment. Each game starts with your team receiving a randomly generated task. If the team completes the task, it earns a point. Your team will play thousands of games, each with a new assigned task to complete. The team with the highest score wins the competition.
+
+         You have control over the: 
+         - RL algorithm
+         - Environment rewards signal
+         - Observation featurization
+         - Neural network architecture 
+
+      Baseline:
+         The baseline is designed for ease of use and modification. We recommend using it as a starting point for your submissions. It provides task presentation and sampling, treated as constants. 
+
+         All RL agent teams train using the same baseline task curriculum. Hybrid methods are allowed, but traditional scripting alone is unlikely to be effective because of the new task-oriented focus.
+
+         Neural MMO provides a baseline repository. It features a model adapted from NetEase's winning submission in the NeurIPS 2022 competition. The repository also includes a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for streamlined training, and WandB for logging and visualization. 
+
+
+
   .. tab-item:: Curriculum Generation
 
-      The Curriculum track is a great way for programmers to compete and participate, without the need for advanced knowledge of AI. In this track, you will design unique and useful curricula for training successful teams on tasks. A curriculum is a structured set of tasks presented to the RL algorithm intelligently to maximize learning. Design the task generator, task sampler, and reward using Python.
+      Objective:
+         No RL experience, no problem! Design your own unique and useful curricula for training agent teams on tasks. A curriculum is a structured set of tasks presented to the RL algorithm intelligently that maximizes its learning. 
 
-      All submitted curricula will be applied to the same baseline RL policy to control a team of agents. Your objective is to create a curriculum of tasks that results in better, more robust learning such that agents are able to complete tasks not seen during training. You will receive performance metrics to see how effective the curriculum is and iterate your training curriculum. The reinforcement learning algorithm, observation featurization, and neural network architecture are provided by the baseline and remain constant across teams.
+         Once trained on your curriculum, your RL policy will navigate the NMMO environment and complete tasks. 
+         Using Python, design the: 
+         - Task generator
+         - Task sampler
+         - Reward 
 
-      The baseline for this track includes a fixed curriculum of tasks and OpenELM integration. For researchers and advanced users, we encourage approaches leveraging `ELM <https://arxiv.org/abs/2206.08896>`_ and provide a code generation model with the baselines.
+      Overview:
+         The Curriculum track offers a platform for programmers to engage and compete, regardless of AI expertise. All submitted curricula will be applied to a common baseline RL policy, controlling a team of agents. Your objective is to devise a curriculum that enhances learning, leading to improved agent performance on previously unseen tasks. You will receive performance metrics to assess the efficacy of your curriculum and refine your training approach. 
 
-      By default, Neural MMO provides a reward signal of 1 every tick the agent is alive. Our goal is to provide a flexible, powerful high level API to define rewards - and simple enough for even a language model to program. For example, to reward teams for exploring the map
+      Baseline:
+         The baseline provides the reinforcement learning algorithm, observation featurization, and neural network architecture. These remain consistent across all teams.
+
+         The baseline package for this track includes a fixed curriculum of tasks and integration with OpenELM. While encouraging the utilization of ELM (Experience-Linked Memories) for advanced users and researchers, we also furnish a code generation model in conjunction with the baselines.
+
+
+      To get started:
+         NMMO Baseline Repository:
+         ├── curriculum_generation --> Your curriculum goes here
+         │   ├── __init__.py
+         │   ├── curriculum_with_embedding.pkl
+         │   ├── custom_curriculum.py
+         │   ├── elm.py
+         │   ├── manual_curriculum.py
+         │   ├── task_encoder.py
+         │   ├── task_sampler.py
+         │   └── visualize_embeddings.py
+         ├── environment.py
+         ├── requirements.txt
+         └── train.py --> Train your policy here
 
       .. code-block:: python
 
