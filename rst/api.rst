@@ -3,7 +3,7 @@
 |
 
 .. card::
-   :img-background: /../_static/banner.png
+   :img-background: /../_static/banner.jpg
 
 Neural MMO provides a pettingzoo compliant environment API, an extensive configuration system, and support for agent scripting, OpenSkill evaluation, custom terrain generation, and overlay visualization. This section is intended as a reference -- the tutorials provide a much better starting point for most users.
 

@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Environment" href="api.html" /><link rel="prev" title="Welcome to Neural MMO’s documentation!" href="../index.html" />
 
     <!-- Generated with Sphinx 5.0.0 and Furo 2023.03.27 -->
-        <title>Neural MMO - Neural MMO 2.0 documentation</title>
+        <title>Installation - Neural MMO 2.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
@@ -223,9 +223,8 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#"> Neural MMO</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#"> Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#icon-2023-competition"> 2023 Competition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#icon-platform"> Platform</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
@@ -259,6 +258,7 @@
 <p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="administrative.html"> Authorship, License, Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html#icon-inspiration"> Inspiration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="administrative.html#ags-namesake"> Namesake</a></li>
 </ul>
 
@@ -297,8 +297,7 @@
           <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>News:</strong> 2.0 is now in soft-launch. The environment is stable and a working version of the RL baseline is available, but not everything has been fully tuned and documented.</p>
-<p>Neural MMO is a computationally accessible, open-source research platform that simulates populations of agents in virtual worlds. We challenge you to train a team of agents to complete <em>tasks they have never seen before against opponents they have never seen before on maps they have never seen before</em>. Our objective is to spur research on increasingly general and cognitively realistic environments.</p>
+<p>Neural MMO is a computationally accessible, open-source research platform that simulates populations of agents in virtual worlds. We challenge you to train agents to complete <em>tasks they have never seen before against opponents they have never seen before on maps they have never seen before</em>. Our objective is to spur research on increasingly general and cognitively realistic environments.</p>
 <div class="sd-card sd-sphinx-override sd-w-75 sd-mt-4 sd-mb-2 sd-ml-auto sd-mr-auto sd-shadow-sm sd-card-hover sd-text-center docutils">
 <div class="sd-card-body docutils">
 <p class="sd-card-text"><strong>Click to Demo Neural MMO in your browser</strong></p>
@@ -372,65 +371,12 @@ Twitter</div>
 </div>
 </div>
 </div>
-<section id="icon-neural-mmo">
-<h1><img alt="icon" src="../_images/icon.png" /> Neural MMO<a class="headerlink" href="#icon-neural-mmo" title="Permalink to this heading">#</a></h1>
-<p>Your team of 8 Agents must collect food and water to survive. Each Agent has 8 individual professions to help them collect resources. Agents can level up their skills in each profession.</p>
+<p>Your Agents must collect food and water to survive. Each Agent has 8 individual professions to help them collect resources. Agents can level up their skills in each profession.</p>
 <p>Resources can be used to create consumable items that restore food, water and heath as well as to create ammunition that increases damage in combat. Higher level resources create better consumables and ammunition. Agents can also trade items on a global market.</p>
 <p>Agents may aquire armor to protect themselves in combat and weapons to increase their damage output. Agents can attack each other using one of three styles: Melee, Range, and Magic. The world is populated by NPCs that can be defeated to obtain items and increase power.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
-PufferTank</label><div class="sd-tab-content docutils">
-<dl class="simple">
-<dt>Docker container including Neural MMO and GPU-accelerated baselines. Guarantees correct dependencies and environment setup. We recommended the following setup for local containerized development:</dt><dd><ul class="simple">
-<li><p>Install Docker Hub, VSCode, and the VSCode dev containers plugin.</p></li>
-<li><p>Clone the competition branch of <a class="reference external" href="https://github.com/PufferAI/PufferTank">PufferTank</a> on Linux/MacOS/WSL</p></li>
-<li><p>VSCode: F1 -&gt; “Remote-Containers: Open Folder in Container” -&gt; Select PufferTank folder</p></li>
-</ul>
-</dd>
-</dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pufferai</span><span class="o">/</span><span class="n">puffertank</span> <span class="o">--</span><span class="n">branch</span><span class="o">=</span><span class="n">competition</span>
-</pre></div>
-</div>
-</div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
-Pip Package</label><div class="sd-tab-content docutils">
-<p>#WARNING: No pip package during soft launch. Use Docker or source.
-Official support for Ubuntu 20.04/22.04, WSL, and MacOS</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quotes for mac compatibility.</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;nmmo&quot;</span>
-
-<span class="c1"># Clone baselines repository</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span>
-</pre></div>
-</div>
-</div>
-<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
-Source</label><div class="sd-tab-content docutils">
-<p>Only recommended for developers of Neural MMO who can’t run PufferTank.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span>
-
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">environment</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span>
-
-<span class="n">cd</span> <span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span><span class="p">[</span><span class="nb">all</span><span class="p">]</span>
-
-<span class="c1"># If you want a local copy of the client.</span>
-<span class="c1"># WSL users should run this part on Windows</span>
-<span class="c1"># Download Cocos2d to open</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">client</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
 Resource</label><div class="sd-tab-content docutils">
 <p>Harvest resources with various uses</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -441,8 +387,8 @@ Resource</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
 Survival</label><div class="sd-tab-content docutils">
 <p>Forage for food and water to maintain your health</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -453,8 +399,8 @@ Survival</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
 Combat</label><div class="sd-tab-content docutils">
 <p>Fight other agents and NPCs with Melee, Range, and Magic</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -465,16 +411,16 @@ Combat</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-6" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-6">
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
 NPC</label><div class="sd-tab-content docutils">
 <p>Interact with Non-Playable Characters of varying friendliness</p>
 <figure class="align-default">
 <img alt="../_static/npc.png" src="../_static/npc.png" />
 </figure>
 </div>
-<input id="sd-tab-item-7" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-7">
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
 Profession &amp; Progression</label><div class="sd-tab-content docutils">
 <p>Train combat and profession skills to access higher level items and equipment</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -485,8 +431,8 @@ Profession &amp; Progression</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-8" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-8">
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
 Item</label><div class="sd-tab-content docutils">
 <p>Acquire consumables and and ammunition through professions</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -497,8 +443,8 @@ Item</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-9" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-9">
+<input id="sd-tab-item-6" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
 Equipment</label><div class="sd-tab-content docutils">
 <p>Increase offensive and defensive capabilities with weapons and armor</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -509,8 +455,8 @@ Equipment</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-10" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-10">
+<input id="sd-tab-item-7" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
 Exchange</label><div class="sd-tab-content docutils">
 <p>Trade items and equipment with other agents on a global market</p>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -521,8 +467,8 @@ Exchange</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<input id="sd-tab-item-11" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-11">
+<input id="sd-tab-item-8" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
 Terrain</label><div class="sd-tab-content docutils">
 <p>Navigate procedurally generated maps</p>
 <figure class="align-default">
@@ -538,18 +484,19 @@ Contributors<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>Joseph Suarez</strong>: Creator and lead developer of Neural MMO.</p>
-<dl class="simple">
+<dl>
 <dt>CarperAI team for NMMO 2.0:</dt><dd><ul class="simple">
 <li><p class="sd-card-text"><strong>David Bloomin</strong>: Rewrite of the engine for 2.0, port and development of the RL baseline</p></li>
 <li><p class="sd-card-text"><strong>Kyoung Whan Choe</strong>: Rewrite of Neural MMO game code and logging for 2.0, contributions to the RL baseline and task system</p></li>
 <li><p class="sd-card-text"><strong>Hao Xiang Li</strong>: Neural MMO 2.0 task system</p></li>
 <li><p class="sd-card-text"><strong>Ryan Sullivan</strong>: Integration with Syllabus for the curriculum learning baseline</p></li>
 <li><p class="sd-card-text"><strong>Nishaanth Kanna</strong>: Co-developer of the ELM curriculum baseline</p></li>
-<li><p class="sd-card-text"><strong>Daniel Scott</strong>: Co-developer of the ELM curriculum baseline</p></li>
-<li><p class="sd-card-text"><strong>Rose S. Shuman</strong>: Technical writing for this documentation site and for the competition</p></li>
-<li><p class="sd-card-text"><strong>Herbie Bradley</strong>: Supervision of the curriculum generation baseline with OpenELM</p></li>
-<li><p class="sd-card-text"><strong>Louis Castricato</strong>: Co-founder and team lead of Carper AI; supervisor of Carper AI development efforts.</p></li>
 </ul>
+<p class="sd-card-text">‘ <strong>Nikhil Pinnaparaju</strong>: Co-developer of the ELM curriculum baseline
+- <strong>Daniel Scott</strong>: Co-developer of the ELM curriculum baseline
+- <strong>Rose S. Shuman</strong>: Technical writing for this documentation site and for the competition
+- <strong>Herbie Bradley</strong>: Supervision of the curriculum generation baseline with OpenELM
+- <strong>Louis Castricato</strong>: Co-founder and team lead of Carper AI; supervisor of Carper AI development efforts.</p>
 </dd>
 <dt>Parametrix.ai Team. Competition orchestrators and creators of the 2.0 web client.</dt><dd><ul class="simple">
 <li><p class="sd-card-text"><strong>Kirsty You</strong>: Product manager, Parametrix.ai</p></li>
@@ -561,7 +508,7 @@ Contributors<div class="sd-summary-down docutils">
 </dd>
 </dl>
 <p class="sd-card-text"><strong>Nick Jenkins</strong>: Layout for design for the competition poster. Adversary.design.</p>
-<p class="sd-card-text"><strong>Sara Earle</strong>: Created 3D assets and 2D icons for items in NMMO 2.0. Hire her on UpWork if you like what you see here.</p>
+<p class="sd-card-text"><strong>Sara Earle</strong>: Created 2D icons for items in NMMO 2.0. Hire her on UpWork if you like what you see here.</p>
 <dl class="simple">
 <dt>Previous open source contributors, listed by time since latest contribution. Discord handle have been used for individuals who have not granted explicit permission to display their real names:</dt><dd><ul class="simple">
 <li><p class="sd-card-text"><strong>Thomas Cloarec</strong>: Developed the dynamic programming backend for scripted baseline agents</p></li>
@@ -593,7 +540,68 @@ BibTex Citation<div class="sd-summary-down docutils">
 </pre></div>
 </div>
 </div>
-</details></section>
+</details><section id="icon-installation">
+<h1><img alt="icon" src="../_images/icon.png" /> Installation<a class="headerlink" href="#icon-installation" title="Permalink to this heading">#</a></h1>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-9" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
+PufferTank</label><div class="sd-tab-content docutils">
+<dl class="simple">
+<dt>Docker container including Neural MMO and GPU-accelerated baselines. Guarantees correct dependencies and environment setup. We recommended the following setup for local containerized development:</dt><dd><ul class="simple">
+<li><p>Install Docker Hub, VSCode, and the VSCode dev containers plugin.</p></li>
+<li><p>Clone the competition branch of <a class="reference external" href="https://github.com/PufferAI/PufferTank">PufferTank</a> on Linux/MacOS/WSL</p></li>
+<li><p>VSCode: F1 -&gt; “Remote-Containers: Open Folder in Container” -&gt; Select PufferTank folder</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pufferai</span><span class="o">/</span><span class="n">puffertank</span> <span class="o">--</span><span class="n">branch</span><span class="o">=</span><span class="n">competition</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-10" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
+Pip Package</label><div class="sd-tab-content docutils">
+<p>#WARNING: No pip package during soft launch. Use Docker or source.
+Official support for Ubuntu 20.04/22.04, WSL, and MacOS</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quotes for mac compatibility.</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;nmmo&quot;</span>
+
+<span class="c1"># Clone baselines repository</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
+Source</label><div class="sd-tab-content docutils">
+<p>Only recommended for developers of Neural MMO who can’t run PufferTank.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="n">neural</span><span class="o">-</span><span class="n">mmo</span>
+
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">environment</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">baselines</span>
+
+<span class="n">cd</span> <span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span><span class="p">[</span><span class="nb">all</span><span class="p">]</span>
+
+<span class="c1"># If you want a local copy of the client.</span>
+<span class="c1"># WSL users should run this part on Windows</span>
+<span class="c1"># Download Cocos2d to open</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuralmmo</span><span class="o">/</span><span class="n">client</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Neural MMO provides a standard PettingZoo interface:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nmmo</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">nmmo</span><span class="o">.</span><span class="n">Env</span><span class="p">()</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+   <span class="n">actions</span> <span class="o">=</span> <span class="p">{</span><span class="n">a</span><span class="p">:</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">agents</span><span class="p">}</span>
+   <span class="n">obs</span><span class="p">,</span> <span class="n">rewards</span><span class="p">,</span> <span class="n">dones</span><span class="p">,</span> <span class="n">infos</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
 <section id="icon-2023-competition">
 <h1><img alt="icon" src="../_images/icon.png" /> 2023 Competition<a class="headerlink" href="#icon-2023-competition" title="Permalink to this heading">#</a></h1>
 <p>Successfully complete the most tasks to win! At stake are $20,000 in prizes sponsored by Parametrix.ai. All submissions receive A100 compute credits for training sponsored by Stability.ai. The competition is currently planned for the start of July 2023.</p>
@@ -602,22 +610,23 @@ BibTex Citation<div class="sd-summary-down docutils">
 <input checked="checked" id="sd-tab-item-12" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-12">
 Reinforcement Learning</label><div class="sd-tab-content docutils">
-<p>Train teams of agents using RL to complete tasks. Customize the RL algorithm, model, and reward structure, but leverage a fixed baseline curriculum of tasks for training.</p>
-<p>This is an opportunity for you RL enthusiasts to test your skills building agents that can survive and thrive in a massively multiagent environment full of potential adversaries. Your task is to implement a <em>policy</em> that defines how your 8 Agent team performs within a novel environment. At the outset of each game, your team will receive a randomly generated task. Complete the task to score a point. We will evaluate submissions against each other over thousands of games. Whoever scores the most points wins.</p>
-<p>The RL track includes control over the RL algorithm, environment rewards signal, observation featurization, and the neural network architecture. The presentation and sampling of tasks are provided by the baseline and are treated as constants. All RL agent teams are trained on the same baseline task curriculum. While hybrid methods are allowed, with the new emphasis on tasks, it is unlikely that pure traditional scripting will be effective.</p>
-<p>We release a baseline repository that includes a model adapted from NetEase’s winning submission to the NeurIPS 2022 competition, a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for simpler training, and WandB for logging and visualization. The baseline is designed to be easy to use and modify. We encourage you to use it as a starting point for your own submissions.</p>
 <dl class="simple">
-<dt>To get started:</dt><dd><ul class="simple">
-<li><p>train.py contains the main training file. Modify hyperprameters and scale here.</p></li>
-<li><p>cleanrl_ppo_lstm.py contains the CleanRL PPO implementation. Modify it to alter the training algorithm. This version includes PufferLib integration and asynchronous environment execution.</p></li>
-<li><p>/model contains the network definition. This is an advanced architecture with a custom featurizer and multiple subnetworks dedicated to processing different types of information.</p></li>
-<li><p>/feature_extractor preprocesses observations from the environment before they are passed to the network. It separately processes the map, inventory, and market observations.</p></li>
-</ul>
+<dt>Objective:</dt><dd><p>Train teams of agents using Reinforcement Learning (RL) to complete tasks. The RL track provides a fixed baseline curriculum of tasks for training.
+Customize the RL algorithm, model, and reward structure to maximize task completion.</p>
 </dd>
 </dl>
+<p>To get started:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NMMO Baseline Repository:
+├── reinforcement_learning
+│   ├── config.py
+│   └── policy.py --&gt; Your policy goes here
+├── requirements.txt
+└── train.py --&gt; Train your policy here
+</pre></div>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run training. This is very memory intensive!</span>
 <span class="c1"># We are working on a smaller config</span>
-<span class="c1"># The --use_serial_vecenv flat puts envs on a</span>
+<span class="c1"># The --use_serial_vecenv flag puts envs on a</span>
 <span class="c1"># local process and is useful for debugging</span>
 <span class="n">python</span> <span class="n">train</span><span class="o">.</span><span class="n">py</span>
 
@@ -625,83 +634,162 @@ Reinforcement Learning</label><div class="sd-tab-content docutils">
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">tools</span><span class="o">.</span><span class="n">evaluate</span> <span class="o">--</span><span class="n">model</span><span class="o">.</span><span class="n">checkpoint</span> <span class="n">model_weights</span><span class="o">/</span><span class="n">achievements_4x10_new</span><span class="mf">.200</span><span class="o">.</span><span class="n">pt</span>
 </pre></div>
 </div>
+<dl>
+<dt>Overview:</dt><dd><p>This competition track is ideal to showcase your RL skills. Successful entrants develop agents that thrive in a massively multiagent environment with potential adversaries, successfully completing assigned tasks.</p>
+<p>Your RL track objective is to implement a policy for a team of 8 agents that dictates their performance in a new environment. Each game starts with your team receiving a randomly generated task. If the team completes the task, it earns a point. Your team will play thousands of games, each with a new assigned task to complete. The team with the highest score wins the competition.</p>
+<dl class="simple">
+<dt>You have control over the:</dt><dd><ul class="simple">
+<li><p>RL algorithm</p></li>
+<li><p>Environment rewards signal</p></li>
+<li><p>Observation featurization</p></li>
+<li><p>Neural network architecture</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>Baseline:</dt><dd><p>The baseline is designed for ease of use and modification. We recommend using it as a starting point for your submissions. It provides task presentation and sampling, treated as constants.</p>
+<p>All RL agent teams train using the same baseline task curriculum. Hybrid methods are allowed, but traditional scripting alone is unlikely to be effective because of the new task-oriented focus.</p>
+<p>Neural MMO provides a baseline repository. It features a model adapted from NetEase’s winning submission in the NeurIPS 2022 competition. The repository also includes a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for streamlined training, and WandB for logging and visualization.</p>
+</dd>
+</dl>
 </div>
 <input id="sd-tab-item-13" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-13">
 Curriculum Generation</label><div class="sd-tab-content docutils">
-<p>The Curriculum track is a great way for programmers to compete and participate, without the need for advanced knowledge of AI. In this track, you will design unique and useful curricula for training successful teams on tasks. A curriculum is a structured set of tasks presented to the RL algorithm intelligently to maximize learning. Design the task generator, task sampler, and reward using Python.</p>
-<p>All submitted curricula will be applied to the same baseline RL policy to control a team of agents. Your objective is to create a curriculum of tasks that results in better, more robust learning such that agents are able to complete tasks not seen during training. You will receive performance metrics to see how effective the curriculum is and iterate your training curriculum. The reinforcement learning algorithm, observation featurization, and neural network architecture are provided by the baseline and remain constant across teams.</p>
-<p>The baseline for this track includes a fixed curriculum of tasks and OpenELM integration. For researchers and advanced users, we encourage approaches leveraging <a class="reference external" href="https://arxiv.org/abs/2206.08896">ELM</a> and provide a code generation model with the baselines.</p>
-<p>By default, Neural MMO provides a reward signal of 1 every tick the agent is alive. Our goal is to provide a flexible, powerful high level API to define rewards - and simple enough for even a language model to program. For example, to reward teams for exploring the map</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">scenario</span> <span class="o">=</span> <span class="n">Scenario</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-<span class="n">scenario</span><span class="o">.</span><span class="n">add_tasks</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">DistanceTraveled</span><span class="p">(</span><span class="n">dist</span><span class="o">=</span><span class="mi">64</span><span class="p">))</span>
-<span class="n">env</span><span class="o">.</span><span class="n">change_task</span><span class="p">(</span><span class="n">scenario</span><span class="o">.</span><span class="n">tasks</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>We define a list of tasks, one for each team - to collectively travel 64 tiles away from the starting position. Agents are gradually rewarded as they move away, with a total reward summed to 1 on completion.</p>
-<dl class="simple">
-<dt>Glossary of key terms</dt><dd><ul class="simple">
-<li><p><strong>GameState</strong> is a simplified read-only snapshot view of the environment.</p></li>
-<li><p><strong>Group</strong> is an immutable set of agents.</p></li>
-<li><p><strong>Predicate</strong> is a special, clipped case of Task.</p></li>
-<li><p><strong>Scenario</strong> is a utility class to help assign subjects to tasks.</p></li>
-<li><p><strong>Task</strong> is a mapping from GameState to a reward shared across its (subject: Group). We provide utilities that cover many use cases.</p></li>
-</ul>
+<dl>
+<dt>Objective:</dt><dd><p>No RL experience, no problem! Design your own unique and useful curricula for training agent teams on tasks. A curriculum is a structured set of tasks presented to the RL algorithm intelligently that maximizes its learning.</p>
+<p>Once trained on your curriculum, your RL policy will navigate the NMMO environment and complete tasks.
+Using Python, design the:
+- Task generator
+- Task sampler
+- Reward</p>
+</dd>
+<dt>Overview:</dt><dd><p>The Curriculum track offers a platform for programmers to engage and compete, regardless of AI expertise. All submitted curricula will be applied to a common baseline RL policy, controlling a team of agents. Your objective is to devise a curriculum that enhances learning, leading to improved agent performance on previously unseen tasks. You will receive performance metrics to assess the efficacy of your curriculum and refine your training approach.</p>
+</dd>
+<dt>Baseline:</dt><dd><p>The baseline provides the reinforcement learning algorithm, observation featurization, and neural network architecture. These remain consistent across all teams.</p>
+<p>The baseline package for this track includes a fixed curriculum of tasks and integration with OpenELM. While encouraging the utilization of ELM (Experience-Linked Memories) for advanced users and researchers, we also furnish a code generation model in conjunction with the baselines.</p>
 </dd>
 </dl>
-<p>Get started by defining your own tasks by building from our provided set of operators.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">task</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">OR</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">CountEvent</span><span class="p">(</span><span class="n">event</span><span class="o">=</span><span class="s1">&#39;PLAYER_KILL&#39;</span><span class="p">,</span><span class="n">N</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span><span class="n">p</span><span class="o">.</span><span class="n">TickGE</span><span class="p">(</span><span class="n">num_tick</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
-<span class="n">task</span> <span class="o">=</span> <span class="n">task</span> <span class="o">*</span> <span class="mi">5</span>
-<span class="n">scenario</span><span class="o">.</span><span class="n">add_tasks</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+<p>Getting Started with Manual Curriculum Generation Tutorial</p>
+<p>This tutorial will guide you through the process of manually creating a curriculum for training agents using a custom environment. The provided code demonstrates the steps required to define training tasks, evaluate them, generate embeddings, and train agents using the defined curriculum. You can see the full working code at <a class="reference external" href="https://github.com/CarperAI/nmmo-baselines/blob/release/curriculum_generation/curriculum_tutorial.py">https://github.com/CarperAI/nmmo-baselines/blob/release/curriculum_generation/curriculum_tutorial.py</a></p>
+<p><strong>Step 1: Define Training Tasks</strong></p>
+<p>In this step, you’ll define the training tasks that your agents will learn from. You can use pre-built evaluation functions or create your own. The tasks are specified using the <cite>TaskSpec</cite> class.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nmmo.task.base_predicates</span> <span class="kn">import</span> <span class="n">CountEvent</span><span class="p">,</span> <span class="n">InventorySpaceGE</span><span class="p">,</span> <span class="n">TickGE</span><span class="p">,</span> <span class="n">norm</span>
+<span class="kn">from</span> <span class="nn">nmmo.task.task_spec</span> <span class="kn">import</span> <span class="n">TaskSpec</span><span class="p">,</span> <span class="n">check_task_spec</span>
 
-<span class="c1"># Rewarding the agent for increasing time isn&#39;t helpful for training</span>
-<span class="c1"># Try improving this task!</span>
+<span class="c1"># Use pre-built eval functions and TaskSpec class to define each training task</span>
+<span class="n">task_spec</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Define tasks based on pre-built evaluation functions</span>
+<span class="n">essential_events</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s2">&quot;GO_FARTHEST&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;EAT_FOOD&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;DRINK_WATER&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;SCORE_HIT&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;HARVEST_ITEM&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;LEVEL_UP&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">event_code</span> <span class="ow">in</span> <span class="n">essential_events</span><span class="p">:</span>
+   <span class="n">task_spec</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+      <span class="n">TaskSpec</span><span class="p">(</span>
+            <span class="n">eval_fn</span><span class="o">=</span><span class="n">CountEvent</span><span class="p">,</span>  <span class="c1"># Use a pre-built eval function</span>
+            <span class="n">eval_fn_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;event&quot;</span><span class="p">:</span> <span class="n">event_code</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>  <span class="c1"># Arguments for CountEvent</span>
+      <span class="p">)</span>
+   <span class="p">)</span>
+
+<span class="c1"># Define custom evaluation functions</span>
+<span class="k">def</span> <span class="nf">PracticeEating</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">subject</span><span class="p">):</span>
+   <span class="c1"># Your custom evaluation logic here</span>
+   <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">progress</span><span class="p">)</span>  <span class="c1"># Normalizing the value</span>
+
+<span class="n">task_spec</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TaskSpec</span><span class="p">(</span><span class="n">eval_fn</span><span class="o">=</span><span class="n">PracticeEating</span><span class="p">,</span> <span class="n">eval_fn_kwargs</span><span class="o">=</span><span class="p">{}))</span>
+
+<span class="c1"># Define tasks using a combination of pre-built and custom evaluation functions</span>
+<span class="k">def</span> <span class="nf">PracticeInventoryManagement</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">space</span><span class="p">,</span> <span class="n">num_tick</span><span class="p">):</span>
+   <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">InventorySpaceGE</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">space</span><span class="p">)</span> <span class="o">*</span> <span class="n">TickGE</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">num_tick</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">space</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]:</span>
+   <span class="n">task_spec</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+      <span class="n">TaskSpec</span><span class="p">(</span>
+            <span class="n">eval_fn</span><span class="o">=</span><span class="n">PracticeInventoryManagement</span><span class="p">,</span>
+            <span class="n">eval_fn_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;space&quot;</span><span class="p">:</span> <span class="n">space</span><span class="p">,</span> <span class="s2">&quot;num_tick&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">},</span>
+      <span class="p">)</span>
+   <span class="p">)</span>
 </pre></div>
 </div>
-<p>Some possibilities include OR different tasks to count progress towards either, and MUL (overloaded operator “*””) to scale up rewards. It is possible to explicitly assign subjects and groups to tasks.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">env</span><span class="o">.</span><span class="n">change_task</span><span class="p">([</span><span class="n">StayAlive</span><span class="p">(</span><span class="n">Group</span><span class="p">([</span><span class="n">agent</span><span class="p">]))</span> <span class="k">for</span> <span class="n">agent</span> <span class="ow">in</span> <span class="n">agents</span><span class="p">])</span>
+<p><strong>Step 2: Validate Training Tasks</strong></p>
+<p>It’s essential to check if the defined training tasks are valid within your environment. Invalid tasks can cause training crashes. To validate tasks, run the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nmmo.task.task_spec</span> <span class="kn">import</span> <span class="n">check_task_spec</span>
+
+<span class="c1"># Check if the task specs are valid in the environment</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">check_task_spec</span><span class="p">(</span><span class="n">task_spec</span><span class="p">)</span>
+<span class="n">num_error</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+   <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;runnable&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;spec_name&quot;</span><span class="p">])</span>
+      <span class="n">num_error</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">assert</span> <span class="n">num_error</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Invalid task specs will crash training. Please fix them.&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All task specs are valid.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>More expressivity is possible from decorators &#64;define_task and &#64;define_predicate.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@t</span><span class="o">.</span><span class="n">define_task</span>
-<span class="k">def</span> <span class="nf">KillTask</span><span class="p">(</span><span class="n">gs</span><span class="p">:</span> <span class="n">GameState</span><span class="p">,</span>
-             <span class="n">subject</span><span class="p">:</span> <span class="n">Group</span><span class="p">):</span> <span class="c1"># Annotated with Group to expose env variables</span>
-<span class="w">  </span><span class="sd">&quot;&quot;&quot; Reward 0.1 per player defeated, with a bonus for the 1st and 3rd kills.&quot;&quot;&quot;</span>
-  <span class="n">num_kills</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">subject</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">PLAYER_KILL</span><span class="p">)</span>
-  <span class="n">score</span> <span class="o">=</span> <span class="n">num_kills</span> <span class="o">*</span> <span class="mf">0.1</span>
+<p>Also, the tasks must be picklable with dill. To check it, use the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import dill
 
-  <span class="k">if</span> <span class="n">num_kills</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
-
-  <span class="c1"># You can use other tasks in a definition!</span>
-  <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">CountEvent</span><span class="p">(</span><span class="n">subject</span><span class="o">=</span><span class="n">subject</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="s1">&#39;PLAYER_KILL&#39;</span><span class="p">,</span><span class="n">N</span><span class="o">=</span><span class="mi">3</span><span class="p">)(</span><span class="n">gs</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">:</span>
-    <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
-
-  <span class="k">return</span> <span class="n">score</span>
-
-<span class="c1"># scenario also accepts fn(Group -&gt; Task), and calls this for all desired</span>
-<span class="c1"># Groups. The default behavior (passing in Task) is similar to the</span>
-<span class="c1"># lambda definition below.</span>
-<span class="c1"># Defined across agents instead of teams.</span>
-<span class="n">scenario</span><span class="o">.</span><span class="n">add_tasks</span><span class="p">(</span><span class="k">lambda</span> <span class="n">agent</span><span class="p">:</span> <span class="n">KillTask</span><span class="p">(</span><span class="n">subject</span><span class="o">=</span><span class="n">agent</span><span class="p">),</span> <span class="n">groups</span><span class="o">=</span><span class="s1">&#39;agents&#39;</span><span class="p">)</span>
+# Save the task specs to a picklable file
+with open(“tmp_curriculum.pkl”, &quot;wb&quot;) as f:
+   dill.dump(task_spec, f)
+print(&quot;All task specs are picklable.&quot;)
 </pre></div>
 </div>
-<p>We return a score for an input GameState and the reward each tick is the change in score. Advanced usage can involve directly inheriting from the base Task class or subclasses.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># TaskOperator itself is a subclass of Task</span>
-<span class="k">class</span> <span class="nc">Repeat</span><span class="p">(</span><span class="n">TaskOperator</span><span class="p">):</span>
-  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">,</span> <span class="n">subject</span><span class="p">:</span> <span class="n">Group</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; The reward each turn is the value of the operand.&quot;&quot;&quot;</span>
-    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">subject</span><span class="o">=</span><span class="n">subject</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_current_score</span> <span class="o">=</span> <span class="mi">0</span>
+<p><strong>Step 3: Generate Task Embeddings</strong></p>
+<p>The curriculum needs embeddings for training. Use the TaskEncoder class to generate embeddings for the training tasks:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">task_encoder</span> <span class="kn">import</span> <span class="n">TaskEncoder</span>
 
-  <span class="k">def</span> <span class="nf">_evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gs</span><span class="p">:</span> <span class="n">GameState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_current_score</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tasks</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">gs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_score</span>
+<span class="n">LLM_CHECKPOINT</span> <span class="o">=</span> <span class="s2">&quot;Salesforce/codegen25-7b-instruct&quot;</span>
+<span class="n">CURRICULUM_FILE_PATH</span> <span class="o">=</span> <span class="s2">&quot;custom_curriculum_with_embedding.pkl&quot;</span>
 
-  <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">Config</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">Repeat</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">TaskEncoder</span><span class="p">(</span><span class="n">LLM_CHECKPOINT</span><span class="p">,</span> <span class="n">curriculum_tutorial</span><span class="p">)</span> <span class="k">as</span> <span class="n">task_encoder</span><span class="p">:</span>
+   <span class="n">task_encoder</span><span class="o">.</span><span class="n">get_task_embedding</span><span class="p">(</span><span class="n">task_spec</span><span class="p">,</span> <span class="n">save_to_file</span><span class="o">=</span><span class="n">CURRICULUM_FILE_PATH</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p><strong>Step 4: Train Agents</strong></p>
+<p>Now that you have defined the curriculum and generated embeddings, you can proceed to train your agents using the curriculum:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">reinforcement_learning</span> <span class="kn">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">train</span> <span class="kn">import</span> <span class="n">setup_env</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">create_config</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">Config</span><span class="p">)</span>
+<span class="n">args</span><span class="o">.</span><span class="n">tasks_path</span> <span class="o">=</span> <span class="n">CURRICULUM_FILE_PATH</span>
+
+<span class="c1"># Additional setup if needed</span>
+<span class="n">local_mode</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="n">local_mode</span><span class="p">:</span>
+   <span class="n">args</span><span class="o">.</span><span class="n">num_envs</span> <span class="o">=</span> <span class="mi">1</span>
+   <span class="n">args</span><span class="o">.</span><span class="n">num_buffers</span> <span class="o">=</span> <span class="mi">1</span>
+   <span class="n">args</span><span class="o">.</span><span class="n">use_serial_vecenv</span> <span class="o">=</span> <span class="kc">True</span>
+   <span class="n">args</span><span class="o">.</span><span class="n">rollout_batch_size</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">14</span>
+
+<span class="c1"># Set up the agent training environment</span>
+<span class="n">trainer</span> <span class="o">=</span> <span class="n">setup_env</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+<span class="c1"># Train agents using the curriculum</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">trainer</span><span class="o">.</span><span class="n">done_training</span><span class="p">():</span>
+   <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">infos</span> <span class="o">=</span> <span class="n">trainer</span><span class="o">.</span><span class="n">evaluate</span><span class="p">()</span>
+   <span class="c1"># Training task stats are available in infos</span>
+   <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">infos</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="c1"># Display training task statistics</span>
+      <span class="c1"># ...</span>
+
+   <span class="c1"># Train the agents</span>
+   <span class="n">trainer</span><span class="o">.</span><span class="n">train</span><span class="p">(</span>
+      <span class="n">update_epochs</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">ppo_update_epochs</span><span class="p">,</span>
+      <span class="n">bptt_horizon</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">bptt_horizon</span><span class="p">,</span>
+      <span class="n">batch_rows</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">ppo_training_batch_size</span> <span class="o">//</span> <span class="n">args</span><span class="o">.</span><span class="n">bptt_horizon</span><span class="p">,</span>
+   <span class="p">)</span>
+</pre></div>
+</div>
+<p>Congratulations! You have successfully created a manual curriculum, generated embeddings, and trained agents using the defined tasks. You can further customize this process to suit your specific requirements and environment.</p>
 </div>
 <input id="sd-tab-item-14" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-14">
@@ -710,23 +798,36 @@ No Holds Barred</label><div class="sd-tab-content docutils">
 <p>Deploy both RL and Curriculum approaches to create the ultimate 8 Agent team policy. All methods are open and no constraints on (self-provided) compute. Only restrictions are: no unauthorized modifications of the game or other submissions.</p>
 <p>If you are here, you know how to get started. Use any of the above baselines or build your own from scratch. This is the only track that does not strictly require winners to open-source their code. However, we strongly encourage you to do so.</p>
 </div>
-</div>
-</section>
-<section id="icon-platform">
-<h1><img alt="icon" src="../_images/icon.png" /> Platform<a class="headerlink" href="#icon-platform" title="Permalink to this heading">#</a></h1>
-<p>The project was inspired by classic Massively Multiplayer Online Role-Playing Games (MMOs) - a genre defined by interaction with a large number of other players. It is a platform for creating intelligent agents parameterized by neural networks. Our goal is to support a broad base of multiagent research that would be impractical or impossible to conduct using other environments. Unlike other game genres typically used in research, MMOs simulate persistent worlds that support rich player interactions and a wider variety of progression strategies. These properties seem important to intelligence in the real world. The massively multiagent setting allow player teams to interact in interesting ways and use entirely different strategies.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nmmo</span> <span class="kn">import</span> <span class="n">Env</span>
-
-<span class="c1"># Default environment - see API for config options</span>
-<span class="n">env</span> <span class="o">=</span> <span class="n">Env</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-   <span class="n">actions</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># Compute with your model</span>
-   <span class="n">obs</span><span class="p">,</span> <span class="n">rewards</span><span class="p">,</span> <span class="n">dones</span><span class="p">,</span> <span class="n">infos</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+<input id="sd-tab-item-15" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-15">
+LLMs</label><div class="sd-tab-content docutils">
+<p>The curriculum track includes a 7B parameter codegen model (Salesforce/codegen25-7b-instruct) for generating tasks and task embeddings. As part of the No Holds Barred track, you can also use LLMs to generate scripted policies. This uses a hack of Neural MMO’s internal state API to extract data in a human readable format. Example code with gpt 3.5 is provided in a separate folder:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NMMO Baselines Repository:
+├── llm-agent
+│   ├── 3b_generate_agent.py
+│   ├── __pycache__
+│   ├── generated_agent.py --&gt; Scripted agent generated by LLM
+│   ├── gpt_generate_agent.py --&gt; Generate agent with GPT
+│   ├── gpt_summarize_documentation.py --&gt; Summarize NMMO docs with GPT
+│   ├── play_game.py --&gt; Play a game with the generated agent
+│   ├── prompt_documentation.txt --&gt; Prompt for summarizing NMMO docs
+│   ├── prompt_documentation_summary.txt --&gt; Summarized NMMO docs
+│   ├── prompt_example_code.py --&gt; Example code from the scripted API
+│   ├── prompt_generate_agent.txt --&gt; Prompt for generating a scripted agent
+│   ├── prompt_summarize_documentation.txt --&gt; Prompt for summarizing NMMO docs
+│   └── scripted -&gt; Symlink to scripted baseline policies
+└── requirements.txt
 </pre></div>
 </div>
-<p>Environments provide a standard PettingZoo API. Join our community  <a class="reference external" href="https://discord.gg/BkMmFUC">Discord</a> and post in #support for help (do not raise Github issues for support). See the cards at the top of this page for source code, baselines, latest publications, social media, and news!</p>
+<p>In order to run the generation code with GPT, include your OpenAI credentials in the environment variables OPENAI_ORGANIZATION and OPENAI_API_KEY.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">gpt_generate_agent</span><span class="o">.</span><span class="n">py</span>
+<span class="n">python</span> <span class="n">play_game</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Getting GPT 3.5 to output meaningful programs will take some work. We were only able to get the sample generated agent to work with GPT 4.</p>
+<p>Note that we do not yet have a way to run your GPT queries on our evaluation servers. We are currently figuring out how to do this. This starter kit was added based on community interest in LLM agents and was not part of the original proposal, but we will work on adding some sort of bounty or prize specifically for this category.</p>
+</div>
+</div>
 </section>
 
         </article>

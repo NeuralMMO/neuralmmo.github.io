@@ -5,9 +5,7 @@
 
 |
 
-**News:** 2.0 is now in soft-launch. The environment is stable and a working version of the RL baseline is available, but not everything has been fully tuned and documented.
-
-Neural MMO is a computationally accessible, open-source research platform that simulates populations of agents in virtual worlds. We challenge you to train a team of agents to complete *tasks they have never seen before against opponents they have never seen before on maps they have never seen before*. Our objective is to spur research on increasingly general and cognitively realistic environments.
+Neural MMO is a computationally accessible, open-source research platform that simulates populations of agents in virtual worlds. We challenge you to train agents to complete *tasks they have never seen before against opponents they have never seen before on maps they have never seen before*. Our objective is to spur research on increasingly general and cognitively realistic environments.
 
 .. card::
   :link: https://neuralmmo.github.io/client
@@ -55,60 +53,11 @@ Neural MMO is a computationally accessible, open-source research platform that s
 
       Follow the creator on Twitter
 
-|icon| Neural MMO
-#################
-
-Your team of 8 Agents must collect food and water to survive. Each Agent has 8 individual professions to help them collect resources. Agents can level up their skills in each profession.
+Your Agents must collect food and water to survive. Each Agent has 8 individual professions to help them collect resources. Agents can level up their skills in each profession.
 
 Resources can be used to create consumable items that restore food, water and heath as well as to create ammunition that increases damage in combat. Higher level resources create better consumables and ammunition. Agents can also trade items on a global market.
 
 Agents may aquire armor to protect themselves in combat and weapons to increase their damage output. Agents can attack each other using one of three styles: Melee, Range, and Magic. The world is populated by NPCs that can be defeated to obtain items and increase power.
-
-.. tab-set::
-   
-   .. tab-item:: PufferTank
-
-      Docker container including Neural MMO and GPU-accelerated baselines. Guarantees correct dependencies and environment setup. We recommended the following setup for local containerized development:
-        - Install Docker Hub, VSCode, and the VSCode dev containers plugin.
-        - Clone the competition branch of `PufferTank <https://github.com/PufferAI/PufferTank>`_ on Linux/MacOS/WSL
-        - VSCode: F1 -> "Remote-Containers: Open Folder in Container" -> Select PufferTank folder
-
-      .. code-block:: python
-
-         git clone https://github.com/pufferai/puffertank --branch=competition
-
-   .. tab-item:: Pip Package
-
-      #WARNING: No pip package during soft launch. Use Docker or source.
-      Official support for Ubuntu 20.04/22.04, WSL, and MacOS
-
-      .. code-block:: python
-
-         # Quotes for mac compatibility.
-         pip install "nmmo"
-         
-         # Clone baselines repository
-         git clone https://github.com/neuralmmo/baselines
-
-   .. tab-item:: Source
-
-      Only recommended for developers of Neural MMO who can't run PufferTank.
-
-      .. code-block:: python
-
-         mkdir neural-mmo && cd neural-mmo
-
-         git clone https://github.com/neuralmmo/environment
-         git clone https://github.com/neuralmmo/baselines
-
-         cd environment && pip install -e .[all]
-
-         # If you want a local copy of the client.
-         # WSL users should run this part on Windows
-         # Download Cocos2d to open
-         git clone https://github.com/neuralmmo/client
- 
-|
 
 .. tab-set:: 
    
@@ -183,6 +132,7 @@ Agents may aquire armor to protect themselves in combat and weapons to increase 
     - **Hao Xiang Li**: Neural MMO 2.0 task system
     - **Ryan Sullivan**: Integration with Syllabus for the curriculum learning baseline
     - **Nishaanth Kanna**: Co-developer of the ELM curriculum baseline
+    ' **Nikhil Pinnaparaju**: Co-developer of the ELM curriculum baseline
     - **Daniel Scott**: Co-developer of the ELM curriculum baseline
     - **Rose S. Shuman**: Technical writing for this documentation site and for the competition
     - **Herbie Bradley**: Supervision of the curriculum generation baseline with OpenELM
@@ -197,7 +147,7 @@ Agents may aquire armor to protect themselves in combat and weapons to increase 
 
    **Nick Jenkins**: Layout for design for the competition poster. Adversary.design.
 
-   **Sara Earle**: Created 3D assets and 2D icons for items in NMMO 2.0. Hire her on UpWork if you like what you see here.
+   **Sara Earle**: Created 2D icons for items in NMMO 2.0. Hire her on UpWork if you like what you see here.
 
    Previous open source contributors, listed by time since latest contribution. Discord handle have been used for individuals who have not granted explicit permission to display their real names:
       - **Thomas Cloarec**: Developed the dynamic programming backend for scripted baseline agents
@@ -221,6 +171,66 @@ Agents may aquire armor to protect themselves in combat and weapons to increase 
          year = {2021}
       }
 
+|icon| Installation
+###################
+
+.. tab-set::
+   
+   .. tab-item:: PufferTank
+
+      Docker container including Neural MMO and GPU-accelerated baselines. Guarantees correct dependencies and environment setup. We recommended the following setup for local containerized development:
+        - Install Docker Hub, VSCode, and the VSCode dev containers plugin.
+        - Clone the competition branch of `PufferTank <https://github.com/PufferAI/PufferTank>`_ on Linux/MacOS/WSL
+        - VSCode: F1 -> "Remote-Containers: Open Folder in Container" -> Select PufferTank folder
+
+      .. code-block:: python
+
+         git clone https://github.com/pufferai/puffertank --branch=competition
+
+   .. tab-item:: Pip Package
+
+      #WARNING: No pip package during soft launch. Use Docker or source.
+      Official support for Ubuntu 20.04/22.04, WSL, and MacOS
+
+      .. code-block:: python
+
+         # Quotes for mac compatibility.
+         pip install "nmmo"
+         
+         # Clone baselines repository
+         git clone https://github.com/neuralmmo/baselines
+
+   .. tab-item:: Source
+
+      Only recommended for developers of Neural MMO who can't run PufferTank.
+
+      .. code-block:: python
+
+         mkdir neural-mmo && cd neural-mmo
+
+         git clone https://github.com/neuralmmo/environment
+         git clone https://github.com/neuralmmo/baselines
+
+         cd environment && pip install -e .[all]
+
+         # If you want a local copy of the client.
+         # WSL users should run this part on Windows
+         # Download Cocos2d to open
+         git clone https://github.com/neuralmmo/client
+ 
+Neural MMO provides a standard PettingZoo interface:
+
+.. code-block:: python
+
+   import nmmo
+
+   env = nmmo.Env()
+   obs = env.reset()
+
+   for step in range(10):
+      actions = {a: env.action_space(a).sample() for a in env.agents}
+      obs, rewards, dones, infos = env.step(actions)
+
 |icon| 2023 Competition
 #######################
 
@@ -232,116 +242,206 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
   .. tab-item:: Reinforcement Learning
 
-      Train teams of agents using RL to complete tasks. Customize the RL algorithm, model, and reward structure, but leverage a fixed baseline curriculum of tasks for training.
-
-      This is an opportunity for you RL enthusiasts to test your skills building agents that can survive and thrive in a massively multiagent environment full of potential adversaries. Your task is to implement a *policy* that defines how your 8 Agent team performs within a novel environment. At the outset of each game, your team will receive a randomly generated task. Complete the task to score a point. We will evaluate submissions against each other over thousands of games. Whoever scores the most points wins.
-
-      The RL track includes control over the RL algorithm, environment rewards signal, observation featurization, and the neural network architecture. The presentation and sampling of tasks are provided by the baseline and are treated as constants. All RL agent teams are trained on the same baseline task curriculum. While hybrid methods are allowed, with the new emphasis on tasks, it is unlikely that pure traditional scripting will be effective.
-
-      We release a baseline repository that includes a model adapted from NetEase's winning submission to the NeurIPS 2022 competition, a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for simpler training, and WandB for logging and visualization. The baseline is designed to be easy to use and modify. We encourage you to use it as a starting point for your own submissions.
+      Objective:
+         Train teams of agents using Reinforcement Learning (RL) to complete tasks. The RL track provides a fixed baseline curriculum of tasks for training. 
+         Customize the RL algorithm, model, and reward structure to maximize task completion. 
 
       To get started:
-        - train.py contains the main training file. Modify hyperprameters and scale here.
-        - cleanrl_ppo_lstm.py contains the CleanRL PPO implementation. Modify it to alter the training algorithm. This version includes PufferLib integration and asynchronous environment execution.
-        - /model contains the network definition. This is an advanced architecture with a custom featurizer and multiple subnetworks dedicated to processing different types of information.
-        - /feature_extractor preprocesses observations from the environment before they are passed to the network. It separately processes the map, inventory, and market observations.
+
+      .. code-block:: text
+
+         NMMO Baseline Repository:
+         ├── reinforcement_learning
+         │   ├── config.py
+         │   └── policy.py --> Your policy goes here
+         ├── requirements.txt
+         └── train.py --> Train your policy here
+
 
       .. code-block:: python
 
         # Run training. This is very memory intensive!
         # We are working on a smaller config
-        # The --use_serial_vecenv flat puts envs on a
+        # The --use_serial_vecenv flag puts envs on a
         # local process and is useful for debugging
         python train.py
 
         # Evaluate a trained checkpoint
         python -m tools.evaluate --model.checkpoint model_weights/achievements_4x10_new.200.pt
 
+      Overview:
+         This competition track is ideal to showcase your RL skills. Successful entrants develop agents that thrive in a massively multiagent environment with potential adversaries, successfully completing assigned tasks. 
+
+         Your RL track objective is to implement a policy for a team of 8 agents that dictates their performance in a new environment. Each game starts with your team receiving a randomly generated task. If the team completes the task, it earns a point. Your team will play thousands of games, each with a new assigned task to complete. The team with the highest score wins the competition.
+
+         You have control over the: 
+           - RL algorithm
+           - Environment rewards signal
+           - Observation featurization
+           - Neural network architecture 
+
+      Baseline:
+         The baseline is designed for ease of use and modification. We recommend using it as a starting point for your submissions. It provides task presentation and sampling, treated as constants. 
+
+         All RL agent teams train using the same baseline task curriculum. Hybrid methods are allowed, but traditional scripting alone is unlikely to be effective because of the new task-oriented focus.
+
+         Neural MMO provides a baseline repository. It features a model adapted from NetEase's winning submission in the NeurIPS 2022 competition. The repository also includes a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for streamlined training, and WandB for logging and visualization. 
+
   .. tab-item:: Curriculum Generation
 
-      The Curriculum track is a great way for programmers to compete and participate, without the need for advanced knowledge of AI. In this track, you will design unique and useful curricula for training successful teams on tasks. A curriculum is a structured set of tasks presented to the RL algorithm intelligently to maximize learning. Design the task generator, task sampler, and reward using Python.
+      Objective:
+         No RL experience, no problem! Design your own unique and useful curricula for training agent teams on tasks. A curriculum is a structured set of tasks presented to the RL algorithm intelligently that maximizes its learning. 
 
-      All submitted curricula will be applied to the same baseline RL policy to control a team of agents. Your objective is to create a curriculum of tasks that results in better, more robust learning such that agents are able to complete tasks not seen during training. You will receive performance metrics to see how effective the curriculum is and iterate your training curriculum. The reinforcement learning algorithm, observation featurization, and neural network architecture are provided by the baseline and remain constant across teams.
+         Once trained on your curriculum, your RL policy will navigate the NMMO environment and complete tasks. 
+         Using Python, design the: 
+         - Task generator
+         - Task sampler
+         - Reward 
 
-      The baseline for this track includes a fixed curriculum of tasks and OpenELM integration. For researchers and advanced users, we encourage approaches leveraging `ELM <https://arxiv.org/abs/2206.08896>`_ and provide a code generation model with the baselines.
+      Overview:
+         The Curriculum track offers a platform for programmers to engage and compete, regardless of AI expertise. All submitted curricula will be applied to a common baseline RL policy, controlling a team of agents. Your objective is to devise a curriculum that enhances learning, leading to improved agent performance on previously unseen tasks. You will receive performance metrics to assess the efficacy of your curriculum and refine your training approach. 
 
-      By default, Neural MMO provides a reward signal of 1 every tick the agent is alive. Our goal is to provide a flexible, powerful high level API to define rewards - and simple enough for even a language model to program. For example, to reward teams for exploring the map
+      Baseline:
+         The baseline provides the reinforcement learning algorithm, observation featurization, and neural network architecture. These remain consistent across all teams.
 
-      .. code-block:: python
+         The baseline package for this track includes a fixed curriculum of tasks and integration with OpenELM. While encouraging the utilization of ELM (Experience-Linked Memories) for advanced users and researchers, we also furnish a code generation model in conjunction with the baselines.
 
-         scenario = Scenario(config)
-         scenario.add_tasks(p.DistanceTraveled(dist=64))       
-         env.change_task(scenario.tasks)
+      Getting Started with Manual Curriculum Generation Tutorial
 
-      We define a list of tasks, one for each team - to collectively travel 64 tiles away from the starting position. Agents are gradually rewarded as they move away, with a total reward summed to 1 on completion.
+      This tutorial will guide you through the process of manually creating a curriculum for training agents using a custom environment. The provided code demonstrates the steps required to define training tasks, evaluate them, generate embeddings, and train agents using the defined curriculum. You can see the full working code at https://github.com/CarperAI/nmmo-baselines/blob/release/curriculum_generation/curriculum_tutorial.py 
 
-      Glossary of key terms
-        - **GameState** is a simplified read-only snapshot view of the environment.
-        - **Group** is an immutable set of agents.
-        - **Predicate** is a special, clipped case of Task.
-        - **Scenario** is a utility class to help assign subjects to tasks.
-        - **Task** is a mapping from GameState to a reward shared across its (subject: Group). We provide utilities that cover many use cases.
+      **Step 1: Define Training Tasks**
 
-      Get started by defining your own tasks by building from our provided set of operators.
-
-      .. code-block:: python
-
-         task = t.OR(p.CountEvent(event='PLAYER_KILL',N=5),p.TickGE(num_tick=5))
-         task = task * 5
-         scenario.add_tasks(task)
-
-         # Rewarding the agent for increasing time isn't helpful for training
-         # Try improving this task!
-
-      Some possibilities include OR different tasks to count progress towards either, and MUL (overloaded operator "*"") to scale up rewards. It is possible to explicitly assign subjects and groups to tasks.
+      In this step, you'll define the training tasks that your agents will learn from. You can use pre-built evaluation functions or create your own. The tasks are specified using the `TaskSpec` class.
 
       .. code-block:: python
 
-         env.change_task([StayAlive(Group([agent])) for agent in agents])
+         from nmmo.task.base_predicates import CountEvent, InventorySpaceGE, TickGE, norm
+         from nmmo.task.task_spec import TaskSpec, check_task_spec
 
-      More expressivity is possible from decorators @define_task and @define_predicate.
+         # Use pre-built eval functions and TaskSpec class to define each training task
+         task_spec = []
+
+         # Define tasks based on pre-built evaluation functions
+         essential_events = [
+            "GO_FARTHEST",
+            "EAT_FOOD",
+            "DRINK_WATER",
+            "SCORE_HIT",
+            "HARVEST_ITEM",
+            "LEVEL_UP",
+         ]
+
+         for event_code in essential_events:
+            task_spec.append(
+               TaskSpec(
+                     eval_fn=CountEvent,  # Use a pre-built eval function
+                     eval_fn_kwargs={"event": event_code, "N": 10},  # Arguments for CountEvent
+               )
+            )
+
+         # Define custom evaluation functions
+         def PracticeEating(gs, subject):
+            # Your custom evaluation logic here
+            return norm(progress)  # Normalizing the value
+
+         task_spec.append(TaskSpec(eval_fn=PracticeEating, eval_fn_kwargs={}))
+
+         # Define tasks using a combination of pre-built and custom evaluation functions
+         def PracticeInventoryManagement(gs, subject, space, num_tick):
+            return norm(InventorySpaceGE(gs, subject, space) * TickGE(gs, subject, num_tick))
+
+         for space in [2, 4, 8]:
+            task_spec.append(
+               TaskSpec(
+                     eval_fn=PracticeInventoryManagement,
+                     eval_fn_kwargs={"space": space, "num_tick": 500},
+               )
+            )
+
+      **Step 2: Validate Training Tasks**
+
+      It's essential to check if the defined training tasks are valid within your environment. Invalid tasks can cause training crashes. To validate tasks, run the following code:
 
       .. code-block:: python
-        
-         @t.define_task
-         def KillTask(gs: GameState,
-                      subject: Group): # Annotated with Group to expose env variables
-           """ Reward 0.1 per player defeated, with a bonus for the 1st and 3rd kills."""
-           num_kills = len(subject.event.PLAYER_KILL)
-           score = num_kills * 0.1
-            
-           if num_kills >= 1:
-             score += 1
-              
-           # You can use other tasks in a definition!
-           if p.CountEvent(subject=subject, event='PLAYER_KILL',N=3)(gs) == 1.0:
-             score += 1
 
-           return score
+         from nmmo.task.task_spec import check_task_spec
 
-         # scenario also accepts fn(Group -> Task), and calls this for all desired      
-         # Groups. The default behavior (passing in Task) is similar to the
-         # lambda definition below.
-         # Defined across agents instead of teams.
-         scenario.add_tasks(lambda agent: KillTask(subject=agent), groups='agents')
+         # Check if the task specs are valid in the environment
+         results = check_task_spec(task_spec)
+         num_error = 0
+         for result in results:
+            if result["runnable"] is False:
+               print("ERROR: ", result["spec_name"])
+               num_error += 1
+         assert num_error == 0, "Invalid task specs will crash training. Please fix them."
+         print("All task specs are valid.")
 
-      We return a score for an input GameState and the reward each tick is the change in score. Advanced usage can involve directly inheriting from the base Task class or subclasses.
+      Also, the tasks must be picklable with dill. To check it, use the following code:
 
       .. code-block:: python
 
-        # TaskOperator itself is a subclass of Task
-        class Repeat(TaskOperator):
-          def __init__(self, task: Task, subject: Group=None):
-            """ The reward each turn is the value of the operand."""
-            super().__init__(lambda n: n==1, task, subject=subject)
-            self._current_score = 0
+         import dill
 
-          def _evaluate(self, gs: GameState) -> float:
-            self._current_score += self._tasks[0](gs)
-            return self._current_score
+         # Save the task specs to a picklable file
+         with open(“tmp_curriculum.pkl”, "wb") as f:
+            dill.dump(task_spec, f)
+         print("All task specs are picklable.")
 
-          def sample(self, config: Config, **kwargs):
-            return super().sample(config, Repeat, **kwargs)
+      **Step 3: Generate Task Embeddings**
+
+      The curriculum needs embeddings for training. Use the TaskEncoder class to generate embeddings for the training tasks:
+
+      .. code-block:: python
+
+         from task_encoder import TaskEncoder
+
+         LLM_CHECKPOINT = "Salesforce/codegen25-7b-instruct"
+         CURRICULUM_FILE_PATH = "custom_curriculum_with_embedding.pkl"
+
+         with TaskEncoder(LLM_CHECKPOINT, curriculum_tutorial) as task_encoder:
+            task_encoder.get_task_embedding(task_spec, save_to_file=CURRICULUM_FILE_PATH)
+         print("Done.")
+
+      **Step 4: Train Agents**
+
+      Now that you have defined the curriculum and generated embeddings, you can proceed to train your agents using the curriculum:
+
+      .. code-block:: python
+
+         from reinforcement_learning import config
+         from train import setup_env
+
+         args = config.create_config(config.Config)
+         args.tasks_path = CURRICULUM_FILE_PATH
+
+         # Additional setup if needed
+         local_mode = True
+         if local_mode:
+            args.num_envs = 1
+            args.num_buffers = 1
+            args.use_serial_vecenv = True
+            args.rollout_batch_size = 2**14
+
+         # Set up the agent training environment
+         trainer = setup_env(args)
+
+         # Train agents using the curriculum
+         while not trainer.done_training():
+            _, _, infos = trainer.evaluate()
+            # Training task stats are available in infos
+            if len(infos) > 0:
+               # Display training task statistics
+               # ...
+
+            # Train the agents
+            trainer.train(
+               update_epochs=args.ppo_update_epochs,
+               bptt_horizon=args.bptt_horizon,
+               batch_rows=args.ppo_training_batch_size // args.bptt_horizon,
+            )
+
+      Congratulations! You have successfully created a manual curriculum, generated embeddings, and trained agents using the defined tasks. You can further customize this process to suit your specific requirements and environment.
 
   .. tab-item:: No Holds Barred
 
@@ -351,22 +451,35 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
       If you are here, you know how to get started. Use any of the above baselines or build your own from scratch. This is the only track that does not strictly require winners to open-source their code. However, we strongly encourage you to do so.
 
+  .. tab-item:: LLMs
 
-|icon| Platform 
-###############
+      The curriculum track includes a 7B parameter codegen model (Salesforce/codegen25-7b-instruct) for generating tasks and task embeddings. As part of the No Holds Barred track, you can also use LLMs to generate scripted policies. This uses a hack of Neural MMO's internal state API to extract data in a human readable format. Example code with gpt 3.5 is provided in a separate folder:
 
-The project was inspired by classic Massively Multiplayer Online Role-Playing Games (MMOs) - a genre defined by interaction with a large number of other players. It is a platform for creating intelligent agents parameterized by neural networks. Our goal is to support a broad base of multiagent research that would be impractical or impossible to conduct using other environments. Unlike other game genres typically used in research, MMOs simulate persistent worlds that support rich player interactions and a wider variety of progression strategies. These properties seem important to intelligence in the real world. The massively multiagent setting allow player teams to interact in interesting ways and use entirely different strategies. 
+      .. code-block:: text
 
-.. code-block:: python
+         NMMO Baselines Repository:
+         ├── llm-agent
+         │   ├── 3b_generate_agent.py
+         │   ├── __pycache__
+         │   ├── generated_agent.py --> Scripted agent generated by LLM
+         │   ├── gpt_generate_agent.py --> Generate agent with GPT
+         │   ├── gpt_summarize_documentation.py --> Summarize NMMO docs with GPT
+         │   ├── play_game.py --> Play a game with the generated agent
+         │   ├── prompt_documentation.txt --> Prompt for summarizing NMMO docs
+         │   ├── prompt_documentation_summary.txt --> Summarized NMMO docs
+         │   ├── prompt_example_code.py --> Example code from the scripted API
+         │   ├── prompt_generate_agent.txt --> Prompt for generating a scripted agent
+         │   ├── prompt_summarize_documentation.txt --> Prompt for summarizing NMMO docs
+         │   └── scripted -> Symlink to scripted baseline policies
+         └── requirements.txt
 
-   from nmmo import Env
+      In order to run the generation code with GPT, include your OpenAI credentials in the environment variables OPENAI_ORGANIZATION and OPENAI_API_KEY.
+      
+      .. code-block:: python
 
-   # Default environment - see API for config options
-   env = Env(config=None)
-   obs = env.reset()
+        python gpt_generate_agent.py
+        python play_game.py
 
-   while True:
-      actions = {} # Compute with your model
-      obs, rewards, dones, infos = env.step(actions)
+      Getting GPT 3.5 to output meaningful programs will take some work. We were only able to get the sample generated agent to work with GPT 4.
 
-Environments provide a standard PettingZoo API. Join our community  `Discord <https://discord.gg/BkMmFUC>`_ and post in #support for help (do not raise Github issues for support). See the cards at the top of this page for source code, baselines, latest publications, social media, and news!
+      Note that we do not yet have a way to run your GPT queries on our evaluation servers. We are currently figuring out how to do this. This starter kit was added based on community interest in LLM agents and was not part of the original proposal, but we will work on adding some sort of bounty or prize specifically for this category.

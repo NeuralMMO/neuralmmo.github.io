@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="The Game Map" href="game_wiki.html" /><link rel="prev" title="Neural MMO" href="landing.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="The Game Map" href="game_wiki.html" /><link rel="prev" title="Installation" href="landing.html" />
 
     <!-- Generated with Sphinx 5.0.0 and Furo 2023.03.27 -->
         <title>Environment - Neural MMO 2.0 documentation</title>
@@ -223,9 +223,8 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="landing.html"> Neural MMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landing.html"> Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="landing.html#icon-2023-competition"> 2023 Competition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="landing.html#icon-platform"> Platform</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul class="current">
@@ -259,6 +258,7 @@
 <p class="caption" role="heading"><span class="caption-text">Administrative</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="administrative.html"> Authorship, License, Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="administrative.html#icon-inspiration"> Inspiration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="administrative.html#ags-namesake"> Namesake</a></li>
 </ul>
 
@@ -298,7 +298,7 @@
 <div class="line"><br /></div>
 </div>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<img alt="" class="sd-card-img" src="../_static/banner.png" />
+<img alt="" class="sd-card-img" src="../_static/banner.jpg" />
 <div class="sd-card-img-overlay docutils">
 <div class="sd-card-body docutils">
 </div>
@@ -312,7 +312,7 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nmmo.</span></span><span class="sig-name descname"><span class="pre">Env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config:</span> <span class="pre">~nmmo.core.config.Default</span> <span class="pre">=</span> <span class="pre">&lt;nmmo.core.config.Default</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed=None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">action_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em><span class="sig-paren">)</span></dt>
+<span class="sig-name descname"><span class="pre">action_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Neural MMO Action Space</p>
 <dl class="simple">
 <dt>Args:</dt><dd><p>agent: Agent ID</p>
@@ -329,7 +329,7 @@ observation space (such as targeting)</p>
 <dl class="py property">
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">agents</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em></dt>
-<dd><p>For conformity with the PettingZoo API only; rendering is external</p>
+<dd><p>For conformity with the PettingZoo API</p>
 </dd></dl>
 
 <dl class="py method">
@@ -340,16 +340,13 @@ observation space (such as targeting)</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">observation_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span></dt>
+<span class="sig-name descname"><span class="pre">observation_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Neural MMO Observation Space</p>
 <dl class="simple">
 <dt>Args:</dt><dd><p>agent: Agent ID</p>
 </dd>
 <dt>Returns:</dt><dd><p>observation: gym.spaces object contained the structured observation
-for the specified agent. Each visible object is represented by
-continuous and discrete vectors of attributes. A 2-layer attentional
-encoder can be used to convert this structured observation into
-a flat vector embedding.</p>
+for the specified agent.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -386,7 +383,13 @@ but finite horizon: ~1000 timesteps for small maps and
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">seed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
-<dd><p>Reseeds the environment (making it deterministic).</p>
+<dd><p>Reseeds the environment. reset() must be called after seed(), and before step().
+- self._np_seed is None: seed() has not been called, e.g. __init__() -&gt; new RNG
+- self._np_seed is set, and seed is not None: seed() or reset() with seed -&gt; new RNG</p>
+<dl class="simple">
+<dt>If self._np_seed is set, but seed is None</dt><dd><p>probably called from reset() without seed, so don’t change the RNG</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -612,32 +615,26 @@ generated automatically.</p>
 </dl>
 <dl class="py attribute">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ALLOW_MULTI_TASKS_PER_AGENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Whether to allow multiple tasks per agent</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">BASE_HEALTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em></dt>
 <dd><p>Initial Constitution level and agent health</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">EMULATE_CONST_HORIZON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
-<dd><p>Emulate a constant HORIZON simulations steps</p>
+<span class="sig-name descname"><span class="pre">CURRICULUM_FILE_PATH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd><p>Path to a curriculum task file containing a list of task specs for training</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">EMULATE_CONST_PLAYER_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
-<dd><p>Emulate a constant number of agents</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">EMULATE_FLAT_ATN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
-<dd><p>Emulate a flat action space</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">EMULATE_FLAT_OBS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
-<dd><p>Emulate a flat observation space</p>
+<span class="sig-name descname"><span class="pre">HORIZON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1024</span></em></dt>
+<dd><p>Number of steps before the environment resets</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -703,7 +700,7 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">MAP_GENERATOR</span></span></dt>
-<dd><p>alias of <a class="reference internal" href="../source/autodoc/nmmo.core.terrain.html#nmmo.core.terrain.MapGenerator" title="nmmo.core.terrain.MapGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapGenerator</span></code></a></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">MapGenerator</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -737,7 +734,7 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/PufferTank/neuralmmo.github.io'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspaces/puffertank/neuralmmo.github.io'</span></em></dt>
 <dd><p>Working directory</p>
 </dd></dl>
 
@@ -755,19 +752,19 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_RESOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/puffertank/nmmo-environment/nmmo/resource'</span></em></dt>
 <dd><p>Resource directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/puffertank/nmmo-environment/nmmo'</span></em></dt>
 <dd><p>Global repository directory</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/workspace/nmmo-environment/nmmo/resource/{}.png'</span></em></dt>
+<span class="sig-name descname"><span class="pre">PATH_TILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/puffertank/nmmo-environment/nmmo/resource/{}.png'</span></em></dt>
 <dd><p>Tile path – format me with tile name</p>
 </dd></dl>
 
@@ -804,7 +801,7 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">PLAYER_LOADER</span></span></dt>
-<dd><p>alias of <a class="reference internal" href="../source/autodoc/nmmo.lib.spawn.html#nmmo.lib.spawn.SequentialLoader" title="nmmo.lib.spawn.SequentialLoader"><code class="xref py py-class docutils literal notranslate"><span class="pre">SequentialLoader</span></code></a></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">SequentialLoader</span></code></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -851,7 +848,25 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">PROVIDE_ACTION_TARGETS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
-<dd><p>Flag used to provide action targets mask</p>
+<dd><p>Provide action targets mask</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PROVIDE_NOOP_ACTION_TARGET</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Provide a no-op option for each action</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESET_ON_DEATH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<dd><p>Whether to reset the environment whenever an agent dies</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">TASK_EMBED_DIM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1024</span></em></dt>
+<dd><p>Dimensionality of task embeddings</p>
 </dd></dl>
 
 <dl class="py method">
@@ -868,7 +883,8 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">HORIZON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8192</span></em></dt>
-<dd></dd></dl>
+<dd><p>Number of steps before the environment resets</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
@@ -928,7 +944,8 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">HORIZON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1024</span></em></dt>
-<dd></dd></dl>
+<dd><p>Number of steps before the environment resets</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
@@ -1228,7 +1245,8 @@ generated automatically.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">HORIZON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">128</span></em></dt>
-<dd></dd></dl>
+<dd><p>Number of steps before the environment resets</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
@@ -1296,14 +1314,14 @@ generated automatically.</p>
 <dd><p>Procedural map generation</p>
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">generate_all_maps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<span class="sig-name descname"><span class="pre">generate_all_maps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">np_random</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Generates NMAPS maps according to generate_map</p>
 <p>Provides additional utilities for saving to .npy and rendering png previews</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">generate_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span></dt>
+<span class="sig-name descname"><span class="pre">generate_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">np_random</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Generate a single map</p>
 <p>The default method is a relatively complex multiscale perlin noise method.
 This is not just standard multioctave noise – we are seeding multioctave noise
@@ -1353,7 +1371,7 @@ as a config argument.</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"> Neural MMO</div>
+                <div class="title"> Installation</div>
                 
               </div>
             </a>

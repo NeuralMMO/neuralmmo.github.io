@@ -15,12 +15,12 @@ release = '2.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-        'myst_parser',
+        #'myst_parser',
         'sphinx_design',
         'sphinx.ext.autodoc', 
         ]
 
-myst_enable_extensions = ['colon_fence']
+#myst_enable_extensions = ['colon_fence']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']

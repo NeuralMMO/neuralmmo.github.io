@@ -4,7 +4,7 @@
 ###########
 
 .. card::
-   :img-background: /../_static/banner.png
+   :img-background: /../_static/banner.jpg
 
 |icon| v1.6
 ###########

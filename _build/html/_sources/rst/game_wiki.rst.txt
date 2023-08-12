@@ -3,7 +3,7 @@
 |
 
 .. card::
-    :img-background: /../_static/banner.png
+    :img-background: /../_static/banner.jpg
 
 Feedback on our docs? Contribute changes and suggestions on `Discord <https://github.com/neuralmmo>`_.
 
