@@ -128,15 +128,15 @@ Agents may aquire armor to protect themselves in combat and weapons to increase 
 
    CarperAI team for NMMO 2.0:
     - **David Bloomin**: Rewrite of the engine for 2.0, port and development of the RL baseline
-    - **Kyoung Whan Choe**: Rewrite of Neural MMO game code and logging for 2.0, contributions to the RL baseline and task system
+    - **Kyoung Whan Choe**: Rewrite of Neural MMO 2.0, co-developed the task system and curriculum baseline
     - **Hao Xiang Li**: Neural MMO 2.0 task system
     - **Ryan Sullivan**: Integration with Syllabus for the curriculum learning baseline
     - **Nishaanth Kanna**: Co-developer of the ELM curriculum baseline
-    ' **Nikhil Pinnaparaju**: Co-developer of the ELM curriculum baseline
+    - **Nikhil Pinnaparaju**: Co-developer of the ELM curriculum baseline
     - **Daniel Scott**: Co-developer of the ELM curriculum baseline
     - **Rose S. Shuman**: Technical writing for this documentation site and for the competition
     - **Herbie Bradley**: Supervision of the curriculum generation baseline with OpenELM
-    - **Louis Castricato**: Co-founder and team lead of Carper AI; supervisor of Carper AI development efforts.
+    - **Louis Castricato**: Co-founder and team lead of Carper AI; supervisor of Carper AI development efforts
 
    Parametrix.ai Team. Competition orchestrators and creators of the 2.0 web client.
     - **Kirsty You**: Product manager, Parametrix.ai
@@ -306,13 +306,13 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
          The baseline package for this track includes a fixed curriculum of tasks and integration with OpenELM. While encouraging the utilization of ELM (Evolution through Large Model) for advanced users and researchers, we also furnish a code generation model in conjunction with the baselines.
 
-      Getting Started with Manual Curriculum Generation Tutorial
+      **Getting Started with Manual Curriculum Generation Tutorial**
 
-      This tutorial will guide you through the process of manually creating a curriculum for training agents using a custom environment. The provided code demonstrates the steps required to define training tasks, evaluate them, generate embeddings, and train agents using the defined curriculum. You can see the full working code at https://github.com/CarperAI/nmmo-baselines/blob/release/curriculum_generation/curriculum_tutorial.py 
+      This tutorial will guide you through the process of manually creating a curriculum for training agents. The provided code demonstrates the steps required to define training tasks, evaluate them, generate embeddings, and train agents using the defined curriculum. You can see the full working code at https://github.com/CarperAI/nmmo-baselines/blob/release/curriculum_generation/curriculum_tutorial.py 
 
       **Step 1: Define Training Tasks**
 
-      In this step, you'll define the training tasks that your agents will learn from. You can use pre-built evaluation functions or create your own. The tasks are specified using the `TaskSpec` class.
+      In this step, you'll define the evaluation functions and training tasks that your agents will learn from. You can use pre-built evaluation functions or create your own. The tasks are specified using the `TaskSpec` class.
 
       .. code-block:: python
 
@@ -323,7 +323,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
          task_spec = []
 
          # Define tasks based on pre-built evaluation functions
-         essential_events = [
+         essential_events = [  # See nmmo.lib.log, EventCode for the full list
             "GO_FARTHEST",
             "EAT_FOOD",
             "DRINK_WATER",
@@ -342,8 +342,14 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
          # Define custom evaluation functions
          def PracticeEating(gs, subject):
-            # Your custom evaluation logic here
-            return norm(progress)  # Normalizing the value
+            # Your custom evaluation logic like below
+            num_eat = len(subject.event.EAT_FOOD)
+            progress = num_eat * 0.06
+            if num_eat >= 1:
+                progress += 0.1
+            if num_eat >= 3:
+                progress += 0.3
+            return norm(progress)  # Normalizing the value. See norm() at nmmo.task.base_predicates
 
          task_spec.append(TaskSpec(eval_fn=PracticeEating, eval_fn_kwargs={}))
 
@@ -361,7 +367,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
       **Step 2: Validate Training Tasks**
 
-      It's essential to check if the defined training tasks are valid within your environment. Invalid tasks can cause training crashes. To validate tasks, run the following code:
+      It's essential to check if the defined training tasks are valid in Neural MMO. Invalid tasks can cause training crashes. To validate tasks, run the following code:
 
       .. code-block:: python
 
@@ -390,7 +396,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
       **Step 3: Generate Task Embeddings**
 
-      The curriculum needs embeddings for training. Use the TaskEncoder class to generate embeddings for the training tasks:
+      The task-conditioned RL needs task embeddings. Use the TaskEncoder class to generate embeddings for the training tasks:
 
       .. code-block:: python
 
@@ -405,7 +411,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
       **Step 4: Train Agents**
 
-      Now that you have defined the curriculum and generated embeddings, you can proceed to train your agents using the curriculum:
+      Now that you have defined the curriculum and generated embeddings, you can proceed to train your agents using the curriculum. This step is basically the same as the RL track:
 
       .. code-block:: python
 
@@ -441,7 +447,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
                batch_rows=args.ppo_training_batch_size // args.bptt_horizon,
             )
 
-      Congratulations! You have successfully created a manual curriculum, generated embeddings, and trained agents using the defined tasks. You can further customize this process to suit your specific requirements and environment.
+      Congratulations! You have successfully created a manual curriculum, generated embeddings, and trained agents using the defined tasks. Now, you can start create a curriculum that can win the competition.
 
   .. tab-item:: No Holds Barred
 
