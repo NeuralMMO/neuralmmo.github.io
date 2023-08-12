@@ -304,7 +304,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
       Baseline:
          The baseline provides the reinforcement learning algorithm, observation featurization, and neural network architecture. These remain consistent across all teams.
 
-         The baseline package for this track includes a fixed curriculum of tasks and integration with OpenELM. While encouraging the utilization of ELM (Experience-Linked Memories) for advanced users and researchers, we also furnish a code generation model in conjunction with the baselines.
+         The baseline package for this track includes a fixed curriculum of tasks and integration with OpenELM. While encouraging the utilization of ELM (Evolution through Large Model) for advanced users and researchers, we also furnish a code generation model in conjunction with the baselines.
 
       Getting Started with Manual Curriculum Generation Tutorial
 
