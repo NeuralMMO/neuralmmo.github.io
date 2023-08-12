@@ -25,7 +25,7 @@ Feedback on our docs? Contribute changes and suggestions on `Discord <https://gi
 The Game Map
 ************
 
-Each instance of Neural MMO contains an automatically generated tile-based game map of 128 x 128 tiles. The map is surrounded by Void, which is not reachable at all.
+Each instance of Neural MMO contains an automatically generated tile-based game map of 128 x 128 tiles. Agents can not walk off the edges into the map.
 
 Tiles are broadly categorized as follows:
   - *Passable* tiles can be walked on while *obstacle* tiles block movement
@@ -36,12 +36,12 @@ Tiles are broadly categorized as follows:
 +===================+===================================+=============+
 | **Resource**      | Foliage, Ore, Tree, Crystal, Herb | Water, Fish |
 +-------------------+---------------------+-------------+-------------+
-| **Non-resource**  | Grass, Harvested Tile             | Stone, Void |
+| **Non-resource**  | Grass, Harvested Tile             | Stone       |
 +-------------------+-----------------------------------+-------------+
 
 *Resource* tiles may be harvested. *Passable* tiles are harvested by walking over them and *obstacle* tiles by walking next to them. The resource is then consumed from the tile. It will regenerate randomly over time on the same tile. The only exception is the Water tile, which provides unlimited resource.
 
-Each Agent has a visibility of up to seven tiles in Chebyshev distance, allowing it to see a 15x15 square around itself.
+Each Agent has a visibility of up to seven tiles in Chebyshev (L-inf) distance. In other words, an Agent can see a 15x15 square around itself.
 
 .. dropdown:: About the tile generation algorithm
     
@@ -78,7 +78,7 @@ Each tick provides the opportunity for every Agent and NPC to do any, all or non
 
 **Move 1 tile in any available direction**
 
-- Agents cannot move off of the game space, or toward obstacle tiles like water and stone.
+- Agents cannot move off of the game map or into obstacle tiles like water and stone.
 - As the game progresses, the action space becomes constrained as a fog encircles the board. Agents take increasing damage in tiles covered in fog, and all gradually move towards the center of the game space.
 
 **Attack an Agent - either NPC or from another team**
@@ -88,15 +88,15 @@ Each tick provides the opportunity for every Agent and NPC to do any, all or non
  
 **Inventory Management**
 
-Inventory capacity is 12 items, including armor, weapon, tools, and consumables. Each item except ammunitions takes one inventory space. Ammunitions of the same type and level can be stacked infinitely in one inventory space. If an Agent's inventory is full, it cannot harvest or loot new item. To manage inventory, an Agent can
+Inventory capacity is 12 items, including armor, weapon, tools, and consumables. Each item except ammunitions takes one inventory space. Ammunitions of the same type and level can be stacked infinitely in one inventory space. If an Agent's inventory is full, it cannot harvest or loot new items. To manage inventory, an Agent can:
 
 - List an item in the Market, which remains on the inventory until sold
-- Destroy an item if no market value and instantly make a space available
+- Destroy an item to instantly make a space available
 - Give an item to a team mate, which is **only permitted when standing on the same tile**
 
 .. dropdown:: About the Observation Space
 
-    Each agent's observation consists of the current tick, its id, its nearby 15x15 visible tiles, up to 100 entities within its vision, its own inventory, and the global market listings.
+    Each agent's observation contains the current game tick, the agent's id, data from the nearby 15x15 visible tiles, data from up to 100 entities within its vision, data from its own inventory, and data from the global market listings.
 
 .. code-block:: python
   :caption: Observation space of a single agent
@@ -215,15 +215,13 @@ Attack skills obey a rock-paper-scissors dominance relationship:
  - Range beats Mage 
  - Mage beats Melee
 
-Attack range is *the same 3 tiles* for all styles, full sweep view.
-
-**Insert Image**
+Attack range is 3 tiles for all styles. This is a 7 by 7 square centered on the attacker.
 
 .. tab-set::
 
     .. tab-item:: Choosing attack style
     
-        The attacker can select the skill strongest against the target's main skill. This increases the attack damage by 50%. However, the defender can immediately retaliate in the same way. A strong agent with a higher level and better equipment can still beat a weaker agent, even if the weaker agent uses the attack style that multiplies damage. 
+        The attacker can select the combat skill strongest against the target's main skill. This increases attack damage by 50%. However, the defender can immediately retaliate in the same way. A strong agent with a higher level and better equipment can still beat a weaker agent, even if the weaker agent uses the attack style that multiplies damage. 
 
     .. tab-item:: Armor
     
@@ -289,7 +287,7 @@ Attack range is *the same 3 tiles* for all styles, full sweep view.
     This continues for some time, with your opponent running away, and you chasing them. 
     Eventually, you give up and let them go. Your HP is low, and they had to consume a potion. 
 
-    Fortunately, this was only a training run, and you now can reconsider your strategy for the next round.
+    Fortunately, this was only a training run, and you can now reconsider your strategy for the next round.
 
 Professions, Tools, and Items
 *****************************
@@ -297,6 +295,8 @@ Professions, Tools, and Items
 There are 8 Professions that Agents can learn and level up in. Agents can improve their skills in multiple Professions, but will not be able to progress in all Professions. How Professions are distributed across Agent teams is a part of game strategy. 
 
 For Skills Prospecting, Carving, and Alchemy, agents walk on the associated resource tile to harvest the resource. Agent receives a different quality/level of resource, depending **only** on agent levels/tools. The resource tile will respawn later in the same place. There is a 2.5 percent chance to obtain a weapon while gathering ammunition on a tile, the level of which is also determined by the tool level of the harvesting agent.
+
+|
 
 **Agents have an inventory that can hold 12 items.**
 
@@ -327,8 +327,6 @@ For Skills Prospecting, Carving, and Alchemy, agents walk on the associated reso
   - Tools need a relevant skill level (fishing, herbalism, prospecting, carving, alchemy) ≥ the item level to equip
   - Tools enable an agent to collect an associated resource (ration, potion, whetstone, arrow, runes) at a level equal to the tool level
 
-|
-
 **Rations**
   - Consume a ration to restore food and water level, which increase by 50 + 5*item level 
   - Requires at least one skill greater than or equal to the item level to use
@@ -336,8 +334,6 @@ For Skills Prospecting, Carving, and Alchemy, agents walk on the associated reso
     A rod helps harvesting higher-level rations. Alternatively, agents can buy rations in the market.
     
     For example, if agents buy a level 3 ration in the market, they can use it only when they have any skill level 3 or above. If they buy a ration with a level higher than any of their skills, they can store but cannot use it until a skill level = the ration level. 
-
-|
 
 **Potions**
   - Consume a potion to restore health level, which increases by 50 + 5*item level
