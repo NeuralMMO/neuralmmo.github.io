@@ -310,7 +310,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
       This tutorial will guide you through the process of manually creating a curriculum for training agents. The provided code demonstrates the steps required to define training tasks, evaluate them, generate embeddings, and train agents using the defined curriculum. You can see the full working code at https://github.com/CarperAI/nmmo-baselines/blob/release/curriculum_generation/curriculum_tutorial.py 
 
-      **Step 1: Define Training Tasks**
+      **Step 1: Define Your Curriculum**
 
       In this step, you'll define the evaluation functions and training tasks that your agents will learn from. You can use pre-built evaluation functions or create your own. The tasks are specified using the `TaskSpec` class.
 
@@ -320,7 +320,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
          from nmmo.task.task_spec import TaskSpec, check_task_spec
 
          # Use pre-built eval functions and TaskSpec class to define each training task
-         task_spec = []
+         curriculum = [] # is a list of TaskSpec
 
          # Define tasks based on pre-built evaluation functions
          essential_events = [  # See nmmo.lib.log, EventCode for the full list
@@ -333,7 +333,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
          ]
 
          for event_code in essential_events:
-            task_spec.append(
+            curriculum.append(
                TaskSpec(
                      eval_fn=CountEvent,  # Use a pre-built eval function
                      eval_fn_kwargs={"event": event_code, "N": 10},  # Arguments for CountEvent
@@ -351,21 +351,21 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
                 progress += 0.3
             return norm(progress)  # Normalizing the value. See norm() at nmmo.task.base_predicates
 
-         task_spec.append(TaskSpec(eval_fn=PracticeEating, eval_fn_kwargs={}))
+         curriculum.append(TaskSpec(eval_fn=PracticeEating, eval_fn_kwargs={}))
 
          # Define tasks using a combination of pre-built and custom evaluation functions
          def PracticeInventoryManagement(gs, subject, space, num_tick):
             return norm(InventorySpaceGE(gs, subject, space) * TickGE(gs, subject, num_tick))
 
          for space in [2, 4, 8]:
-            task_spec.append(
+            curriculum.append(
                TaskSpec(
                      eval_fn=PracticeInventoryManagement,
                      eval_fn_kwargs={"space": space, "num_tick": 500},
                )
             )
 
-      **Step 2: Validate Training Tasks**
+      **Step 2: Validate Your Curriculum**
 
       It's essential to check if the defined training tasks are valid in Neural MMO. Invalid tasks can cause training crashes. To validate tasks, run the following code:
 
@@ -374,14 +374,14 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
          from nmmo.task.task_spec import check_task_spec
 
          # Check if the task specs are valid in the environment
-         results = check_task_spec(task_spec)
+         results = check_task_spec(curriculum)
          num_error = 0
          for result in results:
             if result["runnable"] is False:
                print("ERROR: ", result["spec_name"])
                num_error += 1
          assert num_error == 0, "Invalid task specs will crash training. Please fix them."
-         print("All task specs are valid.")
+         print("All training tasks are valid.")
 
       Also, the tasks must be picklable with dill. To check it, use the following code:
 
@@ -391,8 +391,8 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
          # Save the task specs to a picklable file
          with open(“tmp_curriculum.pkl”, "wb") as f:
-            dill.dump(task_spec, f)
-         print("All task specs are picklable.")
+            dill.dump(curriculum, f)
+         print("All training task are picklable.")
 
       **Step 3: Generate Task Embeddings**
 
@@ -405,11 +405,12 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
          LLM_CHECKPOINT = "Salesforce/codegen25-7b-instruct"
          CURRICULUM_FILE_PATH = "custom_curriculum_with_embedding.pkl"
 
+         # You need to provide the curriculum file as a module to the task encoder
          with TaskEncoder(LLM_CHECKPOINT, curriculum_tutorial) as task_encoder:
-            task_encoder.get_task_embedding(task_spec, save_to_file=CURRICULUM_FILE_PATH)
+            task_encoder.get_task_embedding(curriculum_tutorial.curriculum, save_to_file=CURRICULUM_FILE_PATH)
          print("Done.")
 
-      **Step 4: Train Agents**
+      **Step 4: Train Agents with Your Curriculum**
 
       Now that you have defined the curriculum and generated embeddings, you can proceed to train your agents using the curriculum. This step is basically the same as the RL track:
 
@@ -419,6 +420,8 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
          from train import setup_env
 
          args = config.create_config(config.Config)
+
+         # Provide your curriculum file to the training env
          args.tasks_path = CURRICULUM_FILE_PATH
 
          # Additional setup if needed
