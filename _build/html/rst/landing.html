@@ -484,21 +484,23 @@ Contributors<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>Joseph Suarez</strong>: Creator and lead developer of Neural MMO.</p>
-<dl>
+<dl class="simple">
 <dt>CarperAI team for NMMO 2.0:</dt><dd><ul class="simple">
-<li><p class="sd-card-text"><strong>David Bloomin</strong>: Rewrite of the engine for 2.0, port and development of the RL baseline</p></li>
 <li><p class="sd-card-text"><strong>Kyoung Whan Choe</strong>: Rewrite of Neural MMO game code and logging for 2.0, contributions to the RL baseline and task system</p></li>
+<li><p class="sd-card-text"><strong>David Bloomin</strong>: Rewrite of the engine for 2.0, port and development of the RL baseline</p></li>
 <li><p class="sd-card-text"><strong>Hao Xiang Li</strong>: Neural MMO 2.0 task system</p></li>
-<li><p class="sd-card-text"><strong>Ryan Sullivan</strong>: Integration with Syllabus for the curriculum learning baseline</p></li>
+<li><p class="sd-card-text"><strong>Nikhil Pinnaparaju</strong>: Co-developer of the ELM curriculum baseline</p></li>
 <li><p class="sd-card-text"><strong>Nishaanth Kanna</strong>: Co-developer of the ELM curriculum baseline</p></li>
+<li><p class="sd-card-text"><strong>Daniel Scott</strong>: Co-developer of the ELM curriculum baseline</p></li>
+<li><p class="sd-card-text"><strong>Ryan Sullivan</strong>: Integration with Syllabus for the curriculum learning baseline</p></li>
+<li><p class="sd-card-text"><strong>Rose S. Shuman</strong>: Technical writing for this documentation site and for the competition</p></li>
+<li><p class="sd-card-text"><strong>Lucas de Alcântara</strong>: Design and artwork for the 2.0 client</p></li>
+<li><p class="sd-card-text"><strong>Herbie Bradley</strong>: Supervision of the curriculum generation baseline with OpenELM</p></li>
+<li><p class="sd-card-text"><strong>Louis Castricato</strong>: Co-founder and team lead of Carper AI; supervisor of Carper AI development efforts</p></li>
 </ul>
-<p class="sd-card-text">‘ <strong>Nikhil Pinnaparaju</strong>: Co-developer of the ELM curriculum baseline
-- <strong>Daniel Scott</strong>: Co-developer of the ELM curriculum baseline
-- <strong>Rose S. Shuman</strong>: Technical writing for this documentation site and for the competition
-- <strong>Herbie Bradley</strong>: Supervision of the curriculum generation baseline with OpenELM
-- <strong>Louis Castricato</strong>: Co-founder and team lead of Carper AI; supervisor of Carper AI development efforts.</p>
 </dd>
 <dt>Parametrix.ai Team. Competition orchestrators and creators of the 2.0 web client.</dt><dd><ul class="simple">
+<li><p class="sd-card-text"><strong>Mudou Liu</strong>: Machine learning researcher, Parametrix.ai</p></li>
 <li><p class="sd-card-text"><strong>Kirsty You</strong>: Product manager, Parametrix.ai</p></li>
 <li><p class="sd-card-text"><strong>Yuhao Jiang</strong>: Machine learning researcher, Parametrix.ai</p></li>
 <li><p class="sd-card-text"><strong>Qimai Li</strong>: Senior machine learning researcher, Paramerix.ai</p></li>
@@ -549,20 +551,19 @@ PufferTank</label><div class="sd-tab-content docutils">
 <dl class="simple">
 <dt>Docker container including Neural MMO and GPU-accelerated baselines. Guarantees correct dependencies and environment setup. We recommended the following setup for local containerized development:</dt><dd><ul class="simple">
 <li><p>Install Docker Hub, VSCode, and the VSCode dev containers plugin.</p></li>
-<li><p>Clone the competition branch of <a class="reference external" href="https://github.com/PufferAI/PufferTank">PufferTank</a> on Linux/MacOS/WSL</p></li>
+<li><p>Clone <a class="reference external" href="https://github.com/PufferAI/PufferTank">PufferTank</a> on Linux/MacOS/WSL</p></li>
 <li><p>VSCode: F1 -&gt; “Remote-Containers: Open Folder in Container” -&gt; Select PufferTank folder</p></li>
 </ul>
 </dd>
 </dl>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pufferai</span><span class="o">/</span><span class="n">puffertank</span> <span class="o">--</span><span class="n">branch</span><span class="o">=</span><span class="n">competition</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pufferai</span><span class="o">/</span><span class="n">puffertank</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-10" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-10">
 Pip Package</label><div class="sd-tab-content docutils">
-<p>#WARNING: No pip package during soft launch. Use Docker or source.
-Official support for Ubuntu 20.04/22.04, WSL, and MacOS</p>
+<p>Official support for Ubuntu 20.04/22.04, WSL, and MacOS</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quotes for mac compatibility.</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;nmmo&quot;</span>
 
@@ -604,8 +605,8 @@ Source</label><div class="sd-tab-content docutils">
 </section>
 <section id="icon-2023-competition">
 <h1><img alt="icon" src="../_images/icon.png" /> 2023 Competition<a class="headerlink" href="#icon-2023-competition" title="Permalink to this heading">#</a></h1>
-<p>Successfully complete the most tasks to win! At stake are $20,000 in prizes sponsored by Parametrix.ai. All submissions receive A100 compute credits for training sponsored by Stability.ai. The competition is currently planned for the start of July 2023.</p>
-<p>Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the objective is for your team of 8 agents to accomplish more tasks than 15 other opponent teams. There are 128 Agents in play at the start of each round, and your submission will be evaluated over thousands of rounds with increasingly difficult tasks. Lobbies are made by a matchmaking algorithm that selects 16 teams of similar skill level. For the RL and Curriculum tracks, all entrants receive up to 8 hours of free A100 compute time per submission to train.</p>
+<p>Successfully complete the most tasks to win! At stake are $20,000 in prizes sponsored by Parametrix.ai. If the <a href="#id1"><span class="problematic" id="id2">`[AICrowd page] https://www.aicrowd.com/challenges/neurips-2023-the-neural-mmo-challenge`_</span></a> is up, the competition is live! Ends in December.</p>
+<p>Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the objective is for your 8 agents to accomplish more tasks than 120 other opponent. Your submission will be evaluated over thousands of rounds with increasingly difficult tasks. Lobbies are made by a matchmaking algorithm that selects 16 teams of similar skill level. The RL and curriculum tracks are compute-limited: we will verify that winners’ solutions can be trained in 8 A100 hours with 12 cores.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-12" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-12">
@@ -625,7 +626,6 @@ Customize the RL algorithm, model, and reward structure to maximize task complet
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run training. This is very memory intensive!</span>
-<span class="c1"># We are working on a smaller config</span>
 <span class="c1"># The --use_serial_vecenv flag puts envs on a</span>
 <span class="c1"># local process and is useful for debugging</span>
 <span class="n">python</span> <span class="n">train</span><span class="o">.</span><span class="n">py</span>
@@ -636,7 +636,7 @@ Customize the RL algorithm, model, and reward structure to maximize task complet
 </div>
 <dl>
 <dt>Overview:</dt><dd><p>This competition track is ideal to showcase your RL skills. Successful entrants develop agents that thrive in a massively multiagent environment with potential adversaries, successfully completing assigned tasks.</p>
-<p>Your RL track objective is to implement a policy for a team of 8 agents that dictates their performance in a new environment. Each game starts with your team receiving a randomly generated task. If the team completes the task, it earns a point. Your team will play thousands of games, each with a new assigned task to complete. The team with the highest score wins the competition.</p>
+<p>Your RL track objective is to implement an agent policy for that dictates their performance in a new environment. Each game starts with your team receiving a randomly generated task. If the team completes the task, it earns a point. Your team will play thousands of games, each with a new assigned task to complete. The team with the highest score wins the competition.</p>
 <dl class="simple">
 <dt>You have control over the:</dt><dd><ul class="simple">
 <li><p>RL algorithm</p></li>
@@ -648,8 +648,8 @@ Customize the RL algorithm, model, and reward structure to maximize task complet
 </dl>
 </dd>
 <dt>Baseline:</dt><dd><p>The baseline is designed for ease of use and modification. We recommend using it as a starting point for your submissions. It provides task presentation and sampling, treated as constants.</p>
-<p>All RL agent teams train using the same baseline task curriculum. Hybrid methods are allowed, but traditional scripting alone is unlikely to be effective because of the new task-oriented focus.</p>
-<p>Neural MMO provides a baseline repository. It features a model adapted from NetEase’s winning submission in the NeurIPS 2022 competition. The repository also includes a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for streamlined training, and WandB for logging and visualization.</p>
+<p>All RL agents train using the same baseline task curriculum. Hybrid methods are allowed, but traditional scripting alone is unlikely to be effective because of the new task-oriented focus.</p>
+<p>Neural MMO provides a baseline repository that includes a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for streamlined training, and WandB for logging and visualization.</p>
 </dd>
 </dl>
 </div>
@@ -670,18 +670,18 @@ Using Python, design the:
 <p>The baseline package for this track includes a fixed curriculum of tasks and integration with OpenELM. While encouraging the utilization of ELM (Evolution through Large Model) for advanced users and researchers, we also furnish a code generation model in conjunction with the baselines.</p>
 </dd>
 </dl>
-<p>Getting Started with Manual Curriculum Generation Tutorial</p>
-<p>This tutorial will guide you through the process of manually creating a curriculum for training agents using a custom environment. The provided code demonstrates the steps required to define training tasks, evaluate them, generate embeddings, and train agents using the defined curriculum. You can see the full working code at <a class="reference external" href="https://github.com/CarperAI/nmmo-baselines/blob/release/curriculum_generation/curriculum_tutorial.py">https://github.com/CarperAI/nmmo-baselines/blob/release/curriculum_generation/curriculum_tutorial.py</a></p>
-<p><strong>Step 1: Define Training Tasks</strong></p>
-<p>In this step, you’ll define the training tasks that your agents will learn from. You can use pre-built evaluation functions or create your own. The tasks are specified using the <cite>TaskSpec</cite> class.</p>
+<p><strong>Getting Started with Manual Curriculum Generation Tutorial</strong></p>
+<p>This tutorial will guide you through the process of manually creating a curriculum for training agents. The provided code demonstrates the steps required to define training tasks, evaluate them, generate embeddings, and train agents using the defined curriculum. You can see the full working code at <a class="reference external" href="https://github.com/CarperAI/nmmo-baselines/blob/release/curriculum_generation/curriculum_tutorial.py">https://github.com/CarperAI/nmmo-baselines/blob/release/curriculum_generation/curriculum_tutorial.py</a></p>
+<p><strong>Step 1: Define Your Curriculum</strong></p>
+<p>In this step, you’ll define the evaluation functions and training tasks that your agents will learn from. You can use pre-built evaluation functions or create your own. The tasks are specified using the <cite>TaskSpec</cite> class.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nmmo.task.base_predicates</span> <span class="kn">import</span> <span class="n">CountEvent</span><span class="p">,</span> <span class="n">InventorySpaceGE</span><span class="p">,</span> <span class="n">TickGE</span><span class="p">,</span> <span class="n">norm</span>
 <span class="kn">from</span> <span class="nn">nmmo.task.task_spec</span> <span class="kn">import</span> <span class="n">TaskSpec</span><span class="p">,</span> <span class="n">check_task_spec</span>
 
 <span class="c1"># Use pre-built eval functions and TaskSpec class to define each training task</span>
-<span class="n">task_spec</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">curriculum</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># is a list of TaskSpec</span>
 
 <span class="c1"># Define tasks based on pre-built evaluation functions</span>
-<span class="n">essential_events</span> <span class="o">=</span> <span class="p">[</span>
+<span class="n">essential_events</span> <span class="o">=</span> <span class="p">[</span>  <span class="c1"># See nmmo.lib.log, EventCode for the full list</span>
    <span class="s2">&quot;GO_FARTHEST&quot;</span><span class="p">,</span>
    <span class="s2">&quot;EAT_FOOD&quot;</span><span class="p">,</span>
    <span class="s2">&quot;DRINK_WATER&quot;</span><span class="p">,</span>
@@ -691,7 +691,7 @@ Using Python, design the:
 <span class="p">]</span>
 
 <span class="k">for</span> <span class="n">event_code</span> <span class="ow">in</span> <span class="n">essential_events</span><span class="p">:</span>
-   <span class="n">task_spec</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+   <span class="n">curriculum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
       <span class="n">TaskSpec</span><span class="p">(</span>
             <span class="n">eval_fn</span><span class="o">=</span><span class="n">CountEvent</span><span class="p">,</span>  <span class="c1"># Use a pre-built eval function</span>
             <span class="n">eval_fn_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;event&quot;</span><span class="p">:</span> <span class="n">event_code</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span>  <span class="c1"># Arguments for CountEvent</span>
@@ -700,17 +700,23 @@ Using Python, design the:
 
 <span class="c1"># Define custom evaluation functions</span>
 <span class="k">def</span> <span class="nf">PracticeEating</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">subject</span><span class="p">):</span>
-   <span class="c1"># Your custom evaluation logic here</span>
-   <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">progress</span><span class="p">)</span>  <span class="c1"># Normalizing the value</span>
+   <span class="c1"># Your custom evaluation logic like below</span>
+   <span class="n">num_eat</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">subject</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">EAT_FOOD</span><span class="p">)</span>
+   <span class="n">progress</span> <span class="o">=</span> <span class="n">num_eat</span> <span class="o">*</span> <span class="mf">0.06</span>
+   <span class="k">if</span> <span class="n">num_eat</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+       <span class="n">progress</span> <span class="o">+=</span> <span class="mf">0.1</span>
+   <span class="k">if</span> <span class="n">num_eat</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+       <span class="n">progress</span> <span class="o">+=</span> <span class="mf">0.3</span>
+   <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">progress</span><span class="p">)</span>  <span class="c1"># Normalizing the value. See norm() at nmmo.task.base_predicates</span>
 
-<span class="n">task_spec</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TaskSpec</span><span class="p">(</span><span class="n">eval_fn</span><span class="o">=</span><span class="n">PracticeEating</span><span class="p">,</span> <span class="n">eval_fn_kwargs</span><span class="o">=</span><span class="p">{}))</span>
+<span class="n">curriculum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TaskSpec</span><span class="p">(</span><span class="n">eval_fn</span><span class="o">=</span><span class="n">PracticeEating</span><span class="p">,</span> <span class="n">eval_fn_kwargs</span><span class="o">=</span><span class="p">{}))</span>
 
 <span class="c1"># Define tasks using a combination of pre-built and custom evaluation functions</span>
 <span class="k">def</span> <span class="nf">PracticeInventoryManagement</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">space</span><span class="p">,</span> <span class="n">num_tick</span><span class="p">):</span>
    <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">InventorySpaceGE</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">space</span><span class="p">)</span> <span class="o">*</span> <span class="n">TickGE</span><span class="p">(</span><span class="n">gs</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">num_tick</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">space</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]:</span>
-   <span class="n">task_spec</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+   <span class="n">curriculum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
       <span class="n">TaskSpec</span><span class="p">(</span>
             <span class="n">eval_fn</span><span class="o">=</span><span class="n">PracticeInventoryManagement</span><span class="p">,</span>
             <span class="n">eval_fn_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;space&quot;</span><span class="p">:</span> <span class="n">space</span><span class="p">,</span> <span class="s2">&quot;num_tick&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">},</span>
@@ -718,19 +724,19 @@ Using Python, design the:
    <span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Step 2: Validate Training Tasks</strong></p>
-<p>It’s essential to check if the defined training tasks are valid within your environment. Invalid tasks can cause training crashes. To validate tasks, run the following code:</p>
+<p><strong>Step 2: Validate Your Curriculum</strong></p>
+<p>It’s essential to check if the defined training tasks are valid in Neural MMO. Invalid tasks can cause training crashes. To validate tasks, run the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nmmo.task.task_spec</span> <span class="kn">import</span> <span class="n">check_task_spec</span>
 
 <span class="c1"># Check if the task specs are valid in the environment</span>
-<span class="n">results</span> <span class="o">=</span> <span class="n">check_task_spec</span><span class="p">(</span><span class="n">task_spec</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">check_task_spec</span><span class="p">(</span><span class="n">curriculum</span><span class="p">)</span>
 <span class="n">num_error</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
    <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;runnable&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
       <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;spec_name&quot;</span><span class="p">])</span>
       <span class="n">num_error</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="k">assert</span> <span class="n">num_error</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Invalid task specs will crash training. Please fix them.&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All task specs are valid.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All training tasks are valid.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Also, the tasks must be picklable with dill. To check it, use the following code:</p>
@@ -738,28 +744,31 @@ Using Python, design the:
 
 # Save the task specs to a picklable file
 with open(“tmp_curriculum.pkl”, &quot;wb&quot;) as f:
-   dill.dump(task_spec, f)
-print(&quot;All task specs are picklable.&quot;)
+   dill.dump(curriculum, f)
+print(&quot;All training task are picklable.&quot;)
 </pre></div>
 </div>
 <p><strong>Step 3: Generate Task Embeddings</strong></p>
-<p>The curriculum needs embeddings for training. Use the TaskEncoder class to generate embeddings for the training tasks:</p>
+<p>The task-conditioned RL needs task embeddings. Use the TaskEncoder class to generate embeddings for the training tasks:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">task_encoder</span> <span class="kn">import</span> <span class="n">TaskEncoder</span>
 
 <span class="n">LLM_CHECKPOINT</span> <span class="o">=</span> <span class="s2">&quot;Salesforce/codegen25-7b-instruct&quot;</span>
 <span class="n">CURRICULUM_FILE_PATH</span> <span class="o">=</span> <span class="s2">&quot;custom_curriculum_with_embedding.pkl&quot;</span>
 
+<span class="c1"># You need to provide the curriculum file as a module to the task encoder</span>
 <span class="k">with</span> <span class="n">TaskEncoder</span><span class="p">(</span><span class="n">LLM_CHECKPOINT</span><span class="p">,</span> <span class="n">curriculum_tutorial</span><span class="p">)</span> <span class="k">as</span> <span class="n">task_encoder</span><span class="p">:</span>
-   <span class="n">task_encoder</span><span class="o">.</span><span class="n">get_task_embedding</span><span class="p">(</span><span class="n">task_spec</span><span class="p">,</span> <span class="n">save_to_file</span><span class="o">=</span><span class="n">CURRICULUM_FILE_PATH</span><span class="p">)</span>
+   <span class="n">task_encoder</span><span class="o">.</span><span class="n">get_task_embedding</span><span class="p">(</span><span class="n">curriculum_tutorial</span><span class="o">.</span><span class="n">curriculum</span><span class="p">,</span> <span class="n">save_to_file</span><span class="o">=</span><span class="n">CURRICULUM_FILE_PATH</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Step 4: Train Agents</strong></p>
-<p>Now that you have defined the curriculum and generated embeddings, you can proceed to train your agents using the curriculum:</p>
+<p><strong>Step 4: Train Agents with Your Curriculum</strong></p>
+<p>Now that you have defined the curriculum and generated embeddings, you can proceed to train your agents using the curriculum. This step is basically the same as the RL track:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">reinforcement_learning</span> <span class="kn">import</span> <span class="n">config</span>
 <span class="kn">from</span> <span class="nn">train</span> <span class="kn">import</span> <span class="n">setup_env</span>
 
 <span class="n">args</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">create_config</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">Config</span><span class="p">)</span>
+
+<span class="c1"># Provide your curriculum file to the training env</span>
 <span class="n">args</span><span class="o">.</span><span class="n">tasks_path</span> <span class="o">=</span> <span class="n">CURRICULUM_FILE_PATH</span>
 
 <span class="c1"># Additional setup if needed</span>
@@ -789,7 +798,7 @@ print(&quot;All task specs are picklable.&quot;)
    <span class="p">)</span>
 </pre></div>
 </div>
-<p>Congratulations! You have successfully created a manual curriculum, generated embeddings, and trained agents using the defined tasks. You can further customize this process to suit your specific requirements and environment.</p>
+<p>Congratulations! You have successfully created a manual curriculum, generated embeddings, and trained agents using the defined tasks. Now, you can start create a curriculum that can win the competition.</p>
 </div>
 <input id="sd-tab-item-14" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-14">
@@ -801,6 +810,7 @@ No Holds Barred</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-15" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-15">
 LLMs</label><div class="sd-tab-content docutils">
+<p><strong>NOTE:</strong> We have starter code for this but currently don’t have a way to evaluate on our machines. Come chat with us in Discord, as we should be able to verify submissions manually. This starter kit was added based on community interest in LLM agents and was not part of the original proposal, but we will work on adding some sort of bounty or prize specifically for this category.</p>
 <p>The curriculum track includes a 7B parameter codegen model (Salesforce/codegen25-7b-instruct) for generating tasks and task embeddings. As part of the No Holds Barred track, you can also use LLMs to generate scripted policies. This uses a hack of Neural MMO’s internal state API to extract data in a human readable format. Example code with gpt 3.5 is provided in a separate folder:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NMMO Baselines Repository:
 ├── llm-agent
@@ -825,7 +835,6 @@ LLMs</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 <p>Getting GPT 3.5 to output meaningful programs will take some work. We were only able to get the sample generated agent to work with GPT 4.</p>
-<p>Note that we do not yet have a way to run your GPT queries on our evaluation servers. We are currently figuring out how to do this. This starter kit was added based on community interest in LLM agents and was not part of the original proposal, but we will work on adding some sort of bounty or prize specifically for this category.</p>
 </div>
 </div>
 </section>

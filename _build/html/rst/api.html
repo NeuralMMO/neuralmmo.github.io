@@ -621,12 +621,6 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">BASE_HEALTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em></dt>
-<dd><p>Initial Constitution level and agent health</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">CURRICULUM_FILE_PATH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
 <dd><p>Path to a curriculum task file containing a list of task specs for training</p>
 </dd></dl>
@@ -853,19 +847,19 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PROVIDE_NOOP_ACTION_TARGET</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
+<span class="sig-name descname"><span class="pre">PROVIDE_NOOP_ACTION_TARGET</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em></dt>
 <dd><p>Provide a no-op option for each action</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RESET_ON_DEATH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em></dt>
-<dd><p>Whether to reset the environment whenever an agent dies</p>
+<dd><p>Debug parameter: whether to reset the environment whenever an agent dies</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TASK_EMBED_DIM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1024</span></em></dt>
+<span class="sig-name descname"><span class="pre">TASK_EMBED_DIM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4096</span></em></dt>
 <dd><p>Dimensionality of task embeddings</p>
 </dd></dl>
 
@@ -1016,13 +1010,13 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">NPC_LEVEL_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em></dt>
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em></dt>
 <dd><p>Bonus NPC damage per level</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">NPC_LEVEL_DEFENSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em></dt>
+<span class="sig-name descname"><span class="pre">NPC_LEVEL_DEFENSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em></dt>
 <dd><p>Bonus NPC defense per level</p>
 </dd></dl>
 
@@ -1082,8 +1076,8 @@ generated automatically.</p>
 <dd><p>Progression Game System</p>
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PROGRESSION_AMMUNITION_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
-<dd><p>Multiplier on top of XP_SCALE for Prospecting, Carving, and Alchemy</p>
+<span class="sig-name descname"><span class="pre">PROGRESSION_AMMUNITION_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em></dt>
+<dd><p>Additional XP for each harvest for Prospecting, Carving, and Alchemy</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1100,20 +1094,20 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PROGRESSION_BASE_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
-<dd><p>Base XP awarded for each skill usage – multiplied by skill level</p>
+<span class="sig-name descname"><span class="pre">PROGRESSION_COMBAT_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em></dt>
+<dd><p>Additional XP for each attack for skills Melee, Range, and Mage</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PROGRESSION_COMBAT_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em></dt>
-<dd><p>Multiplier on top of XP_SCALE for Melee, Range, and Mage</p>
+<span class="sig-name descname"><span class="pre">PROGRESSION_CONSUMABLE_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em></dt>
+<dd><p>Multiplier XP for each harvest for Fishing and Herbalism</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PROGRESSION_CONSUMABLE_XP_SCALE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em></dt>
-<dd><p>Multiplier on top of XP_SCALE for Fishing and Herbalism</p>
+<span class="sig-name descname"><span class="pre">PROGRESSION_EXP_THRESHOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[0,</span> <span class="pre">90,</span> <span class="pre">217,</span> <span class="pre">373,</span> <span class="pre">553,</span> <span class="pre">754,</span> <span class="pre">974,</span> <span class="pre">1212,</span> <span class="pre">1467,</span> <span class="pre">1737]</span></em></dt>
+<dd><p>A list of experience thresholds for each level</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1130,7 +1124,7 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PROGRESSION_MAGE_BASE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<span class="sig-name descname"><span class="pre">PROGRESSION_MAGE_BASE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em></dt>
 <dd><p>Base Mage attack damage</p>
 </dd></dl>
 
@@ -1142,7 +1136,7 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PROGRESSION_MELEE_BASE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<span class="sig-name descname"><span class="pre">PROGRESSION_MELEE_BASE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em></dt>
 <dd><p>Base Melee attack damage</p>
 </dd></dl>
 
@@ -1154,7 +1148,7 @@ generated automatically.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PROGRESSION_RANGE_BASE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<span class="sig-name descname"><span class="pre">PROGRESSION_RANGE_BASE_DAMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em></dt>
 <dd><p>Base Range attack damage</p>
 </dd></dl>
 
@@ -1180,6 +1174,12 @@ generated automatically.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RESOURCE_BASE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em></dt>
 <dd><p>Initial level and capacity for food and water</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_DAMAGE_REDUCTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.5</span></em></dt>
+<dd><p>Training helper: damage reduction from starvation and dehydration for resilient agents</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1222,6 +1222,14 @@ generated automatically.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RESOURCE_HEALTH_RESTORE_FRACTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.1</span></em></dt>
 <dd><p>Fraction of health restored per tick when above half food+water</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RESOURCE_RESILIENT_POPULATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em></dt>
+<dd><p>Training helper: proportion of population that is resilient to starvation and dehydration
+(e.g. 0.1 means 10% of the population is resilient to starvation and dehydration)
+This is to make some agents live longer during training to sample from “advanced” agents.</p>
 </dd></dl>
 
 <dl class="py attribute">
