@@ -235,7 +235,7 @@ Neural MMO provides a standard PettingZoo interface:
 |icon| 2023 Competition
 #######################
 
-Successfully complete the most tasks to win! At stake are $20,000 in prizes sponsored by Parametrix.ai. If the `[AICrowd page] https://www.aicrowd.com/challenges/neurips-2023-the-neural-mmo-challenge`_ is up, the competition is live! Ends in December.
+Successfully complete the most tasks to win! At stake are $20,000 in prizes sponsored by Parametrix.ai. If the `[AICrowd page] <https://www.aicrowd.com/challenges/neurips-2023-the-neural-mmo-challenge>`_ is up, the competition is live! Ends in December.
 
 Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the objective is for your 8 agents to accomplish more tasks than 120 other opponent. Your submission will be evaluated over thousands of rounds with increasingly difficult tasks. Lobbies are made by a matchmaking algorithm that selects 16 teams of similar skill level. The RL and curriculum tracks are compute-limited: we will verify that winners' solutions can be trained in 8 A100 hours with 12 cores.
 
