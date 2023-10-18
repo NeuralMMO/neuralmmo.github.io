@@ -127,18 +127,20 @@ Agents may aquire armor to protect themselves in combat and weapons to increase 
    **Joseph Suarez**: Creator and lead developer of Neural MMO.
 
    CarperAI team for NMMO 2.0:
+    - **Kyoung Whan Choe**: Rewrite of Neural MMO game code and logging for 2.0, contributions to the RL baseline and task system
     - **David Bloomin**: Rewrite of the engine for 2.0, port and development of the RL baseline
-    - **Kyoung Whan Choe**: Rewrite of Neural MMO 2.0, co-developed the task system and curriculum baseline
     - **Hao Xiang Li**: Neural MMO 2.0 task system
-    - **Ryan Sullivan**: Integration with Syllabus for the curriculum learning baseline
-    - **Nishaanth Kanna**: Co-developer of the ELM curriculum baseline
     - **Nikhil Pinnaparaju**: Co-developer of the ELM curriculum baseline
+    - **Nishaanth Kanna**: Co-developer of the ELM curriculum baseline
     - **Daniel Scott**: Co-developer of the ELM curriculum baseline
+    - **Ryan Sullivan**: Integration with Syllabus for the curriculum learning baseline
     - **Rose S. Shuman**: Technical writing for this documentation site and for the competition
+    - **Lucas de Alcântara**: Design and artwork for the 2.0 client
     - **Herbie Bradley**: Supervision of the curriculum generation baseline with OpenELM
     - **Louis Castricato**: Co-founder and team lead of Carper AI; supervisor of Carper AI development efforts
 
    Parametrix.ai Team. Competition orchestrators and creators of the 2.0 web client.
+    - **Mudou Liu**: Machine learning researcher, Parametrix.ai
     - **Kirsty You**: Product manager, Parametrix.ai
     - **Yuhao Jiang**: Machine learning researcher, Parametrix.ai
     - **Qimai Li**: Senior machine learning researcher, Paramerix.ai
@@ -180,16 +182,15 @@ Agents may aquire armor to protect themselves in combat and weapons to increase 
 
       Docker container including Neural MMO and GPU-accelerated baselines. Guarantees correct dependencies and environment setup. We recommended the following setup for local containerized development:
         - Install Docker Hub, VSCode, and the VSCode dev containers plugin.
-        - Clone the competition branch of `PufferTank <https://github.com/PufferAI/PufferTank>`_ on Linux/MacOS/WSL
+        - Clone `PufferTank <https://github.com/PufferAI/PufferTank>`_ on Linux/MacOS/WSL
         - VSCode: F1 -> "Remote-Containers: Open Folder in Container" -> Select PufferTank folder
 
       .. code-block:: python
 
-         git clone https://github.com/pufferai/puffertank --branch=competition
+         git clone https://github.com/pufferai/puffertank
 
    .. tab-item:: Pip Package
 
-      #WARNING: No pip package during soft launch. Use Docker or source.
       Official support for Ubuntu 20.04/22.04, WSL, and MacOS
 
       .. code-block:: python
@@ -234,9 +235,9 @@ Neural MMO provides a standard PettingZoo interface:
 |icon| 2023 Competition
 #######################
 
-Successfully complete the most tasks to win! At stake are $20,000 in prizes sponsored by Parametrix.ai. All submissions receive A100 compute credits for training sponsored by Stability.ai. The competition is currently planned for the start of July 2023.
+Successfully complete the most tasks to win! At stake are $20,000 in prizes sponsored by Parametrix.ai. If the `[AICrowd page] https://www.aicrowd.com/challenges/neurips-2023-the-neural-mmo-challenge`_ is up, the competition is live! Ends in December.
 
-Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the objective is for your team of 8 agents to accomplish more tasks than 15 other opponent teams. There are 128 Agents in play at the start of each round, and your submission will be evaluated over thousands of rounds with increasingly difficult tasks. Lobbies are made by a matchmaking algorithm that selects 16 teams of similar skill level. For the RL and Curriculum tracks, all entrants receive up to 8 hours of free A100 compute time per submission to train.
+Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the objective is for your 8 agents to accomplish more tasks than 120 other opponent. Your submission will be evaluated over thousands of rounds with increasingly difficult tasks. Lobbies are made by a matchmaking algorithm that selects 16 teams of similar skill level. The RL and curriculum tracks are compute-limited: we will verify that winners' solutions can be trained in 8 A100 hours with 12 cores.
 
 .. tab-set::
 
@@ -261,7 +262,6 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
       .. code-block:: python
 
         # Run training. This is very memory intensive!
-        # We are working on a smaller config
         # The --use_serial_vecenv flag puts envs on a
         # local process and is useful for debugging
         python train.py
@@ -272,7 +272,7 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
       Overview:
          This competition track is ideal to showcase your RL skills. Successful entrants develop agents that thrive in a massively multiagent environment with potential adversaries, successfully completing assigned tasks. 
 
-         Your RL track objective is to implement a policy for a team of 8 agents that dictates their performance in a new environment. Each game starts with your team receiving a randomly generated task. If the team completes the task, it earns a point. Your team will play thousands of games, each with a new assigned task to complete. The team with the highest score wins the competition.
+         Your RL track objective is to implement an agent policy for that dictates their performance in a new environment. Each game starts with your team receiving a randomly generated task. If the team completes the task, it earns a point. Your team will play thousands of games, each with a new assigned task to complete. The team with the highest score wins the competition.
 
          You have control over the: 
            - RL algorithm
@@ -283,9 +283,9 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
       Baseline:
          The baseline is designed for ease of use and modification. We recommend using it as a starting point for your submissions. It provides task presentation and sampling, treated as constants. 
 
-         All RL agent teams train using the same baseline task curriculum. Hybrid methods are allowed, but traditional scripting alone is unlikely to be effective because of the new task-oriented focus.
+         All RL agents train using the same baseline task curriculum. Hybrid methods are allowed, but traditional scripting alone is unlikely to be effective because of the new task-oriented focus.
 
-         Neural MMO provides a baseline repository. It features a model adapted from NetEase's winning submission in the NeurIPS 2022 competition. The repository also includes a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for streamlined training, and WandB for logging and visualization. 
+         Neural MMO provides a baseline repository that includes a fixed curriculum of procedurally generated tasks, a single-file CleanRL PPO implementation, PufferLib integration for streamlined training, and WandB for logging and visualization. 
 
   .. tab-item:: Curriculum Generation
 
@@ -462,6 +462,8 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
   .. tab-item:: LLMs
 
+      **NOTE:** We have starter code for this but currently don't have a way to evaluate on our machines. Come chat with us in Discord, as we should be able to verify submissions manually. This starter kit was added based on community interest in LLM agents and was not part of the original proposal, but we will work on adding some sort of bounty or prize specifically for this category.
+
       The curriculum track includes a 7B parameter codegen model (Salesforce/codegen25-7b-instruct) for generating tasks and task embeddings. As part of the No Holds Barred track, you can also use LLMs to generate scripted policies. This uses a hack of Neural MMO's internal state API to extract data in a human readable format. Example code with gpt 3.5 is provided in a separate folder:
 
       .. code-block:: text
@@ -490,5 +492,3 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
         python play_game.py
 
       Getting GPT 3.5 to output meaningful programs will take some work. We were only able to get the sample generated agent to work with GPT 4.
-
-      Note that we do not yet have a way to run your GPT queries on our evaluation servers. We are currently figuring out how to do this. This starter kit was added based on community interest in LLM agents and was not part of the original proposal, but we will work on adding some sort of bounty or prize specifically for this category.
