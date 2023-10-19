@@ -625,13 +625,21 @@ Customize the RL algorithm, model, and reward structure to maximize task complet
 └── train.py --&gt; Train your policy here
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run training. This is very memory intensive!</span>
-<span class="c1"># The --use_serial_vecenv flag puts envs on a</span>
-<span class="c1"># local process and is useful for debugging</span>
-<span class="n">python</span> <span class="n">train</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test that training runs</span>
+<span class="n">python</span> <span class="n">train</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">local</span><span class="o">-</span><span class="n">mode</span> <span class="n">true</span>
 
-<span class="c1"># Evaluate a trained checkpoint</span>
-<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">tools</span><span class="o">.</span><span class="n">evaluate</span> <span class="o">--</span><span class="n">model</span><span class="o">.</span><span class="n">checkpoint</span> <span class="n">model_weights</span><span class="o">/</span><span class="n">achievements_4x10_new</span><span class="mf">.200</span><span class="o">.</span><span class="n">pt</span>
+<span class="c1"># Run training. This is very memory intensive!</span>
+<span class="c1"># You can change --num-envs  and --rollout-batch-size to adjust memory usage</span>
+<span class="c1"># Also check out --device and --seed</span>
+<span class="c1"># The checkpoints are saved under --runs_dir with --run_name</span>
+<span class="n">python</span> <span class="n">train</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">run</span><span class="o">-</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">YOUR_RUN_NAME</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">device</span> <span class="o">&lt;</span><span class="n">YOUR_DEVICE</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">seed</span> <span class="o">&lt;</span><span class="n">YOUR_NUMBER</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">envs</span> <span class="mi">1</span> <span class="o">--</span><span class="n">rollout</span><span class="o">-</span><span class="n">batch</span><span class="o">-</span><span class="n">size</span> <span class="mi">2</span><span class="o">**</span><span class="mi">14</span>
+
+<span class="c1"># Evaluate checkpoints. After training, copy your checkpoints into policies</span>
+<span class="c1"># The below command will compare your checkpoints against the baseline policy</span>
+<span class="n">python</span> <span class="n">evaluate</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">p</span> <span class="n">policies</span>
+
+<span class="c1"># To generate a replay, create a directory with your checkpoints then run</span>
+<span class="n">python</span> <span class="n">evaluate</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">YOUR_DIR</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">r</span>
 </pre></div>
 </div>
 <dl>

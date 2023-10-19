@@ -261,13 +261,21 @@ Neural MMO (NMMO) has three tracks to compete and win. In all tracks, the object
 
       .. code-block:: python
 
-        # Run training. This is very memory intensive!
-        # The --use_serial_vecenv flag puts envs on a
-        # local process and is useful for debugging
-        python train.py
+        # Test that training runs
+        python train.py --local-mode true
 
-        # Evaluate a trained checkpoint
-        python -m tools.evaluate --model.checkpoint model_weights/achievements_4x10_new.200.pt
+        # Run training. This is very memory intensive!
+        # You can change --num-envs  and --rollout-batch-size to adjust memory usage
+        # Also check out --device and --seed
+        # The checkpoints are saved under --runs_dir with --run_name
+        python train.py --run-name <YOUR_RUN_NAME> --device <YOUR_DEVICE> --seed <YOUR_NUMBER> --num-envs 1 --rollout-batch-size 2**14
+
+        # Evaluate checkpoints. After training, copy your checkpoints into policies
+        # The below command will compare your checkpoints against the baseline policy
+        python evaluate.py -p policies
+
+        # To generate a replay, create a directory with your checkpoints then run
+        python evaluate.py -p <YOUR_DIR> -r
 
       Overview:
          This competition track is ideal to showcase your RL skills. Successful entrants develop agents that thrive in a massively multiagent environment with potential adversaries, successfully completing assigned tasks. 
