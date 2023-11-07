@@ -6,6 +6,14 @@
 .. card::
    :img-background: /../_static/banner.jpg
 
+.. dropdown:: Materials
+
+   NeurIPS Datasets and Benchmarks 2023: :download:`[Paper] </resource/2-0/2023_neurips_db.pdf>` Neural MMO 2.0: A Massively Multi-task Addition to Massively Multi-agent Learning
+
+   NeurIPS 2023 Competition: `[AICrowd] <https://www.aicrowd.com/challenges/neurips-2023-the-neural-mmo-challenge>`_ :download:`[NeurIPS Proposal] </resource/2-0/2023_neurips_competition_proposal.pdf>` CarperAI Competition Proposal: :download:`[CarperAI Proposal] </resource/2-0/2023_neurips_competition_carperai_proposal.pdf>` The NeurIPS 2023 Neural MMO Challenge on Multi-Task Reinforcement Learning and Curriculum Generation
+
+   Neural MMO 2.0 is a near-complete rewrite of the project, including the engine, environment, client, and documentation. This release features a new task system for defining agent objectives, 3x faster simulation, and improved baselines built on CleanRL via PufferLib integration.
+
 |icon| v1.6
 ###########
 
@@ -16,7 +24,9 @@
 
 .. dropdown:: Materials
 
-   Competition: `NeurIPS 2022 <https://www.aicrowd.com/challenges/neurips-2022-the-neural-mmo-challenge>`_
+   ICLR 2022 ALOE Workshop: :download:`[Paper] </resource/1-6/2022_iclr_aloe.pdf>` Specialization and exchange in Neural MMO
+
+   NeurIPS 2022 Competition: `[AICrowd] <https://www.aicrowd.com/challenges/neurips-2022-the-neural-mmo-challenge>`_ :download:`[PMLR Report] </resource/1-6/2022_neurips_competition_report_pmlr.pdf>` :download:`[Proposal] </resource/1-6/2022_neurips_competition_proposal.pdf>` The NeurIPS 2022 Neural MMO Challenge: A Massively Multiagent Competition with Specialization and Trade
 
    The Economy Update -- largest to date!
       - 150+ items: 16 unique items are available in level 1-10 variants
@@ -33,9 +43,9 @@
 
 .. dropdown:: Materials
 
-   Competitions
-      - `IJCAI 2022 <https://www.aicrowd.com/challenges/ijcai-2022-the-neural-mmo-challenge>`_
-      - `AICrowd 2021 <https://www.aicrowd.com/challenges/the-neural-mmo-challenge>`_
+   IJCAI 2022 Competition: `[AICrowd] <https://www.aicrowd.com/challenges/ijcai-2022-the-neural-mmo-challenge>`_ :download:`[AAMAS 2023 Summary] </resource/1-5/2022_ijcai_competition_summary_aamas_2023.pdf>` :download:`[Proposal] </resource/1-5/2022_ijcai_competition_proposal.pdf>` The Second Neural MMO Challenge: Learning in Massively Multiagent Open Worlds
+
+   AICrowd 2021 Competition: `[AICrowd] <https://www.aicrowd.com/challenges/the-neural-mmo-challenge>`_ :download:`[Proposal] </resource/1-5/2021_aicrowd_competition_proposal.pdf>` The Neural-MMO Benchmark: Learning in Massively Multiagent Open Worlds
 
    Videos
       - `Neural MMO v1.5.3 NeurIPS 2021 <https://www.youtube.com/watch?v=hYYA8_wFF7Q>`_
